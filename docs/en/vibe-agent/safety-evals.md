@@ -344,7 +344,7 @@ assert_test(test_case, [relevancy, faithfulness])
 
 ## 11 Continue reading
 
-- 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
+- 💻 [Chapter 1 — Vibe Coding Solo](./1-agent-foundation.md)
 - 🧩 [Chapter 4 — Multi-Agent](./4-multi-agent.md)
 - ⚙️ [Chapter 5 — Workflow Agent](./5-workflow-agent.md)
 - 🔌 [Chapter 6 — MCP](./6-mcp-ecosystem.md)

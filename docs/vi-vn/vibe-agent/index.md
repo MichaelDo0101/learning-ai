@@ -44,7 +44,7 @@ description: 'Module học AI Agent: coding agent, computer use, multi-agent, wo
 - Vibe coded fly.pieter.com $0 → $1M ARR / 17 ngày
 - Portfolio ~$3.1M ARR
 
-→ [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
+→ [Chapter 1 — Agent Foundation 101](./1-agent-foundation.md)
 
 ### 2️⃣ Jaana Dogan — Google Gemini API team
 > *"60 phút giải bài toán team tôi iterate suốt 2024."*
@@ -79,7 +79,7 @@ description: 'Module học AI Agent: coding agent, computer use, multi-agent, wo
 
 | # | Chapter | Bạn học được gì |
 |---|------|------|
-| **1** | [Vibe Coding Solo](./1-vibe-coding-solo.md) | Cursor + Claude + ship product solo |
+| **1** | [Agent Foundation](./1-agent-foundation.md) | Cursor + Claude + ship product solo |
 | **2** | [Claude Code Deep](./2-claude-code-deep.md) | 30-hour autonomous coding, sub-agent orchestrator-worker |
 | **3** | [Computer Use](./3-computer-use.md) | Agent click màn hình như người (72.5% baseline) |
 | **4** | [Multi-Agent](./4-multi-agent.md) | Pattern orchestrator-worker, debate, hierarchical |
@@ -197,10 +197,10 @@ Trước khi vào từng chapter, xem 3 video này để hiểu mental model "So
 ## 🎯 Bạn nên đọc theo thứ tự nào?
 
 ### 💻 Dev mới (chưa dùng coding agent)
-→ **Landing** → [Chapter 1 Vibe Coding](./1-vibe-coding-solo.md) → [Chapter 2 Claude Code](./2-claude-code-deep.md) → [Toolkit](./toolkit-2026.md)
+→ **Landing** → [Chapter 1 Vibe Coding](./1-agent-foundation.md) → [Chapter 2 Claude Code](./2-claude-code-deep.md) → [Toolkit](./toolkit-2026.md)
 
 ### 💼 Founder build product
-→ [Chapter 1 Vibe Coding](./1-vibe-coding-solo.md) → [Chapter 5 Workflow Agent](./5-workflow-agent.md) → [Chapter 6 MCP](./6-mcp-ecosystem.md) → [Roadmap](./roadmap-30-days.md)
+→ [Chapter 1 Vibe Coding](./1-agent-foundation.md) → [Chapter 5 Workflow Agent](./5-workflow-agent.md) → [Chapter 6 MCP](./6-mcp-ecosystem.md) → [Roadmap](./roadmap-30-days.md)
 
 ### 🏢 Operator (HR, marketing, ops)
 → [Chapter 3 Computer Use](./3-computer-use.md) → [Chapter 5 Workflow Agent](./5-workflow-agent.md) → [Toolkit](./toolkit-2026.md)
@@ -221,4 +221,4 @@ Trước khi vào từng chapter, xem 3 video này để hiểu mental model "So
 > *Không học agent giờ = ngồi xem revolution diễn ra mà không tham gia."*
 :::
 
-→ Sẵn sàng? Bắt đầu: [**Chapter 1 — Vibe Coding Solo**](./1-vibe-coding-solo.md)
+→ Sẵn sàng? Bắt đầu: [**Chapter 1 — Agent Foundation 101**](./1-agent-foundation.md)

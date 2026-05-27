@@ -895,7 +895,7 @@ Open `audit-report.md` — bạn nên thấy:
 
 ## 21 Đọc tiếp
 
-- 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md) (back)
+- 💻 [Chapter 1 — Vibe Coding Solo](./1-agent-foundation.md) (back)
 - 🖱️ [Chapter 3 — Computer Use](./3-computer-use.md) — agent click màn hình
 - 🧩 [Chapter 4 — Multi-Agent](./4-multi-agent.md) — pattern advanced
 - 🔌 [Chapter 6 — MCP](./6-mcp-ecosystem.md) — extension ecosystem

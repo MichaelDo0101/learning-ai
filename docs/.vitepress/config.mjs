@@ -1416,7 +1416,7 @@ Sitemap: ${siteUrl}/sitemap.xml
               collapsed: false,
               items: [
                 { text: 'Overview', link: '/en/vibe-agent/' },
-                { text: '1. Vibe Coding Solo — Pieter, Lovable', link: '/en/vibe-agent/1-vibe-coding-solo' },
+                { text: '1. Agent Foundation — What is AI Agent?', link: '/en/vibe-agent/1-agent-foundation' },
                 { text: '2. Claude Code Deep — 30h autonomous', link: '/en/vibe-agent/2-claude-code-deep' },
                 { text: '3. Computer Use — 72.5% baseline', link: '/en/vibe-agent/3-computer-use' },
                 { text: '4. Multi-Agent — orchestrator-worker', link: '/en/vibe-agent/4-multi-agent' },
@@ -1548,7 +1548,7 @@ Sitemap: ${siteUrl}/sitemap.xml
               collapsed: false,
               items: [
                 { text: 'Tổng quan', link: '/vi-vn/vibe-agent/' },
-                { text: '1. Vibe Coding Solo — Pieter, Lovable', link: '/vi-vn/vibe-agent/1-vibe-coding-solo' },
+                { text: '1. Agent Foundation — AI Agent là gì?', link: '/vi-vn/vibe-agent/1-agent-foundation' },
                 { text: '2. Claude Code Deep — 30h autonomous', link: '/vi-vn/vibe-agent/2-claude-code-deep' },
                 { text: '3. Computer Use — 72.5% baseline', link: '/vi-vn/vibe-agent/3-computer-use' },
                 { text: '4. Multi-Agent — orchestrator-worker', link: '/vi-vn/vibe-agent/4-multi-agent' },

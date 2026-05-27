@@ -321,7 +321,7 @@ Claude Code is **MCP-native**. Setup 1 MCP server:
 
 ## 12 Continue reading
 
-- 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
+- 💻 [Chapter 1 — Vibe Coding Solo](./1-agent-foundation.md)
 - 🖱️ [Chapter 3 — Computer Use](./3-computer-use.md)
 - 🧩 [Chapter 4 — Multi-Agent](./4-multi-agent.md)
 - 🔌 [Chapter 6 — MCP](./6-mcp-ecosystem.md)

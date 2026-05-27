@@ -347,7 +347,7 @@ Sources: [Cognition](https://cognition.ai/blog/funding-growth-and-the-next-front
 
 ## 13 Đọc tiếp
 
-- 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
+- 💻 [Chapter 1 — Vibe Coding Solo](./1-agent-foundation.md)
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md)
 - 🖱️ [Chapter 3 — Computer Use](./3-computer-use.md)
 - 🧩 [Chapter 4 — Multi-Agent](./4-multi-agent.md)

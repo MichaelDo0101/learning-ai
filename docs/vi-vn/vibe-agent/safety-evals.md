@@ -503,7 +503,7 @@ Published by 100+ industry experts. Replaces / complements OWASP LLM Top 10.
 
 ## 14 Đọc tiếp
 
-- 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
+- 💻 [Chapter 1 — Vibe Coding Solo](./1-agent-foundation.md)
 - 🧩 [Chapter 4 — Multi-Agent](./4-multi-agent.md)
 - ⚙️ [Chapter 5 — Workflow Agent](./5-workflow-agent.md)
 - 🔌 [Chapter 6 — MCP](./6-mcp-ecosystem.md)

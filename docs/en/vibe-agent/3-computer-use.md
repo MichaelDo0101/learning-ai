@@ -361,7 +361,7 @@ Report: pass/fail per step + diff explanation.
 
 ## 12 Continue reading
 
-- 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
+- 💻 [Chapter 1 — Vibe Coding Solo](./1-agent-foundation.md)
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md)
 - 🧩 [Chapter 4 — Multi-Agent](./4-multi-agent.md)
 - ⚙️ [Chapter 5 — Workflow Agent](./5-workflow-agent.md)

@@ -101,7 +101,7 @@ const pathsByLocale = {
       duration: '8-12 tuần',
       steps: [
         { module: 'Stage 1', title: 'Product thinking + AI prototype', desc: 'Idea → spec → MVP với AI IDE.', time: '2 tuần', link: '/stage-1/learning-map/' },
-        { module: 'Vibe Agent Ch 1', title: 'Vibe Coding Solo — Pieter Levels $3.1M', desc: 'Pattern wrap API + niche + build-in-public.', time: '1 tuần', link: '/vibe-agent/1-vibe-coding-solo' },
+        { module: 'Vibe Agent Ch 1', title: 'Agent Foundation 101 + Pieter Levels $3.1M', desc: 'Pattern wrap API + niche + build-in-public.', time: '1 tuần', link: '/vibe-agent/1-agent-foundation' },
         { module: 'Vibe Generate Ch 4', title: 'Solo SaaS $1M — Base44, Medvi', desc: 'Niche AI gen + monetization model.', time: '1 tuần', link: '/vibe-generate/4-solo-saas-million' },
         { module: 'Stage 2', title: 'Full-stack: payment + DB + deploy', desc: 'Stripe, Supabase, Vercel — ship MVP thật.', time: '4 tuần', link: '/stage-2/frontend/lovart-assets/' },
         { module: 'Vibe Generate Ch 9', title: 'Roadmap 30 ngày Track B', desc: 'Ship + 5 paying customer.', time: '4 tuần', link: '/vibe-generate/roadmap-30-days' }
@@ -172,7 +172,7 @@ const pathsByLocale = {
       duration: '8-12 weeks',
       steps: [
         { module: 'Stage 1', title: 'Product thinking + AI prototype', desc: 'Idea → spec → MVP with AI IDE.', time: '2 weeks', link: '/stage-1/learning-map/' },
-        { module: 'Vibe Agent Ch 1', title: 'Vibe Coding Solo — Pieter Levels $3.1M', desc: 'Pattern: wrap API + niche + build-in-public.', time: '1 week', link: '/vibe-agent/1-vibe-coding-solo' },
+        { module: 'Vibe Agent Ch 1', title: 'Agent Foundation 101 + Pieter Levels $3.1M', desc: 'Pattern: wrap API + niche + build-in-public.', time: '1 week', link: '/vibe-agent/1-agent-foundation' },
         { module: 'Vibe Generate Ch 4', title: 'Solo SaaS $1M — Base44, Medvi', desc: 'AI gen niche + monetization model.', time: '1 week', link: '/vibe-generate/4-solo-saas-million' },
         { module: 'Stage 2', title: 'Full-stack: payment + DB + deploy', desc: 'Stripe, Supabase, Vercel — ship real MVP.', time: '4 weeks', link: '/stage-2/frontend/lovart-assets/' },
         { module: 'Vibe Generate Ch 9', title: '30-Day Roadmap Track B', desc: 'Ship + 5 paying customers.', time: '4 weeks', link: '/vibe-generate/roadmap-30-days' }

@@ -750,7 +750,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-0/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
+    <lastmod>2026-05-28T02:49:46+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-0/"/>
@@ -893,7 +893,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/learning-map/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
+    <lastmod>2026-05-28T02:49:46+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/learning-map/"/>
@@ -1133,7 +1133,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
+    <lastmod>2026-05-28T02:49:46+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/"/>
@@ -1332,7 +1332,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
+    <lastmod>2026-05-28T02:49:46+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/"/>
@@ -1347,12 +1347,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/personal-brand/personal-website-blog/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/1-vibe-coding-solo</loc>
-    <lastmod>2026-05-28T02:29:20+07:00</lastmod>
+    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/1-agent-foundation</loc>
+    <lastmod>2026-05-27T20:08:43.547Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/1-vibe-coding-solo"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/1-vibe-coding-solo"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/1-agent-foundation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/1-agent-foundation"/>
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/2-claude-code-deep</loc>

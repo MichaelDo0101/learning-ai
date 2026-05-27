@@ -44,7 +44,7 @@ description: 'Learning module for AI Agent: coding agent, computer use, multi-ag
 - Vibe coded fly.pieter.com $0 → $1M ARR / 17 days
 - Portfolio ~$3.1M ARR
 
-→ [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
+→ [Chapter 1 — Agent Foundation 101](./1-agent-foundation.md)
 
 ### 2️⃣ Jaana Dogan — Google Gemini API team
 > *"60 minutes to solve a problem my team iterated on all of 2024."*
@@ -79,7 +79,7 @@ description: 'Learning module for AI Agent: coding agent, computer use, multi-ag
 
 | # | Chapter | What you learn |
 |---|------|------|
-| **1** | [Vibe Coding Solo](./1-vibe-coding-solo.md) | Cursor + Claude + ship product solo |
+| **1** | [Agent Foundation](./1-agent-foundation.md) | Cursor + Claude + ship product solo |
 | **2** | [Claude Code Deep](./2-claude-code-deep.md) | 30-hour autonomous coding, sub-agent orchestrator-worker |
 | **3** | [Computer Use](./3-computer-use.md) | Agent clicks screen like human (72.5% baseline) |
 | **4** | [Multi-Agent](./4-multi-agent.md) | Patterns: orchestrator-worker, debate, hierarchical |
@@ -164,10 +164,10 @@ description: 'Learning module for AI Agent: coding agent, computer use, multi-ag
 ## 🎯 Reading order
 
 ### 💻 New dev (no coding agent experience)
-→ **Landing** → [Chapter 1 Vibe Coding](./1-vibe-coding-solo.md) → [Chapter 2 Claude Code](./2-claude-code-deep.md) → [Toolkit](./toolkit-2026.md)
+→ **Landing** → [Chapter 1 Vibe Coding](./1-agent-foundation.md) → [Chapter 2 Claude Code](./2-claude-code-deep.md) → [Toolkit](./toolkit-2026.md)
 
 ### 💼 Founder building product
-→ [Chapter 1 Vibe Coding](./1-vibe-coding-solo.md) → [Chapter 5 Workflow Agent](./5-workflow-agent.md) → [Chapter 6 MCP](./6-mcp-ecosystem.md) → [Roadmap](./roadmap-30-days.md)
+→ [Chapter 1 Vibe Coding](./1-agent-foundation.md) → [Chapter 5 Workflow Agent](./5-workflow-agent.md) → [Chapter 6 MCP](./6-mcp-ecosystem.md) → [Roadmap](./roadmap-30-days.md)
 
 ### 🏢 Operator (HR, marketing, ops)
 → [Chapter 3 Computer Use](./3-computer-use.md) → [Chapter 5 Workflow Agent](./5-workflow-agent.md) → [Toolkit](./toolkit-2026.md)
@@ -187,4 +187,4 @@ description: 'Learning module for AI Agent: coding agent, computer use, multi-ag
 > *Not learning agents now = watching the revolution from the sidelines."*
 :::
 
-→ Ready? Start here: [**Chapter 1 — Vibe Coding Solo**](./1-vibe-coding-solo.md)
+→ Ready? Start here: [**Chapter 1 — Agent Foundation 101**](./1-agent-foundation.md)
