@@ -8,9 +8,12 @@ const isEdgeOne = !!process.env.EDGEONE || process.env.EDGEONE === '1'
 
 // 确定 Base 路径：
 // 1. 如果设置了 BASE 环境变量，优先使用
-// 2. 如果是 Vercel 或 EdgeOne，默认使用根路径 '/'
-// 3. 否则（如 GitHub Pages），使用 '/easy-vibe/'
-const base = process.env.BASE || (isVercel || isEdgeOne ? '/' : '/easy-vibe/')
+// 2. 如果là dev mode (npm run dev / preview), dùng '/' để URL local đơn giản
+// 3. 如果是 Vercel 或 EdgeOne，默认使用根路径 '/'
+// 4. 否则（如 GitHub Pages production build），使用 '/easy-vibe/'
+const npmEvent = process.env.npm_lifecycle_event || ''
+const isDev = npmEvent === 'dev' || npmEvent === 'preview' || process.env.NODE_ENV === 'development'
+const base = process.env.BASE || (isDev || isVercel || isEdgeOne ? '/' : '/easy-vibe/')
 
 // 站点 URL 配置 - 根据部署环境动态确定
 const getSiteUrl = () => {
