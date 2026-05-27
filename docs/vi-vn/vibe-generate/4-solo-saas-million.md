@@ -514,7 +514,345 @@ Source: [NxCode comparison](https://www.nxcode.io/resources/news/v0-vs-bolt-vs-l
 
 ---
 
-## 15 Đọc tiếp
+## 15 📊 Architecture Diagram — Solo SaaS Stack
+
+```mermaid
+flowchart TB
+    User([👤 User])
+    User --> Landing[🌐 Landing<br/>Vercel + Next.js]
+    Landing --> Auth[🔐 Auth<br/>Clerk]
+    Auth --> App[🎨 App UI<br/>React + Tailwind]
+    App --> API[⚙️ API route<br/>Next.js handler]
+    API --> Stripe{💳 Pay?}
+    Stripe -->|No| Upgrade[⬆️ Upgrade prompt]
+    Stripe -->|Yes| AIAPI[🧠 AI API<br/>Replicate / Fal / OpenAI]
+    AIAPI --> Storage[(📁 Cloud R2/S3)]
+    Storage --> Output[📤 Output]
+    Output --> User
+
+    API --> DB[(🗄️ Supabase<br/>users, generations)]
+
+    style Landing fill:#fbbf24,stroke:#f59e0b,color:#000
+    style AIAPI fill:#6366f1,stroke:#4f46e5,color:#fff
+    style Stripe fill:#10b981,stroke:#059669,color:#fff
+```
+
+**5-layer stack 2026** (proven by Pieter Levels, Marc Lou, Sabrine Matos):
+| Layer | Tool | Cost |
+|------|------|------|
+| Frontend | Next.js + Tailwind + Vercel | Free hobby |
+| Auth | Clerk | Free <10K MAU |
+| DB | Supabase | Free <500MB |
+| AI API | Replicate / Fal | $0.003-0.20/gen |
+| Payment | Stripe / Lemon Squeezy | 2.9% + $0.30 |
+
+→ **<$50/month MVP cost**. Need ~50 paying $20/month to break-even.
+
+---
+
+## 16 🧪 Hands-on Lab — Wrap Flux API in Next.js + Stripe in 60 phút
+
+::: tip 🎯 Goal
+60 phút: build "AI Headshot for LinkedIn" SaaS, deployed Vercel, Stripe checkout work, 1 user test thật.
+:::
+
+### Prerequisites checklist
+
+```
+□ Node.js >= 18, GitHub account
+□ Replicate account ($10 credit)
+□ Stripe account (test mode OK)
+□ Vercel free tier
+□ Clerk free tier
+□ Cursor IDE
+```
+
+### Step 1. Bootstrap (10 phút)
+
+```bash
+npx create-next-app@latest headshot-saas \
+  --typescript --tailwind --app
+cd headshot-saas
+
+# Install deps
+npm install @clerk/nextjs stripe replicate @vercel/postgres
+```
+
+### Step 2. Code core (30 phút) — paste vào Cursor
+
+```typescript
+// app/api/generate/route.ts
+import Replicate from 'replicate'
+import { auth } from '@clerk/nextjs'
+
+export async function POST(req: Request) {
+  const { userId } = auth()
+  if (!userId) return Response.json({ error: 'Unauthorized' }, { status: 401 })
+
+  const { photoUrl, style } = await req.json()
+
+  const replicate = new Replicate({ auth: process.env.REPLICATE_API_TOKEN })
+
+  const output = await replicate.run(
+    'black-forest-labs/flux-1.1-pro',
+    {
+      input: {
+        prompt: `professional LinkedIn headshot, ${style}, sharp focus, studio lighting, business attire`,
+        image: photoUrl,
+        strength: 0.6,
+        num_outputs: 4,
+      },
+    }
+  )
+
+  return Response.json({ images: output })
+}
+```
+
+```typescript
+// app/api/checkout/route.ts
+import Stripe from 'stripe'
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
+
+export async function POST(req: Request) {
+  const { plan } = await req.json()
+
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: [
+      {
+        price_data: {
+          currency: 'usd',
+          product_data: { name: `Headshot AI ${plan}` },
+          unit_amount: plan === 'pro' ? 1900 : 900, // $19 or $9
+        },
+        quantity: 1,
+      },
+    ],
+    mode: 'payment',
+    success_url: `${process.env.NEXT_PUBLIC_URL}/dashboard?success=1`,
+    cancel_url: `${process.env.NEXT_PUBLIC_URL}/pricing?cancel=1`,
+  })
+
+  return Response.json({ url: session.url })
+}
+```
+
+```typescript
+// app/page.tsx
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+
+export default function Home() {
+  return (
+    <main className="max-w-3xl mx-auto pt-20 px-4">
+      <h1 className="text-5xl font-bold">AI Headshot for LinkedIn</h1>
+      <p className="text-xl mt-4 text-gray-600">
+        Upload 1 selfie. Get 10 pro headshots in 60 seconds. $9 starter / $19 pro.
+      </p>
+
+      <div className="mt-8">
+        <SignedOut>
+          <SignInButton>
+            <button className="px-6 py-3 bg-black text-white rounded">
+              Get started — $9
+            </button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+          <a href="/dashboard" className="ml-4 underline">Go to dashboard →</a>
+        </SignedIn>
+      </div>
+    </main>
+  )
+}
+```
+
+### Step 3. Env + deploy (10 phút)
+
+```bash
+# .env.local
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+STRIPE_SECRET_KEY=sk_test_...
+REPLICATE_API_TOKEN=r8_...
+NEXT_PUBLIC_URL=http://localhost:3000
+
+# Test locally
+npm run dev
+
+# Deploy
+git init && git add -A && git commit -m "init"
+npx vercel --prod
+```
+
+### Step 4. Test full flow (10 phút)
+
+1. Sign up via Clerk
+2. Stripe checkout (test card: `4242 4242 4242 4242`, exp `12/30`, CVC `123`)
+3. Upload selfie
+4. Wait ~30s → 4 headshots gen
+5. Download
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| Clerk Unauthorized | Check `<ClerkProvider>` wrap root layout |
+| Stripe checkout 500 | Set webhook signing secret `STRIPE_WEBHOOK_SECRET` |
+| Replicate timeout | Use Edge runtime: `export const runtime = 'edge'` |
+| Cost runaway | Set monthly limit on Replicate dashboard, alert at $10 |
+| Vercel deploy fail | Check `package.json` engines node >=18 |
+
+---
+
+## 17 🏗️ Mini-Project — Ship 1 Niche AI Image SaaS, 5 Paying Customer
+
+::: warning 🎯 Assignment
+
+**Goal**: Ship + launch 1 niche AI image gen SaaS, **5+ paying customer trong 30 ngày**.
+
+**Niche options** (pick 1):
+- **Visa photo AI** cho người Việt đi nước ngoài
+- **Wedding photo enhance** AI cho VN couple
+- **Product photo for Shopee sellers** (background remove + lifestyle)
+- **CV/LinkedIn headshot** cho dev VN
+- **AI 3D figurine** (theo Nano Banana viral trend Q4/2025)
+
+**Requirements**:
+1. **Landing page + waitlist** in 24h
+2. **Validation**: 50+ signup trong 1 tuần OR pivot
+3. **MVP build** Week 2: auth + payment + gen + dashboard
+4. **Launch** Week 3: ProductHunt + Twitter + Reddit
+5. **Iterate** Week 4: based on user feedback, ship 1 feature
+6. **Documentation**: cost breakdown, conversion funnel, lessons
+
+**Acceptance criteria**:
+- [ ] Live URL
+- [ ] Stripe checkout work
+- [ ] 5+ paying customer ($1+ each)
+- [ ] 100+ free user funnel
+- [ ] Cost <$50/month overhead
+- [ ] 1 Twitter thread build-in-public (7 ngày)
+- [ ] Post-mortem 500 từ
+
+**Time estimate**: 30 ngày
+
+**Stretch goals** 🚀:
+- $500+ MRR Day 30
+- 1 viral post (50K+ impressions)
+- Get featured Indie Hackers homepage
+- Land enterprise client ($500+ MRR single)
+
+**Niche margin benchmark**:
+- Generic AI image: 30-40% margin (compressed market)
+- **VN-specific niche** (visa, áo dài wedding): **60-80% margin** (less competition)
+- Charge: $9-29/tháng VN, $19-49 global
+:::
+
+---
+
+## 18 🎓 Knowledge Check
+
+::: details 1. Pieter Levels portfolio total ARR T5/2026?
+**A.** $300K
+**B.** $1M
+**C.** ~$3M ✅
+**D.** $30M
+
+**Đáp án: C** — Pieter Levels portfolio: PhotoAI **$1.65M ARR** ($132K MRR) + InteriorAI ~$300K + NomadList ~$500K + RemoteOK ~$300K + fly.pieter.com $1M cao điểm = **~$3M ARR total, 0 employees**.
+:::
+
+::: details 2. Sabrine Matos (Brazil) Plinq ARR/3 tháng?
+**A.** $45K
+**B.** $156K
+**C.** $456K ✅
+**D.** $1.2M
+
+**Đáp án: C** — Sabrine non-tech, build Plinq (criminal record check) với Lovable. **$456K ARR trong 3 tháng**, 10K users tháng đầu, 300% MoM growth. Đang raise R$1.5-2M seed.
+:::
+
+::: details 3. Maor Shlomo / Base44 exit bao nhiêu?
+**A.** $20M Series A
+**B.** $80M cash acquisition by Wix ✅
+**C.** $1B valuation
+**D.** IPO
+
+**Đáp án: B** — Base44: solo + 8 employees, **6 tháng tuổi**, 250K users, $189K profit T5/2025 (16.2% margin) → **$80M cash + $90M earnout milestones** từ Wix.
+:::
+
+::: details 4. Matthew Gallagher / Medvi đạt revenue năm 1?
+**A.** $4M
+**B.** $40M
+**C.** $401M ✅
+**D.** $1.8B
+
+**Đáp án: C** — Medvi (T9/2024 founded với $20K seed): **$401M revenue năm 1 (2025)**, projected $1.8B năm 2 (2026), team **1-2 người + ~250K users**, profit margin ~16.2%.
+:::
+
+::: details 5. fly.pieter.com đạt $1M ARR trong bao lâu?
+**A.** 6 tháng
+**B.** 3 tháng
+**C.** 17 ngày ✅
+**D.** 2 năm
+
+**Đáp án: C** — fly.pieter.com: **build trong 3 giờ** với Cursor + Grok, **$1M ARR đạt 12 March 2025 (17 ngày)**. Day 1 MRR $57K, T3/2025 $75K MRR, $29.99 F-16 upgrade in-game.
+:::
+
+::: details 6. Lovable đạt $20M ARR trong bao lâu?
+**A.** 3 năm
+**B.** 12 tháng
+**C.** 2 tháng đầu 2026 ✅
+**D.** 5 năm
+
+**Đáp án: C** — Lovable: **$20M ARR trong 2 tháng** đầu 2026 — fastest growth European startup history. $400M ARR sau 24 tháng total. Native Supabase = moat.
+:::
+
+::: details 7. Marc Lou pattern key insight?
+**A.** Build perfect product first
+**B.** Boilerplate-first + ship 21 product ✅
+**C.** Get VC funding
+**D.** Hire 50 engineers
+
+**Đáp án: B** — Marc Lou ship 21+ product với **ShipFast template** (Next.js + MongoDB + Auth + Stripe + Mailgun + ChatGPT). $1.03M revenue 2025, 0 employees.
+:::
+
+::: details 8. Stripe vs Lemon Squeezy cho VN founder?
+**A.** Stripe luôn
+**B.** Lemon Squeezy (Merchant of Record, outsource VAT/tax) ✅
+**C.** Cả 2 đều same
+**D.** Tự build VNPay
+
+**Đáp án: B** — **Lemon Squeezy = Merchant of Record** → outsource VAT/GST/sales tax globally. Founder VN không cần thuê accountant quốc tế. Stripe cần self-handle tax (US-focused).
+:::
+
+::: details 9. Code AI gen (Bolt/Lovable/v0) có vulnerability rate?
+**A.** 0-5%
+**B.** 15-20%
+**C.** 40-45% ✅
+**D.** 95%
+
+**Đáp án: C** — Research 2026: code AI-gen có **vulnerability rate 40-45%**. Trước launch public: chạy Claude Code "security review" mode với hooks PreToolUse.
+:::
+
+::: details 10. Build-in-public CAC saving?
+**A.** Không impact
+**B.** 10% saving
+**C.** Organic CAC ~$0 cho audience built ✅
+**D.** Increase CAC
+
+**Đáp án: C** — Pieter Levels: 700K X followers → **organic CAC ~$0**. Marc Lou: $92K trong 2 ngày (CodeFast launch) từ 135K followers. Solo founder phải invest 30% time vào content + audience.
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 5 (Sora 2 & TikTok)
+- 5-7/10 ⚠️ Re-read sections 5-12
+- <5/10 ❌ Build actual SaaS với code lab
+
+---
+
+## 19 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md) — pipeline ad
 - 👤 [Chapter 3 — Virtual Influencer](./3-virtual-influencer.md) — combine product

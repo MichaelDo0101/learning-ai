@@ -471,7 +471,331 @@ Source: [Marketing Dive](https://www.marketingdive.com/news/coach-virtual-influe
 
 ---
 
-## 15 Đọc tiếp
+## 15 📊 Architecture Diagram — Virtual Influencer Stack
+
+```mermaid
+flowchart TB
+    Persona[👤 Persona definition<br/>bio + niche + aesthetic]
+    Persona --> Refs[🖼️ 10 reference photos<br/>Midjourney --cref chain]
+    Refs --> Train[🧠 Train LoRA<br/>Replicate / Fal $5-20]
+    Train --> Test{Consistency<br/>>80%?}
+    Test -.No.-> Refs
+    Test -->|Yes| Production[🎨 Production pipeline]
+
+    Production --> CN[🎯 ControlNet<br/>pose precision]
+    Production --> IP[🎨 IPAdapter<br/>style/outfit]
+    Production --> LoRA[💠 LoRA<br/>identity]
+
+    CN --> Render[🖥️ ComfyUI render<br/>1-2 min/image]
+    IP --> Render
+    LoRA --> Render
+
+    Render --> Post[📱 Post 4-5x/week<br/>IG / TikTok / Fanvue]
+    Post --> Monetize[💰 Sponsorship<br/>Ambassador<br/>Subscription]
+
+    style Persona fill:#fbbf24,stroke:#f59e0b,color:#000
+    style Train fill:#6366f1,stroke:#4f46e5,color:#fff
+    style Monetize fill:#10b981,stroke:#059669,color:#fff
+```
+
+**Hybrid stack 2026** for 80-90% consistency:
+- **LoRA** (identity) + **IPAdapter** (composition) + **ControlNet** (pose)
+- **Flux 2 + PuLID** (T3/2026 update) — stronger identity hold
+
+---
+
+## 16 🧪 Hands-on Lab — Train LoRA cho Persona VN đầu tiên
+
+::: tip 🎯 Goal
+2 giờ: define + train + test 1 LoRA cho persona AI VN. Output: 50 ảnh consistency >80%.
+:::
+
+### Prerequisites checklist
+
+```
+□ Midjourney Pro ($30/tháng) hoặc Flux Pro
+□ Replicate account ($5 credit) — train LoRA cloud
+□ Optional: ComfyUI local (cần GPU RTX 3060+)
+□ 30 phút để define persona
+```
+
+### Step 1. Define persona (30 phút)
+
+Prompt Claude:
+```
+Tạo persona virtual influencer Việt Nam, target Instagram + TikTok:
+- Name: [pick 1 — vd: "An Linh"]
+- Age: 24
+- Location: HCMC
+- Niche: Coffee + lifestyle reviewer (lifestyle phổ biến VN)
+- Personality: 3 từ
+- Aesthetic mood: 5 từ
+- Origin story: 100 từ
+- Visual identity:
+  - Hair: long black wavy
+  - Outfit signature: oversize blazer + jeans + sneakers
+  - Vibe: minimalist Y2K
+- Bio Instagram (150 ký tự)
+- 5 sample post caption tiếng Việt
+```
+
+→ Save output thành `persona.md`.
+
+### Step 2. Generate 10 reference photos (30 phút)
+
+**Midjourney** prompts:
+
+```
+1. portrait of an linh, beautiful Vietnamese woman 24yo,
+   long black wavy hair, oversize blazer, minimalist Y2K aesthetic,
+   front facing, neutral expression, soft natural light, --ar 1:1 --v 8
+
+2. portrait of an linh, [same person], 3/4 angle, slight smile,
+   sitting in HCMC modern cafe, golden hour, --ar 1:1 --v 8 --cref [URL_1]
+
+3. portrait of an linh, [same person], full body, walking on Saigon street,
+   slight sweat, candid moment, --ar 1:1 --v 8 --cref [URL_1]
+
+... (continue 7 more variations)
+```
+
+**Pro tip**: Mỗi shot mới dùng `--cref [URL of shot 1]` để giữ identity.
+
+→ Save 10 ảnh resolution 1024x1024px.
+
+### Step 3. Train LoRA trên Replicate (30 phút)
+
+```bash
+# Install Replicate CLI
+pip install replicate
+
+# Set token
+export REPLICATE_API_TOKEN=r8_...
+```
+
+```python
+# train_lora.py
+import replicate
+import os
+
+# Upload 10 photos as ZIP
+# Or use Replicate UI: replicate.com/ostris/flux-dev-lora-trainer/train
+
+training = replicate.trainings.create(
+    version="ostris/flux-dev-lora-trainer:8e69df...",
+    input={
+        "input_images": open("an_linh_dataset.zip", "rb"),
+        "trigger_word": "an_linh",  # unique token
+        "steps": 1000,
+        "lora_rank": 16,
+        "optimizer": "adamw8bit",
+        "learning_rate": 0.0004,
+        "batch_size": 1,
+    },
+    destination="yourname/an-linh-lora"
+)
+
+print(f"Training ID: {training.id}")
+print(f"Wait ~30 min, check: replicate.com/p/{training.id}")
+```
+
+→ Train cost: ~$2-5. Time: 30-40 phút.
+
+### Step 4. Test consistency
+
+```python
+# generate.py
+import replicate
+
+output = replicate.run(
+    "yourname/an-linh-lora:abc123",
+    input={
+        "prompt": "photo of an_linh wearing áo dài, at Hoi An old town, golden hour",
+        "model": "dev",
+        "width": 1024,
+        "height": 1024,
+        "num_outputs": 4,
+    }
+)
+
+for i, url in enumerate(output):
+    print(f"Image {i+1}: {url}")
+```
+
+→ Gen 50 ảnh test với 50 different prompts. Đo:
+- % giống original (manual check)
+- % nhận diện được là cùng người
+- Target: **>80% consistency**
+
+### Step 5. Setup Instagram account
+
+- Username: `@an.linh.ai` (hoặc tương tự)
+- Bio: "AI persona × Vietnamese lifestyle | Made with ❤️ AI"
+- Disclose: "Persona này là AI" — **MANDATORY** per Luật Quảng cáo VN
+- Post 3 "intro" photos đầu
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| LoRA over-fit, face freeze | Train fewer steps (500-800) hoặc lower learning rate |
+| Inconsistent across different prompts | Add `(trigger_word:1.2)` weight emphasis |
+| Asian features → Western drift | Train với MORE Asian reference photos (15-20 thay vì 10) |
+| Outfit không nhất quán | LoRA học outfit, không học identity. Train với varied outfits |
+| Cost runaway Replicate | Use Flux Schnell (faster, cheaper $0.003/gen) |
+
+---
+
+## 17 🏗️ Mini-Project — Build Persona AI VN 6 Tháng, 5K Followers
+
+::: warning 🎯 Assignment
+
+**Goal**: Launch + grow 1 AI persona VN đến 5K real followers + 1 brand deal trong 6 tháng.
+
+**Requirements**:
+1. **Persona consistency**:
+   - LoRA trained
+   - Post 4-5 ảnh/tuần consistent style
+   - Caption tiếng Việt natural
+2. **Content strategy**:
+   - 70% lifestyle content (cafe, fashion, travel VN)
+   - 20% brand-friendly (chuẩn bị nhận sponsorship)
+   - 10% behind-the-scenes (build trust)
+3. **Distribution**:
+   - Instagram (primary)
+   - TikTok (cross-post)
+   - Threads (text-first updates)
+4. **Disclosure**:
+   - Bio rõ ràng "AI persona"
+   - Mỗi 5 post có 1 "Made with AI" reminder
+5. **Monetization preparation**:
+   - Media kit (stats + niche + reach)
+   - Pricing sheet ($50-500/post tuỳ niche + follower)
+   - Email outreach 10 brand/tháng
+
+**Acceptance criteria**:
+- [ ] 5K real follower (không buy)
+- [ ] Engagement rate >3%
+- [ ] 1 brand deal closed ($200+)
+- [ ] Featured 1 lần trên TikTok #aiinfluencervn
+- [ ] Documented story + case study
+
+**Time estimate**: 6 tháng
+
+**Stretch goals** 🚀:
+- 50K follower → $1-3K/post rate
+- Land Vietnamese brand ambassador (như Viettel/Vinamilk)
+- Build sister persona (như Aitana → Maia)
+- Charge agency clients $5-15K cho persona-as-service
+
+**Pricing benchmark** (cho VN agency 2026):
+- Persona setup: **$5-10K** (1 lần)
+- Monthly management: **$1-3K/tháng**
+- Brand collab fee: 30-50% deal value
+:::
+
+---
+
+## 18 🎓 Knowledge Check
+
+::: details 1. Aitana López kiếm peak bao nhiêu/tháng?
+**A.** €1,000
+**B.** €5,000
+**C.** €10,000 ✅
+**D.** €100,000
+
+**Đáp án: C** — Aitana López (The Clueless Barcelona): trung bình €3K/tháng, **peak €10,000/tháng**. ~378K-4.3M IG followers. Brand: Big supplements, Zara, Sephora, Fanvue subscription.
+:::
+
+::: details 2. Vi An (VN) phát triển bao lâu?
+**A.** 6 tháng
+**B.** 1 năm
+**C.** 3 năm ✅
+**D.** 5 năm
+
+**Đáp án: C** — ADT Creative bỏ **3 năm** dev Vi An. Brand ambassador Viettel Y-Fest 2024. Stack: CGI + 3D scan + motion capture + Unreal Engine.
+:::
+
+::: details 3. LoRA training set tối ưu là?
+**A.** 5-10 images, 50 epochs
+**B.** 20-25 images, 10-15 epochs ✅
+**C.** 100+ images, 5 epochs
+**D.** 1 image, 100 epochs
+
+**Đáp án: B** — Best practice: **20-25 images đa angle/expression, 10-15 epochs** với image repetition phù hợp. Train cost $5-20.
+:::
+
+::: details 4. ACE++ làm gì?
+**A.** AI superpower
+**B.** Character consistency từ 1 reference image, không cần train LoRA ✅
+**C.** Auto image enhancement
+**D.** Upscale 4K
+
+**Đáp án: B** — **ACE++** (Sebastian Kamph) — 1 reference image duy nhất, KHÔNG train LoRA. Tool: ComfyUI + ACE++ nodes + Flux Fill model. Tốt cho ship nhanh / campaign 1-time.
+:::
+
+::: details 5. Lil Miquela followers IG + revenue/năm?
+**A.** 500K, $1M
+**B.** 1M, $5M
+**C.** 2.6M, $10M ✅
+**D.** 10M, $50M
+
+**Đáp án: C** — Lil Miquela (Brud LA, 2016 debut): **2.6M IG followers, $10M+/year revenue**. Rate $10K/post. Brand: Calvin Klein, Prada, Samsung.
+:::
+
+::: details 6. Wan 2.2 Animate là?
+**A.** Closed-source Anthropic
+**B.** Open-source 720p 24fps 120s ✅
+**C.** Demo only
+**D.** Paid SaaS
+
+**Đáp án: B** — Wan 2.2 Animate (Alibaba, T9/2025): **open-source, 720p, 24fps, 120s max**. 2 modes: animate static / replace character. Runs RTX 4090. Free.
+:::
+
+::: details 7. Flux 2 + PuLID workflow?
+**A.** Replace LoRA
+**B.** PuLID inject face embedding vào Flux 2 attention → stronger identity hold ✅
+**C.** Multi-character only
+**D.** Animation only
+
+**Đáp án: B** — **Flux 2 + PuLID** (T3/2026): PuLID inject face embedding vào Flux 2 attention layers. **Stronger identity hold than LoRA** cho long generations (LoRA bị "drift" sau 50+ images).
+:::
+
+::: details 8. Noonoouri sign với?
+**A.** Sony Music
+**B.** UMG
+**C.** Warner Music ✅
+**D.** Independent
+
+**Đáp án: C** — **Warner Music** (8/2023, vẫn active 2025-2026). Joerg Zuber created (fashion designer). Anime-style. AI voice gen từ human singer base. Debut "Dominoes" với Alle Farben.
+:::
+
+::: details 9. Imma × Coach "Find Your Courage" campaign hiệu quả?
+**A.** +5% conversion
+**B.** +17% conversion ✅
+**C.** -10% conversion
+**D.** Không đo được
+
+**Đáp án: B** — Imma (Aww Inc Japan): Coach "Find Your Courage" 2026 = **+17% conversion**. 60+ digital billboards toàn cầu, pair với Lil Nas X, Camila Mendes, Kōki.
+:::
+
+::: details 10. Virtual influencer market growth 2025-2026?
+**A.** $1B → $2B
+**B.** $5B → $7B
+**C.** $8.3B → $11.74B ✅
+**D.** $100B → $200B
+
+**Đáp án: C** — Market: **$8.3B (2025) → $11.74B (2026)**. Brands report virtual influencers cho **+30% engagement, -50% campaign cost** vs human influencer.
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 4 (Solo SaaS)
+- 5-7/10 ⚠️ Re-read sections 5-12
+- <5/10 ❌ Redo lab, train actual LoRA
+
+---
+
+## 19 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md)
 - 🎵 [Chapter 2 — AI Music](./2-ai-music-3m.md) — combine music + persona

@@ -450,7 +450,294 @@ Sources: [TechCrunch Veo 3.1 vertical](https://techcrunch.com/2026/01/13/googles
 
 ---
 
-## 14 Đọc tiếp
+## 14 📊 Architecture Diagram — TikTok Viral Pipeline
+
+```mermaid
+flowchart LR
+    Trend[📈 Spot trend daily<br/>TikTok Creator Center]
+    Trend --> Concept[💡 Concept 5 ideas<br/>Claude]
+    Concept --> Format{Pick format}
+    Format -->|Cameo crossover| Sora[🎬 Sora 2<br/>cameo feature]
+    Format -->|Bodycam POV| Veo[🎥 Veo 3.1<br/>strong POV]
+    Format -->|Parody/spoof| Sora2[🎬 Sora 2<br/>social-native]
+    Format -->|Surreal meme| Kling[🎭 Kling 2.5<br/>budget+fast]
+
+    Sora --> Edit[✂️ CapCut<br/>cut 3-7s peak<br/>+ trending sound]
+    Veo --> Edit
+    Sora2 --> Edit
+    Kling --> Edit
+
+    Edit --> Post[📤 TikTok post<br/>9-15s ideal<br/>3-5 hashtag]
+    Post --> Monitor[📊 24h check<br/>views/likes/shares]
+    Monitor --> Iterate{Engagement?}
+    Iterate -->|Low| Trend
+    Iterate -->|Viral| Series[🔥 Build series<br/>same format]
+
+    style Trend fill:#fbbf24,stroke:#f59e0b,color:#000
+    style Series fill:#10b981,stroke:#059669,color:#fff
+```
+
+**4 viral formats Q4/2025 (validated)**:
+1. **Cameo crossover** — Sora 2 (Jake Paul = 1B views/6 ngày)
+2. **Bodycam POV** — Veo 3.1 (real feel)
+3. **Parody/spoof commercial** — Sora 2
+4. **Surreal meme** — Kling 2.5
+
+---
+
+## 15 🧪 Hands-on Lab — Build 1 Viral-Format Clip với Sora 2
+
+::: tip 🎯 Goal
+60 phút: gen + edit + post 1 clip 15s theo 1 trong 4 viral format. Target: >1K view trong 24h.
+:::
+
+### Prerequisites checklist
+
+```
+□ ChatGPT Plus ($20/tháng) — Sora 2 access
+□ Higgsfield Cinema ($39/tháng) optional — wrapper Sora+Veo+Kling
+□ CapCut Pro ($7.99/tháng)
+□ TikTok account (account >7 ngày tuổi để algo trust)
+□ 1 hour focus block
+```
+
+### Step 1. Spot 1 trend (10 phút)
+
+Sources:
+- **TikTok Creator Center** → trending sounds tab
+- **#sora2** + **#aivideovn** + **#aivideo** trên TikTok
+- **X**: follow @rowancheung, @minchoi, @hahn1010
+- **Reddit** r/aivideo
+
+→ Save 3 trends → pick 1 chưa quá bão hoà (300-3000 video tag = sweet spot).
+
+### Step 2. Concept VN-ised (10 phút)
+
+Claude prompt:
+```
+Hôm nay TikTok trend là [FORMAT — vd: "bodycam shopkeeper meeting weird customer"].
+
+Đề xuất 5 concept VN-ised:
+1. Logline 1 câu
+2. Setting địa phương VN
+3. Character (1-2 người, không clone celeb thật)
+4. Twist hài / bất ngờ
+5. Caption Việt + hashtag #aivideovn #sora2
+
+Format: bảng Markdown.
+```
+
+→ Pick best concept.
+
+### Step 3. Gen với Sora 2 (20 phút)
+
+**Sora 2 prompt** (cameo crossover example):
+```
+Selected cameo: [your own face — if you have cameo enabled]
+Setting: Saigon cafe at night, golden lamp light, rain outside window
+Action:
+- You sit reading book (2s)
+- Stranger sits across, asks "Em là người mới đến HCMC à?"
+- You look up, smile awkwardly (2s)
+- Stranger leans in, whispers something funny (2s)
+Camera: medium shot, slight handheld
+Audio: dialogue Vietnamese, soft jazz background
+Duration: 15s
+Style: cinematic, film grain
+```
+
+→ Gen 3-5 lần, pick best.
+
+### Step 4. Edit CapCut (15 phút)
+
+Timeline:
+```
+[0-1s] Hook frame: Close-up face với caption huge "Hôm qua tôi gặp..."
+[1-13s] Main clip 12s Sora gen
+[13-15s] Outro frame: Caption "Bạn có gặp tình huống tương tự?"
+
+Audio:
+- Sora generated audio (đã có)
+- Add: trending TikTok sound mới (lower volume 20% để giữ dialogue chính)
+
+Captions:
+- Bold sans-serif 36pt
+- Tiếng Việt
+- Animated burst effect
+- Position: top center
+```
+
+Export: 1080x1920 (9:16 vertical), MP4, 30fps.
+
+### Step 5. Post TikTok (5 phút)
+
+```
+Caption (200 ký tự max):
+"Trải nghiệm gặp người lạ ở Saigon 🥹 [comment your story below]
+
+#sora2 #aivideovn #saigon #cafesaigon"
+
+Best post time VN:
+- 6-7h sáng (commute)
+- 12h trưa (lunch)
+- 19-21h tối (prime time)
+```
+
+→ Post + check engagement 24h sau.
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| Sora 2 queue 30 phút | Try Higgsfield Cinema (faster + multi-model) |
+| Cameo bị block | Cameo cần grant trước. Setup Sora app → Profile → "Allow cameo" |
+| Vietnamese dialogue robot-sounding | Add "natural Vietnamese accent" prompt; or generate audio riêng với ElevenLabs Vietnamese voice |
+| TikTok algo demote | Check: native music trending? Vietnamese hashtag? Length 9-15s? |
+| Reach thấp | Post-post: engage comment 30 phút đầu để boost algo |
+
+---
+
+## 16 🏗️ Mini-Project — 30-Day TikTok Challenge, 10K Followers
+
+::: warning 🎯 Assignment
+
+**Goal**: 30 ngày, 30 clip, 10K real followers + 1 viral (>100K view).
+
+**Requirements**:
+1. **Niche statement** (vd: "AI lịch sử Việt re-imagined", "Bodycam xe ôm Saigon")
+2. **Posting cadence**: 1 clip/ngày × 30 ngày
+3. **Format rotation**:
+   - Tuần 1: thử 4 viral format (1 mỗi format)
+   - Tuần 2-4: double down format winner
+4. **Hook engineering**: A/B test 3 hook style (question, statement, action)
+5. **Hashtag strategy**: 3-5 hashtag mix viral + niche
+6. **Analytics tracking**: log view, like, share, follower growth daily
+
+**Acceptance criteria**:
+- [ ] 30 clip posted (gap không quá 1 ngày)
+- [ ] 10K real follower (không buy)
+- [ ] 1 clip > 100K view
+- [ ] Average engagement rate >5%
+- [ ] 1 brand DM hỏi collab
+- [ ] Documented playbook (lessons)
+
+**Time estimate**: 30 ngày, 2h/ngày
+
+**Stretch goals** 🚀:
+- 50K follower → unlock TikTok Creator Fund VN
+- 1 clip > 1M view
+- Land TikTok Shop affiliate (như tommycetty $60K/10 ngày)
+- Sell course "How I grew 10K AI followers" — $99
+
+**Cost budget**:
+- ChatGPT Plus (Sora 2) $20
+- CapCut Pro $8
+- Higgsfield Cinema $39 (optional)
+- **Total: ~$30-70/tháng**
+:::
+
+---
+
+## 17 🎓 Knowledge Check
+
+::: details 1. Sora 2 đạt 1M downloads trong bao lâu?
+**A.** 30 ngày
+**B.** 5 ngày ✅
+**C.** 1 tháng
+**D.** 6 tháng
+
+**Đáp án: B** — Sora 2 (launch 30/9/2025): **1M downloads <5 ngày** (nhanh hơn ChatGPT lúc launch). Android day-1: 470K downloads. #1 US iOS App Store trong 48h.
+:::
+
+::: details 2. Jake Paul Sora 2 cameo đạt bao nhiêu views/6 ngày?
+**A.** 100M
+**B.** 500M
+**C.** 1 BILLION ✅
+**D.** 100K
+
+**Đáp án: C** — Jake Paul cameo: **1B+ views trong 6 ngày** cross IG + TikTok. $57M media value. ~6,500 Sora videos UGC.
+:::
+
+::: details 3. 4 viral format Q4/2025 đúng?
+**A.** Stitch, Duet, Slideshow, Live
+**B.** Cameo crossover, Bodycam, Parody, Surreal meme ✅
+**C.** Dance, Lipsync, Cooking, Travel
+**D.** Tutorial, Reaction, Story, Tag
+
+**Đáp án: B** — 4 format thắng Q4/2025: **Cameo crossover** (Sora 2), **Bodycam POV** (Veo 3.1), **Parody commercial** (Sora 2), **Surreal meme** (Kling 2.5).
+:::
+
+::: details 4. Higgsfield Cinema làm gì?
+**A.** Own video model
+**B.** Wrapper aggregate Sora + Veo + Kling + Wan với camera presets ✅
+**C.** Edit software
+**D.** Music gen
+
+**Đáp án: B** — Higgsfield = **wrapper** aggregate 4 model top + physics-based camera presets (Dolly, Orbit, Bullet time, Hand-held, Crane, Whip pan).
+:::
+
+::: details 5. tommycetty đạt earning bao nhiêu / 10 ngày TikTok Shop?
+**A.** $5K
+**B.** $20K
+**C.** $60,000 ✅
+**D.** $500K
+
+**Đáp án: C** — tommycetty: **$60,000 trong 10 ngày** TikTok Shop affiliate. Best single day Jan 6: $22K sales = $4K profit (20% commission). Health/wellness niche.
+:::
+
+::: details 6. Cost per 4-sec gen 2026 — Kling vs Sora 2 vs Veo?
+**A.** All ~$1
+**B.** Kling $0.45, Sora 2 $0.40, Veo $1.60 ✅
+**C.** All free
+**D.** Veo $0.10, others $5
+
+**Đáp án: B** — Kling v2.1 ~$0.45, Sora 2 ~$0.40, Veo 3.1 ~$1.60 per 4-sec. Bulk testing → Kling. Hero shot → Sora 2/Veo 3.1.
+:::
+
+::: details 7. TikTok GMV Max sau T8/2025?
+**A.** Pure organic still work
+**B.** "Pay-to-play" enforcement — cần ad budget ✅
+**C.** Free for creators
+**D.** Removed
+
+**Đáp án: B** — Sau T8/2025: TikTok shift "**pay-to-play**" — organic viral content cần ad spend backing. Budget plan: **15-20% revenue** back vào GMV Max ads.
+:::
+
+::: details 8. Sora 2 storyboard mode release?
+**A.** Launch ngày
+**B.** T11/2025 ✅
+**C.** Chưa có
+**D.** Q3 2026
+
+**Đáp án: B** — **T11/2025**: Sora 2 storyboard mode — multi-shot narrative control trong 1 generation. Supersedes external scene-chaining tools.
+:::
+
+::: details 9. Veo 3.1 vertical update khi nào?
+**A.** T9/2025
+**B.** T1/2026 (13 Jan) ✅
+**C.** T6/2026
+**D.** Chưa có
+
+**Đáp án: B** — **13/1/2026**: Veo 3.1 tạo vertical 9:16 từ reference images. Direct play TikTok/Reels/Shorts native format.
+:::
+
+::: details 10. Project Mariner (Google) shutdown khi nào và lý do?
+**A.** Still running
+**B.** T5/4/2026 — visual screenshot too expensive vs API-first ✅
+**C.** T1/2026 — bankruptcy
+**D.** T12/2025 — security issue
+
+**Đáp án: B** — Project Mariner shutdown **T5/4/2026**. 17-month experiment killed because visual screenshot architecture too compute-intensive, error-prone, outclassed by API-first agents (Claude Code + MCP). Tech absorbed Gemini API + Gemini Agent.
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 6 (Faceless Empire)
+- 5-7/10 ⚠️ Re-read sections 1-13
+- <5/10 ❌ Redo lab actually post TikTok
+
+---
+
+## 18 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md)
 - 💰 [Chapter 4 — Solo SaaS](./4-solo-saas-million.md)

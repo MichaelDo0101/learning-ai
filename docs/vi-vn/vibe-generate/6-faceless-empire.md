@@ -461,7 +461,324 @@ Source: [TechCrunch Veo 3.1](https://techcrunch.com/2026/01/13/googles-update-fo
 
 ---
 
-## 15 Đọc tiếp
+## 15 📊 Architecture Diagram — Faceless YT Production Pipeline
+
+```mermaid
+flowchart LR
+    Ideas[💡 5 ideas / day<br/>Claude trending]
+    Ideas --> Script[📝 Script 10-15 min<br/>Claude]
+    Script --> Voice[🎙️ Voice<br/>ElevenLabs<br/>15 min]
+    Voice --> Visuals[🖼️ Visuals batch<br/>Midjourney + Veo<br/>1-2h]
+    Visuals --> Edit[✂️ Edit<br/>CapCut/Premiere<br/>1h]
+    Edit --> Thumb[🎨 Thumbnail<br/>MJ + Photoshop<br/>30min]
+    Thumb --> SEO[🔍 SEO+upload<br/>TubeBuddy<br/>15min]
+    SEO --> YT((🎬 YouTube))
+
+    YT --> Cross[📱 Cross-post<br/>Shorts/TikTok/Reels]
+    YT --> Etsy[🛍️ Print-on-demand<br/>Etsy passive]
+    YT --> TS[🛒 TikTok Shop<br/>UGC affiliate]
+
+    style Ideas fill:#fbbf24,stroke:#f59e0b,color:#000
+    style YT fill:#ef4444,stroke:#dc2626,color:#fff
+    style Cross fill:#10b981,stroke:#059669,color:#fff
+```
+
+**Per-video time + cost**:
+| Step | Time | Cost |
+|------|------|------|
+| Script | 30 min | ChatGPT $20/mo |
+| Voice | 15 min | ElevenLabs $22/mo |
+| Visuals | 1-2h | MJ $30 + Veo $0.15-0.40/sec |
+| Edit | 1h | CapCut $7.99/mo |
+| Thumbnail | 30 min | MJ included |
+| SEO | 15 min | TubeBuddy $30/mo |
+| **Total** | **~4h/video** | **~$90/month + per-video Veo cost** |
+
+→ Break-even ~50K monthly views (RPM $15).
+
+---
+
+## 16 🧪 Hands-on Lab — Build 1 Faceless YouTube Video End-to-End
+
+::: tip 🎯 Goal
+4 giờ: ship 1 video YouTube faceless 10 phút, niche bạn pick. Upload + SEO + ready to publish.
+:::
+
+### Prerequisites checklist
+
+```
+□ ElevenLabs Creator ($22/tháng) — voice clone hoặc library
+□ Midjourney Standard ($30/tháng) — visuals
+□ Veo 3.1 access (Gemini Advanced $19.99) — motion clips
+□ CapCut Pro ($7.99/tháng)
+□ TubeBuddy hoặc VidIQ ($15-30/tháng) — SEO
+□ YouTube channel (đã setup banner + about)
+```
+
+### Step 1. Pick niche + topic (15 phút)
+
+5 niche template VN-friendly:
+1. **Lịch sử Việt re-told** — animated với AI visuals
+2. **Top 10 món ăn vùng miền** — animated food
+3. **Crypto/finance giải thích tiếng Việt**
+4. **Career stories dev VN ở nước ngoài**
+5. **Bí ẩn lịch sử / huyền thoại Việt**
+
+Pick niche → Claude prompt:
+```
+Tôi làm faceless YouTube channel niche [NICHE].
+Đề xuất 10 topic video viral potential:
+- Mỗi topic: title <60 ký tự (SEO friendly)
+- Mỗi topic: hook 1 câu (curiosity gap)
+- Search volume estimate (high/med/low)
+- Competition (high/med/low)
+
+Format: bảng Markdown.
+```
+
+→ Pick 1 topic (high search, med competition).
+
+### Step 2. Script 10 phút (30 phút)
+
+Claude prompt:
+```
+Viết script video YouTube faceless 10 phút, niche [niche], topic [topic].
+
+Structure:
+- Hook 30s (curiosity gap, "Bạn sẽ không tin nổi...")
+- Intro 60s (context + promise: "Trong 10 phút tới, tôi sẽ kể bạn...")
+- 3 main section, mỗi section 2:30 (clear sub-topic)
+- CTA 30s (subscribe + next video)
+
+Tone: storytelling, educational
+Audience: VN, age 25-40
+Format: 1 câu / dòng để voice gen
+```
+
+→ Save `script.txt` (~1500 từ).
+
+### Step 3. Voice gen (15 phút)
+
+ElevenLabs:
+- Pick voice (library "Antoni" male VN, hoặc clone own voice)
+- Settings: stability 0.5, similarity 0.75, style 0.3
+- Generate per paragraph → check pronunciation
+- Export: WAV 192kbps (10 phút audio = ~30MB)
+
+### Step 4. Visuals batch gen (1-2 giờ)
+
+**Midjourney prompt template** (consistent style):
+```
+[Subject], [scene description], cinematic documentary style,
+muted color palette, 1970s film aesthetic, soft lighting,
+--ar 16:9 --v 8 --stylize 200 --style raw
+```
+
+Gen ~20-30 still images cho 10 phút video (mỗi shot 20-30s).
+
+**Veo 3.1 motion** cho 5-10 key shot:
+- Animate still image → 5s motion clip
+- Cost: ~$0.75-1.50 per shot
+
+### Step 5. Edit CapCut (1 giờ)
+
+Timeline:
+```
+Track 1 (video): images + Veo motion clips
+Track 2 (audio): ElevenLabs voice
+Track 3 (BGM): royalty-free background music (lower 20%)
+Track 4 (SFX): transitions, emphasis (sparingly)
+
+Transitions: dissolve, crossfade (subtle, not jarring)
+Captions: bottom center, white + black outline, animated burst
+Subtitle: auto-gen tiếng Việt + tiếng Anh
+```
+
+Export: 1080p 16:9 MP4 H.264, 10 Mbps bitrate.
+
+### Step 6. Thumbnail + SEO (45 phút)
+
+**Thumbnail** (MJ):
+```
+YouTube thumbnail, [niche], dramatic composition,
+high contrast, big text overlay area, emotional face (if applicable),
+[color palette: red+yellow viral], 16:9, eye-catching,
+--ar 16:9 --v 8 --stylize 500
+```
+
+Crop trong Photoshop/CapCut, add big text overlay (3-5 từ).
+
+**SEO** (TubeBuddy):
+- Title: SEO keyword + emotional hook + curiosity (<60 ký tự)
+- Description: 200 từ với keyword density 2-3%
+- Tags: 15-25 tags mix broad + long-tail
+- Custom thumbnail upload
+- End screen + cards setup
+
+### Step 7. Upload + publish
+
+- Schedule peak time VN (19-21h)
+- Pin comment with related video
+- Share Twitter/Facebook trong 30 phút đầu để boost algo
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| Voice generic AI-sounding | Clone own voice (30s upload) + add emotion tags `[serious]` `[excited]` |
+| MJ images không consistent style | Save 1 style ref image → `--sref [URL]` cho mọi shot |
+| Veo cost cao | Limit motion clips 5-8 key shots, rest dùng MJ still + Ken Burns effect (CapCut zoom) |
+| Audio sync drift | Adjust voice generation: pause tags `[pause]` thay vì silent gap |
+| Thumbnail CTR thấp | A/B test 3 thumbnail (TubeBuddy A/B feature) trong 48h |
+
+---
+
+## 17 🏗️ Mini-Project — 30 Days, 10 Videos, 1K Subscribers
+
+::: warning 🎯 Assignment
+
+**Goal**: 30 ngày → upload 10 video → đạt 1K subscriber → unlock YouTube Partner Program.
+
+**Requirements**:
+1. **Niche stick** — 30 ngày không đổi
+2. **Posting cadence**: 1 video / 3 ngày × 10 video
+3. **Quality bar**: mỗi video <4 giờ production
+4. **SEO** mọi video: title + description + tags optimized
+5. **Cross-post**: 1 Short / video lên TikTok + Reels
+6. **Analytics tracking**: CTR, retention, subscriber/video
+
+**Acceptance criteria**:
+- [ ] 10 video published
+- [ ] 1K subscriber (YouTube Partner threshold)
+- [ ] 1 video > 10K view
+- [ ] Total watch hours > 4000 (YPP threshold)
+- [ ] Average retention > 40%
+- [ ] AdSense setup ready
+
+**Time estimate**: 30 ngày
+
+**Stretch goals** 🚀:
+- 5K subscriber (sponsor friendly)
+- 1 video viral (>100K view)
+- Land 1 sponsor ($200-500)
+- Setup Etsy shop (print-on-demand niche-related)
+- Setup TikTok Shop affiliate
+
+**Revenue benchmark sau 6 tháng** (RPM $15-40):
+- 100K monthly views → $1.5-4K/tháng
+- 500K monthly views → $7.5-20K/tháng (Fern, Infographics Show level)
+
+**Time-saving tips**:
+- Batch script: 3-4 video trong 1 buổi
+- Batch voice gen: 3-4 video trong 1 buổi
+- Reuse style references → consistency + faster gen
+- Template CapCut project (drag + replace)
+:::
+
+---
+
+## 18 🎓 Knowledge Check
+
+::: details 1. Court Case Channel best video earning?
+**A.** $200
+**B.** $2K
+**C.** $20,000 ✅
+**D.** $200K
+
+**Đáp án: C** — Court Case Channel: 1 video cost **$250 production**, best video earning **$20,000+ from 5M views**. ROI ~80x. Network 20 channels, 2.5M+ combined subs.
+:::
+
+::: details 2. Average RPM faceless YouTube 2024-25?
+**A.** $1-5
+**B.** $5-15
+**C.** $15-40 ✅
+**D.** $100+
+
+**Đáp án: C** — Faceless YT RPM **$15-40** (2-3x cao hơn channel có face). Total industry ad revenue 2024-25: **~$117M**.
+:::
+
+::: details 3. Digital Curio (Etsy AI prints) total sales?
+**A.** $33K
+**B.** $330K
+**C.** $3.3M ✅
+**D.** $33M
+
+**Đáp án: C** — Digital Curio Etsy: niche wall art prints, **~$3.3M total sales**. ~5,000 design active. Tool: Midjourney + Photoshop. 1 người + 1 contractor part-time.
+:::
+
+::: details 4. tommycetty TikTok Shop best single video earning?
+**A.** $1K
+**B.** $5K
+**C.** $10,000 ✅ (1 video commission)
+**D.** $100K
+
+**Đáp án: C** — tommycetty: **$10,000 commission từ 1 video** (Dec 2025). Total $60K trong 10 ngày. Format: UGC product review với AI avatar.
+:::
+
+::: details 5. Faceless YT stack standard 2026?
+**A.** Just ChatGPT
+**B.** Midjourney + ElevenLabs + Veo + CapCut + TubeBuddy ~$90/mo ✅
+**C.** Full Adobe Premiere Pro
+**D.** Custom AI build
+
+**Đáp án: B** — Stack chuẩn 2026: **MJ ($30) + ElevenLabs Creator ($22) + Veo Fast ($0.15/sec) + CapCut Pro ($8) + TubeBuddy ($15-30)** = ~$90/tháng. Break-even ~50K monthly views.
+:::
+
+::: details 6. Noah Morris (NexLev) operate bao nhiêu channels?
+**A.** 1
+**B.** 5
+**C.** ~20 channels, 2.5M+ subs ✅
+**D.** 100+
+
+**Đáp án: C** — Noah Morris: **~20 faceless channels**, 2.5M+ combined subs. Niche depth (court cases) > breadth. Specialized audience = higher CPM.
+:::
+
+::: details 7. First 15s quyết định bao nhiêu % retention?
+**A.** 20%
+**B.** 50%
+**C.** 80% ✅
+**D.** 100%
+
+**Đáp án: C** — First 15s = **80% retention** quyết định. CTR target >6% cho monetized channels. A/B test 3-5 thumbnail per video (TubeBuddy).
+:::
+
+::: details 8. Fern + Infographics Show monthly revenue?
+**A.** $5-10K
+**B.** $80K (Fern) + $100-300K (Infographics) ✅
+**C.** $1-5M
+**D.** Không có data
+
+**Đáp án: B** — **Fern $80K+/tháng**, **The Infographics Show $100-300K/tháng**. Quality > volume khi target top-tier. Strong scripts = moat.
+
+→ AI augments creative direction, không replaces.
+:::
+
+::: details 9. Veo 3.1 vertical update (T1/2026) impact faceless YT?
+**A.** Không impact
+**B.** Direct play TikTok/Reels/Shorts không cần re-format — game-changer ✅
+**C.** Chỉ vertical 9:16
+**D.** Replace YouTube
+
+**Đáp án: B** — Veo 3.1 vertical (13/1/2026): native 9:16 từ reference images. **Game-changer faceless creator** — không cần re-format cho Shorts/TikTok/Reels.
+:::
+
+::: details 10. YouTube Shorts → Long-form funnel CPM ratio?
+**A.** Same
+**B.** Shorts CPM thấp, long-form niche CPM cao **5-15x** ✅
+**C.** Shorts cao hơn
+**D.** Không có funnel
+
+**Đáp án: B** — Pattern: tạo Shorts (Veo 3.1 vertical) discover audience → redirect long-form 10-15 phút (**CPM cao 5-15x**). Niche long-form monetize tốt hơn nhiều.
+:::
+
+**Score**:
+- 8-10/10 ✅ Module Vibe Generate mastered
+- 5-7/10 ⚠️ Re-read sections 1-12
+- <5/10 ❌ Build actual faceless channel với 5 video real
+
+---
+
+## 19 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md)
 - 💰 [Chapter 4 — Solo SaaS](./4-solo-saas-million.md)

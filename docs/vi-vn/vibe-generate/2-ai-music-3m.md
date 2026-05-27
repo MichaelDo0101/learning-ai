@@ -439,7 +439,296 @@ Source: [Plain English investigation](https://python.plainenglish.io/i-investiga
 
 ---
 
-## 15 Đọc tiếp
+## 15 📊 Architecture Diagram — Suno Pipeline → Spotify
+
+```mermaid
+flowchart LR
+    Lyrics[📝 Lyrics<br/>Claude / human]
+    Lyrics --> Prompt[🎨 Style prompt<br/>GMIV framework]
+    Prompt --> Suno[🎵 Suno V5.5<br/>2 versions / prompt]
+    Suno --> Best{Pick best}
+    Best --> Extend[⏱️ Extend / Replace<br/>4-8 min]
+    Extend --> Stems[🎚️ Stem export<br/>12 tracks]
+    Stems --> Master[✨ Master<br/>LANDR / Suno]
+    Master --> Cover[🎨 Cover art<br/>Midjourney]
+    Cover --> Distro[📤 DistroKid<br/>$23/năm]
+    Distro --> Spotify((🎧 Spotify<br/>Apple Music<br/>TikTok))
+
+    style Lyrics fill:#fbbf24,stroke:#f59e0b,color:#000
+    style Suno fill:#6366f1,stroke:#4f46e5,color:#fff
+    style Spotify fill:#10b981,stroke:#059669,color:#fff
+```
+
+**GMIV Framework** (prompt structure):
+- **G**enre (1-2 primary)
+- **M**ood (1 emotional anchor)
+- **I**nstruments (2-4 specific)
+- **V**ocals (gender, register, delivery)
+
+→ Vượt 95% AI artist khác (chỉ dùng generic "happy pop song" prompt).
+
+---
+
+## 16 🧪 Hands-on Lab — Release 1 Bolero AI tiếng Việt
+
+::: tip 🎯 Goal
+60 phút: gen + master + upload 1 bài bolero AI tiếng Việt lên SoundCloud (preview cho Spotify chính thức sau).
+:::
+
+### Prerequisites checklist
+
+```
+□ Suno Pro ($10/tháng) — commercial license
+□ SoundCloud free account
+□ LANDR mastering ($4/track) hoặc BandLab Mastering (free)
+□ Cover art: Midjourney ($30) hoặc DALL-E (in ChatGPT $20)
+□ Optional: DistroKid ($23/năm) cho Spotify
+```
+
+### Step 1. Write lyrics tiếng Việt (15 phút)
+
+Prompt Claude:
+```
+Viết lyrics tiếng Việt cho bài bolero, chủ đề: "Mưa Sài Gòn nhớ em".
+
+Structure:
+- Verse 1: 8 dòng (giới thiệu)
+- Chorus: 4 dòng (hook nostalgic)
+- Verse 2: 8 dòng (phát triển)
+- Chorus: 4 dòng (lặp)
+- Bridge: 4 dòng (twist)
+- Chorus: 4 dòng
+
+Style:
+- Vần: aabb
+- Tone: melancholy, classical Saigon 80s
+- Avoid: rap, hip-hop references
+- Include: hình ảnh mưa, café, đèn vàng, áo bà ba
+```
+
+### Step 2. Suno generation (15 phút)
+
+**Custom Mode**:
+```
+Style:
+Vietnamese bolero, slow 65 BPM, classical guitar + soft piano + light strings,
+male baritone voice, melancholy, 80s Saigon era,
+vintage tape reverb, intimate vocal recording.
+
+Lyrics:
+[paste lyrics từ step 1]
+```
+
+→ Gen **5-10 lần** với prompt variations. Pick **best 1**.
+
+**Pro tip Suno V5.5**:
+- **Personas**: lưu voice persona cho artist consistency album
+- **Extend**: nếu bài <2 phút, extend lên 3-4 phút
+- **Replace section**: nếu 1 verse weak, generate lại riêng
+
+### Step 3. Master với LANDR (5 phút)
+
+- Upload track → LANDR cloud
+- Pick style: "Warm" cho bolero
+- Pick intensity: Medium
+- Download mastered MP3 320kbps + WAV 24-bit
+
+Cost: $4/track (or BandLab Mastering free tier).
+
+### Step 4. Cover art (10 phút)
+
+Midjourney prompt:
+```
+Vintage Saigon street at night, raining gently, soft yellow lamp light,
+empty wooden chair in foreground, melancholy mood,
+oil painting style, 70s Vietnamese album cover aesthetic,
+--ar 1:1 --v 8 --stylize 300
+```
+
+→ Crop 3000x3000px (Spotify requirement).
+
+### Step 5. Upload + tag
+
+**SoundCloud** (free, immediate):
+- Track title: "Mưa Sài Gòn nhớ em [AI bolero]"
+- Description: "AI music experiment with Suno V5.5. All rights reserved."
+- Tags: `aimusic, bolero, vietnamesemusic, sunoai`
+- **MANDATORY**: Mark "Made with AI" disclosure
+
+**Spotify** (qua DistroKid, $23/năm):
+- Upload track + cover art
+- DDEX AI flag checkbox (LEGAL must)
+- Wait 7-14 ngày live
+
+### Step 6. Share
+
+- TikTok: short clip 30s + lyrics + hashtag #aibolero
+- Threads/X: build-in-public — "Released my first AI bolero today"
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| Suno vocal sounds robotic | Improve voice description in prompt + use Personas |
+| Vietnamese pronunciation wrong | Try "Vietnamese accent, native diction" in prompt; or train Persona |
+| LANDR over-compresses | Lower intensity to "Subtle" |
+| Spotify takes track down | Check DDEX AI flag set + no celebrity voice clone |
+| Cost runaway | Stay free tier: Suno Free (5/day) + BandLab Master free |
+
+---
+
+## 17 🏗️ Mini-Project — Release 4 Track AI Persona trong 2 Tuần
+
+::: warning 🎯 Assignment
+
+**Goal**: Build artist identity + release 4 track consistent → Spotify + TikTok grow.
+
+**Requirements**:
+1. **Define persona**:
+   - Artist name (Vietnamese)
+   - Genre niche (bolero / V-Pop / indie folk Việt)
+   - Visual identity (cover art style)
+   - Voice signature (use Suno Persona)
+2. **4 track concept** (album/EP coherent):
+   - Track 1: Lead single
+   - Track 2: Slow B-side
+   - Track 3: Up-tempo
+   - Track 4: Closing ballad
+3. **Production**:
+   - All 4 mastered LANDR
+   - Cover art consistent (cùng style, cùng artist)
+   - Cohesive lyrics theme
+4. **Distribution**:
+   - Spotify + Apple Music (via DistroKid)
+   - TikTok 30s clip mỗi track
+   - YouTube lyric video (Veo + ElevenLabs)
+
+**Acceptance criteria**:
+- [ ] 4 track live trên Spotify
+- [ ] DDEX AI flag set đúng
+- [ ] Total monthly listeners >1,000 sau 4 tuần
+- [ ] 1 TikTok clip >10K view
+- [ ] Branded artist page (Linktree)
+- [ ] Documented: lessons learned + numbers
+
+**Time estimate**: 2 tuần
+
+**Stretch goals** 🚀:
+- 10K monthly Spotify listener
+- 1 sync license deal (Musicbed / Epidemic)
+- Cover by VN cover singer (license sync)
+- Pitch 1 brand (cà phê, bia) cho commission
+
+**Cost breakdown**:
+- Suno Premier ($30/tháng): unlimited gen
+- LANDR (4 tracks × $4 = $16)
+- DistroKid ($23/năm)
+- Midjourney ($30/tháng): cover art
+- **Total: ~$80** cho 4 track + 1 năm distribution
+:::
+
+---
+
+## 18 🎓 Knowledge Check
+
+::: details 1. Telisha Jones (Xania Monet) đạt deal record bao nhiêu?
+**A.** $300K
+**B.** $1M
+**C.** $3M ✅
+**D.** $30M
+
+**Đáp án: C** — **$3M record deal** với Hallwood Media. AI artist đầu tiên trên Billboard Adult R&B Airplay (#30). 1.4M monthly Spotify listeners.
+:::
+
+::: details 2. GMIV framework cho Suno prompt là?
+**A.** Genre Mood Instruments Vocals ✅
+**B.** Goal Method Input Verify
+**C.** Generate Master Improve Validate
+**D.** Genre Music Intro Verse
+
+**Đáp án: A** — **GMIV** = Genre (1-2 primary) + Mood (1 anchor) + Instruments (2-4 specific) + Vocals (gender, register, delivery). Vượt 95% AI artist khác.
+:::
+
+::: details 3. Suno V5.5 "Voices" feature là?
+**A.** Voice changer
+**B.** Clone giọng riêng + private ✅
+**C.** Auto-tune
+**D.** Vocal removal
+
+**Đáp án: B** — **Voices** = verification process bằng phrase ngẫu nhiên, voice private chỉ creator dùng. Tránh được copyright/voice-clone issue.
+:::
+
+::: details 4. Suno × Warner settle khi nào?
+**A.** T6/2025
+**B.** T9/2025
+**C.** T11/2025 ✅
+**D.** Chưa settle
+
+**Đáp án: C** — **T11/2025**: Warner settle với Suno, multi-million $ + licensing terms. Suno acquire Songkick from Warner. New 2026 models trained on Warner catalog.
+:::
+
+::: details 5. Breaking Rust đạt thành tựu gì?
+**A.** #1 Billboard Country Digital Song Sales ✅
+**B.** Grammy
+**C.** Spotify Wrapped #1
+**D.** TikTok viral
+
+**Đáp án: A** — Breaking Rust = AI country đầu tiên **#1 Billboard Country Digital Song Sales** (~3K units bán). 2.4M monthly Spotify listeners. Washington Post 28/12/2025: "AI country hit triggers Nashville angst".
+:::
+
+::: details 6. Aventhis dùng mix engine nào?
+**A.** 100% Suno
+**B.** 100% Udio
+**C.** ~66% Riffusion + ~27% Suno ✅
+**D.** 100% human composition
+
+**Đáp án: C** — Aventhis "Mercy On My Grave" = **66% Riffusion + 27% Suno** (per Uhmbrella AI-detection analysis). Suno cho vocal, Riffusion cho ambient/texture. **1M+ monthly Spotify listeners**.
+:::
+
+::: details 7. Spotify policy T9/2025 cho AI music?
+**A.** Ban hoàn toàn
+**B.** OK + disclose qua DDEX ✅
+**C.** Free for all
+**D.** Cần label sign
+
+**Đáp án: B** — Spotify (T9/2025): AI music OK, **disclose qua DDEX standard**, distributor handle. Cấm clone giọng người thật. 75M tracks removed/12 tháng vì spam.
+:::
+
+::: details 8. Suno V5 split track thành bao nhiêu stems?
+**A.** 4 stems
+**B.** 8 stems
+**C.** 12 stems ✅
+**D.** Vô hạn
+
+**Đáp án: C** — Suno V5 split 1 track thành tối đa **12 individual stems** time-aligned WAV. Đưa vào Logic/Ableton để remix.
+:::
+
+::: details 9. Luo Yonghao (TQ) AI avatar livestream đạt GMV bao nhiêu?
+**A.** $500K
+**B.** $1M
+**C.** $7.65M ✅
+**D.** $50M
+
+**Đáp án: C** — **$7.65M GMV (55M RMB)** trong 6+ giờ livestream. 13M+ viewers. Stack: Baidu generative AI + 13K-item KB + 97K words product descriptions + 8.3K avatar movements.
+:::
+
+::: details 10. Deezer phát hiện bao nhiêu % daily uploads là AI?
+**A.** 10%
+**B.** 25%
+**C.** 44% ✅ (85% trong đó fraudulent)
+**D.** 90%
+
+**Đáp án: C** — Deezer detection: **44% daily uploads = AI**, **85% trong số đó fraudulent** → demonetized. Patent-pending detection tool licensed cho platforms khác.
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 3 (Virtual Influencer)
+- 5-7/10 ⚠️ Re-read sections 6-12
+- <5/10 ❌ Redo lab — actually release 1 track
+
+---
+
+## 19 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md) (back)
 - 👤 [Chapter 3 — Virtual Influencer](./3-virtual-influencer.md) — combine AI music + AI persona

@@ -384,7 +384,280 @@ Source: [Variety](https://variety.com/2026/film/festivals/tribeca-festival-ai-fi
 
 ---
 
-## 13 Đọc tiếp
+## 13 📊 Architecture Diagram — Solo Studio Pipeline
+
+```mermaid
+flowchart LR
+    Idea([💡 Concept])
+    Idea --> Script[📝 Script + Shotlist<br/>Claude/ChatGPT]
+    Script --> KF[🖼️ Keyframes<br/>Midjourney V8.1]
+    KF --> Motion[🎬 Motion<br/>Runway / Veo / Sora]
+    Motion --> Audio[🎵 Audio<br/>Suno + ElevenLabs]
+    Audio --> Polish[✨ Polish<br/>Topaz 4K + CapCut]
+    Polish --> Out([📤 Ship: TikTok / YouTube / Client])
+
+    KF -.cref/oref.-> Motion
+    style Idea fill:#fbbf24,stroke:#f59e0b,color:#000
+    style Out fill:#10b981,stroke:#059669,color:#fff
+```
+
+**5-step pipeline + production time**:
+| Step | Tool | Time |
+|------|------|------|
+| Script | Claude | 1-2h |
+| Keyframes | Midjourney V8.1 | 2-4h |
+| Motion | Runway Gen-4 / Veo 3.1 | 4-8h |
+| Audio | Suno + ElevenLabs | 1-2h |
+| Polish | Topaz + CapCut | 2-4h |
+| **Total** | 5 tools | **1-3 ngày cho 30-60s** |
+
+---
+
+## 14 🧪 Hands-on Lab — Ad clip 15s với MJ + Runway + ElevenLabs
+
+::: tip 🎯 Goal
+90 phút: ship 1 clip 15s tiếng Việt (1 nhân vật + 1 dialogue + BGM). Mục tiêu: post TikTok demo.
+:::
+
+### Prerequisites checklist
+
+```
+□ Midjourney Pro ($30/tháng) hoặc Flux Pro via Replicate API ($0.05/img)
+□ Runway Standard ($15/tháng) — 1 clip 5-10s test
+□ ElevenLabs Starter ($5/tháng) — 30K char/tháng
+□ Suno Free tier (5 song/ngày)
+□ CapCut (free)
+```
+
+### Step 1. Concept với Claude (10 phút)
+
+Prompt template:
+```
+Tôi muốn làm ad 15s cho [BRAND VN — vd: cà phê Trung Nguyên].
+Tone: hoài cổ Sài Gòn, nostalgic.
+Output cho tôi:
+- 1 logline (1 câu)
+- 3-shot storyboard (mỗi shot 5s)
+- Mỗi shot: location, character, action, camera, dialogue
+- 1 line dialogue tiếng Việt
+- BGM mood description
+
+Format: bảng Markdown.
+```
+
+### Step 2. Keyframes với Midjourney (30 phút)
+
+3 keyframe (1 per shot). Prompt template:
+
+```
+Vietnamese man in his 40s, retro 1960s Saigon attire (white shirt, brown vest),
+sitting at a wooden cafe table with vintage cup, golden hour lighting,
+nostalgic mood, cinematic film grain, shot on Kodak Portra 400 style,
+--ar 16:9 --v 8 --stylize 200
+```
+
+**Pro tip — character consistency**:
+- Gen 1 character ref → save URL
+- Cho mỗi shot mới: `--cref [URL] --cw 100`
+- Hoặc dùng **Omni Reference** (V8): `--oref [URL] --ow 100`
+
+### Step 3. Motion với Runway Gen-4 (40 phút)
+
+Upload mỗi keyframe → image-to-video → prompt:
+
+```
+[Camera move]: slow dolly forward
+[Subject action]: man slowly lifts coffee cup, takes a sip, looks at camera
+[Duration]: 5 seconds
+[Style]: cinematic, film grain
+```
+
+3 clip × 5s = 15s.
+
+### Step 4. Audio (15 phút)
+
+**Dialogue (ElevenLabs)**:
+- Pick voice: "Adam" hoặc clone voice tiếng Việt
+- Type dialogue → generate
+- Emotion tag: `[nostalgic]` hoặc `[contemplative]`
+
+**BGM (Suno)**:
+- Prompt: "Vietnamese 1960s bolero, slow tempo 70 BPM, classical guitar + piano, no vocal, melancholy"
+- Pick 1 trong 2 version → download MP3
+
+### Step 5. Polish + Edit (CapCut, 20 phút)
+
+```
+Timeline:
+- Video track: 3 Runway clips (5s mỗi)
+- Audio 1: ElevenLabs dialogue
+- Audio 2: Suno BGM (lower volume 30%)
+- Add: brand logo overlay last 2s
+- Captions: tiếng Việt, bold sans-serif
+- Export: 1080p 9:16 (TikTok) hoặc 16:9 (YouTube)
+```
+
+### Step 6. Ship
+
+Post lên TikTok + caption hashtag: `#aifilmmaking #aiads #vibegenerate`
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| Character inconsistent giữa shots | Dùng `--cref` hoặc `--oref`, không text-prompt lại |
+| Runway clip "morph" weird | Lower motion strength (Camera/Subject) trong settings |
+| ElevenLabs voice unnatural | Try voice clone với 30s own voice + adjust stability 0.5-0.7 |
+| Suno BGM lyrics unwanted | Add "instrumental only, no vocals" trong prompt |
+| Cost overshooting | Track: MJ ~$5, Runway ~$3, ElevenLabs ~$1 = **~$10/clip** |
+
+---
+
+## 15 🏗️ Mini-Project — 30s Mock-ad cho 1 VN Brand
+
+::: warning 🎯 Assignment
+
+**Goal**: Ship 30s mock-ad cho 1 VN brand thật. Post TikTok + đo engagement.
+
+**Brand options** (pick 1):
+- Trung Nguyên (cà phê)
+- Vinamilk (sữa)
+- Highlands Coffee
+- Bia Saigon
+- Nem chua Thanh Hoá
+
+**Requirements**:
+1. **5 shot** (mỗi shot 6s)
+2. **Character consistency** xuyên suốt (`--cref` hoặc LoRA train)
+3. **Local language** (tiếng Việt) — dialogue + voiceover
+4. **Local context** — bối cảnh VN (đường phố Hà Nội, café Sài Gòn, biển Đà Nẵng...)
+5. **Brand integration** — logo + CTA cuối 3s
+6. **Total cost <$25**
+
+**Acceptance criteria**:
+- [ ] 30s final video 1080p
+- [ ] Character consistency >80% across shots
+- [ ] Audio sync hoàn hảo
+- [ ] Brand visible nhưng không gượng ép
+- [ ] Posted TikTok + LinkedIn case study
+- [ ] Document cost breakdown
+
+**Time estimate**: 1 weekend
+
+**Stretch goals** 🚀:
+- Reach >10K view TikTok
+- Get DM từ real brand asking to commission
+- Build portfolio site showcase
+- Charge $500-2K cho client thật
+
+**Pricing benchmark** (cho freelance VN):
+- Mock-ad portfolio piece: $0 (build trust)
+- Client ad 30s: **$500-2,000** (vs traditional $5K-15K)
+- Series 5 clips: $2K-5K
+:::
+
+---
+
+## 16 🎓 Knowledge Check
+
+::: details 1. Josh Kerrigan bỏ job full-time khi nào?
+**A.** T6/2024
+**B.** T1/2025 ✅
+**C.** T6/2025
+**D.** T1/2026
+
+**Đáp án: B** — Josh Kerrigan bỏ job T1/2025 vì Neural Viz clips đủ trả tiền nhà. Wired gọi là "first great cinematic universe of the AI era."
+:::
+
+::: details 2. PJ Ace Kalshi NBA Finals ad cost bao nhiêu?
+**A.** $200K
+**B.** $20K
+**C.** $2,000 ✅
+**D.** $200
+
+**Đáp án: C** — **$2,000 + 48 hours** → ~20M impressions. So với traditional production ($200K-500K + 6 weeks).
+:::
+
+::: details 3. Stack 5-step pipeline đúng order?
+**A.** Audio → Motion → Polish → Concept → Keyframes
+**B.** Concept → Keyframes → Motion → Audio → Polish ✅
+**C.** Motion → Audio → Concept → Polish → Keyframes
+**D.** Keyframes → Motion → Concept → Polish → Audio
+
+**Đáp án: B** — Đúng pipeline: Concept (Claude) → Keyframes (MJ) → Motion (Runway/Veo) → Audio (Suno/EL) → Polish (Topaz/CapCut).
+:::
+
+::: details 4. Khi cần character consistency, KHÔNG nên?
+**A.** Dùng `--cref` (V7) hoặc `--oref` (V8)
+**B.** Text-prompt từng shot lại ✅
+**C.** Train LoRA character
+**D.** Save keyframe + reference qua shots
+
+**Đáp án: B** — Text-prompt lại = consistency 0%. Luôn dùng image-to-video từ keyframe.
+:::
+
+::: details 5. Coca-Cola Holiday 2025 campaign generated bao nhiêu clip?
+**A.** 700
+**B.** 7,000
+**C.** 70,000+ ✅
+**D.** 700,000
+
+**Đáp án: C** — Coca-Cola Holiday 2025: **70,000+ clip** AI-generated trong 1 tháng. Cost saving 60-70% nhưng backlash "soulless, digital slop".
+:::
+
+::: details 6. Tribeca 2026 accepted phim AI nào?
+**A.** "Dreams of Violets" — full AI feature về Iran resistance ✅
+**B.** "Monoverse" — Josh Kerrigan
+**C.** "Coca-Cola Holiday"
+**D.** Chưa có
+
+**Đáp án: A** — **"Dreams of Violets"** là full AI feature film đầu tiên ở major festival (Tribeca 2026 world premiere). Chủ đề: phong trào kháng cự dân thường Iran.
+:::
+
+::: details 7. Veo 3.1 "Ingredients to Video" cho phép?
+**A.** Upload 1 reference image
+**B.** Upload tối đa 3 reference images ✅
+**C.** Tự gen ingredients
+**D.** Mix 2 videos
+
+**Đáp án: B** — Veo 3.1 (T10/2025) cho phép **upload 3 reference images** (character, prop, scene) → Veo ghép logic. Lip-sync <120ms.
+:::
+
+::: details 8. Cost per 4-sec generation 2026 — Sora 2 vs Veo 3.1?
+**A.** Sora 2 = $1.60, Veo = $0.40
+**B.** Sora 2 = $0.40, Veo = $1.60 ✅
+**C.** Cả 2 đều $1
+**D.** Free
+
+**Đáp án: B** — Sora 2 ~$0.40 / 4-sec, Veo 3.1 ~$1.60. Kling v2.1 ~$0.45. Bulk testing dùng Kling, hero shot Sora 2/Veo.
+:::
+
+::: details 9. AI Film Award 2026 grand prize?
+**A.** $50K
+**B.** $150,000 ✅
+**C.** $1M
+**D.** Không có
+
+**Đáp án: B** — **$150,000 grand prize** Muhannad Nassar + Simon Meyer winning (async, 2 lục địa). ~8,800 submissions từ 139 quốc gia.
+:::
+
+::: details 10. Higgsfield Cinema Studio "Elements" là?
+**A.** Filter effects
+**B.** Reusable character/location/prop với `@tag` ✅
+**C.** Music templates
+**D.** Color presets
+
+**Đáp án: B** — Higgsfield Cinema Studio 3.5 (T1-3/2026): **"Elements" system** — tạo Element (character, location, prop) 1 lần → reference `@tag` qua mọi shot. Project-level consistency.
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 2 (AI Music)
+- 5-7/10 ⚠️ Re-watch 5 videos
+- <5/10 ❌ Redo lab end-to-end
+
+---
+
+## 17 Đọc tiếp
 
 - 🎵 [**Chapter 2 — AI Music $3M**](./2-ai-music-3m.md) — Telisha Jones + Aventhis stories
 - 👤 [**Chapter 3 — Virtual Influencer**](./3-virtual-influencer.md) — Aitana + Vi An
