@@ -349,7 +349,129 @@ Length: 2-3 dòng + hashtag
 
 ---
 
-## 11 Đọc tiếp
+## 11 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'PhiPASFYBmk', title: 'Create HYPERREALISTIC Consistent AI Characters [ComfyUI Masterclass 2025]', channel: 'ComfyUI Academy', duration: '30:00', why: 'ComfyUI full masterclass — local + free workflow. Path cho học viên không muốn đốt API.' },
+  { id: 'KJna9HSeGOQ', title: 'How to Create Realistic AI Influencer locally (10+ ComfyUI workflows)', channel: 'Latent Vision', duration: '25:00', why: '10+ workflow templates: face consistency, body pose, outfit swap. Practical kit.' },
+  { id: 'e5cXccxkQnc', title: 'AI Influencer Complete Tutorial Part 1 - 1-Click Installer ComfyUI', channel: 'Olivio Sarikas', duration: '22:00', why: '1-click installer giúp non-tech start. Entry-level practical.' },
+  { id: 'Mi0sonWTlbI', title: 'Unlimited AI Influencer videos (ComfyUI InfiniteTalk Tutorial)', channel: 'Sebastian Kamph', duration: '28:00', why: 'Video content cho persona (không chỉ ảnh tĩnh). InfiniteTalk = lip-sync + extended duration.' },
+  { id: '34yZX1OHAQk', title: 'AI Influencer with Flux 2 + PuLID + ComfyUI', channel: 'Hugo Sotomayor', duration: '20:00', why: 'Flux 2 + PuLID = state-of-the-art T3/2026 cho face preservation. Update mới nhất.' }
+]" />
+
+---
+
+## 12 🔬 Deep Dive Techniques 2026
+
+::: tip 👤 7 advanced techniques cho hyper-real persona
+
+**1. LoRA training với 20-25 images / 10-15 epochs (standard rule)**
+- Best practice training set: 20-25 images đa angle/expression
+- 10-15 epoch với image repetition phù hợp
+- Khi nào: bắt đầu persona, sau khi có character sheet stable
+- Tool: Kohya, ai-toolkit, Flux Gym online; cost $5-20
+
+**2. ACE++ — character consistency không cần training (chỉ 1 ảnh)**
+- 1 reference image duy nhất, KHÔNG train LoRA
+- Khi nào: ship nhanh hoặc campaign 1-time
+- Tool: ComfyUI + ACE++ nodes + Flux Fill model
+
+**3. IPAdapter FaceID + LoRA hybrid stack**
+- IPAdapter FaceID giữ face identity, LoRA giữ body proportion/style
+- Hybrid cho stability cao hơn LoRA-only
+- Khi nào: production-grade, Instagram-ready realism
+- Tool: ComfyUI + IPAdapter Plus + custom LoRA
+
+**4. Wan 2.2 Animate cho character animation + replacement**
+- Open-source model T9/2025; 2 modes: animate static / replace character
+- **720p, 24fps, 120s max**
+- Khi nào: video content (dance, walk, talk)
+- Tool: Wan 2.2-Animate-14B (HF / wan.video / ModelScope), free, RTX 4090 OK
+
+**5. Flux 2 + PuLID — face identity 2026**
+- PuLID inject face embedding vào Flux 2 attention layers
+- Stronger identity hold than LoRA cho long generations
+- Khi nào: LoRA bị "drift" sau 50+ image
+- Tool: ComfyUI + Flux 2 base + PuLID node
+
+**6. Higgsfield "Soul ID" cho cross-platform persona**
+- Persistent character identity qua mọi video gen tools của Higgsfield
+- Plus Cinema Studio "Elements" system project consistency
+- Khi nào: brand ambassador cần scale (50+ post/tháng)
+- Tool: Higgsfield Pro
+
+**7. Multi-character control: Blender + ComfyUI pipeline**
+- Set scene + camera + pose Blender → render proxy → control AI gen qua ControlNet
+- Pose accurate hơn pure prompt
+- Khi nào: scene 2+ persona, dialogue, complex blocking
+- Tool: Blender (free) + ComfyUI + ControlNet OpenPose
+:::
+
+---
+
+## 13 📚 More Case Studies (2025-2026)
+
+### Case A: Noonoouri — Warner Music recording artist (first AI virtual popstar)
+
+| Item | Detail |
+|------|------|
+| Creator | Joerg Zuber (fashion designer) |
+| Prior brand | Dior, Balenciaga, Valentino campaigns |
+| Aesthetic | Anime-style |
+| Voice | AI generation từ human singer base |
+| **Record deal** | **Warner Music** (8/2023, active 2025-2026) |
+| Debut single | "Dominoes" với DJ Alle Farben |
+| 2026 | Next release planned T1/2026 |
+
+> Source: [Designboom](https://www.designboom.com/technology/warner-music-record-deal-noonoouri-first-ai-virtual-popstar-09-07-2023/)
+
+### Case B: Imma × Coach "Find Your Courage" — global luxury AI campaign
+
+| Item | Số |
+|------|------|
+| Persona | Imma (Aww Inc, Japan, debut 2018) |
+| Followers | **389K-500K Instagram** |
+| Stack | CGI + AI; managed bởi Aww Inc |
+| Campaign 2026 | Coach "Find Your Courage" với Lil Nas X, Camila Mendes, Youngji Lee, Kōki |
+| **Conversion lift** | **+17%** |
+| Billboards | 60+ digital billboards toàn cầu |
+| Live AI chat | Coach pop-up Japan — digital stylist |
+| Brand portfolio | Coach, SK-II, BMW, Amazon, Porsche, IKEA, Dior, Puma, Nike, Valentino |
+
+Source: [Marketing Dive](https://www.marketingdive.com/news/coach-virtual-influencer-lil-nas-x-imma-gen-z-campaign/707623/)
+
+### Case C: Rozy (Sidus Studio X, South Korea) — **$1.5M brand endorsements**
+
+| Item | Số |
+|------|------|
+| Persona | Rozy — first virtual influencer Korea |
+| Debut | 2020 |
+| Followers | **170K Instagram** |
+| Stack | 3D CGI + AI rendering, Sidus Studio X |
+| **Revenue (end 2024)** | **~$1.5M** brand endorsements |
+| Activities | 2 virtual fashion shows + 2 music tracks released |
+
+> **Bonus stats**: Virtual influencer market $8.3B (2025) → **$11.74B (2026)**. Brands report virtual influencers cho **+30% engagement, -50% campaign cost** vs human.
+> Source: [Storyclash](https://www.storyclash.com/blog/en/virtual-influencers/)
+
+---
+
+## 14 🛠️ Tool Updates (T2-T5/2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Flux Kontext** (BFL) | In-context gen + editing, character consistency, localized edit | 29/5/2025 | 8x faster inference; Pro/Max/open Dev tiers |
+| **Flux 2** | New base model, foundation cho PuLID workflow | T1-T3/2026 | Stronger identity hold than Flux 1 LoRA |
+| **Nano Banana Pro** | Gemini 3 Pro Image, viral 3D figurine trend | T11/2025 | ComfyUI Partner Nodes; Sketch annotation Gemini app |
+| **Wan 2.2 Animate** | Character animation + replacement, 720p 24fps 120s | 19/9/2025 | Open-source, runs RTX 4090 |
+| **Higgsfield Soul ID + Cinema Studio 3.5** | Persistent character identity cross all tools | T1-3/2026 | "Elements" + AI co-director |
+| **World Labs Marble** | 3D world generation — backgrounds cho persona | 12/11/2025 | Export Unreal/Unity, $20-95/mo |
+| **ElevenLabs v3** | Voice + multi-speaker + audio tags | 2025-2026 | $500M raise T2/2026 — pricing cut ~50% |
+| **Vi An (VN)** | Active ambassador Viettel Y-Fest 2025-2026 | Active | Vietnam virtual influencer market growing 26% CAGR |
+
+---
+
+## 15 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md)
 - 🎵 [Chapter 2 — AI Music](./2-ai-music-3m.md) — combine music + persona

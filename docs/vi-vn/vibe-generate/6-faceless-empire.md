@@ -337,7 +337,131 @@ emotional face (if applicable), [color palette],
 
 ---
 
-## 11 Đọc tiếp
+## 11 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'g4FJHwMchlo', title: 'How to Start a Faceless YouTube Channel With AI 2025', channel: 'AI Creator Hub', duration: '25:00', why: 'Step-by-step workflow: script (ChatGPT) → voice (ElevenLabs) → visual (MJ) → edit (CapCut).' },
+  { id: 'AKJUoLbVxes', title: 'I locked myself for 90 days to build this SaaS', channel: 'Marc Lou', duration: '20:00', why: 'Marc shows execution discipline. Pattern apply được cho faceless empire 90 ngày.' },
+  { id: 'dan3QfN3CDU', title: 'Karpathy Vibe Coding Full Tutorial with Cursor (Zero Coding)', channel: 'Tech with Tim', duration: '40:00', why: 'Foundation cho faceless creator automate content pipeline (script writer, thumbnail agent).' },
+  { id: 'UvAVnacqz-8', title: 'Higgsfield AI Supercomputer: Viral Videos From 1 Prompt', channel: 'Higgsfield Official', duration: '12:00', why: 'Single-prompt video cho TikTok/Reels/Shorts — exactly cho faceless empire scale.' },
+  { id: '8AWEPx5cHWQ', title: 'Cursor Vibe Coding Tutorial - For COMPLETE Beginners', channel: 'Tech with Tim', duration: '45:00', why: 'Build automation pipeline cho faceless content. Easy follow cho học viên VN biết English.' }
+]" />
+
+---
+
+## 12 🔬 Deep Dive Techniques 2026
+
+::: tip 🤖 8 advanced techniques cho faceless empire
+
+**1. Cost-per-video economics (Noah Morris benchmark)**
+- 1 court case video = **$250 production → $20K+ revenue** từ 5M views
+- Target ROI **50-80x**
+- Niche CPM thấp → increase volume hoặc switch niche
+
+**2. Multi-channel portfolio (Matt Par / Noah Morris pattern)**
+- Noah: **~20 channels, 2.5M+ combined subs**
+- Matt Par: **12+ channels, 2M+ subs, 1B+ views**
+- Solo người không scale 1 channel mass — clone playbook cross niches
+
+**3. 6-12 tháng loss-make timeline**
+- Average faceless channel operate at **loss 6-12 tháng** trước break-even
+- Budget: $200-500/video × 30-50 videos trước AdSense significant
+- Treat as business investment
+
+**4. AI tool stack chuẩn cho faceless YT 2026**
+| Item | Cost |
+|------|------|
+| ElevenLabs Creator | $22/mo |
+| Midjourney v7 Pro | $30/mo |
+| Veo 3.1 Fast | $0.15/sec |
+| CapCut Pro | $8/mo (sau free) |
+| TubeBuddy Legend | $30/mo |
+| **Total** | **~$90/mo** |
+→ Break-even ~50K monthly views
+
+**5. Etsy AI digital products economics**
+- Top sellers: **$5K-30K/month** từ printable downloads
+- Wild Oak Stickers: 291K sales, **$1.16M revenue**
+- AI lets scale **10 designs → 1000 designs** cùng tuần
+
+**6. Hook + retention curve cho faceless**
+- First 15s quyết định **80% retention**
+- A/B test 3-5 thumbnail per video → pick winner
+- CTR target **>6%** cho monetized channels
+
+**7. TikTok Shop UGC affiliate (tommycetty pattern)**
+- **$35K-60K trong 10 ngày** khả thi với AI UGC + affiliate
+- Health/wellness category
+- AI giúp scale **5-10 video/day** production
+
+**8. YouTube Shorts → Long-form funnel**
+- Tạo Shorts (Veo 3.1 vertical) để discover audience
+- Redirect sang long-form 10-15 phút (CPM cao 5-15x)
+- Shorts CPM thấp, long-form niche CPM cao
+:::
+
+---
+
+## 13 📚 More Case Studies (2025-2026)
+
+### Case A: Noah Morris / NexLev (court case channel network)
+
+| Item | Số |
+|------|------|
+| Network | **~20 faceless channels** |
+| Combined subs | **2.5M+** |
+| 1 video cost | **$250** |
+| Best video earning | **$20K+** từ 5M views |
+| **ROI** | **80x** |
+| Stack | AI script + ElevenLabs voiceover + stock footage + freelance editor |
+
+> **Insight**: Niche depth (court cases) > breadth. Specialized audience = higher CPM.
+> Source: [Unkoa](https://www.unkoa.com/faceless-youtube-10000-month-2025/)
+
+### Case B: tommycetty / TikTok Shop affiliate (đã ref Ch 5)
+
+| Item | Số |
+|------|------|
+| 10-day earning | **$60K** |
+| Best day | **$22K** |
+| 9-day consistent | **$55K** ~$3K/day |
+
+> **Insight**: AI UGC cho phép production 5-10 video/day. Affiliate model = không cần inventory.
+> Source: [Hooc.ai](https://hooc.ai/blog/en/tiktok-creator-reveals-60k-in-10-days-using-ai-tiktok-shop-strategy)
+
+### Case C: Fern + The Infographics Show benchmark (2026)
+
+| Channel | Revenue/tháng |
+|------|------|
+| **Fern** | **$80K+** |
+| **The Infographics Show** | **$100K-300K** |
+
+| Item | Detail |
+|------|------|
+| Established | 2024-2025 |
+| Stack | Script-heavy, animated infographic, AI-augmented research → human script |
+| Moat | Strong scripts |
+
+> **Insight**: Quality > volume khi target top-tier. AI augments không replaces creative direction.
+> Source: [Miraflow](https://miraflow.ai/blog/faceless-youtube-channel-explosion-ai-million-subscriber-creators-2026)
+
+---
+
+## 14 🛠️ Tool Updates (T2-T5/2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Veo 3.1 vertical** | Native vertical Shorts/TikTok | 13/1/2026 | Không cần re-format — game-changer faceless creator |
+| **ElevenLabs Studio 3.0** | Multi-character dialogue + emotion control | Q1/2026 | Cho narrative-driven (court case, mystery, documentary) |
+| **Midjourney v7.x** | Character consistency improved cross frames | 2026 | Critical cho serialized faceless content |
+| **CapCut AI auto-cut + caption** | Tiếng Việt stable | 2026 update | Học viên VN dùng trực tiếp |
+| **TubeBuddy AI thumbnail testing** | A/B test 3-5 thumbnails auto + traffic split | 2026 | Critical cho faceless scale |
+
+Source: [TechCrunch Veo 3.1](https://techcrunch.com/2026/01/13/googles-update-for-veo-3-1-lets-users-create-vertical-videos-through-reference-images/)
+
+---
+
+## 15 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md)
 - 💰 [Chapter 4 — Solo SaaS](./4-solo-saas-million.md)

@@ -317,7 +317,56 @@ Khi user phát hiện → backlash → manual press release admit AI.
 
 ---
 
-## 11 Đọc tiếp
+## 11 🎥 Watch & Learn — 3 video về AI ethics
+
+<ChapterVideos :videos="[
+  { id: '6kPHnl-RsVI', title: 'Why AI Is Our Ultimate Test and Greatest Invitation', channel: 'TED (Tristan Harris)', duration: '15:00', why: 'TED 2025 Vancouver talk (9/4/2025) — Tristan argue AI deceptive/self-preserving behavior. Foundation cho ethics.' },
+  { id: 'ur18In04XXA', title: 'Sora 2 *hits* different (Hollywood pushback analysis)', channel: 'Wes Roth', duration: '15:00', why: 'Reaction Sora 2 launch + analyze Hollywood copyright pushback 72h (opt-in cho copyrighted characters).' },
+  { id: '9Wjec3wh4p8', title: 'Pieter Levels — Indie Hacking is Dead. Now what?', channel: 'The Bootstrapped Founder', duration: '1:00:00', why: 'Pieter touch ethics của AI startups — không hype, founder POV về responsibility.' }
+]" />
+
+---
+
+## 12 📜 Legal Landscape Updates 2026 — Chronology mới nhất
+
+### Chronology rollup (cho học viên VN)
+
+| Thời điểm | Sự kiện | Tác động |
+|------|------|------|
+| **T6/2025** | Disney + Universal sue Midjourney (CD California) — Star Wars, Simpsons, Darth Vader evidence | Lawsuit ongoing (no settlement Q2 2026) |
+| **T10/2025** | UMG settle với Udio. Compensatory + licensing | Joint AI music platform launching 2026. Users không download/export |
+| **T11/2025** | Warner settle với Suno. Deprecate unlicensed models + acquire Songkick | Only paid tier downloads với caps |
+| **T1/2026 (5 Jan)** | Court order OpenAI produce all 20M output logs (NYT lawsuit) | Major precedent |
+| **T1/2026 (13 Jan)** | **DEFIANCE Act** passed Senate ($150K-250K liquidated damages cho deepfake porn) | House vote pending |
+| **T3/2026 (9 March)** | Court compel OpenAI produce additional 78M + 10M logs | NYT case escalating |
+| **Q1/2026** | **Anthropic settle Bartz lawsuit $1.5B** (~$3K/work, ~500K titles) | Court rule: AI training on books = fair use, BUT storing pirated = NOT fair use |
+| **T5/2026** | **TAKE IT DOWN Act compliance deadline 19/5** — platforms phải implement notice-and-takedown 48h | FTC warning letters Meta, Apple, MS, TikTok, Reddit, Snapchat, X |
+| **Q3/2026 (expected)** | **Sony fair-use ruling vs Suno + Udio** | Pivotal — last major label litigating |
+
+### Disclosure requirements 2026
+
+- **30 US states** đã enact deepfake laws cho political comms (T5/2026)
+- **TAKE IT DOWN Act** = federal layer cho non-political deepfakes
+- **NO FAKES Act** pending — federal "digital replica" private right of action
+- **EU AI Act** (effective 2024) — AI content phải label rõ
+
+### Practical guidance cho học viên VN
+
+1. **Mọi AI-generated video/image commercial use phải disclose** ("Made with AI", "AI-generated" tag)
+2. **Không train trên copyrighted material** không có license (Anthropic ruling precedent)
+3. **Cameo / deepfake → cần explicit consent**. Sora 2 cameo opt-in/out = model chuẩn
+4. **Music generation**: chỉ dùng tool đã settle (Suno post-settle, Udio post-settle). Tránh tool có pending lawsuit
+5. **VN**: chưa có luật cụ thể về AI gen content, nhưng **Luật Dân sự 2015** (bảo vệ hình ảnh cá nhân) áp dụng. Disclose để giảm rủi ro pháp lý.
+
+Sources:
+- [CNBC Disney/MJ](https://www.cnbc.com/2025/06/11/disney-universal-midjourney-ai-copyright.html)
+- [HR Warner/Suno settlement](https://www.hollywoodreporter.com/music/music-industry-news/warner-music-group-settles-ai-infringement-suit-with-suno-1236435516/)
+- [Authors Guild Anthropic $1.5B](https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/)
+- [Norton Rose Fulbright AI litigation 2026](https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026)
+
+---
+
+## 12 Đọc tiếp
 
 - 🧰 [Chapter 7 — Toolkit 2026](./toolkit-2026.md)
 - 🗓️ [Chapter 9 — Roadmap 30 ngày](./roadmap-30-days.md) — apply now

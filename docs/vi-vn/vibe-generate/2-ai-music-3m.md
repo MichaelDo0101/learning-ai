@@ -320,7 +320,126 @@ fade-out ending.
 
 ---
 
-## 11 Đọc tiếp
+## 11 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'sIx3LNV51bQ', title: 'Suno V4.5 vs V4: Complete Tutorial 2025', channel: 'AI Music Tutorial', duration: '15:00', why: 'So sánh side-by-side V4 vs V4.5 — bài học prompt structure tốt nhất. Nền tảng trước khi học V5.' },
+  { id: '5OUpLRNdE9I', title: 'Suno V5 Tutorial for Beginners 2025', channel: 'Suno Community', duration: '12:00', why: 'Walkthrough V5 beginner-friendly: 44.1kHz studio audio, Personas, Hoooks feature.' },
+  { id: 'cDCSWPW1Vic', title: 'How to Make Suno AI Music Sound REALISTIC (Mixing)', channel: 'Music Producer AI', duration: '14:00', why: 'Mixing post-production. Đây là chỗ Xania Monet/Aventhis vượt 95% AI artists. Stem export → DAW workflow.' },
+  { id: '4He-MET8fik', title: 'How to Make AI Music Videos From Suno Songs', channel: 'AI Creator Hub', duration: '10:00', why: 'Music video creation — full content pipeline audio → visual cho viral Spotify.' },
+  { id: 'LCEmiRjPEtQ', title: 'Andrej Karpathy: Software Is Changing (Again)', channel: 'Y Combinator', duration: '39:00', why: 'Nền lý thuyết \'Software 3.0\' — apply trực tiếp cho vibe creating music.' }
+]" />
+
+---
+
+## 12 🔬 Deep Dive Techniques 2026
+
+::: tip 🎵 7 advanced techniques cho AI music producer
+
+**1. GMIV Framework cho prompt structure**
+- **G**enre (1-2 primary) → **M**ood (1 anchor) → **I**nstruments (2-4 specific) → **V**ocals (gender, register, delivery)
+- Dùng kèm structure tags `[Verse]`, `[Chorus]`, `[Bridge]`, `[Drop]`
+- Khi nào: mỗi lần generate mới, vượt qua "generic Suno sound"
+
+**2. Suno V5.5 "Voices" — clone giọng riêng**
+- Verification bằng phrase ngẫu nhiên, voice private chỉ creator dùng
+- Tránh được copyright/voice-clone issue
+- Khi nào: build artist persona signature voice (Xania Monet style)
+- Tool: Suno Pro/Premier
+
+**3. "Custom Models" — train cá nhân hoá V5.5**
+- Train version V5.5 trên catalog riêng → model "biết" style của bạn
+- Khi nào: có 20+ track signature, muốn scale consistency
+- Tool: Suno Premier; cần dataset organized
+
+**4. Stem export → DAW remix (Suno Studio)**
+- V5 split 1 track thành **12 stems** time-aligned WAV
+- Đưa vào Logic/Ableton remix riêng
+- Khi nào: master/mix cho Spotify, tweak từng instrument
+- Tool: Suno Studio (Premier — first AI-native DAW)
+
+**5. Riffusion + Suno hybrid (Aventhis pattern)**
+- "Mercy On My Grave" = **66% Riffusion + 27% Suno** (per AI-detection analysis)
+- Suno cho vocal, Riffusion cho ambient/texture
+- Khi nào: outpace 95% AI artist (chỉ dùng 1 engine)
+- Tool: Suno + Riffusion + DAW mixdown
+
+**6. ElevenLabs v3 audio tags cho vocal interjections**
+- Tag system: `[excited]`, `[whispers]`, `[sighs]` embed trong script
+- 70+ languages, multi-speaker dialogue
+- Khi nào: spoken intro/outro/skit, rap với emotional variance
+- Tool: ElevenLabs Creator $22/mo, V3 cost 80% fewer credits
+
+**7. DDEX AI labeling — compliance để không bị Spotify gỡ**
+- Spotify (T9/2025) yêu cầu disclosure theo DDEX standard
+- Deezer phát hiện **44% upload là AI**, **85% trong đó fraudulent** → demonetized
+- Khi nào: trước khi distribute (LEGAL must-do)
+- Tool: Distributor (DistroKid, TuneCore) → AI disclosure metadata fields
+:::
+
+---
+
+## 13 📚 More Case Studies (2025-2026)
+
+### Case A: Breaking Rust — AI country đầu tiên **#1 Billboard Country Digital Song Sales**
+
+| Item | Số |
+|------|------|
+| Creator | Aubierre Rivaldo Taylor (2025) |
+| Release | EP "Resilient" T10/2025 |
+| Singles | "Walk My Walk", "Livin' on Borrowed Time" |
+| Performer | **Không có human** — fully generative |
+| Chart | **#1 Billboard Country Digital Song Sales** (~3K units sold) |
+| | #9 Emerging Artists chart debut |
+| Monthly Spotify | **2.4M listeners** |
+| Reaction | Washington Post: "AI country hit triggers Nashville angst" |
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Breaking_Rust) + [NPR](https://www.npr.org/2025/11/10/nx-s1-5604320/)
+
+### Case B: Sienna Rose — **4.3M monthly Spotify listeners** (AI-suspected)
+
+| Item | Số |
+|------|------|
+| Genre | Outlaw-country |
+| AI status | Spotify flagged likely AI-generated per investigative reports |
+| Stack | Suno-based |
+| Monthly listeners | **4.3M** — vượt hầu hết artist non-AI cùng thể loại |
+
+Source: [Plain English investigation](https://python.plainenglish.io/i-investigated-the-top-3-ai-generated-artists-going-viral-on-spotify-5dcff825998b)
+
+### Case C: Luo Yonghao AI avatar — **$7.65M GMV trong 6+ giờ livestream**
+
+| Item | Số |
+|------|------|
+| KOL | Luo Yonghao (top China) + Xiao Mu (co-host) |
+| Platform | Baidu Youxuan livestream commerce, 15/6/2025 |
+| Stack | Baidu generative AI, 13K-item knowledge base, 97K words product descriptions, 8.3K avatar movements |
+| GMV | **55M RMB ($7.65M)** |
+| Viewers | **13M+ trong 6 giờ** |
+| | Outperform livestream "thật" Luo 1 tháng trước |
+
+> **Cross-relevance**: voice clone monetization model — bài học cho VN creator.
+> Source: [CNBC](https://www.cnbc.com/2025/06/19/ai-humans-in-china-just-proved-they-are-better-influencers.html)
+
+---
+
+## 14 🛠️ Tool Updates (T2-T5/2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Suno V5** | Studio 44.1kHz, Personas, Hoooks, 12-stem export | T9/2025 | Đầu tiên AI music tool production-grade |
+| **Suno V5.5** | Voices (clone), Custom Models, My Taste | T3/2026 | Voices private; resolve voice-clone legal risk |
+| **Suno × Warner** | Landmark licensing — settle lawsuit T11/2025 | 25/11/2025 | New 2026 models trained on Warner catalog; Suno acquired Songkick |
+| **Suno 2026 changes** | Free tier no download; paid tier có caps | T1/2026 | Paid users có download caps; pay-per-download upgrade |
+| **Udio × UMG** | First AI music license — settle lawsuit | 29/10/2025 | New platform 2026, trained on authorized data, fingerprinting |
+| **Sony lawsuit** | Sony chưa settle với Suno/Udio | Active 2026 | Pivotal ruling mùa hè 2026 (fair-use precedent) |
+| **Spotify AI policy** | 75M AI tracks removed/12 tháng; DDEX standard mandatory | T9/2025 → T4/2026 | Disclosure required |
+| **Deezer detection** | 44% daily uploads = AI; 85% AI tracks demonetized | Active 2025 | Patent-pending detection tool licensed |
+| **ElevenLabs v3** | $500M raise T2/2026 @ $11B; ~50% consumer pricing cut | T2/2026 | Voice cho persona dialogue tốt hơn, rẻ hơn |
+
+---
+
+## 15 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md) (back)
 - 👤 [Chapter 3 — Virtual Influencer](./3-virtual-influencer.md) — combine AI music + AI persona

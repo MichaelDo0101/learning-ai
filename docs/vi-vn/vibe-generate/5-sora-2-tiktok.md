@@ -335,7 +335,122 @@ Documentary style, handheld.
 
 ---
 
-## 10 Đọc tiếp
+## 10 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'ur18In04XXA', title: 'Sora 2 *hits* different', channel: 'Wes Roth', duration: '15:00', why: 'Reaction ngày Sora 2 launch (5/10/2025). Physics improvements vs Sora 1, audio sync, cameo.' },
+  { id: 'gScBQmq06fQ', title: 'VEO 3.1 is UNLEASHED...', channel: 'Wes Roth', duration: '12:00', why: '16/10/2025 — Veo 3.1 launch: 60s video, native audio, Ingredients to Video. Counter Sora 2.' },
+  { id: 'ODKPlMsSe1E', title: 'I Tested Sora 2 and Veo 3.1 Head-to-Head', channel: 'Wes Roth', duration: '18:00', why: 'Side-by-side prompt test — strength/weakness mỗi tool trước khi chọn stack.' },
+  { id: 'KRGHOmD0lUk', title: 'Create Cinematic AI Video in Sora 2 (Full Tutorial)', channel: 'Curious Refuge', duration: '25:00', why: 'Caleb Ward workflow chi tiết — prompt structure, shot list, editing cho cinematic output.' },
+  { id: 'rQgaQ1p4tKU', title: 'My AI Videos Hit 1M+ Views (Veo3 + Sora 2 Demo)', channel: 'PJ Ace', duration: '10:00', why: 'PJ Ace 300M+ views portfolio — combine Veo 3 + Sora 2 (Popeyes, IM8, Kalshi).' }
+]" />
+
+---
+
+## 11 🔬 Deep Dive Techniques 2026
+
+::: tip 🎬 8 advanced techniques cho Sora 2 + TikTok viral
+
+**1. Cameo opt-in revenue play (Jake Paul model)**
+- Paul = first celeb NIL cameo user
+- Cho phép user gen video về mình → **1B views/6 ngày + $57M media value**
+- Risk: lose brand control. Reward: distributed reach miễn phí
+- Khi nào: creator VN có audience >100K
+
+**2. Health & wellness dominance trên TikTok Shop (tommycetty rule)**
+- Top performers: health/wellness (Relaxin, Goalie)
+- 9 ngày: **$55K GMV ~$3K/day** không cần viral
+- Lý do: high LTV, repeat purchase, low return
+
+**3. GMV Max post-T8/2025**
+- TikTok shift sang "pay-to-play" — organic viral content cần ad spend
+- Budget plan: **15-20% revenue** back vào GMV Max ads
+
+**4. Ban wave 4-6 tháng**
+- TikTok mass ban content style oversaturated
+- Mitigation: rotate 3-4 format, diversify accounts, không depend single
+
+**5. Higgsfield Cinema Studio 2.0 = single source-of-truth**
+- Tích hợp Sora 2 + Kling 3.0 + Veo 3.1 trong 1 interface
+- **Soul ID** character consistency cross 100+ clip
+- $29.40/month Ultimate = 1200 credits = ~17 Veo 3.1 video quality/tháng
+
+**6. Cost per 4-sec generation 2026**
+| Tool | Cost / 4-sec |
+|------|------|
+| Veo 3.1 | ~$1.60 |
+| Sora 2 | ~$0.40 |
+| Kling v2.1 | ~$0.45 |
+→ Bulk testing → Kling. Hero shot → Sora 2/Veo 3.1. Combine cả 3 cùng video.
+
+**7. Sora 2 audio supremacy**
+- Dialogue + SFX unmatched (Sora 2)
+- Veo 3.1 native audio nhưng SFX kém
+- Kling không audio → post-prod ElevenLabs
+
+**8. Storyboard mode + Ingredients to Video pattern**
+- Sora 2 storyboard + Veo 3.1 Ingredients (up to 3 ref images)
+- Workflow chuẩn cho 60-90s ads
+:::
+
+---
+
+## 12 📚 More Case Studies (2025-2026)
+
+### Case A: Jake Paul / Sora 2 Cameo — **1B views/6 ngày, $57M media value**
+
+| Item | Số |
+|------|------|
+| Creator | Jake Paul (early OpenAI investor) |
+| **Sora videos cross IG + TikTok** | **6,500+** |
+| **Views 6 ngày** | **1B+** |
+| **Media value** | **$57M** |
+| Strategy | Threatened sue → next day announce opt-in. Calculated controversy. |
+
+> **Insight**: Established creator + cameo opt-in = unlimited UGC. Risk: brand dilution nếu UGC negative.
+> Source: [Scientific American](https://www.scientificamerican.com/article/jake-pauls-deepfake-gambit-sparks-debate-over-sora-cameos-and-digital/)
+
+### Case B: tommycetty / TikTok Shop AI affiliate (T1/2026)
+
+| Item | Số |
+|------|------|
+| **10-day earning** | **$60K** |
+| **Best single day Jan 6** | **$22K sales = $4K profit** (20% commission) |
+| **9-day consistent (Jan 3-11)** | **$55K GMV** ~$3K/day không viral |
+| Stack | AI UGC (Sora 2/Veo 3.1) + TikTok Shop affiliate + health/wellness niche |
+| Cost reduction | Production $200-500/video → $5-15/video |
+
+> **Insight**: Consistent $3K/day baseline > 1 viral spike.
+> Source: [Hooc.ai](https://hooc.ai/blog/en/tiktok-creator-reveals-60k-in-10-days-using-ai-tiktok-shop-strategy)
+
+### Case C: Sora 2 launch traction (T9-T10/2025)
+
+| Item | Số |
+|------|------|
+| **#1 US iOS App Store** | **48h, 164K+ downloads** (invite-only!) |
+| **1M downloads** | **<5 ngày** |
+| 72h post-launch | OpenAI reverse course → opt-in cho copyrighted characters do Hollywood pressure |
+
+> **Insight**: Demand cho AI video tool consumer-facing massive. Invite-only friction không stop growth.
+> Source: [OpenAI Sora release notes](https://help.openai.com/en/articles/12593142-sora-release-notes)
+
+---
+
+## 13 🛠️ Tool Updates (T2-T5/2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Sora 2 storyboard mode** | Multi-shot narrative control 1 generation | T11/2025 | Supersedes external scene-chaining tools |
+| **Veo 3.1 vertical** | 9:16 vertical từ reference images | 13/1/2026 | Direct play TikTok/Reels/Shorts native |
+| **Kling 3.0** | Higgsfield đã integrate, compete Sora 2 cinematic | Q1/2026 | Bỏ Kling 2.5/2.6 |
+| **Higgsfield Max $20K Challenge** | Creator competition program | Q2/2026 | Submission rolling — học viên build portfolio + shot $20K |
+| **TikTok GMV Max enforcement** | "Pay-to-play" cho TikTok Shop | T8/2025 → 2026 dominant | Pure organic gần như dead |
+
+Sources: [TechCrunch Veo 3.1 vertical](https://techcrunch.com/2026/01/13/googles-update-for-veo-3-1-lets-users-create-vertical-videos-through-reference-images/) | [Higgsfield blog](https://higgsfield.ai/blog/2K5Utymp5nNQ74jjHDmNK7)
+
+---
+
+## 14 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md)
 - 💰 [Chapter 4 — Solo SaaS](./4-solo-saas-million.md)

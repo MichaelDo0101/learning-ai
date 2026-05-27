@@ -274,7 +274,58 @@ Total: ~$85/tháng
 
 ---
 
-## 09 Đọc tiếp
+## 09 🎥 Watch & Learn — 3 video
+
+<ChapterVideos :videos="[
+  { id: 'qIO9Mg1Man4', title: 'AI Vibe Coding Tutorial + Workflow (Cursor, PRD, MCP)', channel: 'ByteGrad', duration: '1:00:00', why: 'Full workflow Cursor + PRD + Rules + MCP — toolkit chuẩn nhất 2026 cho production-grade vibe coding.' },
+  { id: 'HQaVFUV2AgY', title: 'Vibe Coding Crash Course: Cursor, Copilot, MCP + more', channel: 'AI Engineering', duration: '1:30:00', why: 'Build real app — Cursor + Copilot + MCP cùng project. Multi-tool orchestration.' },
+  { id: 'pXALDuq-kq0', title: 'Cursor vs Claude Code vs Windsurf (tiếng Việt)', channel: '200Lab', duration: '20:00', why: 'Vietnamese — tool comparison cho developer VN.' }
+]" />
+
+---
+
+## 10 🛠️ Toolkit Updates 2026 — Cập nhật Q1-Q2
+
+### Top-tier IDE / Agent (2026)
+- **Cursor** ($20/mo Pro, Anthropic Claude 4.5/4.6 default 2026)
+- **Claude Code CLI** (terminal-first, MCP-rich)
+- **Windsurf** (Cascade agent, full repo context)
+- **Bolt v2** (cloud, enterprise, **$40M ARR 6 tháng**)
+- **Lovable** (non-tech, Supabase native, **$20M ARR 2 tháng**)
+- **v0.app** (Vercel rebrand T1/2026, full-stack)
+- **T3 Code** (Theo open-source, free, T1/2026)
+
+### Stack backend default 2026
+- Next.js 15 (App Router stable)
+- Supabase (auth + DB + storage + realtime)
+- Stripe / Lemon Squeezy
+- Resend / Postmark
+- Vercel / Railway / Cloudflare
+- Cloudflare R2 (storage)
+
+### AI video gen Q2 2026
+- Sora 2 (audio supremacy)
+- Veo 3.1 (vertical native, character consistency)
+- Kling 3.0 (best price/perf)
+- Higgsfield (wrapper + Soul ID)
+
+### Pricing 2026 per 4-sec gen
+| Tool | Cost |
+|------|------|
+| Sora 2 | ~$0.40 |
+| Veo 3.1 | ~$1.60 std / $0.15-0.40 per sec API |
+| Kling v2.1 | ~$0.45 |
+
+### MCP ecosystem
+- Claude Code MCP plugins **100+** available
+- Self-hosted sandbox public beta (Cloudflare, Daytona, Modal, Vercel)
+- Lazy loading tools default (reduce startup overhead)
+
+Sources: [NxCode comparison](https://www.nxcode.io/resources/news/v0-vs-bolt-vs-lovable-ai-app-builder-comparison-2025) | [Claude Agent SDK](https://code.claude.com/docs/en/agent-sdk/overview)
+
+---
+
+## 11 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md)
 - 💰 [Chapter 4 — Solo SaaS](./4-solo-saas-million.md)

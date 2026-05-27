@@ -105,6 +105,18 @@ Câu chuyện thật — số thật — tool thật. Mỗi case là 1 chapter:
 
 ---
 
+## 🎥 Watch & Learn — 3 video nền tảng
+
+Trước khi vào từng chapter, xem 3 video này để có context lớn nhất:
+
+<ChapterVideos :videos="[
+  { id: 'LCEmiRjPEtQ', title: 'Andrej Karpathy: Software Is Changing (Again)', channel: 'Y Combinator', duration: '39:00', why: 'Karpathy đặt nền lý thuyết \'Software 3.0\' — lập trình bằng tiếng Anh, dẫn thẳng tới khái niệm Vibe Generate.' },
+  { id: 'NYu7Irv6UEI', title: 'Garry Tan: What \'vibe coding\' means', channel: 'CNBC Television', duration: '6:00', why: '25% startup batch YC W25 có 95% codebase do AI viết. Context cho mindset \'vibe X\'.' },
+  { id: '7T3em61dSYk', title: 'My AI Videos Hit 122M Views: First Broadcast AI Commercial', channel: 'PJ Ace', duration: '14:00', why: 'Behind-the-scenes Kalshi NBA Finals ad $2K → 50M+ view. Hook cho cả module.' }
+]" />
+
+---
+
 ## 🇻🇳 Vì sao dev/creator VN có lợi thế?
 
 ::: warning 💡 3 lợi thế VN

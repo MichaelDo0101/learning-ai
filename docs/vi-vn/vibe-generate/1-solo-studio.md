@@ -276,7 +276,115 @@ Mục tiêu: 10K view tổng cộng + 100 follower.
 
 ---
 
-## 09 Đọc tiếp
+## 09 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'wHIdCNIQHpo', title: 'How to Create a Professional AI Film (Step-by-Step)', channel: 'Curious Refuge', duration: '25:00', why: 'School AI filmmaking duy nhất bên trong Hollywood studio. Workflow A-Z: script → MJ → Kling → Topaz.' },
+  { id: 'p_e2IAsB84A', title: 'AI Cinematography is Here… And Surprisingly Easy', channel: 'Curious Refuge', duration: '18:00', why: 'Shot composition + camera movement với Kling 2.5 + Veo 3. Nâng cấp cinematic sense.' },
+  { id: 'ue8CnA6xvdw', title: 'Create Cinematic AI Video using Kling', channel: 'Curious Refuge', duration: '12:00', why: 'Hands-on Kling — model image-to-video tốt nhất cho motion fluidity 2025.' },
+  { id: '7T3em61dSYk', title: 'My AI Videos Hit 122M Views: Kalshi Behind-the-Scenes', channel: 'PJ Ace', duration: '14:00', why: 'PJ Ace kể từ A-Z cách làm Kalshi NBA Finals ad $2K → 50M+ view. \'Vibe direction\' > tool mastery.' },
+  { id: 'KRGHOmD0lUk', title: 'Create Cinematic AI Video in Sora 2 (Full Review)', channel: 'Curious Refuge', duration: '20:00', why: 'Sora 2 review không hype — Sora 2 KHÔNG thể tự làm cả phim từ script. Realistic expectation.' }
+]" />
+
+---
+
+## 10 🔬 Deep Dive Techniques 2026
+
+::: tip 🚀 6 advanced techniques nâng cấp pipeline
+
+**1. Multi-shot character consistency với Omni-Reference (Midjourney V8)**
+- Upload 1 ảnh character → dùng `--oref [URL] --ow 100` giữ identity qua 20+ shot
+- Combine với `--sref` để pin cả tone
+- Khi nào: short film đa shot cùng nhân vật
+
+**2. "Ingredients to Video" trên Veo 3.1**
+- Upload tối đa 3 reference images (nhân vật, prop, scene) → Veo ghép logic
+- Khi nào: cùng nhân vật xuất hiện nhiều scene khác nhau
+- Tool: Gemini API / Flow app
+
+**3. Scene extension Veo 3.1 cho long-form**
+- Veo phân tích second cuối → sinh tiếp đoạn mới giữ continuity
+- Khi nào: long take, oner shot, tracking shot >8s
+- Tool: Flow / Vertex AI, "Extend scene" mode
+
+**4. Runway Aleph — post-gen modification không re-render**
+- Edit video đã gen bằng prompt: "add rain", "change to golden hour"
+- Khi nào: gần xong project, cần tweak light/atmosphere
+- Tool: Runway Standard+, Aleph node
+
+**5. Higgsfield "Elements" cho project-level consistency**
+- Tạo Element (character, location, prop) 1 lần → reference `@tag` qua mọi shot
+- Mr. Higgs (AI co-director) break script thành shot list
+- Khi nào: project >30 shot, team collaboration
+- Tool: Higgsfield Cinema Studio 3.5 Pro
+
+**6. Topaz Astra + Starlight cho 4K/8K upscale**
+- Astra dedicated AI video upscale; Starlight = first diffusion model temporal-consistent
+- Output 4K/8K/24K, render local (file privacy)
+- Khi nào: sau cut cuối, broadcast / rạp
+- Tool: Topaz Video AI Pro
+:::
+
+---
+
+## 11 📚 More Case Studies (2025-2026)
+
+### Case A: Coca-Cola "Holiday 2025" — 70,000 clips trong 1 tháng
+
+| Item | Số |
+|------|------|
+| Project | Holiday campaign 2025, hoàn toàn AI |
+| Volume | **70,000+ clip** generated |
+| Cost saving | 60-70% so với traditional ($1M-3M) |
+| Time-to-market | "Tháng → tuần" |
+| ⚠️ Caveat | Backlash lớn — viewer gọi "soulless", "digital slop" |
+
+> **Bài học**: cost saving ≠ quality. Cần human direction layer cho brand iconic.
+> Source: [BrandVM](https://www.brandvm.com/post/coca-cola-pushing-ai-2025)
+
+### Case B: Tribeca 2026 chấp nhận "Dreams of Violets" — full AI feature film đầu tiên ở major festival
+
+| Item | Detail |
+|------|------|
+| Festival | **Tribeca 2026** — world premiere |
+| Phim | "Dreams of Violets" — full AI feature |
+| Chủ đề | Phong trào kháng cự dân thường Iran |
+| Bài học | AI film vượt ngưỡng "novelty", vào mainstream festival |
+
+Source: [Variety](https://variety.com/2026/film/festivals/tribeca-festival-ai-film-dreams-of-violets-foundation-0-1236759724/)
+
+### Case C: Muhannad Nassar + Simon Meyer — Grand Prize AI Film Competition **$150K**
+
+| Item | Số |
+|------|------|
+| Filmmaker | Muhannad Nassar (Detroit) + Simon Meyer (Đức) |
+| Cách làm | **Chưa từng gặp mặt** — async qua time zone |
+| Stack | Higgsfield Cinema Studio |
+| Result | **First place $150,000** |
+| Competition size | ~8,800 submission từ 139 quốc gia |
+
+> **Bài học**: Async AI collaboration cho phép 2 người làm phim như team 50 người.
+> Source: [PR Newswire](https://www.prnewswire.com/news-releases/the-largest-ai-film-competition-highlights-emerging-trends-in-global-ai-filmmaking-302717810.html)
+
+---
+
+## 12 🛠️ Tool Updates (T2-T5/2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Midjourney V8** | Alpha — 5x faster, 2K native, improved text | 17/3/2026 | Backward-compatible V7 styles |
+| **Midjourney V8.1** | HD 2K không cần upscale, Raw mode | 30/4/2026 | Yêu cầu unlock Personalization Profile |
+| **Sora 2** | Free tier removed, $4 = 10 generations pack | 10/1/2026 | Chỉ Plus ($20) và Pro ($200) còn access |
+| **Veo 3.1** | "Ingredients to Video" + Scene Extension | T10/2025 | Lip-sync <120ms; $0.15-0.40/sec Gemini API |
+| **Kling 2.6** | Native audio + 30% cost reduction | 3/12/2025 | 1080p @ 48 FPS, 10s max; Pro ~$37/mo |
+| **Nano Banana Pro** | Gemini 3 Pro Image, best text-in-image | T11/2025 | Available ComfyUI Partner Nodes |
+| **World Labs Marble** | First commercial 3D world generation | 12/11/2025 | Export Unreal/Unity, $20-95/mo |
+| **Runway Aleph** | In-video editing via text prompt | T7/2025 | Maintains temporal consistency |
+| **Higgsfield Cinema Studio 3.5** | "Mr. Higgs" AI co-director + Elements + real-time collab | T1-3/2026 | Project-level consistency |
+
+---
+
+## 13 Đọc tiếp
 
 - 🎵 [**Chapter 2 — AI Music $3M**](./2-ai-music-3m.md) — Telisha Jones + Aventhis stories
 - 👤 [**Chapter 3 — Virtual Influencer**](./3-virtual-influencer.md) — Aitana + Vi An

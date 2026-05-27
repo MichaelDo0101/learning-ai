@@ -850,6 +850,9 @@ import ModuleShowcase from './components/home/ModuleShowcase.vue'
 import LearningPaths from './components/home/LearningPaths.vue'
 import LearningVideos from './components/home/LearningVideos.vue'
 
+// Per-chapter video embed (reusable)
+import ChapterVideos from './components/ChapterVideos.vue'
+
 import CopyOrDownloadAsMarkdownButtons from './components/CopyOrDownloadAsMarkdownButtons/index.vue'
 
 export default {
@@ -1725,6 +1728,9 @@ export default {
     app.component('ModuleShowcase', ModuleShowcase)
     app.component('LearningPaths', LearningPaths)
     app.component('LearningVideos', LearningVideos)
+
+    // Per-chapter video embed
+    app.component('ChapterVideos', ChapterVideos)
   },
   setup() {
     const route = useRoute()

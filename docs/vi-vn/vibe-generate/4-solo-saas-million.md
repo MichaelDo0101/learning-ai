@@ -395,7 +395,126 @@ Length: <100 từ
 
 ---
 
-## 11 Đọc tiếp
+## 11 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'oFtjKbXKqbg', title: 'Pieter Levels: Programming, Viral AI Startups, Digital Nomad', channel: 'Lex Fridman', duration: '3:50:00', why: '3.5 giờ với chính founder $250K/month MRR, 0 employees. \'12 startups in 12 months\' và vibe coding workflow.' },
+  { id: '9Wjec3wh4p8', title: 'Pieter Levels — Indie Hacking is Dead. Now what?', channel: 'The Bootstrapped Founder', duration: '1:00:00', why: '2025 interview — Pieter argue indie hacking chuyển từ \'dead\' sang \'the new normal\' trong era AI.' },
+  { id: 'RnDJf2K8y1w', title: 'Building a SaaS in 24 hours — PART 1', channel: 'Marc Lou', duration: '30:00', why: 'Marc Lou livebuild eLearning với ShipFast — raw workflow của founder $50K+/month MRR.' },
+  { id: '1CDBbEVBtBU', title: 'I built a startup in 31 hours (SaaS)', channel: 'Marc Lou', duration: '25:00', why: 'ZenVoice case (Stripe invoicing) — $2,000 trong 5 ngày sau launch.' },
+  { id: 'pXALDuq-kq0', title: 'Cursor vs Claude Code vs Windsurf (tiếng Việt)', channel: '200Lab', duration: '20:00', why: 'Tool comparison 3 tool chính cho vibe coding stack, dạy bằng tiếng Việt.' }
+]" />
+
+---
+
+## 12 🔬 Deep Dive Techniques 2026
+
+::: tip 🚀 8 advanced techniques cho solo founder $1M
+
+**1. Boilerplate-first approach (Marc Lou pattern)**
+- Đừng start from scratch. ShipFast = Next.js + MongoDB + Auth.js + Stripe + Mailgun + ChatGPT
+- Set up boilerplate riêng sau project 3-4
+- Marc Lou ship **21 product** với pattern này
+
+**2. Single-account separation cho multi-product**
+- Mỗi app → Stripe account riêng
+- Suspension/payout delay 1 account không kill app khác
+- Best practice từ indie hacker stack guide
+
+**3. Lemon Squeezy vs Stripe quyết định**
+- **Stripe**: nếu tự xử lý tax compliance (US-focused)
+- **Lemon Squeezy**: outsource VAT/GST/sales tax globally (Merchant of Record)
+- Founder VN bán toàn cầu → **recommend Lemon Squeezy**
+
+**4. Webhook + retry scheduler trong tuần 1-3**
+- Solo founder thường skip → revenue leakage
+- Build Stripe webhook + smart retry based on failure codes
+- **2-5% MRR thường mất** do failed payments → recover được
+
+**5. Soul ID-style consistency cho landing page**
+- Maor Shlomo (Base44) hit 250K user trong 6 tháng nhờ landing page consistent
+- Dùng MJ v7 + reference image lock face/style cross assets
+
+**6. AI replaces FUNCTIONS, not employees** (Matthew Gallagher pattern)
+- Medvi $401M năm 1 với 1-2 người
+- Map từng business function (CS, marketing, code, finance) → AI tool tương ứng
+- Không hire trừ khi >$10K/month per function chi phí AI
+
+**7. Build in public = free CAC**
+- Pieter Levels: 700K X followers → organic CAC ~$0
+- Marc Lou: $92K trong 2 ngày (CodeFast launch) từ 135K followers
+- Solo founder phải invest **30% time** vào content + audience
+
+**8. Profit margin > top-line**
+- Base44 $189K profit/tháng T5/2025 (**16.2% margin**)
+- Đó là metric Wix nhìn để pay $80M, không phải revenue
+- Track gross margin từ ngày 1
+:::
+
+---
+
+## 13 📚 More Case Studies (2025-2026)
+
+### Case A: Maor Shlomo / Base44 → **Wix $80M cash** (T6/2025)
+
+| Item | Số |
+|------|------|
+| Founder | Solo + 8 employees |
+| Tuổi product | **6 tháng** |
+| Users | **250K** (10K trong 3 tuần đầu) |
+| Profit T5/2025 | **$189K** (16.2% margin) |
+| **Exit** | **$80M cash + $90M earnout milestones** |
+
+> **Insight**: "Solo" ≠ zero employee — 1 founder + small team. Acquisition <1 năm sau launch.
+> Source: [TechCrunch](https://techcrunch.com/2025/06/18/6-month-old-solo-owned-vibe-coder-base44-sells-to-wix-for-80m-cash/)
+
+### Case B: Matthew Gallagher / Medvi → **$1.8B run-rate** (T1/2026)
+
+| Item | Số |
+|------|------|
+| Founded | T9/2024 với **$20K seed** |
+| Year 1 revenue | **$401M** (2025) |
+| **Projected year 2** | **$1.8B** (2026) |
+| Team size | **1-2 người + ~250K users** |
+| Profit margin | **~16.2%** |
+| Stack | ChatGPT + Claude + Grok cho code + marketing + CS |
+| Niche | Direct-to-consumer GLP-1 telehealth |
+
+> **Insight**: AI replaces full corporate functions. Proof point cho Sam Altman 2024 prediction "1-person billion-dollar company".
+> Source: [Inc](https://www.inc.com/leila-sheridan/the-no-employee-billion-dollar-startup-how-ai-is-changing-the-face-of-solopreneurship/91326517)
+
+### Case C: Pieter Levels / fly.pieter.com → **$1M ARR trong 2 tháng** (T3/2025)
+
+| Item | Số |
+|------|------|
+| Build time | **3 giờ** với Cursor + Grok |
+| Stack | Three.js + Cursor + Grok 2 |
+| Day 1 MRR | **$57K** |
+| MRR T3/2025 | **$75K** |
+| **$1M ARR** | **12 March 2025** |
+| In-game upgrade | $29.99 F-16 |
+
+> **Insight**: Distribution-led (Elon Musk RT amplified). Game không cần "production-grade code" — chỉ cần fun + viral hook.
+> Source: [404 Media](https://www.404media.co/this-game-created-by-ai-vibe-coding-makes-50-000-a-month-yours-probably-wont/)
+
+---
+
+## 14 🛠️ Tool Updates (T2-T5/2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Bolt v2** | $40M ARR/6 tháng. Team Templates, Editable Netlify URLs, Opus 4.6, Figma import | T10/2025 → 2026 | Move sang enterprise-grade production |
+| **Lovable** | **$20M ARR trong 2 tháng** đầu 2026 — fastest growth European startup history | T2026 | Native Supabase = moat cho non-tech VN founder |
+| **v0 → v0.app rebrand** | Vercel position lại từ UI gen → full-stack platform | T1/2026 | Compete trực tiếp Lovable + Bolt |
+| **Claude Code MCP v2.1.76** | Enhanced MCP elicitation, lazy loading tools | 14/3/2026 | Self-hosted sandbox public beta (Cloudflare/Daytona/Modal/Vercel) |
+| **Agent SDK credit billing** | Anthropic tách Agent SDK + `claude -p` ra monthly credit riêng | 15/6/2026 | Solo founder cần monitor — không unlimited |
+| **T3 Code** (Theo) | Open-source AI coding tool free | T1/2026 | Alternative cho Cursor/Claude Code |
+
+Source: [NxCode comparison](https://www.nxcode.io/resources/news/v0-vs-bolt-vs-lovable-ai-app-builder-comparison-2025) | [Claude Agent SDK docs](https://code.claude.com/docs/en/agent-sdk/overview)
+
+---
+
+## 15 Đọc tiếp
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md) — pipeline ad
 - 👤 [Chapter 3 — Virtual Influencer](./3-virtual-influencer.md) — combine product

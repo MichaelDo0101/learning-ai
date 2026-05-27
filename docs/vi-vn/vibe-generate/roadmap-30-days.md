@@ -299,6 +299,71 @@ Day | Date | Task done | Energy (1-10) | KPI today | Tomorrow priority
 
 ---
 
+## 🎥 Watch & Learn — 3 video về 30-day execution
+
+<ChapterVideos :videos="[
+  { id: 'RnDJf2K8y1w', title: 'Building a SaaS in 24 hours — PART 1', channel: 'Marc Lou', duration: '30:00', why: 'Marc raw 24h build — đẩy được 90% scope trong 24h. Reference cho velocity ngày 1-3.' },
+  { id: '1CDBbEVBtBU', title: 'I built a startup in 31 hours (SaaS)', channel: 'Marc Lou', duration: '25:00', why: 'ZenVoice = launched + $2K trong 5 ngày. Concrete benchmark cho 30-day roadmap.' },
+  { id: '6RXIjzRm-60', title: 'Day 347 growing my SaaS startup to $1M', channel: 'Marc Lou', duration: '20:00', why: 'Long-term post-30-day journey — set expectation rằng 30 ngày là MVP, không phải $1M.' }
+]" />
+
+---
+
+## 🛠️ Reality Check Updates 2026
+
+### Realistic 30-day outcome (2026)
+
+| Day | Task |
+|------|------|
+| **1-3** | PRD + landing page + auth setup. Bolt v2 hoặc Lovable build base trong 4-6h |
+| **4-10** | Core feature build (Cursor + Claude Code). Stripe webhook + retry scheduler. Deploy Vercel |
+| **11-15** | Launch ProductHunt + X + IndieHackers. Build-in-public daily |
+| **16-20** | Iteration based on early user feedback (10-50 users) |
+| **21-25** | Add 1 paid tier, set up support email automation (Intercom Fin / Plain) |
+| **26-30** | Content marketing — 3 long-form articles, 10 X posts, 1 YouTube video |
+
+### Expected outcome Day 30 (realistic, 2026)
+
+- **0-50 sign-ups** (organic distribution)
+- **$0-500 MRR** (1-10 paying customers)
+- **1-2 viral X posts** (50K-500K impressions)
+- **80% chance "fail by traditional metric" → 20% chance finding signal**
+
+### Build-in-public mandatory practices 2026
+
+1. **Daily X post** (Pieter Levels pattern) — screenshot, metric, lesson
+2. **Weekly long-form** on IndieHackers — synthesize learnings
+3. **Monthly transparent revenue report** (open startup) — builds trust + audience
+4. **Engage 10 founder accounts/day** — không chỉ broadcast
+
+### Tool stack tối thiểu cho 30-day
+
+| Item | Cost |
+|------|------|
+| IDE: Cursor | $20/mo hoặc Claude Code free tier |
+| Hosting: Vercel | $0 hobby / $20 Pro |
+| DB: Supabase | $0 free tier |
+| Payment: Stripe / Lemon | No monthly fee |
+| Email: Resend | $0 (3K emails/mo) |
+| Analytics: PostHog / Plausible | $0 / $9 |
+| **Total** | **<$50/mo** đủ launch MVP |
+
+### 3 common failure modes (cần avoid)
+
+1. **Over-engineering ngày 1-15** → không launch
+2. **Skip distribution layer** → no audience, no users
+3. **Premium pricing tier ngày 1** → cần usage data từ free users trước khi price
+
+### Vietnamese-specific tips
+
+- **Domain .vn** ~750K VND/năm — có thể skip ban đầu, dùng .com
+- **VietQR + MoMo** integration — nếu target VN customers, thêm sau Stripe
+- **English version landing page** → tap global market từ ngày 1
+
+Sources: [Marc Lou 24h SaaS](https://newsletter.marclou.com/p/how-to-build-a-startup-in-24-hours) | [IndieHackers 30-day challenge](https://www.indiehackers.com/post/i-completed-30-days-of-build-in-public-challenge-787a33af3f)
+
+---
+
 ## 🎯 Đọc tiếp sau Day 30
 
 - 🎬 [Chapter 1 — Solo Studio](./1-solo-studio.md) — refine pipeline
