@@ -1,204 +1,187 @@
-import stage2LovartCover from '../../../../zh-cn/stage-2/frontend/lovart-assets/images/image1.png'
-import stage2FigmaCover from '../../../../zh-cn/stage-2/frontend/figma-mastergo/images/image8.png'
-import stage2DesignToCodeCover from '../../../../zh-cn/stage-2/frontend/design-to-code/images/image42.png'
-import stage2SupabaseCover from '../../../../zh-cn/stage-2/backend/database-supabase/images/image1.png'
-import stage2ZeaburCover from '../../../../zh-cn/stage-2/backend/zeabur-deployment/images/image1.png'
-import stage2DifyCover from '../../../../zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image1.png'
-import stage3ElectronCover from '../../../../zh-cn/stage-3/cross-platform/electron-voice-to-text/images/image3.png'
-import stage3AgentTeamsCover from '../../../../zh-cn/stage-3/core-skills/agent-teams/images/home-cover.svg'
-import stage3LongRunningCover from '../../../../zh-cn/stage-3/core-skills/long-running-tasks/images/home-cover.svg'
-import stage3PersonalBrandCover from '../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image1.png'
+import placeholderCover from '../../../../../assets/banner.png'
 
 export const locales = [
-  { code: 'zh-cn', text: '简体中文' },
-  { code: 'en', text: 'English' },
-  { code: 'ja-jp', text: '日本語' },
-  { code: 'zh-tw', text: '繁體中文' },
-  { code: 'ko-kr', text: '한국어' },
-  { code: 'es-es', text: 'Español' },
-  { code: 'fr-fr', text: 'Français' },
-  { code: 'de-de', text: 'Deutsch' },
-  { code: 'ar-sa', text: 'العربية' },
-  { code: 'vi-vn', text: 'Tiếng Việt' }
+  { code: 'vi-vn', text: 'Tiếng Việt' },
+  { code: 'en', text: 'English' }
 ]
 
 export const stage1Cards = [
   {
-    title: 'AI 产品经理',
-    desc: '从想法到高保真原型，你只需要会说话。',
-    sub: '适合非技术背景',
+    title: 'PM Sản phẩm AI',
+    desc: 'Từ ý tưởng tới prototype độ trung thực cao — bạn chỉ cần biết nói.',
+    sub: 'Phù hợp người không học kỹ thuật',
     color: 'linear-gradient(135deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%)',
     icon: '🎨',
-    link: '/zh-cn/stage-1/learning-map/'
+    link: '/vi-vn/stage-1/learning-map/'
   },
   {
-    title: '游戏化入门',
-    desc: '通过制作贪吃蛇、俄罗斯方块，打破对代码的恐惧。',
-    sub: '边玩边学',
+    title: 'Khởi đầu qua trò chơi',
+    desc: 'Tạo Snake, Tetris — phá nỗi sợ code bằng cách vừa chơi vừa học.',
+    sub: 'Học bằng chơi',
     color: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)',
     icon: '🎮',
-    link: '/zh-cn/stage-1/ai-capabilities-through-games/'
+    link: '/vi-vn/stage-1/ai-capabilities-through-games/'
   },
   {
     title: 'Vibe Coding',
-    desc: '掌握 AI 时代的编程核心：提示词工程与上下文管理。',
-    sub: '核心心法',
+    desc: 'Tinh túy lập trình thời AI: prompt engineering và quản lý ngữ cảnh.',
+    sub: 'Cốt lõi',
     color: 'linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)',
     icon: '💡',
-    link: '/zh-cn/stage-1/introduction-to-ai-ide/'
+    link: '/vi-vn/stage-1/introduction-to-ai-ide/'
   }
 ]
 
 export const stage2Cards = [
   {
     imageColor: '#E0C3FC',
-    image: stage2LovartCover,
-    imageAlt: 'Lovart 素材生产 Agent 界面截图',
-    link: '/zh-cn/stage-2/frontend/lovart-assets/'
+    image: placeholderCover,
+    imageAlt: 'Lovart asset generation agent',
+    link: '/vi-vn/stage-2/'
   },
   {
     imageColor: '#D8C4F8',
-    image: stage2FigmaCover,
-    imageAlt: 'Figma 与 MasterGo 设计工具截图',
-    link: '/zh-cn/stage-2/frontend/figma-mastergo/'
+    image: placeholderCover,
+    imageAlt: 'Figma & MasterGo design tools',
+    link: '/vi-vn/stage-2/'
   },
   {
     imageColor: '#C7DDFB',
-    image: stage2DesignToCodeCover,
-    imageAlt: '设计稿转代码示意截图',
-    link: '/zh-cn/stage-2/frontend/design-to-code/'
+    image: placeholderCover,
+    imageAlt: 'Design-to-code',
+    link: '/vi-vn/stage-2/'
   },
   {
     imageColor: '#8EC5FC',
-    image: stage2SupabaseCover,
-    imageAlt: 'Supabase 数据库控制台截图',
-    link: '/zh-cn/stage-2/backend/database-supabase/'
+    image: placeholderCover,
+    imageAlt: 'Supabase database console',
+    link: '/vi-vn/stage-2/'
   },
   {
     imageColor: '#96E6A1',
-    image: stage2ZeaburCover,
-    imageAlt: 'Zeabur 部署流程截图',
-    link: '/zh-cn/stage-2/backend/zeabur-deployment/'
+    image: placeholderCover,
+    imageAlt: 'Zeabur deployment',
+    link: '/vi-vn/stage-2/'
   },
   {
     imageColor: '#A7F3D0',
-    image: stage2DifyCover,
-    imageAlt: 'Dify 知识库工作台截图',
-    link: '/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/'
+    image: placeholderCover,
+    imageAlt: 'Dify knowledge base',
+    link: '/vi-vn/stage-2/'
   }
 ]
 
 export const stage3Cards = [
   {
-    title: '跨平台桌面应用',
-    desc: '用 Electron 做语音转文字桌面程序，一次开发同时跑在 Windows、macOS、Linux。',
+    title: 'Ứng dụng desktop đa nền tảng',
+    desc: 'Dùng Electron build app voice-to-text, chạy được trên Windows, macOS, Linux từ một codebase.',
     tag: 'Stage 3',
     visualType: 'phone',
-    image: stage3ElectronCover,
-    imageAlt: 'Electron 语音转文字桌面应用预览图',
-    link: '/zh-cn/stage-3/cross-platform/electron-voice-to-text/'
+    image: placeholderCover,
+    imageAlt: 'Electron voice-to-text desktop app',
+    link: '/vi-vn/stage-3/'
   },
   {
-    title: 'AI 智能体团队',
-    desc: '用 Claude Agent Teams 组建 AI 开发小队，多代理协作完成大型任务。',
+    title: 'Đội AI Agent',
+    desc: 'Lập đội Claude Agent đa-tác-tử hoàn thành dự án lớn.',
     tag: 'Advanced',
     visualType: 'ai',
-    image: stage3AgentTeamsCover,
-    imageAlt: 'Claude Agent Teams 协作流程封面图',
-    link: '/zh-cn/stage-3/core-skills/agent-teams/'
+    image: placeholderCover,
+    imageAlt: 'Claude Agent Teams',
+    link: '/vi-vn/stage-3/'
   },
   {
-    title: '长效稳定执行',
-    desc: '用循环脚本和 Ralph 插件管理长时间任务，让 Claude Code 过夜稳定跑完工作。',
+    title: 'Chạy task dài hạn ổn định',
+    desc: 'Dùng loop script + Ralph plugin để Claude Code chạy đêm liên tục mà vẫn ổn định.',
     tag: 'Architecture',
     visualType: 'arch',
-    image: stage3LongRunningCover,
-    imageAlt: 'Claude Code 长时间执行与循环任务封面图',
-    link: '/zh-cn/stage-3/core-skills/long-running-tasks/'
+    image: placeholderCover,
+    imageAlt: 'Long-running Claude Code tasks',
+    link: '/vi-vn/stage-3/'
   },
   {
-    title: '个人品牌与输出',
-    desc: '搭建个人网站与技术博客，让你的项目和经验长期沉淀并被更多人看到。',
+    title: 'Thương hiệu cá nhân',
+    desc: 'Xây website cá nhân và blog kỹ thuật để dự án và kinh nghiệm của bạn được lan toả.',
     tag: 'Brand',
     visualType: 'brand',
-    image: stage3PersonalBrandCover,
-    imageAlt: '个人网站与学术博客示例截图',
+    image: placeholderCover,
+    imageAlt: 'Personal website & blog',
     imageClass: 'prod-image--personal-brand',
-    link: '/zh-cn/stage-3/personal-brand/personal-website-blog/'
+    link: '/vi-vn/stage-3/'
   }
 ]
 
 export const appendixCards = [
   {
-    title: '人工智能',
-    desc: 'LLM、Agent、RAG，深入 AI 底层原理。',
+    title: 'Trí tuệ nhân tạo',
+    desc: 'LLM, Agent, RAG — đào sâu nguyên lý AI.',
     tag: 'AI',
-    link: '/zh-cn/appendix/8-artificial-intelligence/ai-history'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: '提示词工程',
-    desc: '掌握与 AI 高效对话的技巧，解锁潜力。',
+    title: 'Prompt Engineering',
+    desc: 'Kỹ thuật giao tiếp hiệu quả với AI, khai mở tiềm năng.',
     tag: 'AI',
-    link: '/zh-cn/appendix/8-artificial-intelligence/prompt-engineering'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: '大语言模型',
-    desc: '深入浅出解析 LLM 的工作原理与应用。',
+    title: 'Large Language Models',
+    desc: 'Hiểu LLM hoạt động và ứng dụng thực tế.',
     tag: 'AI',
-    link: '/zh-cn/appendix/8-artificial-intelligence/llm-principles'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: 'Agent 智能体',
-    desc: '探索具备自主决策与执行能力的 AI 架构。',
+    title: 'AI Agent',
+    desc: 'Khám phá kiến trúc AI có khả năng tự ra quyết định và thực thi.',
     tag: 'AI',
-    link: '/zh-cn/appendix/8-artificial-intelligence/ai-agents'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: '前端基础',
-    desc: 'HTML/CSS/JS 三大基石，入门必修课。',
+    title: 'Nền tảng Frontend',
+    desc: 'HTML/CSS/JS — ba trụ cột, bài học bắt buộc cho người mới.',
     tag: 'Frontend',
-    link: '/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: '前端进化史',
-    desc: '了解前端技术栈演变，把握发展趋势。',
+    title: 'Lịch sử Frontend',
+    desc: 'Hiểu sự tiến hoá của stack frontend, nắm xu hướng.',
     tag: 'Frontend',
-    link: '/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: '后端架构',
-    desc: '从单体到微服务，探索架构演进之路。',
+    title: 'Kiến trúc Backend',
+    desc: 'Từ monolith đến microservice — hành trình kiến trúc.',
     tag: 'Backend',
-    link: '/zh-cn/appendix/4-server-and-backend/backend-layered-architecture'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: '后端语言',
-    desc: '对比主流后端语言特性，选择最佳技术栈。',
+    title: 'Ngôn ngữ Backend',
+    desc: 'So sánh đặc điểm các ngôn ngữ backend chủ lực, chọn stack tốt nhất.',
     tag: 'Backend',
-    link: '/zh-cn/appendix/4-server-and-backend/backend-languages'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: '数据库原理',
-    desc: '理解数据库核心原理，掌握数据存储艺术。',
+    title: 'Cơ sở dữ liệu',
+    desc: 'Nguyên lý cốt lõi của database, làm chủ nghệ thuật lưu trữ.',
     tag: 'Database',
-    link: '/zh-cn/appendix/5-data/database-fundamentals'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: 'API 设计',
-    desc: 'API 接口设计与开发的基础知识。',
+    title: 'Thiết kế API',
+    desc: 'Kiến thức nền tảng về thiết kế và phát triển API.',
     tag: 'API',
-    link: '/zh-cn/appendix/4-server-and-backend/api-intro'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: 'Git 版本控制',
-    desc: '深入理解 Git 原理与高级用法。',
+    title: 'Git Version Control',
+    desc: 'Hiểu sâu nguyên lý Git và các thao tác nâng cao.',
     tag: 'General',
-    link: '/zh-cn/appendix/2-development-tools/git-version-control'
+    link: '/vi-vn/appendix/'
   },
   {
-    title: '计算机网络',
-    desc: '网络协议与通信原理的基础知识。',
+    title: 'Mạng máy tính',
+    desc: 'Kiến thức nền tảng về giao thức mạng và truyền thông.',
     tag: 'General',
-    link: '/zh-cn/appendix/1-computer-fundamentals/computer-networks'
+    link: '/vi-vn/appendix/'
   }
 ]

@@ -2,32 +2,24 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 
 const langMap = {
-  'zh-CN': 'zh-cn',
-  'en-US': 'en',
-  'ja-JP': 'ja-jp',
-  'zh-TW': 'zh-tw',
-  'ko-KR': 'ko-kr',
-  'es-ES': 'es-es',
-  'fr-FR': 'fr-fr',
-  'de-DE': 'de-de',
-  'ar-SA': 'ar-sa',
-  'vi-VN': 'vi-vn'
+  'vi-VN': 'vi-vn',
+  'en-US': 'en'
 }
 
 /**
  * Lightweight i18n composable for VitePress Vue components.
  *
  * @param {Record<string, Record<string, any>>} messages
- *   Locale map, e.g. { 'zh-cn': { title: '标题' }, en: { title: 'Title' } }
+ *   Locale map, e.g. { 'vi-vn': { title: 'Tiêu đề' }, en: { title: 'Title' } }
  * @returns {{ t: (key: string) => any, locale: import('vue').ComputedRef<string> }}
  */
 export function useI18n(messages) {
   const { lang } = useData()
 
-  const locale = computed(() => langMap[lang.value] || 'zh-cn')
+  const locale = computed(() => langMap[lang.value] || 'vi-vn')
 
   const current = computed(
-    () => messages[locale.value] || messages['zh-cn'] || {}
+    () => messages[locale.value] || messages['vi-vn'] || messages.en || {}
   )
 
   const t = (key) => {

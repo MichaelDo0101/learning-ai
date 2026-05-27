@@ -58,7 +58,7 @@ Cụ thể, bạn cần nắm các yếu tố cốt lõi sau:
 6. **Xử lý lỗi**: khi có vấn đề như API Key sai hoặc yêu cầu quá thường xuyên, biết cách kiểm tra và giải quyết.
 
 ::: info ℹ️ API là gì
-Để hiểu sâu hơn về API, hãy xem phụ lục: [Nhập môn API](/zh-cn/appendix/4-server-and-backend/api-intro).
+Để hiểu sâu hơn về API, hãy xem phụ lục: [Nhập môn API](/vi-vn/appendix/4-server-and-backend/api-intro).
 
 ::: warning 🔐 **Lưu ý an toàn API**
 API Key là "thẻ thông hành" để bạn yêu cầu dịch vụ AI. Nó là một chuỗi mật khẩu dùng cho xác thực danh tính và tính phí.
@@ -93,14 +93,14 @@ Sau khi nắm được các khái niệm này, bạn sẽ thấy dù kết nối
 Trong `1.2 Tự tay làm ra nguyên mẫu`, bạn đã tạo được một nguyên mẫu có thể tương tác. Tiếp theo, việc cần làm là biến những chức năng "trông giống AI" trong nguyên mẫu thành năng lực thật sự dùng được: **khi người dùng bấm nút, nguyên mẫu sẽ gửi yêu cầu tới dịch vụ AI bên ngoài và hiển thị văn bản trả về.**
 
 ::: info ℹ️ Mở rộng nguyên lý
-Nếu muốn hiểu thêm nội dung liên quan đến nguyên lý, hãy xem phụ lục: [Nhập môn mô hình ngôn ngữ lớn (LLM)](/zh-cn/appendix/8-artificial-intelligence/llm-principles).
+Nếu muốn hiểu thêm nội dung liên quan đến nguyên lý, hãy xem phụ lục: [Nhập môn mô hình ngôn ngữ lớn (LLM)](/vi-vn/appendix/8-artificial-intelligence/llm-principles).
 ::: details Tìm hiểu thêm: DeepSeek là gì?
 
 **Hangzhou DeepSeek Artificial Intelligence Basic Technology Research Co., Ltd.**, hoạt động dưới thương hiệu DeepSeek, là một **công ty trí tuệ nhân tạo Trung Quốc phát triển mô hình ngôn ngữ lớn (LLMs)**. DeepSeek đặt trụ sở tại Hàng Châu, Chiết Giang, thuộc sở hữu và được tài trợ bởi quỹ định lượng Trung Quốc High-Flyer. DeepSeek được thành lập vào tháng 7 năm 2023 bởi Liang Wenfeng, đồng sáng lập High-Flyer, người đồng thời là CEO của cả hai công ty. Tháng 1 năm 2025, công ty ra mắt chatbot cùng tên và mô hình DeepSeek-R1.
 
 Hãy xem DeepSeek so sánh với các mô hình hàng đầu khác trong bảng xếp hạng benchmark GPQA. Điều đáng chú ý là DeepSeek là mô hình open source, tức mọi người đều có thể tải mô hình từ internet, trong khi các mô hình phổ biến khác như Grok, Google Gemini và ChatGPT đều là mô hình đóng. Như có thể thấy, DeepSeek đã tiến rất gần tới nhóm mô hình hàng đầu.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-16-48.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-16-48.png)
 
 GPQA là viết tắt của "Graduate-Level Google-Proof Q&A Benchmark", một benchmark cấp sau đại học cho nhiệm vụ hỏi đáp khoa học. Dưới đây là giới thiệu chi tiết.
 
@@ -116,23 +116,23 @@ Làm theo 3 bước sau là có thể nhanh chóng tích hợp API tạo nội d
 
 Tiếp theo chúng ta sẽ demo. Bạn có thể làm theo toàn bộ quy trình. Trước hết, đăng ký tài khoản [DeepSeek](https://platform.deepseek.com/usage), tạo một API Key và nạp một khoản nhỏ để kiểm thử.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-13.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-13.png)
 
 Bấm "API KEYS" và tìm "create new API key" ở phía dưới màn hình. Cuối cùng bạn sẽ nhận được một API key có dạng như `sk-8573341c39fc44315aadc071c53rh7d2`.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-32.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-32.png)
 
 Khi đã có khóa, bạn đã có quyền gọi mô hình.
 
 Lúc này, bạn có thể đọc trực tiếp tài liệu [API](https://api-docs.deepseek.com/). Tài liệu thường cung cấp ví dụ gọi bằng curl hoặc Python.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-56.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-56.png)
 
 Sau khi tìm được ví dụ, bạn có thể copy toàn bộ nội dung trong tài liệu cùng với khóa vào hộp thoại của AI IDE, yêu cầu nó giúp bạn tích hợp mô hình ngôn ngữ lớn vào nguyên mẫu đã phát triển trước đó.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-59-31.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-59-31.png)
 
 Bạn có thể tham khảo prompt sau:
 
@@ -157,9 +157,9 @@ curl  \
 
 Sau một thời gian để AI tạo code, chúng ta thường dễ dàng có được nút tạo copy tương ứng để kiểm thử. Nếu không tìm thấy lối vào, bạn có thể yêu cầu AI IDE cho biết có thể bấm tới trang đó từ trang nào; nếu vẫn không tìm thấy, có thể yêu cầu AI IDE trực tiếp refactor và cải tiến theo ý tưởng của bạn để có kết quả tạo copy cuối cùng.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-23-23.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-23-23.png)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-26-35.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-26-35.png)
 
 Tất nhiên, ở đây bạn có thể hỏi: làm sao biết nó thật sự gọi mô hình lớn chứ không chỉ tích hợp sẵn một phản hồi cố định? Bạn có thể nhập copy tùy chỉnh, để mô hình lớn tạo nội dung tương ứng theo phân tích tùy chỉnh bạn vừa chỉ định.
 
@@ -219,14 +219,14 @@ Thông tin thêm xem [tài liệu giao diện tương thích OpenAI của MiniMa
 # 3. Tich hop API chuyen hinh anh thanh van ban: Qwen3 VL
 
 ::: info ℹ️ Mo rong nguyen ly
-Neu ban muon tim hieu them ve nguyen ly lien quan, hay xem phu luc: [Nhap mon mo hinh thi giac-ngon ngu (VLM)](/zh-cn/appendix/8-artificial-intelligence/multimodal-models).
+Neu ban muon tim hieu them ve nguyen ly lien quan, hay xem phu luc: [Nhap mon mo hinh thi giac-ngon ngu (VLM)](/vi-vn/appendix/8-artificial-intelligence/multimodal-models).
 
 ::: details Tim hieu them: Qwen3 VL la gi?
 
 **Qwen3 VL** la phien ban moi nhat trong dong mo hinh da phuong thuc thi giac-ngon ngu do doi Tongyi Qianwen cua Alibaba Cloud ra mat. VL la viet tat cua "Vision-Language", tuc mo hinh thi giac-ngon ngu. No co the hieu noi dung hinh anh, tao mo ta bang van ban tu hinh anh, tra loi cau hoi ve hinh anh va trich xuat thong tin trong hinh anh.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-27.png)
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-41.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-27.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-41.png)
 
 **Cac nang luc chinh cua Qwen3 VL gom:**
 
@@ -270,11 +270,11 @@ SiliconFlow kha truong thanh ve dich vu suy luan cho cac mo hinh lon ma nguon mo
 
 Khi vao trang chu cua SiliconFlow, ban se thay co rat nhieu mo hinh de lua chon. Tim bo loc o goc tren ben trai, bam mo bo loc va chon nhan thi giac. Ban se thay nhieu mo hinh chuyen hinh anh thanh van ban, vi du GLM-4.6V cua Zhipu hoac Qwen3-VL.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
 
 Ban co the chon bat ky mo hinh nao de thu. O day chung ta lay `Qwen/Qwen3-VL-8B-Instruct` lam vi du.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-07-44.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-07-44.png)
 
 Vao [nen tang SiliconFlow](https://cloud.siliconflow.cn/me/account/ak), trong phan API key bam "Create API Key" de tao mot API Key moi.
 
@@ -350,9 +350,9 @@ Du tren API chuyen hinh anh thanh van ban ben duoi, hay giup chung toi hien thuc
 ```
 
 Cuoi cung, ket qua tao ra nhu sau:
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -369,16 +369,16 @@ Cuoi cung, ket qua tao ra nhu sau:
 Trong cac phan truoc, chung ta chu yeu lam viec voi tac vu lien quan den van ban. Tiep theo, chung ta se thu tich hop tinh nang tao hinh anh, ho tro tao hinh tu mo ta bang van ban hoac chinh sua hinh anh co san.
 
 ::: info ℹ️ Mo rong nguyen ly
-Neu ban muon tim hieu them ve nguyen ly lien quan, hay xem phu luc: [Nhap mon tao hinh anh](/zh-cn/appendix/8-artificial-intelligence/image-generation).
+Neu ban muon tim hieu them ve nguyen ly lien quan, hay xem phu luc: [Nhap mon tao hinh anh](/vi-vn/appendix/8-artificial-intelligence/image-generation).
 
 ::: details Tim hieu them: [Seedream](https://seed.bytedance.com/en/seedream4_5) la gi?
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-17.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-17.png)
 
 > Co the ban da biet Nano Banana do Google phat trien, nhung Seedream cung rat dang chu y. Seedream 4.5 la the he mo hinh sang tao hinh anh moi do ByteDance xay dung. No tich hop nang luc tao hinh anh va chinh sua hinh anh vao mot kien truc thong nhat, giup xu ly linh hoat cac tac vu da phuong thuc phuc tap nhu tao noi dung dua tren tri thuc, suy luan phuc tap va giu tinh nhat quan voi anh tham chieu. Ngoai ra, toc do suy luan cua no nhanh hon nhieu so voi the he truoc va co the tao anh do phan giai cao an tuong len den 4K.
 >
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-38.png)
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-50.png)
+> ![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-38.png)
+> ![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-50.png)
 
 **Nang luc chinh:**
 
@@ -414,29 +414,29 @@ Chung ta se tung buoc minh hoa cach tich hop Seedream API vao du an cua ban, voi
 
 Sau khi [truy cap trang chu](https://www.volcengine.com/experience/ark?launch=seedream), bam dang nhap.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-07.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-07.png)
 
 Sau khi dang nhap, tim tuy chon nap tien o goc tren ben phai.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-22.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-22.png)
 
 Nap tien can xac minh danh tinh that.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-30.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-30.png)
 
 Sau khi xac minh thanh cong, ban co the [nap 1 yuan de thu nghiem](https://console.volcengine.com/finance/fund/recharge).
 
 Quay lai [man hinh ban dau](https://www.volcengine.com/experience/ark?launch=seedream) va bam truy cap API.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-43.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-43.png)
 
 Truoc tien, tao mot API key, sau do bam tuy chon chon.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
 
 Thao tac nay se dua ban den buoc 2. Tai day, ban can xac nhan dich vu duoc goi la Seedream 4.5 va sao chep vi du goi duoc cung cap. Anh chup nay kha cu, nen phien ban mo hinh trong anh van hien la 4.0.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-11.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-11.png)
 
 Sau khi chuan bi API Key va vi du goi, ban co the dan truc tiep chung vao AI IDE de no tao demo tuong tac frontend hoac tich hop nang luc nay vao prototype hien co. Luu y trong giao dien co the chon giua tao hinh tu van ban va tao mot hinh tu nhieu hinh; ban can chon ma tham khao theo nhu cau hien tai.
 
@@ -472,7 +472,7 @@ Hay dua tren API ben duoi de giup toi hien thuc cac tinh nang thuong gap trong n
 
 Hieu qua hien thuc nhu sau:
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
 
 Can luu y rang tao hinh anh doi khi gap cac loi kho doan. Ban nen yeu cau AI IDE hien thi day du thong bao loi de tien sao chep va sua; neu khong, no co the lien tuc hien "tao hinh that bai" ma khong noi ro ly do. Vi du, ban co the noi:
 
@@ -484,7 +484,7 @@ Do khi sau khi sua, thay doi khong duoc ap dung vao trang web. Neu ban thay tran
 
 Trong nghiep vu thuong mai dien tu, co the chung ta muon tu dong mac quan ao nguoi dung tai len len nguoi mau, hoac tu dong tao anh ban hang va poster hap dan cho san pham. O day chung ta thu mot prompt yeu cau no tao poster thuong mai dien tu:
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-14-10.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-14-10.png)
 
 Ban co the dung API van ban thanh hinh anh hoac hinh anh thanh hinh anh de hien thuc cac tinh nang khac nhau theo kich ban kinh doanh ma ban hinh dung.
 
@@ -500,14 +500,14 @@ Neu prototype cua ban nghieng ve "san xuat thiet ke", vi du tao minh hoa theo ph
 
 > Recraft la mot cong cu AI danh cho nha thiet ke, hoa si minh hoa va nhan su marketing. Cong ty duoc thanh lap tai My nam 2022 va co tru so tai London. No giup tao va lap lai hieu ung thi giac nhu hinh anh, vector art va do hoa 3D, voi cac uu diem nhu dau ra chat luong cao, dat vi tri thanh phan chinh xac va thiet ke nhat quan voi thuong hieu. Recraft duoc hon 3 trieu nguoi dung tai 200 quoc gia va vung lanh tho tin dung, bao gom Ogilvy va Netflix, va da tao hon 350 trieu hinh anh. Doi ngu cua ho huong toi bien Recraft thanh cong cu thiet yeu cho nha thiet ke, giup nha sang tao kiem soat workflow duoc AI ho tro.
 >
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-34.png)
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-42.png)
+> ![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-34.png)
+> ![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-42.png)
 
 Truoc tien, chung ta van can tim [cong API](https://www.recraft.ai/profile/api) de lay API Key.
 
 Vi o day khong co han muc mien phi, chung ta can tu nap 1,000 credits. Trang nay ho tro Alipay va WeChat Pay, nen lay 1,000 credits kha de. Luu y: dung nap qua so tien can thiet.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/image40.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/image40.png)
 
 Sau do, chung ta van lam theo cung mot cach: vao tai lieu chinh thuc va tim vi du yeu cau tuong ung:
 
@@ -529,7 +529,7 @@ Neu ban muon tich hop dich vu tao hinh anh theo cach don gian hon, co the can nh
 
 Tao hinh anh hoan toan moi dua tren mo ta bang van ban. Ban nhap mot prompt, mo hinh se hieu y dinh cua ban va tao hinh anh phu hop voi mo ta.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-43-30.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-43-30.png)
 
 **Nang luc chinh:**
 
@@ -550,11 +550,11 @@ Chinh sua va thay doi hinh anh co san. Thong qua chi dan ngon ngu tu nhien, mo h
 - **Mo rong hinh anh**: mo rong bien anh va tao noi dung moi.
 - **Chinh anh thong minh**: tu dong lam dep, dieu chinh anh sang bong do va sua loi.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-17.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-17.png)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-29.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-29.png)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-33.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-33.png)
 
 **Vi sao chon dong Qwen Image?**
 
@@ -576,7 +576,7 @@ Hay xem trang chinh thuc cua [SiliconFlow](https://siliconflow.cn/). Ben trai co
 
 Neu ban chon "Image", ban se chi thay cac mo hinh van ban thanh hinh anh hien duoc ho tro. Trong truong hop nay, chung ta se dung Qwen/Qwen-Image.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-52-56.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-52-56.png)
 
 Sau khi cau hinh xong, chung ta can tham khao tai lieu API tao hinh anh tuong ung. Tren trang tai lieu chinh thuc, ban co the tim phan duoc danh dau "API Reference". Bam vao do, sau do di den [phan API tao hinh anh](https://docs.siliconflow.cn/cn/api-reference/images/images-generations) va tim vi du yeu cau lien quan.
 
@@ -730,7 +730,7 @@ Mot cach dung don gian la:
 2. Chon truoc huong ban can lam, vi du hoi thoai tong quat / lap trinh / thi giac
 3. Chon mot mo hinh trong Top 3 ma ban co the dung, tuc co the truy cap, gia chap nhan duoc va do tre chap nhan duoc
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/image.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/image.png)
 
 ## Artificial Analysis
 

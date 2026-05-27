@@ -341,7 +341,7 @@ Requirements:
 ```
 
 AI will usually output a structured prompt similar to this:
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
 
 You can then make small edits and pass it into your AI IDE.
 
@@ -359,12 +359,12 @@ If you are not yet familiar with AI IDEs (Cursor, Trae, Windsurf, etc.), read th
 
 Now you already have the initial prompt. Using the first prompt style as an example, let AI help generate the project. Create/open a folder and initialize a new project:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 In the sidebar, choose a model you like (for example Gemini, GPT, GLM, Kimi, MiniMax), then paste the prompt from step one:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 After generation starts, AI will plan the folder structure, create needed files, and fill initial code.
 
@@ -380,11 +380,11 @@ Many beginners think AI is "thinking," but it is actually paused for input.
 
 Do not forget to press Enter for confirmation where needed (some IDEs behave differently):
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 If you encounter the screen below, it usually means the local service has already started. Click skip if needed, otherwise you may stay stuck there. (If generation is done but no preview appears, ask AI directly: "Please start this project.")
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info 💡 Scenario explanation
 **Scenario**: you used `npm create vite@latest` to initialize a React + TypeScript project (`easy-vibe-web`). After creation, your computer starts a local web service so you can preview immediately.
@@ -403,15 +403,15 @@ If you encounter the screen below, it usually means the local service has alread
 
 After confirmation, wait briefly, and you should see the initial result:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
 
 The base function appears, but UI is rough. Now talk to AI directly to improve visual quality:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 After refinement, you can get a cleaner interface:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
 
 Then keep iterating by need, for example:
 
@@ -420,11 +420,11 @@ Then keep iterating by need, for example:
 
 You can even ask AI to reference established websites by attaching screenshots:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 Result example:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
 
 ### 2.3 What to Do When Errors Happen
 
@@ -475,12 +475,12 @@ Once the core gameplay logic is roughly generated, we can continue building rema
 
 You can ask AI to inspect against your business requirements and generate missing parts, or directly ask AI to implement unfinished pages one by one until all page interactions work:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
 
 After a short wait, you can see multiple pages and interactive features added on top of the previous base:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
 
 At this stage, manually click through the key flows you care about and confirm interactions. If something is not interactive, ask AI to fix it.
 
@@ -557,17 +557,17 @@ Please generate test-data shortcuts based on the requirement below so I can quic
 
 You can quickly get a usable result (and if one case is not enough, ask AI to generate multiple test cases):
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
 
 Click to test:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
 
 At this point, the result may appear immediately without a simulated generation process. If you want realistic delay/feedback, ask AI:
 
 "Please simulate a real generation process so after clicking, results appear after a short delay."
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
 
 After generation flow works, verify template-library behavior. If the "save template" interaction is missing, ask AI:
 
@@ -575,11 +575,11 @@ After generation flow works, verify template-library behavior. If the "save temp
 
 Generation is usually iterative, and screenshots are often needed for correction:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
 
 Expected final result:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
 
 Besides manual user-flow testing, you can also ask AI to do requirement coverage checks:
 

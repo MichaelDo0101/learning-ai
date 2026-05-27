@@ -26,15 +26,15 @@ We will briefly walk through installation on the three major operating-system fa
 
 1. Go to the [official Git download page](https://git-scm.com/download/win) and download the installer that matches your system. In most cases, the x64 installer is recommended.
 2. Double-click the installer and follow the setup wizard:
-   ![](/zh-cn/stage-2/backend/git-workflow/images/image5.png)
+   ![](../../../../vi-vn/stage-2/backend/git-workflow/images/image5.png)
    1. In most cases, keeping the default settings is fine. If you customize them, pay attention to:
       - **Default editor**: you can keep Vim, or choose Visual Studio Code if you already have it installed.
-        ![](/zh-cn/stage-2/backend/git-workflow/images/image6.png)
+        ![](../../../../vi-vn/stage-2/backend/git-workflow/images/image6.png)
       - **How Git is used from the command line**: a practical default is the option that adds Git to the command line and third-party software without overcomplicating the system setup.
-        ![](/zh-cn/stage-2/backend/git-workflow/images/image7.png)
+        ![](../../../../vi-vn/stage-2/backend/git-workflow/images/image7.png)
 3. After installation, right-click on the desktop. If you see `Git Bash Here`, the installation succeeded.
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image8.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image8.png)
 
 ### macOS
 
@@ -90,18 +90,18 @@ GitHub is a code hosting platform built on top of Git. It provides remote storag
 
 GitHub is also the world's largest and most influential open-source community. The idea of open source is that anyone can download and run the source code of a project. That allows people around the world to inspect each other's work, improve it, and build new things on top of it.
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image9.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image9.png)
 
 Large companies often open-source tools and tutorials on GitHub as part of their technical strategy. In the GitHub ecosystem, the number of `stars` a project receives is one of the most visible indicators of trust and influence.
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image10.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image10.png)
 
 In this course, many supporting resources and assignments are also published in GitHub repositories. By learning to upload your own work there, you gradually build the workflow you will use for real application development later.
 
 ## Create a GitHub account
 
 1. Visit [GitHub](https://github.com/) and click `Sign up` in the top-right corner.
-   ![](/zh-cn/stage-2/backend/git-workflow/images/image11.png)
+   ![](../../../../vi-vn/stage-2/backend/git-workflow/images/image11.png)
 2. Enter your email address, create a password, and complete the verification steps.
 3. Confirm your email, and your account is ready.
 
@@ -109,9 +109,9 @@ In this course, many supporting resources and assignments are also published in 
 
 Next, let's create your first repository, often shortened to `repo`.
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image12.png)![](/zh-cn/stage-2/backend/git-workflow/images/image13.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image12.png)![](../../../../vi-vn/stage-2/backend/git-workflow/images/image13.png)
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image14.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image14.png)
 
 When creating a repository, the main fields mean:
 
@@ -127,15 +127,15 @@ When creating a repository, the main fields mean:
 
 For your first repository, it is reasonable to check `Add README`, set the visibility to `Private`, and fill in a name and description you like. Then click `Create repository`.
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image15.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image15.png)
 
 You will now have a clean repository, ready for your files.
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image16.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image16.png)
 
 To download a repository, you use `git clone`, which requires the repository URL. You can find that by clicking the green `Code` button. GitHub usually shows both HTTPS and SSH options.
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image17.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image17.png)
 
 In general, HTTPS is fine for temporary downloads or quick testing, but for your own daily development workflow, SSH is usually the better experience.
 
@@ -178,11 +178,11 @@ The core workflow is simple: **generate a key pair → upload the public key to 
       Prompt:
       `Help me create the SSH key needed for GitHub login. My email is your_email@gmail.com. Please return the public key for me to copy.`
 
-   ![](/zh-cn/stage-2/backend/git-workflow/images/image18.png)
+   ![](../../../../vi-vn/stage-2/backend/git-workflow/images/image18.png)
 
    After entering the prompt, you may still need to press `Enter` in the terminal pane so the command can continue. Once Trae finishes, it will show you the public key to copy.
 
-   ![](/zh-cn/stage-2/backend/git-workflow/images/image19.png)
+   ![](../../../../vi-vn/stage-2/backend/git-workflow/images/image19.png)
 
    2. **Generate it manually**
       Open your terminal and run `ssh-keygen -t ed25519 -C "your_email@example.com"`
@@ -199,12 +199,12 @@ The core workflow is simple: **generate a key pair → upload the public key to 
       - On Windows, open `C:\Users\<your>\.ssh\id_ed25519.pub`
       - On macOS/Linux, run `cat ~/.ssh/id_ed25519.pub`
    2. In GitHub, go to your avatar → `Settings` → `SSH and GPG keys` → `New SSH key`
-      ![](/zh-cn/stage-2/backend/git-workflow/images/image20.png)![](/zh-cn/stage-2/backend/git-workflow/images/image21.png)
+      ![](../../../../vi-vn/stage-2/backend/git-workflow/images/image20.png)![](../../../../vi-vn/stage-2/backend/git-workflow/images/image21.png)
    3. Enter a title and paste the public key.
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image22.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image22.png)
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image23.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image23.png)
 
 3. **Verify the binding**
 
@@ -227,7 +227,7 @@ Now that we have covered Git, GitHub, SSH, and the setup process, you can start 
 
 You can directly tell Trae which repository URL you want to clone.
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image24.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image24.png)
 
 ## `git pull`: fetch the latest remote updates
 
@@ -245,7 +245,7 @@ After you modify files locally, you can ask Trae to detect the changes and help 
 Prompt:
 `I finished. Commit and push to the repository AIID-TEST in ./AIID-TEST.`
 
-![](/zh-cn/stage-2/backend/git-workflow/images/image25.png)
+![](../../../../vi-vn/stage-2/backend/git-workflow/images/image25.png)
 
 If the push succeeds, you will be able to see the updated content on GitHub immediately.
 

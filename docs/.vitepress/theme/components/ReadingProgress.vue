@@ -33,8 +33,8 @@
         {{ bookmarkLabel }}
       </div>
       
-      <!-- 拖拽时的提示 -->
-      <div v-if="isDragging" class="drag-hint">拖动调整</div>
+      <!-- Hint khi đang kéo -->
+      <div v-if="isDragging" class="drag-hint">Kéo để chỉnh</div>
     </div>
   </Transition>
 </template>
@@ -114,15 +114,15 @@ const bookmarkLabel = computed(() => {
 
 const bookmarkTitle = computed(() => {
   const title =
-    articleTitle.value || restoredBookmark.value?.title || '当前文章'
+    articleTitle.value || restoredBookmark.value?.title || 'Bài hiện tại'
   const section = activeSection.value || restoredBookmark.value?.section || ''
   return section ? `${title} - ${section}` : title
 })
 
 const progressTitle = computed(() =>
   isDragging.value
-    ? '拖动调整位置'
-    : `${bookmarkTitle.value} · 阅读进度 ${progress.value}%`
+    ? 'Kéo để chỉnh vị trí'
+    : `${bookmarkTitle.value} · Tiến độ đọc ${progress.value}%`
 )
 
 const clearBookmarkSaveTimer = () => {

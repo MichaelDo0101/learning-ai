@@ -16,9 +16,9 @@ You have definitely used browser extensions before: ad blockers, translation too
 
 Imagine this: you open a 5,000-word technical blog post, click the extension button once, and a few seconds later a concise Chinese summary appears in the side panel. That is exactly what we are going to build.
 
-![placeholder: A preview image showing a long article webpage on the left and an AI-generated summary displayed in the Chrome side panel on the right](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image1.png)
+![placeholder: A preview image showing a long article webpage on the left and an AI-generated summary displayed in the Chrome side panel on the right](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image1.png)
 
-<!-- ![placeholder: A preview image showing a long article webpage on the left and an AI-generated summary displayed in the Chrome side panel on the right](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image1.png) -->
+<!-- ![placeholder: A preview image showing a long article webpage on the left and an AI-generated summary displayed in the Chrome side panel on the right](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image1.png) -->
 
 ## 1.2 The Basic Architecture of a Chrome Extension
 
@@ -44,8 +44,8 @@ User clicks the extension icon
     -> Service Worker sends the summary back to the side panel for display
 ```
 
-![placeholder: An architecture flowchart showing how Content Script, Service Worker, and Side Panel pass messages to each other](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image2.png)
-<!-- ![placeholder: An architecture flowchart showing how Content Script, Service Worker, and Side Panel pass messages to each other](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image2.png) -->
+![placeholder: An architecture flowchart showing how Content Script, Service Worker, and Side Panel pass messages to each other](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image2.png)
+<!-- ![placeholder: An architecture flowchart showing how Content Script, Service Worker, and Side Panel pass messages to each other](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image2.png) -->
 
 ## 1.3 Two AI Options: Cloud API vs Built-in Browser AI
 
@@ -150,8 +150,8 @@ This is the most important file in a Chrome extension. It tells the browser what
 * `scripting`: lets the extension inject scripts into pages to read content
 * `sidePanel`: lets the extension use Chrome side panel API
 
-![placeholder: Screenshot of manifest.json in the editor](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image2b.png)
-<!-- ![placeholder: Screenshot of manifest.json in the editor](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image2b.png) -->
+![placeholder: Screenshot of manifest.json in the editor](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image2b.png)
+<!-- ![placeholder: Screenshot of manifest.json in the editor](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image2b.png) -->
 
 ## 2.3 Prepare Icons
 
@@ -174,9 +174,9 @@ Before writing code, let us first load this "empty shell" extension into Chrome,
 
 You will see the extension appear in the list, and its icon will show up in the Chrome toolbar.
 
-![placeholder: Screenshot of Chrome extensions page showing how to enable developer mode and load an extension](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image3.png)
+![placeholder: Screenshot of Chrome extensions page showing how to enable developer mode and load an extension](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image3.png)
 
-<!-- ![placeholder: Screenshot of Chrome extensions page showing how to enable developer mode and load an extension](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image3.png) -->
+<!-- ![placeholder: Screenshot of Chrome extensions page showing how to enable developer mode and load an extension](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image3.png) -->
 
 > **Tip**: after every code change, go back to `chrome://extensions/` and click the **refresh button (🔄)** on the extension card to update it.
 
@@ -273,8 +273,8 @@ async function handleSummarize(tabId) {
 }
 ```
 
-![](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image4.png)
-<!-- ![placeholder: Screenshot of background.js code in the editor](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image4.png) -->
+![](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image4.png)
+<!-- ![placeholder: Screenshot of background.js code in the editor](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image4.png) -->
 
 ## 3.3 Side Panel UI: Show Summary Result
 
@@ -304,9 +304,9 @@ sidepanel.js:
 - Use navigator.clipboard.writeText in the "Copy" button to copy text
 ```
 
-![placeholder: Screenshot of side panel UI showing three states: summary button, loading state, and summary result](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image5.png)
+![placeholder: Screenshot of side panel UI showing three states: summary button, loading state, and summary result](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image5.png)
 
-<!-- ![placeholder: Screenshot of side panel UI showing three states: summary button, loading state, and summary result](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image5.png) -->
+<!-- ![placeholder: Screenshot of side panel UI showing three states: summary button, loading state, and summary result](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image5.png) -->
 
 ## 3.4 Settings Page: Configure API Key
 
@@ -324,10 +324,10 @@ Please help me write options.html and options.js:
 
 > **Security reminder**: the API Key is stored in `chrome.storage.local` and only kept on the local device. But if you want to publish this extension to the Chrome Web Store for others to use, a safer approach is to build a backend proxy server so the API Key is not exposed directly on the client side.
 
-![placeholder: Screenshot of settings page showing provider selection and API Key input p1](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image6-1.png)
-![placeholder: Screenshot of settings page showing provider selection and API Key input p2](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image6-2.png)
-![placeholder: Screenshot of settings page showing provider selection and API Key input p3](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image6-3.png)
-<!-- ![placeholder: Screenshot of settings page showing provider selection and API Key input](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image6.png) -->
+![placeholder: Screenshot of settings page showing provider selection and API Key input p1](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image6-1.png)
+![placeholder: Screenshot of settings page showing provider selection and API Key input p2](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image6-2.png)
+![placeholder: Screenshot of settings page showing provider selection and API Key input p3](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image6-3.png)
+<!-- ![placeholder: Screenshot of settings page showing provider selection and API Key input](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image6.png) -->
 
 # Chapter 4: Use Chrome Built-in AI (No API Key Needed)
 
@@ -346,8 +346,8 @@ Enter `chrome://flags` in Chrome address bar, search for the flag related to Sum
 * In Chrome 138-144, it was renamed to Summarization API for Gemini Nano.
 * In Chrome 145+, Summarization API for Gemini Nano was removed, and its summarization function was integrated into Prompt API for Gemini Nano.
 
-![placeholder: Screenshot of chrome://flags showing the Summarization API switch](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image7.png)
-<!-- ![placeholder: Screenshot of chrome://flags showing the Summarization API switch](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image7.png) -->
+![placeholder: Screenshot of chrome://flags showing the Summarization API switch](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image7.png)
+<!-- ![placeholder: Screenshot of chrome://flags showing the Summarization API switch](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image7.png) -->
 
 ## 4.2 Use Summarizer API
 
@@ -399,8 +399,8 @@ Please help me modify options.html and options.js:
 3. Show the API Key input when OpenAI or Claude is selected
 ```
 
-![placeholder: Screenshot of updated settings page showing three AI provider options, with API Key input hidden when Chrome built-in AI is selected](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image8.png)
-<!-- ![placeholder: Screenshot of updated settings page showing three AI provider options, with API Key input hidden when Chrome built-in AI is selected](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image8.png) -->
+![placeholder: Screenshot of updated settings page showing three AI provider options, with API Key input hidden when Chrome built-in AI is selected](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image8.png)
+<!-- ![placeholder: Screenshot of updated settings page showing three AI provider options, with API Key input hidden when Chrome built-in AI is selected](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image8.png) -->
 
 # Chapter 5: Testing and Debugging
 
@@ -425,8 +425,8 @@ Debugging Chrome extensions is a bit different from debugging normal webpages:
 3. Select your extension name
 4. Then you can see `console` output from the Content Script
 
-![placeholder: Screenshot of Chrome DevTools showing how to choose different execution contexts to debug different extension components](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image9.png)
-<!-- ![placeholder: Screenshot of Chrome DevTools showing how to choose different execution contexts to debug different extension components](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image9.png) -->
+![placeholder: Screenshot of Chrome DevTools showing how to choose different execution contexts to debug different extension components](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image9.png)
+<!-- ![placeholder: Screenshot of Chrome DevTools showing how to choose different execution contexts to debug different extension components](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image9.png) -->
 
 ## 5.2 Common Troubleshooting
 
@@ -463,10 +463,10 @@ If you want to share the extension with others, you can publish it to the Chrome
 
 Google will review submitted extensions, which usually takes several business days. The fewer permissions you request and the clearer your description is, the faster the review usually goes.
 
-![placeholder: Screenshot of Chrome Web Store Developer Dashboard showing extension upload and metadata form](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image10.png)
-![placeholder: Screenshot of Chrome Web Store Developer Dashboard showing extension upload and metadata form p2](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image10-1.png)
+![placeholder: Screenshot of Chrome Web Store Developer Dashboard showing extension upload and metadata form](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image10.png)
+![placeholder: Screenshot of Chrome Web Store Developer Dashboard showing extension upload and metadata form p2](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image10-1.png)
 
-<!-- ![placeholder: Screenshot of Chrome Web Store Developer Dashboard showing extension upload and metadata form](../../../../zh-cn/stage-3/cross-platform/browser-ai-extension/images/image10.png) -->
+<!-- ![placeholder: Screenshot of Chrome Web Store Developer Dashboard showing extension upload and metadata form](../../../../vi-vn/stage-3/cross-platform/browser-ai-extension/images/image10.png) -->
 
 # Chapter 7: Final Notes
 

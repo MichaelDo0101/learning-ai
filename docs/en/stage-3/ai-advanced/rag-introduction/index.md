@@ -26,7 +26,7 @@ After completing this tutorial, you will build a systematic beginner-level under
 
 Retrieval-Augmented Generation (RAG) is one of the most important technical approaches in generative AI today. Its basic idea is simple: before asking a large model to generate an answer, the system first retrieves information related to the user's question from an external knowledge base, and then passes both the retrieved information and the original question to the model so the model can answer on top of real materials. That external knowledge base can be an enterprise's internal policies, process documents, and product knowledge, or an industry database, regulatory corpus, standards library, and so on.
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image1.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image1.png)
 
 At this point, a natural question appears: if large models can already "answer questions directly," why add another layer called Retrieval-Augmented Generation? Especially now that context windows are getting larger and larger, it can seem as if simply handing all relevant material to the model ought to solve most needs.
 
@@ -36,7 +36,7 @@ The real difference is that "being able to produce an answer" and "being able to
    Even as context windows keep expanding, the idea of dumping all documents into the context at once is still impractical in real systems. The central contradiction shows up in two places:
 2. Inference cost is strongly positively correlated with context length. The longer the context, the more inference cost rises, almost linearly and sometimes even superlinearly. For a single call, 8K tokens and 200K tokens live in completely different price and latency ranges, and long context has a much higher cost threshold.
 
-   ![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image2.png)
+   ![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image2.png)
 
    > In meaning, context is the background information and conversation history the model "refers to" when answering a question. In technical terms, it is the total token sequence fed into the model for one inference, such as system and user instructions, message history, and retrieved passages.
    >
@@ -76,7 +76,7 @@ The core idea of RAG, Retrieval-Augmented Generation, is to let a large model an
 
 In a typical RAG system, the user's question is not sent directly to the large model. Instead, a retrieval module first finds the most relevant document passages from the enterprise knowledge base, then combines those passages with the original question into a complete context, and finally gives that to the model to generate an answer. This "retrieve first, generate second" pattern allows the model to reason from real reference material instead of only guessing from what it remembers in its parameters. We can look at a typical case:
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image3.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image3.png)
 
 1. Indexing stage
 
@@ -299,7 +299,7 @@ The roots of RAG can be traced back to the DrQA framework in 2017, which first a
 
 Broadly speaking, the evolution of RAG can be divided into three stages:
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image4.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image4.png)
 
 ## 4.1 First-Generation RAG: Naive RAG
 
@@ -418,11 +418,11 @@ MTEB provides a unified and objective evaluation framework for many embedding mo
 
 [HuggingFace MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard)
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image5.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image5.png)
 
 Although there are many models on the leaderboard, you do not need to master all of them. In practice, choosing the embedding model bundled by a major model provider, or using a cloud-served model that many people have already validated, is usually a safe choice. You can also filter the leaderboard by category or language in the sidebar:
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image6.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image6.png)
 
 When filtering embedding models, two parameters matter especially because they directly affect RAG performance: dimension and context length.
 
@@ -651,7 +651,7 @@ For most enterprises, because business scenarios are unique, the final answer is
 
 If resources are limited and you need a fast baseline, public benchmarks are still a useful starting point. As of 2025, many public benchmarks exist for both general and vertical scenarios:
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image7.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image7.png)
 
 When choosing among them, first clarify the goal. Are you establishing a baseline, or validating the system before launch? Then check whether the benchmark covers the scenarios and difficulty profile you care about. For time-sensitive domains such as news or finance, make sure the benchmark includes time-sensitive tests.
 
@@ -669,7 +669,7 @@ Hugging Face provides a semantic-cache implementation built on top of the Chroma
 
 [https://huggingface.co/learn/cookbook/semantic_cache_chroma_vector_database](https://huggingface.co/learn/cookbook/semantic_cache_chroma_vector_database)
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image8.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image8.png)
 
 Background: Most tutorial RAG systems are built for single-user testing. But once deployed to production, the system may receive dozens or thousands of repeated queries, for example support users repeatedly asking how refunds work. If every repeated query still triggers vector retrieval and an LLM call, latency and cost rise quickly. A semantic cache layer can sharply reduce pressure on the original data sources while preserving answer quality.
 
@@ -685,7 +685,7 @@ Another Hugging Face tutorial shows how to use the Unstructured library to build
 
 [https://huggingface.co/learn/cookbook/rag_with_unstructured_data](https://huggingface.co/learn/cookbook/rag_with_unstructured_data)
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image9.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image9.png)
 
 Background: In enterprise scenarios, knowledge is often scattered across PDFs, PowerPoint decks, EPUBs, HTML pages, and many other formats. Traditional preprocessing methods either support only one format or lose crucial structural information such as tables and title hierarchy during conversion. That makes it difficult for the RAG system to understand and retrieve the content correctly.
 
@@ -718,7 +718,7 @@ The EasyRAG project in an AIOps RAG competition focused on QA for operations sce
 
 [http://blog.csdn.net/hustyichi/article/details/143323746](http://blog.csdn.net/hustyichi/article/details/143323746)
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image10.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image10.png)
 
 Background: Operations engineers often need to read technical documents that include not only text but also monitoring charts, system architecture diagrams, and performance curves. For example, when diagnosing a system problem, the answer to "What should I do when CPU utilization exceeds 80 percent?" may be scattered between text descriptions and monitoring graphs. Traditional text-only RAG cannot understand chart trends and values, so answers remain incomplete.
 
@@ -737,7 +737,7 @@ The winning solution in the KDD Cup 2024 Meta RAG challenge showed how to integr
 - [https://blog.csdn.net/m0_59164520/article/details/143694213](https://blog.csdn.net/m0_59164520/article/details/143694213)
 - https://arxiv.org/pdf/2410.00005
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image11.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image11.png)
 
 Background: Task 1 required retrieval summarization from five web pages. Task 2 added a mock API representing a structured knowledge graph, enabling direct access to things like movie databases and entity relationships. Task 3 raised the difficulty by using fifty web pages plus the mock API to answer more complex queries, such as identifying Nolan-directed films with box office greater than 500 million dollars. Every query had to finish within 30 seconds.
 
@@ -772,7 +772,7 @@ Related research:
 - [https://arxiv.org/pdf/2502.11371](https://arxiv.org/pdf/2502.11371)
 - https://arxiv.org/pdf/2404.16130
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image12.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image12.png)
 
 Traditional RAG works by finding text passages similar to the question, which is like picking out the few paragraphs that look most relevant from a pile of material. That works well for direct fact lookup. But if a question requires connecting multiple documents and combining different clues, performance drops.
 
@@ -788,7 +788,7 @@ Related research:
 
 - https://arxiv.org/pdf/2502.08826
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image13.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image13.png)
 
 Real-world data is never only text. Engineers diagnosing server failures need to look at temperature curves, device screenshots, and logs together. Doctors making diagnoses need CT or MRI images, test reports, and electronic medical records at the same time. Traditional text RAG can at best retrieve phrases such as "temperature anomaly" or "suspected lung nodule," but it struggles to connect those descriptions to the actual chart trend or image lesion shape, and it cannot reverse-search documents or knowledge from images, audio, or video.
 
@@ -804,7 +804,7 @@ Related introduction:
 
 - https://jina.ai/news/late-chunking-in-long-context-embedding-models/
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image14.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image14.png)
 
 Imagine reading a Wikipedia article about Berlin. Traditional RAG would first cut it into independent paragraphs and then embed each chunk. If the first sentence says "Berlin is the capital of Germany," later phrases such as "the city" or "its population" lose their connection to Berlin once separated. A query such as "What is the population of Berlin?" may then fail because the term Berlin and the population information never appeared inside the same chunk. This problem becomes even worse for long documents. In a 200-page insurance contract, the definition of a deductible may appear on page 5 while the conditions under which it applies appear on page 30. Fixed-length chunking can split these related pieces into dozens of isolated chunks, and experiments show that semantic similarity can collapse sharply when that happens.
 
@@ -828,7 +828,7 @@ RAG has developed from a retrieval-augmented generation tool into a key part of 
 
 Under this paradigm, the role of RAG changes fundamentally. It is no longer only a passive provider of external knowledge. Instead, it becomes the core processing unit that supports intelligent behavior under the agent's active planning, goal direction, and self-reflection. This fusion gives the overall system goal orientation, iterative optimization, and autonomous decision-making, greatly deepening the quality of human-AI interaction. Agentic RAG can understand complex tasks, decompose them, plan retrieval strategies, and evaluate the quality of initial results to decide whether deeper exploration is needed.
 
-![](../../../../zh-cn/stage-3/ai-advanced/rag-introduction/images/image15.png)
+![](../../../../vi-vn/stage-3/ai-advanced/rag-introduction/images/image15.png)
 
 The key to this capability is a multi-layered active loop. Faced with a complex query, the agent first analyzes the nature of the problem, breaks it into subproblems, and designs precise retrieval strategies for each subproblem. After receiving initial results, it evaluates them, judges whether the information is complete and relevant, identifies knowledge gaps, and dynamically generates more precise new queries. This iterative process often includes multi-hop retrieval, where one round of results reveals new directions for the next round, producing a knowledge exploration chain similar to how a human researcher works.
 

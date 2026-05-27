@@ -15,7 +15,7 @@ For this tutorial, you should at least have:
 
 An Android App is a native application that runs on the Android operating system. Unlike mini programs, it does not depend on a host like WeChat. It runs directly at the system level. It has its own home-screen icon, launches quickly, feels smooth, and can deeply access system-level features such as Bluetooth, sensors, and background services.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image1.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image1.png)
 
 ## 1.2 Android App Development
 
@@ -32,7 +32,7 @@ In real development, there is more than one way to build Android apps. We will n
 **The first way: Native Development**  
 This is Google's official and recommended route. You directly use **Kotlin** and **Jetpack Compose** to develop. Its advantage is the best performance and full access to phone hardware.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image2.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image3.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image2.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image3.png)
 
 **The second way: Cross-Platform Development**  
 For example Flutter or React Native. The core idea is "write one codebase and generate both Android and iOS apps."
@@ -43,7 +43,7 @@ In essence, this is wrapping a webpage inside an app shell. This is fast to deve
 **This tutorial's choice: native development (** **Kotlin + Compose)** combined with AI tools for coding.  
 The reason is simple: native Jetpack Compose code has a very clear structure and is highly suitable for AI to understand and generate. We do not need to handwrite code from scratch. Instead, we guide Trae with natural language to generate high-quality native code.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image4.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image4.png)
 
 ## 1.4 Android App Development Steps Covered in This Tutorial
 
@@ -73,7 +73,7 @@ Trae is our main battlefield for **Vibe Coding**. You can think of it simply as 
 
 Visit the official website [https://www.trae.cn](https://www.trae.cn), download the version matching your computer system (Windows or Mac), and install it just like ordinary software by double-clicking the installer and following the prompts. Once this tool is ready, in later practice we will stop staring at boring code windows and instead open the project here and tell AI what to build using natural language.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image5.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image5.png)
 
 ## 2.3 Download Android Studio
 
@@ -83,7 +83,7 @@ We need Android Studio to provide the Android SDK and emulator required for runn
 
 Although modern versions of Android Studio have greatly simplified configuration, it still depends on the **JDK (Java Development Kit)** under the hood. If this is your first time doing development, or if you encounter errors related to environment variables or SDK configuration during installation, do not panic. You can refer to this detailed setup guide: [Android Studio 2024 setup: SDK and Gradle configuration](https://blog.csdn.net/keiraee/article/details/142321644?ops_request_misc=elastic_search_misc&request_id=a2b858d1f665095c53afa9114ad8864d&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-142321644-null-null.142^v102^pc_search_result_base4&utm_term=android%20studio%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE&spm=1018.2226.3001.4187)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image6.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image6.png)
 
 ## 2.4 Create a New Project
 
@@ -93,7 +93,7 @@ Open Android Studio and click **New Project** on the welcome screen.
 
 In the template list, select **Empty Activity** (notice the Jetpack Compose icon on it).
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image7.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image8.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image7.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image8.png)
 
 **Step 2: Fill in project configuration**
 
@@ -107,7 +107,7 @@ Then you will see a configuration form. Fill it roughly as follows and keep the 
 | **Minimum SDK** | API 30 | Covers over 90% of active devices while balancing compatibility and features |
 | **Language** | Kotlin (recommended) | Kotlin is Google's officially recommended language, cleaner and safer |
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image9.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image9.png)
 
 **Step 3: Wait for project build**
 
@@ -127,7 +127,7 @@ By default, Android Studio connects to overseas servers, so downloading build to
 
 If the bottom-right status bar of Android Studio is currently showing a progress bar like `Gradle Building...`, pause the ongoing dependency download first to avoid file conflicts.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image10.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image10.png)
 
 2. **Speed up Gradle download**
 
@@ -139,13 +139,13 @@ distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-8.7-bin.zip
 
 Be careful: you only need to replace `services.gradle.org/distributions` with `mirrors.cloud.tencent.com/gradle`. Do not change anything else.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image11.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image11.png)
 
 3. **Speed up dependency repository download**
 
 Then, open `settings.gradle.kts` in the project root, and replace the content inside the `repositories` block with the following:
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image12.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image12.png)
 
 Replace the highlighted section with this code (latest source list as of 2025-02-21):
 
@@ -165,13 +165,13 @@ Replace the highlighted section with this code (latest source list as of 2025-02
 
 It should then look like the screenshot below:
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image13.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image13.png)
 
 4. **Save and apply changes**
 
 At this point, save the file and click `Try Again` in the top-right corner. Android Studio will re-run the download. Wait a few minutes. When the console shows `BUILD SUCCESSFUL`, it means the environment setup is fully complete and we are ready to start coding.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image14.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image14.png)
 
 ## 2.6 Understand the Project Structure
 
@@ -231,7 +231,7 @@ After sending it, Trae will begin analyzing your project structure. A few second
 2. We can directly see which parts of the code were rewritten
 3. If we are not satisfied with the result, we can roll back to the previous version
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image15.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image15.png)
 
 ## 3.2 Run and Preview (Emulator Debugging)
 
@@ -245,27 +245,27 @@ Back in Android Studio, find and click **Device Manager** in the right toolbar. 
 
 In the panel, click **Add a new device**, then choose **Create Virtual Device** to enter the device selection window.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image16.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image16.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image17.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image17.png)
 
 In the hardware selection window, choose **Phone** and then **Smart Phone** (medium screen size), or any other device profile you prefer such as Pixel, then click **Next**.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image18.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image18.png)
 
 **Step 2: Configure the system image**
 
 In the **System Image** dialog, select **API 36.1**. If it has not been downloaded yet, click **Download** first, then select it after download is complete, and click **Finish**.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image19.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image19.png)
 
 **Step 3: Start the emulator**
 
 After successful creation, your new phone will appear in the device manager list. Click the **triangle play button** on the right. After a short wait, a phone-shaped window will pop up - this is your Android emulator.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image20.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image20.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image21.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image21.png)
 
 **Step 4: Run the app**
 
@@ -273,9 +273,9 @@ Now comes the magic moment. Make sure the emulator has started and is showing th
 
 Within seconds, you should see the emulator screen light up, showing a white wooden fish graphic in the center with the text "Merit: 0" above it. Try tapping it and see whether the number increases and the animation works. This is your first Android app.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image22.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image22.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image23.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image23.png)
 
 ## 3.3 Optimization Iteration (Add Assets and Sound)
 
@@ -291,12 +291,12 @@ You need one wooden fish image (`png`) and one knock sound effect (`mp3`).
 
 Here are the image and sound assets I found for you. If it is inconvenient for you to search for your own, you can directly use them.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image24.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image24.png)
 
 Knock sound download link: https://www.aigei.com/s?q=%E6%9C%A8%E9%B1%BC&type=sound  
 Choose the first 1-second sound effect.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image25.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image25.png)
 
 **Step 2: Send the iteration instruction**
 
@@ -309,15 +309,15 @@ I have added the assets. The image path is res/drawable/white_muyu.png and the s
 3. When tapped, show a temporary "+1" text above the wooden fish, then let it float upward and disappear (like floating score text in games).
 ```
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image26.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image26.png)
 
 **Step 3: Verify the result**
 
 After Trae finishes modifying the code, return to Android Studio and click the green Run button again (Re-run) to restart the emulator. At this point, your app will feel transformed. Try tapping continuously - you should hear a crisp "tok tok" sound and see the floating "Merit +1" text jumping out. This completes the key transition from "demo" to "product."
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image27.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image27.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image28.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image28.png)
 
 ## 3.4 What If Bugs Appear? (Debugging Loop with AI)
 
@@ -351,9 +351,9 @@ Requirements:
 Please directly provide the updated MainActivity.kt code.
 ```
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image29.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image29.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image30.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image30.png)
 
 ## 3.5 Final Result Showcase
 
@@ -385,7 +385,7 @@ Make sure the new state (text and number) correctly affects the animation.
 Please directly provide the full updated MainActivity.kt while keeping the previous sound and animation logic unchanged.
 ```
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image31.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image31.png)
 
 # 4 Real-device Debugging and Polishing
 
@@ -404,7 +404,7 @@ This is the most convenient method on Android 11 and above.
 2. Open **Developer options** and enable **Wireless debugging**.
 3. Tap **Wireless debugging** to enter details, then choose **Pair device with QR code**. Your phone will open a scanner view.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image32.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image33.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image32.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image33.png)
 
 **Step 2: Pair on the computer**
 
@@ -412,7 +412,7 @@ This is the most convenient method on Android 11 and above.
 2. Choose **Pair Devices Using Wi-Fi** from the dropdown.
 3. A QR code will pop up on screen.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image34.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image34.png)
 
 **Step 3: Scan to connect**
 
@@ -420,11 +420,11 @@ This is the most convenient method on Android 11 and above.
 2. Both the phone and computer should show "pairing successful."
 3. At this point, Android Studio's top device bar will automatically display your phone model (for example `Google Pixel 8`).
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image35.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image35.png)
 
 4. Run the app by clicking ▶️ Run
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image36.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image36.png)
 
 ## 4.2 USB Wired Debugging
 
@@ -438,9 +438,9 @@ Mac users can skip this step, because macOS usually recognizes the phone directl
 2. Switch to the **SDK Tools** tab
 3. Check **Google USB Driver** and click **Apply** to download and install it
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image37.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image38.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image37.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image38.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image39.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image39.png)
 
 ### 4.2.2 Download the Same SDK Version as Your Real Device
 
@@ -448,7 +448,7 @@ Mac users can skip this step, because macOS usually recognizes the phone directl
 
 Using an OPPO phone as an example: open Settings -> About phone -> check Android version (in the example it is Android 12).
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image40.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image40.png)
 
 **Step 2: Download that Android platform version in Android Studio**
 
@@ -456,19 +456,19 @@ Using an OPPO phone as an example: open Settings -> About phone -> check Android
 2. Stay in the default **SDK Platforms** tab
 3. Select Android 12.0 and click Apply to download
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image41.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image41.png)
 
 ### 4.2.3 Enable Developer Mode on the Phone
 
 Open your phone settings, go into developer options, and turn on **USB debugging**.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image42.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image42.png)
 
 ### 4.2.4 Install the USB Driver Authorization on the Phone
 
 At this point, pick up your phone. It should show an important security dialog: "Allow USB debugging?" Make sure to check **Always allow** and then tap **Allow** or **OK**. This is the key authorization that gives the computer control for debugging.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image43.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image43.png)
 
 ### 4.2.5 Run the App on the Phone
 
@@ -478,7 +478,7 @@ At this point, pick up your phone. It should show an important security dialog: 
 
 Now try tapping the wooden fish on your phone and feel the real vibration motor response. This is the full Vibe Coding experience.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image44.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image45.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image46.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image44.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image45.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image46.png)
 
 # 5 Package the App as APK
 
@@ -490,15 +490,15 @@ If you only want to share the app with friends for a quick try, or send it to te
 
 **The steps are very simple:** in the top menu of Android Studio, find `Build`, hover over `Generate App Bundles or APKs`, and click `Generate APKs` from the submenu.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image47.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image47.png)
 
 Wait about 5 seconds depending on project size. In the bottom-right console area of Android Studio, a prompt will appear. Click the blue `locate` link and the output folder will open automatically. The file named `app-debug.apk` is the package we want.
 
 You can directly send it through WeChat or QQ to any Android phone, and the recipient can install and use it. Note that debug is not a release version.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image48.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image48.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image49.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image49.png)
 
 ## 5.2 Package the Release Version
 
@@ -519,19 +519,19 @@ In the top menu, select `Build`, then click `Generate Signed Bundle / APK`. In t
 - APK: standard install package, can be installed directly  
 _For demonstration, we choose APK first and click Next._
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image50.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image51.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image50.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image51.png)
 
 **Step 2: Create a digital key (KeyStore)**
 
 This is where beginners get stuck most often. Because this is your first release packaging, you need to create a new **keystore**. Click **Create new** below `Key store path`.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image52.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image52.png)
 
 In the popup, fill in the required information, similar to registering an account. We strongly recommend that the keystore password and key alias password be **the same**, and that you **write them down carefully**. If you lose this password, your app can never be updated again in the future.
 
 After finishing, click OK. You will return to the previous screen, and the key information you just filled in will already be populated automatically.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image53.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image54.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image53.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image54.png)
 
 **Step 3: Generate the formal package**
 
@@ -539,9 +539,9 @@ Click Next, choose **release** under Build Variants, and finally click **Create*
 
 After a short wait, Android Studio will again show a "Generate Signed APK" success prompt in the bottom-right corner. Click **locate**, and this time you will see the digitally signed formal package in the folder (usually named `app-release.apk`). This file is the final product you deliver as a developer.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image55.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image55.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image56.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image57.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image56.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image57.png)
 
 # 6 Official Release to App Stores / Markets
 
@@ -557,7 +557,7 @@ Before registering an account, there is one very important thing you must know: 
 
 At present, almost all major domestic app stores (Huawei, Xiaomi, OV, MyApp, etc.) **require** a *Software Copyright Registration Certificate* for submission.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image58.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image59.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image58.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image59.png)
 
 - **What is it?** It is a legal document proving that the app belongs to you.
 - **Cost to obtain it**: you need to apply through the copyright bureau. Doing it yourself usually takes 2-3 months; using an agency for faster processing may cost from several hundred to over a thousand RMB.
@@ -598,9 +598,9 @@ Gionee Developer Alliance: https://open.appgionee.com
 
 **Using Tencent MyApp as an example:** visit the Tencent Open Platform and click register. It is recommended to log in directly with a QQ account. Note that once a QQ account is bound, it is difficult to unbind, so it is better to use a dedicated work QQ account. Follow the prompts, choose "Individual Developer" or "Enterprise Developer," upload your ID photos, and complete face verification. After passing verification, click **Create App** to start.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image60.png)![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image61.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image60.png)![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image61.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image62.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image62.png)
 
 ### 6.1.3 Submission Flow and Required Materials
 
@@ -629,7 +629,7 @@ If you do not want to deal with the complexity of software copyright certificate
 - **Reliable network access**: you need to be able to access Google Play Console smoothly
 - **Formal installation package**: note that Google Play requires the **.aab** (Android App Bundle) format, not APK. In Android Studio, choose Android App Bundle during packaging. The steps are almost identical to packaging APK.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image63.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image63.png)
 
 ### 6.2.2 Google Play Console Release Process (Overview)
 
@@ -652,7 +652,7 @@ This is the user's first impression. You need to upload the prepared app **icon*
 
 Under the `Production` menu, click `Create new release`, upload your `.aab` file, save, and submit for review. Google Play review is usually fast (1-3 days). Once approved, your app can be downloaded worldwide.
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image64.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image64.png)
 
 _If you have already completed developer account registration, this video tutorial can guide you through the rest of the process:_ [Full workflow: uploading an Android app to Google Play](https://www.bilibili.com/video/BV16REQzGEnk/?share_source=weixin&vd_source=b42f227a4f2d413fbde18499d83227cf)
 
@@ -668,7 +668,7 @@ If this tutorial helped you feel that "building an app is not actually that hard
 
 I am really looking forward to your next creation. Keep going!
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image65.png)
+![](../../../../vi-vn/stage-3/cross-platform/android-app/images/image65.png)
 
 **_Hope you have fun in the world of Android development!_**
 

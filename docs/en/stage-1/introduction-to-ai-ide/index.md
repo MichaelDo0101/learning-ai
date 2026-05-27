@@ -75,13 +75,13 @@ In the early days of programming, all we needed was a simple text editor and a l
 
 You can think of an IDE as a program specifically designed to "edit, manage, run, and debug" code. Early IDEs looked very "primitive" and were operated almost entirely through the keyboard.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.png)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image1.png)![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image2.png)
 
 Terminal Interface — Image source: https://en.wikipedia.org/wiki/File:Emacs-screenshot.png
 
 Well-known and mature "built-in IDEs" like `Vim` are commonly used for remote server operations.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image3.png)
 
 For greater efficiency, we need modern IDEs that support mouse interaction, typically including:
 
@@ -91,15 +91,15 @@ For greater efficiency, we need modern IDEs that support mouse interaction, typi
 
 Modern IDEs often also include built-in tools like Git. The most popular is Microsoft's **[Visual Studio Code (VS Code)](https://code.visualstudio.com/)**, which is lightweight and extensible. While there are also professional IDEs like the JetBrains suite, VS Code is the most beginner-friendly.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image4.png)
 
 VS Code's core philosophy is "everything is a plugin." Through its plugin system, it supports various languages — install the Python plugin and it becomes a Python IDE, install the C++ plugin and it becomes a C++ IDE. Without plugins, it's just an advanced text editor.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image5.png)
 
 You can even use it to edit Markdown documents.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image6.png)
 
 In short, an IDE is a set of tools that helps developers write code and run programs efficiently.
 
@@ -126,7 +126,7 @@ In the latest version of VS Code, a large language model assistant is already bu
 
 You can download and install VS Code, click the sidebar entry in the top-right corner, and open the AI feature area to experience these capabilities.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image7.png)
 
 However, VS Code is not the IDE with the strongest AI capabilities. For scenarios that require heavy AI-assisted coding, we often want to use "smarter, more efficient" tools — a good AI IDE can significantly save time on writing code and fixing bugs. Below we'll introduce several popular AI IDEs. You can choose any AI IDE based on your personal preference.
 
@@ -153,7 +153,7 @@ Antigravity is a brand-new AI IDE released by Google in November 2025 alongside 
 
 ### [Trae](https://www.trae.ai/)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image8.png)
 
 Trae is an AI programming assistant developed by ByteDance that supports over 100 programming languages and can be integrated into mainstream IDEs. Its features include: generating code from natural language, automatic debugging, and converting design mockups into React/Vue components. After its August 2025 update, Trae added smart dependency imports, rename suggestions, task checklist management, and more. SOLO mode also began supporting backend code generation and technical architecture document editing.
 :::
@@ -166,7 +166,7 @@ Cursor is an AI code editor developed by Anysphere, built on a customized VS Cod
 
 Currently, Cursor is arguably one of the best AI IDEs with a graphical interface in terms of overall experience, with a large user base and frequent feature updates. Its biggest drawback is the higher price — the Pro version costs about $20 per month.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image9.png)
 :::
 
 ::: details Qoder
@@ -175,7 +175,7 @@ Currently, Cursor is arguably one of the best AI IDEs with a graphical interface
 
 Qoder is an AI IDE from Alibaba that emphasizes "transparent collaboration" and "enhanced context engineering capabilities." It supports breaking tasks into multiple steps through Action Flow and tracks AI execution in real time. It also supports multi-model dynamic routing and task state machine management, making it ideal for architecture governance in medium-to-large projects and "reverse engineering" analysis of legacy systems.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image10.png)
 :::
 
 ::: details CodeBuddy
@@ -184,7 +184,7 @@ Qoder is an AI IDE from Alibaba that emphasizes "transparent collaboration" and 
 
 CodeBuddy is an AI programming tool from Tencent Cloud that emphasizes Chinese language command support and enterprise-grade compliance capabilities. It offers code completion, batch code review, and multi-model switching. Its Craft agent can perform multi-file code generation and API integration. The enterprise version supports private deployment and has passed Level 3 security certification, making it suitable for industries with high data security requirements such as finance and healthcare.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image11.png)
 :::
 
 ::: details VS Code + Cline
@@ -193,9 +193,9 @@ CodeBuddy is an AI programming tool from Tencent Cloud that emphasizes Chinese l
 
 Cline is an AI programming Agent plugin for VS Code (Visual Studio Code) that can flexibly switch between different large models by configuring different API endpoints. Cline supports multimodal input, MCP tool extensions, and cost monitoring, with all operations requiring user confirmation before execution. It's ideal for quickly validating ideas or integrating with existing development workflows. Basic features are free, and the enterprise version supports deploying models in private environments.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image13.png)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image14.png)
 :::
 
 ::: details Kiro
@@ -270,28 +270,28 @@ We recommend beginners start with the free China CN version (download: https://w
 
 In terms of interface design, Trae is very similar to the VS Code we use daily: the same classic three-column layout with a file explorer on the left, an editing area in the center, and an extension panel on the right.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image17.png)
 
 The sidebar on the right is the Copilot interaction window, which can also be thought of as the Agent window. If you can't see it right away, click the sidebar icon in the top-right corner of Trae to open it.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image18.png)
 
 After opening the sidebar, you'll see a `Builder` option — this is the Agent mode. Simply put, it's like a "local version" of z.ai that can operate your local environment, install runtime environments, open web pages, and more.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image19.png)
 
 After clicking "Builder," you'll see "Chat" mode and "Builder with MCP" mode:
 
 - **Chat Mode**: Primarily used for chatting about the code in your current folder, or as a general chat model. (You can open a folder through the "File" menu in the top-left corner and edit within that folder. In this case, any files Builder creates or modifies will only happen inside this folder.)
 - **Builder with MCP Mode**: Provides the Agent with more available tools (such as connecting the language model with other software, querying weather, etc.). You can simply understand it as: MCP makes it easier for the language model to call various external tools.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image20.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image20.png)
 
 In the area below, you'll also see model selection options — click to change the current large model. In the China version, you can choose domestic models like Kimi k2 or GLM. If you're using the international version of Trae, you can also select overseas models like ChatGPT or Claude. However, since domestic large models are developing very rapidly, Kimi, Qwen, GLM, and others already offer experiences close to Claude 3.5 or 3.7 in many tasks, which is more than sufficient for daily development. There's no strict requirement to use the international or China version here.
 
 **Note that we don't recommend using Auto mode (automatic model selection). For the international version, we recommend using Gemini or GPT models. For the China version, we recommend trying domestic models like Kimi k2, Minimax, or GLM.** Different models suit different use cases — there's no dogmatic rule about which is better. When you hit a wall with one model, try switching to another. Through multiple tests, you'll find the best results for your own workflow.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image21.png)
 
 That's a brief introduction to Trae. Next, let's revisit what we did previously on z.ai and try doing the same thing in Trae.
 
@@ -359,9 +359,9 @@ These free options are great for beginners. Before committing to production use,
 
 Through the interface below, you can successfully add a model (note: after selecting the model option, **make sure to scroll all the way to the bottom** — there's a "Custom Model" option. Click it to enter a model ID, where you can type the recommended model IDs like `stepfun/step-3.5-flash:free`. Also click "Get Key" below to visit the official website and obtain the corresponding API Key.)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.png)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.png)
 :::
 
 ### 4.3 Step 2: Chat in the Sidebar and Have AI Design a Snake Game with React
@@ -379,20 +379,20 @@ As shown in the figure below, **sometimes the AI Agent will pause during executi
 :::
 
 As shown, here we need to click Run to confirm:
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.png)
 
 As shown, here we just need to input y to confirm:
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.png)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.png)
 
 As shown, here we are creating a template but don't know how to operate. We can take a screenshot of this part and ask the large model:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.png)
 
 Another reason the AI Agent pauses during execution is because it has started a "service." Our Snake game itself is a type of "service." If you see a URL with the following command, it means the Agent has executed a local computer service for us. We can visit the corresponding URL to access our Snake game. Since the service needs to run continuously, it will pause here. We just need to click the `Skip` button.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.png)
 
 During this process, if you encounter some terms and content you don't understand, don't worry. You can refer to the "Computer Terminology Explanation" section in the appendix, or directly consult AI, or ask questions in time!
 
@@ -400,13 +400,13 @@ If you encounter unexpected phenomena during the process, such as the snake not 
 
 After a short while, we can get results similar to z.ai:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.png)
 
 We can click the checkmark in the bottom right corner to confirm code changes, or click the `Cancel` button to cancel changes. Or click on the "2 files need review" area to expand and view the modified code.
 
 It's also worth noting that since code modifications may not always be correct, we need to know that all IDE Agents support code rollback. For example, if I accidentally made a wrong modification operation here, or if the result of this operation is unsatisfactory, after the modification is complete, we can return to the input box area and click the Revert button to roll back the operation to the state before modification. You can modify the input text for another operation:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.png)
 
 ### 4.4 Step 3 (Optional): Ask AI About Code Implementation Details
 
@@ -416,7 +416,7 @@ A practical approach is to have AI first give an overall explanation of "how the
 
 > "Please explain from top to bottom how this Snake game moves step by step? Try to use as few technical terms as possible."
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.png)
 
 Then follow up on key points based on its answer, such as:
 
@@ -469,15 +469,15 @@ At this stage, if a modification causes an error, you don't need to troubleshoot
 
 For vibe coding beginners, the hardest thing is not knowing what counts as "best practices" or what architecture is most suitable; because you don't know computer basics, you can't guide AI well. The solution to this problem is "direct reference." Remember when we said you can view code in z.ai? In fact, the corresponding README (the part used in projects to introduce functionality and technical architecture) already gives a best architecture reference:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.png)
 
 If we want the local result to match the z.ai result as closely as possible, we can copy all the content of this README and paste it into Trae's sidebar, asking it to modify the local code according to the README architecture.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.png)
 
 Finally, we can get page design styles highly similar to z.ai:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.png)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.png)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -494,7 +494,7 @@ Finally, we can get page design styles highly similar to z.ai:
 
 In the above operations, we've quickly run through the minimum program generation loop, but we're still not familiar with the IDE. To thoroughly familiarize ourselves with this tool that we'll be working with long-term, we'll provide in-depth explanations of every detail of the IDE in this section. Starting with the interface, different AI IDEs have slightly different interfaces, but most follow the [VS Code layout](https://code.visualstudio.com/docs/getstarted/getting-started).
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image32.webp)
+![](../../../vi-vn/stage-1/introduction-to-ai-ide/images/image32.webp)
 
 The specific function of each part is:
 

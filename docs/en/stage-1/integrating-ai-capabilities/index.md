@@ -58,7 +58,7 @@ Specifically, you need to master the following core elements:
 6. **Error Handling**: Knowing how to troubleshoot when problems occur (such as incorrect API Key, too many requests, etc.)
 
 ::: info ℹ️ What is an API
-For a more in-depth explanation of APIs, see the appendix: [Introduction to APIs](/zh-cn/appendix/4-server-and-backend/api-intro).
+For a more in-depth explanation of APIs, see the appendix: [Introduction to APIs](../../../vi-vn/appendix/4-server-and-backend/api-intro).
 
 ::: warning 🔐 **API Security Notes**
 The API Key is your "pass" for requesting AI services — it's a secret string used for authentication and billing.
@@ -93,14 +93,14 @@ Once you've grasped these concepts, you'll find that whether you're integrating 
 In `1.2 Building Your Prototype`, you already created an interactive prototype. What we need to do next is turn the "AI-like features" in the prototype into real, working capabilities: **when the user clicks a button, the prototype sends a request to an external AI service and displays the returned text.**
 
 ::: info ℹ️ Further Reading on Principles
-If you want to learn more about the underlying principles, check out the appendix: [Introduction to Large Language Models (LLM)](/zh-cn/appendix/8-artificial-intelligence/llm-principles).
+If you want to learn more about the underlying principles, check out the appendix: [Introduction to Large Language Models (LLM)](../../../vi-vn/appendix/8-artificial-intelligence/llm-principles).
 ::: details Learn More: What is DeepSeek?
 
 **Hangzhou DeepSeek Artificial Intelligence Basic Technology Research Co., Ltd.**, operating under the brand name DeepSeek, is a **Chinese artificial intelligence (AI) company that develops large language models (LLMs)**. DeepSeek is headquartered in Hangzhou, Zhejiang, and is owned and funded by the Chinese hedge fund High-Flyer. DeepSeek was founded in July 2023 by Liang Wenfeng, co-founder of High-Flyer, who also serves as CEO of both companies. The company launched its eponymous chatbot and its DeepSeek-R1 model in January 2025.
 
 Let's look at how DeepSeek compares with other top models in the GPQA benchmark rankings. Notably, DeepSeek is an open-source model (anyone can download the model from the internet), while other common models like Grok, Google Gemini, and ChatGPT are closed-source. As we can see, DeepSeek has largely caught up with the first tier of models.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-16-48.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-16-48.png)
 
 GPQA stands for "Graduate-Level Google-Proof Q&A Benchmark," a graduate-level benchmark for scientific question-answering tasks. Here's a detailed introduction.
 
@@ -116,23 +116,23 @@ Follow these 3 steps to quickly integrate a large model generation API:
 
 Next, we'll walk through a demo. You can follow along with the entire process. First, register a [DeepSeek](https://platform.deepseek.com/usage) account, create an API Key, and top up a small amount for testing.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-13.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-13.png)
 
 Click "API KEYS" and find "create new API key" at the bottom of the screen. You'll end up with an API key that looks something like sk-8573341c39fc44315aadc071c53rh7d2.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-32.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-32.png)
 
 Once you have the key, you have permission to call the model.
 
 At this point, you can directly read the [API](https://api-docs.deepseek.com/) documentation, which typically provides curl or Python call examples.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-56.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-56.png)
 
 After finding the example, you can copy all the content from the documentation along with your key into the AI IDE's chat box, asking it to help you integrate the large language model into the prototype you've already developed.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-59-31.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-59-31.png)
 
 Here's a reference prompt:
 
@@ -157,9 +157,9 @@ curl  \
 
 After some AI code generation, you'll easily get a corresponding copywriting generation button to test. If you can't find the entry point, you can ask the AI IDE to tell you which page leads to it. If you really can't find it, you can ask the AI IDE to directly refactor and improve based on your ideas to get the final copywriting generation result.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-23-23.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-23-23.png)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-26-35.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-26-35.png)
 
 Of course, you might be wondering: how do I know it's actually calling the large model and not just returning hardcoded responses? You can enter custom copy and have the large model generate corresponding content based on your custom analysis specified on the spot.
 
@@ -219,14 +219,14 @@ For more details, refer to the [MiniMax OpenAI Compatible API Documentation](htt
 # 3. Integrating the Image-to-Text API: Qwen3 VL
 
 ::: info ℹ️ Further Reading on Principles
-If you want to learn more about the underlying principles, check out the appendix: [Introduction to Vision Language Models (VLM)](/zh-cn/appendix/8-artificial-intelligence/multimodal-models).
+If you want to learn more about the underlying principles, check out the appendix: [Introduction to Vision Language Models (VLM)](../../../vi-vn/appendix/8-artificial-intelligence/multimodal-models).
 
 ::: details Learn More: What is Qwen3 VL?
 
 **Qwen3 VL** is the latest version in the multimodal vision-language model series developed by Alibaba Cloud's Tongyi Qianwen team. VL stands for "Vision-Language," meaning it's a vision-language model. It can understand image content and generate text descriptions based on images, answer questions about images, extract information from images, and more.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-27.png)
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-41.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-27.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-41.png)
 
 **Key capabilities of Qwen3 VL include:**
 
@@ -270,11 +270,11 @@ SiliconFlow is relatively mature in inference services for open-source large mod
 
 Go to the SiliconFlow platform homepage, where you'll see many models to choose from. Find the filter in the upper left corner, click to expand it, select the "Vision" tag, and you'll see many image-to-text models, such as Zhipu GLM-4.6V or Qwen3-VL.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
 
 You can choose any one to test. Here we'll use `Qwen/Qwen3-VL-8B-Instruct` as an example.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-07-44.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-07-44.png)
 
 Go to the [SiliconFlow platform](https://cloud.siliconflow.cn/me/account/ak), click "Create New API Key" in the API Keys section to create a new API Key.
 
@@ -350,9 +350,9 @@ Based on the image-to-text API below, help us implement a feature that automatic
 ```
 
 Final generated result:
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -369,16 +369,16 @@ Final generated result:
 In the previous section, we mainly handled text-related tasks. Next, we will try integrating image generation capabilities to support generating images from text descriptions, or editing images.
 
 ::: info ℹ️ Further Reading on Principles
-If you want to learn more about the underlying principles, check out the appendix: [Introduction to Image Generation](/zh-cn/appendix/8-artificial-intelligence/image-generation).
+If you want to learn more about the underlying principles, check out the appendix: [Introduction to Image Generation](../../../vi-vn/appendix/8-artificial-intelligence/image-generation).
 
 ::: details Learn More: What is [Seedream](https://seed.bytedance.com/en/seedream4_5)?
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-17.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-17.png)
 
 > You may already know Nano Banana (developed by Google), but you should not miss Seedream. Seedream 4.5 is a next-generation image creation model built by ByteDance. It integrates image generation and image editing capabilities into one unified architecture. This enables it to handle complex multimodal tasks such as knowledge-based generation, complex reasoning, and reference consistency. In addition, its inference speed is much faster than the previous generation and it can generate stunning high-definition images up to 4K resolution.
 >
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-38.png)
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-50.png)
+> ![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-38.png)
+> ![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-50.png)
 
 **Main capabilities:**
 
@@ -414,29 +414,29 @@ We will demonstrate step by step how to integrate the Seedream API into your pro
 
 After visiting the [homepage](https://www.volcengine.com/experience/ark?launch=seedream), click login.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-07.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-07.png)
 
 After logging in, find the top-right recharge option.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-22.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-22.png)
 
 Real-name verification is required before recharge.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-30.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-30.png)
 
 After verification succeeds, you can [recharge 1 RMB for testing](https://console.volcengine.com/finance/fund/recharge).
 
 Return to the [initial page](https://www.volcengine.com/experience/ark?launch=seedream) and click API Access.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-43.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-43.png)
 
 First, create an API key, then click the model selection option.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
 
 This takes you to step 2. Here, confirm the service model is Seedream 4.5 and copy the provided call example. (The screenshot was taken earlier, so the model version shown there is still 4.0.)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-11.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-11.png)
 
 Once the API Key and call example are ready, you can paste them directly into the AI IDE and ask it to generate a frontend interactive demo or integrate the capability into your current prototype. Notice that in the screenshot you can choose text-to-image or multi-image-to-single-image mode. Select the reference code according to your specific requirement.
 
@@ -472,7 +472,7 @@ Please help me implement common ecommerce features in this project based on the 
 
 Implementation result:
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
 
 It is worth noting that image generation often encounters odd failures. It is recommended that AI IDE always shows full error details so you can copy and debug effectively. For example, you can say:
 
@@ -484,7 +484,7 @@ Sometimes updates after edits may still not be reflected on the page. If you kee
 
 In ecommerce scenarios, we may want clothes uploaded by users to be automatically worn by a model, or automatically generate attractive product sales images and posters. Here we try a prompt that asks for an ecommerce poster:
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-14-10.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-14-10.png)
 
 You can combine text-to-image and image-to-image APIs based on your own business scenario ideas.
 
@@ -500,14 +500,14 @@ If your prototype is more design-production oriented (for example brand-style il
 
 > Recraft is an AI tool for designers, illustrators, and marketers, founded in 2022 (US) with headquarters in London. It supports generating and iterating visual content (images, vector art, and 3D graphics), with strengths in output quality, element-level control, and brand-consistent design.
 >
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-34.png)
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-42.png)
+> ![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-34.png)
+> ![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-42.png)
 
 First, go to the [API entry](https://www.recraft.ai/profile/api) to obtain an API Key.
 
 Recraft currently does not provide a free quota in this workflow, so you'll need to top up credits yourself.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/image40.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/image40.png)
 
 Then follow the same process and use official documentation examples:
 
@@ -529,7 +529,7 @@ If you want a relatively simple way to integrate image generation, Qwen Image is
 
 Generate a brand-new image from text prompts. You provide a description, the model interprets it and generates matching visuals.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-43-30.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-43-30.png)
 
 Main capabilities:
 
@@ -550,9 +550,9 @@ Main capabilities:
 - **Image expansion**: Extend the image boundary and generate new content
 - **Smart retouching**: Auto-enhance quality, lighting, and defects
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-17.png)
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-29.png)
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-33.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-17.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-29.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-33.png)
 
 Why choose the Qwen Image series:
 
@@ -572,7 +572,7 @@ Typical use cases:
 
 Open [SiliconFlow](https://siliconflow.cn/) and use the Playground (without calling APIs) to test model effects. Use the top "Filters" option to narrow to image-generation models and choose `Qwen/Qwen-Image`.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-52-56.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-52-56.png)
 
 After confirming the model, check the official API reference and open the [image generation API section](https://docs.siliconflow.cn/cn/api-reference/images/images-generations). Then send the example request plus your API key to AI IDE.
 
@@ -722,7 +722,7 @@ A practical workflow:
 2. Filter by your target task (general chat / coding / vision)
 3. Pick one model from the top candidates that meets your access, latency, and budget constraints
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/image.png)
+![](../../../vi-vn/stage-1/integrating-ai-capabilities/images/image.png)
 
 ## Artificial Analysis
 

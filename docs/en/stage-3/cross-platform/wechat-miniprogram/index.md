@@ -78,13 +78,13 @@ If you have never registered a mini program before, follow this order:
 
 1. Enter https://mp.weixin.qq.com in your browser, open WeChat Official Platform, and login by scanning QR code with WeChat.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image1.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image1.png)
 
 2. Choose "Mini Program" on homepage and complete registration prompts, including email, phone number, and entity type (individual or enterprise).  
-   ![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image2.png)
+   ![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image2.png)
 3. After successful registration, enter backend, find "Development Management" or "Development Settings," and you will see a unique ID named AppID. This is your mini program identity and will be used in project config later.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image3.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image3.png)
 
 It is recommended to save AppID where easy to find. In later sections, we will fill this value directly to map local project to your online mini program.
 
@@ -97,7 +97,7 @@ Next we need a place to actually run and preview mini programs. That is exactly 
 2. After download, double-click installer and follow wizard step by step. If unsure, keep default options.
 3. After installation, launch WeChat DevTools from desktop or start menu. On first launch, it shows a QR code and asks you to scan with WeChat. Scan and authorize to enter main interface.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image4.png)![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image5.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image4.png)![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image5.png)
 
 Later, after project files are ready in Trae, we will import the built mini program into WeChat DevTools and view real running results here.
 
@@ -107,11 +107,11 @@ Finally, install the two tools used for actual coding: Trae and HBuilderX.
 
 You can **install Trae first**. Visit https://www.trae.cn in browser and download the right version for your OS. Installation is like normal software: double-click installer and follow prompts. After install, you get an IDE that can open local folders, inspect code, and chat with AI. All later vibecoding steps happen here.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image6.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image6.png)
 
 **Then install HBuilderX**. Visit https://www.dcloud.io/hbuilderx.html and download your OS package. HBuilderX is lightweight and starts quickly. After install, you can briefly look at interface; no need deep feature study now. In later chapters, we use it to create a uni-app mini program template as project starting point.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image7.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image7.png)
 
 After finishing this section, your environment is complete: you have a mini program account + AppID, a runtime preview tool, and an AI coding IDE. Next we start from **creating the first project skeleton** and make these tools really run.
 
@@ -119,19 +119,19 @@ After finishing this section, your environment is complete: you have a mini prog
 
 1. Click "New Project".
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image8.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image8.png)
 
 2. Choose default template, set mini program name, select storage path, then click create in lower-right corner:
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image9.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image9.png)
 
 3. Creation success screen appears:
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image10.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image10.png)
 
 4. Then find this folder in file system, open it in Trae, and you will see foundation files are all ready:
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image11.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image11.png)
 
 # 3. Mini Program Development
 
@@ -163,16 +163,16 @@ When you execute this instruction in Trae, AI enters a "project editing" flow. D
 
 1. It explains its thinking in chat area, for example which directories it will add pages to and how it will organize game logic.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image12.png)![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image13.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image12.png)![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image13.png)
 
 2. It directly edits real project files, instead of only giving "sample code" for copy-paste.
 3. After finishing, Trae outputs a short summary telling you what files were changed and what was done.
 
 If you are not satisfied with this round (or think something is wrong), no need to panic. Trae provides rollback in the top-left outside chat box. You can restore project state before this instruction with one click - like a safety undo key.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image14.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image14.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image15.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image15.png)
 
 ## 3.3 View Effects in HBuilderX and WeChat DevTools
 
@@ -181,11 +181,11 @@ Next we need to run it.
 
 Specific operation: go back to HBuilderX, find top menu "Run," select "Run to Mini Program Simulator" -> "WeChat DevTools." This triggers project build and opens result in WeChat DevTools.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image16.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image16.png)
 
 The output panel at bottom shows build process. If final state is "ready" with no errors, build is successful. Then switch to WeChat DevTools to check UI and features of this version.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image17.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image17.png)
 
 In most cases, HBuilderX auto-opens WeChat DevTools and you can directly see updated mini program. If not auto-opened, do this:
 
@@ -195,7 +195,7 @@ In most cases, HBuilderX auto-opens WeChat DevTools and you can directly see upd
 
 Then you can see the vibecoding mini program in WeChat DevTools:
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image18.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image18.png)
 
 ## 3.4 Use Natural Language to Repeatedly Adjust Until Satisfied
 
@@ -207,12 +207,12 @@ Replace buttons with joystick control. When user releases joystick, snake should
 
 As long as requirement is clear, AI will automatically locate target files and modify control styles, interaction bindings, and direction handling logic.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image19.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image19.png)
 
 After modification, return to WeChat DevTools to check.  
 If changes are not visible immediately, click "Run" in DevTools or refresh preview window to apply latest build. If still not updated, stop run in HBuilderX and run to simulator again, then you can see updated mini program:
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image20.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image20.png)
 
 ## 3.5 What If Problems Appear: Keep Communicating in Natural Language
 
@@ -232,7 +232,7 @@ AI will use current project context + your description, then provide and apply c
 Through several such rounds, you can polish from "rough first version" to a joystick-based Snake closer to your preference.  
 For example, I gave a style reference image and asked AI to adjust UI style accordingly:
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image21.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image21.png)
 
 ## 3.6 Final Result and Section Summary
 
@@ -245,7 +245,7 @@ After repeated rounds of **natural language description -> AI modification -> pr
 
 Final product examples:
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image22.png)![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image23.png)![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image24.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image22.png)![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image23.png)![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image24.png)
 
 In this section, you have seen a complete closed loop:
 
@@ -291,7 +291,7 @@ You already did this once in **Section 2 Environment Setup**. Here we use it for
 
 This ID must exactly match project config. Otherwise WeChat sees it as another app identity and preview/publish will fail.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image25.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image25.png)
 
 ### 4.1.2 Fill AppID in Project
 
@@ -303,7 +303,7 @@ If your project uses uni-app template, do this:
 2. Find `manifest.json` in file tree and open it.
 3. Scroll to "WeChat Mini Program Configuration," and you will see an input such as "WeChat Mini Program AppID."
 4. Paste AppID copied from Official Platform exactly, then save file.
-   ![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image26.png)
+   ![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image26.png)
 
 Now your local project has claimed this mini program identity. Next, when you upload from WeChat DevTools, it will be recorded under this AppID.
 
@@ -321,11 +321,11 @@ Steps:
    2. Project note: short description, such as "Completed core gameplay."
 3. Confirm and click "Upload." Output panel shows build process. If all steps turn green and upload completes, this version is successfully submitted to WeChat server.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image27.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image27.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image28.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image28.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image29.png)![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image30.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image29.png)![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image30.png)
 
 ### 4.1.4 Set Uploaded Version as Experience Version in Backend
 
@@ -338,9 +338,9 @@ Final step: go back to Official Platform backend and complete loop.
 3. In "Development Version" section, you should see the uploaded version: version `1.0.0`, your note, and just-uploaded timestamp.
 4. On the right side of this row, use dropdown/action button to choose "Set as Experience Version," confirm action. Before this step, ensure your main category is configured on homepage/category settings.
 
-   ![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image31.png)
+   ![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image31.png)
 
-   ![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image32.png)
+   ![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image32.png)
 
 After completion, this version becomes your mini program "Experience Version." You can generate experience QR code in backend, or add yourself/team as experience members, then scan in WeChat for real-device testing.
 
@@ -369,7 +369,7 @@ After entering, top area shows a progress bar. Below it lists steps such as:
 
 At beginning progress is 0%. As each step is completed, system updates automatically.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image33.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image33.png)
 
 ### 4.2.2 Fill Basic Mini Program Information
 
@@ -389,7 +389,7 @@ On "Mini Program Information" page, you usually need to fill/confirm:
    Such as tags and service region, fill according to prompts.  
    Only one principle: all information must match real functionality of your Snake mini program.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image34.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image34.png)
 
 After all fields are done, click Save or Next. First step in release flow is complete.
 
@@ -398,20 +398,20 @@ After all fields are done, click Save or Next. First step in release flow is com
 After basic information, wizard guides you to "Mini Program Category."  
 Category is your app's classification in WeChat, affects review route and later display/operation.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image35.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image35.png)
 
 On this page you will see "Add Category." Click it and choose proper category in system category tree, for example:
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image36.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image36.png)
 
 1. Choose "Education" as top-level category;
 2. Then choose more specific subcategory such as "Education Tools / Teaching Assistant." In this example, education tools are selected as learning aid for vibecoding.
 
 In your own project, simply choose the closest category by real use case.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image37.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image37.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image38.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image38.png)
 
 After confirming category, click Save. If page shows "category created successfully" and displays your new item, this step is complete.
 
@@ -419,7 +419,7 @@ After confirming category, click Save. If page shows "category created successfu
 
 Next, release flow asks for "Operation Information / Filing." This verifies responsible entity behind mini program.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image39.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image39.png)
 
 Under individual entity example, flow usually includes:
 
@@ -429,11 +429,11 @@ Under individual entity example, flow usually includes:
    Include name, ID type, ID number, etc. This must match registration information, otherwise review may reject.
 3. Upload supporting documents  
    Usually requires ID photos or other proof files, with specific format/size/clarity requirements shown on page. Prepare and upload clear files.
-   ![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image40.png)
+   ![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image40.png)
 
 After submission, system enters "under review" and shows a message like "Information submitted, please wait." This may take some time. You can check progress anytime in backend.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image41.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image41.png)
 
 ### 4.2.5 Submit for Review and Wait for Formal Release
 
@@ -450,7 +450,7 @@ WeChat verification: individual usually pays 30 CNY, enterprise around 300 CNY. 
 
 When submitting review, upload operation video/screens and fill required info. Then click "Submit Release" for formal launch.
 
-![](../../../../zh-cn/stage-3/cross-platform/wechat-miniprogram/images/image42.png)
+![](../../../../vi-vn/stage-3/cross-platform/wechat-miniprogram/images/image42.png)
 
 # 5. Summary
 

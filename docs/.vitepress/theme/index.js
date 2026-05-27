@@ -841,6 +841,10 @@ import ProjectArchitectureComparisonDemo from './components/appendix/project-arc
 // Appendix Navigation Component
 import AppendixFlowMap from './components/AppendixFlowMap.vue'
 
+// Vibe Generate + Vibe Agent module components
+import GenStackPicker from './components/vibe-generate/GenStackPicker.vue'
+import AgentLoopDemo from './components/vibe-agent/AgentLoopDemo.vue'
+
 import CopyOrDownloadAsMarkdownButtons from './components/CopyOrDownloadAsMarkdownButtons/index.vue'
 
 export default {
@@ -1707,6 +1711,10 @@ export default {
 
     // Appendix Navigation Component Registration
     app.component('AppendixFlowMap', AppendixFlowMap)
+
+    // Vibe Generate + Vibe Agent module components
+    app.component('GenStackPicker', GenStackPicker)
+    app.component('AgentLoopDemo', AgentLoopDemo)
   },
   setup() {
     const route = useRoute()
@@ -1900,13 +1908,12 @@ export default {
     }
 
     const getCodeToggleLabels = () => {
-      const isChineseRoute =
-        route.path.startsWith('/zh-cn/') || route.path.startsWith('/zh-tw/')
+      const isVietnameseRoute = route.path.startsWith('/vi-vn/')
 
-      return isChineseRoute
+      return isVietnameseRoute
         ? {
-            expand: '展开代码',
-            collapse: '收起代码'
+            expand: 'Mở rộng code',
+            collapse: 'Thu gọn code'
           }
         : {
             expand: 'Expand code',

@@ -21,7 +21,7 @@ Very often, what the teacher explains and what students actually understand are 
 
 Fifty students. One teacher. Every student got stuck in a different place. Some did not understand what `input()` was for. Some could not figure out how to write an `if` statement. Some did not understand type conversion at all. In a 45-minute class, I felt like a factory worker tightening screws nonstop. Just as I tightened one, three more would come loose beside it.
 
-![The BMI task from that Python practice class](../../zh-cn/vibe-stories/images/story-3/image1.png)
+![The BMI task from that Python practice class](../../vi-vn/vibe-stories/images/story-3/image1.png)
 
 Even though I never stopped moving, the number of students with raised hands never seemed to go down. Some waited a few minutes and still could not get help, so they started randomly fiddling with their computers. Others simply gave up and put their heads on the desk to sleep. When the bell rang and class ended, I stood in the computer lab looking at the chaos and suddenly felt powerless.
 
@@ -37,7 +37,7 @@ It would be like that top student you once sat next to in school. When you got s
 
 Existing AI coding tools could already give direct answers, but they still could not truly guide learning. So I decided to build a new application myself: an AI teaching assistant that could teach, guide, and stay with students as they worked through problems.
 
-![Homepage prototype of the Information Technology Course Center](../../zh-cn/vibe-stories/images/story-3/image2.png)
+![Homepage prototype of the Information Technology Course Center](../../vi-vn/vibe-stories/images/story-3/image2.png)
 
 ## 03 From Idea to Reality: The Coding Learning Companion
 
@@ -47,7 +47,7 @@ During that period, I spent five consecutive nights checking in with the course 
 
 I still remember the first time I successfully integrated AI into the app. I typed in "How do I use the `input` function?" and saw it return sample code and an explanation. That feeling of excitement and relief is still vivid to me. I named the application **Information Technology Course Center**, and its core module was the **Coding Learning Companion**.
 
-![The code review interface of the Coding Learning Companion](../../zh-cn/vibe-stories/images/story-3/image3.png)
+![The code review interface of the Coding Learning Companion](../../vi-vn/vibe-stories/images/story-3/image3.png)
 
 It can do three things:
 
@@ -71,11 +71,11 @@ So I spent a few more late evenings adding a complete class and course managemen
 - Teachers can review assignments after class and send back incomplete work for revision.
 - When a student passes every assignment in a course, the system automatically issues a course completion certificate.
 
-![Course and class management interface](../../zh-cn/vibe-stories/images/story-3/image4.png)
+![Course and class management interface](../../vi-vn/vibe-stories/images/story-3/image4.png)
 
 That certificate was something I intentionally added. I know that for high school students, even a small sense of recognition and ceremony can make them feel, "I really learned something."
 
-![A sample course completion certificate](../../zh-cn/vibe-stories/images/story-3/image5.png)
+![A sample course completion certificate](../../vi-vn/vibe-stories/images/story-3/image5.png)
 
 With the coding companion plus course management, the system finally formed a complete learning loop. It gave students a clearer beginning, a clearer ending, and a stronger sense of accomplishment.
 

@@ -18,7 +18,7 @@ An **academic personal homepage** is your own private territory on the internet.
 
 Unlike WeChat Moments, Zhihu, or LinkedIn, it does not depend on any platform's recommendation algorithm, and it will not disappear if a platform shuts down. It is a long-term, stable **personal showcase space** that can be indexed by Google and Google Scholar. It usually contains your bio, publications, projects, and technical blog.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image1.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image1.png)
 
 ## 1.2 Why build your own website?
 
@@ -41,22 +41,22 @@ In practice, there are countless ways to build a website. Here we introduce only
 **Method 1: hand-writing from scratch with HTML / CSS / JS**
 This is the traditional computer science route. You write the code character by character. The advantage is extreme flexibility. The disadvantage is a very high barrier to entry, and it is easy to get stuck while tweaking CSS. It is not ideal for those of us who want to focus on content.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image2.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image2.png)
 
 **Method 2: visual site builders such as Wix / WordPress**
 This is like building with blocks. The advantage is easy drag-and-drop editing. The disadvantage is that it often requires payment, tends to generate bloated code, lacks an academic-geek feel, and is difficult to customize deeply.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image3.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image3.png)
 
 **Method 3: GitHub-based templates (Static Site Generators)**
 This is the **most recommended** mainstream route in academic and geek communities. We directly fork a mature template written by others, such as one based on Jekyll or Hugo, and then only modify the configuration files and content.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image4.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image4.png)
 
 **Method 4: Vibe Coding (AI visual generation flow)**
 With AI agents that have strong multimodal visual understanding, you only need to see a website style you like online, take a screenshot, and tell the AI: "Write me a webpage based on this style." The AI can then analyze the visual elements and generate the underlying code for you.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image5.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image5.png)
 
 **The choice in this tutorial: GitHub Pages + academic template + AI modifications.**
 The reason is simple:
@@ -101,7 +101,7 @@ The whole build process uses four tools or resources, each playing the role of d
 
 After preparing this tool, in the following practical steps we will not need to stare at boring code panes. We will directly open the project here and use the chat panel on the right to tell the AI in natural language, in Chinese if you like, to help us write code, fix bugs, and even refactor whole pages.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image6.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image6.png)
 
 ## 2.3 Download Git
 
@@ -121,7 +121,7 @@ Please help me check whether Git is already installed on this computer. Please r
 * **Case A (already installed)**: if you see something like `git version 2.xx.x`, congratulations. You can skip the installation step directly.
 * **Case B (not installed)**: if you see "command not found" or a group of red error messages, continue below.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image7.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image7.png)
 
 **Step 2: AI-assisted installation**
 
@@ -160,7 +160,7 @@ For Windows users, the official site at https://rubyinstaller.org/downloads/ pro
 
 **Beginner reminder**: in practice, downloading directly from the official site may be slow or fail. We strongly recommend using the domestic mirror at [RubyInstaller for Windows - China mirror](https://rubyinstaller.cn/), which is usually much faster.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image8.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image8.png)
 
 **Step 2: Run the installation**
 
@@ -168,13 +168,13 @@ Double-click the downloaded installer. In the setup wizard, make sure to check *
 
 After checking it, keep clicking **Next** to complete the installation.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image9.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image9.png)
 
 **Step 3: Configure the development toolkit**
 
 When the installation progress finishes, a black command-line window will open automatically. Do not panic. Type the number `3` where the cursor is blinking, which means installing the MSYS2 base environment and the MINGW toolchain, then press Enter. Wait until the commands finish running and the window closes automatically.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image10.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image10.png)
 
 **Step 4: Verify the result**
 
@@ -186,7 +186,7 @@ Please help me check whether the Ruby environment has been installed correctly o
 
 If Trae replies with something like `ruby 3.x.x`, then your Windows Ruby environment is fully set up.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image11.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image11.png)
 
 ### 2.4.2 Mac installation
 
@@ -232,7 +232,7 @@ If Git is the courier, then **GitHub is the cloud warehouse and showroom**. It n
 1. **Visit the official site**: open [https://github.com/](https://github.com/).
 2. **Click Sign up**: click **"Sign up"** in the upper right corner.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image12.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image12.png)
 
 3. **Fill in your information**
 4. **Email**: enter a real email address.
@@ -240,11 +240,11 @@ If Git is the courier, then **GitHub is the cloud warehouse and showroom**. It n
 6. **Username (important!)**: **choose carefully**. Your homepage URL will later become **`https://your-username.github.io`**. It is best to use your English name, pinyin, a familiar ID, or a simple combination of letters and numbers. Do **not** choose something like `a1b2c3d4`, otherwise your website link will be hard to remember.
 7. **Verification and activation**: complete the human verification, often rotating images or choosing spiral galaxies, then check your email for the verification code.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image13.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image13.png)
 
 Once registration is complete, you have a plot of your own on the internet. In the next section, we will begin building on that plot.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image14.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image14.png)
 
 # 3. From Template to Your First Accessible Page
 
@@ -281,7 +281,7 @@ Visit the target repository homepage and click the **Fork** button in the upper 
 
 * Explanation: this step is equivalent to copying someone else's code repository with a full set of keys into your own GitHub account. Now, you own your copy of the site.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image15.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image15.png)
 
 **Step 3: Rename the repository, the most important step**
 
@@ -293,7 +293,7 @@ This is a hard rule of GitHub Pages.
 For example, if your GitHub username is `musk-fan`, then the repository name **must** be `musk-fan.github.io`.
 Only this way will GitHub automatically assign you a free domain. If the name is wrong, the webpage will not open later.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image16.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image16.png)
 
 ## 3.2 Get the GitHub project URL
 
@@ -304,7 +304,7 @@ After renaming, we need the repository pickup slip.
 3. Make sure the **HTTPS** tab is selected.
 4. Click the copy button and copy the URL ending in `.git`, for example `https://github.com/musk-fan/musk-fan.github.io.git`.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image17.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image17.png)
 
 ## 3.3 Pull the project locally
 
@@ -314,7 +314,7 @@ In the past, programmers had to type complex Git commands in a black terminal to
 
 Create a new folder on your computer, for example `MyWebsite`, then right-click and choose **Open with Trae**, or open Trae first and choose **Open Folder**.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image18.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image18.png)
 
 **Step 2: Give the clone command**
 
@@ -330,7 +330,7 @@ Execution requirement: please run the `git clone` command directly in the termin
 
 Trae will automatically invoke the terminal at the bottom and execute the command. Wait a few seconds. When you see files such as `_config.yml` and `index.html` appear in the file tree on the left, the project has been successfully moved to your computer.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image19.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image19.png)
 
 ## 3.4 Preview the webpage locally
 
@@ -365,7 +365,7 @@ After the terminal runs for a few seconds, you will see something similar to:
 
 From this point on, whenever you change content and press `Ctrl+S`, then refresh the browser, **the webpage content will change with it**.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image20.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image20.png)
 
 Once local preview works, we can enter the next chapter and start turning the website into something shaped like Elon Musk.
 
@@ -404,8 +404,8 @@ The first thing we need to solve is "Who am I?" The template is filled with the 
 
 Put the image assets I provide to you, `University_of_Pennsylvania.jpg` and `Queen_University.jpg`, into the corresponding project folder, usually `/assets/images/badges/`.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image21.png)
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image22.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image21.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image22.png)
 
 **Step 2: Send the instruction**
 
@@ -441,13 +441,13 @@ In Trae's right-side chat box, enter the following prompt. Note that we do not n
 
 At this point, you can see that Trae has completed all our modification requirements.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image23.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image23.png)
 
 **Step 3: Refresh the local browser**
 
 Refresh the local browser now, and you should see everything replaced correctly.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image24.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image24.png)
 
 ### 4.2.2 Iterative improvement: add "papers" and projects
 
@@ -455,15 +455,15 @@ Because Elon Musk is not a traditional university professor, he rarely publishes
 
 Within the context of an academic homepage, we can redefine the meaning of "Publications" as **"Technical White Papers & Visionary Plans."** This is not awkward at all. In fact, it fits his builder identity very well.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image25.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image25.png)
 
 **Step 1: Prepare the assets**
 
 Download the cover images I provide, namely `Hyperloop_Alpha_sketch.jpg`, `SpaceX_Starship.jpg`, and `Neuralink_sewing_machine_robot.jpg`, place them under `/assets/images/covers/`, and remove the example images originally in that folder.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image26.png)
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image27.png)
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image28.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image26.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image27.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image28.png)
 
 **Step 2: Send the instruction**
 
@@ -530,7 +530,7 @@ Please directly provide the complete content of these three files, and also prov
 
 When the build completes, you will find that the originally dull publication list has turned into a futuristic black-tech showcase.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image33.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image33.png)
 
 ### 4.2.3 Final polish: social links and avatar
 
@@ -567,7 +567,7 @@ Please directly provide the complete modified configuration code snippet.
 
 At this point, locally, you already have a complete, professional, and distinctly Musk-style personal academic homepage.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image34.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image34.png)
 
 ## 4.3 Injecting soul through UI customization, the style part
 
@@ -577,7 +577,7 @@ Right now the content is correct, but the page still looks like a printed resume
 If you think the gray background is too dull and want to change it to **Mars red**, just ask Trae:
 *"I want to change the background color of the sidebar to dark red (#8B0000) to reflect the feeling of Mars. Which CSS or SCSS file should I modify? Please give me the code directly."*
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image35.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image35.png)
 
 If you like the **SpaceX Dashboard** style in the example image above, you can directly copy the following designer-level prompt:
 
@@ -668,8 +668,8 @@ Do not explain the process. Directly output the cleaned Markdown content.
 
 Once you get this cleaned text, feed it into Trae, and the accuracy will improve dramatically.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image36.png)
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image37.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image36.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image37.png)
 
 **Step 3: Replace the core content, with two possible routes**
 
@@ -688,7 +688,7 @@ Trae will tell you in the chat something like:
 
 You can then open that file yourself from the file tree on the left and fill in the cleaned content from ChatGPT like a structured editing exercise.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image38.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image38.png)
 
 2. **Mode B: fully managed automation**
 
@@ -711,7 +711,7 @@ Back on GitHub in the browser:
 2. In the left sidebar, click **Pages**.
 3. Under **Build and deployment**, change **Source** from `Deploy from a branch` to **`GitHub Actions`**.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image39.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image39.png)
 
 **Step 2: Automatically configure the Jekyll workflow**
 
@@ -720,7 +720,7 @@ After switching, the page layout changes. GitHub will automatically recognize th
 1. Find the **Jekyll (By GitHub Actions)** card.
 2. Click **Configure** on that card.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image40.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image40.png)
 
 **Step 3: Commit the configuration file**
 
@@ -730,9 +730,9 @@ After clicking, you will be taken to a page full of code. This is a `.yml` confi
 2. Click the green **Commit changes...** button in the upper right corner.
 3. In the pop-up confirmation box, click **Commit changes** again.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image41.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image41.png)
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image42.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image42.png)
 
 **Step 4: Wait and verify**
 
@@ -742,7 +742,7 @@ After the commit, GitHub's servers start working automatically.
 2. You will see a task named `Deploy Jekyll site to Pages` spinning.
 3. Wait one to two minutes until the yellow circle turns into a **green check mark**.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image43.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image43.png)
 
 **Step 5: Visit your website**
 
@@ -761,11 +761,11 @@ Now we will push all the local modifications we made earlier to GitHub, so this 
 4. Click **Sync Changes** or **Push** to push to the `main` branch.
 5. Wait a moment until all processes under the **Actions** tab complete.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image44.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image44.png)
 
 Now, congratulations. Open **`https://your-username.github.io/`**, and you already have a complete, professional, and strongly Musk-flavored academic homepage.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image45.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image45.png)
 
 # 6. Advanced Play: Hand-build a Personal Homepage from Scratch
 
@@ -812,7 +812,7 @@ Please put all CSS styles and HTML structure inside a single `index.html` file.
 Please generate the full code directly.
 ```
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image46.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image46.png)
 
 **Step 3: Generate and preview**
 
@@ -826,11 +826,11 @@ Please help me start a local service to preview this webpage.
 
 You will receive a link such as `http://localhost:8000`. Copy and open it in the browser, and you will see a cool "Mars homepage," perhaps with stars twinkling in the background.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image47.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image47.png)
 
 But we will notice that the current page is only a very cool landing page. As a complete personal homepage, it still has too little information and lacks the depth expected of an academic homepage. So based on this visual framework, we now continue to enrich it with academic-style information about Elon Musk.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image48.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image48.png)
 
 **Step 4: Further improve the information**
 
@@ -877,7 +877,7 @@ Make sure the whole page remains responsive and preserves a good two-column layo
 
 Refresh the browser after that, and your cyberpunk academic page is complete. Of course, you can keep improving it according to your own preferences. As in the previous steps, you only need to tell Trae the goal clearly, and it will handle the tedious coding process for you.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image49.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image49.png)
 
 ## 6.3 How to deploy the hand-built site
 
@@ -888,7 +888,7 @@ Unlike the previous forked template, which came from someone else's repository, 
 1. Log in to GitHub in the browser.
 2. Click the **+** icon in the upper right, then **New repository**.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image50.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image50.png)
 
 3. **Repository name**: enter `mars-profile`, or any other name you like.
 
@@ -900,13 +900,13 @@ If you have already used **`your-username.github.io`**, you cannot reuse that na
    Leave the other options at their defaults.
 6. Click **Create repository**.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image51.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image51.png)
 
 **Step 2: Push the local code to the cloud**
 
 After creation, GitHub will take you to a page with a lot of code-looking content. Do not worry. We just need to copy the repository link shown on that page.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image52.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image52.png)
 
 Go back to Trae and type in the chat:
 
@@ -924,7 +924,7 @@ Trae will usually help execute the standard sequence below, and you may only nee
 
 After Trae completes the push, go back to GitHub and refresh the page. Click the **Code** tab, and you will see that the code written in Trae has been successfully pushed into the repository.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image53.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image53.png)
 
 **Step 3: Enable GitHub Pages**
 
@@ -937,18 +937,18 @@ After the code is pushed, the webpage will not appear automatically. We still ne
    2. Set **Branch** to `main`, and choose `/(root)` as the folder.
 4. Click **Save**.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image54.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image54.png)
 
 After you click Save, the webpage will not appear instantly. GitHub's backend works like a small robot factory. It needs around **1 to 2 minutes** to package your code, build it, and publish it to global servers.
 
 Wait patiently and refresh the page. Under the big **GitHub Pages** heading, you will see a line with a URL similar to:
 **"Your site is live at `https://your-username.github.io/mars-link/`"**
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image55.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image55.png)
 
 Click it, and your Mars command center is online.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image56.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image56.png)
 
 # 7. Final words
 
@@ -972,7 +972,7 @@ Do not leave this plot empty.
 Go experiment. Go break it. Go rebuild it.
 Keep doing that until it grows into the shape you like most.
 
-![](../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image57.png)
+![](../../../../vi-vn/stage-3/personal-brand/personal-website-blog/images/image57.png)
 
 ***Go ahead, and let the world see you.***
 

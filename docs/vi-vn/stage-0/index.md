@@ -1,6 +1,6 @@
 # NgườI MớI Và Nguyên Mẫu Sản Phẩm
 
-Chào mừng đến với giai đoạn **Quản lý Sản phẩm AI**! Đây là điểm khởi đầu của hướng dẫn Easy-Vibe, được thiết kế cho ngườI học không có kinh nghiệm lập trình.
+Chào mừng đến với giai đoạn **Quản lý Sản phẩm AI**! Đây là điểm khởi đầu của hướng dẫn Học AI, được thiết kế cho người học không có kinh nghiệm lập trình.
 
 ## Bạn sẽ học được gì
 

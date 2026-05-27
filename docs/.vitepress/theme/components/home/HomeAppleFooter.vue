@@ -9,43 +9,43 @@ const props = defineProps({
 const t = inject('t')
 
 const appleFooterInfo = computed(() => {
-  const locale = t.value._locale || 'zh-cn'
+  const locale = t.value._locale || 'vi-vn'
   const content = {
-    'zh-cn': {
+    'vi-vn': {
       notes: [
-        '1. 学习路径与章节内容会持续更新，显示内容以当前页面为准。',
-        '2. 示例项目与截图用于教学演示，可能与后续版本界面存在差异。',
-        '3. 部分章节链接会随着课程迭代调整，建议优先从首页导航进入最新路径。'
+        '1. Lộ trình học và nội dung chương sẽ liên tục cập nhật, nội dung hiển thị lấy theo trang hiện tại.',
+        '2. Project ví dụ và ảnh chụp màn hình chỉ dùng cho mục đích minh họa, có thể khác với phiên bản giao diện sau.',
+        '3. Một số link chương có thể thay đổi theo lộ trình khoá học, khuyến nghị vào từ trang chủ để lấy đường dẫn mới nhất.'
       ],
-      breadcrumbPrefix: 'Easy-Vibe',
-      breadcrumbCurrent: '学习导航',
+      breadcrumbPrefix: 'Học AI',
+      breadcrumbCurrent: 'Điều hướng học tập',
       columns: [
         {
-          title: '学习与导航',
-          links: ['零基础入门', '初中级开发', '高级开发', '附录', '学习地图', '课程总览']
+          title: 'Học & điều hướng',
+          links: ['Nhập môn cho người mới', 'Dev sơ/trung cấp', 'Dev cao cấp', 'Phụ lục', 'Bản đồ học tập', 'Tổng quan khoá học']
         },
         {
-          title: '学习支持',
-          links: ['常见问题', '学习建议', '章节勘误', '版本更新']
+          title: 'Hỗ trợ học tập',
+          links: ['Câu hỏi thường gặp', 'Gợi ý học tập', 'Đính chính chương', 'Cập nhật phiên bản']
         },
         {
-          title: '项目资源',
-          links: ['GitHub 仓库', '开源协议', '提交 Issue', '贡献指南']
+          title: 'Tài nguyên dự án',
+          links: ['GitHub Repository', 'Giấy phép mã nguồn', 'Báo lỗi (Issue)', 'Hướng dẫn đóng góp']
         },
         {
-          title: '社区',
-          links: ['学习社群', '讨论区', '课程反馈']
+          title: 'Cộng đồng',
+          links: ['Cộng đồng học tập', 'Khu thảo luận', 'Phản hồi khoá học']
         },
         {
-          title: '关于 Easy-Vibe',
-          links: ['项目介绍', '更新日志', '联系我们']
+          title: 'Về Học AI',
+          links: ['Giới thiệu dự án', 'Changelog', 'Liên hệ']
         }
       ],
-      more: '更多学习方式：访问',
-      moreLink: 'GitHub 仓库',
-      moreTail: '，获取更新与交流信息。',
-      copyright: 'Copyright © 2026 Easy-Vibe. 保留所有权利。',
-      policies: ['隐私政策', '使用条款', '网站地图']
+      more: 'Cách học khác: truy cập',
+      moreLink: 'GitHub Repository',
+      moreTail: ' để nhận cập nhật và thông tin trao đổi.',
+      copyright: 'Copyright © 2026 Học AI. Bảo lưu mọi quyền.',
+      policies: ['Chính sách bảo mật', 'Điều khoản sử dụng', 'Sơ đồ website']
     },
     en: {
       notes: [
@@ -54,7 +54,7 @@ const appleFooterInfo = computed(() => {
         '3. Some chapter links may change as the course evolves.',
         '4. The page is optimized for modern desktop browsers and responsive layouts.'
       ],
-      breadcrumbPrefix: 'Easy-Vibe',
+      breadcrumbPrefix: 'Học AI',
       breadcrumbCurrent: 'Learning Navigation',
       columns: [
         {
@@ -74,43 +74,44 @@ const appleFooterInfo = computed(() => {
           links: ['Community', 'Discussions', 'Feedback']
         },
         {
-          title: 'About Easy-Vibe',
+          title: 'About Học AI',
           links: ['Overview', 'Changelog', 'Contact']
         }
       ],
       more: 'More ways to learn: visit',
       moreLink: 'GitHub Repository',
       moreTail: ' for updates and community discussions.',
-      copyright: 'Copyright © 2026 Easy-Vibe. All rights reserved.',
+      copyright: 'Copyright © 2026 Học AI. All rights reserved.',
       policies: ['Privacy Policy', 'Terms of Use', 'Sitemap']
     }
   }
-  return content[locale] || content.en
+  return content[locale] || content['vi-vn']
 })
 
 const footerBtnLink = computed(() => {
-  const locale = t.value._locale || 'zh-cn'
+  const locale = t.value._locale || 'vi-vn'
   return withBase(`/${locale}/stage-1/learning-map/`)
 })
 
 const footerRepositoryLink = 'https://github.com/datawhalechina/easy-vibe'
 
 const footerPolicyLinkMap = {
-  '隐私政策': '#',
-  '使用条款': '#',
-  '网站地图': '#',
+  'Chính sách bảo mật': '#',
+  'Điều khoản sử dụng': '#',
+  'Sơ đồ website': '#',
   'Privacy Policy': '#',
   'Terms of Use': '#',
   'Sitemap': '#'
 }
 
 const footerColumnLinkMap = {
-  '零基础入门': '/stage-1/',
-  '初中级开发': '/stage-2/',
-  '高级开发': '/stage-3/',
-  '附录': '/appendix/',
-  '学习地图': '/stage-1/learning-map/',
-  '课程总览': '/stage-1/',
+  'Nhập môn cho người mới': '/stage-1/',
+  'Dev sơ/trung cấp': '/stage-2/',
+  'Dev cao cấp': '/stage-3/',
+  'Phụ lục': '/appendix/',
+  'Bản đồ học tập': '/stage-1/learning-map/',
+  'Tổng quan khoá học': '/stage-1/',
+  'Giới thiệu dự án': '/guide/introduction',
   'Foundations': '/stage-1/',
   'Junior/Mid Dev': '/stage-2/',
   'Senior Dev': '/stage-3/',
@@ -121,7 +122,6 @@ const footerColumnLinkMap = {
 }
 
 const footerExternalLinks = {
-  'GitHub 仓库': 'https://github.com/datawhalechina/easy-vibe',
   'GitHub Repository': 'https://github.com/datawhalechina/easy-vibe',
   'Changelog': 'https://github.com/datawhalechina/easy-vibe/releases',
 }
@@ -131,7 +131,7 @@ const getFooterLink = (label) => {
   if (external) return external
   const basePath = footerColumnLinkMap[label]
   if (!basePath) return '#'
-  const locale = t.value._locale || 'zh-cn'
+  const locale = t.value._locale || 'vi-vn'
   return `/${locale}${basePath}`
 }
 

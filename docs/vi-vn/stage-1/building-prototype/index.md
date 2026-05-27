@@ -287,20 +287,20 @@ Yêu cầu:
 4. Liệt kê các chức năng cốt lõi cần làm.
 ```
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
 
 ### 2.4 Để AI IDE sinh code
 
-Nếu chưa quen AI IDE như Cursor, Trae hoặc Windsurf, hãy xem trước [IDE cơ bản](/zh-cn/appendix/2-development-tools/ide-basics/): cách tạo dự án, nói chuyện với Agent và đọc quá trình sinh code.
+Nếu chưa quen AI IDE như Cursor, Trae hoặc Windsurf, hãy xem trước [IDE cơ bản](/vi-vn/appendix/2-development-tools/ide-basics/): cách tạo dự án, nói chuyện với Agent và đọc quá trình sinh code.
 
 Tạo một thư mục mới rồi mở trong AI IDE:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 Trong thanh bên, chọn mô hình bạn muốn dùng, ví dụ Gemini, GPT, GLM, Kimi hoặc MiniMax, rồi dán prompt đã chuẩn bị:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 Sau khi gửi, AI sẽ lập kế hoạch thư mục, tạo file và viết nội dung ban đầu.
 
@@ -308,11 +308,11 @@ Sau khi gửi, AI sẽ lập kế hoạch thư mục, tạo file và viết nộ
 Trong quá trình sinh code, Agent thường dừng lại để chờ bạn xác nhận: nhấn Enter, chọn phương án, hoặc cho phép chạy lệnh. Nếu thấy AI không chạy tiếp, hãy kiểm tra khung chat xem nó đang chờ phản hồi hay không.
 :::
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 Nếu xuất hiện một dịch vụ local, bạn cần mở đường dẫn trong trình duyệt hoặc bấm bỏ qua bước chờ trong IDE:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info Giải thích nhanh về localhost
 Khi tạo dự án React bằng Vite, máy tính sẽ chạy một server local để bạn xem trang. `localhost` nghĩa là "chính máy tính này". Cổng như `5174` là số để phân biệt các dịch vụ khác nhau. Nếu `5173` bị chiếm, hệ thống tự đổi sang cổng khác là bình thường.
@@ -320,15 +320,15 @@ Khi tạo dự án React bằng Vite, máy tính sẽ chạy một server local 
 
 Sau khi xác nhận xong, chờ Agent chạy một lúc, bạn sẽ có phiên bản đầu tiên:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
 
 Nếu giao diện còn xấu, hãy nói thẳng với AI:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 Sau khi tối ưu có thể nhận được giao diện đẹp hơn:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
 
 Bạn có thể tiếp tục điều chỉnh bằng yêu cầu cụ thể:
 
@@ -336,11 +336,11 @@ Bạn có thể tiếp tục điều chỉnh bằng yêu cầu cụ thể:
 - "Bên trái có quá nhiều trường, chỉ giữ lại các trường quan trọng."
 - "Hãy tham khảo bố cục trong ảnh này, không cần giống hoàn toàn."
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 Kết quả cuối có thể tiến gần hơn đến một prototype chuyên nghiệp:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
 
 ### 2.5 Gặp lỗi thì làm gì?
 
@@ -372,13 +372,13 @@ Một vài câu hỏi thường gặp:
 
 Khi logic cốt lõi đã chạy, hãy bổ sung các phần còn thiếu. Ví dụ nút cài đặt chưa hoạt động, trang thư viện mẫu chưa có, hoặc luồng lưu mẫu chưa hoàn chỉnh. Bạn có thể yêu cầu AI kiểm tra theo tài liệu nghiệp vụ và triển khai từng trang.
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
 
 Sau một lúc, ứng dụng có thể được bổ sung nhiều trang và chức năng tương tác:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
 
 Lúc này bạn cần tự bấm thử những nút quan trọng. Nếu phần nào không tương tác, hãy mô tả hiện tượng và để AI sửa.
 
@@ -410,17 +410,17 @@ Tôi cần kiểm thử luồng người dùng này. Hãy thêm một lối vào
 
 Nếu một bộ dữ liệu quá ít, hãy yêu cầu AI tạo nhiều case kiểm thử:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
 
 Bấm vào có thể nhận kết quả:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
 
 Nếu kết quả xuất hiện quá nhanh, không giống quá trình tạo thật, có thể yêu cầu:
 
 > Hãy mô phỏng một quá trình tạo thật: sau khi bấm nút, chờ một khoảng thời gian rồi mới hiển thị kết quả.
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
 
 Sau đó kiểm tra thư viện mẫu. Nếu card kết quả chưa có chức năng lưu, hãy yêu cầu:
 
@@ -428,11 +428,11 @@ Sau đó kiểm tra thư viện mẫu. Nếu card kết quả chưa có chức n
 
 Quá trình này thường cần sửa nhiều vòng bằng ảnh chụp và mô tả:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
 
 Kết quả kỳ vọng:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
+![](../../../vi-vn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
 
 Ngoài tự trải nghiệm, bạn cũng có thể nhờ AI làm kiểm tra yêu cầu:
 

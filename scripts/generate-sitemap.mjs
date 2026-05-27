@@ -15,19 +15,8 @@ const __dirname = path.dirname(__filename)
 const docsDir = path.resolve(__dirname, '../docs')
 const publicDir = path.resolve(__dirname, '../docs/public')
 
-// 支持的语言
-const locales = [
-  'zh-cn',
-  'en',
-  'zh-tw',
-  'ja-jp',
-  'ko-kr',
-  'es-es',
-  'fr-fr',
-  'de-de',
-  'ar-sa',
-  'vi-vn'
-]
+// Supported locales
+const locales = ['vi-vn', 'en']
 
 // 基础 URL (根据部署环境动态确定)
 const getBaseUrl = () => {
@@ -168,14 +157,13 @@ function main() {
   const allUrls = []
   const localePaths = new Map()
 
-  // 首先扫描中文内容作为基准
-  const zhCnDir = path.join(docsDir, 'zh-cn')
+  // Use Vietnamese as the base/canonical locale
+  const baseLocaleDir = path.join(docsDir, 'vi-vn')
   let baseFiles = []
 
-  if (fs.existsSync(zhCnDir)) {
-    baseFiles = scanMarkdownFiles(zhCnDir)
+  if (fs.existsSync(baseLocaleDir)) {
+    baseFiles = scanMarkdownFiles(baseLocaleDir)
   } else {
-    // 如果没有 zh-cn 目录，扫描 docs 根目录
     baseFiles = scanMarkdownFiles(docsDir).filter((f) => !f.includes('/'))
   }
 
@@ -207,8 +195,8 @@ function main() {
         })
         urlInfo.sourceFiles.push({ locale, relativePath: baseFile })
 
-        // 设置主要语言版本为 zh-cn
-        if (locale === 'zh-cn') {
+        // Primary canonical URL = Vietnamese
+        if (locale === 'vi-vn') {
           urlInfo.loc = url
         }
       }
@@ -286,16 +274,8 @@ function getPriority(filePath) {
 
 function getHreflangCode(locale) {
   const map = {
-    'zh-cn': 'zh-CN',
-    en: 'en',
-    'zh-tw': 'zh-TW',
-    'ja-jp': 'ja',
-    'ko-kr': 'ko',
-    'es-es': 'es',
-    'fr-fr': 'fr',
-    'de-de': 'de',
-    'ar-sa': 'ar',
-    'vi-vn': 'vi'
+    'vi-vn': 'vi',
+    en: 'en'
   }
   return map[locale] || locale
 }

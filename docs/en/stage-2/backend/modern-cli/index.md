@@ -8,13 +8,13 @@ Do you still remember the CLI we introduced before? CLI means using pure text co
 
 > On Windows, common terminals include Command Prompt (`cmd`) and PowerShell. You can type `cmd` or `powershell` in the Run/Search box to launch them.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image1.png)![](/zh-cn/stage-2/backend/modern-cli/images/image2.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image1.png)![](../../../../vi-vn/stage-2/backend/modern-cli/images/image2.png)
 
 The CLI is naturally good for text-command workflows. Among a small group of geeks (programming enthusiasts pursuing extreme efficiency), CLI is even more popular than GUI. They want to complete everything with the keyboard and feel that moving the mouse can slow down coding efficiency.
 
 In industry, CLI is also often the most common interface form, because GUI requires the operating system to draw interfaces and manage windows, which demands more computer resources. CLI only needs to pass received commands to the system for execution. So when connecting to large-scale server clusters, we usually interact only through CLI.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image3.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image3.png)
 
 For many learners with no CLI experience, command-line operations can feel complicated, with too many commands, and even the fear of "accidentally breaking the computer." No need to worry. Remember how, in previous tutorials, we often asked Trae to help with basic operations? We can use exactly the same idea here. We can ask CLI coding tools to perform all CLI operations for us: entering specific folders, searching and processing files, running or copying open-source projects, and so on. The whole process can be completed through conversation with the CLI AI coding tool.
 
@@ -22,7 +22,7 @@ For many learners with no CLI experience, command-line operations can feel compl
 
 We can compare CLI AI coding tools to z.ai and Trae that we used before. In a sense, CLI AI coding tools can be seen as a special kind of z.ai: they also only need a simple chat entry, and then they automatically perform the required operations (sometimes you just need to open a browser manually to check the final result). If compared to AI IDEs, CLI AI coding tools can be seen as the Agent module inside an IDE, which is the side chat panel.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image4.png)![](/zh-cn/stage-2/backend/modern-cli/images/image5.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image4.png)![](../../../../vi-vn/stage-2/backend/modern-cli/images/image5.png)
 
 However, because different AI IDEs implement agents in different ways, their capability gaps are large, and AI coding quality is often unstable. CLI AI coding tools are usually developed directly by major tech companies, such as Anthropic behind Claude and OpenAI behind ChatGPT.
 
@@ -67,22 +67,22 @@ At the same time, because model versions update very quickly, we recommend prior
 
 Claude Code is an AI coding tool developed by Anthropic based on Claude model capabilities. Its primary interaction happens in the terminal, and it can also be used as a VS Code extension. Similar to an agent inside an AI IDE, it can deeply understand a developer's repository and complete end-to-end development tasks through natural language instructions, including code editing, bug fixing, running and fixing tests, managing Git workflows (such as resolving merge conflicts and creating PRs), explaining complex code, and executing terminal commands.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image6.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image6.png)
 
 Claude Code's main advantages are: very long context windows (it can handle whole files or even small projects), proactively clarifying ambiguous requirements, automatically planning and allocating execution tasks, and deeply understanding and explaining the entire codebase. Compared with ordinary IDE agents, it is better suited for immersive vibe-coding workflows.
 
 In actual use, you can ask it through chat to create new projects, perform CLI operations (such as organizing folders, bulk renaming files, deploying open-source projects), and configure development environments (such as installing and debugging Python environments). If you find some code difficult to understand, or a folder structure unclear, you can directly ask Claude Code to generate structured analysis documentation or explain specific parts step by step.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image7.png)![](/zh-cn/stage-2/backend/modern-cli/images/image8.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image7.png)![](../../../../vi-vn/stage-2/backend/modern-cli/images/image8.png)
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image9.png)![](/zh-cn/stage-2/backend/modern-cli/images/image10.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image9.png)![](../../../../vi-vn/stage-2/backend/modern-cli/images/image10.png)
 
 If you want to systematically learn Claude Code, you can refer to the course jointly launched by Andrew Ng and Anthropic:  
 <https://www.bilibili.com/video/BV176t2zSEpr>
 
 Next, we will learn how to use Claude Code. Because directly using the official Claude Code is often very expensive (as shown below), we will instead use API platforms that are compatible with Claude Code protocol but based on other large models.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image11.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image11.png)
 
 You need to learn the different options below (it is best to try all of them), and finally choose the one that suits you best as your main path.
 
@@ -96,11 +96,11 @@ Another approach is using the "Claude Code Route" project. It is an open-source 
 
 GLM (General Language Model) is a series of large language models independently developed by Zhipu AI. GLM-4.6 is currently the latest version in the GLM family. Its core highlight is strong coding performance (benchmarking Claude Sonnet 4 in public benchmarks and real tasks, and considered top-tier domestically).
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image12.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image12.png)
 
 It also extends the context window to 200K, allowing easier handling of long text and large codebases, while strengthening reasoning and tool-calling capabilities, achieving a good balance between performance and cost.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image13.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image13.png)
 
 Before connecting GLM, we first need to install Claude Code.
 
@@ -161,7 +161,7 @@ please help me configure and start Claude Code
 
 You will see output similar to the following:
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image14.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image14.png)
 
 > 💡 What is an environment variable?
 >
@@ -296,11 +296,11 @@ Above we explained how to replace Claude Code's Anthropic interface with the off
 
 [Claude Code Router](https://github.com/musistudio/claude-code-router) is an intelligent routing enhancement tool designed specifically for Claude Code. Its core function is helping users distribute AI requests to models across different platforms as needed, with a high degree of customization. It supports access to dozens of platforms including OpenRouter, DeepSeek, Ollama, Gemini, and more. It can also route tasks to specific models by scenario, such as GLM-4.5, Kimi-K2, and Qwen3-Coder. For example, you can route background tasks to local Ollama to save cost, route long text / long code tasks to Gemini-2.5-Pro, and route code explanation to DeepSeek.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image16.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image16.png)
 
 This tool also provides convenient UI/CLI configuration management and uses converters to adapt API formats from different platforms. It supports automation integration such as GitHub Actions and custom extensions, solving the problems of "one single model cannot cover all scenarios" and "frequent platform switching is troublesome," helping users use AI tools more flexibly and at lower cost.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image17.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image17.png)
 
 Below is a quick introduction to installing Claude Code Router. The rough steps are as follows (you can also ask Trae to execute them) to prepare the environment:
 
@@ -311,7 +311,7 @@ npm install -g @musistudio/claude-code-router
 
 After installation, you need to confirm the `ccr` command is available locally. If you see output similar to the following, installation is successful:
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image18.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image18.png)
 
 Next, there are two ways to initialize and configure models:
 
@@ -320,7 +320,7 @@ Next, there are two ways to initialize and configure models:
 
 If you choose CCR UI, you will see an interface similar to this:
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image19.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image19.png)
 
 At this point, click the "Add Provider" button to see the following interface. You need to:
 
@@ -332,21 +332,21 @@ At this point, click the "Add Provider" button to see the following interface. Y
 
 (If you scroll downward there are many advanced options, but you can ignore them for now.)
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image20.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image20.png)
 
 Here are configuration examples for DeepSeek and Kimi:
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image21.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image21.png)
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image22.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image22.png)
 
 After saving model configuration, you also need to specify the default model in the Router area on the right. Select from the dropdown and set it to `kimi` (recommended), then click `Save and Restart` in the top-right corner.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image23.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image23.png)
 
 After that, simply run `ccr code` in terminal to start Claude Code workflow through Claude Code Router.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image24.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image24.png)
 
 :::
 
@@ -418,7 +418,7 @@ If you are curious why Claude Code performs better than Trae or Cursor agent too
 
 The overall implementation style of other CLI AI coding tools is broadly similar.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image25.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image25.png)
 
 Claude Code decomposes coding tasks into a continuous "perceive - think - act - verify" loop and invokes different tools in the loop to complete work. It imitates human developer workflow: continuously "write code -> run -> inspect result -> improve again." Internally, a main task loop continuously executes steps. In each cycle, Claude can call different tools, such as reading/writing files, executing commands, and searching code, then decide next actions based on real tool outputs.
 
@@ -431,9 +431,9 @@ Several key characteristics are worth noting:
 
 ### Codex
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image26.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image26.png)
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image27.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image27.png)
 
 Similar to Claude Code, Codex is an AI collaborative coding tool developed by OpenAI. You can think of it as the "OpenAI version of Claude Code." Its biggest advantage is efficient adaptation to GPT-5.
 
@@ -449,9 +449,9 @@ npm i -g @openai/codex
 
 If you directly use the official OpenAI entry for Codex, setup is very simple. Once you have OpenAI subscription access or corresponding API quota, you only need to run `codex` in command line and follow the prompts to complete login.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image28.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image28.png)
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image29.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image29.png)
 
 #### Use Relayed OpenAI API as the Backend
 
@@ -466,7 +466,7 @@ One thing to note: after obtaining token quota, we still need to configure the A
 
 In key-group settings, make sure you choose the item specifically for Codex.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image30.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image30.png)
 
 Next, we need to fill the key you obtained into the prompt below, then give the entire prompt to Trae so it can complete the whole configuration process for you:
 
@@ -519,15 +519,15 @@ After configuration, you can launch Codex with relayed API through `codex --prof
 
 ### OpenCode
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image32.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image32.png)
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image33.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image33.png)
 
 OpenCode is an open-source AI coding agent platform for developers, positioned like a "multi-model version of Claude Code." It uses the terminal as the core interaction entry, while also supporting editor integrations (such as VS Code and Neovim). It can deeply connect with local repositories and complete an end-to-end workflow through natural language, from code understanding to engineering execution.
 
 It is not bound to one single model. Instead, it is an open platform where you can switch freely among GPT, Claude, Gemini, and even local models. OpenAI itself also supports connecting Codex/OpenAI subscription access through OpenCode.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image34.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image34.png)
 
 You can install OpenCode with the following commands:
 
@@ -543,7 +543,7 @@ npm i -g opencode-ai
 
 OpenCode periodically provides free models, and setup is very simple. In any folder where you want to use OpenCode, run `opencode` in terminal to open the chat panel. Then use `/models` and search for the keyword `free` to find models marked as free.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image35.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image35.png)
 
 In most cases, free models are slower than paid/subscription models for coding tasks. This usually depends on route congestion, peak usage hours, and the model's own capability.
 
@@ -553,27 +553,27 @@ This is OpenCode's core advantage: with the same MCP, Skills, and context, you c
 
 In OpenCode chat, enter `/connect`, select the first relevant command, and press Enter to choose third-party provider authentication.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image36.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image36.png)
 
 Here we use OpenAI as an example and press Enter to choose an authentication method.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image37.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image37.png)
 
 Either option works; the only difference is the auth flow. Here we choose browser login.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image38.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image38.png)
 
 Copy the link to your browser and complete normal OpenAI login. After "Authorization Successful" appears in the browser, OpenCode will automatically move to the OpenAI model selection screen.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image39.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image39.png)
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image40.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image40.png)
 
 #### Install the Oh My OpenAgent Plugin
 
 Another strength of OpenCode is its active community ecosystem. You can find many OpenCode-related plugins on GitHub. If OpenCode is a model-switchable AI collaboration tool, then Oh-My-OpenAgent is a "multi-agent AI coding orchestration system" running on top of OpenCode. It can split a complex task into sub-tasks and assign them to different models for specialized execution.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image41.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image41.png)
 
 You can copy the following prompt and send it to the model you already configured in OpenCode to install Oh My OpenAgent:
 
@@ -774,7 +774,7 @@ If I want to run my own local Dify, I only need to throw this link to Claude Cod
 
 After receiving your request, Claude Code will automatically complete a series of operations, including pulling code from GitHub, configuring runtime environments, and starting the project. If any step fails or startup status is abnormal, you only need minor manual handling based on prompts. Beyond Dify, you can also ask Claude Code to deploy most common open-source GitHub projects for you. You just need one chat box and the time to drink a cup of coffee ☕️.
 
-![](/zh-cn/stage-2/backend/modern-cli/images/image31.png)
+![](../../../../vi-vn/stage-2/backend/modern-cli/images/image31.png)
 
 ### Explain Code and Write Documentation
 

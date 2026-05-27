@@ -419,7 +419,7 @@ Used for E2E testing.
 
 ## Common MCP servers
 
-> 💡 For the complete MCP server list, please refer to the appendix: [MCP Server Directory](/zh-cn/appendix/mcp-servers/)
+> 💡 For the complete MCP server list, please refer to the appendix: [MCP Server Directory](../../../../vi-vn/appendix/mcp-servers/)
 
 ### GitHub server
 
@@ -541,7 +541,7 @@ Used for E2E testing.
 - [Beginner-friendly MCP server practical guide in both TypeScript and Python](https://m.blog.csdn.net/ztt123654/article/details/150844207)
 - [Ultimate MCP server building guide: complete TypeScript and Python tutorials](https://m.blog.csdn.net/gitblog_00703/article/details/154862128)
 - [Build the simplest MCP server with TypeScript](https://m.blog.csdn.net/weixin_45653525/article/details/148433757)
-- [Generate a TypeScript MCP server using Azure container applications](https://learn.microsoft.com/zh-cn/azure/developer/ai/build-mcp-server-ts)
+- [Generate a TypeScript MCP server using Azure container applications](https://learn.microsoft.com/vi-vn/azure/developer/ai/build-mcp-server-ts)
 
 ### MCP server resources
 
@@ -568,4 +568,4 @@ Used for E2E testing.
 ### Real-world application cases
 
 - [BlenderMCP - AI-driven 3D modeling](https://github.com/Belthur/blender-mcp) - 4,100+ ⭐
-- [15 best practices for MCP in production](https://learn.microsoft.com/zh-cn/azure/azure-functions/scenario-mcp-apps)
+- [15 best practices for MCP in production](https://learn.microsoft.com/vi-vn/azure/azure-functions/scenario-mcp-apps)

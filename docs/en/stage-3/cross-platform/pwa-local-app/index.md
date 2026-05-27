@@ -35,7 +35,7 @@ An ordinary website needs to download HTML, CSS, and JS files from the server ev
 
 **One-sentence summary**: a PWA is "a webpage that can store its own files" - it has the lightness of a website (no installation required, auto-updating) and the experience of a native app (offline support, installable to desktop/home screen).
 
-<!-- ![](../../../../zh-cn/stage-3/cross-platform/pwa-local-app/images/image1.png) -->
+<!-- ![](../../../../vi-vn/stage-3/cross-platform/pwa-local-app/images/image1.png) -->
 
 ## 1.2 Why Choose PWA?
 

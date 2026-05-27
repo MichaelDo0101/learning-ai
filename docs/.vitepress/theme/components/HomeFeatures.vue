@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRouter, withBase, useData } from 'vitepress'
-import GitHubStars from './GitHubStars.vue'
 import VibeStories from './VibeStories.vue'
 import { provide } from 'vue'
 import { i18n } from './home/HomeI18n'
@@ -28,31 +27,24 @@ const WELCOME_SEEN_KEY = 'easy-vibe-welcome-seen'
 const vibeStoriesSection = ref(null)
 
 const t = computed(() => {
-  const code = lang.value ? lang.value.toLowerCase() : 'zh-cn'
-  const result = i18n[code] || i18n['en']
+  const code = lang.value ? lang.value.toLowerCase() : 'vi-vn'
+  const result = i18n[code] || i18n['vi-vn'] || i18n['en']
   result._locale = code
   return result
 })
 
 provide('t', t)
 
-const isCjkLocale = computed(() => {
-  const code = lang.value ? lang.value.toLowerCase() : ''
-  if (['zh-cn', 'zh-tw', 'ja-jp', 'ko-kr'].includes(code)) {
-    return true
-  }
-  const path = router.route.path.toLowerCase()
-  return /^\/(zh-cn|zh-tw|ja-jp|ko-kr)\//.test(path)
-})
+const isCjkLocale = computed(() => false)
 
 const topPromo = computed(() => {
-  const code = lang.value ? lang.value.toLowerCase() : 'en'
-  const isChinese = code === 'zh-cn' || code === 'zh-tw'
+  const code = lang.value ? lang.value.toLowerCase() : 'vi-vn'
+  const isVietnamese = code === 'vi-vn'
   return {
-    text: isChinese
-      ? '用 Easy-Vibe 构建你的第一个 AI 应用，最快当天可上线原型。'
-      : 'Build your first AI app with Easy-Vibe and ship a working prototype fast.',
-    cta: isChinese ? '开始学习 ›' : 'Start learning ›',
+    text: isVietnamese
+      ? 'Dùng Học AI xây ứng dụng AI đầu tay — có thể đẩy prototype lên trong ngày.'
+      : 'Build your first AI app with Học AI and ship a working prototype fast.',
+    cta: isVietnamese ? 'Bắt đầu học ›' : 'Start learning ›',
     link: `/${code}/stage-1/learning-map/`
   }
 })
@@ -337,7 +329,7 @@ onUnmounted(() => {
               class="nav-link-item"
               @click="scrollTo('vibe-stories')"
             >
-              {{ t.nav.stories || 'Vibe 故事' }}
+              {{ t.nav.stories || 'Vibe Stories' }}
             </button>
             <button
               :class="{ active: activeTab === 'pm' }"
@@ -398,7 +390,6 @@ onUnmounted(() => {
                   </button>
                 </div>
               </div>
-              <GitHubStars class="nav-github-stars" />
             </div>
             <a
               class="buy-btn"

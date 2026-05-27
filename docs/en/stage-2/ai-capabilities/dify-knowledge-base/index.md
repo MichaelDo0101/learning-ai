@@ -45,7 +45,7 @@ To upgrade AI from chat companion to digital employee, we need to give it three 
 
 This is the prototype of an AI Agent: an automation unit with goals, knowledge, tools, and an execution path.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image1.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image1.png)
 
 > Note: In current industry usage, "simple agents" usually mean enhanced applications built from LLM + tools + knowledge base, not fully autonomous planning agents. Even though these simple agents do not have true long-horizon reasoning and planning, they are already enough for many enterprise automation scenarios. We will introduce truly autonomous agents in later chapters.
 
@@ -63,7 +63,7 @@ One solution is Retrieval-Augmented Generation (RAG).
 
 The core RAG idea is: when a user asks a question, the system first retrieves the most semantically relevant text chunks from enterprise knowledge (for example, one paragraph from a product manual, one policy clause from HR docs), then injects these chunks into model context so the answer is generated based on real source material.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image2.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image2.png)
 
 Image source: [https://www.datacamp.com/blog/what-is-retrieval-augmented-generation-rag](https://www.datacamp.com/blog/what-is-retrieval-augmented-generation-rag)
 
@@ -71,7 +71,7 @@ This means responses no longer rely only on generalized training knowledge. They
 
 In real business, this is especially important because models can hallucinate. For example, if you ask for concrete metrics as a CFO or consultant, a model may fabricate dates and events. With RAG, controllability and reliability improve significantly.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image3.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image3.png)
 
 Image source: [https://www.databricks.com/glossary/retrieval-augmented-generation-rag](https://www.databricks.com/glossary/retrieval-augmented-generation-rag)
 
@@ -99,7 +99,7 @@ If we rely only on a single LLM to reason freely, it is hard to execute the enti
 
 This leads to a higher-level AI application pattern: AI Workflow.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image4.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image4.png)
 
 Workflow means decomposing a complex task into ordered, configurable, automatically executable sub-steps, then orchestrating logic between steps (conditionals, loops, parallelism) visually or via code. Turning AI capability into SOP means solidifying "how AI completes this task" into reusable templates.
 
@@ -109,7 +109,7 @@ AI workflow users are broad. Product managers can design full interaction flows 
 
 Also note that AI workflows are usually described by an intermediate representation. Platform specifics differ, but most use structured files (JSON, YAML, etc.) to define node types, inputs/outputs, and execution logic, as shown below:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image5.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image5.png)
 
 In short, if agents let AI move from "can chat" to "can do," workflows let AI move from "occasionally complete one task" to "stably, reliably, and at scale complete a class of tasks." In the following practice, we will build a full AI workflow on Dify and experience the full path from idea to runnable app.
 
@@ -142,11 +142,11 @@ All three support exposing built agents as standardized APIs, enabling seamless 
 
 Dify is positioned as an LLM application development and operations platform, focused on full lifecycle management from idea to deployment to optimization. Its core is a low-code platform helping developers and non-technical innovators rapidly build production-grade AI applications.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image6.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image6.png)
 
 Feature-wise, Dify includes visual workflow orchestration, agent building, knowledge-base management, and multi-model support. You can design complex processes by dragging nodes and create intent-based agents. Its knowledge-base capability can process many document formats and support efficient vector retrieval. Dify supports GPT, Claude, and many open-source models, and can publish apps as standard APIs with one click.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image7.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image7.png)
 
 Architecturally, Dify emphasizes open source and private deployment, with flexibility, extensibility, and enterprise compliance. Typical users include developer teams and business innovators. Typical use cases include enterprise knowledge QA/customer support, content automation, vertical AI assistants, and enterprise AI middle platforms.
 
@@ -154,11 +154,11 @@ Architecturally, Dify emphasizes open source and private deployment, with flexib
 
 Coze is ByteDance's AI agent platform. Its core value is extreme usability, allowing users with no programming background to create, debug, and publish rich AI chatbots.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image8.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image8.png)
 
 Its core interaction is "building blocks." Users can configure bot roles and knowledge bases via UI, and use rich built-in plugin libraries for external capabilities such as news, travel, and image generation. Built bots can be published with one click to Doubao, Feishu, WeChat Official Account, and other channels.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image9.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image9.png)
 
 Its architecture is designed around low-threshold usage, integrating ByteDance models behind cloud services and abstracting complex flow details, with emphasis on multimodal understanding and real-time responses. Private deployment capability is relatively limited. Typical scenarios include personal assistant and entertainment bots, customer QA systems, online learning assistants, and rapid prototyping.
 
@@ -168,7 +168,7 @@ n8n is a general-purpose programmable workflow automation platform. Its core pos
 
 It supports hundreds of SaaS services, databases, and protocols through a large integration-node ecosystem, and combines visual design with code: you can drag nodes on canvas while injecting JavaScript/Python for custom logic. n8n is strong in backend, data-intensive workflows such as sync, ETL, and API orchestration.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image10.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image10.png)
 
 Its key technical characteristic is visible source code and self-hosting, allowing full control of data and environment. This is especially attractive for industries with strict data-security requirements. Main users are developers, technical operators, and data analysts. n8n's biggest strength is its powerful community ecosystem: rich online tutorials and shared templates lower learning cost. It also connects to global ecosystems such as YouTube and Instagram, helping users break cross-platform data/service barriers.
 
@@ -188,7 +188,7 @@ We already covered basic Dify introduction earlier. For more details, visit [htt
 
 Dify is an open-source platform for developing LLM applications. It provides an intuitive interface that combines agent workflows, RAG pipelines, tool capabilities, model management, and observability, helping you move quickly from prototype to production.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image11.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image11.png)
 
 In Dify, you can combine large models and many tools to build a "workflow." A workflow is a business-logic chain that automates operations you would otherwise do manually step by step, such as data retrieval, LLM calls, web search, result filtering, and format organization. Without workflows, you repeatedly copy/paste similar prompts, which is inefficient, error-prone, and hard to reuse in real business.
 
@@ -203,7 +203,7 @@ For example, if you run an Amazon or Douyin e-commerce store and want an AI cust
 5. Condition node: checks whether response includes clear warranty period terms (for example "1 year" or "3 years"). If yes, continue; if no, return "please provide product model."
 6. Output node (`ANSWER`): returns final answer and logs this consultation into a table automatically.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image12.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image12.png)
 
 In this process, you do not manually browse docs, repeatedly tune outputs, or separately log data. The workflow chains it all automatically. It is also flexible: if later you add a new rule like "when user asks warranty coverage, query another KB," just add one conditional node instead of rebuilding the system.
 
@@ -216,7 +216,7 @@ This part was originally scheduled for later lessons. Because some learners curr
 You need to reference this tutorial for basic web deployment platform usage:
 [How to Deploy a Web Application](/en/stage-2/backend/zeabur-deployment/)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image13.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image13.png)
 
 Learn how to deploy your own Dify on Zeabur. After deployment, register and log in via your deployment URL, then continue with the steps below.
 
@@ -226,21 +226,21 @@ Note: different Dify versions may have small UI/operation differences, but overa
 
 Visit Dify home page [https://cloud.dify.ai/apps](https://cloud.dify.ai/apps), register and log in, then choose Studio. You will see an interface similar to:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image14.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image14.png)
 
 Find `CREATE APP` on the left and click `Create from Blank`.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image15.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image15.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image16.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image16.png)
 
 In APP Type, choose Chatbot (if not visible at first, click "see more types" and find it in full list). Then fill app name and description and click create.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image17.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image17.png)
 
 After creation, you will see an interface like this:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image18.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image18.png)
 
 The middle "INSTRUCTIONS" area means built-in instructions (default/system prompt).
 
@@ -250,11 +250,11 @@ The right panel is the debug window where you can test interactions in real time
 
 You can type your own role prompt in INSTRUCTIONS, or click Generate to let the model draft one.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image19.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image19.png)
 
 Note the top-right model choices: you can switch different models and compare differences in tone, reasoning, and long-context handling to pick what best fits your needs.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image20.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image20.png)
 
 ## 2.3 Support Custom Model Providers
 
@@ -269,45 +269,45 @@ Detailed steps:
    2. https://marketplace.dify.ai/plugins/langgenius/siliconflow
 2. If you self-hosted Dify, go to plugin marketplace in system settings and install there.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image21.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image21.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image22.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image22.png)
 
 After entering plugin marketplace, search plugin names directly.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image23.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image23.png)
 
 3. After installation, configure model providers. In settings -> model providers, you can see all currently supported providers:
-   ![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image24.png)
+   ![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image24.png)
 4. Before use, complete model config first. For OpenAI-API-compatible plugin, click "Add Model" and configure any model. In "Model Type," select whether it is LLM or Embedding, and ensure type is correct.
    You need model name, endpoint URL, and API key to enable it. If this feels cumbersome initially, you can skip to SiliconFlow key setup or install OpenRouter plugin for easier provider support (ensure your provider account has remaining quota).
 
-   ![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image25.png)
+   ![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image25.png)
 
    For `SiliconFlow`, just click Setup and configure key to use Embedding/Rerank for testing. You can click "Get your API Key from SiliconFlow" to obtain credentials.
 
-   ![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image26.png)
+   ![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image26.png)
 
 5. After configuration, open model list to inspect supported models. Basic model setup is now complete.
-   ![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image27.png)
+   ![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image27.png)
 
    It supports most common Embedding and Rerank models:
 
-   ![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image28.png)
+   ![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image28.png)
 
    If you want to modify Dify's default model set, click `System Model Settings` and update defaults.
 
-   ![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image29.png)
+   ![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image29.png)
 
 ## 2.4 Create Your First Dify Knowledge Base
 
 At this point, we created a basic agent, but it still lacks a knowledge base. Click `Knowledge` in the top menu to enter knowledge-base creation.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image30.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image30.png)
 
 Then click `Create Knowledge` on the left to create your first knowledge base.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image31.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image31.png)
 
 On this page, you can upload many file types (PDF, TXT, etc.) to build knowledge. You can upload long text or copy Wikipedia content into TXT and upload. In this example we upload an Elon Musk Wikipedia TXT file.
 
@@ -317,7 +317,7 @@ First in **General** settings, this is the "text chunking rules" area. Because l
 
 You can also adjust **Chunk overlap**. It controls whether adjacent chunks preserve overlapping content. Proper overlap helps avoid splitting critical information across chunks in a way that harms comprehension.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image32.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image32.png)
 
 There is also **Chunk using Q&A format in English**. When enabled, the system uses LLM to convert part of knowledge into Q&A format before storage, which can significantly improve retrieval in some scenarios.
 
@@ -329,7 +329,7 @@ Simple explanation: Embedding models convert unstructured data (text, images, et
 
 Embedding choice significantly affects retrieval quality (accuracy, latency, etc.). Here we recommend starting with Qwen 0.6B Embedding. You can switch to 4B or 8B and compare parameter-scale impact.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image33.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image33.png)
 
 You will also see **Rerank model**, default **Jina-rerank-m0**. (If you are outside campus environment, you may see missing Rerank model errors. In that case configure rerank model in model provider settings first.)
 
@@ -337,33 +337,33 @@ Rerank's purpose is second-stage fine sorting over initial candidates, moving re
 
 Simple intuition: rerank solves "first-stage retrieval not refined enough." Search engines may retrieve 1000 potential pages by simple rules, then rerank top 10 for page one. Recommenders work similarly: from 500 possible items, rerank promotes most likely conversions.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image34.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image34.png)
 
 After settings are complete, click **Save & Process** to start vectorization. Embedding models transform chunked text into vectors at this stage.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image35.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image35.png)
 
 After processing finishes, click **Go to document** to inspect processed/stored KB content.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image36.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image36.png)
 
 Click KB name directly to view each chunk detail.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image37.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image37.png)
 
 You can precisely edit or delete unsuitable chunks here.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image38.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image38.png)
 
 In left sidebar, choose **Retrieval Testing** to test recall and verify retrieval quality. Each test returns several highest-similarity chunks.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image39.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image39.png)
 
 If you want more retrieved chunks, click `VECTOR SEARCH` settings:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image40.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image40.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image41.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image41.png)
 
 Top K means number of most similar text chunks returned from vector search. Current value 3 means top 3 chunks are returned.
 
@@ -371,15 +371,15 @@ Score Threshold is a minimum score filter: only chunks with similarity score >= 
 
 Now KB setup is complete. Next, click top menu "studio," find the agent we created earlier, and connect this KB.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image42.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image42.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image43.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image43.png)
 
 In each chat round, you can now see cited knowledge sources in the response. Click entries to inspect retrieved text chunks.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image44.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image44.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image45.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image45.png)
 
 ## 2.5 More Common Dify Operations
 
@@ -391,11 +391,11 @@ Remember intermediate representation mentioned earlier? Dify supports importing/
 
 In practice, you can find import entry on workflow workspace:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image46.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image46.png)
 
 For export, click the lower-right corner of a workflow block to find export action:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image47.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image47.png)
 
 Using DSL makes migration/sharing of complex workflows across Dify instances straightforward.
 
@@ -403,7 +403,7 @@ Using DSL makes migration/sharing of complex workflows across Dify instances str
 
 If your own workflow feels too simple, Dify provides rich sample projects for learning more advanced application construction. These examples cover many business scenarios. Click Explore to view workflows built by others.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image48.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image48.png)
 
 ## 2.6 Create Your First Dify Workflow App
 
@@ -411,9 +411,9 @@ After starting with chatbot-style agents, we now build more complex business wor
 
 You can create from blank or from templates. Here we demonstrate creating from blank:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image49.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image49.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image50.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image50.png)
 
 Here you will see Chatflow and Workflow. How do you choose? Decide based on whether your core need is continuous conversation or task pipeline execution.
 
@@ -432,7 +432,7 @@ If first three are yes, Chatflow is ideal (customer support, tutoring, creative 
 
 Here we choose Chatflow for demonstration and enter workspace:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image51.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image51.png)
 
 Quick interface tour: the center canvas is where you visually build app logic. A basic workflow usually starts at `START` (input), passes data through links into `LLM`, and outputs through `ANSWER`. Each node is a function module; links determine execution order.
 
@@ -448,19 +448,19 @@ Dify provides many node types. First understand each node's role. For practical 
 
 Right-click canvas and choose `Add Node`, or inspect all available nodes from side panel:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image52.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image52.png)
 
 You can also open tool selection panel to view callable tool categories:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image53.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image53.png)
 
 Below is a brief intro to common nodes/tools. You do not need to master all at once. Keep a basic mental map and learn progressively in practice.
 
 1. LLM and reasoning nodes
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image54.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image54.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image55.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image55.png)
 
 These nodes are core processing components:
 
@@ -472,7 +472,7 @@ These nodes are core processing components:
 
 2. Logic and flow-control nodes
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image56.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image56.png)
 
 These nodes define execution path/rules:
 
@@ -482,7 +482,7 @@ These nodes define execution path/rules:
 
 3. Data operation and integration nodes
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image57.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image57.png)
 
 - Code node: executes custom logic for data transform, complex computation, etc. Focus on syntax correctness and runtime compatibility.
 - Template node: fills dynamic data into templates (custom copy/report skeleton). Focus on template syntax and variable mapping.
@@ -495,7 +495,7 @@ These nodes define execution path/rules:
 
 ### 2.6.2 Common Tools
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image58.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image58.png)
 
 In Dify, most tools can be used directly as canvas nodes and connected like other nodes. As long as your input matches expected parameters, the tool runs and outputs results for downstream processing.
 
@@ -563,15 +563,15 @@ Now define node architecture. Beginners often do not know what nodes to use (and
 
 In this tutorial we choose Workflow (not Chatflow). Select User Input:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image59.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image59.png)
 
 Then click Start -> User Input and define a string variable `user_text` as global flow input source.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image60.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image60.png)
 
 Save and click Test Run (top right). You will be prompted to provide test text.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image61.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image61.png)
 
 Next click `+` after input node and add Question Classifier. Configure four labels, each with clear description and examples:
 
@@ -589,13 +589,13 @@ If complaint is minor and primary intent is ordering, classify as buy_food.
 If truly hard to determine, use other as fallback.
 ```
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image62.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image62.png)
 
 After setup, use top-right play icon on this node to test classification.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image63.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image63.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image64.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image64.png)
 
 From OUTPUT we can see classification is accurate. Test multiple input types to verify classifier stability.
 
@@ -633,11 +633,11 @@ Important: in each node, after setting SYSTEM prompt, enable USER prompt variabl
 
 As always, click node-level play icon to test with sample input such as "I want bubble milk tea" and verify behavior.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image65.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image65.png)
 
 Next process parallel branch outputs. In `Variable Aggregator`, find `ASSIGN VARIABLES` and add branch outputs one by one.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image66.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image66.png)
 
 Now aggregate final output including user input, intent, and reply. Because this is Workflow (not Chatflow), there is no Answer node for this exact structure, so we can use Template node for equivalent output packaging. In variable area specify intent result, user input, and aggregator final reply. In CODE, write final JSON template:
 
@@ -653,11 +653,11 @@ Now aggregate final output including user input, intent, and reply. Because this
 }
 ```
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image67.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image67.png)
 
 Finally add Output node and all setup is complete.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image68.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image68.png)
 
 #### Workflow Runtime Testing
 
@@ -680,7 +680,7 @@ Done. Now run this workflow and observe distinct behavior for different inputs:
 
 After running in Test Run, you can inspect full execution path. It should follow correct branch and output expected final result. Full flow complete.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image69.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image69.png)
 
 ## 2.7 Run Your First Template Workflow App
 
@@ -688,33 +688,33 @@ After the simple classification workflow, next learn how to run workflows create
 
 After importing, first run directly. Then fix each error step by step based on failing node and cause. If stuck, screenshot and ask a model for debugging help.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image70.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image70.png)
 
 At first glance it may feel complex. That is okay. Click `Preview` on top right and run until first error appears:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image71.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image71.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image72.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image72.png)
 
 Troubleshoot the failing node. In this case Tavily API token was missing. Tavily Search is an AI-native search API providing real-time accurate factual results. Follow prompt to configure:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image73.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image73.png)
 
 After fixing it, search engine works normally:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image74.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image74.png)
 
 Then fix model-call issues as needed. You should be able to get results like this with model-understood synthesis:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image75.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image75.png)
 
 At the end, you can inspect referenced source links:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image76.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image76.png)
 
 If you want to understand each step deeply, best method is saving each node output into intermediate variables and printing all variables at final output. Another way: open `Process` view at top and inspect detailed per-step execution.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image77.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image77.png)
 
 ## 2.8 Use Dify as an API Provider
 
@@ -729,15 +729,15 @@ If you are not familiar with IDE concepts, read:
 
 If your local environment is not fully configured, do not worry. If you trust your coding assistant (whether [z.ai](http://z.ai) or Trae), you can directly send any issue/errors and it will provide resolution guidance.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image78.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image78.png)
 
 The right panel is Copilot/Agent interaction window. If not visible, click top-right sidebar icon to open.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image79.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image79.png)
 
 After opening sidebar, you will see `Builder` option. This is Agent mode. You can roughly treat "Builder" as the "development mode" of [z.ai](http://z.ai): it can help with local environment operations, dependency installs, opening webpages, etc.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image80.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image80.png)
 
 Inside Builder, there are "Chat" mode and "Builder with MCP" mode.
 Chat mode mainly interacts with current folder and natural-language model chat.
@@ -745,11 +745,11 @@ Chat mode mainly interacts with current folder and natural-language model chat.
 
 Builder with MCP gives Agent more tools (for example connecting to other software, retrieving weather, etc.). You can treat MCP as a capability layer that makes external tool invocation easier for models.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image81.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image81.png)
 
 At the bottom, there is model selection dropdown. You can choose Kimi k2 or GLM. In international Trae, you can select ChatGPT or Claude as well. With fast progress of domestic models, Kimi/Qwen/GLM are now close to Claude 3.5/3.7 for daily dev scenarios.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image82.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image82.png)
 
 That is a brief Trae intro. Next we reuse operational ideas from [z.ai](http://z.ai) inside Trae.
 
@@ -759,25 +759,25 @@ To build a frontend chat app with Dify API, first obtain Dify API docs and endpo
 
 Remember the agent we created? Click top-right `Publish`, then `Publish Update`, then `Access API Reference`.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image83.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image83.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image84.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image84.png)
 
 In API docs, find `Send Chat Message`, open it, then copy `Request` and `Response` examples on the right.
 
 Why copy these two parts? Because they are core API information. With key + request example + response example, you can ask model to generate invocation code and parse required fields from returned structure.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image85.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image85.png)
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image86.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image86.png)
 
 After finding request/response examples, you also need API key. In top-right docs area, find `API key` options.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image87.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image87.png)
 
 Click `Create new Secret key` to create your own key.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image88.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image88.png)
 
 Now everything is ready. Send API key + request example + response example to Trae Builder.
 
@@ -847,25 +847,25 @@ curl -X POST 'http://{DIFY_API_URL}/v1/chat-messages' \
 }
 ```
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image89.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image89.png)
 
 At this stage, generated code may not run perfectly in one shot. You may see strange errors or no responses. If that happens, switch model or copy full error details and ask model to iterate based on feedback.
 
 This working style is already close to real development. In daily collaboration with models, you often need to provide more context to solve issues. Besides error messages, you can copy more doc context (for example from "Send message" docs section) and send together for higher-quality fixes.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image90.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image90.png)
 
 The browser is embedded inside Trae. Click the compass icon at top to open full screen in external browser.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image91.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image91.png)
 
 If you are lucky, first attempt may already yield a functional interactive frontend page.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image92.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image92.png)
 
 Because LLMs are stochastic, a single round may work while multi-turn chat fails. So always do multi-round testing to verify stability in conversational scenarios.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image93.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image93.png)
 
 At this point, you can build a simple Dify knowledge-base agent and use Trae (instead of [z.ai](http://z.ai)) to build an interactive frontend. From now on, Trae will become our primary prototyping tool, gradually replacing [z.ai](http://z.ai). You can try re-implementing the snake game in Trae and compare the experience. Keep going.
 
@@ -959,19 +959,19 @@ In this challenge, make workflow support:
 - Provide a second attempt when password is wrong (no third attempt).
 - When user asks to log in again, allow password re-entry.
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image94.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image94.png)
 
 Reference input/output:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image95.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image95.png)
 
 3. `Love loop workflow` decryption challenge:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image96.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image96.png)
 
 Fix current workflow issues so final output looks similar to:
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image97.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image97.png)
 
 If you cannot solve a problem, screenshot and ask a model, or check official docs:
 [https://docs.dify.ai/en/use-dify/getting-started/quick-start](https://docs.dify.ai/en/use-dify/getting-started/quick-start)
@@ -998,7 +998,7 @@ Only refer to this section if you encounter the issue shown below. Otherwise you
 
 Sometimes you deploy Dify on your own server where public endpoint is HTTP (not HTTPS). If you request an HTTP-only service, you may see errors like this (enable browser F12 debug info to inspect):
 
-![](/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image98.png)
+![](../../../../vi-vn/stage-2/ai-capabilities/dify-knowledge-base/images/image98.png)
 
 Root cause: Dify is deployed on a server that supports HTTP but not HTTPS.
 HTTPS (HyperText Transfer Protocol Secure) adds SSL/TLS encryption over HTTP, basically a more secure HTTP.

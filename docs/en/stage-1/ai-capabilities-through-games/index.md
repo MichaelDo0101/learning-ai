@@ -130,7 +130,7 @@ Now, with AI coding platforms, you only need to:
 This "conversation as programming" paradigm changes coding from "writing instructions" to "describing requirements". You don't need to care about low-level technical details; just clearly state what you want. This is the new programming paradigm of the AI era—**Vibe Coding**.
 :::
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.png)
+![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.png)
 
 Input our simple requirement and click the **Full-stack Development** button. You can watch the webpage being built in real time. Usually, it takes just the time to brew a coffee!
 
@@ -143,17 +143,17 @@ Help me create a Snake game:
 5. The UI should be clean and elegant
 ```
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.png)
+![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.png)
 
 Once generated, you will see a browsable webpage UI on the right. Scroll around or click the 🧭 button at the top to view it in full screen.
 
 > The buttons at the top from left to right are: Arrow button expands chat history, Pencil button to start a new chat, Refresh icon to rebuild the page, Compass icon to toggle fullscreen, Download button to download the project, <> button to view code, and Publish button to publish it.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.png)
+![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.png)
 
 If you'd like to check the webpage's source code, click the code icon in the top right to view the entire codebase.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image7.png)
+![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/image7.png)
 
 ::: tip 🌐 Explore More AI Programming Tools
 
@@ -230,23 +230,23 @@ You can simply provide these prompts:
 
 > **💡 Example Prompt:** Build me a Snake game.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.png)
+> ![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/image12.png)
 
 > **💡 Example Prompt:** Build me a Snake game that supports:
 > 1. Eating different words and placing them in a collection box.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.png)
+> ![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/image13.png)
 
 > **💡 Example Prompt:** Build a Snake game that supports:
 > 1. I can eat distinct words, collected in a box.
 > 2. When eating 8 words, the LLM generates a poem using them.
 > 3. An image generation API is called right after the poem is composed.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.png)
+> ![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/image14.png)
 
 If you face any issues, just screenshot the error or tell the bot what's wrong and it will iterate the changes.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.png)
+![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/image15.png)
 
 ### 3.2 Add New Features to the Game
 
@@ -293,19 +293,19 @@ As the snake grows, the LLM generates a continuous story-poem, and the image mod
 
 Additionally, we can also ask the LLM to generate project-level prompts for you directly. In the previous section, we only wrote the Snake game prompt ourselves. Now let's try having the LLM generate a prompt with an overall framework and implementation path (you can generate it directly with z.ai).
 
-If you want to learn how to write better prompts, check out the [Prompt Engineering Appendix](/zh-cn/appendix/8-artificial-intelligence/prompt-engineering).
+If you want to learn how to write better prompts, check out the [Prompt Engineering Appendix](../../../vi-vn/appendix/8-artificial-intelligence/prompt-engineering).
 
 > I want AI to generate a web-based Snake game and need a more complete prompt to make the result more impressive and fun. Please generate the corresponding prompt. The current goal is: generate a Snake game that implements the function of eating different words to generate poetry, and should include an image generation module.
 
 z.ai's response will look like this:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.png)
+![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/image56.png)
 
 We can use this prompt to regenerate the project in full-stack development mode:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.png)
+![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/image57.png)
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.png)
+![](../../../vi-vn/stage-1/ai-capabilities-through-games/images/image58.png)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -632,13 +632,13 @@ After understanding frontend concepts, you can describe requirements to AI like 
 
 > "Use React to make a leaderboard page, with a score list on the right side. Clicking a row shows player details below. The style should be clean and modern."
 
-If you want to dive deeper into frontend fundamentals like HTML, CSS, and JavaScript, check out the [Web Basics Appendix](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive). To learn about the evolution of frontend technology, check out the [Frontend Evolution Appendix](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks).
+If you want to dive deeper into frontend fundamentals like HTML, CSS, and JavaScript, check out the [Web Basics Appendix](../../../vi-vn/appendix/3-browser-and-frontend/javascript-deep-dive). To learn about the evolution of frontend technology, check out the [Frontend Evolution Appendix](../../../vi-vn/appendix/3-browser-and-frontend/frontend-frameworks).
 
 ## <span id="appendix-2">[Appendix 2: What Exactly is Vibe Coding](#appendix-nav)</span>
 
 > 💡 What is Vibe Coding? Computer scientist [Andrej Karpathy](https://karpathy.ai/) (one of the co-founders of OpenAI, former head of AI at Tesla) coined the term **vibe coding** in February 2025. This concept refers to a coding methodology that relies on LLMs, **allowing programmers to generate working code by providing natural language descriptions instead of manually writing code.**
 
-![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.png)
+![1767350588191](../../../vi-vn/stage-1/ai-capabilities-through-games/images/1767350588191.png)
 
 Literally, Vibe Coding can be understood as a way of "developing by talking." The core change is: you no longer need to write code line by line, look up syntax, or debug yourself. Instead, you directly describe what you want in natural language, for example:
 

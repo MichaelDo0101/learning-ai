@@ -2,12 +2,10 @@
 import DefaultTheme from 'vitepress/theme'
 import { useData, useRoute, withBase } from 'vitepress'
 import TextType from './components/TextType.vue'
-import GitHubStars from './components/GitHubStars.vue'
 import PageSlidesButton from './components/PageSlidesButton.vue'
 import { onMounted, onBeforeUnmount, ref, watch, computed } from 'vue'
 import ReadingProgress from './components/ReadingProgress.vue'
 import { Setting } from '@element-plus/icons-vue'
-import easyVibePaths from './data/easyVibePaths.json'
 
 const { frontmatter } = useData()
 const route = useRoute()
@@ -412,7 +410,7 @@ watch(sidebarCollapsed, (collapsed) => {
       <button
         class="ev-sidebar-nav-btn"
         type="button"
-        :aria-label="sidebarCollapsed ? '展开目录' : '收起目录'"
+        :aria-label="sidebarCollapsed ? 'Mở mục lục' : 'Thu mục lục'"
         @click.stop.prevent="toggleSidebar"
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -426,7 +424,6 @@ watch(sidebarCollapsed, (collapsed) => {
       <CopyOrDownloadAsMarkdownButtons />
     </template>
     <template #nav-bar-content-after>
-      <GitHubStars />
       <ClientOnly>
         <PageSlidesButton />
       </ClientOnly>
@@ -440,7 +437,7 @@ watch(sidebarCollapsed, (collapsed) => {
             <button
               class="ev-fontsize-button"
               type="button"
-              aria-label="阅读设置"
+              aria-label="Cài đặt đọc"
               style="margin-left: 16px; padding: 0; width: 32px"
             >
               <el-icon :size="16">
@@ -452,7 +449,7 @@ watch(sidebarCollapsed, (collapsed) => {
             <div class="ev-setting-group">
               <div class="ev-setting-header">
                 <div class="ev-setting-title">
-                  字号
+                  Cỡ chữ
                 </div>
                 <div class="ev-setting-value">
                   {{ fontSize }}px
@@ -471,7 +468,7 @@ watch(sidebarCollapsed, (collapsed) => {
                   type="button"
                   @click="resetFontSize"
                 >
-                  默认
+                  Mặc định
                 </button>
                 <button
                   class="ev-fontsize-action"
@@ -492,7 +489,7 @@ watch(sidebarCollapsed, (collapsed) => {
             <div class="ev-setting-group">
               <div class="ev-setting-header">
                 <div class="ev-setting-title">
-                  行距
+                  Giãn dòng
                 </div>
                 <div class="ev-setting-value">
                   {{ lineHeight.toFixed(2) }}
@@ -504,21 +501,21 @@ watch(sidebarCollapsed, (collapsed) => {
                   type="button"
                   @click="resetLineHeight"
                 >
-                  默认
+                  Mặc định
                 </button>
                 <button
                   class="ev-fontsize-action"
                   type="button"
                   @click="lineHeight = clampLineHeight(lineHeight - 0.05)"
                 >
-                  更紧
+                  Hẹp hơn
                 </button>
                 <button
                   class="ev-fontsize-action"
                   type="button"
                   @click="lineHeight = clampLineHeight(lineHeight + 0.05)"
                 >
-                  更松
+                  Rộng hơn
                 </button>
               </div>
               <el-slider
@@ -537,34 +534,10 @@ watch(sidebarCollapsed, (collapsed) => {
         v-if="frontmatter.layout === 'home'"
         class="vp-home-wordmark"
         type="button"
-        aria-label="打开欢迎页"
+        aria-label="Mở trang chào mừng"
         @click="openWelcomeFromWordmark"
       >
-        <svg
-          viewBox="0 0 460 220"
-          class="vp-home-wordmark-svg"
-        >
-          <defs>
-            <linearGradient
-              id="home-hero-ocean"
-              x1="0"
-              y1="0"
-              x2="460"
-              y2="0"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0%" stop-color="#06b6d4" />
-              <stop offset="50%" stop-color="#0ea5e9" />
-              <stop offset="100%" stop-color="#3b82f6" />
-            </linearGradient>
-          </defs>
-          <path
-            v-for="(path, index) in easyVibePaths"
-            :key="index"
-            :d="path"
-            class="vp-home-wordmark-path"
-          />
-        </svg>
+        <span class="vp-home-wordmark-text">Learning AI Full A-Z</span>
       </button>
     </template>
     <template #home-hero-info-after>
@@ -602,7 +575,7 @@ watch(sidebarCollapsed, (collapsed) => {
         class="ev-sidebar-toggle-btn"
         :class="{ collapsed: sidebarCollapsed }"
         type="button"
-        :aria-label="sidebarCollapsed ? '展开目录' : '收起目录'"
+        :aria-label="sidebarCollapsed ? 'Mở mục lục' : 'Thu mục lục'"
         @click="toggleSidebar"
       >
         <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
@@ -683,14 +656,17 @@ watch(sidebarCollapsed, (collapsed) => {
   background: transparent;
   cursor: pointer;
 }
-.vp-home-wordmark-svg {
-  width: min(380px, 52vw);
-  height: auto;
-  filter: none;
-}
-.vp-home-wordmark-path {
-  fill: url(#home-hero-ocean);
-  stroke: none;
+.vp-home-wordmark-text {
+  font-size: clamp(36px, 7vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #06b6d4 0%, #0ea5e9 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  white-space: nowrap;
 }
 
 @media (min-width: 640px) {

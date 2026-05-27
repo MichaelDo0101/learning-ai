@@ -51,7 +51,7 @@ Models with vision capabilities are naturally suited to turning images into code
    - Match colors and font sizes as closely as possible
    ```
 
-![](/zh-cn/stage-2/frontend/design-to-code/images/image42.png)
+![](../../../../vi-vn/stage-2/frontend/design-to-code/images/image42.png)
 
 4. **Save the generated code**
    - Ask the model to return complete HTML
@@ -81,7 +81,7 @@ MasterGo also provides strong AI page generation features and can generate usabl
 
 In the top toolbar of the MasterGo editor, you can find the AI tool entry:
 
-![](/zh-cn/stage-2/frontend/design-to-code/images/image47.png)
+![](../../../../vi-vn/stage-2/frontend/design-to-code/images/image47.png)
 
 #### Generation flow
 
@@ -91,15 +91,15 @@ In the top toolbar of the MasterGo editor, you can find the AI tool entry:
 
 2. **Inspect the generated result**
 
-![](/zh-cn/stage-2/frontend/design-to-code/images/image48.png)
+![](../../../../vi-vn/stage-2/frontend/design-to-code/images/image48.png)
 
-![](/zh-cn/stage-2/frontend/design-to-code/images/image49.png)
+![](../../../../vi-vn/stage-2/frontend/design-to-code/images/image49.png)
 
 3. **Get the code**
    - Click the blue `Insert to canvas` button if you want to edit the result visually
    - Or click the `Code` button on the right to copy the implementation locally
 
-![](/zh-cn/stage-2/frontend/design-to-code/images/image50.png)
+![](../../../../vi-vn/stage-2/frontend/design-to-code/images/image50.png)
 
 ---
 
@@ -129,25 +129,25 @@ To use the full Figma Make experience, you usually need Figma Pro. Students can 
    - Upload the design you want to recreate
    - Add a prompt describing what you want
 
-![](/zh-cn/stage-2/frontend/design-to-code/images/image43.png)
+![](../../../../vi-vn/stage-2/frontend/design-to-code/images/image43.png)
 
 3. **Check the result**
    - After a short wait, you will see the rendered result
    - Click the play button in the upper right to preview it fullscreen
 
-![](/zh-cn/stage-2/frontend/design-to-code/images/image44.png)
+![](../../../../vi-vn/stage-2/frontend/design-to-code/images/image44.png)
 
 4. **Fine-tune the details**
    - Click the editor icon in the upper right
    - Go back into the familiar Figma editor and make detailed adjustments
 
-![](/zh-cn/stage-2/frontend/design-to-code/images/image45.png)
+![](../../../../vi-vn/stage-2/frontend/design-to-code/images/image45.png)
 
 5. **Export the code**
    - Once the result looks good, export the code
    - You can even connect it directly to GitHub
 
-![](/zh-cn/stage-2/frontend/design-to-code/images/image46.png)
+![](../../../../vi-vn/stage-2/frontend/design-to-code/images/image46.png)
 
 ### 3.2 Export code with plugins
 

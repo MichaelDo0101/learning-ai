@@ -8,7 +8,7 @@ Before we begin, let's clarify what deployment actually is.
 
 For any website to be visited by external users, it must have a publicly reachable network address. That can be an IP address such as `123.45.67.89`, or a domain such as [google.com](https://google.com/). But the address alone is not enough. Your code, such as HTML, CSS, JavaScript, or React/Vue projects, as well as images and video assets, must live on a server that stays online 24/7 and can answer incoming requests.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image1.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image1.png)
 
 Image source: https://www.hostinger.com/tutorials/what-is-cloud-hosting
 
@@ -20,7 +20,7 @@ If you deploy everything manually, a project usually involves many steps:
 
 1. **Prepare a server**
    You first need to buy or rent a cloud server from a provider such as Alibaba Cloud, Tencent Cloud, or AWS EC2. Then you choose its region, CPU, memory, and storage, and learn how to connect to it remotely, often through SSH.
-   ![](/zh-cn/stage-2/backend/zeabur-deployment/images/image2.png)
+   ![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image2.png)
 
 2. **Configure the runtime environment**
    Web apps only run under the correct environment. A Node.js project needs Node installed. A Python project needs Python and its dependencies. If the versions do not match, the app may fail to start.
@@ -28,7 +28,7 @@ If you deploy everything manually, a project usually involves many steps:
 3. **Upload your files**
    You need to move your local code and assets to the server, often via Git or file-transfer tools. Large projects can make this step frustrating if uploads break halfway through.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image3.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image3.png)
 
 4. **Start the service and test it**
    After upload, you need to start the app and check whether the assigned address works. If not, the problem may be a firewall-blocked port, or it may be an application bug. In that case, you need to inspect logs.
@@ -46,7 +46,7 @@ Platforms such as CloudBase, Vercel, Netlify, and Zeabur exist to eliminate much
 
 In many cases, you just connect a GitHub repository or upload your code, and the platform does the rest.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image4.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image4.png)
 
 ---
 
@@ -316,7 +316,7 @@ In earlier chapters, we already touched on Dify briefly. Now we can launch a ful
 
 First, open the [console page](https://zeabur.com/projects):
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image5.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image5.png)
 
 In that interface, you will see a set of service blocks. At the top are options such as `Agent`, `Servers`, `Docs`, and `Templates`:
 
@@ -329,17 +329,17 @@ In that interface, you will see a set of service blocks. At the top are options 
 
 In the upper-right corner, you can also see your balance. By default, Zeabur usually gives you a small monthly free quota, roughly around 5 USD worth of usage.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image6.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image6.png)
 
 You can click the balance to inspect daily usage:
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image7.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image7.png)
 
 Now let's create a Dify service.
 
 Start by clicking `New Project` on the [console homepage](https://zeabur.com/projects):
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image8.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image8.png)
 
 Zeabur supports several ways to create a service:
 
@@ -347,44 +347,44 @@ Zeabur supports several ways to create a service:
    Connect your GitHub account and deploy directly from a repository.
 2. **Template**
    Start from a built-in app template such as Dify or n8n.
-   ![](/zh-cn/stage-2/backend/zeabur-deployment/images/image9.png)
+   ![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image9.png)
 3. **Databases**
    Deploy databases such as MySQL or MongoDB.
-   ![](/zh-cn/stage-2/backend/zeabur-deployment/images/image10.png)
+   ![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image10.png)
 4. **Functions**
    Deploy JavaScript or Python functions.
-   ![](/zh-cn/stage-2/backend/zeabur-deployment/images/image11.png)
-   ![](/zh-cn/stage-2/backend/zeabur-deployment/images/image12.png)
+   ![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image11.png)
+   ![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image12.png)
 5. **Local Project**
    Upload a local folder and let Zeabur detect how to run it.
-   ![](/zh-cn/stage-2/backend/zeabur-deployment/images/image13.png)
+   ![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image13.png)
 6. **Docker Image**
    Deploy from an already built Docker image.
-   ![](/zh-cn/stage-2/backend/zeabur-deployment/images/image14.png)
+   ![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image14.png)
 7. **Cursor**
    Deploy directly from a project you are editing in Cursor.
 
 If you want to deploy Dify, the easiest path is **Template**. Search for `dify`, choose a version you like, and continue.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image15.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image15.png)
 
 Then choose any project name. Zeabur will generate a temporary domain based on that name.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image16.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image16.png)
 
 After creation, you will see multiple services starting one after another. Dify is not a single program, but rather a group of coordinated services, so you need to wait until they are all running.
 
 In many setups, you can click the main Dify app to get the access address. In this example, however, the final entry point is exposed through `nginx`, so you need to open the `nginx` service and find the public service address there.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image17.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image17.png)
 
 After waiting a bit, you should see the Dify login screen. Register an account with your email and password, and your own Dify service is ready.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image18.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image18.png)
 
 You can also launch `n8n` in a similar way if you want another AI workflow tool:
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image19.png)![](/zh-cn/stage-2/backend/zeabur-deployment/images/image20.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image19.png)![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image20.png)
 
 ## Deploy a Snake game with Zeabur and Trae
 
@@ -392,24 +392,24 @@ To explore Zeabur's more advanced usage, let's deploy something simpler first: a
 
 ### Deploy an HTML-based version
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image23.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image23.png)
 
 Trae can generate a browser-based Snake game from plain HTML very easily. Once the project is created locally, you can upload the whole folder to Zeabur using the local-project deployment method described above.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image24.png)![](/zh-cn/stage-2/backend/zeabur-deployment/images/image25.png)![](/zh-cn/stage-2/backend/zeabur-deployment/images/image26.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image24.png)![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image25.png)![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image26.png)
 
 After deployment, you will enter the service details page:
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image27.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image27.png)
 
 Click `Network` on the left, find `Public Address`, and click `Generate Domain` to create a public URL.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image28.png)
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image29.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image28.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image29.png)
 
 Once that address is generated, opening it in the browser will let you play your Snake game publicly:
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image30.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image30.png)
 
 This same method works well for other static HTML-based web apps too.
 
@@ -417,7 +417,7 @@ This same method works well for other static HTML-based web apps too.
 
 Now let's deploy a React app instead of a plain HTML app. Compared with static HTML, React is a more modern and component-based frontend framework, and it is common in production applications.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image31.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image31.png)
 
 #### Refactor into a React architecture
 
@@ -425,7 +425,7 @@ In Trae, you can simply say:
 
 `Help me refactor this code into a React architecture.`
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image32.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image32.png)
 
 However, React apps are a bit more demanding to deploy because they rely on a build toolchain and a more structured project layout.
 
@@ -462,13 +462,13 @@ The easiest way is simply to ask Trae:
 
 Trae can modify the relevant configuration for you. After that, rebuild the project and upload it to Zeabur again.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image33.png)
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image34.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image33.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image34.png)
 
 Once you configure the public network address just as you did for the HTML project, the React app can also be served successfully.
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image35.png)
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image36.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image35.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image36.png)
 
 The same idea applies to any other app that needs a port adjustment before deployment.
 
@@ -480,11 +480,11 @@ Because server resources cost money, you should always get in the habit of stopp
 
 Open the project's `Settings`:
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image21.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image21.png)
 
 Scroll to the bottom, and you will see controls like the following:
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image22.png)
+![](../../../../vi-vn/stage-2/backend/zeabur-deployment/images/image22.png)
 
 You can:
 

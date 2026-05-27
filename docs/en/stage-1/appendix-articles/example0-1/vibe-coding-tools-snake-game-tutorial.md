@@ -53,7 +53,7 @@ A typical Vibe Coding workflow is an iterative loop:
 - **Improved Efficiency:** Automatically handles a large amount of repetitive, mechanical coding work (like template code), allowing developers to focus on architecture design and problem abstraction.
 - **Encourages Experimentation:** Promotes a approach of quick output then continuous improvement, making it easier to try new ideas and features.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image1.png)
 
 ---
 
@@ -237,7 +237,7 @@ npm start
 
 - **Example Results**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image2.png)
 
 ---
 
@@ -276,14 +276,14 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Lovable does very well in integration and collaboration. It automatically handles initialization tasks like connecting to Supabase databases, making the project setup process very smooth. You only need to describe your project requirements, and the Agent will help connect various services and build the basic structure.
 - **Suitable Users:** For beginners trying Vibe Coding for the first time, Lovable is a very friendly choice. It simplifies the complexity of multi-service integration, allowing you to focus on prompts and iteration rather than environment configuration. Thanks to high automation, you can quickly get a runnable prototype.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image3.png)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image4.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image5.png)
 
 - **Price:** Relatively expensive, but if you have a school email, you can verify as a student to use it at half price.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image6.png)
 
 ### 2. Cursor (IDE)
 
@@ -291,14 +291,14 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Cursor is a proprietary IDE with integrated AI capabilities, supporting Windows, macOS, and Linux. It embeds features like code generation, intelligent rewriting, and codebase queries directly into the development environment. Compared to web tools, it's closer to a traditional local development experience. Since it's a local environment, different computers have varying configurations, and occasionally you'll encounter environment-related issues. The benefit is that the project is on your machine—no need to separately download or configure a runtime environment, as Cursor handles many tedious steps for you.
 - **Suitable Users:** For users with some programming foundation, Cursor is a very powerful and familiar environment. However, for complete beginners with no foundation, you'll need to understand project structure, dependency management, and file organization concepts yourself, which has a steeper learning curve. More suitable for developers who want to add AI assistants to traditional coding workflows.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image7.png)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image8.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image9.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image10.png)
 
 ### 3. Z.ai (Web-based)
 
@@ -306,32 +306,32 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Z.ai's usage is relatively straightforward, but a clear challenge is: you need to **manually copy and paste the generated code**. The platform lacks a real-time preview window, making it difficult to see the code running effect immediately.
 - **Suitable Users:** This platform requires a more "hands-on" approach to use. The lack of automation means you must interact directly with the code, which can actually be a kind of training for those who want to deeply understand AI output. However, frequent copy-pasting brings efficiency problems and error risks. More suitable for students who want to see "raw AI output code" rather than those seeking a one-click experience.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image11.png)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image12.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image13.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image14.png)
 
 ### 4. Replit (Web-based)
 
 - **Platform Type:** Web
 - **Key Features & Workflow:** Replit is an all-in-one online development and deployment environment—you can write code, run programs, and generate online access links directly in the browser. Before starting coding, it gives you a clear action plan; it also provides a visual editor where you can directly modify the UI in the preview window, and the source code automatically syncs. This allows you to verify at any time whether the AI output matches expectations, greatly reducing the number of back-and-forth modifications.
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image15.png)
 
 - **Suitable Users:** Replit is very beginner-friendly. It simplifies the complete loop from coding to deployment—no need to separately configure servers or hosting services. Collaboration features are also strong, making it suitable for classmates working on projects together or having others help review code remotely.
 - **Prompt Process:** During the build process, the AI didn't fully understand the requirements at first—about 3 rounds of iteration were needed before the final output reached the ideal result.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image16.png)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image17.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image18.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image19.png)
 
 ### 5. Bolt.new (Web-based)
 
@@ -339,14 +339,14 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Bolt.new is similar to Lovable, featuring a Web + AI development environment. It can automatically generate project scaffolding and offers real-time preview. Compared to Lovable, Bolt.new provides more development control, allowing you to directly modify files in the browser and configure build tools.
 - **Suitable Users:** For developers who want more control but don't want to set up a local environment, Bolt.new offers a good balance. It allows you to get started quickly while having the flexibility to customize configurations.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image20.png)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image21.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image22.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image23.png)
 
 ### 6. Claude Dev (Web-based)
 
@@ -354,14 +354,14 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Claude Dev is essentially a browser-based version of Cursor, providing a full VS Code-like development environment in the web. It supports file management, terminal, and various extensions. The advantage is that you don't need to install anything—just open the browser to start coding.
 - **Suitable Users:** For users who like Cursor's workflow but don't want to install desktop software, or those who need to code on different devices, Claude Dev is a great alternative.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image24.png)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image25.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image26.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image27.png)
 
 ### 7. GitHub Copilot (IDE Plugin)
 
@@ -369,14 +369,14 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** GitHub Copilot is not a complete development platform but an AI coding assistant that integrates into your existing IDE. It provides code suggestions, auto-completion, and can help explain and refactor code. It works locally without sending code to the cloud, offering better privacy and security.
 - **Suitable Users:** For developers who already have a development environment set up and want to enhance productivity with AI assistance. Not suitable for complete beginners who haven't set up a local environment yet.
 - **Prompt Process:** Copilot works differently—it provides inline suggestions as you type, rather than generating entire projects through conversations. You can write comments or function names, and Copilot will suggest implementations.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image28.png)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image29.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image30.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.png)
+  ![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image31.png)
 
 ## 3. Summary and Recommendations
 
@@ -475,4 +475,4 @@ Vibe Coding represents the future of software development. As AI technology cont
 
 Happy Vibe Coding! 🚀
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.png)
+![](../../../../vi-vn/stage-1/appendix-articles/example0-1/images/image32.png)

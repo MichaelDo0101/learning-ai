@@ -2,7 +2,7 @@
 layout: home
 navbar: false
 hero:
-  name: 'Easy-Vibe'
+  name: 'Học AI'
   text: 'Hướng dẫn Lập trình AI từ con số 0'
   tagline: 'Một mô hình lập trình mới cho mọi người. Dù bạn là PM hay Full Stack Dev, hãy tìm lộ trình lập trình AI của bạn tại đây.'
   typingTagline:

@@ -11,19 +11,19 @@ description: The story of a rural substitute teacher who used AI with his studen
 
 Xiao Hao is a rural substitute teacher for third-grade students. Before this, he had worked in operations, done business data analysis, and written code, earning a solid five-figure monthly salary. To many people, this young man who had made it out of the countryside was already "doing pretty well." But he gave up an enviable job and returned to his hometown for one reason: he wanted to help rural children see a bigger world.
 
-![Teacher Xiao Hao and the children](../../zh-cn/vibe-stories/images/story-1/image1.jpeg)
+![Teacher Xiao Hao and the children](../../vi-vn/vibe-stories/images/story-1/image1.jpeg)
 
 ## 01 When "Artificial Intelligence" First Entered the Classroom
 
 When Xiao Hao first started teaching in the village, he felt a deep heaviness in his heart. "The conditions here are limited. These kids rarely get the chance to see the wider world. Their world is so small, sometimes it feels like all they have are worn-out textbooks and the dirt beneath their feet." He wanted them to see something bigger. He also wanted them to know that something called artificial intelligence existed in this world. It could draw, write poems, and answer all the wild questions in their heads.
 
-![Everyday life in a rural classroom](../../zh-cn/vibe-stories/images/story-1/image2.jpeg)
+![Everyday life in a rural classroom](../../vi-vn/vibe-stories/images/story-1/image2.jpeg)
 
 At first, it did not go smoothly. He wanted students to bring phones to school so they could try AI for themselves, but school leaders strongly opposed the idea: "You're just teaching them to copy answers! This has nothing to do with real learning!" But he did not give up. He kept trying to persuade them. In the end, both sides compromised: AI learning was allowed, but students still could not bring their own phones into the classroom.
 
 So Xiao Hao paid out of pocket, bought a few secondhand phones, and logged his own Doubao account into them for students to use. That was how the children first got their hands on "high tech." Very quickly, they learned to use AI to search for information, learn dances, and even play with text-to-image generation. For the first time, AI opened a new window onto the world for these children.
 
-![Children trying AI in the computer room](../../zh-cn/vibe-stories/images/story-1/image3.png)
+![Children trying AI in the computer room](../../vi-vn/vibe-stories/images/story-1/image3.png)
 
 ## 02 A Rural Classroom Specialty: Flies and False Touches
 
@@ -31,7 +31,7 @@ Rural classrooms now have multimedia smart boards too, which has improved teachi
 
 Electronic boards generate heat and light, and flies love landing on them. The screen cannot tell whether a touch is intentional or accidental, so slides jump around, videos pause, and sometimes the system even shuts down mid-class. In a 40-minute lesson, teachers can end up spending 20 minutes swatting flies at the podium. The class becomes fragmented, and both Xiao Hao and his students suffer through it.
 
-![The classroom smart board disturbed by accidental touches](../../zh-cn/vibe-stories/images/story-1/image4.png)
+![The classroom smart board disturbed by accidental touches](../../vi-vn/vibe-stories/images/story-1/image4.png)
 
 Then one day, a student raised a hand and said, "Teacher, could we make a program together that keeps the flies out?"
 
@@ -46,7 +46,7 @@ Xiao Hao happened to discover a public-interest Vibe Coding course, so he starte
 
 Those questions led somewhere real. AI told them they needed to distinguish `RawInput` and identify `ExtraInfo`. The children did not understand the technical jargon, but by comparing data and discussing it together, they found that different input methods really did produce different `ExtraInfo` values.
 
-![The input recognition interface of "Xiao Hao Touch Lock"](../../zh-cn/vibe-stories/images/story-1/image5.png)
+![The input recognition interface of "Xiao Hao Touch Lock"](../../vi-vn/vibe-stories/images/story-1/image5.png)
 
 Step by step, one sentence at a time, Xiao Hao and the children "talked" their way with AI into building what became **Xiao Hao Touch Lock**. Its principle is simple: it recognizes the characteristics of incoming signals and precisely blocks touchscreen input while keeping mouse input intact. That way, no matter how wild the flies get on the display, the lesson stays perfectly stable.
 
@@ -68,7 +68,7 @@ To be honest, the biggest gain from building this software was not the software 
 
 The student who first suggested building the software used to be the most mischievous kid in class. Now he listens more carefully than anyone else, because he knows that something he helped create is solving a problem for everyone. That sense of "I can do this too" is more valuable than getting a perfect score.
 
-![Smiling children and a classroom group photo](../../zh-cn/vibe-stories/images/story-1/image6.jpeg)
+![Smiling children and a classroom group photo](../../vi-vn/vibe-stories/images/story-1/image6.jpeg)
 
 Xiao Hao also admitted that using phones and AI with the children brought him no shortage of criticism. Many people said he was neglecting his proper duties and setting a bad example. But when he sees the kids becoming more curious and more compassionate because of AI, he feels it has all been worth it.
 
@@ -76,14 +76,14 @@ Xiao Hao also admitted that using phones and AI with the children brought him no
 
 Xiao Hao sincerely hopes more people will pay attention to practical, grounded AI-powered digital classrooms in public education. The small worlds of rural children need AI even more. AI is not just a tool. It is also a window that helps them connect with the vast world beyond their village.
 
-![The children's handwritten blessings for their teacher](../../zh-cn/vibe-stories/images/story-1/image7.png)
+![The children's handwritten blessings for their teacher](../../vi-vn/vibe-stories/images/story-1/image7.png)
 
-![Teacher, thank you for everything](../../zh-cn/vibe-stories/images/story-1/image8.png)
+![Teacher, thank you for everything](../../vi-vn/vibe-stories/images/story-1/image8.png)
 
-![A handwritten note from the children](../../zh-cn/vibe-stories/images/story-1/image9.png)
+![A handwritten note from the children](../../vi-vn/vibe-stories/images/story-1/image9.png)
 
-![The children in everyday life](../../zh-cn/vibe-stories/images/story-1/image10.png)
+![The children in everyday life](../../vi-vn/vibe-stories/images/story-1/image10.png)
 
-![The children in the classroom](../../zh-cn/vibe-stories/images/story-1/image11.png)
+![The children in the classroom](../../vi-vn/vibe-stories/images/story-1/image11.png)
 
-![A selfie of Xiao Hao](../../zh-cn/vibe-stories/images/story-1/image12.png)
+![A selfie of Xiao Hao](../../vi-vn/vibe-stories/images/story-1/image12.png)

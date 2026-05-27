@@ -98,7 +98,7 @@ const createContinuationHeading = (heading) => {
 
   const label = document.createElement('span')
   label.className = 'ev-slide-continuation-label'
-  label.textContent = '续页'
+  label.textContent = 'tiếp'
   clone.appendChild(label)
 
   return clone
@@ -334,7 +334,7 @@ const shouldAddVisualCard = (nodes, role) => {
 const createSlideVisualCard = (role) => {
   const card = document.createElement('figure')
   card.className = `ev-slide-visual-card ev-slide-visual-card--${role}`
-  card.setAttribute('aria-label', 'AI 编程教学场景插图')
+  card.setAttribute('aria-label', 'Hình minh hoạ cảnh dạy lập trình AI')
 
   const panel = document.createElement('div')
   panel.className = 'ev-slide-visual-panel'
@@ -347,7 +347,7 @@ const createSlideVisualCard = (role) => {
   badge.textContent = role === 'cover' ? 'AI Coding' : 'Mini Lesson'
 
   const title = document.createElement('strong')
-  title.textContent = role === 'cover' ? '从想法到原型' : '一节课一个主题'
+  title.textContent = role === 'cover' ? 'Từ ý tưởng đến prototype' : 'Một bài học, một chủ đề'
 
   header.append(badge, title)
 
@@ -356,15 +356,15 @@ const createSlideVisualCard = (role) => {
 
   const promptCard = document.createElement('div')
   promptCard.className = 'ev-slide-visual-note ev-slide-visual-note--prompt'
-  promptCard.innerHTML = '<span>说清目标</span><b>Prompt</b>'
+  promptCard.innerHTML = '<span>Nói rõ mục tiêu</span><b>Prompt</b>'
 
   const aiCard = document.createElement('div')
   aiCard.className = 'ev-slide-visual-note ev-slide-visual-note--ai'
-  aiCard.innerHTML = '<span>AI 协作</span><b>Generate</b>'
+  aiCard.innerHTML = '<span>Cộng tác AI</span><b>Generate</b>'
 
   const resultCard = document.createElement('div')
   resultCard.className = 'ev-slide-visual-note ev-slide-visual-note--result'
-  resultCard.innerHTML = '<span>运行验证</span><b>Demo</b>'
+  resultCard.innerHTML = '<span>Chạy & verify</span><b>Demo</b>'
 
   const connector = document.createElement('div')
   connector.className = 'ev-slide-visual-connector'
@@ -387,7 +387,7 @@ const createSlideVisualCard = (role) => {
 
   const footer = document.createElement('figcaption')
   footer.className = 'ev-slide-visual-caption'
-  footer.textContent = '把自然语言转成可演示的网页、小游戏和应用原型'
+  footer.textContent = 'Biến ngôn ngữ tự nhiên thành web, mini-game và prototype ứng dụng demo được'
 
   panel.append(header, stage, footer)
   card.appendChild(panel)
@@ -754,14 +754,14 @@ onBeforeUnmount(() => {
     v-if="hasDocContent"
     class="ev-slides-button"
     type="button"
-    aria-label="打开幻灯片"
-    title="幻灯片"
+    aria-label="Mở trình chiếu"
+    title="Trình chiếu"
     @click="openSlides"
   >
     <el-icon :size="16">
       <Present />
     </el-icon>
-    <span class="ev-slides-button-label">幻灯片</span>
+    <span class="ev-slides-button-label">Trình chiếu</span>
   </button>
 
   <Teleport to="body">
@@ -772,14 +772,14 @@ onBeforeUnmount(() => {
       tabindex="-1"
       role="dialog"
       aria-modal="true"
-      aria-label="页面幻灯片播放"
+      aria-label="Trình chiếu trang"
       @keydown.esc.stop.prevent="closeSlides"
     >
       <button
         class="ev-slides-close"
         type="button"
-        aria-label="关闭幻灯片"
-        title="关闭幻灯片"
+        aria-label="Đóng trình chiếu"
+        title="Đóng trình chiếu"
         @click="closeSlides"
       >
         <el-icon :size="18">
@@ -795,7 +795,7 @@ onBeforeUnmount(() => {
           aria-live="polite"
         >
           <span class="ev-slides-loading-dot" aria-hidden="true" />
-          <span>正在生成幻灯片...</span>
+          <span>Đang tạo trình chiếu...</span>
         </div>
 
         <div

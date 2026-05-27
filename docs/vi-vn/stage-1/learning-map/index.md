@@ -1,5 +1,5 @@
 ---
-title: 'Từ ý tưởng đến sản phẩm AI - Lộ trình học tập Easy-Vibe'
+title: 'Từ ý tưởng đến sản phẩm AI - Lộ trình học tập Học AI'
 description: 'Lộ trình học tập lập trình AI hoàn chỉnh: từ người mới bắt đầu đến phát triển full-stack. Làm chủ Vibe Coding, Claude Code, Cursor và các công cụ AI IDE, học tư duy sản phẩm, phát triển full-stack và tích hợp năng lực AI.'
 ---
 

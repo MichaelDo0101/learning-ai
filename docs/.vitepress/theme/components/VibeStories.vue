@@ -2,10 +2,10 @@
 import { computed, inject, onMounted, onUnmounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import macbookImage from '../../../../assets/macbook.png'
-import story1Cover from '../../../zh-cn/vibe-stories/images/story-1/image5.png'
-import story2Cover from '../../../zh-cn/vibe-stories/images/story-2/image4.png'
-import story3Cover from '../../../zh-cn/vibe-stories/images/story-3/image3.png'
-import story4Cover from '../../../zh-cn/vibe-stories/images/story-4/image7.png'
+import story1Cover from '../../../../assets/stories_image.png'
+import story2Cover from '../../../../assets/stories_image.png'
+import story3Cover from '../../../../assets/stories_image.png'
+import story4Cover from '../../../../assets/stories_image.png'
 
 // Try to inject translation context from parent or provide a default fallback
 const t = inject('t', {

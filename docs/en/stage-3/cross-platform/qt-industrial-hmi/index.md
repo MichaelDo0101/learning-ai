@@ -54,7 +54,7 @@ Control room                           Factory site
 └──────────┘                       └──────────┘
 ```
 
-<!-- ![placeholder: Diagram of upper vs lower computer relationship: PC screen (upper computer) on the left, PLC and pump (lower computer) on the right, connected via Modbus](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image1.png) -->
+<!-- ![placeholder: Diagram of upper vs lower computer relationship: PC screen (upper computer) on the left, PLC and pump (lower computer) on the right, connected via Modbus](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image1.png) -->
 
 ## 1.2 What Is Modbus Protocol?
 
@@ -98,7 +98,7 @@ We will build a **Pump Monitoring HMI System** simulating real factory pump pres
 | Fault log | Record all alarm events in database for history queries |
 | Manual control | One-click start/stop pump (write lower-computer register) |
 
-<!-- ![placeholder: Pump monitoring HMI preview showing real-time pressure number, trend chart, alarm indicator, start/stop button, and log list](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image2.png) -->
+<!-- ![placeholder: Pump monitoring HMI preview showing real-time pressure number, trend chart, alarm indicator, start/stop button, and log list](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image2.png) -->
 
 ## 1.5 Tutorial Roadmap
 
@@ -128,7 +128,7 @@ Qt provides a free open-source version, enough for this tutorial.
 
 > **Tip**: if Qt is already installed but missing Serial Bus or Charts, rerun Qt Maintenance Tool and add components.
 
-<!-- ![placeholder: Qt installer component selection screenshot highlighting Qt Serial Bus and Qt Charts](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image3.png) -->
+<!-- ![placeholder: Qt installer component selection screenshot highlighting Qt Serial Bus and Qt Charts](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image3.png) -->
 
 ## 2.2 Install Modbus Slave: Your "Virtual Pump"
 
@@ -151,7 +151,7 @@ Modbus Slave is a free Modbus slave simulator. It can simulate an industrial dev
 
 Now Modbus Slave is your "24/7 virtual pump." Keep the window open; it will continuously respond to read/write requests.
 
-<!-- ![placeholder: Modbus Slave screenshot showing TCP config and simulated register values](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image4.png) -->
+<!-- ![placeholder: Modbus Slave screenshot showing TCP config and simulated register values](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image4.png) -->
 
 > **Dynamic simulation tip**: Modbus Slave supports auto increment/random changes. Right-click register value and choose "Auto increment" or "Random" to simulate realistic sensor fluctuations.
 
@@ -263,7 +263,7 @@ private:
 #endif // MAINWINDOW_H
 ```
 
-<!-- ![placeholder: Screenshot of mainwindow.h in Qt Creator](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image5.png) -->
+<!-- ![placeholder: Screenshot of mainwindow.h in Qt Creator](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image5.png) -->
 
 ## 3.3 Build Modbus TCP Connection
 
@@ -378,7 +378,7 @@ readPressure() triggered by timer
     -> parse register values and update UI
 ```
 
-<!-- ![placeholder: Running app screenshot showing real-time pressure updates and status bar "connected to lower computer"](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image6.png) -->
+<!-- ![placeholder: Running app screenshot showing real-time pressure updates and status bar "connected to lower computer"](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image6.png) -->
 
 # Chapter 4: Draw Real-time Pressure Trend (3 Minutes)
 
@@ -468,7 +468,7 @@ updateChart(pressure);
 
 Now run the program. You will see a blue line updating in real time, one point per second, always showing latest 60 seconds. If you modify register values in Modbus Slave manually, the line reflects changes immediately.
 
-<!-- ![placeholder: Real-time pressure trend screenshot showing scrolling blue line, time X-axis, pressure Y-axis](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image7.png) -->
+<!-- ![placeholder: Real-time pressure trend screenshot showing scrolling blue line, time X-axis, pressure Y-axis](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image7.png) -->
 
 > **Performance tip**: `QChart::NoAnimation` is important. Real-time data refresh every second; animations can cause UI lag. This is a common industrial HMI practice.
 
@@ -520,7 +520,7 @@ void MainWindow::triggerAlarm(float pressure)
 }
 ```
 
-<!-- ![placeholder: Over-threshold alarm screenshot showing red pressure background, red indicator, and alarm popup](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image8.png) -->
+<!-- ![placeholder: Over-threshold alarm screenshot showing red pressure background, red indicator, and alarm popup](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image8.png) -->
 
 ## 5.2 SQLite Fault Logs
 
@@ -583,7 +583,7 @@ void MainWindow::logAlarm(float pressure, const QString &message)
 
 Log table has three columns: time, pressure value, and alarm message. Each alarm appends one row and is persisted to SQLite.
 
-<!-- ![placeholder: Fault log table screenshot with multiple records including timestamp, pressure, and alarm message](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image9.png) -->
+<!-- ![placeholder: Fault log table screenshot with multiple records including timestamp, pressure, and alarm message](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image9.png) -->
 
 ## 5.4 Manually Start/Stop Pump
 
@@ -621,7 +621,7 @@ void MainWindow::togglePump()
 
 In Modbus Slave, you will see address `2` switching between `0` and `1` as you click the button. This is the upper-computer "control" process.
 
-<!-- ![placeholder: Pump start/stop button screenshot showing green "Start Pump" and red "Stop Pump" states](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image10.png) -->
+<!-- ![placeholder: Pump start/stop button screenshot showing green "Start Pump" and red "Stop Pump" states](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image10.png) -->
 
 # Chapter 6: Packaging and Deployment (Optional)
 
@@ -658,7 +658,7 @@ Please help me create an installer for PumpHMI with Qt Installer Framework:
 4. Run binarycreator to generate installer
 ```
 
-<!-- ![placeholder: PumpHMI setup wizard screenshot showing install path and progress](../../../../zh-cn/stage-3/cross-platform/qt-industrial-hmi/images/image11.png) -->
+<!-- ![placeholder: PumpHMI setup wizard screenshot showing install path and progress](../../../../vi-vn/stage-3/cross-platform/qt-industrial-hmi/images/image11.png) -->
 
 # Chapter 7: Final Notes
 

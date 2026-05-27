@@ -26,7 +26,7 @@ You can understand an NFT as a **"certificate of collection in the digital world
 
 The core value of NFTs is: **they use blockchain technology to prove "this digital item belongs to you," and that proof is public, transparent, and tamper-resistant.**
 
-<!-- ![placeholder: A concept diagram of NFTs: a digital artwork on the left, ownership record on blockchain on the right, connected by arrows](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image1.png) -->
+<!-- ![placeholder: A concept diagram of NFTs: a digital artwork on the left, ownership record on blockchain on the right, connected by arrows](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image1.png) -->
 
 ## 1.2 What Is a Smart Contract?
 
@@ -81,7 +81,7 @@ MetaMask is the most popular Ethereum wallet. It is a browser extension that let
 4. Choose **"Create a new wallet"** and set a password
 5. **Important**: keep your recovery phrase (12 words) safe. Losing a test wallet is fine, but good habits matter
 
-<!-- ![placeholder: MetaMask installation and wallet creation flow screenshots: install extension -> create wallet -> set password -> backup recovery phrase](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image2.png) -->
+<!-- ![placeholder: MetaMask installation and wallet creation flow screenshots: install extension -> create wallet -> set password -> backup recovery phrase](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image2.png) -->
 
 ## 2.2 Switch to Sepolia Testnet
 
@@ -101,7 +101,7 @@ If you do not see Sepolia, click **"Add network"** and add manually:
 | Currency Symbol | SepoliaETH |
 | Block Explorer | `https://sepolia.etherscan.io` |
 
-<!-- ![placeholder: Screenshot of switching MetaMask to Sepolia testnet via network dropdown](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image3.png) -->
+<!-- ![placeholder: Screenshot of switching MetaMask to Sepolia testnet via network dropdown](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image3.png) -->
 
 ## 2.3 Claim Free Test ETH
 
@@ -119,7 +119,7 @@ Visit any faucet below and input your wallet address to claim free Sepolia ETH:
 
 After claiming successfully, return to MetaMask and your balance should change from 0 to 0.1 ETH (it may take a few seconds).
 
-<!-- ![placeholder: Faucet website screenshot showing wallet address input and claiming test ETH](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image4.png) -->
+<!-- ![placeholder: Faucet website screenshot showing wallet address input and claiming test ETH](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image4.png) -->
 
 # Chapter 3: Write and Deploy NFT Smart Contract (4 Minutes)
 
@@ -131,7 +131,7 @@ Open: **https://remix.ethereum.org/**
 
 You will see a VS Code-like interface: file explorer on the left, code editor in the middle, and compile/deploy panel on the right.
 
-<!-- ![placeholder: Remix IDE home screenshot showing file explorer, code editor, and right-side panel](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image5.png) -->
+<!-- ![placeholder: Remix IDE home screenshot showing file explorer, code editor, and right-side panel](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image5.png) -->
 
 ## 3.2 Create Contract File
 
@@ -175,7 +175,7 @@ contract MySimpleNFT is ERC721 {
 
 > **What is ERC721?** It is the NFT standard on Ethereum, defining basic NFT capabilities (transfer, owner query, etc.). OpenZeppelin provides a security-audited implementation, so we can inherit directly instead of building from scratch.
 
-<!-- ![placeholder: Screenshot of contract code pasted in Remix IDE](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image6.png) -->
+<!-- ![placeholder: Screenshot of contract code pasted in Remix IDE](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image6.png) -->
 
 ## 3.3 Compile the Contract
 
@@ -186,7 +186,7 @@ contract MySimpleNFT is ERC721 {
 
 > If there is an error, check whether Solidity version matches and OpenZeppelin import path is correct. Remix automatically downloads OpenZeppelin dependencies from npm.
 
-<!-- ![placeholder: Remix compile success screenshot with green check and selected compiler version](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image7.png) -->
+<!-- ![placeholder: Remix compile success screenshot with green check and selected compiler version](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image7.png) -->
 
 ## 3.4 Deploy Contract to Sepolia Testnet
 
@@ -201,7 +201,7 @@ contract MySimpleNFT is ERC721 {
 
 After a few seconds, when deployment succeeds, the **"Deployed Contracts"** section below will show your contract address. **Copy and save this address**; you will need it later.
 
-<!-- ![placeholder: Remix deployment screenshot showing environment selection, MetaMask confirmation, Deploy button, and deployed contract address](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image8.png) -->
+<!-- ![placeholder: Remix deployment screenshot showing environment selection, MetaMask confirmation, Deploy button, and deployed contract address](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image8.png) -->
 
 # Chapter 4: Mint NFT and Verify Result (4 Minutes)
 
@@ -218,7 +218,7 @@ Congratulations! You just minted NFT #0, and it now belongs to your wallet addre
 
 You can continue clicking "mint" to create more. Token IDs auto-increment each time (#1, #2, #3...).
 
-<!-- ![placeholder: Screenshot of clicking mint in Remix and confirming transaction in MetaMask](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image9.png) -->
+<!-- ![placeholder: Screenshot of clicking mint in Remix and confirming transaction in MetaMask](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image9.png) -->
 
 ## 4.2 Verify Mint Result
 
@@ -237,7 +237,7 @@ You can also call **"ownerOf"**, input `0` (token ID), and it returns your walle
 
 On Etherscan, every mint transaction has complete records: who minted, when minted, and token ID. This is the charm of blockchain being "public, transparent, and tamper-resistant."
 
-<!-- ![placeholder: Screenshot of viewing contract and NFT mint records on Sepolia Etherscan, including transaction list and Token Tracker](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image10.png) -->
+<!-- ![placeholder: Screenshot of viewing contract and NFT mint records on Sepolia Etherscan, including transaction list and Token Tracker](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image10.png) -->
 
 # Chapter 5: Advanced - Add an Image to NFT (Optional)
 
@@ -262,7 +262,7 @@ IPFS is a decentralized file storage network. Unlike regular cloud storage, file
 
 Your image URI is: `ipfs://yourCID`
 
-<!-- ![placeholder: Screenshot of image upload in Pinata, including upload button and resulting CID](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image11.png) -->
+<!-- ![placeholder: Screenshot of image upload in Pinata, including upload button and resulting CID](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image11.png) -->
 
 ## 5.3 Create Metadata JSON
 
@@ -325,7 +325,7 @@ contract MyNFTWithImage is ERC721, ERC721URIStorage {
 
 After deployment, call `mint` and pass your metadata URI (for example `ipfs://QmAbc.../metadata.json`). Then your minted NFT will include image and description.
 
-<!-- ![placeholder: Screenshot of NFT details with image shown on Etherscan](../../../../zh-cn/stage-3/cross-platform/nft-minting/images/image12.png) -->
+<!-- ![placeholder: Screenshot of NFT details with image shown on Etherscan](../../../../vi-vn/stage-3/cross-platform/nft-minting/images/image12.png) -->
 
 # Chapter 6: Final Notes
 
