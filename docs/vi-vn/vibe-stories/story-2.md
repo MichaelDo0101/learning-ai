@@ -201,6 +201,104 @@ Cảm giác thành tựu trong lòng là **thật**.
 
 ---
 
+## 🎥 Watch & Learn — 3 video về student founder
+
+<ChapterVideos :videos="[
+  { id: 'oFtjKbXKqbg', title: 'Pieter Levels: Programming, Viral AI Startups (Lex Fridman #440)', channel: 'Lex Fridman', duration: '3:55:00', why: 'Pieter ship 40+ startup một mình. \'12 startups in 12 months\' — anh Lư build 3 giờ cũng là cùng spirit.' },
+  { id: '7BX8Mt7K10c', title: 'How Pieter Levels Went from Failed Web Business to $3M/yr', channel: 'Starter Story', duration: '30:00', why: 'Case study build sản phẩm trong vài giờ và ship ngay — model giống \'Chợ trời\' 3 giờ.' },
+  { id: '8AWEPx5cHWQ', title: 'Cursor Vibe Coding Tutorial — For COMPLETE Beginners', channel: 'Riley Brown', duration: '250:00', why: '4 project full thực hành — đủ cho sinh viên năm 2 follow từng bước build marketplace.' }
+]" />
+
+---
+
+## 🔬 6 Bài học & Technique từ sinh viên năm 2
+
+::: tip 🎯 Apply cho student founder VN
+
+**1. ⏱️ Ship-in-3-hours rule**
+- Build MVP trong khung thời gian cố định, không scope creep
+- Apply VN: tuần thi vẫn ship được nếu rút brief xuống 1 màn hình + 1 luồng chính
+
+**2. 🤖 AI item description as feature**
+- Chụp 1 ảnh → AI gen tiêu đề + mô tả + giá đề xuất
+- Prompt template: "category, condition, expected lifespan, comparable price"
+- Apply VN: campus có thể plug GPT-4o-mini + nhận ảnh từ Zalo
+
+**3. 🎯 Niche down (campus only)**
+- UniYard chỉ phục vụ UO students; StudiFlip chỉ Purdue
+- Apply VN: bot Chợ trời chỉ cho 1 trường (BK, KTQD, ĐHQG) → trust + viral nội bộ
+
+**4. 👤 Solo founder + AI = team of 5**
+- Sahil Lavingia (Gumroad) ship feature từ Slack → production vài phút, **41% commit do AI agent viết**
+- Apply VN: sinh viên không cần co-founder dev, chỉ cần Cursor + Lovable
+
+**5. ✅ Validation TRƯỚC feature**
+- Build landing page + form chờ trước khi viết DB
+- Tony Dinh (VN) ship Typing Mind vài giờ sau ChatGPT launch
+- Apply VN: post lên group lớp trước, đo response, rồi build
+
+**6. 📣 Distribution > product**
+- Marc Lou: "marketing is the engine"
+- Pieter Levels có 600K followers TRƯỚC khi launch Photo AI
+- Apply VN: sinh viên build audience TikTok/Threads song song product
+:::
+
+---
+
+## 📚 More Similar Stories (2025-2026)
+
+### Case A: UniYard — University of Oregon (2025)
+
+| Item | Detail |
+|------|------|
+| Founders | 3 sinh viên business — Cedric Roberge, Arlo Snodgrass + 1 co-founder |
+| Stack | AI-assisted no-code, **3 tuần build site** |
+| Result | Hàng trăm sinh viên UO đang dùng |
+| Plan | Mở rộng Oregon State, Washington |
+| Quote | *"I primarily used AI to help build the site."* |
+
+> Source: [Daily Emerald](https://dailyemerald.com/174492/news/uo-students-leverage-ai-to-create-college-marketplace)
+
+### Case B: StudiFlip — Purdue (2025)
+
+| Item | Detail |
+|------|------|
+| Background | Purdue alum tạo marketplace seniors → freshmen |
+| Stack | Campus-only marketplace + safe-exchange features |
+| Result | Niche tightly scoped — chỉ 1 trường ĐH |
+
+> Source: [Purdue Exponent](https://purdueexponent.org/campus/purdue-alum-launches-studiflip)
+
+### Case C: 🇻🇳 Tony Dinh — Typing Mind (Việt Nam → global)
+
+| Item | Số |
+|------|------|
+| Background | Dev Việt 32 tuổi rời job → indie hacker |
+| Stack | ChatGPT wrapper + Stripe |
+| TypingMind MRR | **$45K** |
+| Portfolio MRR | **$140K/tháng** |
+| Black Magic sold | **$128K** |
+| Xnapper sold | **$150K** |
+| Quote | *"Tony ships before it embarrasses him too much."* |
+
+> Source: [Starter Story](https://starterstory.com/typingmind-breakdown) | [Medium](https://medium.com/@yumaueno/tony-dinh-the-legendary-vietnamese-developer)
+
+---
+
+## 🛠️ Tools 2026 cho student founder
+
+| Tool | Cost | Use case |
+|------|------|------|
+| **Lovable** | $25/tháng Pro | Build marketplace UI + auth + DB trong 1 prompt. Q2 2026: visual editor + GitHub export |
+| **Cursor Pro** | $20/tháng | Refine code Lovable export, add real Stripe checkout |
+| **Supabase** | Free tier (500 user) | DB + auth + storage cho ảnh sản phẩm |
+| **Vercel** | Free hobby | Deploy Next.js marketplace |
+| **Stripe Checkout** | 2.9% + $0.30 | Payment cho global; VN dùng Stripe Atlas hoặc VNPay/MoMo |
+| **GPT-4o-mini API** | $0.15/1M input tokens | AI item description generator |
+| **YC Early Decision (2025)** | Free apply | Defer đến sau khi tốt nghiệp. Apply nếu MVP có traction |
+
+---
+
 ::: tip 🇻🇳 Sinh viên Việt Nam có thể học gì?
 
 **1. VN có pain tương tự — opportunity tương tự**

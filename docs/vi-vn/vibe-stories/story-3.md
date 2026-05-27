@@ -168,6 +168,99 @@ Nếu bạn cũng là giáo viên Tin học, cũng đối mặt khó khăn tươ
 
 ---
 
+## 🎥 Watch & Learn — 3 video về AI tutor personalized
+
+<ChapterVideos :videos="[
+  { id: 'hJP5GqnTrNo', title: 'How AI Could Save (Not Destroy) Education', channel: 'TED (Sal Khan)', duration: '15:30', why: 'Triết lý gốc cho \'tutor cho mọi học sinh\' — Sal Khan cite Bloom 2-sigma problem (1-on-1 tutor giúp HS giỏi hơn 2 độ lệch chuẩn).' },
+  { id: 'Ia3CPhVkUtg', title: 'Meet Khanmigo: Student Tutor AI Tested in Schools', channel: '60 Minutes', duration: '13:00', why: 'Footage thật trong lớp Mỹ — GV theo dõi 30 HS dùng Khanmigo cùng lúc. Pain hệt thầy Tin với 50 HS.' },
+  { id: 'P6FORpg0KVo', title: 'How to Make Learning as Addictive as Social Media', channel: 'TED (Luis Von Ahn, Duolingo)', duration: '10:30', why: 'Bài học làm AI tutor \'addictive\' — streak, gamification, personalization. Thầy Tin có thể copy mô hình cho \'bạn cùng bàn\'.' }
+]" />
+
+---
+
+## 🔬 6 Bài học & Technique từ thầy Tin
+
+::: tip 🎯 Apply cho giáo viên VN xây AI tutor
+
+**1. 🤔 Socratic method qua prompt**
+- Khanmigo system prompt: "Don't give answers. Ask 1 leading question at a time."
+- Apply VN: thầy paste prompt vào Custom GPT / Claude Project = có ngay tutor cho lớp
+
+**2. 🧠 Per-student memory**
+- Mỗi HS có 1 chat thread, AI nhớ HS yếu chỗ nào
+- Technique: OpenAI Assistants API với thread per user, hoặc Google Sheet log "Tuần này HS X chưa vững phép chia"
+
+**3. 📊 Đánh giá vô hình (invisible assessment)**
+- Riiid Santa: phân tích từng câu trả lời → dự đoán điểm + recommend bài tiếp
+- Apply VN: embed quiz đơn giản, AI ghi điểm mượt mà
+
+**4. 🔥 Engagement loop của Duolingo**
+- Streak + leaderboard + small wins → 6.6M paying subscribers (2024)
+- Apply VN: gửi notification "Lan đã học 7 ngày liên tục" qua **Zalo phụ huynh**
+
+**5. 👨‍🏫 AI as teaching assistant, NOT replacement**
+- Khan Academy CEO: AI giải phóng **50% thời gian GV** soạn bài → GV có thời gian cho HS yếu nhất
+- Apply VN: dùng Khanmigo Teacher tools soạn nhanh, dành thời gian kèm 1-1
+
+**6. 📈 Bloom's 2-sigma problem**
+- 1-on-1 tutoring + mastery learning = **98% HS đạt mức "A"**
+- Apply VN: gọi AI là "gia sư cá nhân" trong PR với phụ huynh — có science backing từ 1984, không phải hype
+:::
+
+---
+
+## 📚 More Similar Stories (2025-2026)
+
+### Case A: Khanmigo — **700K users** (2024-25 school year)
+
+| Item | Số |
+|------|------|
+| Background | Khan Academy AI tutor, GPT-4 based |
+| User growth | **68K (2023) → 700K (2024-25)** |
+| District partners | **45 → 380** |
+| Pricing | $15/HS/năm cho district |
+
+> Source: [Khanmigo](https://khanmigo.ai) | [Khan Academy blog](https://blog.khanacademy.org/how-khan-academy-is-building-a-better-ai-tutor)
+
+### Case B: Riiid Santa — Hàn Quốc, **4M users global**
+
+| Item | Số |
+|------|------|
+| Launch | 2017 (AI tutor TOEIC) |
+| Stack | Deep learning trên **300M data points** |
+| Result | HS tăng **trung bình 124 điểm** sau 20h học |
+| Engagement | **+25.13%** |
+
+> Source: [AI Tutor Santa](https://aitutorsanta.com) | [arXiv 2505.02443](https://arxiv.org/abs/2505.02443)
+
+### Case C: 🇻🇳 Vietnam Foundation × Khanmigo VN (T11/2025)
+
+| Item | Detail |
+|------|------|
+| Bản tiếng Việt | **Free** cho GV cả nước (sponsor by Microsoft) |
+| Stack | Khanmigo Teacher tools (25 tools) |
+| Result | **Vietnamese = ngôn ngữ native thứ 4** của Khanmigo |
+| Quote | *"AI as a tutor that promotes personalised thinking, not answer-giving."* |
+
+> Source: [Vietnam Foundation](https://vnfoundation.org)
+
+---
+
+## 🛠️ Tools 2026 cho personalized AI tutor
+
+| Tool | Cost | Use case |
+|------|------|------|
+| **Khanmigo for Teachers (VN)** 🇻🇳 | **Free** qua VNF | 25 tools planning + per-student differentiation |
+| **OpenAI Custom GPTs** | $20/tháng (ChatGPT Plus) | Tạo "Bạn cùng bàn Toán lớp 8" prompt cố định + KB riêng |
+| **Claude Projects** | $20/tháng | Dài-context tutor cho nguyên kỳ học, nhớ HS yếu chỗ nào |
+| **Google NotebookLM** | Free | Upload SGK + giáo án → AI hỏi ngược HS đúng nội dung lớp |
+| **Duolingo Max** | $14/tháng | HS tự học tiếng Anh ngoài giờ, GV theo dõi qua family plan |
+| **Zalo Mini App + GPT API** | ~$5/HS/tháng | Tutor chạy trên Zalo (phụ huynh + HS VN dùng nhiều) |
+
+**Update Q1-Q2 2026**: Khanmigo open thêm môn xã hội tiếng Việt; ChatGPT release "Study Mode" cho free tier.
+
+---
+
 ::: tip 🇻🇳 Giáo viên VN có thể học gì?
 
 1. **Pain "1 thầy 50 trò" giống hệt VN**:

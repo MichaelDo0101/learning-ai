@@ -147,6 +147,114 @@ Lời nhắn của anh cũng rất thẳng:
 
 ---
 
+## 🎥 Watch & Learn — 3 video về solo founder go-global
+
+<ChapterVideos :videos="[
+  { id: 'oFtjKbXKqbg', title: 'Pieter Levels: Programming, Viral AI Startups (Lex Fridman #440)', channel: 'Lex Fridman', duration: '3:55:00', why: 'Pieter kể chi tiết Photo AI ($132K MRR), built solo, không VC — đúng playbook cho anh Hoàng go-global.' },
+  { id: '7BX8Mt7K10c', title: 'How Pieter Levels Went from Failed Web Business to $3M/yr', channel: 'Starter Story', duration: '30:00', why: 'Tổng quan Photo AI / Nomadlist / Remote OK — clone framework: 1 niche, 1 payment, ship nhanh.' },
+  { id: 'KVZ3vMx_aJ4', title: 'Gumroad CEO Sahil Lavingia: 40x team productivity with v0, Cursor, Devin', channel: 'Lenny\'s Newsletter', duration: '50:00', why: 'AI agents viết 41% code Gumroad. Người không-IT cũng làm được nếu dùng đúng tool, đúng prompt.' }
+]" />
+
+---
+
+## 🔬 7 Bài học & Technique từ anh Hoàng
+
+::: tip 🎯 Apply cho late-career switcher VN
+
+**1. 🎂 Late-start advantage**
+- 48 tuổi có life experience để hiểu user thật, biết vấn đề thật
+- Apply VN: anh Hoàng biết tài xế cần gì → build công cụ cho tài xế thay clone B2B SaaS
+
+**2. 💳 Closed-loop payment first**
+- Đăng ký Paddle / Creem (Merchant of Record) → khỏi lo VAT/tax/chargeback
+- Apply VN: dùng **Paddle** (5% + $0.50/tx) hoặc **Creem** thay vì cố build VNPay cho khách global
+
+**3. 🤖 AI as the entire dev team**
+- Cursor + Replit + Lovable + ChatGPT đủ cho 1 người ship product
+- Pieter dùng Cursor làm fly.pieter.com → **$52K/tháng trong 2 tuần**
+- Apply VN: anh Hoàng học 1 tool / tháng × 3 tháng = ship v1
+
+**4. 📣 Build in public + small audience first**
+- Pieter mất 10 năm build **600K followers** trước Photo AI
+- Apply VN: post hàng tuần lên Threads/X/LinkedIn "Day 12: solo dev 48 tuổi build image gen"
+
+**5. ⏰ Ship before ready**
+- Marc Lou + Tony Dinh đều ship "trước khi xấu hổ quá đáng"
+- Apply VN: đặt deadline 30 ngày → bất kể UI, public link
+
+**6. 💰 Pricing > features**
+- Photo AI giá **$39/tháng, 87% profit margin** ($13K cost / $132K revenue)
+- Apply VN: anh Hoàng tính price global ($19-49/tháng) cao hơn nhiều VN giá → 1 user global = 50 user VN
+
+**7. 🎯 Niche wrapper, NOT horizontal AI**
+- "Podcast-to-clips cho nha sĩ" > ChatGPT clone
+- Apply VN: launch "AI ảnh sản phẩm cho shop Etsy" hoặc "AI ảnh chân dung cho LinkedIn Asia" thay vì "AI image gen" generic
+:::
+
+---
+
+## 📚 More Similar Stories (2025-2026)
+
+### Case A: Pieter Levels — Photo AI **$1.65M ARR solo**
+
+| Item | Số |
+|------|------|
+| Background | Dutch solo dev, không VC |
+| Stack | Cursor + Stripe + nano-banana style flow |
+| MRR T11/2025 | **$132K** |
+| **Profit margin** | **87%** ($13K cost / $132K revenue) |
+| Time | **18 tháng từ 0** |
+| Quote | *"Most of my startups will fail — and that's okay, as long as something sticks."* |
+
+> Source: [Indie Hackers deep dive](https://indiehackers.com/post/photo-ai-by-pieter-levels-complete-deep-dive-case-study)
+
+### Case B: 🇻🇳 Tony Dinh — solopreneur VN → global **$140K/month**
+
+| Item | Số |
+|------|------|
+| Background | Software engineer VN 7 năm KN → indie hacker full-time 2021 (28 tuổi) |
+| Stack | ChatGPT API + Stripe + landing page Twitter-marketed |
+| TypingMind | **$45K MRR** |
+| Black Magic | Bán **$128K** |
+| Xnapper | Bán **$150K** |
+| Portfolio | **$140K/tháng** tổng |
+| Quote | *"Ship the smallest useful version, in contact with reality from day one."* |
+
+> Source: [Starter Story](https://starterstory.com/typingmind-breakdown)
+
+### Case C: Marc Lou — Sa thải → **$80K/tháng Bali**
+
+| Item | Số |
+|------|------|
+| Background | Sa thải khỏi job software → indie hacker, ship **16 product trong 2 năm** |
+| Stack | ShipFast Next.js boilerplate + Stripe |
+| **Revenue T7/2025** | **$80K/tháng** từ portfolio (ShipFast, IndiePage, ZenVoice...) |
+| Sống ở | Bali |
+| Quote | *"Make Fast, Ship Fast."* |
+
+> Source: [IndiePattern](https://indiepattern.com/stories/marc-lou) | [Medium](https://medium.com/@IndieKim/80k-month-in-bali-marc-lous-full-solopreneur-strategy)
+
+---
+
+## 🛠️ Tools 2026 cho late-career solo founder go-global
+
+| Tool | Cost | Use case |
+|------|------|------|
+| **Cursor Pro** | $20/tháng | AI viết code, anh chỉ review + chạy |
+| **Lovable** | $25/tháng | Build UI nhanh nhất 2026, mở browser là dùng |
+| **Replit + Agent v2** | $25/tháng Core | Deploy full-stack ngay trên web, không cần local setup |
+| **Paddle** 💳 | 5% + $0.50/tx | Merchant of Record xử lý VAT/tax global |
+| **Creem** | 0% đến €1K, sau đó ~5% | Alternative Paddle, friendly cho indie + AI builder |
+| **PayPal Business** | 3.49% + fixed | Backup payment cho khách không có thẻ Stripe |
+| **fal.ai / Replicate API** | $0.003-0.01/image | Backbone cho image gen site, không tự host model |
+| **OpenAI gpt-image-1 / nano-banana** | $0.04/image (Gemini) | State-of-the-art image gen, free tier để test |
+| **Buy Me a Coffee + Ko-fi** | 0-5% | Thử lấy first $100 trước khi build subscription |
+| **X / Threads / LinkedIn** | Free | Build-in-public audience |
+
+**Update Q1-Q2 2026**: Cursor có voice mode tốt; Lovable hỗ trợ mobile-first; nano-banana upgrade Gemini 3 Image.
+
+---
+
 ::: tip 🇻🇳 VN dev (mọi tuổi, mọi nền tảng) có thể học gì?
 
 **1. Tuổi tác không phải barrier**

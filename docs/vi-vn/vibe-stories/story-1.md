@@ -183,6 +183,97 @@ Thầy Hạo chân thành kêu gọi mọi người quan tâm hơn đến **lớ
 
 ---
 
+## 🎥 Watch & Learn — 3 video về AI trong giáo dục
+
+<ChapterVideos :videos="[
+  { id: 'hJP5GqnTrNo', title: 'How AI Could Save (Not Destroy) Education', channel: 'TED (Sal Khan)', duration: '15:30', why: 'Sal Khan giải thích triết lý \'AI tutor cho mọi học sinh\' — đúng tinh thần thầy Hạo: AI không thay thầy giáo mà giúp thầy trao quyền cho trò.' },
+  { id: 'jUtbi3unD2g', title: 'Revolutionizing Education with Khanmigo', channel: 'TED', duration: '15:00', why: 'Demo cách AI hỏi ngược học sinh thay vì cho đáp án — phương pháp Socratic mà thầy Hạo dạy lớp 3.' },
+  { id: 'Ia3CPhVkUtg', title: 'Meet Khanmigo: The Student Tutor AI Tested in Schools', channel: '60 Minutes', duration: '13:00', why: 'Footage thật trong lớp Mỹ — GV theo dõi 30 HS dùng Khanmigo cùng lúc. Pain rất giống thầy Hạo với 30+ HS lớp quê.' }
+]" />
+
+---
+
+## 🔬 6 Bài học & Technique từ thầy Hạo
+
+::: tip 🎓 Apply cho giáo viên VN
+
+**1. 🤖 "AI là người bạn cùng bàn, không phải máy trả lời"**
+- AI hỏi ngược ("Bước nào em chưa rõ?") thay vì cho đáp án
+- Apply VN: prompt Cursor/ChatGPT với system "Don't give answers, ask Socratic questions"
+
+**2. 👨‍💻 Pair-coding với học sinh lớp 3**
+- Thầy ngồi cạnh, học sinh đọc lỗi to lên, AI suggest fix
+- Tool: Cursor Composer voice mode + tiếng Việt → trẻ chỉ cần nói "con muốn ruồi bay nhanh hơn"
+
+**3. 🔄 Build-to-learn loop**
+- Không học syntax trước → có ý tưởng → prompt → chạy → bug → hỏi → fix
+- Apply VN: đi từ "đuổi ruồi" → "game đập muỗi" → "app điểm danh lớp"
+
+**4. 🏡 Local-context problem framing**
+- Pain ruồi trên màn hình = pain thật ở lớp quê, không phải bài toán abstract
+- Apply VN: khuyến khích HS chọn vấn đề ở quê (chấm điểm, tưới cây, đọc bài) thay vì clone Tinder
+
+**5. 🎤 Teacher-as-curator, not coder**
+- Thầy không cần biết Python — thầy biết câu hỏi đúng
+- Apply VN: GV học prompt engineering 2 buổi (4h) là đủ dẫn HS qua project nhỏ
+
+**6. 🐛 Celebrate the bug**
+- Bug ruồi không chạy = cơ hội học, không phải failure
+- Technique: log lỗi vào notebook giấy, đặt tên **"Sổ kho báu lỗi"**
+:::
+
+---
+
+## 📚 More Similar Stories (2025-2026)
+
+### Case A: Hongyan AI Project — Changshun County, Quý Châu (TQ)
+
+| Item | Detail |
+|------|------|
+| Background | Dự án Beijing University of Posts and Telecommunications mang AI vào trường quê |
+| Stack | Smart mirror + generative AI tutor |
+| Result | AI hỏi ngược thay vì cho đáp án |
+| Quote | *"AI is a teacher with boundless patience."* |
+
+> Source: [UNESCO Courier 2025](https://courier.unesco.org/en/articles/intelligent-solution-inspire-young-minds-rural-china)
+
+### Case B: Microsoft Elevate program — Indonesia (2025)
+
+| Item | Detail |
+|------|------|
+| Background | GV vùng quê Nuryam Gazi + Anis Damayanti dùng AI như "teaching partner" sau training Microsoft Elevate |
+| Result | Vượt qua isolation + outdated devices nhờ AI soạn bài |
+
+> Source: [Microsoft Asia News T12/2025](https://news.microsoft.com/source/asia/2025/12/04/)
+
+### Case C: 🇻🇳 Vietnam Foundation × Khan Academy — **Khanmigo tiếng Việt** (T11/2025)
+
+| Item | Detail |
+|------|------|
+| Tổ chức | VNF localize Khanmigo cho GV Việt Nam |
+| Pricing | **Free hoàn toàn** cho mọi GV |
+| Stack | Khanmigo for Teachers + 25 tools (Plan, Create, Differentiate, Support, Learn) |
+| Result | **Tiếng Việt là native language thứ 4** của platform |
+
+> Source: [Vietnam Foundation](https://vnfoundation.org/en/the-vietnam-foundation-launches-the-vietnamese-version-of-khanmigo)
+
+---
+
+## 🛠️ Tools 2026 cho giáo viên VN làm theo
+
+| Tool | Cost | Use case |
+|------|------|------|
+| **Khanmigo for Teachers** 🇻🇳 | **Free** (qua VNF) | Lesson plan + differentiation + Socratic tutoring tiếng Việt |
+| **Cursor** | $20/tháng (có free tier) | GV + HS pair-code project nhỏ, voice command tiếng Việt |
+| **Replit + Agent v2** | Free + $25/tháng | HS deploy game web ngay browser, không cài đặt |
+| **ChatGPT free** | $0 | Đủ cho lớp 30 HS dùng chung 1 acc qua máy chiếu |
+| **Google NotebookLM** | Free | Upload SGK + giáo án → AI hỏi ngược HS đúng nội dung lớp |
+| **Common Sense Media AI literacy** | Free | 8 bài giảng có sẵn (tham chiếu Washington County, Maryland 2025) |
+
+**Update Q1-Q2 2026**: Khanmigo tiếng Việt mở rộng primary level; Cursor voice mode tiếng Việt beta.
+
+---
+
 ::: tip 🇻🇳 Giáo viên / sinh viên Việt Nam có thể học gì?
 
 **1. Vibe Coding cho giáo dục VN — context phù hợp**
