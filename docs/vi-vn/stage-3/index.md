@@ -151,3 +151,140 @@ Khám phá các kỹ thuật AI cao cấp như RAG, LangGraph để build các w
 - Hiểu khái niệm AI cơ bản và cách dùng API
 
 Sẵn sàng chinh phục phát triển nâng cao? Bấm vào menu sidebar bên trái để bắt đầu!
+
+---
+
+## 🧪 Hands-on Lab — Build production AI agent với MCP
+
+::: tip 🎯 Mục tiêu Stage 3
+1 tuần: Ship 1 AI agent production-grade với Claude Code + MCP cho VN platform.
+:::
+
+### Stack senior dev 2026
+
+| Layer | Tool |
+|------|------|
+| AI Brain | Claude Sonnet 4.6 / Opus 4.7 + MCP |
+| Multi-agent | LangGraph (production) hoặc Claude Code SDK |
+| Workflow | n8n (self-host hoặc Cloud) |
+| Voice | Vapi (1B calls / 99.99% SLA) |
+| Sandbox | E2B / Browserbase |
+| Eval | DeepEval / Braintrust / Inspect AI |
+
+### Day 1-2: Setup Claude Code + first MCP server
+
+```bash
+mkdir mcp-misa && cd mcp-misa
+npm init -y
+npm install @modelcontextprotocol/sdk zod
+```
+
+Reference: [Vibe Agent Ch6 — MCP lab](../vibe-agent/6-mcp-ecosystem.md) — full TypeScript code KiotViet wrapper.
+
+### Day 3-4: Multi-agent orchestrator
+
+```python
+from langgraph.prebuilt import create_react_agent
+# Supervisor + 3 workers
+```
+
+Reference: [Vibe Agent Ch4 — Multi-Agent lab](../vibe-agent/4-multi-agent.md) — LangGraph full code.
+
+### Day 5: Workflow integration (n8n + Smax.ai)
+
+Reference: [Vibe Agent Ch5 — Workflow lab](../vibe-agent/5-workflow-agent.md) — AI Sale Agent VN end-to-end.
+
+### Day 6-7: Deploy + observability + eval
+
+- Deploy Claude Code SDK to production (Vercel hoặc serverless)
+- Setup eval suite (DeepEval CI/CD)
+- Monitor cost dashboard (alert at $50/day)
+
+### Output
+
+- ✅ Production agent có MCP integration với 1 VN platform
+- ✅ Multi-agent orchestrator pattern
+- ✅ Eval suite 30+ cases
+- ✅ Cost monitoring active
+- ✅ Documented architecture diagram
+
+---
+
+## 🎯 Knowledge Check — Stage 3 (7 câu)
+
+::: details 1. MCP downloads/tháng T3/2026?
+**A.** 1M
+**B.** 10M
+**C.** 97M ✅
+**D.** 500M
+
+**Đáp án: C** — MCP SDK 97M monthly downloads, growth 970x trong 18 tháng. 78% enterprise có ≥1 MCP agent production.
+:::
+
+::: details 2. Multi-agent vs single — token cost ratio?
+**A.** 2x
+**B.** 15x ✅
+**C.** 100x
+**D.** Same
+
+**Đáp án: B** — Multi-agent system consume ~15x more tokens. Cần ROI rõ để justify. Anthropic Research +90.2% but 15x cost.
+:::
+
+::: details 3. Computer Use OSWorld T2/2026?
+**A.** 20%
+**B.** 50%
+**C.** 72.5% (≈ baseline người) ✅
+**D.** 100%
+
+**Đáp án: C** — Sonnet 4.6 đạt 72.5% T2/2026. Up từ 14.9% T10/2024. ≈ baseline người (70-73%).
+:::
+
+::: details 4. LangGraph vs CrewAI cho production?
+**A.** CrewAI luôn (dễ hơn)
+**B.** LangGraph (Klarna, Uber, LinkedIn dùng) ✅
+**C.** Cả 2 same
+**D.** AutoGen tốt hơn
+
+**Đáp án: B** — LangGraph production-grade. CrewAI cho prototype/agency. AutoGen vào maintenance mode.
+:::
+
+::: details 5. Claude Code 2.1.76 (T3/2026) feature?
+**A.** Scheduled tasks + background agents + voice mode + remote control phone ✅
+**B.** Chỉ image gen
+**C.** Game development
+**D.** Disable
+
+**Đáp án: A** — Scheduled tasks via loop command, background agents với worktree isolation, voice mode 20 ngôn ngữ, remote control qua phone/web.
+:::
+
+::: details 6. Anthropic Mythos OSWorld?
+**A.** 50%
+**B.** 60%
+**C.** 79.6% (frontier preview) ✅
+**D.** 100%
+
+**Đáp án: C** — Claude Mythos Preview = 79.6% OSWorld. Stanford 2026 AI Index: 12% (2025) → 66% (2026) — generational leap.
+:::
+
+::: details 7. Devin × Goldman Sachs deploy?
+**A.** 10 instances
+**B.** Hundreds Devin alongside 12K engineers ✅
+**C.** 1 Devin
+**D.** Chưa deploy
+
+**Đáp án: B** — Goldman 12K human engineers + **hundreds Devin instances** (scaling to thousands). Target: equivalent 14,400 dev output (20% gain).
+:::
+
+**Score**:
+- 6-7/7 ✅ Sẵn sàng build production agent cho VN client
+- 4-5/7 ⚠️ Review Vibe Agent chapters 4-6
+- <4/7 ❌ Redo Vibe Agent labs
+
+---
+
+::: warning 💡 Mantra Stage 3
+> *"Senior dev 2026 ≠ senior dev 2020.*
+> *Phân biệt: ai biết **orchestrate AI**, không phải ai code best.*
+>
+> *Goldman Sachs hired Devin alongside 12K engineers — sign of new era."*
+:::

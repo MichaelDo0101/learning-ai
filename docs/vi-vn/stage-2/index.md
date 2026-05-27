@@ -191,3 +191,133 @@ Nếu đã làm xong 2 đồ án chính ở trên, hoặc muốn build portfolio
 - Có hình dung sơ bộ về các công cụ lập trình AI
 
 Sẵn sàng đi sâu vào full-stack? Bấm vào menu sidebar bên trái để bắt đầu!
+
+---
+
+## 🧪 Hands-on Lab — Build SaaS đầu tiên với Stripe payment
+
+::: tip 🎯 Mục tiêu Stage 2
+3 ngày cuối tuần: Ship 1 SaaS có **REAL payment work** (Stripe test mode). Stack chuẩn 2026.
+:::
+
+### Stack 2026 cho full-stack dev VN
+
+| Layer | Tool | Cost |
+|------|------|------|
+| Frontend | Next.js 15 + Tailwind + Vercel | Free hobby |
+| Auth | Clerk hoặc Supabase Auth | Free <10K MAU |
+| Database | Supabase / Neon Postgres | Free <500MB |
+| Payment | Stripe hoặc **Lemon Squeezy** (VN-friendly global) | 2.9% + $0.30 |
+| Email | Resend hoặc Postmark | Free <3K/tháng |
+| AI API | Replicate / Fal / Anthropic | $0.003-0.20/gen |
+| Deploy | Vercel / Railway / Cloudflare | Free hobby |
+
+→ Total cost **<$50/month MVP**.
+
+### Day 1 — Setup + Auth (4 giờ)
+
+```bash
+npx create-next-app@latest my-saas --typescript --tailwind --app
+cd my-saas
+npm install @clerk/nextjs stripe @vercel/postgres
+```
+
+Reference chi tiết: [Vibe Generate Ch4 — Solo SaaS lab](../vibe-generate/4-solo-saas-million.md) — code Next.js + Clerk + Stripe đầy đủ.
+
+### Day 2 — Core feature + DB (4 giờ)
+
+- Wire Stripe checkout
+- Setup Supabase tables: `users`, `orders`, `usage`
+- Test full flow: signup → checkout → activate plan → use feature
+
+### Day 3 — Deploy + Polish (4 giờ)
+
+- Deploy Vercel
+- Custom domain (optional: $1/năm `.com` ở Cloudflare)
+- Add transactional email (Resend)
+- Setup analytics (Plausible / PostHog)
+
+### Output
+
+- ✅ Live URL với Stripe checkout work
+- ✅ User register + login + pay → unlock feature
+- ✅ Cost <$50/tháng
+
+---
+
+## 🎯 Knowledge Check — Stage 2 (7 câu)
+
+::: details 1. Stack default 2026 cho solo SaaS VN?
+**A.** PHP + jQuery
+**B.** Next.js + Supabase + Stripe + Vercel + Clerk ✅
+**C.** WordPress + WooCommerce
+**D.** Django + React custom
+
+**Đáp án: B** — Stack chuẩn 2026 production-ready + scalable.
+:::
+
+::: details 2. Stripe vs Lemon Squeezy cho VN founder?
+**A.** Stripe luôn
+**B.** Lemon Squeezy — Merchant of Record handle VAT/tax global ✅
+**C.** Cả 2 same
+**D.** Tự build VNPay
+
+**Đáp án: B** — Lemon Squeezy outsource VAT/GST/sales tax globally. VN founder không cần thuê accountant quốc tế.
+:::
+
+::: details 3. Supabase free tier?
+**A.** Không có
+**B.** <500MB DB + auth + storage + realtime ✅
+**C.** Chỉ DB
+**D.** Unlimited
+
+**Đáp án: B** — Free <500MB DB + auth + storage + realtime + 2GB egress. Đủ cho MVP <1000 users.
+:::
+
+::: details 4. Code AI-gen vulnerability rate?
+**A.** 0%
+**B.** 5-10%
+**C.** 40-45% ✅
+**D.** 95%
+
+**Đáp án: C** — Research 2026: 40-45% vulnerability. MANDATORY: chạy Claude Code security review mode trước launch.
+:::
+
+::: details 5. Cursor 3.0 (T4/2026) feature?
+**A.** Mobile only
+**B.** Agents Window — 8 agents parallel ✅
+**C.** Voice only
+**D.** Disable AI
+
+**Đáp án: B** — Cursor 3.0: Agents Window chạy 8 agents parallel. BugBot fixer. Slack/Linear/GitHub triggers.
+:::
+
+::: details 6. Pieter Levels stack PhotoAI?
+**A.** Next.js
+**B.** 14,000 dòng raw PHP ✅
+**C.** Django
+**D.** Spring Boot
+
+**Đáp án: B** — $132K MRR, 0 employees, raw PHP. "Ship fast. Ship ugly. Ship in public."
+:::
+
+::: details 7. Solo founder $1M ARR 2026?
+**A.** Rất hiếm
+**B.** Pattern mới (Base44 $80M exit, Medvi $401M) ✅
+**C.** Không thể
+**D.** Chỉ ở Mỹ
+
+**Đáp án: B** — Solo + AI tools = team of 5. New pattern 2025-2026.
+:::
+
+**Score**:
+- 6-7/7 ✅ Sẵn sàng Stage 3
+- 4-5/7 ⚠️ Review backend + frontend
+- <4/7 ❌ Re-do lab
+
+---
+
+::: warning 💡 Mantra Stage 2
+> *"Trong 2026, ship 1 SaaS = 1 người + 1 weekend.*
+> *Câu hỏi không phải "có làm được không?" — Mà **"bạn ship cái gì cuối tuần này?"**"*
+:::

@@ -64,3 +64,135 @@ Bắt đầu → Cơ bản quản lý sản phẩm → Tích hợp khả năng A
 ```
 
 Sẵn sàng bắt đầu hành trình lập trình AI của bạn? Nhấp vào điều hướng bên trái để bắt đầu học!
+
+---
+
+## 🧪 Hands-on Lab — First AI App trong 30 phút (zero coding)
+
+::: tip 🎯 Mục tiêu
+30 phút: từ chưa từng code → có 1 web app AI chạy thật trên browser.
+:::
+
+### Prerequisites checklist
+
+```
+□ 1 máy tính / laptop với internet
+□ Trình duyệt Chrome / Edge / Safari
+□ KHÔNG cần cài đặt gì
+```
+
+### Step 1. Mở Lovable.dev (5 phút)
+
+1. Vào **lovable.dev** → click "Get started"
+2. Sign up free (Google login OK)
+3. Bạn có **5 prompts free** mỗi ngày
+
+### Step 2. Mô tả ý tưởng (5 phút)
+
+Trong ô prompt, gõ (tiếng Việt OK):
+
+```
+Tôi muốn build website đơn giản:
+- Tiêu đề "Bạn cảm thấy thế nào hôm nay?"
+- 5 button: 😄 vui, 😢 buồn, 😡 giận, 😴 mệt, 😎 tự tin
+- Click button → hiện 1 câu động viên tiếng Việt phù hợp
+- Background gradient màu tím-xanh
+- Responsive mobile-first
+```
+
+Press Enter → AI bắt đầu build.
+
+### Step 3. Quan sát (10 phút)
+
+Lovable sẽ:
+1. Tạo file `App.tsx`
+2. Add 5 button với emoji
+3. Wire click handler
+4. Apply CSS gradient
+5. Preview live trong panel bên phải
+
+### Step 4. Test + Iterate (5 phút)
+
+- Click button trong preview → check response
+- Nếu muốn thêm feature, gõ prompt mới:
+
+```
+Thêm: âm thanh "ding" khi click button + 1 ảnh meme phù hợp với mood
+```
+
+### Step 5. Share (5 phút)
+
+- Click "Share" → copy URL
+- Gửi link cho 5 người bạn / gia đình → xem họ click
+- Bạn vừa **ship 1 product real có user**!
+
+### 🐛 Common errors + fixes
+
+| Vấn đề | Fix |
+|------|------|
+| Prompt không work | Mô tả chi tiết hơn: màu, kích thước, ngôn ngữ |
+| Hết 5 prompts free | Đợi 24h reset, hoặc upgrade $20/tháng |
+| Tiếng Việt hiển thị sai font | Add "use Vietnamese font" trong prompt |
+| Button không click được | Gõ prompt: "Make all buttons clickable, add console.log" |
+
+---
+
+## 🎯 Knowledge Check — Stage 0 (5 câu)
+
+::: details 1. Vibe Coding nghĩa là gì?
+**A.** Code phải đẹp như nhạc
+**B.** Mô tả ý tưởng → AI gen code → run + iterate, không deep-read syntax ✅
+**C.** Lập trình ban đêm
+**D.** Code chỉ cho startup
+
+**Đáp án: B** — Vibe Coding (Karpathy T2/2025): không cần biết syntax từng dòng. Describe intent → AI code → run → iterate.
+:::
+
+::: details 2. Bạn cần biết gì để học Stage 0?
+**A.** Python expert
+**B.** Computer science degree
+**C.** KHÔNG cần kinh nghiệm code ✅
+**D.** Math giỏi
+
+**Đáp án: C** — Stage 0 designed cho người **KHÔNG có kinh nghiệm code**. Chỉ cần biết dùng trình duyệt + mô tả ý tưởng bằng tiếng Việt.
+:::
+
+::: details 3. Tool no-code AI phổ biến nhất 2026?
+**A.** WordPress
+**B.** Lovable + Bolt.new + v0 ✅
+**C.** Excel
+**D.** Notion
+
+**Đáp án: B** — **Lovable** ($400M ARR), **Bolt.new** ($40M ARR), **v0** (Vercel). Đều là no-code AI app builders. Lovable Brazil case Sabrine: $456K ARR/3 tháng.
+:::
+
+::: details 4. % vibe coding user là non-developer?
+**A.** 10%
+**B.** 30%
+**C.** 63% ✅
+**D.** 95%
+
+**Đáp án: C** — TechTimes Q1/2026: **63% vibe coding user là non-developer**. PM, founder, designer, domain expert build full-stack apps với natural language.
+:::
+
+::: details 5. Quy tắc quan trọng nhất khi học Stage 0?
+**A.** Hiểu mọi dòng code
+**B.** Ship product nhỏ → iterate → KHÔNG đợi hoàn hảo ✅
+**C.** Học theory trước, code sau
+**D.** Tìm mentor expensive
+
+**Đáp án: B** — Pieter Levels mantra: **"Ship fast. Ship ugly. Ship in public."** 70+ failed startup trước PhotoAI work. Iterate là chìa khoá.
+:::
+
+**Score**:
+- 5/5 ✅ Sẵn sàng vào Stage 1 — Bản đồ học tập
+- 3-4/5 ⚠️ Re-read sections trên
+- <3/5 ❌ Watch homepage videos foundational
+
+---
+
+::: warning 💡 Mantra Stage 0
+> *"Nếu bạn có thể NÓI, bạn có thể LẬP TRÌNH."*
+>
+> *Karpathy 2/2025 — coined "vibe coding". Collins Word of the Year 2025.*
+:::
