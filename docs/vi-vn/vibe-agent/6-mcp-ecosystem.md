@@ -526,7 +526,432 @@ Restart Claude Code → tool `mcp__vn-tools__check_misa_invoice` xuất hiện �
 
 ---
 
-## 16 Đọc tiếp
+## 16 📊 Architecture Diagram — MCP Client-Server
+
+```mermaid
+flowchart TB
+    subgraph "Host App"
+        Claude[🧠 Claude Desktop /<br/>Cursor / Claude Code]
+        ClientLib[📡 MCP Client SDK]
+        Claude --- ClientLib
+    end
+
+    subgraph "MCP Protocol (JSON-RPC 2.0)"
+        ClientLib <-->|stdio / SSE / HTTP| Transport
+    end
+
+    subgraph "MCP Server (your code)"
+        Transport[🔌 Transport layer]
+        Server[⚙️ Server logic]
+        Transport --- Server
+        Server --> Tools[🛠️ Tools<br/>actions]
+        Server --> Resources[📚 Resources<br/>read-only data]
+        Server --> Prompts[💬 Prompts<br/>templates]
+    end
+
+    subgraph "Backend"
+        Tools -->|call| API[(🌐 Your API/DB/<br/>MISA/KiotViet/Pancake)]
+        Resources -.->|read| Files[(📁 Files/DB)]
+    end
+
+    style Claude fill:#6366f1,stroke:#4f46e5,color:#fff
+    style Server fill:#10b981,stroke:#059669,color:#fff
+    style API fill:#fbbf24,stroke:#f59e0b,color:#000
+```
+
+**3 primitives của MCP** (đa số tutorial chỉ dạy 1):
+- **Tools** — actions agent có thể call (write, modify, side effect)
+- **Resources** — read-only data (file contents, DB rows, API responses)
+- **Prompts** — templated workflows (predefined prompt chains)
+
+**Transport options**:
+- `stdio` — local server, simplest (process spawn)
+- `SSE` (deprecated 2026) — HTTP streaming
+- `Streamable HTTP` — new standard (spec 2025-11-25)
+
+---
+
+## 17 🧪 Hands-on Lab — Build MCP server đầu tiên (KiotViet wrapper)
+
+::: tip 🎯 Goal
+90 phút: build MCP server cho KiotViet (POS VN) — expose 3 tools: list_products, check_stock, create_order. Connect vào Claude Code, test query "Còn áo size M không?".
+:::
+
+### Prerequisites checklist
+
+```
+□ Node.js >= 18 (TypeScript)
+□ Claude Code Pro ($20) HOẶC Claude Desktop (free)
+□ KiotViet API access (đăng ký dev account free: developers.kiotviet.vn)
+□ TypeScript kinh nghiệm cơ bản
+□ Familiar với JSON-RPC concept
+```
+
+### Step 1. Setup
+
+```bash
+mkdir mcp-kiotviet && cd mcp-kiotviet
+npm init -y
+npm install @modelcontextprotocol/sdk zod
+npm install -D typescript @types/node tsx
+
+# tsconfig
+cat > tsconfig.json <<'EOF'
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src/**/*"]
+}
+EOF
+
+mkdir src
+```
+
+### Step 2. Code MCP server
+
+```typescript
+// src/index.ts
+import { Server } from '@modelcontextprotocol/sdk/server/index.js';
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import {
+  CallToolRequestSchema,
+  ListToolsRequestSchema,
+} from '@modelcontextprotocol/sdk/types.js';
+import { z } from 'zod';
+
+// === Mock KiotViet API (replace với real API) ===
+const MOCK_PRODUCTS = [
+  { id: 1, name: 'Áo thun cotton trắng', price: 200000, sizes: { S: 5, M: 0, L: 3, XL: 8 } },
+  { id: 2, name: 'Áo thun cotton đen', price: 200000, sizes: { S: 2, M: 10, L: 4, XL: 1 } },
+  { id: 3, name: 'Quần jean nam', price: 450000, sizes: { '28': 3, '30': 7, '32': 5, '34': 2 } },
+];
+
+async function kvListProducts() {
+  // Real: fetch('https://public.kiotapi.com/products', { headers: { Retailer, Authorization }})
+  return MOCK_PRODUCTS;
+}
+
+async function kvCheckStock(productId: number, size: string) {
+  const p = MOCK_PRODUCTS.find(p => p.id === productId);
+  if (!p) return { error: 'Product not found' };
+  return {
+    product: p.name,
+    size,
+    stock: (p.sizes as any)[size] ?? 0,
+    available: ((p.sizes as any)[size] ?? 0) > 0
+  };
+}
+
+async function kvCreateOrder(productId: number, size: string, quantity: number, customerName: string) {
+  // Real: POST /orders
+  return {
+    success: true,
+    order_id: `ORD-${Date.now()}`,
+    product_id: productId,
+    size,
+    quantity,
+    customer: customerName,
+    total: 200000 * quantity
+  };
+}
+
+// === MCP Server setup ===
+const server = new Server(
+  { name: 'mcp-kiotviet', version: '1.0.0' },
+  { capabilities: { tools: {} } }
+);
+
+// === List available tools ===
+server.setRequestHandler(ListToolsRequestSchema, async () => ({
+  tools: [
+    {
+      name: 'list_products',
+      description: 'List all products in KiotViet inventory with prices and available sizes',
+      inputSchema: { type: 'object', properties: {} }
+    },
+    {
+      name: 'check_stock',
+      description: 'Check stock for specific product + size',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          product_id: { type: 'number', description: 'Product ID from list_products' },
+          size: { type: 'string', description: 'Size code (S/M/L/XL or numeric for jeans)' }
+        },
+        required: ['product_id', 'size']
+      }
+    },
+    {
+      name: 'create_order',
+      description: 'Create new order in KiotViet POS system',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          product_id: { type: 'number' },
+          size: { type: 'string' },
+          quantity: { type: 'number', minimum: 1 },
+          customer_name: { type: 'string' }
+        },
+        required: ['product_id', 'size', 'quantity', 'customer_name']
+      }
+    }
+  ]
+}));
+
+// === Handle tool calls ===
+server.setRequestHandler(CallToolRequestSchema, async (req) => {
+  const { name, arguments: args } = req.params;
+
+  try {
+    if (name === 'list_products') {
+      const products = await kvListProducts();
+      return {
+        content: [{ type: 'text', text: JSON.stringify(products, null, 2) }]
+      };
+    }
+
+    if (name === 'check_stock') {
+      const { product_id, size } = args as any;
+      const result = await kvCheckStock(product_id, size);
+      return {
+        content: [{ type: 'text', text: JSON.stringify(result, null, 2) }]
+      };
+    }
+
+    if (name === 'create_order') {
+      const { product_id, size, quantity, customer_name } = args as any;
+      const result = await kvCreateOrder(product_id, size, quantity, customer_name);
+      return {
+        content: [{ type: 'text', text: JSON.stringify(result, null, 2) }]
+      };
+    }
+
+    return {
+      content: [{ type: 'text', text: `Unknown tool: ${name}` }],
+      isError: true
+    };
+  } catch (err: any) {
+    return {
+      content: [{ type: 'text', text: `Error: ${err.message}` }],
+      isError: true
+    };
+  }
+});
+
+// === Start ===
+const transport = new StdioServerTransport();
+await server.connect(transport);
+console.error('mcp-kiotviet server running on stdio');
+```
+
+### Step 3. Build + connect to Claude Code
+
+```bash
+# Build
+npx tsx src/index.ts  # test run, Ctrl+C để exit
+
+# Hoặc compile cho production
+npx tsc
+```
+
+Connect Claude Code (`~/.claude.json`):
+
+```json
+{
+  "mcpServers": {
+    "kiotviet": {
+      "command": "npx",
+      "args": ["tsx", "/absolute/path/to/mcp-kiotviet/src/index.ts"]
+    }
+  }
+}
+```
+
+Restart Claude Code → tools `mcp__kiotviet__list_products`, `mcp__kiotviet__check_stock`, `mcp__kiotviet__create_order` xuất hiện ✅
+
+### Step 4. Test query
+
+In Claude Code:
+
+```
+> Còn áo thun cotton size M màu trắng không?
+```
+
+Claude sẽ:
+1. Call `list_products` → thấy ID 1 (Áo thun cotton trắng)
+2. Call `check_stock(product_id=1, size="M")` → return `{ stock: 0, available: false }`
+3. Reply: "Dạ rất tiếc, Áo thun cotton trắng size M đã hết hàng. Anh/chị muốn xem size khác hoặc màu đen ạ?"
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| `Server not found in mcp config` | Path absolute trong `~/.claude.json`, restart Claude Code |
+| Tool không xuất hiện | Check stderr log: `console.error` → logged correctly? |
+| JSON-RPC parse error | Output stdout phải PURE JSON, đừng `console.log` (dùng `console.error`) |
+| TypeScript module error | Set `"module": "ESNext"` + `"moduleResolution": "Bundler"` |
+| Real KiotViet API 401 | Get API key + Retailer code from KiotViet dev portal |
+
+---
+
+## 18 🏗️ Mini-Project — Build MCP server cho 1 VN platform thật
+
+::: warning 🎯 Assignment
+
+**Mục tiêu**: Pick 1 VN platform chưa có MCP server, build production-grade wrapper, open-source GitHub, submit Smithery.
+
+**Pick 1**:
+- **MISA AMIS** (kế toán + HR ERP)
+- **KiotViet** (POS retail + F&B)
+- **Sapo** (e-commerce + POS)
+- **Pancake** (Messenger CRM)
+- **Haravan** (e-commerce)
+- **Base.vn** (HR + work management)
+- **VNPay/MoMo/ZaloPay** (payment)
+
+**Requirements**:
+1. **3+ tools** (vd: list, get, create, update — READ-only safe, WRITE behind approval)
+2. **TypeScript implementation** với Zod validation
+3. **README.md** tốt: usage example + screenshots
+4. **GitHub repo** open-source (MIT license)
+5. **Submit Smithery + mcp.so** registries
+6. **Demo video** 2-3 phút (Loom hoặc YouTube)
+7. **Blog post** giới thiệu (LinkedIn / Medium)
+
+**Acceptance criteria**:
+- [ ] MCP spec compliance (test với MCP Inspector tool)
+- [ ] Authentication handled properly
+- [ ] Rate limiting (avoid API ban)
+- [ ] Error messages clear cho LLM understand
+- [ ] CI/CD: GitHub Actions test + publish npm package
+- [ ] Documentation tiếng Việt + English
+
+**Time estimate**: 1-2 tuần
+
+**Stretch goals** 🚀:
+- Multi-tenant support (1 server, N business)
+- Audit log + analytics
+- Hosted version ($50-200/tháng/business)
+- Bán SaaS từ project này
+
+**Business model nếu serious**:
+- Open-source build trust (Y1)
+- Paid hosted tier (Y2)
+- Enterprise white-label (Y3)
+- Target: 10 paying customers × $100/tháng = $1K MRR within 6 tháng
+
+**Cộng đồng support**: AIECOS community Discord/Facebook group cho feedback + co-marketing.
+:::
+
+---
+
+## 19 🎓 Knowledge Check
+
+::: details 1. MCP có bao nhiêu primitives?
+**A.** 1 (Tools only)
+**B.** 2 (Tools + Resources)
+**C.** 3 (Tools + Resources + Prompts) ✅
+**D.** 5 (Tools, Resources, Prompts, Sampling, Roots)
+
+**Đáp án: C** — 3 primitives: **Tools** (actions), **Resources** (read-only data), **Prompts** (templated workflows). Đa số tutorial chỉ dạy Tools.
+:::
+
+::: details 2. MCP protocol dùng?
+**A.** REST API
+**B.** GraphQL
+**C.** JSON-RPC 2.0 ✅
+**D.** gRPC
+
+**Đáp án: C** — MCP servers là **JSON-RPC 2.0** over stdio / SSE / Streamable HTTP. Dev VN hay nhầm là REST khi build server đầu.
+:::
+
+::: details 3. MCP donate cho?
+**A.** Apache Foundation
+**B.** Anthropic giữ
+**C.** Agentic AI Foundation under Linux Foundation ✅
+**D.** Microsoft
+
+**Đáp án: C** — Anthropic donate MCP cho **Agentic AI Foundation under Linux Foundation T12/2025**. Founders: OpenAI, Block. Supporting: AWS, Google, Microsoft, Cloudflare, GitHub, Bloomberg.
+:::
+
+::: details 4. MCP monthly SDK downloads T3/2026?
+**A.** 1M
+**B.** 10M
+**C.** 97M ✅
+**D.** 500M
+
+**Đáp án: C** — **97M monthly SDK downloads** T3/2026, từ 100K month 1. Growth 970x trong 18 tháng.
+:::
+
+::: details 5. MCP vs A2A protocol?
+**A.** Cùng mục đích, A2A thắng
+**B.** MCP: tool/data, A2A: agent-agent ✅
+**C.** A2A là phiên bản 2 của MCP
+**D.** Cả 2 deprecate
+
+**Đáp án: B** — MCP và A2A complementary, không cạnh tranh: **MCP** = agent ↔ tool/resource (vertical), **A2A** = agent ↔ agent (horizontal). Production dùng cả hai.
+:::
+
+::: details 6. Transport mới nhất của MCP (spec 2025-11-25)?
+**A.** stdio
+**B.** Streamable HTTP ✅
+**C.** WebSocket
+**D.** gRPC
+
+**Đáp án: B** — Spec 2025-11-25 chuẩn hoá **Streamable HTTP transport**. SSE deprecated.
+:::
+
+::: details 7. % enterprise có ≥1 MCP agent production?
+**A.** 20%
+**B.** 45%
+**C.** 78% ✅
+**D.** 95%
+
+**Đáp án: C** — **78% enterprise** có ≥1 MCP agent in production (WorkOS report). 67% CTOs name MCP default agent-integration standard.
+:::
+
+::: details 8. Code execution với MCP tiết kiệm bao nhiêu token cho multi-step?
+**A.** 20%
+**B.** 50%
+**C.** 70%+ ✅
+**D.** Không tiết kiệm
+
+**Đáp án: C** — Anthropic engineering Q1/2026: code execution với MCP > raw tool calls cho multi-step. **Tiết kiệm 70%+ tokens** thay vì 50 raw tool calls.
+:::
+
+::: details 9. Sampling trong MCP là gì?
+**A.** Random select tools
+**B.** Server request LLM sampling từ client ✅
+**C.** Cache responses
+**D.** Performance profiling
+
+**Đáp án: B** — **Sampling** = MCP server request LLM sampling từ client (Claude Desktop gọi LLM thay cho server). Server không cần API key LLM riêng — dùng credentials của user.
+:::
+
+::: details 10. Build MCP cho VN platform là?
+**A.** Niche nhỏ
+**B.** Blue ocean opportunity 2026 ✅
+**C.** Bão hoà
+**D.** Không khả thi
+
+**Đáp án: B** — **100% blue ocean**. MISA, KiotViet, Sapo, Pancake, Base.vn, Haravan, Getfly **CHƯA có official MCP**. Market size: 10,000+ SMEs VN dùng platforms này.
+:::
+
+**Score**:
+- 8-10/10 ✅ Chapter 6 mastered — sẵn sàng build MCP biz model
+- 5-7/10 ⚠️ Re-read sections 1-13
+- <5/10 ❌ Redo lab, build real MCP server
+
+---
+
+## 20 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md)

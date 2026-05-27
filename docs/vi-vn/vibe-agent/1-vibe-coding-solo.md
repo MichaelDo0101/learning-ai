@@ -496,7 +496,312 @@ Length: mỗi tweet < 280 ký tự.
 
 ---
 
-## 15 Đọc tiếp
+## 15 📊 Architecture Diagram — Solo Founder Workflow
+
+```mermaid
+flowchart LR
+    Idea([💡 Ý tưởng]) --> Validate{50+ signup<br/>trong 24h?}
+    Validate -->|❌ No| Pivot[🔄 Pivot niche]
+    Pivot --> Idea
+    Validate -->|✅ Yes| Spec[📋 Spec với Claude<br/>3 feature core]
+    Spec --> Build[🛠️ Build MVP<br/>Cursor + Lovable<br/>4-6 giờ]
+    Build --> Deploy[🚀 Deploy Vercel]
+    Deploy --> Launch[📢 ProductHunt<br/>+ Twitter thread]
+    Launch --> Users[👥 5 paying<br/>customers]
+    Users --> Iterate[🔁 Iterate<br/>2 days/feature]
+    Iterate --> Scale[📈 $500 → $5K MRR]
+
+    style Validate fill:#fbbf24,stroke:#f59e0b,color:#000
+    style Users fill:#10b981,stroke:#059669,color:#fff
+    style Scale fill:#6366f1,stroke:#4f46e5,color:#fff
+```
+
+**Giải thích flow:**
+1. **Validate trước build** — 50 signup trong 24h là threshold tối thiểu (Marc Lou pattern)
+2. **Spec rồi mới build** — Claude phá spec thành tasks, tránh scope creep
+3. **Ship trong 1 weekend** — không cầu toàn (Pieter Levels: "ship fast, ship ugly")
+4. **5 paying < 50 free** — 5 người trả tiền > 50 người dùng free
+5. **Iterate based on REAL feedback**, không phải gut feeling
+
+---
+
+## 16 🧪 Hands-on Lab — Build SaaS đầu tiên trong 1 giờ
+
+::: tip 🎯 Goal
+Trong 60 phút: ship 1 landing page + waitlist form live trên Vercel. Tối thiểu 1 user signup.
+:::
+
+### Prerequisites checklist
+
+```
+□ Node.js >= 18 cài máy
+□ GitHub account
+□ Vercel account (free tier OK)
+□ Cursor IDE đã cài (https://cursor.com)
+□ Claude Pro hoặc Lovable Free ($0 tier)
+```
+
+### Step 1. Setup project (5 phút)
+
+```bash
+# Tạo Next.js app với template Vercel
+npx create-next-app@latest my-saas \
+  --typescript --tailwind --app --no-src-dir
+cd my-saas
+
+# Cài dependencies cần thiết
+npm install @vercel/postgres resend
+```
+
+### Step 2. Spec với Claude (5 phút)
+
+Mở Cursor, gõ Cmd+L (chat), paste:
+
+```
+Tôi muốn build SaaS landing page cho [TÊN PRODUCT của bạn].
+
+Yêu cầu:
+1. Hero section với headline + CTA
+2. 3 benefits cards
+3. Email waitlist form (lưu vào Postgres)
+4. Success message sau khi submit
+5. Mobile responsive
+
+Stack: Next.js 15 App Router + Tailwind + shadcn-ui
+
+Cho tôi:
+- File structure
+- Code app/page.tsx
+- Code app/api/waitlist/route.ts
+- Schema DB
+```
+
+### Step 3. Implement với Cursor (30 phút)
+
+Accept Claude code → save → run `npm run dev` → check `localhost:3000`.
+
+**Working code skeleton:**
+
+```tsx
+// app/page.tsx
+'use client'
+import { useState } from 'react'
+
+export default function Home() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle')
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setStatus('loading')
+    const res = await fetch('/api/waitlist', {
+      method: 'POST',
+      body: JSON.stringify({ email })
+    })
+    if (res.ok) setStatus('success')
+  }
+
+  return (
+    <main className="max-w-2xl mx-auto pt-20 px-4">
+      <h1 className="text-5xl font-bold">Your AI SaaS in 60 min</h1>
+      <p className="text-xl mt-4 text-gray-600">Vibe coded with Claude + Cursor</p>
+
+      <form onSubmit={handleSubmit} className="mt-8 flex gap-2">
+        <input
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="you@example.com"
+          className="flex-1 px-4 py-2 border rounded"
+        />
+        <button
+          disabled={status === 'loading'}
+          className="px-6 py-2 bg-black text-white rounded"
+        >
+          {status === 'success' ? '✅ Đã đăng ký' : 'Join waitlist'}
+        </button>
+      </form>
+    </main>
+  )
+}
+```
+
+```ts
+// app/api/waitlist/route.ts
+import { sql } from '@vercel/postgres'
+
+export async function POST(req: Request) {
+  const { email } = await req.json()
+  await sql`INSERT INTO waitlist (email, created_at) VALUES (${email}, NOW())`
+  return Response.json({ ok: true })
+}
+```
+
+### Step 4. Deploy Vercel (10 phút)
+
+```bash
+git init && git add -A && git commit -m "init"
+gh repo create my-saas --public --source=. --push
+
+# Deploy
+npx vercel --prod
+# Follow CLI prompts — link to GitHub repo, set up Postgres
+```
+
+### Step 5. Get first user (10 phút)
+
+- Post Twitter: "Just shipped [product]. Signup: [URL]"
+- Post Threads + LinkedIn
+- DM 5 bạn bè test
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| `Module not found '@vercel/postgres'` | `npm install @vercel/postgres` |
+| Postgres connection fail trong dev | Setup `.env.local` với `POSTGRES_URL` (Vercel cho free) |
+| CORS error khi submit form | Check route handler có return `Response.json()` |
+| Vercel deploy fail | Check `package.json` engines >= 18 |
+
+---
+
+## 17 🏗️ Mini-Project — "Ship 1 product trong 7 ngày"
+
+::: warning 🎯 Assignment
+
+**Mục tiêu**: Cuối 7 ngày, có **5 paying customer** ($1+ mỗi người).
+
+**Deliverables**:
+1. Live URL (deployed Vercel/Netlify)
+2. Stripe checkout work
+3. 5+ real signups (không phải bạn tự test)
+4. 1 Twitter thread build-in-public 7 ngày
+5. Post-mortem: 500 từ "What I learned"
+
+**Rubric đánh giá** (mỗi tiêu chí 1-5 điểm):
+
+| Tiêu chí | 1đ | 3đ | 5đ |
+|------|------|------|------|
+| **Ship velocity** | >14 ngày | 7-10 ngày | <7 ngày |
+| **Stripe integration** | Không có | Có nhưng buggy | Work + webhook |
+| **Niche specificity** | Generic AI | Có niche | Niche rất cụ thể (vd "AI ảnh CV cho dev VN") |
+| **Distribution** | 0 share | Twitter post | Thread + reach 1K+ |
+| **Paying customers** | 0 | 1-3 | 5+ |
+| **Post-mortem quality** | Không có | Có nhưng generic | Concrete lessons + numbers |
+
+**Total score**: ≥18/30 = pass. ≥25/30 = excellent.
+
+**Stretch goals** 🚀:
+- Land 1 user trả >$50 (sign of real PMF)
+- Get featured trên IndieHackers
+- Hit ProductHunt top 5 daily
+:::
+
+---
+
+## 18 🎓 Knowledge Check
+
+Test bạn đã hiểu chapter này:
+
+::: details 1. Pattern Vibe Coding chính là gì?
+**A.** Học syntax → viết code chuẩn → debug
+**B.** Mô tả ý tưởng → AI gen code → run + observe → iterate ✅
+**C.** Plan kỹ → architect → code carefully
+**D.** Pair với senior dev → review từng dòng
+
+**Đáp án: B** — Vibe Coding (Karpathy Feb 2025) là "describe intent, accept code, run, iterate". Không deep-read từng dòng.
+:::
+
+::: details 2. Pieter Levels có bao nhiêu nhân viên cho PhotoAI?
+**A.** 5 dev + 1 designer
+**B.** 0 — solo founder ✅
+**C.** Outsource team Pakistan
+**D.** Có 1 co-founder
+
+**Đáp án: B** — 0 employees. PhotoAI = 14K dòng raw PHP, $1.65M ARR ($132K MRR T11/2025).
+:::
+
+::: details 3. Lovable đạt $400M ARR trong bao lâu?
+**A.** 5 năm
+**B.** 3 năm
+**C.** 24 tháng từ launch ✅
+**D.** 5 năm
+
+**Đáp án: C** — Lovable từ launch (T6/2023) đến $400M ARR mất ~24 tháng. Fastest-growing European startup history.
+:::
+
+::: details 4. Sabrine Matos (Brazil) build Plinq bằng gì?
+**A.** React + Node.js custom
+**B.** Lovable no-code ✅
+**C.** WordPress
+**D.** Webflow
+
+**Đáp án: B** — Sabrine zero coding background, dùng Lovable build full-stack. $456K ARR trong 3 tháng.
+:::
+
+::: details 5. Code Bolt/Lovable/v0 có % vulnerability rate?
+**A.** 5-10%
+**B.** 20-25%
+**C.** 40-45% ✅
+**D.** Gần 0%
+
+**Đáp án: C** — Research 2026 cho thấy 40-45% code AI-gen có vulnerability. Bắt buộc chạy Claude Code "security review mode" trước launch.
+:::
+
+::: details 6. Replit Agent 3 autonomous bao lâu?
+**A.** 30 phút
+**B.** 60 phút
+**C.** 200 phút ✅
+**D.** 8 tiếng
+
+**Đáp án: C** — Replit Agent 3 (Q1 2026) chạy autonomous **200 phút**, self-healing code, generate sub-agents.
+:::
+
+::: details 7. Pattern "build in public" hiệu quả vì?
+**A.** Tăng SEO
+**B.** Tạo audience trước khi cần bán (free CAC) ✅
+**C.** Tạo pressure ship
+**D.** Tất cả đều đúng
+
+**Đáp án: D** — Tất cả đúng. Nhưng quan trọng nhất là B: Pieter Levels có 700K followers → CAC ~$0 khi launch.
+:::
+
+::: details 8. Marc Lou ship bao nhiêu startup trong 2 năm?
+**A.** 5
+**B.** 16 ✅
+**C.** 50
+**D.** 100
+
+**Đáp án: B** — Marc Lou ship 16+ startup, total $1.03M revenue 2025, 0 nhân viên.
+:::
+
+::: details 9. Stripe vs Lemon Squeezy: chọn cái nào cho founder VN bán global?
+**A.** Stripe luôn
+**B.** Lemon Squeezy (Merchant of Record handle VAT/tax) ✅
+**C.** Tự build VNPay
+**D.** PayPal Business
+
+**Đáp án: B** — Lemon Squeezy là Merchant of Record → outsource VAT/GST/sales tax globally. Founder VN không cần thuê accountant quốc tế.
+:::
+
+::: details 10. Theanna ($203K ARR) chia sẻ điều gì quan trọng?
+**A.** Vibe coding magic
+**B.** "Vibe coding makes you faster, but doesn't make you smarter about WHAT to build" ✅
+**C.** Cần học CS fundamentals
+**D.** AI sẽ thay dev
+
+**Đáp án: B** — Theanna's lesson: AI tools accelerate execution, nhưng quyết định WHAT to build vẫn là human judgment + customer interview.
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 2 (Claude Code Deep)
+- 5-7/10 ⚠️ Re-read sections 11-15
+- <5/10 ❌ Watch lại 5 videos + redo lab
+
+---
+
+## 19 Đọc tiếp
 
 - 🤖 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md) — autonomous coding 30+ giờ
 - 🖱️ [Chapter 3 — Computer Use](./3-computer-use.md) — agent click màn hình

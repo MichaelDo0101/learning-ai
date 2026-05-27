@@ -489,7 +489,350 @@ Report: pass/fail per step + diff explanation.
 
 ---
 
-## 16 Đọc tiếp
+## 16 📊 Architecture Diagram — Computer Use Loop
+
+```mermaid
+sequenceDiagram
+    participant U as 👤 User
+    participant A as 🧠 Agent (Claude Sonnet 4.6)
+    participant V as 👁️ Vision Model
+    participant OS as 💻 OS (mouse/keyboard)
+    participant App as 🖥️ Target App (Excel/Browser)
+
+    U->>A: "Open Excel, create table, save"
+    loop Until task done
+        A->>OS: take_screenshot()
+        OS-->>V: PNG image
+        V-->>A: scene description + clickable areas
+        A->>A: 🤔 Plan next action
+        A->>OS: click(x, y) / type("...") / scroll()
+        OS->>App: Execute action
+        App-->>OS: UI updated
+        A->>OS: take_screenshot() (verify)
+        OS-->>A: Verify expected state
+    end
+    A->>U: ✅ Task complete + screenshots
+```
+
+**Key principles:**
+1. **Screenshot before action** — agent "thấy" trước khi "làm"
+2. **Verify after action** — confirm state changed như expected
+3. **Recover from errors** — nếu click sai, agent self-correct
+4. **Loop until done OR max iterations** — tránh infinite loop
+
+---
+
+## 17 🧪 Hands-on Lab — Automate Excel với Computer Use API
+
+::: tip 🎯 Goal
+60 phút: agent tự mở Excel, tạo bảng 5 hàng từ JSON data, save thành file.
+:::
+
+### Prerequisites checklist
+
+```
+□ Anthropic API key ($10+ — Computer Use tốn token vision)
+□ Python 3.10+
+□ Excel/LibreOffice cài máy (Mac/Windows/Linux OK)
+□ Beta header access (Anthropic enable cho mọi user)
+□ Display resolution: 1920x1080 (recommended)
+```
+
+### Step 1. Setup environment
+
+```bash
+mkdir excel-agent && cd excel-agent
+python -m venv venv && source venv/bin/activate  # Mac/Linux
+# Hoặc: venv\Scripts\activate  # Windows
+
+pip install anthropic pillow pyautogui python-dotenv
+echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
+```
+
+### Step 2. Code agent (cleaned, minimal version)
+
+```python
+# agent.py
+import os
+import base64
+import io
+import time
+from anthropic import Anthropic
+from PIL import Image
+import pyautogui
+from dotenv import load_dotenv
+
+load_dotenv()
+client = Anthropic()
+
+# Disable pyautogui safety (auto-fail when mouse at 0,0)
+pyautogui.FAILSAFE = False
+
+def take_screenshot() -> str:
+    """Return base64-encoded screenshot."""
+    img = pyautogui.screenshot()
+    buf = io.BytesIO()
+    img.save(buf, format='PNG')
+    return base64.standard_b64encode(buf.getvalue()).decode()
+
+def execute_action(action):
+    """Execute Computer Use tool call."""
+    name = action.get('action')
+
+    if name == 'screenshot':
+        return {'screenshot': take_screenshot()}
+
+    if name == 'left_click':
+        coords = action['coordinate']
+        pyautogui.click(coords[0], coords[1])
+        time.sleep(0.5)
+        return {'screenshot': take_screenshot()}
+
+    if name == 'type':
+        pyautogui.typewrite(action['text'], interval=0.05)
+        time.sleep(0.3)
+        return {'screenshot': take_screenshot()}
+
+    if name == 'key':
+        pyautogui.press(action['text'])
+        time.sleep(0.3)
+        return {'screenshot': take_screenshot()}
+
+    if name == 'scroll':
+        pyautogui.scroll(action.get('scroll_amount', 3))
+        return {'screenshot': take_screenshot()}
+
+    return {'error': f'Unknown action: {name}'}
+
+def run_agent(task: str, max_iter: int = 20):
+    """Agent loop with Computer Use."""
+    messages = [{'role': 'user', 'content': task}]
+
+    for i in range(max_iter):
+        print(f'\n🔄 Iteration {i+1}/{max_iter}')
+
+        response = client.beta.messages.create(
+            model='claude-sonnet-4-6',
+            max_tokens=4096,
+            tools=[{
+                'type': 'computer_20251124',
+                'name': 'computer',
+                'display_width_px': 1920,
+                'display_height_px': 1080,
+            }],
+            messages=messages,
+            extra_headers={'anthropic-beta': 'computer-use-2025-11-24'}
+        )
+
+        # Check stop reason
+        if response.stop_reason == 'end_turn':
+            print('✅ Task complete')
+            return response.content[-1].text
+
+        # Execute tool calls
+        for block in response.content:
+            if block.type == 'tool_use':
+                print(f'  → {block.input.get("action")}')
+                result = execute_action(block.input)
+
+                messages.append({
+                    'role': 'assistant',
+                    'content': response.content
+                })
+                messages.append({
+                    'role': 'user',
+                    'content': [{
+                        'type': 'tool_result',
+                        'tool_use_id': block.id,
+                        'content': [{
+                            'type': 'image',
+                            'source': {
+                                'type': 'base64',
+                                'media_type': 'image/png',
+                                'data': result.get('screenshot', '')
+                            }
+                        }] if 'screenshot' in result else f"Error: {result}"
+                    }]
+                })
+
+    return 'Max iterations reached'
+
+# Run
+task = """Open Excel (or any spreadsheet app available).
+Create a table with these 5 rows:
+- Name: Lan, Age: 28, City: Hanoi
+- Name: Minh, Age: 32, City: HCMC
+- Name: Hoa, Age: 25, City: Da Nang
+- Name: Tuan, Age: 40, City: Hue
+- Name: Mai, Age: 30, City: Can Tho
+Save as 'employees.xlsx' on Desktop."""
+
+result = run_agent(task)
+print(f'\n📋 Final: {result}')
+```
+
+### Step 3. Run + observe
+
+```bash
+python agent.py
+```
+
+Quan sát: agent screenshot → click File → New → type data → save. Mỗi screenshot tốn ~$0.02-0.05.
+
+### Step 4. Verify
+
+- File `~/Desktop/employees.xlsx` tồn tại
+- Open Excel — table 5 rows đúng data
+- Total cost: $0.50-2 cho task này
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| `Display resolution mismatch` | Set `display_width_px` + `height_px` đúng resolution máy |
+| Agent click sai chỗ | Resolution conflict — restart, check `Cmd+Tab` xem display chính |
+| Loop infinite | Reduce `max_iter`, improve prompt với "If stuck, return error" |
+| Permission denied (Mac) | System Preferences → Privacy → Accessibility → enable Terminal/Python |
+| Cost cao | Vision token expensive. Limit screenshots, dùng `take_screenshot` strategically |
+
+---
+
+## 18 🏗️ Mini-Project — Automate Daily Reconciliation cho team kế toán
+
+::: warning 🎯 Assignment
+
+**Mục tiêu**: Build agent tự động hoá quy trình daily reconciliation (đối chiếu) giữa 2 hệ thống legacy.
+
+**Bối cảnh**: Bạn pretend là consultant cho 1 SME VN dùng:
+- **MISA** (kế toán) — desktop app legacy
+- **KiotViet** (POS) — web app
+- Daily: kế toán phải xuất report cả 2, mở Excel, đối chiếu thủ công ~2 giờ/ngày
+
+**Requirements**:
+1. Agent mở MISA → export today's transactions → CSV
+2. Agent mở KiotViet web → login → export today's sales → CSV
+3. Agent mở Excel → load 2 CSV → vlookup so sánh → highlight discrepancies
+4. Save report `reconciliation-YYYY-MM-DD.xlsx`
+5. Send Slack notification: "✅ Reconciliation done. X discrepancies found."
+
+**Acceptance criteria**:
+- [ ] Run end-to-end không can thiệp
+- [ ] Handle login MISA + KiotViet automatically
+- [ ] Time saved: 2 giờ → <15 phút
+- [ ] Error handling: nếu app crash, retry 3 lần rồi alert
+- [ ] Daily scheduled (cron / Task Scheduler)
+- [ ] Cost: <$2/run
+
+**Time estimate**: 1-2 tuần (full project)
+
+**Stretch goals** 🚀:
+- Add OCR cho scanned invoices
+- Multi-branch support (3-5 chi nhánh)
+- Email report cho manager mỗi sáng 8h
+:::
+
+---
+
+## 19 🎓 Knowledge Check
+
+::: details 1. Computer Use OSWorld-Verified Sonnet 4.6 đạt bao nhiêu %?
+**A.** 35%
+**B.** 50%
+**C.** 72.5% ✅
+**D.** 90%
+
+**Đáp án: C** — Sonnet 4.6 đạt **72.5% OSWorld-Verified** T2/2026, ≈ baseline người (70-73%). Up từ 14.9% T10/2024.
+:::
+
+::: details 2. Khi nào nên dùng Computer Use thay vì API agent?
+**A.** Tốc độ cao
+**B.** App legacy không có API ✅
+**C.** Cost thấp
+**D.** Production critical
+
+**Đáp án: B** — Computer Use cho legacy app không có API. API agent (Claude + MCP) nhanh + rẻ hơn nếu có API. Project Mariner shutdown vì visual quá expensive vs API-first.
+:::
+
+::: details 3. Allianz reduce underwriting cycle từ bao nhiêu xuống bao nhiêu với Claude agents?
+**A.** 5 tuần → 5 ngày
+**B.** 10 tuần → 10 ngày ✅
+**C.** 1 tháng → 1 tuần
+**D.** 6 tháng → 1 tháng
+
+**Đáp án: B** — Allianz (insurance Munich) underwriting cycles: **10 weeks → 10 days**, insurance claims accuracy 88% Claude vs human expert.
+:::
+
+::: details 4. DoorDash xử lý bao nhiêu AI calls/day với Claude Haiku + Amazon Connect?
+**A.** Hundreds
+**B.** Thousands
+**C.** Hàng trăm nghìn (Hundreds of thousands) ✅
+**D.** Millions
+
+**Đáp án: C** — DoorDash voice-operated self-service: **hàng trăm nghìn daily AI-powered calls**, voice latency ≤2.5s, development time -50%, testing capacity 50x.
+:::
+
+::: details 5. Zapier có bao nhiêu internal AI agents?
+**A.** ~50
+**B.** ~100
+**C.** 800+ ✅
+**D.** Hàng nghìn
+
+**Đáp án: C** — Zapier deploy Claude Enterprise internal: **800+ internal Claude-driven agents** automating workflow. Killer case: emoji-in-Slack-triggers-merge-request.
+:::
+
+::: details 6. Project Mariner (Google) bị shutdown khi nào?
+**A.** Q4 2025
+**B.** Q1 2026
+**C.** T5/4/2026 ✅
+**D.** Vẫn active
+
+**Đáp án: C** — Google **shutdown Project Mariner T5/4/2026**, 17 tháng experiment killed. Lý do: visual screenshot architecture quá expensive, error-prone, outclassed by API-first agents (như Claude Code + MCP).
+:::
+
+::: details 7. Microsoft Copilot Studio Computer Use GA khi nào?
+**A.** Q4 2025
+**B.** Q1 2026
+**C.** 13/5/2026 ✅
+**D.** Chưa GA
+
+**Đáp án: C** — Microsoft Copilot Studio Computer Use Agents **GA 13/5/2026** — first với allowlist governance, DLP policies, audit trails, human-in-loop checkpoints.
+:::
+
+::: details 8. CRED (India fintech) handle bao nhiêu % support tickets với Claude Computer Use?
+**A.** 10%
+**B.** 25%
+**C.** 40% ✅
+**D.** 90%
+
+**Đáp án: C** — CRED Customer support agent navigate internal CRM → handle **40% support ticket** without human intervention.
+:::
+
+::: details 9. Computer Use pattern tốt nhất là gì?
+**A.** Click theo coordinates hard-coded
+**B.** Vision + reasoning (đọc screenshot live, adapt) ✅
+**C.** Hard-coded macro
+**D.** Selenium scripts
+
+**Đáp án: B** — RPA cũ break khi UI change. Computer Use đọc screenshot live → adapt. Đây là **moat chính** của tech vs traditional RPA.
+:::
+
+::: details 10. Anthropic Mythos AI đạt bao nhiêu % OSWorld?
+**A.** 60%
+**B.** 70%
+**C.** 79.6% ✅ (frontier preview)
+**D.** 90%
+
+**Đáp án: C** — Claude Mythos Preview đạt **79.6% OSWorld** (frontier preview). Stanford 2026 AI Index: 12% (2025) → 66% (2026) — generational leap.
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 4 (Multi-Agent)
+- 5-7/10 ⚠️ Re-read sections 1-12
+- <5/10 ❌ Redo lab + setup actually Computer Use
+
+---
+
+## 20 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md)

@@ -563,7 +563,337 @@ Sun: Off / read AI news
 
 ---
 
-## 17 Đọc tiếp
+## 17 📊 Architecture Diagram — Orchestrator-Worker Pattern
+
+```mermaid
+flowchart TB
+    User[👤 User task lớn] --> Orch
+    Orch[🧠 Orchestrator<br/>Sonnet 4.6 / Opus 4.7]
+
+    Orch -->|Plan + decompose| Sub1[⚒️ Sub-agent 1<br/>Haiku 4.5<br/>role: security audit]
+    Orch -->|Plan + decompose| Sub2[⚒️ Sub-agent 2<br/>Haiku 4.5<br/>role: performance]
+    Orch -->|Plan + decompose| Sub3[⚒️ Sub-agent 3<br/>Haiku 4.5<br/>role: tests]
+
+    Sub1 -->|Tools: Grep, Read| Result1[(📝 Findings 1)]
+    Sub2 -->|Tools: Bash profile| Result2[(📝 Findings 2)]
+    Sub3 -->|Tools: pytest, jest| Result3[(📝 Findings 3)]
+
+    Result1 -->|Summary| Orch
+    Result2 -->|Summary| Orch
+    Result3 -->|Summary| Orch
+
+    Orch -->|Synthesize| Final[📋 Final Report]
+    Final --> User
+
+    style Orch fill:#6366f1,stroke:#4f46e5,color:#fff
+    style Sub1 fill:#fbbf24,stroke:#f59e0b,color:#000
+    style Sub2 fill:#fbbf24,stroke:#f59e0b,color:#000
+    style Sub3 fill:#fbbf24,stroke:#f59e0b,color:#000
+    style Final fill:#10b981,stroke:#059669,color:#fff
+```
+
+**Cost optimization key insights:**
+- Orchestrator = **Sonnet 4.6** ($3/$15 per MTok) — task hard
+- Workers = **Haiku 4.5** ($1/$5 per MTok) — task focused, fast, cheap
+- **Saving 40%** so với all-Sonnet
+- Mỗi sub-agent có **fresh context** → tránh bloat
+- Single summary return → orchestrator parse được
+
+---
+
+## 18 🧪 Hands-on Lab — First Orchestrator-Worker với Claude Code SDK
+
+::: tip 🎯 Goal
+60 phút: build security audit tool dùng 1 orchestrator + 3 workers parallel scan codebase.
+:::
+
+### Prerequisites checklist
+
+```
+□ Anthropic API key ($5 minimum top-up)
+□ Node.js >= 18
+□ TypeScript hoặc Python kinh nghiệm cơ bản
+□ Claude Code Pro ($20/tháng) — optional nhưng recommend
+□ Git repo có code thật để audit
+```
+
+### Step 1. Setup environment
+
+```bash
+mkdir security-audit-agent && cd security-audit-agent
+npm init -y
+npm install @anthropic-ai/sdk dotenv
+npm install -D typescript tsx @types/node
+
+# Setup TypeScript
+npx tsc --init
+
+# Create .env
+echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
+echo ".env" > .gitignore
+```
+
+### Step 2. Code orchestrator-worker
+
+```typescript
+// src/audit.ts
+import Anthropic from '@anthropic-ai/sdk';
+import * as fs from 'fs';
+import * as path from 'path';
+import 'dotenv/config';
+
+const client = new Anthropic();
+
+interface AuditResult {
+  worker: string;
+  findings: string[];
+  recommendations: string[];
+}
+
+// Worker: chuyên 1 loại audit
+async function spawnWorker(
+  role: string,
+  targetDir: string
+): Promise<AuditResult> {
+  const files = fs
+    .readdirSync(targetDir, { recursive: true })
+    .filter((f) => typeof f === 'string' && /\.(ts|tsx|js)$/.test(f))
+    .slice(0, 20); // sample 20 file
+
+  const codeSample = files
+    .map((f) => {
+      const p = path.join(targetDir, f as string);
+      const content = fs.readFileSync(p, 'utf-8').slice(0, 2000);
+      return `--- ${f} ---\n${content}`;
+    })
+    .join('\n\n');
+
+  const response = await client.messages.create({
+    model: 'claude-haiku-4-5', // worker dùng Haiku (rẻ)
+    max_tokens: 1024,
+    system: `You are a specialist security auditor for ${role}.
+Return ONLY JSON: { "findings": ["..."], "recommendations": ["..."] }`,
+    messages: [
+      {
+        role: 'user',
+        content: `Audit these files for ${role} issues:\n\n${codeSample}`
+      }
+    ]
+  });
+
+  const text = (response.content[0] as any).text;
+  const json = JSON.parse(text.match(/\{[\s\S]*\}/)?.[0] || '{}');
+
+  return {
+    worker: role,
+    findings: json.findings || [],
+    recommendations: json.recommendations || []
+  };
+}
+
+// Orchestrator: spawn parallel + synthesize
+async function orchestrate(targetDir: string) {
+  console.log(`🧠 Orchestrator: starting audit of ${targetDir}`);
+
+  // Spawn 3 workers in parallel
+  const [sqlAudit, xssAudit, authAudit] = await Promise.all([
+    spawnWorker('SQL injection', targetDir),
+    spawnWorker('XSS vulnerabilities', targetDir),
+    spawnWorker('Authentication bypass', targetDir)
+  ]);
+
+  // Synthesize với Sonnet (orchestrator)
+  const synthResponse = await client.messages.create({
+    model: 'claude-sonnet-4-6',
+    max_tokens: 2048,
+    system:
+      'You synthesize security audit reports into a clear actionable summary.',
+    messages: [
+      {
+        role: 'user',
+        content: `Combine these 3 audits into 1 prioritized report (Markdown):
+
+SQL: ${JSON.stringify(sqlAudit)}
+XSS: ${JSON.stringify(xssAudit)}
+Auth: ${JSON.stringify(authAudit)}`
+      }
+    ]
+  });
+
+  return (synthResponse.content[0] as any).text;
+}
+
+// Run
+const targetDir = process.argv[2] || './';
+orchestrate(targetDir).then((report) => {
+  fs.writeFileSync('audit-report.md', report);
+  console.log('✅ Report saved → audit-report.md');
+});
+```
+
+### Step 3. Run
+
+```bash
+# Audit chính dir hiện tại
+npx tsx src/audit.ts ./src
+
+# Hoặc audit project khác
+npx tsx src/audit.ts /path/to/your/project/src
+```
+
+### Step 4. Verify output
+
+Open `audit-report.md` — bạn nên thấy:
+- Top 3-5 vulnerability tìm được
+- Severity (high/medium/low)
+- Recommendation cụ thể cho mỗi finding
+- Cost: ~$0.30-0.80 cho audit 20 file
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| `Authentication error 401` | Check `.env` có ANTHROPIC_API_KEY đúng |
+| `Rate limit` | Anthropic free tier limit. Top-up $5+ |
+| `JSON parse fail` | Worker không return JSON đúng → improve system prompt với example |
+| Token bill quá cao | Reduce `slice(0, 2000)` xuống 1000 |
+
+---
+
+## 19 🏗️ Mini-Project — Code Review Bot cho team bạn
+
+::: warning 🎯 Assignment
+
+**Mục tiêu**: Build tool review PR tự động cho team (5-10 dev).
+
+**Requirements**:
+1. GitHub Action trigger khi có PR mới
+2. Spawn 4 sub-agents parallel:
+   - Style/lint checker
+   - Security audit
+   - Performance review
+   - Test coverage check
+3. Post comment summary lên PR
+4. Approve/request-changes dựa trên severity
+
+**Acceptance criteria**:
+- [ ] Setup `.github/workflows/ai-review.yml`
+- [ ] Code orchestrator dùng Claude SDK
+- [ ] 4 sub-agents return structured JSON
+- [ ] PR comment có markdown rendering tốt
+- [ ] Cost monitoring: alert khi >$5/PR
+- [ ] Skip review cho PR nhỏ (<50 lines)
+
+**Time estimate**: 1 weekend (8-12 giờ)
+
+**Stretch goals** 🚀:
+- Add tags auto: `bug`, `feature`, `refactor`
+- Auto-assign reviewer theo file changes
+- Cost dashboard cho team
+:::
+
+---
+
+## 20 🎓 Knowledge Check
+
+::: details 1. Claude Code 2.1.0 thêm feature gì quan trọng?
+**A.** Internet browsing
+**B.** Hot-reload skills + scoped hooks ✅
+**C.** Image generation
+**D.** Voice cloning
+
+**Đáp án: B** — Claude Code 2.1.0 (T1/2026) thêm hot-reload skills + PreToolUse/PostToolUse/Stop scoped hooks + session portability.
+:::
+
+::: details 2. CLAUDE.md nên giới hạn bao nhiêu dòng?
+**A.** <100
+**B.** <500 ✅
+**C.** <2000
+**D.** Không giới hạn
+
+**Đáp án: B** — Analysis 165+ repos: <500 dòng được Claude đọc đầy đủ; >1000 bị ignore phần sau. Ideal 60-400 dòng.
+:::
+
+::: details 3. Multi-agent vượt single agent bao nhiêu % trên Anthropic Research eval?
+**A.** +30%
+**B.** +60%
+**C.** +90.2% ✅
+**D.** +200%
+
+**Đáp án: C** — Anthropic Research multi-agent (lead Opus + 3-5 sub Sonnet) beat single Opus 4 bằng **+90.2%** trên internal eval. Nhưng cost ~15x token.
+:::
+
+::: details 4. Khi nào KHÔNG nên dùng multi-agent?
+**A.** Task có >5 parallel subtasks
+**B.** Sequential task (A → B → C) ✅
+**C.** Cost không phải vấn đề
+**D.** Cần specialists khác domain
+
+**Đáp án: B** — Sequential task không lợi từ parallel. 15x token cost không có ROI. Dùng single agent đơn giản hơn.
+:::
+
+::: details 5. Jaana Dogan (Google Gemini API team) Claude Code làm việc gì trong 1 giờ?
+**A.** Học Python
+**B.** Build distributed orchestrator system match work cô làm 1 năm ✅
+**C.** Debug Gemini API
+**D.** Write documentation
+
+**Đáp án: B** — Jaana Dogan: "Claude Code solved in 60 minutes what my team at Gemini iterated on for a year." Đáng chú ý nhất là Google insider thừa nhận Claude Code mạnh.
+:::
+
+::: details 6. Uber CTO burn 2026 AI budget trong bao lâu?
+**A.** 12 tháng
+**B.** 6 tháng
+**C.** 4 tháng ✅
+**D.** 2 năm
+
+**Đáp án: C** — Uber: Claude Code adoption Q4 2025 32% → T3/2026 84%. **70% code committed = AI-generated**. Burn budget trong 4 tháng. Cost $500-2000/engineer/month.
+:::
+
+::: details 7. PreToolUse hooks có khả năng gì duy nhất?
+**A.** Modify tool input
+**B.** BLOCK tool execution ✅
+**C.** Log tool calls
+**D.** Auto-retry on fail
+
+**Đáp án: B** — PreToolUse là hook DUY NHẤT có thể BLOCK action. Dùng cho file protection (không touch .env), mandatory review, secret scanning.
+:::
+
+::: details 8. Pattern "Just-in-Time Context Loading" là gì?
+**A.** Cache prompt prefix
+**B.** Giữ lightweight identifiers + load on-demand qua tools ✅
+**C.** Pre-load entire codebase
+**D.** Stream context từ DB
+
+**Đáp án: B** — Anthropic engineering practice: giữ lightweight pointers, Claude dùng tools (Read/Grep) để load on-demand. Tránh nhồi data vào context window.
+:::
+
+::: details 9. Sub-Agent dùng Sonnet hay Haiku cho 90% việc?
+**A.** Sonnet (tốt hơn)
+**B.** Opus (mạnh nhất)
+**C.** Haiku 4.5 (đủ tốt + rẻ 5x) ✅
+**D.** GPT-5 (rẻ hơn)
+
+**Đáp án: C** — Haiku 4.5 đủ tốt cho code gen, file manipulation, test execution. Chỉ dùng Opus/Sonnet cho planning/review.
+:::
+
+::: details 10. Rakuten Kenta Naruse implement vLLM feature autonomous bao lâu?
+**A.** 1 tuần
+**B.** 1 ngày
+**C.** 7 giờ ✅
+**D.** 30 phút
+
+**Đáp án: C** — Rakuten: Claude Code single run **7 giờ autonomous**, no human intervention. Implement activation vector extraction trong vLLM với **99.9% numerical accuracy**. Time to market: 24 ngày → 5 ngày (-79%).
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 3 (Computer Use)
+- 5-7/10 ⚠️ Re-read sections 6-12
+- <5/10 ❌ Redo lab + watch lại 5 videos
+
+---
+
+## 21 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md) (back)
 - 🖱️ [Chapter 3 — Computer Use](./3-computer-use.md) — agent click màn hình

@@ -573,7 +573,326 @@ Vapi voice agent (giọng Việt qua ElevenLabs)
 
 ---
 
-## 16 Đọc tiếp
+## 16 📊 Architecture Diagram — Smax + n8n + LLM cho AI Sale Agent
+
+```mermaid
+flowchart LR
+    subgraph "Channel Layer (Smax.ai)"
+        FB[📘 Facebook Messenger]
+        Zalo[💬 Zalo OA]
+        IG[📸 Instagram]
+        Web[🌐 Web chat]
+    end
+
+    subgraph "Orchestration (n8n)"
+        Webhook[🔗 Webhook receiver]
+        Classify{🧠 Intent classifier<br/>Haiku 4.5}
+        Route{Route by intent}
+    end
+
+    subgraph "AI Brain"
+        Sales[💼 Sales agent<br/>Sonnet 4.6]
+        CS[🎧 CS agent<br/>Sonnet 4.6]
+        Escalate[👤 Human handoff]
+    end
+
+    subgraph "Backend"
+        CRM[(📊 Pancake CRM)]
+        Inv[(📦 Inventory)]
+        Order[(🛒 Order DB)]
+    end
+
+    FB --> Webhook
+    Zalo --> Webhook
+    IG --> Webhook
+    Web --> Webhook
+
+    Webhook --> Classify
+    Classify --> Route
+    Route -->|sales intent| Sales
+    Route -->|support intent| CS
+    Route -->|escalate| Escalate
+
+    Sales -->|read/write| CRM
+    Sales -->|check stock| Inv
+    Sales -->|create order| Order
+
+    CS -->|lookup| CRM
+    CS -->|check order| Order
+
+    style Webhook fill:#6366f1,stroke:#4f46e5,color:#fff
+    style Sales fill:#10b981,stroke:#059669,color:#fff
+    style Escalate fill:#ef4444,stroke:#dc2626,color:#fff
+```
+
+**Architecture insights:**
+- **Smax.ai = channel layer** (KHÔNG làm logic phức tạp ở đây)
+- **n8n = orchestration + business logic** (webhook receive → classify → route → call AI → action)
+- **Claude/GPT = brain** (chỉ cho high-value reasoning)
+- **CRM/DB = state** (persistent memory ngoài context window LLM)
+- **Human escalation = mandatory** cho complex case
+
+---
+
+## 17 🧪 Hands-on Lab — Build AI Sale Agent với n8n + Claude + Smax.ai (VN)
+
+::: tip 🎯 Goal
+90 phút: build sale bot trên Facebook Messenger, dùng Smax.ai channel + n8n logic + Claude brain. Bot trả lời câu hỏi product + chốt đơn đơn giản.
+:::
+
+### Prerequisites checklist
+
+```
+□ Smax.ai trial account (free 14 ngày — smax.ai/en/index.html)
+□ Facebook Page đã có (test page OK)
+□ n8n Cloud Starter ($20/tháng) HOẶC n8n self-host (Docker free)
+□ Anthropic API key
+□ 1 sản phẩm mẫu để test (vd "Áo thun cotton, 200K VND")
+```
+
+### Step 1. Setup Smax.ai + connect FB Page
+
+1. Sign up smax.ai → connect Facebook Page
+2. Tạo "First Flow" → trigger "Khi nhận message"
+3. Add action "Call webhook" → URL n8n (Step 3)
+
+### Step 2. Setup n8n (Cloud hoặc Docker)
+
+```bash
+# Self-host Docker (free)
+docker run -it --rm \
+  --name n8n \
+  -p 5678:5678 \
+  -v n8n_data:/home/node/.n8n \
+  n8nio/n8n
+
+# Open http://localhost:5678
+```
+
+### Step 3. n8n workflow
+
+Tạo workflow mới:
+
+**Node 1: Webhook trigger**
+- Method: POST
+- Path: `/smax-message`
+- Copy URL → paste vào Smax.ai action
+
+**Node 2: HTTP Request (Claude API)**
+
+```json
+{
+  "method": "POST",
+  "url": "https://api.anthropic.com/v1/messages",
+  "headers": {
+    "x-api-key": "{{$env.ANTHROPIC_KEY}}",
+    "anthropic-version": "2023-06-01",
+    "content-type": "application/json"
+  },
+  "body": {
+    "model": "claude-haiku-4-5",
+    "max_tokens": 512,
+    "system": "Bạn là sale agent cho shop áo thun cotton. Sản phẩm: 'Áo thun cotton' 200K VND, size S/M/L/XL, màu trắng/đen. Mục tiêu: tư vấn size + chốt đơn. Trả lời ngắn gọn, thân thiện, tiếng Việt.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "={{ $json.body.message_text }}"
+      }
+    ]
+  }
+}
+```
+
+**Node 3: Send reply back to Smax**
+
+```json
+{
+  "method": "POST",
+  "url": "https://api.smax.ai/v1/conversation/{{$json.body.conversation_id}}/send",
+  "headers": {
+    "Authorization": "Bearer {{$env.SMAX_TOKEN}}"
+  },
+  "body": {
+    "text": "={{ $node['Claude'].json.content[0].text }}"
+  }
+}
+```
+
+### Step 4. Test
+
+1. Open Facebook Messenger → message vào test page: "Có áo size M không?"
+2. Quan sát n8n execution log → Claude response → Smax send reply
+3. Bot reply: "Dạ shop có áo size M trắng và đen ạ! Anh/chị muốn lấy màu nào?"
+
+### Step 5. Add escalation logic
+
+Thêm IF node sau Claude:
+- **Condition**: response.content contains "không rõ" OR "chuyển nhân viên"
+- **True branch**: Send Slack notification cho human agent + reply user "Em đang chuyển sang nhân viên hỗ trợ ạ"
+- **False branch**: Send bot reply
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| Smax webhook không trigger | Check Smax Flow đang ACTIVE + FB Page subscribe webhook |
+| n8n không nhận request | Self-host: dùng ngrok expose `localhost:5678`. Cloud: dùng URL n8n |
+| Claude API 401 | Check x-api-key header. Top-up Anthropic $5+ |
+| Response chậm | Switch Haiku → Sonnet chỉ cho query phức tạp. Cache common QA |
+| Bot trả lời không liên quan | Improve system prompt với example conversation |
+
+---
+
+## 18 🏗️ Mini-Project — Full AI Sale Agent cho 1 SME VN
+
+::: warning 🎯 Assignment
+
+**Mục tiêu**: Deploy production-grade AI Sale Agent cho 1 SME VN thật (pet-friendly: dùng demo brand nếu chưa có client).
+
+**Bối cảnh**: Bạn là consultant cho 1 shop fashion VN — 50-100 order/ngày qua Messenger. Owner muốn AI handle 70% inquiry để nhân viên focus chốt đơn lớn.
+
+**Requirements**:
+1. **3 channels**: Facebook Messenger + Zalo OA + Instagram DM
+2. **Product catalog**: 20+ SKU với ảnh, giá, mô tả (export từ Pancake/KiotViet/Sapo)
+3. **Conversation flows**:
+   - Greet + qualify (need + budget)
+   - Product recommendation (vector search)
+   - Size advice
+   - Stock check
+   - Promo upsell
+   - Checkout link gen
+   - Escalate human (complaint, refund, price negotiate)
+4. **Analytics dashboard**:
+   - Conversation count / day
+   - Conversion rate (chat → order)
+   - Top product asked
+   - Escalation rate
+5. **Cost monitoring**: alert >$50/ngày
+
+**Acceptance criteria**:
+- [ ] 3 channel work end-to-end
+- [ ] Conversation tự nhiên (test 20 conversation với người thật)
+- [ ] Close rate > 15% (industry benchmark)
+- [ ] Escalation rate < 20%
+- [ ] Cost < 5% revenue
+- [ ] Documentation cho client team training
+
+**Time estimate**: 2-3 tuần
+
+**Stretch goals** 🚀:
+- TikTok Shop integration (livestream → DM funnel)
+- Voice agent (Vapi) cho phone order
+- Multi-shop support (1 platform, N shop)
+- White-label cho agency
+
+**Pricing benchmark** (cho agency):
+- Setup: **$3-5K** (1 lần)
+- Recurring: **$300-1K/tháng** support
+- Revenue share: 1-2% sales attributed to bot
+:::
+
+---
+
+## 19 🎓 Knowledge Check
+
+::: details 1. Smax.ai vs n8n: pattern đúng cho AIECOS stack?
+**A.** Smax handle all logic
+**B.** Smax = channel layer, n8n = logic layer ✅
+**C.** n8n = channel, Smax = logic
+**D.** Tự build cả 2
+
+**Đáp án: B** — Smax channel + n8n orchestration + Claude/GPT brain + CRM state. Đừng cố nhét logic phức tạp vào Smax flow builder.
+:::
+
+::: details 2. Voice agent cần latency tối đa bao nhiêu để feel natural?
+**A.** <2s
+**B.** <800ms turn-around ✅
+**C.** <100ms
+**D.** Latency không quan trọng
+
+**Đáp án: B** — Vapi 99.99% SLA, stack chuẩn: Deepgram STT (~100ms) + Claude Haiku (~300ms first token) + ElevenLabs Turbo (~200ms) = ~800ms total.
+:::
+
+::: details 3. n8n MCP node làm được gì?
+**A.** Chỉ call MCP tools
+**B.** Expose n8n workflow như MCP server cho Claude/Cursor ✅
+**C.** Convert MCP → REST
+**D.** Cả A và B
+
+**Đáp án: D** — n8n có **MCP Server Trigger** (expose workflow) và **MCP Client Tool** (call MCP tools). Pattern "n8n = backend, Claude = brain" cực mạnh.
+:::
+
+::: details 4. Vapi đạt bao nhiêu cumulative calls?
+**A.** 100M
+**B.** 500M
+**C.** 1 BILLION ✅
+**D.** 10 billion
+
+**Đauán: C** — Vapi đạt **1 BILLION calls** cumulative T5/2026. $50M Series B @ $500M valuation, Amazon Ring chose Vapi over 40 competitors.
+:::
+
+::: details 5. Yody (VN fashion) đạt close rate boost bao nhiêu với Smax.ai?
+**A.** +5-10%
+**B.** +15-20% ✅
+**C.** +50%
+**D.** +100%
+
+**Đáp án: B** — Yody: **+15-20% sales close rate**, **3x cost reduction**, no team expansion needed.
+:::
+
+::: details 6. Let's Sushi đạt growth gì với Smax.ai chatbot?
+**A.** +50% revenue
+**B.** +133% revenue, +300% online orders ✅
+**C.** +20% subscribers
+**D.** -50% support tickets
+
+**Đáp án: B** — Let's Sushi (F&B Hanoi): featured by Meta, **+133% revenue, +300% online orders**.
+:::
+
+::: details 7. n8n raise gần nhất là?
+**A.** $50M Series A
+**B.** $100M Series B
+**C.** $180M Series C @ $2.5B ✅
+**D.** $500M Series D
+
+**Đáp án: C** — n8n **$180M Series C @ $2.5B valuation T10/2025** led by Accel (+ NVIDIA, Sequoia, HV Capital). $40M ARR.
+:::
+
+::: details 8. Cost control LLM trong workflow nên áp dụng pattern nào?
+**A.** Dùng GPT-4o cho mọi task
+**B.** IF node check complexity → branch Haiku (simple) vs Sonnet (complex) ✅
+**C.** Dùng model nhỏ nhất luôn
+**D.** Cache mọi response
+
+**Đáp án: B** — Routing rules giảm 60-80% cost: Haiku/4o-mini cho classification/extraction, Sonnet/4o cho generation. Pattern n8n: IF node check task complexity → branch LLM model.
+:::
+
+::: details 9. Memory & state failure mode #1 là gì?
+**A.** Database crash
+**B.** Voice agent quên context giữa turn → khách cúp máy ✅
+**C.** API rate limit
+**D.** Token cost
+
+**Đáp án: B** — Voice agent quên context = khách cúp máy. Workflow agent quên customer history = robot không nhớ tên. **Dùng Postgres/Supabase/Redis cho persistent memory**, KHÔNG dùng LLM context window.
+:::
+
+::: details 10. Human handoff là?
+**A.** Bug cần fix
+**B.** Feature, không phải bug ✅
+**C.** Last resort
+**D.** Sign of failure
+
+**Đáp án: B** — Yody, Let's Sushi đều có human handoff. **"Escalation path" rõ ràng**: trigger Slack notification, gán cho human agent. Là feature, không phải failure.
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 6 (MCP Ecosystem)
+- 5-7/10 ⚠️ Re-read sections 1-12
+- <5/10 ❌ Redo lab end-to-end với Smax thật
+
+---
+
+## 20 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🖱️ [Chapter 3 — Computer Use](./3-computer-use.md)

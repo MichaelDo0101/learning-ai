@@ -561,7 +561,365 @@ Source: [Linux Foundation A2A 150+ orgs](https://www.linuxfoundation.org/press/a
 
 ---
 
-## 17 Đọc tiếp
+## 17 📊 Architecture Diagram — 4 Multi-Agent Patterns
+
+```mermaid
+graph TB
+    subgraph "1. Orchestrator-Worker (DEFAULT)"
+        O[🧠 Lead] --> W1[Worker 1]
+        O --> W2[Worker 2]
+        O --> W3[Worker 3]
+        W1 --> O
+        W2 --> O
+        W3 --> O
+    end
+
+    subgraph "2. Debate"
+        A1[Proposer] -.->|argue| B1[Critic]
+        B1 -.->|argue| A1
+        A1 --> J1[Judge]
+        B1 --> J1
+    end
+
+    subgraph "3. Hierarchical"
+        CEO[CEO Agent] --> M1[Manager A]
+        CEO --> M2[Manager B]
+        M1 --> Wa[Workers]
+        M2 --> Wb[Workers]
+    end
+
+    subgraph "4. Swarm (peer-to-peer)"
+        S1[Agent 1] <--> S2[Agent 2]
+        S2 <--> S3[Agent 3]
+        S3 <--> S4[Agent 4]
+        S4 <--> S1
+    end
+
+    style O fill:#6366f1,stroke:#4f46e5,color:#fff
+    style CEO fill:#ec4899,stroke:#db2777,color:#fff
+```
+
+**Decision matrix:**
+| Pattern | Khi nào dùng | Cost overhead |
+|------|------|------|
+| **Orchestrator-Worker** ⭐ | 90% production use case | Standard (15x token) |
+| **Debate** | Critical decision, multi-perspective | 3x extra |
+| **Hierarchical** | Big task multi-level (research → design → code → marketing) | 2-3x |
+| **Swarm** | Emergent behavior, simulation | Highest, không predictable |
+
+---
+
+## 18 🧪 Hands-on Lab — Multi-Agent với LangGraph
+
+::: tip 🎯 Goal
+60-90 phút: build supervisor agent với 3 specialized workers (research, code, writer) dùng LangGraph.
+:::
+
+### Prerequisites checklist
+
+```
+□ Python 3.10+
+□ Anthropic API key ($10+)
+□ LangChain/LangGraph kinh nghiệm cơ bản
+□ Familiar với agent loop
+```
+
+### Step 1. Setup
+
+```bash
+mkdir multi-agent-lab && cd multi-agent-lab
+python -m venv venv && source venv/bin/activate
+
+pip install langgraph langchain-anthropic langchain-core python-dotenv
+echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
+```
+
+### Step 2. Code supervisor + 3 workers
+
+```python
+# supervisor.py
+import os
+from typing import Annotated, TypedDict, Literal
+from langchain_anthropic import ChatAnthropic
+from langchain_core.messages import HumanMessage, AIMessage
+from langgraph.graph import StateGraph, END
+from langgraph.prebuilt import create_react_agent
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# === State ===
+class TeamState(TypedDict):
+    messages: Annotated[list, lambda x, y: x + y]
+    next_agent: str  # which worker to call next
+    final: str
+
+# === Models ===
+# Supervisor: Sonnet (smart routing)
+supervisor_llm = ChatAnthropic(model='claude-sonnet-4-6', temperature=0)
+# Workers: Haiku (cheap)
+worker_llm = ChatAnthropic(model='claude-haiku-4-5', temperature=0)
+
+# === Worker tools (simplified — usually real APIs) ===
+def search_web(query: str) -> str:
+    """Mock: simulate web search."""
+    return f"[Search results for '{query}']: Top 3 results about {query}..."
+
+def write_code(spec: str) -> str:
+    """Mock: simulate code generation."""
+    return f"```python\n# {spec}\nprint('Hello')\n```"
+
+# === Workers ===
+researcher = create_react_agent(worker_llm, tools=[search_web])
+coder = create_react_agent(worker_llm, tools=[write_code])
+
+def writer_node(state):
+    """Final writer — combine + format."""
+    msg = worker_llm.invoke([HumanMessage(content=f"""
+Based on this conversation, write a clear final report:
+{state['messages']}
+Format: Markdown with sections.
+""")])
+    return {'messages': [msg], 'final': msg.content}
+
+# === Supervisor (router) ===
+def supervisor_node(state):
+    """Decide which worker to call next or finish."""
+    msg = supervisor_llm.invoke([HumanMessage(content=f"""
+You are a supervisor managing 3 workers:
+- 'researcher': searches information
+- 'coder': writes code
+- 'writer': writes final report
+
+Conversation so far:
+{state['messages']}
+
+Decide who to call next. Respond ONLY with: 'researcher', 'coder', 'writer', or 'FINISH'.
+""")])
+
+    next_a = msg.content.strip().lower()
+    if 'finish' in next_a:
+        return {'next_agent': 'FINISH', 'messages': []}
+
+    for w in ['researcher', 'coder', 'writer']:
+        if w in next_a:
+            return {'next_agent': w, 'messages': []}
+
+    return {'next_agent': 'writer', 'messages': []}  # default
+
+def researcher_node(state):
+    """Researcher worker — uses search tool."""
+    last_msg = state['messages'][-1].content if state['messages'] else ''
+    result = researcher.invoke({
+        'messages': [HumanMessage(content=f'Research: {last_msg}')]
+    })
+    return {'messages': result['messages']}
+
+def coder_node(state):
+    """Coder worker — uses code gen tool."""
+    last_msg = state['messages'][-1].content if state['messages'] else ''
+    result = coder.invoke({
+        'messages': [HumanMessage(content=f'Code for: {last_msg}')]
+    })
+    return {'messages': result['messages']}
+
+# === Routing ===
+def route(state) -> Literal['researcher', 'coder', 'writer', '__end__']:
+    next_a = state['next_agent']
+    if next_a == 'FINISH':
+        return '__end__'
+    return next_a
+
+# === Build graph ===
+workflow = StateGraph(TeamState)
+workflow.add_node('supervisor', supervisor_node)
+workflow.add_node('researcher', researcher_node)
+workflow.add_node('coder', coder_node)
+workflow.add_node('writer', writer_node)
+
+workflow.set_entry_point('supervisor')
+workflow.add_conditional_edges('supervisor', route, {
+    'researcher': 'researcher',
+    'coder': 'coder',
+    'writer': 'writer',
+    '__end__': END,
+})
+
+# After workers, back to supervisor
+for w in ['researcher', 'coder']:
+    workflow.add_edge(w, 'supervisor')
+workflow.add_edge('writer', END)
+
+graph = workflow.compile()
+
+# === Run ===
+task = """Build a Python TODO list app with these requirements:
+1. Research the best Python framework for CLI apps
+2. Write the code
+3. Create a final report explaining the architecture"""
+
+result = graph.invoke({'messages': [HumanMessage(content=task)]})
+print('\n=== FINAL ===')
+print(result.get('final', result['messages'][-1].content))
+```
+
+### Step 3. Run
+
+```bash
+python supervisor.py
+```
+
+Quan sát console: supervisor calls researcher → researcher returns → supervisor calls coder → coder returns → supervisor calls writer → DONE.
+
+### Step 4. Cost check
+
+- ~3-5 supervisor calls (Sonnet) ~$0.10
+- ~3-5 worker calls (Haiku) ~$0.05
+- Total: ~$0.15-0.30/task. **40% cheaper** vs all-Sonnet.
+
+### 🐛 Common errors + fixes
+
+| Error | Fix |
+|------|------|
+| `Recursion limit` | Add max_iter check, force writer node after 5 supervisor calls |
+| Supervisor always pick same worker | Improve prompt with example routing |
+| Token cost explosion | Switch to all-Haiku, only Sonnet for synthesis |
+| Tools fail | Mock tools first, add real APIs gradually |
+
+---
+
+## 19 🏗️ Mini-Project — Multi-channel Customer Support Agent
+
+::: warning 🎯 Assignment
+
+**Mục tiêu**: Build multi-agent system handle CS tickets từ 3 channels (Email, Slack, Web chat).
+
+**Requirements**:
+1. **Supervisor**: route ticket → channel-specific worker
+2. **Email worker**: parse email, draft reply (formal tone)
+3. **Slack worker**: parse Slack thread, draft reply (casual tone)
+4. **Web chat worker**: real-time response (short, friendly)
+5. **Common knowledge base**: tất cả workers query same KB
+6. **Escalation worker**: human handoff khi confidence <70%
+
+**Acceptance criteria**:
+- [ ] LangGraph supervisor + 4 workers
+- [ ] Tone consistency check per channel
+- [ ] KB integration (vector DB hoặc simple JSON)
+- [ ] Escalation logic + Slack notification cho human
+- [ ] Cost: <$0.10/ticket
+- [ ] CSAT survey integration
+
+**Time estimate**: 1-2 tuần
+
+**Stretch goals** 🚀:
+- Multi-language (VN + EN)
+- Sentiment analysis trigger escalation
+- Analytics dashboard (tickets/day, deflection rate, CSAT)
+:::
+
+---
+
+## 20 🎓 Knowledge Check
+
+::: details 1. Multi-agent vs single-agent cost ratio điển hình?
+**A.** 2x
+**B.** 5x
+**C.** 15x ✅
+**D.** 100x
+
+**Đáp án: C** — Multi-agent system consume ~15x more tokens than standard chat (per Anthropic). Cần ROI rõ để justify.
+:::
+
+::: details 2. Pattern default 2026 cho production multi-agent?
+**A.** Debate
+**B.** Swarm
+**C.** Orchestrator-Worker ✅
+**D.** Hierarchical
+
+**Đáp án: C** — Orchestrator-worker là default. Dễ debug, handoff rõ ràng, scalable. Anthropic Research, Claude Code Agent Teams, OpenAI Agents SDK all dùng pattern này.
+:::
+
+::: details 3. Devin × Goldman Sachs deploy bao nhiêu instances?
+**A.** Hàng chục
+**B.** Hàng trăm ✅
+**C.** Hàng nghìn
+**D.** 50
+
+**Đáp án: B** — Goldman: **hundreds Devin instances** alongside 12K engineer team. CIO Marco Argenti target equivalent 14,400 dev output (20% gain).
+:::
+
+::: details 4. AutoGen hiện status?
+**A.** Active development
+**B.** Most popular framework
+**C.** Maintenance mode ✅
+**D.** Acquired by Anthropic
+
+**Đáp án: C** — **AutoGen vào maintenance mode**. Microsoft chuyển team sang Magentic. Đừng start new project với AutoGen 2026.
+:::
+
+::: details 5. A2A Protocol được donate cho?
+**A.** OpenAI Foundation
+**B.** Linux Foundation ✅
+**C.** Apache Foundation
+**D.** GitHub
+
+**Đáp án: B** — Google donate **A2A Protocol** cho **Linux Foundation T6/2025**, 150+ organizations support T4/2026 (Atlassian, Salesforce, ServiceNow, SAP, Workday, etc.).
+:::
+
+::: details 6. Anthropic principle quan trọng nhất cho sub-agent?
+**A.** Cùng model với orchestrator
+**B.** Có objective clear + output format defined ✅
+**C.** Vô hạn context window
+**D.** Cùng prompt cho mọi sub-agent
+
+**Đáp án: B** — Anthropic 5 principles: (1) objective rõ, (2) output format defined (JSON), (3) tool guidance, (4) task boundary clear, (5) fresh context window per sub-agent.
+:::
+
+::: details 7. Khi nào sub-agent dùng cùng model với orchestrator?
+**A.** Luôn luôn
+**B.** Khi sub-agent task simple (Haiku đủ) — KHÔNG nên ✅
+**C.** Khi cost không phải vấn đề
+**D.** Sub-agent dùng Haiku để giảm 40% cost
+
+**Đáp án: D** — Orchestrator Sonnet + workers Haiku = giảm 40% cost vs all-Sonnet. Output gần như y hệt cho 90% case.
+:::
+
+::: details 8. LangGraph vs CrewAI: chọn nào cho production?
+**A.** CrewAI luôn (easier)
+**B.** LangGraph cho production-grade ✅
+**C.** Cả 2 đều giống
+**D.** AutoGen tốt hơn
+
+**Đáp án: B** — **LangGraph** cho production (Klarna, Uber, LinkedIn). **CrewAI** cho prototype + agency. CrewAI dễ hơn (20 dòng to start) nhưng LangGraph mature hơn cho mission-critical.
+:::
+
+::: details 9. Pattern nào KHÔNG nên dùng?
+**A.** Orchestrator-Worker cho parallel tasks
+**B.** Multi-agent cho sequential task (A → B → C) ✅
+**C.** Hierarchical cho big task
+**D.** Debate cho critical decision
+
+**Đáp án: B** — Sequential task không lợi từ parallel. 15x token cost không có ROI. Single agent đủ.
+:::
+
+::: details 10. Cognition AI valuation T4/2026?
+**A.** $5B
+**B.** $10B
+**C.** $25B ✅ (in talks)
+**D.** $100B
+
+**Đáp án: C** — Cognition (Devin) growth: $1M ARR (T9/2024) → $73M (T6/2025) → $155M post-Windsurf → **$25B valuation talks T4/2026**. 73x trong 9 tháng.
+:::
+
+**Score**:
+- 8-10/10 ✅ Ready cho Chapter 5 (Workflow Agent)
+- 5-7/10 ⚠️ Re-read sections 1-13
+- <5/10 ❌ Redo LangGraph lab
+
+---
+
+## 21 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md)
