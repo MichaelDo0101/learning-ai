@@ -23,10 +23,16 @@ hero:
       link: https://github.com/datawhalechina/easy-vibe
 ---
 
+<HeroStats />
+
 <HomeFeatures />
 
 <ModuleShowcase />
 
 <LearningPaths />
 
+<Testimonials />
+
 <LearningVideos />
+
+<CommunityStats />

@@ -23,10 +23,16 @@ hero:
       link: /vi-vn/stage-1/learning-map/
 ---
 
+<HeroStats />
+
 <HomeFeatures />
 
 <ModuleShowcase />
 
 <LearningPaths />
 
+<Testimonials />
+
 <LearningVideos />
+
+<CommunityStats />

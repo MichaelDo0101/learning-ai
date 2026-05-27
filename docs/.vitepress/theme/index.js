@@ -850,6 +850,11 @@ import ModuleShowcase from './components/home/ModuleShowcase.vue'
 import LearningPaths from './components/home/LearningPaths.vue'
 import LearningVideos from './components/home/LearningVideos.vue'
 
+// Homepage polish components (hero stats, testimonials, community)
+import HeroStats from './components/home/HeroStats.vue'
+import Testimonials from './components/home/Testimonials.vue'
+import CommunityStats from './components/home/CommunityStats.vue'
+
 // Per-chapter video embed (reusable)
 import ChapterVideos from './components/ChapterVideos.vue'
 
@@ -1728,6 +1733,11 @@ export default {
     app.component('ModuleShowcase', ModuleShowcase)
     app.component('LearningPaths', LearningPaths)
     app.component('LearningVideos', LearningVideos)
+
+    // Homepage polish components
+    app.component('HeroStats', HeroStats)
+    app.component('Testimonials', Testimonials)
+    app.component('CommunityStats', CommunityStats)
 
     // Per-chapter video embed
     app.component('ChapterVideos', ChapterVideos)
