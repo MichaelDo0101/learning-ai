@@ -845,6 +845,11 @@ import AppendixFlowMap from './components/AppendixFlowMap.vue'
 import GenStackPicker from './components/vibe-generate/GenStackPicker.vue'
 import AgentLoopDemo from './components/vibe-agent/AgentLoopDemo.vue'
 
+// Homepage showcase components (module grid, learning paths, YouTube videos)
+import ModuleShowcase from './components/home/ModuleShowcase.vue'
+import LearningPaths from './components/home/LearningPaths.vue'
+import LearningVideos from './components/home/LearningVideos.vue'
+
 import CopyOrDownloadAsMarkdownButtons from './components/CopyOrDownloadAsMarkdownButtons/index.vue'
 
 export default {
@@ -1715,6 +1720,11 @@ export default {
     // Vibe Generate + Vibe Agent module components
     app.component('GenStackPicker', GenStackPicker)
     app.component('AgentLoopDemo', AgentLoopDemo)
+
+    // Homepage showcase components
+    app.component('ModuleShowcase', ModuleShowcase)
+    app.component('LearningPaths', LearningPaths)
+    app.component('LearningVideos', LearningVideos)
   },
   setup() {
     const route = useRoute()

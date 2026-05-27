@@ -24,3 +24,9 @@ hero:
 ---
 
 <HomeFeatures />
+
+<ModuleShowcase />
+
+<LearningPaths />
+
+<LearningVideos />
