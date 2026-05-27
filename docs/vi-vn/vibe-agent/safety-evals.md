@@ -408,7 +408,100 @@ def check_budget():
 
 ---
 
-## 12 Đọc tiếp
+## 12 🎥 Watch & Learn — 3 video về safety + evals
+
+<ChapterVideos :videos="[
+  { id: 'kQmXtrmQ5Zg', title: 'Building Agents with MCP — Full Workshop (MCP Security)', channel: 'AI Engineer', duration: '2:00:00', why: 'Workshop cover MCP security model: tool permission, sampling control, sandboxing. Cross-cutting cho Ch 4, 6, 8.' },
+  { id: 'TqC1qOfiVcQ', title: 'Claude Agent SDK [Full Workshop]', channel: 'AI Engineer', duration: '1:30:00', why: 'Cover permission system, guardrails, eval hooks trong Agent SDK. Anthropic engineer dạy direct.' },
+  { id: 'DNGxMX7ym44', title: 'Claude Code NEW Sub Agents in 7 Minutes', channel: 'IndyDevDan', duration: '7:00', why: 'Demo permission scoping per subagent — pattern thực tế giảm blast radius khi agent fail.' }
+]" />
+
+> 📚 **Critical text resources (must-read)**:
+> - [Simon Willison — prompt injection series](https://simonwillison.net/series/prompt-injection/)
+> - [OWASP Top 10 for Agentic Applications](https://owasp.org/www-project-agentic-skills-top-10/) (T12/2025)
+> - [Anthropic GTG-1002 report](https://www.anthropic.com/news/disrupting-AI-espionage)
+
+---
+
+## 13 🛠️ Safety & Eval Updates 2026 — Incident chronology
+
+### Major incidents 2025-2026
+
+#### Incident A: CVE-2025-32711 (EchoLeak) — **First production prompt injection zero-click**
+
+| Item | Detail |
+|------|------|
+| Disclose | T6/2025 by Aim Security |
+| CVSS | **9.3 (Critical)** |
+| Target | Microsoft 365 Copilot |
+| Vector | **Zero-click** — chỉ cần email tới Outlook inbox, user KHÔNG cần mở |
+| Mechanism | Copilot tự đọc → execute hidden instructions → exfiltrate |
+| Bypass chain | Evade Microsoft XPIA classifier + bypass link redaction + abuse Teams proxy |
+| **Significance** | **First known production prompt injection exploit** với concrete data exfiltration |
+
+> Source: [The Hacker News](https://thehackernews.com/2025/06/zero-click-ai-vulnerability-exposes.html) | [arXiv paper](https://arxiv.org/abs/2509.10540)
+
+#### Incident B: GTG-1002 — Chinese state actor hijack Claude Code (T11/2025)
+
+| Item | Số |
+|------|------|
+| Significance | **First documented AI-orchestrated cyber espionage campaign** |
+| Targets | ~30 organizations (tech, finance, manufacturing, government) |
+| Successful intrusions | **4** |
+| **AI autonomy** | **80-90% operations AI-run autonomous**; humans only set objectives |
+| Campaign duration | 10 ngày với **thousands of requests/second** at peak |
+| Bypass | Role-play as "legitimate cybersecurity entity" + decompose malicious → innocuous steps |
+
+> ⚠️ **Skepticism caveat**: Anthropic claims faced doubt từ một số researchers — call report "made up" hoặc overstated. Take at face value but skeptical.
+> Source: [Anthropic](https://www.anthropic.com/news/disrupting-AI-espionage) | [BleepingComputer skepticism](https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/)
+
+#### Incident C: Lethal Trifecta — **4 major AI products fall in 5 days** (T1/2026)
+
+| Item | Detail |
+|------|------|
+| Date | 7-15 T1/2026 |
+| Products affected | **IBM Bob, Superhuman AI, Notion AI, Anthropic Claude Cowork** |
+| Vector | Indirect prompt injection via lethal trifecta |
+| **Lethal trifecta** = (1) access private data + (2) exposure untrusted content + (3) exfiltrate ability |
+
+> *"Prompt injection is the SQL injection of our day."* — Simon Willison
+> **73% of production AI deployments had prompt injection issues in 2025**.
+> Source: [Breached.Company](https://breached.company/the-lethal-trifecta-strikes-four-major-ai-agent-vulnerabilities-in-five-days/) | [Simon Willison](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/)
+
+### OWASP Top 10 for Agentic Applications (T12/2025)
+
+Published by 100+ industry experts. Replaces / complements OWASP LLM Top 10.
+
+| Rank | Risk |
+|------|------|
+| 1 | **Prompt injection** |
+| 2 | **Memory poisoning** |
+| 3 | **Tool misuse** |
+| 4 | **Supply chain attacks** |
+| 5 | **Data exfiltration** |
+
+> Source: [OWASP Agentic Top 10](https://owasp.org/www-project-agentic-skills-top-10/)
+
+### Eval framework landscape Q2 2026
+
+| Tool | Type | Pricing | Best for |
+|------|------|------|------|
+| **Inspect AI (UK AISI)** | Open-source Python | Free | **Most credible for safety evals**. 200+ pre-built evals. Used by AISI, Anthropic, DeepMind |
+| **DeepEval** | Pytest-native open-source | Free | Self-hosted anywhere Python runs. 50+ metrics |
+| **Braintrust** | SaaS eval primitive | $249/mo flat unlimited users | Native GitHub Action gates merges. 1M spans free |
+| **LangSmith** | SaaS (LangChain ecosystem) | $39/seat/mo, 5k traces free | Best LangChain stack |
+| **Patronus** | Enterprise eval + monitoring | Custom | Enterprise compliance |
+
+### Defensive architectures (2026 emerging consensus)
+
+- Simon Willison: **"prompt injection not solvable at filter layer; solvable at architecture layer"**
+- **CaMeL** (Google DeepMind, "Defeating Prompt Injections by Design") — dual-LLM với privileged + quarantined. First architectural progress in 2.5 years
+- **Agents Rule of Two**: don't give agent access to (private data) + (untrusted content) + (exfiltration) — break at least one
+- **Tool sandboxing**: every tool call runs trong E2B-style isolated sandbox
+
+---
+
+## 14 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🧩 [Chapter 4 — Multi-Agent](./4-multi-agent.md)

@@ -431,7 +431,139 @@ Sun: Off / read AI news
 
 ---
 
-## 13 Đọc tiếp
+## 13 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'ASAaKhK1B5w', title: 'Even Anthropic Engineers Use This Claude Code Workflow', channel: 'IndyDevDan', duration: '28:00', why: 'Cách team internal Anthropic dùng Claude Code: plan mode, parallel sub-agents, slash commands. 1 engineer Anthropic chi $1000/tháng credits.' },
+  { id: 'goOZSXmrYQ4', title: 'My COMPLETE Agentic Coding Workflow to Build Anything', channel: 'Cole Medin', duration: '40:00', why: 'Cole Medin = thought leader \'context engineering\'. PRP framework + 15 Claude Code commands reusable.' },
+  { id: 'Phr7vBx9yFQ', title: 'Claude Code Tutorial #8 — Subagents', channel: 'IndyDevDan', duration: '18:00', why: 'IndyDevDan có playlist Claude Code 1-10+, episode 8 deep dive subagent. Phong cách thực dụng, không hype.' },
+  { id: 'gv0WHhKelSE', title: 'Claude Code best practices | Code w/ Claude', channel: 'Anthropic', duration: '30:00', why: 'Anthropic official guide từ event Code w/ Claude (22/5/2025). Cover CLAUDE.md, hooks, memory hierarchy.' },
+  { id: '6uwR5yoQ1VY', title: 'Khóa Học Claude Code Thực Chiến — Beginner đến Pro', channel: 'Vietnamese AI Course', duration: '15:00', why: '🇻🇳 Vietnamese walkthrough Claude Code beginner → advanced với demo cụ thể.' }
+]" />
+
+---
+
+## 14 🔬 Deep Dive Techniques 2026
+
+::: tip 🧠 8 advanced techniques cho Claude Code power user
+
+**1. Orchestrator-Worker với Cost Optimization**
+- 1 Opus 4.7 orchestrator + 4 Sonnet 4.6 workers = **giảm 40% cost** vs 5 Opus
+- Token cost cắt 5-10x mà output gần như y hệt
+- Khi nào: task có thể decompose parallel subtasks
+- Tool: Claude Code Task tool spawn subagent
+
+**2. Plan Mode trước mỗi complex task**
+- Chuyển sang plan mode → Claude map step-by-step trước khi code
+- **Tăng 2-3x success rate** trên task phức tạp
+- Khi nào: task estimate >30 phút work
+- Tool: `/plan` command hoặc explicit "switch to plan mode"
+
+**3. CLAUDE.md <500 lines rule**
+- Analysis 165+ repos: file <500 lines được Claude đọc đủ; >1000 lines bị ignore phần sau
+- Target ideal: **60-400 lines**
+- Khi nào: mọi project setup
+- Tool: Keep CLAUDE.md concise; split rules vào `.claude/rules/*.md` auto-load
+
+**4. PreToolUse Hooks cho Security Gates**
+- PreToolUse = hook DUY NHẤT có thể BLOCK action
+- Dùng cho: file protection (không touch `.env`), mandatory review, secret scanning
+- Khi nào: project có code production / secrets / sensitive data
+- Tool: `settings.json` với hook chạy script <1s; phức tạp hơn → skill
+
+**5. Hot-Reload Skills (T1/2026)**
+- Skills tạo/sửa trong `~/.claude/skills` hoặc `.claude/skills` activate ngay
+- Không cần restart session
+- Khi nào: đang iterate skill workflow
+- Tool: Claude Code 2.1.0+; skill = folder gồm instructions + scripts + assets
+
+**6. Just-in-Time Context Loading**
+- Thay vì nhồi data vào context window, giữ lightweight identifiers
+- Claude dùng tools để load on-demand
+- Khi nào: codebase lớn (>100K LOC) hoặc dataset lớn
+- Tool: Custom MCP servers + tool definitions
+
+**7. Parallel Sessions với Git Worktrees**
+- Mỗi Claude session = 1 worktree riêng
+- Run **4-8 sessions parallel** trên feature khác nhau
+- Khi nào: migration lớn, refactor đa module
+- Tool: `git worktree add`; Claude Code background agents (2.1.0+)
+
+**8. Sub-Agent dùng Sonnet thay Opus cho 90% việc**
+- Sonnet 4.6 đủ tốt cho code gen, file manipulation, test execution
+- Chỉ dùng Opus cho planning/review
+- Khi nào: cost-conscious team (FinOps cảnh báo $500-2000/engineer/month)
+- Tool: `.claude/agents/*.md`, set `model: sonnet`
+:::
+
+---
+
+## 15 📚 More Case Studies (2025-2026)
+
+### Case A: Jaana Dogan (Google Gemini Principal) — **1 giờ vs 1 năm**
+
+| Item | Số |
+|------|------|
+| Background | **Principal Engineer Google** chịu trách nhiệm Gemini API |
+| Stack | Claude Code với prompt 3-paragraph, no internal Google data |
+| Build time | **1 giờ** |
+| Match với | **1 năm work của team Google** |
+| Public confession | 3/1/2026 trên X |
+
+> *"This industry has never been a zero-sum game, so giving competitors credit where it's due makes sense. Impressive work."* — Jaana Dogan
+
+> **Caveat**: output "not production grade, a toy version, but useful starting point" — set expectation đúng.
+> Source: [The Decoder](https://the-decoder.com/google-engineer-says-claude-code-built-in-one-hour-what-her-team-spent-a-year-on/)
+
+### Case B: Uber — **Burn 2026 AI budget trong 4 tháng**
+
+| Item | Số |
+|------|------|
+| Engineers | **5,000** |
+| Claude Code adoption | Q4 2025: 32% → T2/2026: 63% → T3/2026: **84%** |
+| AI-generated code committed | **70%** |
+| **Backend updates LIVE = AI viết, no human in loop** | **11%** |
+| **Budget 2026 burned in** | **4 tháng** |
+| Cost/engineer/month | **$500-$2,000** |
+
+> CTO Praveen Neppalli Naga: engineers "loved it, used it constantly" — cost cho parallel agent execution, refactoring, automated testing.
+> **Tone caveat**: COO Uber đang question ROI. Không phải pure success — FinOps cảnh báo.
+> Source: [Startup Fortune](https://startupfortune.com/uber-burned-its-entire-2026-ai-budget-in-four-months-and-claude-code-is-why-finance-teams-should-be-worried/)
+
+### Case C: Rakuten Kenta Naruse — vLLM **7 giờ autonomous**
+
+| Item | Số |
+|------|------|
+| Engineer | Kenta Naruse, ML Engineer Rakuten |
+| Project | vLLM open-source 12.5M lines code đa ngôn ngữ |
+| Stack | Claude Code single run, no human intervention |
+| **Autonomous time** | **7 giờ liên tục** |
+| Output | Activation vector extraction method |
+| **Numerical accuracy** | **99.9%** so với reference |
+| **Time to market Rakuten** | 24 ngày → **5 ngày (-79%)** |
+
+> *"Time to market significantly brought down because Claude Code gives super powers to make executions much faster."* — Manoj Desai (Manager AI Empowerment)
+> Source: [Anthropic Rakuten case](https://claude.com/customers/rakuten) | [Rakuten blog](https://rakuten.today/blog/rakuten-accelerates-development-with-claude-code)
+
+---
+
+## 16 🛠️ Tool Updates (Q1-Q2 2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Claude Sonnet 4.6** | Default Claude.ai Free + Pro. 1M context beta. $3/$15 per MTok | 17/2/2026 | Instruction following + computer use + consistency improved |
+| **Claude Opus 4.7** | **87.6% SWE-bench Verified** (vs 80.8% 4.6), 70% CursorBench (vs 58%). 1M context standard | 16/4/2026 | New "xhigh" effort level. **Updated tokenizer increase token counts** — migration warning |
+| **Claude Code 2.1.0** | Hot-reload skills, scoped hooks (PreToolUse/PostToolUse/Stop), session portability, multilingual output (20 ngôn ngữ) | 7/1/2026 | Voice mode + skill ecosystem |
+| **Claude Code v2.1.76** | Scheduled tasks via loop command (cron-style), background agents with worktree isolation, voice mode, remote control phone/web | 3/2026 | Long-running task unattended |
+| **Claude Agent SDK** | Available publicly — programmable agent loop powering Claude Code | 2026 | Python + TypeScript |
+| **Self-hosted Sandboxes + MCP Tunnels** | Public beta self-hosted sandbox; research preview MCP tunnels | 5/2026 | Tool execution in your infrastructure |
+| **Devin 2.0** | Pricing crashed **$500/month → $20/month** minimum. Pay-as-you-go $2.25/ACU | 2026 | Devin 2.0 hoàn thành 83% nhiều junior-level tasks per ACU |
+| **Cursor** | **$2B ARR, 1M paying customers, 1M DAU** | T2/2026 | Switched June 2025: request-based → credit-based pricing |
+| **MCP** | Donated to **Linux Foundation** T12/2025; 10K+ active public MCP servers; 97M monthly SDK downloads | T1/2026 | OpenAI joined MCP Apps Extension co-creation T1/2026 |
+
+---
+
+## 17 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md) (back)
 - 🖱️ [Chapter 3 — Computer Use](./3-computer-use.md) — agent click màn hình

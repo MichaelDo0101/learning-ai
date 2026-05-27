@@ -299,7 +299,53 @@ Card khuyên dùng VN:
 
 ---
 
-## 11 Đọc tiếp
+## 11 🎥 Watch & Learn — 3 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'DNGxMX7ym44', title: 'Claude Code NEW Sub Agents in 7 Minutes', channel: 'IndyDevDan', duration: '7:00', why: 'Quick rundown Claude Code subagents — coding agent top-tier 2026 trong 7 phút.' },
+  { id: 'TqjmTZRL31E', title: 'Pi CEO Agents. Claude 1M Context. Multi-Agent Teams.', channel: 'IndyDevDan', duration: '20:00', why: 'Cover Claude 1M context + multi-agent teams + CEO agents pattern. Big picture toolkit 2026.' },
+  { id: 'VNdF3B6-tyQ', title: 'Build a Voice Agent in 15 Minutes Using VAPI (2026)', channel: 'Vapi Community', duration: '15:00', why: 'Voice agent infra layer — Vapi đại diện top tier voice. Hands-on quick start.' }
+]" />
+
+---
+
+## 12 🛠️ Toolkit Updates 2026 — Cập nhật Q1-Q2
+
+### 6 layers chuẩn agent stack 2026
+
+| Layer | Top tools |
+|------|------|
+| **1. Coding agents** | Claude Code, Cursor, Devin/Windsurf |
+| **2. General-purpose** | Anthropic Computer Use, Manus, ChatGPT Agent |
+| **3. Workflow** | n8n, Lindy, **Smax.ai (VN)** |
+| **4. Voice** | Vapi, ElevenLabs Conversational AI, Retell, Bland |
+| **5. Multi-agent frameworks** | LangGraph, CrewAI, OpenAI Agents SDK, Claude Agent SDK |
+| **6. Infra** | E2B (sandbox), Browserbase (browser), MCP (protocol), A2A (protocol) |
+| **7. Eval** | DeepEval, Braintrust, LangSmith, Inspect AI (UK AISI) |
+
+### Major releases Q1-Q2 2026
+
+- **T2/2026 — Claude Opus 4.6 + Sonnet 4.7** release. Sonnet 4.7 default cho most agent use case (Opus quá đắt high-volume)
+- **T3/2026 — OpenAI Agents SDK v0.17.x stable** với Responses API, hosted tools
+- **T4/2026 — Cognition $25B valuation talks**; Devin scale lên hundreds → thousands at Goldman
+- **T5/2026 — Vapi $500M valuation** + Amazon Ring win
+- **E2B**: ~50% Fortune 500 dùng. Millions sandboxes/tuần. $21M raised T7/2025
+- **Browserbase**: 50M browser sessions cumulative, 25M trong H1 2025. **$40M Series B T6/2025 @ $300M valuation**
+- **Manus AI**: GAIA Benchmark Level 1: **86.5%** (vs OpenAI 74.3%). Launched T3/2025. **$75M Series B @ $500M valuation** (T4/2025)
+
+### Multi-agent frameworks status
+
+- ✅ **LangGraph v1.0** — production-grade, Klarna/Uber/LinkedIn dùng
+- ✅ **CrewAI Enterprise** — 150+ enterprise customers (PwC, IBM, Capgemini, NVIDIA)
+- ✅ **Claude Agent SDK** — programmable agent loop powering Claude Code
+- ❌ **AutoGen** — maintenance mode (Microsoft moved to Magentic)
+- ❌ **OpenAI Swarm** — deprecated, replaced bởi Agents SDK
+
+Sources: [Cognition](https://cognition.ai/blog/funding-growth-and-the-next-frontier-of-ai-coding-agents) | [Vapi TechCrunch](https://techcrunch.com/2026/05/12/vapi-hits-500m-valuation-as-amazon-ring-chose-its-ai-platform-over-40-rivals/) | [E2B SiliconAngle](https://siliconangle.com/2025/07/28/e2b-shares-vision-sandboxed-cloud-environments-every-ai-agent-raising-21m-funding/)
+
+---
+
+## 13 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md)

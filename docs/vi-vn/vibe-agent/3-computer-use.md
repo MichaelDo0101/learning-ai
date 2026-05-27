@@ -373,7 +373,123 @@ Report: pass/fail per step + diff explanation.
 
 ---
 
-## 12 Đọc tiếp
+## 12 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'xr0FCUNoy_0', title: 'COMPUTER USE — Anthropic\'s GROUNDBREAKING AI | Install + Live Testing', channel: 'Wes Roth', duration: '20:00', why: 'Wes Roth (1 trong top AI YouTubers) review Computer Use lần đầu ra (10/2024). Live test, hands-on, không scripted.' },
+  { id: 'Iabue7wtE4g', title: 'Anthropic Computer Use — Hands On Tutorial', channel: 'AI Channel', duration: '18:00', why: 'Tutorial chi tiết cách dùng Computer Use models + tools, giải thích cơ chế screenshot + click coordinates.' },
+  { id: '3-KgkER370U', title: 'Anthropic Computer Use: Introduction, Setup + Real World Demo', channel: 'AI Creator', duration: '25:00', why: 'Walk qua setup + real-world workflow — phù hợp người Việt thấy concrete example.' },
+  { id: 'yZcj5fuYpyo', title: 'Get Started with Computer Use in 30 Seconds', channel: 'AI Demo', duration: '0:30', why: 'Quick visual showing Computer Use trong action — ideal cho hook đầu chapter.' },
+  { id: 'VxD7_MRPebY', title: 'Vibe Coding Masterclass: Build first app in 37 minutes', channel: 'AI Masterclass', duration: '37:00', why: 'Build first app Claude Code — bridge từ coding sang Computer Use trong cùng workflow.' }
+]" />
+
+---
+
+## 13 🔬 Deep Dive Techniques 2026
+
+::: tip 🖱️ 6 advanced techniques cho Computer Use enterprise
+
+**1. Allowlist Site/App Governance**
+- Microsoft Copilot Studio GA (5/2026) cho phép set allowlist website/desktop app agent được access
+- Anthropic Computer Use cũng cần governance layer riêng
+- Khi nào: enterprise deployment, regulated industry
+- Tool: define explicit allowed URLs/apps; reject navigation ngoài list
+
+**2. Human-in-the-Loop Confidence Checkpoint**
+- Khi agent gặp action có **low confidence (<70% certainty)** → pause + ask human
+- Anthropic recommend cho destructive action
+- Khi nào: financial action, account deletion, mass email
+- Tool: Custom MCP tool wrap action có flag `requires_human_approval`
+
+**3. Vision + Reasoning > Hard-coded RPA Selectors**
+- RPA cũ break khi UI change. Computer Use đọc screenshot live → adapt
+- Đây là **moat chính** của tech
+- Khi nào: legacy software (banking terminals, ERP cũ), software hay update UI
+- Tool: đừng cố hard-code coordinates; trust vision model
+
+**4. OSWorld-Verified Methodology Awareness**
+- Anthropic introduce OSWorld-Verified 7/2025 — correct task ambiguity + partial credit
+- Scores Sonnet 4.5+ dùng verified version
+- Đừng so apples-to-oranges
+- Khi nào: benchmark comparison, vendor selection
+- Tool: khi đọc score, check phiên bản OSWorld
+
+**5. API-First over Visual when Available**
+- Project Mariner shutdown 5/2026 dạy bài học: visual screenshot agent quá expensive + error-prone vs API agent
+- Khi target system có API → ưu tiên Claude Code + MCP
+- Khi nào: bất kỳ system nào có API public/private
+- Tool: Visual chỉ cho legacy không có API
+
+**6. Multi-Modal Computer Use (vision + voice + remote)**
+- Claude Code 2.1.76 (3/2026) — voice mode 20 ngôn ngữ + remote control qua phone/web
+- Agent có thể chạy unattended, người check qua mobile
+- Khi nào: long-running task (data migration, hourly monitoring)
+- Tool: background agent + scheduled task via loop command
+:::
+
+---
+
+## 14 📚 More Case Studies (2025-2026)
+
+### Case A: Allianz (Insurance — Munich) — Underwriting **10 weeks → 10 days**
+
+| Item | Số |
+|------|------|
+| Background | Allianz = conglomerate insurance toàn cầu HQ Munich. Deal announce 1/2026 |
+| Stack | Custom Claude agents do Anthropic build, multi-step workflow với human-in-the-loop |
+| **Underwriting cycle** | **10 weeks → 10 days** (PwC implementation tương tự) |
+| **Insurance claims accuracy** | Claude **88%** vs human expert |
+| Impact | Opens lines of business **previously NOT economically viable** |
+
+> Source: [TechCrunch](https://techcrunch.com/2026/01/09/anthropic-adds-allianz-to-growing-list-of-enterprise-wins/)
+
+### Case B: DoorDash Contact Center — **Hàng trăm nghìn calls/day**
+
+| Item | Số |
+|------|------|
+| Background | DoorDash: **37M monthly consumers**, 2M monthly Dashers |
+| Stack | Claude 3 Haiku via Amazon Bedrock + Amazon Connect, voice-operated self-service |
+| **Daily AI calls** | **Hàng trăm nghìn** |
+| Escalation reduction | **Thousands fewer daily** escalations to live agent |
+| **Voice latency** | **≤ 2.5 seconds** |
+| **Development time** | **-50%** |
+| **Testing capacity** | **50x** (automated evaluation framework) |
+| **Time to launch** | **2 tháng** |
+
+> Source: [AWS case study](https://aws.amazon.com/solutions/case-studies/doordash-bedrock-case-study/) | [Anthropic case PDF](https://assets.anthropic.com/m/53dbf4b0b4e5ab42/original/Anthropic-DoorDash-case-study-one-sheeters.pdf)
+
+### Case C: Zapier Internal — **800+ AI agents nội bộ**
+
+| Item | Số |
+|------|------|
+| Background | Zapier (no-code, 9,000+ integration) deploy Claude Enterprise internal |
+| Stack | Claude Enterprise + Zapier MCP (launch 4/2025) + custom internal MCP servers |
+| **Internal Claude-driven agents** | **800+** automating workflow |
+| Killer use case | CTO build "emoji-in-Slack-triggers-merge-request": add emoji → Claude analyze → generate code → create MR cho review |
+| Design team | Dùng Claude artifacts prototype LIVE during customer interviews (**weeks → minutes**) |
+| Strategic intel | Claude research event attendees via Zapier CRM + web search |
+
+> Source: [Anthropic Zapier case](https://claude.com/customers/zapier) | [Zapier blog MCP](https://zapier.com/blog/zapier-mcp-agent-skills/)
+
+---
+
+## 15 🛠️ Tool Updates (Q1-Q2 2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Anthropic Claude Computer Use Agent** | Research preview Pro/Max via Cowork + Claude Code. See, navigate, control desktop | 23/3/2026 | Click, open app, fill spreadsheet, multi-step |
+| **Claude Opus 4.7 OSWorld-Verified** | **78.0%** (vs Sonnet 4.5: 61.4%, Opus 4.5: 66.3%) | T4/2026 | Production-grade Computer Use |
+| **Claude Mythos Preview** | **79.6% OSWorld** (frontier preview) | 2026 | Vượt baseline người (70-73%) |
+| **MS Copilot Studio Computer Use Agents** | **First GA** với allowlist governance, DLP, audit trails, human-in-loop | 13/5/2026 | Enterprise-ready competitor |
+| **Google Gemini 2.5 Computer Use** | Public preview | Q2/2026 | Multi-vendor Computer Use race |
+| **Google Project Mariner SHUTDOWN** | 17-month experiment killed — visual screenshot quá expensive vs API-first | 4/5/2026 | Tech absorbed vào Gemini API + Gemini Agent |
+| **Anthropic Financial Services Agents** | **10 pre-built agents** banks/insurance: pitchbook, earnings, credit memo, KYC, underwriting, etc. | 5/5/2026 | Customers: Goldman, Visa, Citi, AIG |
+| **Anthropic revenue** | 2026 run-rate **$30B** (từ $9B); **1,000+ companies** spending $1M+/year (doubled 500) | 2026 | Enterprise traction massive |
+| **Stanford AI Index 2026** | OSWorld score: **12% (2025) → 66% (2026)** | 2026 | Generational leap in 1 year |
+
+---
+
+## 16 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md)

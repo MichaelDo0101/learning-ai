@@ -417,7 +417,116 @@ Restart Claude Code → tool `mcp__vn-tools__check_misa_invoice` xuất hiện �
 
 ---
 
-## 12 Đọc tiếp
+## 12 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'kQmXtrmQ5Zg', title: 'Building Agents with MCP — Full Workshop (Anthropic)', channel: 'AI Engineer', duration: '2:00:00', why: 'Workshop từ Mahesh Murag (Anthropic). MCP architecture (Host ↔ Client ↔ Server), JSON-RPC, lifecycle. Foundation tuyệt đối.' },
+  { id: 'CQywdSdi5iA', title: 'The Model Context Protocol (Discussion)', channel: 'Anthropic', duration: '45:00', why: 'Theo Chu, David Soria Parra, Alex Albert (MCP maintainers) discuss \'why\' thay vì \'how\'.' },
+  { id: 'TqC1qOfiVcQ', title: 'Claude Agent SDK [Full Workshop]', channel: 'AI Engineer', duration: '1:30:00', why: 'Thariq Shihipar (Anthropic engineer) dạy build agent bằng Agent SDK — engine sau Claude Code. MCP native trong SDK.' },
+  { id: 'mbQsnrxHPwE', title: 'MCP & n8n Automation: Ultimate Guide for MCP AI Agents', channel: 'Cole Medin', duration: '30:00', why: 'Integration MCP + n8n. Pattern cho VN operator: build MCP server cho KiotViet/MISA → Claude/n8n call.' },
+  { id: 'Z19uVK7fJHg', title: 'How to Turn n8n into Streaming AI Agent as MCP Server', channel: 'Cole Medin', duration: '25:00', why: 'Reverse pattern — expose n8n workflow như MCP server. VN agency có thể bán dịch vụ này.' }
+]" />
+
+---
+
+## 13 🔬 Deep Dive Techniques 2026
+
+::: tip 🔌 8 advanced techniques cho MCP server dev
+
+**1. MCP có 3 primitives: Tools, Resources, Prompts**
+- KHÔNG chỉ "tools"
+- **Resources** = read-only data
+- **Prompts** = templated workflows
+- Hầu hết tutorials chỉ dạy Tools — học cả 3 để build server đúng spec
+
+**2. MCP servers là JSON-RPC 2.0 over stdio / SSE / HTTP**
+- KHÔNG phải REST API
+- Dev VN hay nhầm là REST khi build server đầu
+- Spec mới (**2025-11-25**) chuẩn hoá Streamable HTTP transport
+
+**3. MCP Registry là canonical**
+- **registry.modelcontextprotocol.io** (launch T9/2025, ~2,000 server entries)
+- Anthropic donate MCP cho **Agentic AI Foundation under Linux Foundation** (T12/2025)
+- OpenAI + Block co-founders; AWS, Google, Microsoft, Cloudflare, GitHub, Bloomberg supporting
+
+**4. MCP vs A2A: complementary, KHÔNG cạnh tranh**
+- **MCP**: agent ↔ tool/resource (vertical)
+- **A2A**: agent ↔ agent (horizontal)
+- Production 2026 dùng cả hai: orchestrator (A2A với workers) + mỗi agent dùng MCP với tools
+
+**5. Build MCP cho VN platforms = biz model 2026** 🇻🇳
+- **MISA, KiotViet, Sapo, Pancake, Base.vn, Haravan, Getfly** chưa có official MCP
+- Agency VN có thể build wrapper (READ-only safe, WRITE behind approval)
+- Bán SaaS / consulting
+- Market size: **10,000+ SMEs VN** dùng các platform này
+
+**6. Security trong MCP servers là điểm yếu lớn**
+- MCP servers chạy với permission của user
+- Nếu server có lỗ hổng prompt injection → attacker exfiltrate data
+- Anthropic publish **"Code execution with MCP"** Q1 2026 — pattern execute trong sandbox
+
+**7. Code execution với MCP > raw tool calls**
+- Anthropic engineering blog Q1 2026: thay vì để LLM gọi tool 50 lần, generate 1 code snippet gọi nhiều MCP tools tuần tự
+- **Tiết kiệm 70%+ tokens** cho complex multi-step
+
+**8. Sampling là feature ít người biết**
+- MCP server có thể **request LLM sampling từ client** (Claude Desktop gọi LLM thay cho server)
+- Pattern này: server không cần API key LLM riêng — dùng credentials của user
+:::
+
+---
+
+## 14 📚 More Case Studies (2025-2026)
+
+### Case A: MCP adoption — **97M monthly downloads + every major AI vendor**
+
+| Item | Số |
+|------|------|
+| **Monthly SDK downloads** (Python + TypeScript) | **97M** |
+| GitHub stars | **81,000+** |
+| Supported by | Anthropic, OpenAI, Google, Microsoft, AWS — **every major AI vendor** |
+| Active public MCP servers | **10,000+** (per Anthropic) |
+
+> Source: [Digital Applied](https://www.digitalapplied.com/blog/mcp-97-million-downloads-model-context-protocol-mainstream) | [MCP 2026 Roadmap](https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/)
+
+### Case B: MCP Registry growth — **0 → ~2,000 entries trong 6 tháng**
+
+| Cột mốc | Detail |
+|------|------|
+| T9/2025 | Official MCP Registry launch |
+| **T3/2026** | **~2,000 server entries** |
+| First-party catalogs | AWS, Azure, Google Cloud — only their own servers |
+| Anthropic curate | **~1,000 server official directory** |
+
+> Source: [MCP Registry](https://registry.modelcontextprotocol.io/) | [Gentoro blog](https://www.gentoro.com/blog/what-is-anthropics-new-mcp-registry/)
+
+### Case C: Anthropic donate MCP to Agentic AI Foundation (T12/2025)
+
+| Item | Detail |
+|------|------|
+| Founders | OpenAI, Block co-founders |
+| Supporting members | AWS, Google, Microsoft, Cloudflare, GitHub, Bloomberg |
+| Lý do donate | Enterprise muốn protocol neutral, không thuộc 1 vendor |
+| T3/2026 | **2026 MCP Roadmap published** — enterprise readiness top priority (auth, multi-tenancy, audit) |
+
+> Source: [MCP 2026 Roadmap](https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/)
+
+---
+
+## 15 🛠️ Tool Updates (Q1-Q2 2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **MCP Specification 2025-11-25** | Streamable HTTP transport stable. SSE deprecated | T11/2025 | New transport standard |
+| **Linux Foundation governance** | Anthropic donate MCP to Agentic AI Foundation | T12/2025 | Neutral, no single vendor |
+| **Code execution with MCP** | Anthropic engineering blog publishes pattern | Q1/2026 | Sandboxed code execution > raw tool calls |
+| **Enterprise readiness** | MCP authorization spec (OAuth 2.1), multi-tenant, audit logging | Q2/2026 | Roadmap published |
+| **MCP Specification 2026-07-28 (RC)** | Release candidate testing | T7/2026 | Next major version |
+| **Pancake VN MCP beta** 🇻🇳 | Cho phép Claude đọc inbox | T4/2026 | First VN platform với MCP |
+
+---
+
+## 16 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md)

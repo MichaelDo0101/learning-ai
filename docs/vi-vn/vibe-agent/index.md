@@ -129,6 +129,18 @@ description: 'Module học AI Agent: coding agent, computer use, multi-agent, wo
 
 ---
 
+## 🎥 Watch & Learn — 3 video nền tảng
+
+Trước khi vào từng chapter, xem 3 video này để hiểu mental model "Software 3.0" + agent loop:
+
+<ChapterVideos :videos="[
+  { id: 'LCEmiRjPEtQ', title: 'Andrej Karpathy: Software Is Changing (Again)', channel: 'Y Combinator', duration: '39:00', why: 'Karpathy giới thiệu \'Software 3.0\' — code là tiếng Anh, LLM là CPU mới, context window là RAM. Định nghĩa mental model.' },
+  { id: '96jN2OCOfLs', title: 'Karpathy: From Vibe Coding to Agentic Engineering (AI Ascent 2026)', channel: 'Sequoia Capital', duration: '30:00', why: 'Update T3/2026 — vibe coding đã passé, giờ là agentic engineering. Giải thích chuyển từ \'LLM tự code\' sang \'LLM in loop with oversight\'.' },
+  { id: 'fHWFF_pnqDk', title: 'Vibe coding in prod | Code w/ Claude', channel: 'Anthropic', duration: '45:00', why: 'Erik Schluntz live demo cách team Anthropic dùng Claude Code trong production. Agent loop = LLM + tools + memory + feedback.' }
+]" />
+
+---
+
 ## 🛠️ Stack tổng quan (T5/2026)
 
 ::: tip 6 layer cần biết

@@ -304,6 +304,77 @@ Weekly review (Sunday):
 
 ---
 
+## 🎥 Watch & Learn — 3 video về 30-day execution
+
+<ChapterVideos :videos="[
+  { id: '9Wjec3wh4p8', title: 'Pieter Levels — Indie Hacking is Dead. Now what?', channel: 'The Bootstrapped Founder', duration: '1:00:00', why: 'Pieter Levels (OG 12-startups-in-12-months) discuss 2025 reality. \'Indie hacking is now the new normal\' — mindset đúng cho 30-day plan.' },
+  { id: 'M30gp1315Y4', title: 'One Agent Is NOT ENOUGH: Agentic Coding BEYOND Claude Code', channel: 'IndyDevDan', duration: '25:00', why: 'Roadmap thinking — khi nào step up từ 1 agent → multiple → agent team. Practical milestones.' },
+  { id: 'mQt1hOjBH9o', title: 'I Built the ULTIMATE n8n RAG AI Agent Template', channel: 'Cole Medin', duration: '35:00', why: 'Template thực tế ship trong vài ngày → công khai → có user ngay. \'Build → publish → iterate\' model.' }
+]" />
+
+---
+
+## 🛠️ Reality Check Updates 2026
+
+### Solo founder stats 2025
+
+- Solo founder startups: **23.7% (2019) → 36.3% by mid-2025** of new startups
+- AI tools cho phép 1 người làm việc của **3-5 người** trong eng / marketing / ops
+- **Realistic productivity multiplier**: AI accelerate **2x-4x** cho boilerplate, scaffolding, tests. KHÔNG phải "10x"
+
+### Marc Lou model (reference)
+
+- **16+ startups shipped**, ~**$54K MRR** từ ShipFast
+- Newsletter "Just Ship It" hit **20K subscribers** early 2025
+- Pattern: **feature-scoped launches**, public validation, distinctive packaging
+- Source: [Marc Lou YouTube](https://www.youtube.com/@marc-lou)
+
+### Pieter Levels model (reference)
+
+- **$3.1M/year solo**, không funding, không nhân viên, không văn phòng
+- Stack đơn giản (PHP + jQuery thường được mention)
+- Focus on **shipping > tech stack perfection**
+
+### 30-day plan template (cho easy-vibe)
+
+| Phase | Action |
+|------|------|
+| **Day 1-5** | Pick 1 problem. Build MVP với Cursor/Claude Code. Deploy. |
+| **Day 6-10** | Publish Twitter/LinkedIn + ProductHunt. Get first 10 users. |
+| **Day 11-20** | Add 1 AI agent feature. Iterate based on feedback. Build in public daily. |
+| **Day 21-25** | Launch paid tier. Get first $1 in revenue. |
+| **Day 26-30** | Document story. Publish post-mortem. Decide: continue or pivot. |
+
+### Tooling 2026 cho solo builder
+
+| Layer | Tool | Cost |
+|------|------|------|
+| Coding | Cursor + Claude Code | ~$20-40/mo |
+| Workflow backend | n8n cloud or self-host | $20/mo |
+| LLM API | Anthropic + OpenAI + DeepSeek (cost arbitrage) | Variable |
+| Deploy | Vercel / Railway / Cloudflare Workers | Free tier OK |
+| Database | Supabase / Neon | Free tier OK |
+| Auth | Clerk / Supabase Auth | Free tier OK |
+| Payment | Stripe / Lemonsqueezy | No monthly |
+| Marketing | Twitter/X + email (Resend) + landing (Framer/Carrd) | $0-10/mo |
+
+### 🇻🇳 VN-specific Vibe Agent roadmap recommendation
+
+- **Week 1**: Foundation (1 agent end-to-end, deploy)
+- **Week 2**: Multi-agent OR Workflow integration (n8n + Smax.ai)
+- **Week 3**: MCP integration với 1 VN platform (KiotViet / Pancake / MISA)
+- **Week 4**: Launch + first $
+- **Build in public mỗi ngày** trên TikTok / LinkedIn Vietnam — chiếm thị phần Vietnamese AI builder space
+
+### Challenge references (2026)
+
+- **MiniMax $150,000 AI Agent Challenge** (2026) — solo developers ship full-stack AI agent với demo video
+- **AI Agents Hackathon 2025 (Microsoft)** — patterns được dùng làm benchmark
+
+Sources: [Pieter Levels profile](https://www.onemilliongoal.com/p/pieter-levels-the-king-of-indie-hacking) | [Marc Lou story](https://indiepattern.com/stories/marc-lou/)
+
+---
+
 ## 🎯 Sau Day 30
 
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md) — refine workflow

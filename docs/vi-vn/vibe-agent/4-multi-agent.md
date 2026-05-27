@@ -452,7 +452,116 @@ Mỗi kênh (Messenger, Zalo, web, IG) = 1 sub-agent:
 
 ---
 
-## 13 Đọc tiếp
+## 13 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'kQmXtrmQ5Zg', title: 'Building Agents with MCP — Full Workshop (Anthropic)', channel: 'AI Engineer', duration: '2:00:00', why: 'Workshop chính thức Anthropic (Mahesh Murag) — đi qua single agent → orchestrator-worker → debate. Baseline.' },
+  { id: 'M30gp1315Y4', title: 'One Agent Is NOT ENOUGH: Agentic Coding BEYOND Claude Code', channel: 'IndyDevDan', duration: '25:00', why: 'Lập luận rõ: \'một agent là CEILING\'. Khi nào step up sang multi-agent với evidence từ real workflow.' },
+  { id: '-1K_ZWDKpU0', title: 'Claude Code\'s Agent Teams Are Insane — Multi-Agent Coding Live', channel: 'IndyDevDan', duration: '20:00', why: 'Demo live Claude Code Agent Teams (T2/2026). Parallel execution + observability hooks.' },
+  { id: 'rwqGQEzXF-o', title: 'How to Build Multi AI Agents with LangGraph', channel: 'AI Builder', duration: '30:00', why: 'Build supervisor pattern với LangGraph — framework production-grade nhất 2026.' },
+  { id: 'I90xJlzAUW0', title: 'CrewAI Tutorial: Multiple Agents Working Together', channel: 'Tech with Tim', duration: '25:00', why: 'CrewAI dễ tiếp cận hơn LangGraph — role-based metaphor. Tốt cho người mới.' }
+]" />
+
+---
+
+## 14 🔬 Deep Dive Techniques 2026
+
+::: tip 🧩 8 advanced techniques cho multi-agent production
+
+**1. Orchestrator-worker là default pattern 2026** — KHÔNG phải "swarm" hay "debate"
+- Anthropic Research, Claude Code Agent Teams, OpenAI Agents SDK đều dùng pattern này
+- Lý do: dễ debug, handoff rõ ràng, scale lý thuyết parallel
+
+**2. Tỉ lệ token 15x là chi phí thật**
+- Anthropic Research dùng **~15x token** so với single chat
+- ROI rõ chỉ khi: (a) breadth-first task >5 independent threads, (b) total info vượt context single agent, (c) latency thấp > cost
+
+**3. Context isolation là benefit thật, KHÔNG phải "agent debate ra ý hay hơn"**
+- Mỗi sub-agent có context window riêng → tránh context pollution
+- Đây là lý do thật khiến multi-agent thắng single agent
+
+**4. Specialized sub-agents > general sub-agents**
+- Spawn 1 "search agent" + 1 "code agent" + 1 "review agent" với system prompts khác nhau
+- Đừng spawn 5 generic agents
+
+**5. Hand-off > shared memory**
+- A2A protocol (donated Linux Foundation T6/2025) định nghĩa: agents trao đổi qua Tasks structure, không share state
+- Dễ debug hơn nhiều "shared scratchpad" mà AutoGen 0.x dùng
+
+**6. Maintenance mode warning ⚠️**
+- **AutoGen** đã vào maintenance mode (Microsoft chuyển team sang Magentic)
+- **OpenAI Swarm** deprecated, thay bằng OpenAI Agents SDK (v0.17.1 T5/2026)
+- Học 2026: **LangGraph, CrewAI, hoặc Claude Code SDK** — đừng học framework đang chết
+
+**7. Observability là phần khó nhất**
+- disler's `claude-code-hooks-multi-agent-observability` repo = reference implementation
+- Cần trace TaskCreate / TaskUpdate / SendMessage events qua hook system
+- Không observability = không debug được khi 1/5 agents fail
+
+**8. Debate/consensus patterns hiếm khi worth it cho production**
+- Research (Du et al.): debate tăng accuracy **5-15%** cho reasoning tasks
+- Token cost **~3x**
+- Production: orchestrator-worker + single critic agent > full debate
+:::
+
+---
+
+## 15 📚 More Case Studies (2025-2026)
+
+### Case A: Anthropic Research — **+90.2% vs single Opus 4**
+
+| Item | Số |
+|------|------|
+| Architecture | Lead agent Opus 4 + 3-5 Sonnet 4 sub-agents parallel |
+| **Beat single Opus 4** | **+90.2%** trên internal eval cho complex research |
+| **Token cost** | **~15x** vs normal chat |
+| **Time saving** | **Up to 90%** reduction cho complex query (parallel tool calls) |
+
+> Source: [Anthropic engineering](https://www.anthropic.com/engineering/built-multi-agent-research-system) | [The AI Engineer](https://theaiengineer.substack.com/p/how-anthropic-built-multi-agent-deep)
+
+### Case B: Devin × Goldman Sachs — **12K engineers + hundreds Devin instances**
+
+| Item | Số |
+|------|------|
+| Launch | T7/2025 pilot, expansion ongoing |
+| Goldman programming team | **12,000 người** |
+| Devin instances deployed | **Hundreds** (scaling lên thousands) |
+| CIO Marco Argenti target | Hybrid workforce → equivalent **14,400 dev output** từ 12K người (20% gain) |
+| Goldman ambition | Up to **3-4x productivity** |
+| Use cases | Legacy code, refactoring, debugging — supervised by humans |
+
+> Source: [Fortune](https://fortune.com/2025/07/14/goldman-sachs-ai-powered-software-engineer-devin-new-employee-increase-productivity-fears-of-job-replacement/) | [CNBC](https://www.cnbc.com/2025/07/11/goldman-sachs-autonomous-coder-pilot-marks-major-ai-milestone.html)
+
+### Case C: Cognition AI — **$1M → $155M ARR / 11 tháng, $25B valuation** (T4/2026)
+
+| Cột mốc | Số |
+|------|------|
+| T6/2025 | **$73M ARR** (từ $1M T9/2024) |
+| T7/2025 | Acquire Windsurf (AI-native IDE). Combined ARR +30% in 7 weeks post-close |
+| Post-Windsurf | **$155M ARR** (T7/2025) |
+| T9/2025 | **$400M raise** led by Founders Fund @ $10.2B valuation |
+| **T4/2026** | **In talks at $25B valuation** |
+| Customers | Goldman Sachs, Santander, Nubank + thousands |
+
+> Source: [Cognition blog](https://cognition.ai/blog/funding-growth-and-the-next-frontier-of-ai-coding-agents) | [SiliconAngle](https://siliconangle.com/2026/04/23/cognition-creator-ai-software-engineer-devin-talks-raise-hundreds-millions-25b-valuation/)
+
+---
+
+## 16 🛠️ Tool Updates (Q1-Q2 2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Claude Code Agent Teams GA** | Anthropic ship official Agent Teams. Multi-agent orchestration native | T2/2026 | Không cần framework ngoài |
+| **OpenAI Agents SDK v0.17.x** | Stable release: handoffs, guardrails, tracing, Responses API | T3/2026 | Swarm chính thức deprecated |
+| **A2A Protocol** | **150+ organizations** support: Google, Microsoft, AWS, Salesforce, SAP, ServiceNow, IBM | T4/2026 | Azure AI Foundry + Bedrock AgentCore + Google Cloud native |
+| **LangGraph v1.0** | Default runtime cho LangChain agents. Stateful workflows + durable execution + human-in-the-loop stable | Late 2025 | Production-grade |
+| **CrewAI Enterprise** | **150+ enterprise customers** (PwC, IBM, Capgemini, NVIDIA), powering **1.4B agentic automations** | 2026 | $3.2M revenue T7/2025 với 29-person team |
+
+Source: [Linux Foundation A2A 150+ orgs](https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year)
+
+---
+
+## 17 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🧠 [Chapter 2 — Claude Code Deep](./2-claude-code-deep.md)

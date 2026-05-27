@@ -458,7 +458,122 @@ Vapi voice agent (giọng Việt qua ElevenLabs)
 
 ---
 
-## 12 Đọc tiếp
+## 12 🎥 Watch & Learn — 5 video tutorial
+
+<ChapterVideos :videos="[
+  { id: 'GuaKeDS6UKU', title: 'n8n Quick Start: Build Your First AI Agent [2026]', channel: 'n8n Official', duration: '20:00', why: 'Up-to-date n8n flow builder UX 2026, native AI Agent node. Starting point cho người chưa từng dùng n8n.' },
+  { id: 'HuKiMqqELGo', title: 'Master AI Agents 2025 in Mins with n8n!', channel: 'Cole Medin', duration: '30:00', why: 'Cole Medin = reference cho n8n + AI agent. Cover memory, tool calling, multi-step workflow.' },
+  { id: 'mQt1hOjBH9o', title: 'I Built the ULTIMATE n8n RAG AI Agent Template', channel: 'Cole Medin', duration: '35:00', why: 'RAG pattern thực tế trong n8n. Template open-source. Dùng cho 90% workflow agent business case.' },
+  { id: 'VNdF3B6-tyQ', title: 'Build a Voice Agent in 15 Minutes Using VAPI (2026)', channel: 'Vapi Tutorials', duration: '15:00', why: 'Vapi đạt 1 BILLION calls (T5/2026). Tutorial latest UI: STT → LLM → TTS pipeline.' },
+  { id: 'x5q02lmUhVM', title: 'Build a Personal AI Voice Agent with ElevenLabs (n8n)', channel: 'n8n Community', duration: '25:00', why: 'ElevenLabs Conversational AI + n8n. Pattern Smax.ai/AIECOS dùng — voice + workflow integration.' }
+]" />
+
+> 🇻🇳 **Vietnamese coverage**: Smax.ai chưa có YouTube channel official với tutorial dài. Hỏi Dân IT (@hoidanit), 200Lab cover dev tools tổng quát. Recommend join community AIECOS để Q&A tiếng Việt.
+
+---
+
+## 13 🔬 Deep Dive Techniques 2026
+
+::: tip ⚙️ 7 advanced techniques cho workflow + voice agent
+
+**1. Workflow agent ≠ chat agent**
+- Workflow: có **trigger** (webhook, schedule, event) + **deterministic path** với AI node
+- Chat: user-driven, conversational loop
+- Khi tư vấn khách: "Bạn cần AI tự chạy theo lịch/trigger, hay user phải chat với nó?"
+
+**2. Voice agent cần latency budget <800ms turn-around**
+- Vapi đạt **99.99% SLA**
+- Stack chuẩn:
+  - Deepgram STT (~100ms)
+  - GPT-4o-mini / Claude Haiku (~300ms first token)
+  - ElevenLabs Turbo TTS (~200ms)
+- Vượt 1s → user thấy "chậm"
+
+**3. n8n MCP node thay đổi cuộc chơi**
+- n8n có **MCP Server Trigger** và **MCP Client Tool** nodes
+- Expose n8n workflow như MCP tool cho Claude Desktop / Cursor dùng
+- Pattern: "n8n = backend, Claude = brain" cực mạnh cho solo operator
+
+**4. Smax.ai vs n8n: bổ sung, không cạnh tranh**
+- **Smax.ai** = channel layer (Facebook, Zalo OA, TikTok, Shopee)
+- **n8n** = logic layer
+- **AIECOS stack chuẩn**: Smax (channel) → n8n webhook (orchestration + LLM + DB) → CRM/ERP API
+- Đừng cố làm tất cả trong Smax flow builder
+
+**5. Cost control LLM trong workflow**
+- 1 workflow chạy 1,000 lần/ngày × 5 LLM calls/run = **5,000 calls/ngày**
+- **Routing rules**:
+  - Haiku/4o-mini cho classification/extraction
+  - Sonnet/4o cho generation
+- → Tiết kiệm **60-80% cost**
+- Pattern n8n: IF node check task complexity → branch LLM model
+
+**6. Memory & state là điểm fail #1**
+- Voice agent quên context giữa turn = khách cúp máy
+- Workflow agent quên customer history = robot không nhớ tên
+- Pattern: dùng **Postgres / Supabase / Redis** cho persistent memory
+- KHÔNG dùng LLM context window (cost cao + bị reset)
+
+**7. Human handoff là feature, không phải bug**
+- Yody, Let's Sushi đều có human handoff khi bot không xử lý nổi
+- "Escalation path" rõ ràng: trigger Slack notification, gán cho human agent
+:::
+
+---
+
+## 14 📚 More Case Studies (2025-2026)
+
+### Case A: n8n — **$7.2M → $40M ARR / $2.5B valuation** trong 12 tháng
+
+| Thời điểm | ARR / Valuation |
+|------|------|
+| 2024 | $7.2M ARR, ~$350M valuation (Series B) |
+| **T10/2025** | **$180M Series C @ $2.5B valuation** led by Accel (+ NVIDIA, Sequoia, HV Capital) |
+| T3/2025 | **230,000+ active users**, $40M+ ARR |
+
+> **Lesson VN**: workflow automation + AI agent là segment thật, không phải hype.
+> Source: [PitchBook](https://pitchbook.com/news/articles/ai-agent-startup-n8n-lands-2-5b-valuation-with-180m-series-c)
+
+### Case B: Vapi — **1 BILLION calls cumulative + Amazon Ring win** (T5/2026)
+
+| Item | Số |
+|------|------|
+| Series B | **$50M @ $500M valuation** T5/2026 led by Peak XV |
+| Developers | **1+ million** |
+| Unique agents created | **2.7M+** |
+| **Amazon Ring** | Chose Vapi over **40 competing voice AI platforms** |
+| Enterprise customers | Kavak, Instawork, New York Life, Intuit |
+| **SLA** | **99.99% trên 62M monthly calls** |
+
+> Source: [TechCrunch](https://techcrunch.com/2026/05/12/vapi-hits-500m-valuation-as-amazon-ring-chose-its-ai-platform-over-40-rivals/) | [Globe Newswire](https://www.globenewswire.com/news-release/2026/05/12/3292882/0/en/vapi-raises-50m-series-b-as-it-reaches-1-billion-calls-powering-the-next-generation-of-enterprise-voice-ai.html)
+
+### Case C: Smax.ai × Yody / Let's Sushi / Biluxury (Vietnam)
+
+| Brand | Result |
+|------|------|
+| **Yody** (fashion VN) | +15-20% close rate, **3x cost reduction**, no team expansion |
+| **Let's Sushi** (F&B Hanoi) | Featured by **Meta** as success story. **+300% online orders** post-deployment |
+| **Biluxury** (menswear, $5.3M) | Smax revolutionize digital customer engagement |
+
+> **Lesson VN operator**: case study local chứng minh ROI rõ — dùng làm pitch cho khách VN.
+> Source: [Smax.ai](https://smax.ai/en/index.html) | [Meta × Smax × Let's Sushi case](https://swngproductions.com/work/meta-x-smax-x-lets-sushi-video-case-study/)
+
+---
+
+## 15 🛠️ Tool Updates (Q1-Q2 2026)
+
+| Tool | Update | Date | Key impact |
+|------|------|------|------|
+| **Vapi** | $50M Series B + **1B calls milestone** | T5/2026 | Voice agent production-grade. Latency + SLA không còn vấn đề |
+| **n8n native AI Agent node 2.0** | Memory, tool calling, MCP support tích hợp sẵn | Q1/2026 | Không cần Custom Node nữa |
+| **ElevenLabs Conversational AI 2.0** | 70+ ngôn ngữ, low-latency, enterprise security tier | Q1/2026 | Production-ready cho multi-lingual |
+| **Pancake (VN)** | Ra mắt **MCP support beta** | T4/2026 | Claude/n8n đọc inbox + gửi reply trực tiếp |
+| **Lindy AI** | **1,600+ app integrations**, model-agnostic. Total **$49.9M funding** | 2026 | No-code agent over apps |
+| **Sema4.ai** | Tăng trưởng silent, mention nhiều trong enterprise procurement | Q2/2026 | Enterprise workflow agent |
+
+---
+
+## 16 Đọc tiếp
 
 - 💻 [Chapter 1 — Vibe Coding Solo](./1-vibe-coding-solo.md)
 - 🖱️ [Chapter 3 — Computer Use](./3-computer-use.md)
