@@ -48,7 +48,7 @@ const localeMap = {
 const getSeoHead = (locale, title, description, path = '') => {
   const seoConfig = localeMap[locale] || localeMap['vi-vn']
   const canonicalUrl = path ? `${siteUrl}${path}` : `${siteUrl}/${locale}/`
-  const ogImageUrl = `${siteUrl}${base}logo.png`
+  const ogImageUrl = `${siteUrl}${base}og-image.png`.replace('//', '/')
 
   // 从路径中提取页面相对路径（去掉语言前缀）
   const getRelativePath = (fullPath, currentLocale) => {
@@ -63,12 +63,19 @@ const getSeoHead = (locale, title, description, path = '') => {
   const relativePath = getRelativePath(path, locale)
 
   const head = [
-    ['link', { rel: 'icon', href: `${base}logo.png`.replace('//', '/') }],
+    // Favicon — SVG primary (modern browsers) + ICO fallback (legacy)
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${base}favicon-16x16.png`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32x32.png`.replace('//', '/') }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: `${base}apple-touch-icon.png`.replace('//', '/') }],
+    ['link', { rel: 'manifest', href: `${base}site.webmanifest`.replace('//', '/') }],
     [
       'link',
       { rel: 'stylesheet', href: `${base}style.css`.replace('//', '/') }
     ],
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#0ea5e9' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#0ea5e9' }],
     [
       'meta',
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
@@ -251,7 +258,8 @@ const getSeoHead = (locale, title, description, path = '') => {
 }
 
 const commonHead = [
-  ['link', { rel: 'icon', href: `${base}logo.png`.replace('//', '/') }],
+  ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg`.replace('//', '/') }],
+  ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico`.replace('//', '/') }],
   ['link', { rel: 'stylesheet', href: `${base}style.css`.replace('//', '/') }]
 ]
 
