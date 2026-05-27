@@ -314,3 +314,131 @@ Thầy Hạo chân thành kêu gọi mọi người quan tâm hơn đến **lớ
 - **Google Educator Group (GEG)** VN — chia sẻ tools giáo dục
 - **STEMHero, Code.org** — curriculum sẵn cho học sinh tiểu học
 :::
+
+---
+
+## 🎓 Lessons Applied — 5 lessons từ Thầy Hạo bạn có thể dùng
+
+::: tip 💡 Apply trực tiếp vào hoàn cảnh bạn
+
+**Lesson 1. 🪰 Pain nhỏ = idea tốt**
+- Pain "ruồi đậu màn hình" tưởng vớ vẩn → thành phần mềm thật
+- Apply: liệt kê 5 pain nhỏ trong lớp/công ty/cuộc sống bạn → pick 1 → AI build
+
+**Lesson 2. 🤝 Co-creation, không deliver**
+- Thầy không code thay học sinh — thầy "phiên dịch" idea HS sang prompt AI
+- Apply: làm cùng team/HS, không làm THAY cho họ
+
+**Lesson 3. 🌅 Local-context > generic**
+- Vấn đề ruồi trong lớp quê = pain RẤT cụ thể, không phải "build a chatbot"
+- Apply: pick problem rất specific cho hoàn cảnh bạn (vd "chấm vở Tin lớp 3 trường mình")
+
+**Lesson 4. 🎤 Question quality > answer quality**
+- Thầy biết câu hỏi đúng để hỏi AI ("phân biệt chuột vs màn hình bấm")
+- Apply: học prompt engineering 2 buổi (4h) là đủ
+
+**Lesson 5. 🐛 Celebrate bug, đừng sợ**
+- Bug = cơ hội học, không phải failure
+- Apply: tạo "Sổ kho báu lỗi" cho lớp/team
+:::
+
+---
+
+## 🏗️ Try Yourself — Mini-challenge
+
+::: warning 🎯 Pain spotting + first build
+
+**Step 1 — Identify** (15 phút):
+Liệt kê **3 pain** ở hoàn cảnh bạn:
+- Pain ở lớp/công ty/gia đình
+- Mỗi pain: 1 câu mô tả + ai bị ảnh hưởng + tần suất
+- Pick 1 pain nhỏ nhất (không phải lớn nhất!)
+
+**Step 2 — Validate** (30 phút):
+Hỏi 5 người: "Bạn có gặp [pain] không? Bạn xử lý thế nào?"
+→ Document câu trả lời
+
+**Step 3 — First prototype** (1 giờ):
+Mở Cursor / Lovable / Bolt.new → mô tả pain + giải pháp đề xuất → AI gen MVP
+→ Run, test, share screenshot với 5 người step 2
+
+**Output**:
+- 1 trang document "My first AI tool"
+- Screenshot demo
+- 5 feedback từ user thật
+
+**Time**: 1 buổi tối (2 giờ)
+:::
+
+---
+
+## 🎯 Knowledge Check
+
+::: details 1. Pain "ruồi đậu màn hình" trong story là?
+**A.** Vấn đề hardware lỗi
+**B.** Vấn đề thật trong lớp quê, được học sinh phát hiện ✅
+**C.** Bug software lớn
+**D.** Joke không thật
+
+**Đáp án: B** — Pain THẬT, học sinh giơ tay đề xuất "nhốt ruồi". Local-context problem, không abstract. Đây chính là pattern "pain nhỏ = idea tốt".
+:::
+
+::: details 2. Thầy Hạo có biết code Python không?
+**A.** Có, expert
+**B.** Không, dùng AI "phiên dịch" idea HS ✅
+**C.** Có biết cơ bản
+**D.** Có nhưng giả vờ không biết
+
+**Đáp án: B** — Thầy KHÔNG cần biết Python. Thầy biết câu hỏi đúng + phiên dịch idea HS sang prompt AI. Đây là "teacher-as-curator, not coder" pattern.
+:::
+
+::: details 3. Vietnam Foundation × Khanmigo launch khi nào?
+**A.** T1/2024
+**B.** T11/2025 ✅
+**C.** Chưa launch
+**D.** Q2/2026
+
+**Đáp án: B** — **T11/2025**: VNF localize Khanmigo cho VN, FREE cho mọi GV. **Tiếng Việt = ngôn ngữ native thứ 4** của Khanmigo (sponsor by Microsoft).
+:::
+
+::: details 4. AI tutor pattern đúng cho rural classroom?
+**A.** Cho đáp án ngay
+**B.** Socratic — hỏi ngược học sinh ✅
+**C.** Chỉ dạy syntax
+**D.** Drill test repeat
+
+**Đáp án: B** — Khanmigo system prompt: "Don't give answers. Ask 1 leading question at a time." Foundation cho personalized AI tutor.
+:::
+
+::: details 5. Hongyan AI Project (Quý Châu) quote?
+**A.** "AI replace teachers"
+**B.** "AI is a teacher with boundless patience" ✅
+**C.** "AI fix all education"
+**D.** "AI giả hơn người"
+
+**Đáp án: B** — Hongyan AI Project (BUPT bringing AI to rural Guizhou): "AI is a teacher with boundless patience." Smart mirror + generative AI tutor.
+:::
+
+::: details 6. Vietnam Foundation Khanmigo VN pricing?
+**A.** $15/teacher/year
+**B.** $150/year
+**C.** FREE hoàn toàn ✅
+**D.** $5/student/year
+
+**Đáp án: C** — **Free hoàn toàn** cho mọi GV VN qua VNF (sponsor by Microsoft). 25 tools (Plan, Create, Differentiate, Support, Learn).
+:::
+
+::: details 7. Microsoft Elevate ở Indonesia training GV làm gì?
+**A.** Replace teachers
+**B.** Dùng AI như "teaching partner" — soạn bài, vượt outdated devices ✅
+**C.** Bán hardware
+**D.** Học English
+
+**Đáp án: B** — Microsoft Elevate Indonesia: GV vùng quê (Nuryam Gazi + Anis Damayanti) dùng AI **"teaching partner"** sau training. Vượt qua isolation + outdated devices.
+:::
+
+**Score**:
+- 6-7/7 ✅ Story 1 thấm — sang Story 2
+- 4-5/7 ⚠️ Re-read sections lessons + try mini-challenge
+- <4/7 ❌ Watch lại 3 videos + redo try yourself
+:::

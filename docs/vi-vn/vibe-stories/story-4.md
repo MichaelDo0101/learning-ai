@@ -290,3 +290,148 @@ Anh Hoàng chứng minh: 1 người + AI + 4-5 ngày → chạy được full ch
 - Mới: code = chỉ đạo AI làm gì
 - → Mọi nghề chuyển ngành AI được, miễn có **thôi thúc giải quyết vấn đề thật**
 :::
+
+---
+
+## 🎓 Lessons Applied — 7 lessons từ anh Hoàng (48y career switcher)
+
+::: tip 💡 Apply cho late-career switcher VN
+
+**Lesson 1. 🎂 Late-start = advantage**
+- 48 tuổi có life experience → hiểu user thật, biết vấn đề thật
+- Apply: build cho COMMUNITY bạn biết (tài xế, kế toán, GV, etc.)
+
+**Lesson 2. 💳 Closed-loop payment first**
+- Paddle / Creem (Merchant of Record) → outsource VAT/tax global
+- Apply: ngay từ MVP, set up payment global — đừng chỉ build "free demo"
+
+**Lesson 3. 🤖 AI = entire dev team**
+- Cursor + Lovable + Replit + ChatGPT cho 1 người
+- Apply: học 1 tool/tháng × 3 tháng → ship product v1
+
+**Lesson 4. 📣 Build-in-public + small audience**
+- Pieter Levels 10 năm → 700K followers → CAC $0
+- Apply: 1 post/tuần "Day 12: solo dev 48 tuổi build [X]" — audience tích lũy slowly
+
+**Lesson 5. ⏰ Ship before ready**
+- Đặt deadline 30 ngày → public link bất kể UI
+- Apply: "Done is better than perfect" (Pieter mantra)
+
+**Lesson 6. 💰 Pricing > features**
+- $39/tháng Photo AI = 87% profit margin
+- Apply: 1 user global = 50 user VN. Price global ($19-49/mo), không VN ($1-5/mo)
+
+**Lesson 7. 🎯 Niche wrapper, NOT horizontal**
+- "Podcast-to-clips cho nha sĩ" > ChatGPT clone
+- Apply: "AI ảnh sản phẩm cho shop Etsy" > "AI image gen tool"
+:::
+
+---
+
+## 🏗️ Try Yourself — Late-career switcher 30-day sprint
+
+::: warning 🎯 Sprint cho người 30+/40+ muốn chuyển ngành
+
+**Tuần 1 — Identify**:
+- List 3 community bạn am hiểu (current job, hobby, hometown)
+- Mỗi community: 5 pain points
+- Pick 1 pain niche nhất → 5 customer interview (real conversation)
+
+**Tuần 2 — Build**:
+- Spec với Claude (2h)
+- Build no-code MVP với Lovable / Bolt (8h)
+- Connect Paddle/Creem (2h)
+- Deploy + test (2h)
+
+**Tuần 3 — Launch**:
+- Twitter/LinkedIn post "Solo dev 4Xy ship [X]"
+- Email 50 từ community step 1
+- ProductHunt soft launch
+
+**Tuần 4 — Validate**:
+- 50+ signup OR pivot
+- 5+ paying customer
+- Document journey thành Twitter thread
+
+**Output**:
+- Live URL với payment work
+- 5+ paying customer ($1+)
+- Build-in-public Twitter thread 30-tweet
+- Case study post (LinkedIn)
+
+**Mantra**:
+> *"Không bao giờ muộn. Vô-lăng ngay trong tay bạn."* — anh Hoàng
+:::
+
+---
+
+## 🎯 Knowledge Check
+
+::: details 1. Anh Hoàng làm gì trước khi học Vibe Coding?
+**A.** Software engineer
+**B.** Tài xế xe tải 48 tuổi ✅
+**C.** Marketing
+**D.** Designer
+
+**Đáp án: B** — Tài xế xe tải 48 tuổi ở Trịnh Châu (TQ), không IT background. Mùa xuân 2025 DeepSeek bùng nổ → quyết học AI.
+:::
+
+::: details 2. Pieter Levels Photo AI profit margin?
+**A.** 20%
+**B.** 50%
+**C.** 87% ✅
+**D.** 100%
+
+**Đáp án: C** — Photo AI: $132K MRR, $13K cost = **87% profit margin**. Pricing $39/tháng. Solo, 0 employees, ~$1.65M ARR.
+:::
+
+::: details 3. Stripe vs Paddle vs Lemon Squeezy — pick nào cho VN solo founder?
+**A.** Stripe luôn
+**B.** Paddle / Lemon Squeezy (Merchant of Record) ✅
+**C.** PayPal Business
+**D.** Tự build VNPay
+
+**Đáp án: B** — **Paddle / Lemon Squeezy** = Merchant of Record → outsource VAT/GST/sales tax globally. VN founder không cần accountant quốc tế. Stripe needs self-handle tax (US-focused).
+:::
+
+::: details 4. Pieter Levels build PhotoAI trong stack gì?
+**A.** Next.js + TypeScript
+**B.** React + Node
+**C.** 14,000 dòng raw PHP ✅
+**D.** Python Django
+
+**Đáp án: C** — Pieter Levels: PhotoAI = **14,000 dòng raw PHP** + inline HTML + JS. 0 employees, $132K MRR. Tweet 4.8M view. Motto: "Ship fast. Ship ugly. Ship in public."
+:::
+
+::: details 5. Marc Lou Bali income/tháng?
+**A.** $5K
+**B.** $20K
+**C.** $80K từ portfolio (ShipFast, IndiePage, ZenVoice...) ✅
+**D.** $1M
+
+**Đáp án: C** — Marc Lou Bali: **$80K/tháng** từ portfolio (ShipFast $54K + IndiePage + ZenVoice + ...). Sa thải khỏi job → indie hacker, ship 16 product trong 2 năm.
+:::
+
+::: details 6. Pieter Levels mất bao lâu build 600K followers trước Photo AI?
+**A.** 1 năm
+**B.** 5 năm
+**C.** 10 năm ✅
+**D.** 20 năm
+
+**Đáp án: C** — Pieter mất **10 năm build 600K followers** trước Photo AI. Build-in-public daily. CAC ~$0 khi launch product.
+:::
+
+::: details 7. Tony Dinh (VN) ship Typing Mind sau ChatGPT launch?
+**A.** 1 năm
+**B.** 6 tháng
+**C.** Vài giờ ✅
+**D.** Chưa ship
+
+**Đáp án: C** — Tony Dinh ship Typing Mind **vài giờ sau ChatGPT launch**. Pattern: "Ship before it embarrasses him too much". Indie hacker full-time từ 2021.
+:::
+
+**Score**:
+- 6-7/7 ✅ Module Vibe Stories mastered
+- 4-5/7 ⚠️ Re-read lessons
+- <4/7 ❌ Try 30-day sprint thật
+:::

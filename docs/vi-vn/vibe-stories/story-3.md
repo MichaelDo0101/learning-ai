@@ -289,3 +289,141 @@ Nếu bạn cũng là giáo viên Tin học, cũng đối mặt khó khăn tươ
    - **Microsoft Education VN**: có grant cho giáo viên dùng Azure OpenAI
    - **CEED**: trung tâm về EdTech tại VN
 :::
+
+---
+
+## 🎓 Lessons Applied — 6 lessons từ Thầy Tin
+
+::: tip 💡 Apply cho GV xây AI tutor
+
+**Lesson 1. 🤔 Socratic > Direct answer**
+- AI hỏi ngược: "Em đã thử bước nào chưa?", không "Đáp án là 42"
+- Apply: system prompt "Don't give answers, ask leading questions"
+
+**Lesson 2. 🧠 Per-student memory**
+- Mỗi HS có thread riêng, AI nhớ chỗ yếu
+- Apply: OpenAI Assistants API thread per user (hoặc Google Sheet log đơn giản)
+
+**Lesson 3. 📊 Invisible assessment**
+- AI phân tích từng câu trả lời → predict điểm + recommend bài tiếp
+- Apply: embed quiz đơn giản trong tutor flow
+
+**Lesson 4. 🔥 Engagement loop**
+- Streak + small wins (Duolingo pattern)
+- Apply: notification "Lan đã học 7 ngày liên tục" → phụ huynh Zalo
+
+**Lesson 5. 🎯 Bloom's 2-sigma**
+- 1-on-1 tutor + mastery learning → 98% HS đạt mức "A"
+- Apply: AI là "gia sư cá nhân" — science từ 1984, không phải hype
+
+**Lesson 6. 🛠️ Teacher-augmented, not replaced**
+- AI tiết kiệm 50% time soạn bài → GV focus 5 HS yếu nhất
+- Apply: dùng Khanmigo Teacher tools (FREE qua VNF) cho VN
+:::
+
+---
+
+## 🏗️ Try Yourself — Build mini AI tutor cho lớp bạn
+
+::: warning 🎯 Mini-tutor trong 1 tuần
+
+**Goal**: Build + deploy 1 AI tutor đơn giản cho 1 chủ đề bạn dạy (Toán, Tin, Anh văn, Lịch sử...) — 10 HS test thực tế.
+
+**Step 1 — Define** (1 giờ):
+- Pick 1 chủ đề cụ thể (vd: "Phép chia có dư lớp 3", "Câu điều kiện loại 1 lớp 11")
+- Define 5 typical mistake HS hay mắc
+
+**Step 2 — Build no-code** (2 giờ):
+- Mở **Google NotebookLM** (FREE) → upload SGK chapter
+- Cấu hình prompt: "Em là gia sư Toán lớp 3. Khi HS sai, không cho đáp án — hỏi ngược 1 câu dẫn dắt."
+- Test 5 conversation mẫu
+
+**Step 3 — Deploy** (1 giờ):
+- Share link NotebookLM cho lớp
+- HOẶC build Custom GPT (ChatGPT Plus $20) cho UI đẹp hơn
+
+**Step 4 — Iterate** (3 ngày):
+- 10 HS test
+- Document: chỗ nào AI dạy tốt? chỗ nào AI sai?
+- Adjust prompt
+
+**Output**:
+- Live AI tutor link
+- 10 HS test, có chat history
+- Document feedback + adjustment
+
+**Time**: 1 tuần (1h/ngày)
+:::
+
+---
+
+## 🎯 Knowledge Check
+
+::: details 1. Khanmigo for Teachers VN có pricing?
+**A.** $15/HS/year
+**B.** $50/teacher/year
+**C.** FREE hoàn toàn qua Vietnam Foundation ✅
+**D.** Chưa có VN
+
+**Đáp án: C** — **Free hoàn toàn** cho mọi GV VN qua VNF (sponsor by Microsoft). 25 tools. Vietnamese = ngôn ngữ native thứ 4.
+:::
+
+::: details 2. Riiid Santa (Hàn) tăng điểm trung bình bao nhiêu sau 20h học?
+**A.** 50 điểm
+**B.** 124 điểm ✅
+**C.** 300 điểm
+**D.** Không impact
+
+**Đáp án: B** — Riiid Santa AI tutor TOEIC: HS tăng **trung bình 124 điểm** sau 20h. Engagement +25.13%. 4M users global.
+:::
+
+::: details 3. Khanmigo user growth 2023 → 2024-25?
+**A.** Same
+**B.** 68K → 700K ✅
+**C.** 1K → 1M
+**D.** Bị giảm
+
+**Đáp án: B** — Khanmigo: **68K (2023) → 700K (2024-25)**. District partners 45 → 380. Pricing $15/HS/year cho district.
+:::
+
+::: details 4. Bloom's 2-sigma problem nói gì?
+**A.** Lớp đông học kém
+**B.** 1-on-1 tutor giúp 98% HS đạt "A" ✅
+**C.** Cần 2 sigma chuẩn deviation
+**D.** Là math problem
+
+**Đáp án: B** — Bloom 1984: **1-on-1 tutoring + mastery learning = 98% HS đạt "A"** (top 2% kiểu truyền thống). Science backing cho AI tutor narrative.
+:::
+
+::: details 5. AI tutor pattern KHÔNG nên là?
+**A.** Socratic guidance
+**B.** Per-student memory
+**C.** Cho đáp án thẳng ✅
+**D.** Engagement loop
+
+**Đáp án: C** — KHÔNG cho đáp án thẳng. Khanmigo system prompt: "Don't give answers. Ask 1 leading question at a time."
+:::
+
+::: details 6. Duolingo Luis Von Ahn key insight?
+**A.** Học phải khó
+**B.** Make learning addictive like social media (streak + small wins) ✅
+**C.** Một thầy nhiều trò
+**D.** Không cần gamification
+
+**Đáp án: B** — Duolingo: **streak + leaderboard + small wins**. Result: 6.6M paying subscribers (2024).
+:::
+
+::: details 7. Vietnam Foundation Khanmigo launch khi nào?
+**A.** T1/2025
+**B.** T6/2025
+**C.** T11/2025 ✅
+**D.** Chưa launch
+
+**Đáp án: C** — **T11/2025**: VNF launch Khanmigo VN. Vietnamese trở thành ngôn ngữ **native thứ 4** của platform (sau English + Spanish + Portuguese).
+:::
+
+**Score**:
+- 6-7/7 ✅ Sang Story 4
+- 4-5/7 ⚠️ Re-read lessons
+- <4/7 ❌ Build actual tutor
+:::

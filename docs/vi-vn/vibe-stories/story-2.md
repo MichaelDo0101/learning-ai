@@ -356,3 +356,132 @@ Cảm giác thành tựu trong lòng là **thật**.
 - 🏫 **FPT, RMIT**: practical, dễ launch product
 - 🏫 **NEU, FTU**: business + tech combo, hợp founder/PM track
 :::
+
+---
+
+## 🎓 Lessons Applied — 6 lessons từ sinh viên năm 2
+
+::: tip 💡 Apply cho student founder VN
+
+**Lesson 1. ⏱️ Ship-in-3-hours rule**
+- Anh Lư build website chat AI **trong 3 giờ** giữa tuần thi
+- Apply: pick problem nhỏ → build trong khung 3h (1 buổi tối)
+
+**Lesson 2. 🎯 Niche down (campus only)**
+- Chỉ phục vụ 1 trường (BK / KTQD / ĐHQG) → trust + viral nội bộ
+- Apply: ý tưởng đầu tiên nên "Marketplace cho trường X", không "Marketplace cho cả VN"
+
+**Lesson 3. 🤖 AI item description as feature**
+- Pain "không ai mô tả đúng đồ second-hand" → AI auto-describe
+- Apply: AI giải pain QUEN THUỘC, không invent new problem
+
+**Lesson 4. 🤝 Solo + AI = team of 5**
+- Không cần co-founder dev, chỉ cần Cursor + Lovable
+- Apply: ngừng tìm co-founder, start build solo trước
+
+**Lesson 5. ✅ Validation TRƯỚC feature**
+- Landing page + form chờ trước khi viết DB
+- Apply: post group lớp/Facebook → đo response → build sau
+
+**Lesson 6. 📣 "Demo học sinh kém" vẫn value**
+- Anh không hoàn hảo lúc livestream, nhưng feedback nghiêm túc
+- Apply: ship sớm > ship đẹp. Người nghiêm túc sẽ cho feedback nghiêm túc.
+:::
+
+---
+
+## 🏗️ Try Yourself — Mini-challenge
+
+::: warning 🎯 Campus product trong 7 ngày
+
+**Goal**: Ship 1 product nhỏ phục vụ 1 trường ĐH cụ thể, 10 user trong 7 ngày.
+
+**Ngày 1**: Pick 1 trường (BK / FTU / NEU / RMIT...) + identify 1 pain (đăng ký môn, tìm bạn cùng học, bán đồ second-hand, đặt phòng tự học...)
+
+**Ngày 2-3**: Build landing page (Carrd / Framer free) — mô tả product + email signup. Post lên Facebook trường + group lớp.
+
+**Ngày 4-6**: Build MVP với Lovable hoặc Bolt.new (no-code AI). Auth + 1 core feature thôi.
+
+**Ngày 7**: Launch chính thức + invite 10 bạn test.
+
+**Output**:
+- Live URL
+- 50+ signup (validation)
+- 10+ active user
+- 1 Twitter thread 7-tweet documenting journey
+
+**Stretch**: Hit 100 signup → consider charging $1-3/user.
+:::
+
+---
+
+## 🎯 Knowledge Check
+
+::: details 1. Anh Lư build website AI chat trong bao lâu?
+**A.** 1 tuần
+**B.** 1 ngày
+**C.** 3 giờ ✅
+**D.** 30 phút
+
+**Đáp án: C** — 3 giờ giữa tuần thi cuối kỳ T1/2026. Website chat AI có lịch + theo dõi phim + UI ngon lành.
+:::
+
+::: details 2. Pattern niche down trong story?
+**A.** Build cho cả VN
+**B.** Build cho 1 trường ĐH duy nhất → trust + viral nội bộ ✅
+**C.** Build B2B enterprise
+**D.** Build B2C global
+
+**Đáp án: B** — "Chợ trời sinh viên" = niche **1 trường ĐH**, không phải Idle Fish/Xianyu cho cả VN. UniYard (UO), StudiFlip (Purdue) đều same pattern.
+:::
+
+::: details 3. UniYard team build trong bao lâu?
+**A.** 3 ngày
+**B.** 1 tháng
+**C.** 3 tuần ✅
+**D.** 1 năm
+
+**Đáp án: C** — UniYard (University of Oregon, 2025): 3 sinh viên business, **3 tuần build site** với AI-assisted no-code. Hàng trăm SV UO đang dùng.
+:::
+
+::: details 4. Tony Dinh (VN) Typing Mind MRR?
+**A.** $5K
+**B.** $20K
+**C.** $45K (TypingMind) + $140K portfolio ✅
+**D.** $1M
+
+**Đáp án: C** — Tony Dinh: **TypingMind $45K MRR**, portfolio total **$140K/month**. Black Magic sold $128K, Xnapper sold $150K. Indie hacker full-time từ 2021 (28 tuổi).
+:::
+
+::: details 5. Solo founder năm 2026 phổ biến hay không?
+**A.** Rất hiếm
+**B.** 36.3% startup mới mid-2025 ✅
+**C.** 80% startup
+**D.** Chỉ ở Mỹ
+
+**Đáp án: B** — Solo founder startups: **23.7% (2019) → 36.3% mid-2025** of new startups. AI tools cho phép 1 người làm việc 3-5 người.
+:::
+
+::: details 6. Karpathy quote về vibe coding?
+**A.** "Code carefully"
+**B.** "I just see stuff, say stuff, run stuff, and copy-paste stuff, and it mostly works" ✅
+**C.** "Plan everything first"
+**D.** "Use only TypeScript"
+
+**Đáp án: B** — Andrej Karpathy, T2/6/2025, coined "vibe coding" — full quote về "embrace exponentials, forget code exists". Collins Word of the Year 2025.
+:::
+
+::: details 7. Distribution > product pattern in story?
+**A.** Build perfect product first
+**B.** Build audience trước hoặc song song với product ✅
+**C.** Marketing không cần
+**D.** Tay nghề tech > all
+
+**Đáp án: B** — Pieter Levels: 700K followers TRƯỚC PhotoAI. Marc Lou: $92K trong 2 ngày từ 135K followers. **Solo founder phải invest 30% time vào content + audience**.
+:::
+
+**Score**:
+- 6-7/7 ✅ Sang Story 3
+- 4-5/7 ⚠️ Re-read lessons
+- <4/7 ❌ Try mini-challenge thật
+:::
