@@ -25,7 +25,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    if: github.repository_owner == 'datawhalechina'
+    if: github.repository_owner == 'aiecosvietnam'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -20,7 +20,7 @@ const base = isVercel ? '/' : '/easy-vibe/'
 | Platform | Base | Example URL |
 | --- | --- | --- |
 | Vercel | `/` | `https://your-project.vercel.app/en/stage-1/...` |
-| GitHub Pages | `/easy-vibe/` | `https://datawhalechina.github.io/easy-vibe/en/stage-1/...` |
+| GitHub Pages | `/easy-vibe/` | `https://aiecosvietnam.github.io/learning-ai/en/stage-1/...` |
 | Local dev | `/easy-vibe/` | `http://localhost:5173/easy-vibe/en/stage-1/...` |
 | Local preview | `/easy-vibe/` | `http://localhost:4173/easy-vibe/en/stage-1/...` |
 
@@ -62,7 +62,7 @@ Vercel usually sets `VERCEL=1` automatically.
 npm run build
 ```
 
-3. Verify the published site: `https://datawhalechina.github.io/easy-vibe`
+3. Verify the published site: `https://aiecosvietnam.github.io/learning-ai`
 
 ## Post-Deploy Checklist
 

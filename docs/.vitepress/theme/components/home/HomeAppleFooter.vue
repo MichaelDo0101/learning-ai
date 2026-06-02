@@ -51,7 +51,7 @@ const appleFooterInfo = computed(() => {
       more: 'Cách học khác: truy cập',
       moreLink: 'GitHub Repository',
       moreTail: ' để nhận cập nhật và thông tin trao đổi.',
-      copyright: 'Copyright © 2026 Learning AI. Bảo lưu mọi quyền.',
+      copyright: 'Copyright © 2026 Learning AI · CC BY-NC-SA 4.0 · Phái sinh từ datawhalechina/easy-vibe (mã nguồn mở)',
       policies: ['Chính sách bảo mật', 'Điều khoản sử dụng', 'Sơ đồ website']
     },
     en: {
@@ -88,7 +88,7 @@ const appleFooterInfo = computed(() => {
       more: 'More ways to learn: visit',
       moreLink: 'GitHub Repository',
       moreTail: ' for updates and community discussions.',
-      copyright: 'Copyright © 2026 Learning AI. All rights reserved.',
+      copyright: 'Copyright © 2026 Learning AI · CC BY-NC-SA 4.0 · Derived from datawhalechina/easy-vibe (open-source)',
       policies: ['Privacy Policy', 'Terms of Use', 'Sitemap']
     }
   }

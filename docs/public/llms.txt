@@ -1,5 +1,5 @@
 # Easy-Vibe - AI Vibe Coding Curriculum
-# https://datawhalechina.github.io/easy-vibe
+# https://aiecosvietnam.github.io/learning-ai
 #
 # This file helps AI models and agents understand our project structure
 # Created for: OpenClaw, Claude, Cursor, Trae, and other AI coding assistants

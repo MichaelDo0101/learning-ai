@@ -1,11 +1,11 @@
 # robots.txt for Easy-Vibe
-# https://datawhalechina.github.io/easy-vibe
+# https://aiecosvietnam.github.io/learning-ai
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://datawhalechina.github.io/easy-vibe/sitemap.xml
+Sitemap: https://aiecosvietnam.github.io/learning-ai/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1

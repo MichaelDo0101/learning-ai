@@ -1,0 +1,60 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0)
+
+Copyright (c) 2026 Learning AI (AI Ecos Vietnam) and contributors.
+
+================================================================================
+ATTRIBUTION / NGUỒN GỐC
+================================================================================
+
+This project ("Learning AI") is a DERIVATIVE WORK based on:
+
+    datawhalechina/easy-vibe
+    https://github.com/datawhalechina/easy-vibe
+    © Datawhale and the easy-vibe contributors.
+
+Learning AI adds Vietnamese localization, rebranding, and additional
+educational content (including the "Generative AI" and "Agentic AI" modules).
+Credit for the original curriculum structure and much of the source content
+belongs to Datawhale and the easy-vibe authors. This derivative is shared
+under the same license terms.
+
+================================================================================
+LICENSE / GIẤY PHÉP
+================================================================================
+
+This work is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).
+
+You are free to:
+  • Share — copy and redistribute the material in any medium or format.
+  • Adapt — remix, transform, and build upon the material.
+
+Under the following terms:
+  • Attribution — You must give appropriate credit (including to the original
+    datawhalechina/easy-vibe project), provide a link to the license, and
+    indicate if changes were made.
+  • NonCommercial — You may not use the material for commercial purposes.
+  • ShareAlike — If you remix, transform, or build upon the material, you must
+    distribute your contributions under the same license as the original.
+  • No additional restrictions — You may not apply legal terms or technological
+    measures that legally restrict others from doing anything the license permits.
+
+This is a human-readable summary of (and not a substitute for) the license.
+
+Full legal code:
+  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+License deed (summary):
+  https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+================================================================================
+NOTE ON UPSTREAM LICENSE
+================================================================================
+
+At the time of forking, the upstream repository datawhalechina/easy-vibe did
+not include an explicit LICENSE file. Learning AI applies CC BY-NC-SA 4.0 — the
+license already stated on the easy-vibe documentation footer — and credits the
+original authors. If you intend to reuse or redistribute this material, please
+also review the upstream project and respect the rights of Datawhale and the
+original contributors.

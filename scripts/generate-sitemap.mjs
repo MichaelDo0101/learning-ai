@@ -29,7 +29,7 @@ const getBaseUrl = () => {
   if (process.env.SITE_URL) {
     return process.env.SITE_URL
   }
-  return 'https://datawhalechina.github.io/easy-vibe'
+  return 'https://aiecosvietnam.github.io/learning-ai'
 }
 
 const siteUrl = getBaseUrl()

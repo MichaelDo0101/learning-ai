@@ -14,7 +14,7 @@ const isEdgeOne = !!process.env.EDGEONE || process.env.EDGEONE === '1'
 // 4. 否则（如 GitHub Pages production build），使用 '/easy-vibe/'
 const npmEvent = process.env.npm_lifecycle_event || ''
 const isDev = npmEvent === 'dev' || npmEvent === 'preview' || process.env.NODE_ENV === 'development'
-const base = process.env.BASE || (isDev || isVercel || isEdgeOne ? '/' : '/easy-vibe/')
+const base = process.env.BASE || (isDev || isVercel || isEdgeOne ? '/' : '/learning-ai/')
 
 // 站点 URL 配置 - 根据部署环境动态确定
 const getSiteUrl = () => {
@@ -27,7 +27,7 @@ const getSiteUrl = () => {
   if (process.env.SITE_URL) {
     return process.env.SITE_URL
   }
-  return 'https://datawhalechina.github.io/easy-vibe'
+  return 'https://aiecosvietnam.github.io/learning-ai'
 }
 
 const siteUrl = getSiteUrl()
@@ -36,13 +36,13 @@ const siteUrl = getSiteUrl()
 const localeMap = {
   'vi-vn': {
     ogLocale: 'vi_VN',
-    twitterSite: '@datawhale',
+    twitterSite: '@aiecosvietnam',
     lang: 'vi-VN',
     hreflang: 'vi'
   },
   en: {
     ogLocale: 'en_US',
-    twitterSite: '@datawhale',
+    twitterSite: '@aiecosvietnam',
     lang: 'en-US',
     hreflang: 'en'
   }
@@ -111,10 +111,10 @@ const getSeoHead = (locale, title, description, path = '') => {
       {
         name: 'keywords',
         content:
-          'AI编程,Vibe Coding,Claude Code,Cursor,Trae,AI IDE,零基础学编程,AI辅助开发,产品经理,全栈开发,编程教程,编程工具,Datawhale,Supabase,React,大模型,LLM,人工智能,微信小程序,Android开发,iOS开发,MCP,RAG,LangGraph,Dify,跨平台开发,AI应用开发'
+          'Learning AI,học AI,Vibe Coding,AI Coding,lập trình AI,ChatGPT,Claude Code,Cursor,AI IDE,Generative AI,Agentic AI,full-stack,học lập trình cho người mới,prompt engineering,MCP,RAG,Supabase,React,LLM,trí tuệ nhân tạo,khóa học AI tiếng Việt'
       }
     ],
-    ['meta', { name: 'author', content: 'Datawhale' }],
+    ['meta', { name: 'author', content: 'Learning AI' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { name: 'googlebot', content: 'index,follow' }],
     ['meta', { name: 'baiduspider', content: 'index,follow' }],
@@ -159,8 +159,8 @@ const getSeoHead = (locale, title, description, path = '') => {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Datawhale',
-      url: 'https://datawhalechina.github.io',
+      name: 'Learning AI',
+      url: 'https://aiecosvietnam.github.io/learning-ai',
       logo: {
         '@type': 'ImageObject',
         url: ogImageUrl
@@ -173,7 +173,7 @@ const getSeoHead = (locale, title, description, path = '') => {
       description: description,
       provider: {
         '@type': 'Organization',
-        name: 'Datawhale',
+        name: 'Learning AI',
         sameAs: 'https://github.com/aiecosvietnam/learning-ai'
       },
       educationalLevel: 'Beginner to Advanced',
@@ -287,7 +287,7 @@ const commonThemeConfig = {
   },
   footer: {
     message:
-      'Tài liệu thuộc dự án <a href="https://github.com/aiecosvietnam/learning-ai" target="_blank" rel="noreferrer">Learning AI</a>',
+      'Tài liệu thuộc dự án <a href="https://github.com/aiecosvietnam/learning-ai" target="_blank" rel="noreferrer">Learning AI</a> · Phái sinh từ <a href="https://github.com/datawhalechina/easy-vibe" target="_blank" rel="noreferrer">datawhalechina/easy-vibe</a> (mã nguồn mở)',
     copyright:
       'Tài liệu được phát hành theo giấy phép <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> · © 2026 Learning AI'
   }

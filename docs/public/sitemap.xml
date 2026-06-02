@@ -2,1540 +2,1550 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
          xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/</loc>
-    <lastmod>2026-05-28T02:04:59+07:00</lastmod>
+    <loc>https://aiecosvietnam.github.io/learning-ai/zh-cn/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/algorithm-thinking</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/1-agent-la-gi</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/1-agent-la-gi"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/10-evaluation-observability</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/10-evaluation-observability"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/11-safety-guardrails</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/11-safety-guardrails"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/12-apply-vn-roadmap</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/12-apply-vn-roadmap"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/2-agent-loop-patterns</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/2-agent-loop-patterns"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/3-build-first-agent</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/3-build-first-agent"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/4-tool-design</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/4-tool-design"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/5-context-engineering</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/5-context-engineering"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/6-memory-agentic-rag</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/6-memory-agentic-rag"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/7-multi-agent</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/7-multi-agent"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/8-mcp-skills</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/8-mcp-skills"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/9-frameworks-tooling</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/9-frameworks-tooling"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/agentic-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/agentic-ai/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/algorithm-thinking</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/algorithm-thinking"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/algorithm-thinking"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/compilers</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/compilers</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/compilers"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/compilers"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/computer-networks</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/computer-networks</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/computer-networks"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/computer-networks"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/computer-organization</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/computer-organization</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/computer-organization"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/computer-organization"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/data-encoding-storage</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/data-encoding-storage</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/data-encoding-storage"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/data-encoding-storage"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/data-structures</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/data-structures</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/data-structures"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/data-structures"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/operating-systems</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/operating-systems</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/operating-systems"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/operating-systems"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/power-on-to-web</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/power-on-to-web</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/power-on-to-web"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/power-on-to-web"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/programming-languages</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/programming-languages</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/programming-languages"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/programming-languages"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/transistor-to-cpu</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/transistor-to-cpu</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/transistor-to-cpu"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/transistor-to-cpu"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/type-systems</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/type-systems</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/type-systems"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/type-systems"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/vibe-coding-fullstack</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/vibe-coding-fullstack</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/1-computer-fundamentals/vibe-coding-fullstack"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/vibe-coding-fullstack"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/command-line-shell</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/command-line-shell</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/command-line-shell"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/command-line-shell"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/debugging-art</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/debugging-art</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/debugging-art"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/debugging-art"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/environment-path</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/environment-path</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/environment-path"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/environment-path"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/git-version-control</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/git-version-control</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/git-version-control"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/git-version-control"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/ide-basics</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/ide-basics</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/ide-basics"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/appendix/2-development-tools/ide-basics"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/ide-basics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/appendix/2-development-tools/ide-basics"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/package-managers</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/package-managers</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/package-managers"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/package-managers"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/ports-localhost</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/ports-localhost</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/ports-localhost"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/ports-localhost"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/regex</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/regex</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/regex"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/regex"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/ssh-authentication</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/ssh-authentication</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/2-development-tools/ssh-authentication"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/2-development-tools/ssh-authentication"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/a11n-i18n</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/a11n-i18n</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/a11n-i18n"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/a11n-i18n"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/browser-as-os-rendering</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/browser-as-os-rendering</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/browser-as-os-rendering"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/browser-as-os-rendering"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/frontend-engineering</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/frontend-engineering</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/frontend-engineering"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/frontend-engineering"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/frontend-framework-nature</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/frontend-framework-nature</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/frontend-framework-nature"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/frontend-framework-nature"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/frontend-frameworks</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/frontend-frameworks</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/frontend-frameworks"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/frontend-frameworks"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/frontend-project-architecture</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/frontend-project-architecture</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/frontend-project-architecture"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/frontend-project-architecture"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/graphics-animation</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/graphics-animation</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/graphics-animation"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/graphics-animation"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/html-css-layout</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/html-css-layout</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/html-css-layout"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/html-css-layout"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/javascript-deep-dive</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/javascript-deep-dive</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/javascript-deep-dive"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/javascript-deep-dive"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/javascript-runtime</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/javascript-runtime</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/javascript-runtime"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/javascript-runtime"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/realtime-communication</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/realtime-communication</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/realtime-communication"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/realtime-communication"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/routing-navigation</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/routing-navigation</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/routing-navigation"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/routing-navigation"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/state-management</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/state-management</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/state-management"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/state-management"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/typescript</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/typescript</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/typescript"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/typescript"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/web-performance</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/web-performance</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/3-browser-and-frontend/web-performance"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/3-browser-and-frontend/web-performance"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/api-design</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/api-design</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/api-design"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/api-design"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/api-intro</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/api-intro</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/api-intro"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/api-intro"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/async-task-queues</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/async-task-queues</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/async-task-queues"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/async-task-queues"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/auth-authorization</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/auth-authorization</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/auth-authorization"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/auth-authorization"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/backend-languages</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/backend-languages</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/backend-languages"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/backend-languages"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/backend-layered-architecture</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/backend-layered-architecture</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/backend-layered-architecture"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/backend-layered-architecture"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/backend-project-architecture</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/backend-project-architecture</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/backend-project-architecture"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/backend-project-architecture"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/caching</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/caching</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/caching"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/caching"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/client-languages</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/client-languages</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/client-languages"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/client-languages"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/concurrency-async</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/concurrency-async</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/concurrency-async"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/concurrency-async"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/cross-platform</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/cross-platform</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/cross-platform"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/cross-platform"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/domain-specific-languages</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/domain-specific-languages</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/domain-specific-languages"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/domain-specific-languages"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/file-storage</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/file-storage</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/file-storage"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/file-storage"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/http-protocol</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/http-protocol</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/http-protocol"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/http-protocol"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/message-queues</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/message-queues</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/message-queues"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/message-queues"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/rate-limiting-backpressure</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/rate-limiting-backpressure</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/rate-limiting-backpressure"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/rate-limiting-backpressure"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/request-journey</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/request-journey</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/request-journey"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/request-journey"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/search-engines</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/search-engines</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/search-engines"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/search-engines"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/serialization</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/serialization</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/serialization"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/serialization"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/web-frameworks</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/web-frameworks</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/4-server-and-backend/web-frameworks"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/4-server-and-backend/web-frameworks"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/ab-testing</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/ab-testing</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/ab-testing"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/ab-testing"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-analysis</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-analysis</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-analysis"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-analysis"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-governance</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-governance</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-governance"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-governance"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-models</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-models</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-models"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-models"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-tracking</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-tracking</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-tracking"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-tracking"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-visualization</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-visualization</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/data-visualization"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/data-visualization"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/database-fundamentals</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/database-fundamentals</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/5-data/database-fundamentals"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/5-data/database-fundamentals"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/6-architecture-and-system-design/distributed-systems</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/6-architecture-and-system-design/distributed-systems</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/6-architecture-and-system-design/distributed-systems"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/6-architecture-and-system-design/distributed-systems"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/6-architecture-and-system-design/high-availability</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/6-architecture-and-system-design/high-availability</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/6-architecture-and-system-design/high-availability"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/6-architecture-and-system-design/high-availability"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/6-architecture-and-system-design/monolith-to-microservices</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/6-architecture-and-system-design/monolith-to-microservices</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/6-architecture-and-system-design/monolith-to-microservices"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/6-architecture-and-system-design/monolith-to-microservices"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/6-architecture-and-system-design/system-design-methodology</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/6-architecture-and-system-design/system-design-methodology</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/6-architecture-and-system-design/system-design-methodology"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/6-architecture-and-system-design/system-design-methodology"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/ci-cd</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/ci-cd</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/ci-cd"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/ci-cd"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/cloud-iam</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/cloud-iam</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/cloud-iam"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/cloud-iam"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/cloud-platforms</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/cloud-platforms</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/cloud-platforms"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/cloud-platforms"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/cloud-storage-cdn</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/cloud-storage-cdn</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/cloud-storage-cdn"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/cloud-storage-cdn"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/dns-https</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/dns-https</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/dns-https"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/dns-https"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/docker-containers</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/docker-containers</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/docker-containers"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/docker-containers"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/gateway-proxy</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/gateway-proxy</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/gateway-proxy"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/gateway-proxy"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/incident-response</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/incident-response</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/incident-response"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/incident-response"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/infrastructure-as-code</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/infrastructure-as-code</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/infrastructure-as-code"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/infrastructure-as-code"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/kubernetes</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/kubernetes</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/kubernetes"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/kubernetes"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/linux-basics</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/linux-basics</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/linux-basics"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/linux-basics"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/load-balancing-gateway</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/load-balancing-gateway</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/load-balancing-gateway"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/load-balancing-gateway"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/monitoring-logging</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/monitoring-logging</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/monitoring-logging"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/7-infrastructure-and-operations/monitoring-logging"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-agents</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-agents</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-agents"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-agents"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-capability-dictionary</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-capability-dictionary</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-capability-dictionary"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-capability-dictionary"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-history</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-history</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-history"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/appendix/8-artificial-intelligence/ai-history"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-history"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/appendix/8-artificial-intelligence/ai-history"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-native-app-design</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-native-app-design</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-native-app-design"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-native-app-design"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-protocols</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-protocols</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/ai-protocols"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/ai-protocols"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/context-engineering</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/context-engineering</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/context-engineering"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/context-engineering"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/embedding-vector-retrieval</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/embedding-vector-retrieval</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/embedding-vector-retrieval"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/embedding-vector-retrieval"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/image-generation</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/image-generation</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/image-generation"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/image-generation"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/llm-principles</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/llm-principles</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/llm-principles"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/llm-principles"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/model-finetuning-deployment</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/model-finetuning-deployment</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/model-finetuning-deployment"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/model-finetuning-deployment"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/multimodal-models</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/multimodal-models</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/multimodal-models"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/multimodal-models"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/neural-networks</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/neural-networks</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/neural-networks"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/neural-networks"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/prompt-engineering</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/prompt-engineering</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/prompt-engineering"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/prompt-engineering"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/rag</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/rag</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/rag"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/rag"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/speech-synthesis-recognition</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/speech-synthesis-recognition</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/speech-synthesis-recognition"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/speech-synthesis-recognition"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/transformer-attention</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/transformer-attention</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/8-artificial-intelligence/transformer-attention"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/8-artificial-intelligence/transformer-attention"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/code-quality-refactoring</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/code-quality-refactoring</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/code-quality-refactoring"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/code-quality-refactoring"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/design-patterns</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/design-patterns</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/design-patterns"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/design-patterns"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/open-source-collaboration</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/open-source-collaboration</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/open-source-collaboration"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/open-source-collaboration"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/security-thinking</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/security-thinking</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/security-thinking"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/security-thinking"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/technical-writing</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/technical-writing</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/technical-writing"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/technical-writing"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/technology-selection</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/technology-selection</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/technology-selection"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/technology-selection"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/testing-strategies</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/testing-strategies</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/9-engineering-excellence/testing-strategies"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/9-engineering-excellence/testing-strategies"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/appendix/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/appendix/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/1-generative-ai-la-gi</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/1-generative-ai-la-gi"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/10-roadmap-capstone</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/10-roadmap-capstone"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/2-tao-anh</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/2-tao-anh"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/3-tao-video</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/3-tao-video"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/4-tao-nhac-giong</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/4-tao-nhac-giong"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/5-consistency-nhan-vat</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/5-consistency-nhan-vat"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/6-consistency-post</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/6-consistency-post"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/7-pipeline-tu-dong</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/7-pipeline-tu-dong"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/8-ung-dung-vn</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/8-ung-dung-vn"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/9-phap-ly-dao-duc</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/9-phap-ly-dao-duc"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/generative-ai/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/guide/introduction</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/guide/introduction</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/guide/introduction"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/guide/introduction"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/guide/introduction"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/guide/introduction"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-0/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-0/</loc>
     <lastmod>2026-05-28T02:49:46+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-0/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-0/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/ai-capabilities-through-games/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/ai-capabilities-through-games/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/ai-capabilities-through-games/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/ai-capabilities-through-games/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-a-product-thinking/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/ai-capabilities-through-games/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/ai-capabilities-through-games/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-a-product-thinking/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-a-product-thinking/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-a-product-thinking/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-a-product-thinking/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-a-product-thinking/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-b-common-errors/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-b-common-errors/</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-b-common-errors/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-b-common-errors/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-b-common-errors/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-b-common-errors/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-c-consumer-scenarios/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-c-consumer-scenarios/</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-c-consumer-scenarios/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-c-consumer-scenarios/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-c-consumer-scenarios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-c-consumer-scenarios/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-consumer-scenarios/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-consumer-scenarios/</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-consumer-scenarios/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-consumer-scenarios/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-consumer-scenarios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-consumer-scenarios/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-double-diamond/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-double-diamond/</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-double-diamond/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-double-diamond/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-double-diamond/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-double-diamond/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-idea-sources/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-idea-sources/</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-idea-sources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-idea-sources/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-idea-sources/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-idea-sources/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-industry-scenarios/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-industry-scenarios/</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-industry-scenarios/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-industry-scenarios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-industry-scenarios/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-jobs-to-be-done/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-jobs-to-be-done/</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-jobs-to-be-done/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-jobs-to-be-done/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-jobs-to-be-done/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-jobs-to-be-done/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-mom-test/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-mom-test/</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/appendix-mom-test/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-mom-test/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/appendix-mom-test/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-mom-test/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/building-prototype/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/building-prototype/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/building-prototype/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/building-prototype/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/building-prototype/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/building-prototype/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/complete-project-practice/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/complete-project-practice/</loc>
     <lastmod>2026-05-20T10:43:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/complete-project-practice/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/complete-project-practice/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/complete-project-practice/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/complete-project-practice/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/finding-great-idea/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/finding-great-idea/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/finding-great-idea/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/finding-great-idea/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/finding-great-idea/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/finding-great-idea/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/integrating-ai-capabilities/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/integrating-ai-capabilities/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/integrating-ai-capabilities/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/integrating-ai-capabilities/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/integrating-ai-capabilities/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/integrating-ai-capabilities/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/introduction-to-ai-ide/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/introduction-to-ai-ide/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/introduction-to-ai-ide/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/introduction-to-ai-ide/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/introduction-to-ai-ide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/introduction-to-ai-ide/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/learning-map/</loc>
-    <lastmod>2026-05-28T02:49:46+07:00</lastmod>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/learning-map/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-1/learning-map/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-1/learning-map/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-1/learning-map/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-1/learning-map/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/ai-capabilities/dify-knowledge-base/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/ai-capabilities/dify-knowledge-base/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/ai-capabilities/dify-knowledge-base/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/ai-capabilities/dify-knowledge-base/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/copywriting-platform-supabase/PRD</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/ai-capabilities/dify-knowledge-base/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/ai-capabilities/dify-knowledge-base/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/copywriting-platform-supabase/PRD"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/copywriting-platform-supabase/PRD</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/copywriting-platform-supabase/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/copywriting-platform-supabase/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/custom-dify-agent-platform/PRD</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/copywriting-platform-supabase/PRD"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/custom-dify-agent-platform/PRD"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/copywriting-platform-supabase/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/custom-dify-agent-platform/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/custom-dify-agent-platform/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/exam-management-express/PRD</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/copywriting-platform-supabase/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/exam-management-express/PRD"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/custom-dify-agent-platform/PRD</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/exam-management-express/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/exam-management-express/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/modern-landing-page/PRD</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/custom-dify-agent-platform/PRD"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/modern-landing-page/PRD"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/custom-dify-agent-platform/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/modern-landing-page/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/modern-landing-page/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/movie-recommendation-springboot/PRD</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/custom-dify-agent-platform/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/movie-recommendation-springboot/PRD"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/exam-management-express/PRD</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/movie-recommendation-springboot/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/movie-recommendation-springboot/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/simple-grocery-microservices/PRD</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/exam-management-express/PRD"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/simple-grocery-microservices/PRD"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/exam-management-express/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/simple-grocery-microservices/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/simple-grocery-microservices/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/traffic-data-visualization-go/PRD</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/exam-management-express/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/traffic-data-visualization-go/PRD"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/modern-landing-page/PRD</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/traffic-data-visualization-go/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/traffic-data-visualization-go/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/travel-planning-agent-platform/PRD</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/modern-landing-page/PRD"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/travel-planning-agent-platform/PRD"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/modern-landing-page/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/travel-planning-agent-platform/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/assignments/travel-planning-agent-platform/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/ai-interface-code/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/modern-landing-page/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/ai-interface-code/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/ai-interface-code/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/movie-recommendation-springboot/PRD</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/database-supabase/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/movie-recommendation-springboot/PRD"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/database-supabase/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/database-supabase/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/movie-recommendation-springboot/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/git-workflow/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/movie-recommendation-springboot/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/git-workflow/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/git-workflow/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/simple-grocery-microservices/PRD</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/modern-cli/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/simple-grocery-microservices/PRD"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/modern-cli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/modern-cli/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/simple-grocery-microservices/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/stripe-payment/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/simple-grocery-microservices/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/stripe-payment/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/stripe-payment/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/traffic-data-visualization-go/PRD</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/zeabur-deployment/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/traffic-data-visualization-go/PRD"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/backend/zeabur-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/zeabur-deployment/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/traffic-data-visualization-go/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/design-to-code/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/traffic-data-visualization-go/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/design-to-code/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/design-to-code/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/travel-planning-agent-platform/PRD</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/figma-mastergo/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/travel-planning-agent-platform/PRD"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/figma-mastergo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/figma-mastergo/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/travel-planning-agent-platform/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/hogwarts-portraits/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/assignments/travel-planning-agent-platform/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/hogwarts-portraits/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/hogwarts-portraits/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/ai-interface-code/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/llm-skills-beautiful/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/ai-interface-code/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/backend/ai-interface-code/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/llm-skills-beautiful/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/llm-skills-beautiful/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/database-supabase/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/lovart-assets/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/database-supabase/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/backend/database-supabase/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/lovart-assets/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/lovart-assets/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/git-workflow/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/modern-component-library/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/git-workflow/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/backend/git-workflow/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/modern-component-library/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/modern-component-library/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/modern-cli/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/multi-product-ui/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/modern-cli/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/backend/modern-cli/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/multi-product-ui/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/multi-product-ui/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/stripe-payment/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/ui-design/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/stripe-payment/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/backend/stripe-payment/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/frontend/ui-design/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/ui-design/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/zeabur-deployment/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-2/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-2/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/ai-advanced/langgraph-advanced-rag/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/zeabur-deployment/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/backend/zeabur-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/ai-advanced/langgraph-advanced-rag/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/ai-advanced/langgraph-advanced-rag/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/design-to-code/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/ai-advanced/llamaindex-enterprise-knowledge-base/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/design-to-code/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/frontend/design-to-code/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/ai-advanced/llamaindex-enterprise-knowledge-base/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/figma-mastergo/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/ai-advanced/rag-introduction/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/figma-mastergo/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/frontend/figma-mastergo/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/ai-advanced/rag-introduction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/ai-advanced/rag-introduction/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/hogwarts-portraits/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/agent-teams/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/hogwarts-portraits/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/frontend/hogwarts-portraits/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/agent-teams/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/agent-teams/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/llm-skills-beautiful/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/basics/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/llm-skills-beautiful/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/frontend/llm-skills-beautiful/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/basics/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/basics/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/lovart-assets/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/claude-agent-sdk/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/lovart-assets/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/frontend/lovart-assets/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/claude-agent-sdk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/claude-agent-sdk/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/modern-component-library/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/long-running-tasks/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/modern-component-library/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/frontend/modern-component-library/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/long-running-tasks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/long-running-tasks/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/multi-product-ui/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/mcp/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/multi-product-ui/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/frontend/multi-product-ui/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/mcp/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/mcp/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/ui-design/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/mobile-development/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/frontend/ui-design/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/frontend/ui-design/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/mobile-development/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/mobile-development/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/</loc>
-    <lastmod>2026-05-28T02:49:46+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/ai-advanced/langgraph-advanced-rag/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/skills/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/ai-advanced/langgraph-advanced-rag/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/ai-advanced/langgraph-advanced-rag/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/skills/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/skills/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/ai-advanced/llamaindex-enterprise-knowledge-base/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/spec-coding/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/ai-advanced/llamaindex-enterprise-knowledge-base/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/spec-coding/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/spec-coding/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/ai-advanced/rag-introduction/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/superpowers/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/ai-advanced/rag-introduction/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/ai-advanced/rag-introduction/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/superpowers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/superpowers/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/agent-teams/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/workflow/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/agent-teams/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/agent-teams/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/core-skills/workflow/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/workflow/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/basics/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/android-app/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/basics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/basics/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/android-app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/android-app/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/claude-agent-sdk/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/browser-ai-extension/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/claude-agent-sdk/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/claude-agent-sdk/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/browser-ai-extension/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/browser-ai-extension/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/long-running-tasks/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/choose-platform/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/long-running-tasks/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/long-running-tasks/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/choose-platform/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/choose-platform/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/mcp/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/electron-voice-to-text/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/mcp/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/mcp/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/electron-voice-to-text/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/electron-voice-to-text/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/mobile-development/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/ios-app/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/mobile-development/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/mobile-development/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/ios-app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/ios-app/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/skills/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/nft-minting/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/skills/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/skills/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/nft-minting/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/nft-minting/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/spec-coding/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/pwa-local-app/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/spec-coding/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/spec-coding/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/pwa-local-app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/pwa-local-app/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/superpowers/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/qt-industrial-hmi/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/superpowers/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/superpowers/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/qt-industrial-hmi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/qt-industrial-hmi/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/workflow/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/vscode-extension/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/core-skills/workflow/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/core-skills/workflow/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/vscode-extension/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/vscode-extension/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/android-app/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/wechat-miniprogram/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/android-app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/android-app/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/wechat-miniprogram/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/wechat-miniprogram/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/browser-ai-extension/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/wechat-miniprogram-backend/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/browser-ai-extension/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/browser-ai-extension/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/cross-platform/wechat-miniprogram-backend/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/wechat-miniprogram-backend/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/choose-platform/</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/</loc>
+    <lastmod>2026-06-03T02:43:25+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/personal-brand/personal-website-blog/</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/choose-platform/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/choose-platform/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/personal-brand/personal-website-blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/personal-brand/personal-website-blog/"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/electron-voice-to-text/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/electron-voice-to-text/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/electron-voice-to-text/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/ios-app/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/ios-app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/ios-app/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/nft-minting/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/nft-minting/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/nft-minting/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/pwa-local-app/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/pwa-local-app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/pwa-local-app/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/qt-industrial-hmi/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/qt-industrial-hmi/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/qt-industrial-hmi/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/vscode-extension/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/vscode-extension/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/vscode-extension/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/wechat-miniprogram/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/wechat-miniprogram/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/wechat-miniprogram/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/wechat-miniprogram-backend/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/cross-platform/wechat-miniprogram-backend/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/cross-platform/wechat-miniprogram-backend/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/</loc>
-    <lastmod>2026-05-28T02:49:46+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/personal-brand/personal-website-blog/</loc>
-    <lastmod>2026-05-27T21:10:57+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-3/personal-brand/personal-website-blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-3/personal-brand/personal-website-blog/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/1-agent-foundation</loc>
-    <lastmod>2026-05-28T03:09:41+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/1-agent-foundation"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/1-agent-foundation"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/2-claude-code-deep</loc>
-    <lastmod>2026-05-28T03:09:41+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/2-claude-code-deep"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/2-claude-code-deep"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/3-computer-use</loc>
-    <lastmod>2026-05-28T03:09:41+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/3-computer-use"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/3-computer-use"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/4-multi-agent</loc>
-    <lastmod>2026-05-28T03:09:41+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/4-multi-agent"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/4-multi-agent"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/5-workflow-agent</loc>
-    <lastmod>2026-05-28T03:09:41+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/5-workflow-agent"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/5-workflow-agent"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/6-mcp-ecosystem</loc>
-    <lastmod>2026-05-28T03:09:41+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/6-mcp-ecosystem"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/6-mcp-ecosystem"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/</loc>
-    <lastmod>2026-05-28T03:09:41+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/roadmap-30-days</loc>
-    <lastmod>2026-05-28T01:00:21+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/roadmap-30-days"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/roadmap-30-days"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/safety-evals</loc>
-    <lastmod>2026-05-28T03:09:41+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/safety-evals"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/safety-evals"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/toolkit-2026</loc>
-    <lastmod>2026-05-28T03:09:41+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-agent/toolkit-2026"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-agent/toolkit-2026"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/1-solo-studio</loc>
-    <lastmod>2026-05-28T02:40:11+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/1-solo-studio"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/1-solo-studio"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/2-ai-music-3m</loc>
-    <lastmod>2026-05-28T02:40:11+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/2-ai-music-3m"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/2-ai-music-3m"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/3-virtual-influencer</loc>
-    <lastmod>2026-05-28T02:40:11+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/3-virtual-influencer"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/3-virtual-influencer"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/4-solo-saas-million</loc>
-    <lastmod>2026-05-28T02:40:11+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/4-solo-saas-million"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/4-solo-saas-million"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/5-sora-2-tiktok</loc>
-    <lastmod>2026-05-28T02:40:11+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/5-sora-2-tiktok"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/5-sora-2-tiktok"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/6-faceless-empire</loc>
-    <lastmod>2026-05-28T02:40:11+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/6-faceless-empire"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/6-faceless-empire"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/ethics-2026</loc>
-    <lastmod>2026-05-28T00:42:33+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/ethics-2026"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/ethics-2026"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/</loc>
-    <lastmod>2026-05-28T00:42:33+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/roadmap-30-days</loc>
-    <lastmod>2026-05-28T00:42:33+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/roadmap-30-days"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/roadmap-30-days"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/toolkit-2026</loc>
-    <lastmod>2026-05-28T00:42:33+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-generate/toolkit-2026"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-generate/toolkit-2026"/>
-  </url>
-  <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-stories/story-1</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/vibe-stories/story-1</loc>
     <lastmod>2026-05-28T02:44:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-stories/story-1"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-stories/story-1"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/vibe-stories/story-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/vibe-stories/story-1"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-stories/story-2</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/vibe-stories/story-2</loc>
     <lastmod>2026-05-28T02:44:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-stories/story-2"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-stories/story-2"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/vibe-stories/story-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/vibe-stories/story-2"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-stories/story-3</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/vibe-stories/story-3</loc>
     <lastmod>2026-05-28T02:44:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-stories/story-3"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-stories/story-3"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/vibe-stories/story-3"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/vibe-stories/story-3"/>
   </url>
   <url>
-    <loc>https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-stories/story-4</loc>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/vibe-stories/story-4</loc>
     <lastmod>2026-05-28T02:44:29+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/vibe-stories/story-4"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/vibe-stories/story-4"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/vibe-stories/story-4"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/vibe-stories/story-4"/>
   </url>
 </urlset>
