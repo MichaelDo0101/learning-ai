@@ -1,24 +1,24 @@
 {
-  "name": "Easy-Vibe",
-  "short_name": "Easy-Vibe",
-  "description": "Học AI Vibe Coding từ zero đến advanced. AI Coding Guide from scratch.",
+  "name": "Learning AI",
+  "short_name": "Learning AI",
+  "description": "Học AI từ số 0 đến ship sản phẩm thật: Generative AI, Agentic AI, full-stack vibe coding.",
   "icons": [
     {
-      "src": "/easy-vibe/android-chrome-192x192.png",
+      "src": "/learning-ai/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/easy-vibe/android-chrome-512x512.png",
+      "src": "/learning-ai/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ],
-  "theme_color": "#0ea5e9",
+  "theme_color": "#00b372",
   "background_color": "#ffffff",
   "display": "standalone",
-  "start_url": "/easy-vibe/",
-  "scope": "/easy-vibe/"
+  "start_url": "/learning-ai/",
+  "scope": "/learning-ai/"
 }

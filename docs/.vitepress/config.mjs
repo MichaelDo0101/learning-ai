@@ -78,8 +78,8 @@ const getSeoHead = (locale, title, description, path = '') => {
       'link',
       { rel: 'stylesheet', href: `${base}style.css`.replace('//', '/') }
     ],
-    ['meta', { name: 'theme-color', content: '#0ea5e9' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#0ea5e9' }],
+    ['meta', { name: 'theme-color', content: '#00b372' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#00b372' }],
     [
       'meta',
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
