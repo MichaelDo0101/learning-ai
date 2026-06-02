@@ -9,7 +9,6 @@ import HomeStage1 from './home/HomeStage1.vue'
 import HomeStage2 from './home/HomeStage2.vue'
 import HomeStage3 from './home/HomeStage3.vue'
 import HomeAppendix from './home/HomeAppendix.vue'
-import HomeAppleFooter from './home/HomeAppleFooter.vue'
 
 const router = useRouter()
 const { site, page, lang } = useData()
@@ -35,15 +34,17 @@ const t = computed(() => {
 
 provide('t', t)
 
-const isCjkLocale = computed(() => false)
+const localeBase = computed(() =>
+  (lang.value || 'vi-VN').toLowerCase().startsWith('en') ? '/en' : '/vi-vn'
+)
 
 const topPromo = computed(() => {
   const code = lang.value ? lang.value.toLowerCase() : 'vi-vn'
   const isVietnamese = code === 'vi-vn'
   return {
     text: isVietnamese
-      ? 'Dùng Học AI xây ứng dụng AI đầu tay — có thể đẩy prototype lên trong ngày.'
-      : 'Build your first AI app with Học AI and ship a working prototype fast.',
+      ? 'Dùng Learning AI xây ứng dụng AI đầu tay — có thể đẩy prototype lên trong ngày.'
+      : 'Build your first AI app with Learning AI and ship a working prototype fast.',
     cta: isVietnamese ? 'Bắt đầu học ›' : 'Start learning ›',
     link: `/${code}/stage-1/learning-map/`
   }
@@ -307,14 +308,7 @@ onUnmounted(() => {
             class="nav-title"
             :aria-label="t.nav.title"
           >
-            <img
-              class="nav-title-logo no-viewer"
-              :src="withBase('/assets/easy-vibe-logo-hd.svg')"
-              :alt="t.nav.title"
-              width="64"
-              height="30"
-              draggable="false"
-            >
+            <span class="nav-title-text">Learning AI</span>
           </div>
           <div class="nav-links">
             <button
@@ -359,6 +353,14 @@ onUnmounted(() => {
             >
               {{ t.nav.appendix }}
             </button>
+            <a
+              class="nav-link-item nav-link-module"
+              :href="withBase(localeBase + '/generative-ai/')"
+            >Generative AI</a>
+            <a
+              class="nav-link-item nav-link-module"
+              :href="withBase(localeBase + '/agentic-ai/')"
+            >Agentic AI</a>
           </div>
           <div class="nav-action">
             <div class="nav-icons">
@@ -427,7 +429,6 @@ onUnmounted(() => {
 
     <HomeStage3 />
     <HomeAppendix />
-    <HomeAppleFooter :is-cjk-locale="isCjkLocale" />
   </div>
 </template>
 
@@ -517,17 +518,13 @@ a {
   align-items: center;
 }
 
-.nav-title-logo {
-  display: block;
-  max-width: 64px !important;
-  max-height: 30px !important;
-  height: 30px !important;
-  width: 64px !important;
-  min-width: 64px;
-  min-height: 30px;
-  object-fit: contain;
-  flex: 0 0 auto;
-  filter: grayscale(1) brightness(0.28) contrast(1.05);
+.nav-title-text {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #1d1d1f;
+  line-height: 30px;
 }
 
 .nav-links {
@@ -559,6 +556,15 @@ a {
 .nav-link-item:hover {
   color: var(--vp-c-text-1) !important;
   opacity: 1;
+}
+
+.nav-link-module {
+  color: #00b372 !important;
+  font-weight: 600;
+  opacity: 1;
+}
+.nav-link-module:hover {
+  color: #009966 !important;
 }
 
 .nav-action {
@@ -619,7 +625,7 @@ a {
 }
 
 .nav-promo a {
-  color: var(--top-promo-link-color, #0066cc);
+  color: var(--top-promo-link-color, #009966);
   text-decoration: none;
   transition: color 0.25s ease-out;
 }
@@ -702,7 +708,7 @@ a {
 }
 
 .buy-btn {
-  background: #0071e3;
+  background: #00b372;
   color: #fff !important;
   padding: 7px 16px;
   border-radius: 980px;
@@ -713,7 +719,7 @@ a {
 }
 
 .buy-btn:hover {
-  background: #0077ed;
+  background: #00c087;
   transform: scale(1.02);
 }
 

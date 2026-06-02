@@ -39,7 +39,7 @@ Product bạn cần build là 1 SaaS AI viết content marketing, gồm 3 hệ c
 Backend dùng Supabase cung cấp database và auth, dùng Stripe xử lý payment, dùng AI model gen content marketing.
 
 ::: tip PRD Entry
-PRD project trên GitHub: [Xem PRD](https://github.com/datawhalechina/easy-vibe/blob/main/docs/vi-vn/stage-2/assignments/copywriting-platform-supabase/PRD.md)
+PRD project trên GitHub: [Xem PRD](https://github.com/aiecosvietnam/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/copywriting-platform-supabase/PRD.md)
 :::
 
 <div style="margin: 32px 0;">

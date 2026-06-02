@@ -6,7 +6,7 @@ layout: home
 import { onMounted } from 'vue'
 import { withBase } from 'vitepress'
 
-const WELCOME_SEEN_KEY = 'easy-vibe-welcome-seen'
+const WELCOME_SEEN_KEY = 'learning-ai-welcome-seen'
 
 onMounted(() => {
   // Language map: browser language code -> site path

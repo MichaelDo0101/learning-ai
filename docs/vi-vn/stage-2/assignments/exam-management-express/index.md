@@ -38,7 +38,7 @@ Product bạn cần build là hệ thống thi cử và quản lý online, gồm
 Backend dùng Express, cần hỗ trợ: login auth, role permission, quản lý kỳ thi và ngân hàng câu hỏi, luồng submit và auto chấm, quản lý điểm và thống kê.
 
 ::: tip PRD Entry
-PRD project trên GitHub: [Xem PRD](https://github.com/datawhalechina/easy-vibe/blob/main/docs/vi-vn/stage-2/assignments/exam-management-express/PRD.md)
+PRD project trên GitHub: [Xem PRD](https://github.com/aiecosvietnam/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/exam-management-express/PRD.md)
 :::
 
 <div style="margin: 32px 0;">

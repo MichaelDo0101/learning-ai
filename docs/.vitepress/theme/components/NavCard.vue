@@ -72,8 +72,8 @@ defineProps({
 }
 
 .nav-card-link:focus-visible .nav-card {
-  border-color: #0066cc;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.18);
+  border-color: #00b372;
+  box-shadow: 0 0 0 3px rgba(0, 179, 114, 0.18);
 }
 
 .nav-card {
@@ -132,7 +132,7 @@ defineProps({
 }
 
 .card-arrow {
-  color: #0066cc;
+  color: #00b372;
   font-size: 16px;
   font-weight: 600;
   opacity: 0.9;

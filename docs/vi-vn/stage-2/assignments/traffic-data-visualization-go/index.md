@@ -31,7 +31,7 @@ Project thực chiến này dùng Go xây 1 nền tảng phân tích dữ liệu
 | **Dashboard** | Hiện trend chart, ranking, list alert ở frontend |
 
 ::: tip Entry PRD
-PRD trên GitHub: [Xem PRD](https://github.com/datawhalechina/easy-vibe/blob/main/docs/vi-vn/stage-2/assignments/traffic-data-visualization-go/PRD.md)
+PRD trên GitHub: [Xem PRD](https://github.com/aiecosvietnam/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/traffic-data-visualization-go/PRD.md)
 :::
 
 <div style="margin: 32px 0;">

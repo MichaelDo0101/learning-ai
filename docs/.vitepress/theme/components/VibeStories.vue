@@ -303,7 +303,7 @@ onUnmounted(() => {
 }
 
 .highlight {
-  background: linear-gradient(120deg, #0066cc, #3399ff);
+  background: linear-gradient(120deg, #00b372, #00c087);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -537,7 +537,7 @@ onUnmounted(() => {
 }
 
 .story-title:hover {
-  color: #0066cc;
+  color: #00b372;
 }
 
 .dark .story-title:hover {

@@ -13,7 +13,7 @@
         class="card"
         :class="{ 'card-new': m.isNew }"
       >
-        <div class="card-icon">{{ m.icon }}</div>
+        <div class="card-icon"><EvIcon :emoji="m.icon" /></div>
         <div class="card-body">
           <div class="card-title-row">
             <h3 class="card-title">{{ m.title }}</h3>
@@ -103,20 +103,20 @@ const modulesByLocale = {
     },
     {
       icon: '🎨',
-      title: 'Vibe Generate',
-      desc: '1 người = 1 hãng phim/studio. AI image/video/audio + monetization 2026.',
-      chapters: '9 chapters',
+      title: 'Generative AI',
+      desc: '1 người = 1 hãng phim/studio: tạo ảnh/video/nhạc, giữ nhân vật nhất quán, automation + monetization 2026.',
+      chapters: '10 chương',
       audience: '🎬 Creator / Founder',
-      link: '/vibe-generate/',
+      link: '/generative-ai/',
       isNew: true
     },
     {
       icon: '🤖',
-      title: 'Vibe Agent',
-      desc: 'LLM tự lái: coding agent, computer use, multi-agent, MCP, workflow.',
-      chapters: '9 chapters',
-      audience: '💻 Dev / Operator',
-      link: '/vibe-agent/',
+      title: 'Agentic AI',
+      desc: 'LLM tự lái: agent loop, tool & context, multi-agent, MCP, eval, safety — đến production.',
+      chapters: '12 chương',
+      audience: '💻 Dev / Founder / Operator',
+      link: '/agentic-ai/',
       isNew: true
     },
     {
@@ -171,20 +171,20 @@ const modulesByLocale = {
     },
     {
       icon: '🎨',
-      title: 'Vibe Generate',
-      desc: '1 person = 1 studio. AI image/video/audio + monetization 2026.',
-      chapters: '9 chapters',
+      title: 'Generative AI',
+      desc: '1 person = 1 studio: image/video/music, character consistency, automation + monetization 2026.',
+      chapters: '10 chapters',
       audience: '🎬 Creator / Founder',
-      link: '/vibe-generate/',
+      link: '/generative-ai/',
       isNew: true
     },
     {
       icon: '🤖',
-      title: 'Vibe Agent',
-      desc: 'LLMs self-drive: coding agent, computer use, multi-agent, MCP, workflow.',
-      chapters: '9 chapters',
-      audience: '💻 Dev / Operator',
-      link: '/vibe-agent/',
+      title: 'Agentic AI',
+      desc: 'LLMs self-drive: agent loop, tools & context, multi-agent, MCP, eval, safety — to production.',
+      chapters: '12 chapters',
+      audience: '💻 Dev / Founder / Operator',
+      link: '/agentic-ai/',
       isNew: true
     },
     {

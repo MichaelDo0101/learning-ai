@@ -14,7 +14,7 @@
         :rel="s.external ? 'noopener' : ''"
         class="stat-item"
       >
-        <div class="stat-icon">{{ s.icon }}</div>
+        <div class="stat-icon"><EvIcon :emoji="s.icon" /></div>
         <div class="stat-content">
           <div class="stat-value">{{ s.value }}</div>
           <div class="stat-label">{{ s.label }}</div>
@@ -25,7 +25,7 @@
 
     <div class="cta-row">
       <a
-        href="https://github.com/datawhalechina/easy-vibe"
+        href="https://github.com/aiecosvietnam/learning-ai"
         target="_blank"
         rel="noopener"
         class="cta-primary"
@@ -33,7 +33,7 @@
         ⭐ {{ t.ctaStar }}
       </a>
       <a
-        href="https://github.com/datawhalechina/easy-vibe/issues"
+        href="https://github.com/aiecosvietnam/learning-ai/issues"
         target="_blank"
         rel="noopener"
         class="cta-secondary"
@@ -53,7 +53,7 @@ const isEN = computed(() => (lang.value || 'vi-VN').toLowerCase().startsWith('en
 
 const i18n = {
   vi: {
-    title: '🌍 Cộng đồng Easy-Vibe',
+    title: '🌍 Cộng đồng Learning AI',
     subtitle: 'Open-source, multi-language, miễn phí. Build cùng cộng đồng dev VN + global.',
     ctaStar: 'Star trên GitHub',
     ctaIssues: 'Tham gia thảo luận',
@@ -63,7 +63,7 @@ const i18n = {
     stars: 'GitHub stars'
   },
   en: {
-    title: '🌍 Easy-Vibe Community',
+    title: '🌍 Learning AI Community',
     subtitle: 'Open-source, multi-language, free. Built with VN + global dev community.',
     ctaStar: 'Star on GitHub',
     ctaIssues: 'Join discussions',
@@ -81,7 +81,7 @@ const items = computed(() => [
     icon: '⭐',
     value: '2.7K+',
     label: t.value.stars,
-    link: 'https://github.com/datawhalechina/easy-vibe',
+    link: 'https://github.com/aiecosvietnam/learning-ai',
     external: true
   },
   {
@@ -95,7 +95,7 @@ const items = computed(() => [
     icon: '👥',
     value: '50+',
     label: t.value.contrib,
-    link: 'https://github.com/datawhalechina/easy-vibe/graphs/contributors',
+    link: 'https://github.com/aiecosvietnam/learning-ai/graphs/contributors',
     external: true
   },
   {

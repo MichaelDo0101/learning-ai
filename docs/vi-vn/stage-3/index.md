@@ -179,7 +179,7 @@ npm init -y
 npm install @modelcontextprotocol/sdk zod
 ```
 
-Reference: [Vibe Agent Ch6 — MCP lab](../vibe-agent/6-mcp-ecosystem.md) — full TypeScript code KiotViet wrapper.
+Reference: [Agentic AI Ch8 — MCP lab](../agentic-ai/8-mcp-skills.md) — full TypeScript code MCP server KiotViet.
 
 ### Day 3-4: Multi-agent orchestrator
 
@@ -188,11 +188,11 @@ from langgraph.prebuilt import create_react_agent
 # Supervisor + 3 workers
 ```
 
-Reference: [Vibe Agent Ch4 — Multi-Agent lab](../vibe-agent/4-multi-agent.md) — LangGraph full code.
+Reference: [Agentic AI Ch7 — Multi-Agent lab](../agentic-ai/7-multi-agent.md) — orchestrator + workers.
 
 ### Day 5: Workflow integration (n8n + Smax.ai)
 
-Reference: [Vibe Agent Ch5 — Workflow lab](../vibe-agent/5-workflow-agent.md) — AI Sale Agent VN end-to-end.
+Reference: [Agentic AI Ch12 — Workflow lab](../agentic-ai/12-apply-vn-roadmap.md) — AI Sale Agent VN end-to-end.
 
 ### Day 6-7: Deploy + observability + eval
 

@@ -12,14 +12,14 @@
         :class="['tab', { active: activeIdx === idx }]"
         @click="activeIdx = idx"
       >
-        <span class="tab-icon">{{ p.icon }}</span>
+        <span class="tab-icon"><EvIcon :emoji="p.icon" /></span>
         <span class="tab-label">{{ p.persona }}</span>
       </button>
     </div>
 
     <div class="path-detail">
       <div class="path-header">
-        <div class="path-icon-big">{{ activePath.icon }}</div>
+        <div class="path-icon-big"><EvIcon :emoji="activePath.icon" /></div>
         <div>
           <h3>{{ activePath.persona }}</h3>
           <p class="path-goal">🎯 {{ activePath.goal }}</p>

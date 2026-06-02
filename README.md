@@ -10,7 +10,7 @@
   <span style="font-size: 0.9em; color: #888;">直接上手，一起 vibe！会说话就会做应用。</span>
 </p>
 
-<a href="https://trendshift.io/repositories/22079" target="_blank"><img src="https://trendshift.io/api/badge/repositories/22079" alt="datawhalechina/easy-vibe | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/22079" target="_blank"><img src="https://trendshift.io/api/badge/repositories/22079" alt="aiecosvietnam/learning-ai | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 <p align="center" style="font-size: 1.05em; color: #666; margin: 16px 0;">
   你好 · Hello · 哈囉 · こんにちは · 안녕하세요 · Hola · Bonjour · Hallo · مرحبا · Xin chào<br>
@@ -33,10 +33,10 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/datawhalechina/easy-vibe/stargazers" target="_blank">
-        <img src="https://img.shields.io/github/stars/datawhalechina/easy-vibe?color=660874&style=for-the-badge&logo=star&logoColor=white&labelColor=1a1a2e" alt="Stars"></a>
-    <a href="https://github.com/datawhalechina/easy-vibe/network/members" target="_blank">
-        <img src="https://img.shields.io/github/forks/datawhalechina/easy-vibe?color=660874&style=for-the-badge&logo=git-fork&logoColor=white&labelColor=1a1a2e" alt="Forks"></a>
+    <a href="https://github.com/aiecosvietnam/learning-ai/stargazers" target="_blank">
+        <img src="https://img.shields.io/github/stars/aiecosvietnam/learning-ai?color=660874&style=for-the-badge&logo=star&logoColor=white&labelColor=1a1a2e" alt="Stars"></a>
+    <a href="https://github.com/aiecosvietnam/learning-ai/network/members" target="_blank">
+        <img src="https://img.shields.io/github/forks/aiecosvietnam/learning-ai?color=660874&style=for-the-badge&logo=git-fork&logoColor=white&labelColor=1a1a2e" alt="Forks"></a>
     <a href="LICENSE" target="_blank">
         <img src="https://img.shields.io/badge/License-CC_BY_NC_SA_4.0-4ecdc4?style=for-the-badge&logo=creative-commons&logoColor=white&labelColor=1a1a2e" alt="License"></a>
 </p>
@@ -106,12 +106,12 @@
   </tr>
 </table>
 <div align="center">
-  <h3>⭐ <a href="https://github.com/datawhalechina/easy-vibe" style="color: #d0cd16ff;">Star the repo here</a> to help accelerate updates ❤️</h3>
+  <h3>⭐ <a href="https://github.com/aiecosvietnam/learning-ai" style="color: #d0cd16ff;">Star the repo here</a> to help accelerate updates ❤️</h3>
 </div>
 
 <div align="center" style="margin: 30px 0;">
-  <a href="https://github.com/datawhalechina/easy-vibe/issues/new?template=story_submission.md">
-    <img src="https://raw.githubusercontent.com/datawhalechina/easy-vibe/main/assets/stories_image.png" alt="Share Your Vibe Story" width="80%" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  <a href="https://github.com/aiecosvietnam/learning-ai/issues/new?template=story_submission.md">
+    <img src="https://raw.githubusercontent.com/aiecosvietnam/learning-ai/main/assets/stories_image.png" alt="Share Your Vibe Story" width="80%" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
   </a>
   <p style="margin-top: 15px; font-size: 1.1em; color: #666;">
     📝 <strong>Have your own vibe coding story?</strong> 
@@ -412,17 +412,17 @@ Our team has also created other courses! Check them out:
 - Thanks to every contributor and everyone who supported the project with feedback and stars ❤️
 
 <div align="center"> 
- <a href="https://www.star-history.com/#datawhalechina/easy-vibe&type=timeline&legend=top-left"> 
+ <a href="https://www.star-history.com/#aiecosvietnam/learning-ai&type=timeline&legend=top-left"> 
    <picture> 
-     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=datawhalechina/easy-vibe&type=timeline&theme=dark&legend=top-left" /> 
-     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=datawhalechina/easy-vibe&type=timeline&legend=top-left" /> 
+     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=aiecosvietnam/learning-ai&type=timeline&theme=dark&legend=top-left" /> 
+     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=aiecosvietnam/learning-ai&type=timeline&legend=top-left" /> 
    </picture> 
  </a>
 </div>
 
 <div align=center style="margin-top: 30px;">
-  <a href="https://github.com/datawhalechina/easy-vibe/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=datawhalechina/easy-vibe" />
+  <a href="https://github.com/aiecosvietnam/learning-ai/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=aiecosvietnam/learning-ai" />
   </a>
 </div>
 
@@ -445,4 +445,4 @@ This work is licensed under the
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=datawhalechina/easy-vibe&type=date&legend=top-left)](https://www.star-history.com/#datawhalechina/easy-vibe&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=aiecosvietnam/learning-ai&type=date&legend=top-left)](https://www.star-history.com/#aiecosvietnam/learning-ai&type=date&legend=top-left)

@@ -1,10 +1,9 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useRouter, withBase } from 'vitepress'
-import easyVibePaths from '../data/easyVibePaths.json'
 
 const router = useRouter()
-const WELCOME_SEEN_KEY = 'easy-vibe-welcome-seen'
+const WELCOME_SEEN_KEY = 'learning-ai-welcome-seen'
 const phase = ref('reset')
 const theme = ref('ocean')
 const themes = ['ocean', 'rainbow', 'sunset']
@@ -125,13 +124,15 @@ onUnmounted(() => {
               <stop offset="100%" stop-color="#f59e0b" />
             </linearGradient>
           </defs>
-          <path
-            v-for="(path, index) in easyVibePaths"
-            :key="index"
-            :d="path"
-            class="welcome-path"
-            :class="`welcome-path-${index}`"
-          />
+          <text
+            x="50%"
+            y="52%"
+            text-anchor="middle"
+            dominant-baseline="middle"
+            class="welcome-text"
+          >
+            Learning AI
+          </text>
         </svg>
       </div>
       <p class="welcome-tip">
@@ -220,32 +221,25 @@ onUnmounted(() => {
   height: auto;
 }
 
-.welcome-path {
+.welcome-text {
+  font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   fill: var(--welcome-theme-color);
   fill-opacity: 0;
   stroke: var(--welcome-theme-color);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
+  stroke-width: 1.5;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
   transition: none;
 }
 
-.welcome-fin .welcome-path {
+.welcome-fin .welcome-text {
   stroke-dashoffset: 0;
   fill-opacity: 1;
+  transition: stroke-dashoffset 2.2s cubic-bezier(0.4, 0, 0.2, 1), fill-opacity 1.2s ease-in 1.8s;
 }
-
-.welcome-fin .welcome-path-0 { transition: stroke-dashoffset 0.62s ease-in-out 0s, fill-opacity 0.45s ease-in 2.75s; }
-.welcome-fin .welcome-path-1 { transition: stroke-dashoffset 0.62s ease-in-out 0.28s, fill-opacity 0.45s ease-in 2.75s; }
-.welcome-fin .welcome-path-2 { transition: stroke-dashoffset 0.62s ease-in-out 0.56s, fill-opacity 0.45s ease-in 2.75s; }
-.welcome-fin .welcome-path-3 { transition: stroke-dashoffset 0.62s ease-in-out 0.84s, fill-opacity 0.45s ease-in 2.75s; }
-.welcome-fin .welcome-path-4 { transition: stroke-dashoffset 0.62s ease-in-out 1.12s, fill-opacity 0.45s ease-in 2.75s; }
-.welcome-fin .welcome-path-5 { transition: stroke-dashoffset 0.62s ease-in-out 1.4s, fill-opacity 0.45s ease-in 2.75s; }
-.welcome-fin .welcome-path-6 { transition: stroke-dashoffset 0.62s ease-in-out 1.68s, fill-opacity 0.45s ease-in 2.75s; }
-.welcome-fin .welcome-path-7 { transition: stroke-dashoffset 0.62s ease-in-out 1.96s, fill-opacity 0.45s ease-in 2.75s; }
-.welcome-fin .welcome-path-8 { transition: stroke-dashoffset 0.62s ease-in-out 2.24s, fill-opacity 0.45s ease-in 2.75s; }
 
 .welcome-fade {
   opacity: 0;

@@ -2,9 +2,9 @@
 layout: home
 navbar: false
 hero:
-  name: 'Học AI'
-  text: 'Hướng dẫn Lập trình AI từ con số 0'
-  tagline: 'Một mô hình lập trình mới cho mọi người. Dù bạn là PM hay Full Stack Dev, hãy tìm lộ trình lập trình AI của bạn tại đây.'
+  name: 'Learning AI'
+  text: 'Learn AI — Lead Tomorrow'
+  tagline: 'Learning AI đồng hành cùng thế hệ học viên Việt Nam làm chủ AI để giải quyết vấn đề thực tiễn và tạo ra giá trị cho tương lai.'
   typingTagline:
     - Lập trình, khác biệt.
     - Phức tạp, trở nên đơn giản.
@@ -16,14 +16,16 @@ hero:
     - Lập trình nên như thế này.
   actions:
     - theme: brand
-      text: Bắt đầu vibe cùng nhau!
+      text: Bắt đầu học ngay →
       link: /vi-vn/stage-1/learning-map/
     - theme: alt
-      text: Đề cương khóa học
+      text: Xem khóa học
       link: /vi-vn/stage-1/learning-map/
 ---
 
 <HeroStats />
+
+<CoreValues />
 
 <HomeFeatures />
 
@@ -35,4 +37,6 @@ hero:
 
 <LearningVideos />
 
-<CommunityStats />
+<BrandValueBar />
+
+<HomeAppleFooter />

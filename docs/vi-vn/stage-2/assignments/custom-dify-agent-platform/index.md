@@ -37,7 +37,7 @@ Product bạn cần build là nền tảng Agent kiểu Dify, gồm 2 hệ con:
 Backend cần hỗ trợ các năng lực core: quản lý Agent, quản lý session, lưu message, call model, ghi log call, kết nối knowledge base.
 
 ::: tip PRD Entry
-PRD project trên GitHub: [Xem PRD](https://github.com/datawhalechina/easy-vibe/blob/main/docs/vi-vn/stage-2/assignments/custom-dify-agent-platform/PRD.md)
+PRD project trên GitHub: [Xem PRD](https://github.com/aiecosvietnam/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/custom-dify-agent-platform/PRD.md)
 :::
 
 <div style="margin: 32px 0;">

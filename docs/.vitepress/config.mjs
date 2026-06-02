@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import markdownItKatex from 'markdown-it-katex'
+import markdownEmojiTabler from './markdown-emoji-tabler.mjs'
 
 // 判断是否是 Vercel 环境， github page 和 vercel 的部署地址相关不一样
 const isVercel = process.env.VERCEL === '1' || !!process.env.VERCEL_URL
@@ -164,7 +165,7 @@ const getSeoHead = (locale, title, description, path = '') => {
         '@type': 'ImageObject',
         url: ogImageUrl
       },
-      sameAs: ['https://github.com/datawhalechina/easy-vibe']
+      sameAs: ['https://github.com/aiecosvietnam/learning-ai']
     },
     mainEntity: {
       '@type': 'Course',
@@ -173,7 +174,7 @@ const getSeoHead = (locale, title, description, path = '') => {
       provider: {
         '@type': 'Organization',
         name: 'Datawhale',
-        sameAs: 'https://github.com/datawhalechina/easy-vibe'
+        sameAs: 'https://github.com/aiecosvietnam/learning-ai'
       },
       educationalLevel: 'Beginner to Advanced',
       learningResourceType: 'Course'
@@ -263,19 +264,22 @@ const getSeoHead = (locale, title, description, path = '') => {
 const commonHead = [
   ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg`.replace('//', '/') }],
   ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico`.replace('//', '/') }],
-  ['link', { rel: 'stylesheet', href: `${base}style.css`.replace('//', '/') }]
+  ['link', { rel: 'stylesheet', href: `${base}style.css`.replace('//', '/') }],
+  ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+  ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+  ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap' }]
 ]
 
 const commonThemeConfig = {
-  siteTitle: 'Learning AI Full A-Z',
+  siteTitle: 'Learning AI',
   search: {
     provider: 'local'
   },
   // socialLinks: [
-  //   { icon: 'github', link: 'https://github.com/datawhalechina/easy-vibe' }
+  //   { icon: 'github', link: 'https://github.com/aiecosvietnam/learning-ai' }
   // ],
   editLink: {
-    pattern: 'https://github.com/datawhalechina/easy-vibe/edit/main/docs/:path',
+    pattern: 'https://github.com/aiecosvietnam/learning-ai/edit/main/docs/:path',
     text: 'Edit this page on GitHub'
   },
   outline: {
@@ -283,9 +287,9 @@ const commonThemeConfig = {
   },
   footer: {
     message:
-      'Bản tiếng Việt dựa trên dự án mã nguồn mở <a href="https://github.com/datawhalechina/easy-vibe" target="_blank" rel="noreferrer">datawhalechina/easy-vibe</a>',
+      'Tài liệu thuộc dự án <a href="https://github.com/aiecosvietnam/learning-ai" target="_blank" rel="noreferrer">Learning AI</a>',
     copyright:
-      'Tài liệu được phát hành theo giấy phép <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> · © 2026 Học AI Full A-Z'
+      'Tài liệu được phát hành theo giấy phép <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> · © 2026 Learning AI'
   }
 }
 
@@ -1177,6 +1181,7 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(markdownItKatex)
+      md.use(markdownEmojiTabler)
     }
   },
   base: base,
@@ -1307,12 +1312,12 @@ Sitemap: ${siteUrl}/sitemap.xml
       label: 'English',
       lang: 'en-US',
       link: '/en/',
-      title: 'Học AI Tutorial',
+      title: 'Learning AI',
       description:
         'Learn Vibe Coding from Zero to Advanced - Master AI programming with Claude Code, Cursor, and other AI IDE tools',
       head: getSeoHead(
         'en',
-        'Học AI Tutorial',
+        'Learning AI',
         'Learn Vibe Coding from Zero to Advanced - Master AI programming with Claude Code, Cursor, and other AI IDE tools'
       ),
       themeConfig: {
@@ -1357,14 +1362,14 @@ Sitemap: ${siteUrl}/sitemap.xml
             activeMatch: '/en/vibe-stories/'
           },
           {
-            text: 'Vibe Generate',
-            link: '/en/vibe-generate/',
-            activeMatch: '/en/vibe-generate/'
+            text: 'Generative AI',
+            link: '/en/generative-ai/',
+            activeMatch: '/en/generative-ai/'
           },
           {
-            text: 'Vibe Agent',
-            link: '/en/vibe-agent/',
-            activeMatch: '/en/vibe-agent/'
+            text: 'Agentic AI',
+            link: '/en/agentic-ai/',
+            activeMatch: '/en/agentic-ai/'
           }
         ],
         sidebar: {
@@ -1392,39 +1397,39 @@ Sitemap: ${siteUrl}/sitemap.xml
               ]
             }
           ],
-          '/en/vibe-generate/': [
+          '/en/generative-ai/': [
             {
-              text: 'Vibe Generate',
+              text: 'Generative AI',
               collapsed: false,
               items: [
-                { text: 'Overview', link: '/en/vibe-generate/' },
-                { text: '1. Solo Studio — 1 person = 1 film studio', link: '/en/vibe-generate/1-solo-studio' },
-                { text: '2. AI Music $3M — Suno + Spotify', link: '/en/vibe-generate/2-ai-music-3m' },
-                { text: '3. Virtual Influencer — Aitana + Vi An', link: '/en/vibe-generate/3-virtual-influencer' },
-                { text: '4. Solo SaaS $1M — Pieter Levels', link: '/en/vibe-generate/4-solo-saas-million' },
-                { text: '5. Sora 2 & TikTok — viral formats 2026', link: '/en/vibe-generate/5-sora-2-tiktok' },
-                { text: '6. Faceless Empire — YouTube + Etsy + TikTok Shop', link: '/en/vibe-generate/6-faceless-empire' },
-                { text: '7. Toolkit 2026 — complete stack', link: '/en/vibe-generate/toolkit-2026' },
-                { text: '8. Ethics & Legal 2026', link: '/en/vibe-generate/ethics-2026' },
-                { text: '9. 30-Day Roadmap', link: '/en/vibe-generate/roadmap-30-days' }
+                { text: 'Overview', link: '/en/generative-ai/' },
+                { text: '1. Solo Studio — 1 person = 1 film studio', link: '/en/generative-ai/1-solo-studio' },
+                { text: '2. AI Music $3M — Suno + Spotify', link: '/en/generative-ai/2-ai-music-3m' },
+                { text: '3. Virtual Influencer — Aitana + Vi An', link: '/en/generative-ai/3-virtual-influencer' },
+                { text: '4. Solo SaaS $1M — Pieter Levels', link: '/en/generative-ai/4-solo-saas-million' },
+                { text: '5. Sora 2 & TikTok — viral formats 2026', link: '/en/generative-ai/5-sora-2-tiktok' },
+                { text: '6. Faceless Empire — YouTube + Etsy + TikTok Shop', link: '/en/generative-ai/6-faceless-empire' },
+                { text: '7. Toolkit 2026 — complete stack', link: '/en/generative-ai/toolkit-2026' },
+                { text: '8. Ethics & Legal 2026', link: '/en/generative-ai/ethics-2026' },
+                { text: '9. 30-Day Roadmap', link: '/en/generative-ai/roadmap-30-days' }
               ]
             }
           ],
-          '/en/vibe-agent/': [
+          '/en/agentic-ai/': [
             {
-              text: 'Vibe Agent',
+              text: 'Agentic AI',
               collapsed: false,
               items: [
-                { text: 'Overview', link: '/en/vibe-agent/' },
-                { text: '1. Agent Foundation — What is AI Agent?', link: '/en/vibe-agent/1-agent-foundation' },
-                { text: '2. Claude Code Deep — 30h autonomous', link: '/en/vibe-agent/2-claude-code-deep' },
-                { text: '3. Computer Use — 72.5% baseline', link: '/en/vibe-agent/3-computer-use' },
-                { text: '4. Multi-Agent — orchestrator-worker', link: '/en/vibe-agent/4-multi-agent' },
-                { text: '5. Workflow Agent — n8n + Smax.ai', link: '/en/vibe-agent/5-workflow-agent' },
-                { text: '6. MCP Ecosystem — 97M downloads/month', link: '/en/vibe-agent/6-mcp-ecosystem' },
-                { text: '7. Toolkit Agent 2026', link: '/en/vibe-agent/toolkit-2026' },
-                { text: '8. Safety & Evals — incidents 2025-2026', link: '/en/vibe-agent/safety-evals' },
-                { text: '9. 30-Day Roadmap', link: '/en/vibe-agent/roadmap-30-days' }
+                { text: 'Overview', link: '/en/agentic-ai/' },
+                { text: '1. Agent Foundation — What is AI Agent?', link: '/en/agentic-ai/1-agent-foundation' },
+                { text: '2. Claude Code Deep — 30h autonomous', link: '/en/agentic-ai/2-claude-code-deep' },
+                { text: '3. Computer Use — 72.5% baseline', link: '/en/agentic-ai/3-computer-use' },
+                { text: '4. Multi-Agent — orchestrator-worker', link: '/en/agentic-ai/4-multi-agent' },
+                { text: '5. Workflow Agent — n8n + Smax.ai', link: '/en/agentic-ai/5-workflow-agent' },
+                { text: '6. MCP Ecosystem — 97M downloads/month', link: '/en/agentic-ai/6-mcp-ecosystem' },
+                { text: '7. Toolkit Agent 2026', link: '/en/agentic-ai/toolkit-2026' },
+                { text: '8. Safety & Evals — incidents 2025-2026', link: '/en/agentic-ai/safety-evals' },
+                { text: '9. 30-Day Roadmap', link: '/en/agentic-ai/roadmap-30-days' }
               ]
             }
           ],
@@ -1439,12 +1444,12 @@ Sitemap: ${siteUrl}/sitemap.xml
       label: 'Tiếng Việt',
       lang: 'vi-VN',
       link: '/vi-vn/',
-      title: 'Hướng dẫn Học AI',
+      title: 'Learning AI',
       description:
         'Học Vibe Coding từ cơ bản đến nâng cao - Làm chủ lập trình AI từ cơ bản đến chuyên sâu',
       head: getSeoHead(
         'vi-vn',
-        'Hướng dẫn Học AI',
+        'Learning AI',
         'Học Vibe Coding từ cơ bản đến nâng cao - Làm chủ lập trình AI từ cơ bản đến chuyên sâu'
       ),
       themeConfig: {
@@ -1489,14 +1494,14 @@ Sitemap: ${siteUrl}/sitemap.xml
             activeMatch: '/vi-vn/vibe-stories/'
           },
           {
-            text: 'Vibe Generate',
-            link: '/vi-vn/vibe-generate/',
-            activeMatch: '/vi-vn/vibe-generate/'
+            text: 'Generative AI',
+            link: '/vi-vn/generative-ai/',
+            activeMatch: '/vi-vn/generative-ai/'
           },
           {
-            text: 'Vibe Agent',
-            link: '/vi-vn/vibe-agent/',
-            activeMatch: '/vi-vn/vibe-agent/'
+            text: 'Agentic AI',
+            link: '/vi-vn/agentic-ai/',
+            activeMatch: '/vi-vn/agentic-ai/'
           }
         ],
         sidebar: {
@@ -1524,39 +1529,93 @@ Sitemap: ${siteUrl}/sitemap.xml
               ]
             }
           ],
-          '/vi-vn/vibe-generate/': [
+          '/vi-vn/generative-ai/': [
             {
-              text: 'Vibe Generate',
+              text: 'Generative AI',
+              collapsed: false,
+              items: [{ text: 'Tổng quan', link: '/vi-vn/generative-ai/' }]
+            },
+            {
+              text: 'A · Hiểu nền tảng',
               collapsed: false,
               items: [
-                { text: 'Tổng quan', link: '/vi-vn/vibe-generate/' },
-                { text: '1. Solo Studio — 1 người = 1 hãng phim', link: '/vi-vn/vibe-generate/1-solo-studio' },
-                { text: '2. AI Music $3M — Suno + Spotify', link: '/vi-vn/vibe-generate/2-ai-music-3m' },
-                { text: '3. Virtual Influencer — Aitana + Vi An', link: '/vi-vn/vibe-generate/3-virtual-influencer' },
-                { text: '4. Solo SaaS $1M — Pieter Levels', link: '/vi-vn/vibe-generate/4-solo-saas-million' },
-                { text: '5. Sora 2 & TikTok — viral format 2026', link: '/vi-vn/vibe-generate/5-sora-2-tiktok' },
-                { text: '6. Faceless Empire — YouTube + Etsy + TikTok Shop', link: '/vi-vn/vibe-generate/6-faceless-empire' },
-                { text: '7. Toolkit 2026 — stack đầy đủ', link: '/vi-vn/vibe-generate/toolkit-2026' },
-                { text: '8. Ethics & Legal 2026', link: '/vi-vn/vibe-generate/ethics-2026' },
-                { text: '9. Roadmap 30 ngày', link: '/vi-vn/vibe-generate/roadmap-30-days' }
+                { text: '1. Generative AI là gì', link: '/vi-vn/generative-ai/1-generative-ai-la-gi' }
+              ]
+            },
+            {
+              text: 'B · Tạo (prompt craft)',
+              collapsed: false,
+              items: [
+                { text: '2. Tạo ảnh — prompt & tools', link: '/vi-vn/generative-ai/2-tao-anh' },
+                { text: '3. Tạo video — prompt & tools', link: '/vi-vn/generative-ai/3-tao-video' },
+                { text: '4. Tạo nhạc & giọng nói', link: '/vi-vn/generative-ai/4-tao-nhac-giong' }
+              ]
+            },
+            {
+              text: 'C · Làm chủ Consistency',
+              collapsed: false,
+              items: [
+                { text: '5. Consistency nhân vật & style', link: '/vi-vn/generative-ai/5-consistency-nhan-vat' },
+                { text: '6. Consistency series & Post-production', link: '/vi-vn/generative-ai/6-consistency-post' }
+              ]
+            },
+            {
+              text: 'D · Tự động hóa',
+              collapsed: false,
+              items: [
+                { text: '7. Pipeline tự động & faceless factory', link: '/vi-vn/generative-ai/7-pipeline-tu-dong' }
+              ]
+            },
+            {
+              text: 'E · Ứng dụng & Pháp lý',
+              collapsed: false,
+              items: [
+                { text: '8. Ứng dụng VN, ngách & monetization', link: '/vi-vn/generative-ai/8-ung-dung-vn' },
+                { text: '9. Pháp lý, đạo đức & commercial-safe', link: '/vi-vn/generative-ai/9-phap-ly-dao-duc' },
+                { text: '10. Roadmap 30 ngày & Capstone', link: '/vi-vn/generative-ai/10-roadmap-capstone' }
               ]
             }
           ],
-          '/vi-vn/vibe-agent/': [
+          '/vi-vn/agentic-ai/': [
             {
-              text: 'Vibe Agent',
+              text: 'Agentic AI',
+              collapsed: false,
+              items: [{ text: 'Tổng quan', link: '/vi-vn/agentic-ai/' }]
+            },
+            {
+              text: 'A · Hiểu nền tảng',
               collapsed: false,
               items: [
-                { text: 'Tổng quan', link: '/vi-vn/vibe-agent/' },
-                { text: '1. Agent Foundation — AI Agent là gì?', link: '/vi-vn/vibe-agent/1-agent-foundation' },
-                { text: '2. Claude Code Deep — 30h autonomous', link: '/vi-vn/vibe-agent/2-claude-code-deep' },
-                { text: '3. Computer Use — 72.5% baseline', link: '/vi-vn/vibe-agent/3-computer-use' },
-                { text: '4. Multi-Agent — orchestrator-worker', link: '/vi-vn/vibe-agent/4-multi-agent' },
-                { text: '5. Workflow Agent — n8n + Smax.ai', link: '/vi-vn/vibe-agent/5-workflow-agent' },
-                { text: '6. MCP Ecosystem — 97M downloads/tháng', link: '/vi-vn/vibe-agent/6-mcp-ecosystem' },
-                { text: '7. Toolkit Agent 2026', link: '/vi-vn/vibe-agent/toolkit-2026' },
-                { text: '8. Safety & Evals — incident 2025-2026', link: '/vi-vn/vibe-agent/safety-evals' },
-                { text: '9. Roadmap 30 ngày', link: '/vi-vn/vibe-agent/roadmap-30-days' }
+                { text: '1. Agent là gì: Workflow vs Agent', link: '/vi-vn/agentic-ai/1-agent-la-gi' },
+                { text: '2. Agent Loop & Pattern chuẩn', link: '/vi-vn/agentic-ai/2-agent-loop-patterns' }
+              ]
+            },
+            {
+              text: 'B · Làm chủ & Setup',
+              collapsed: false,
+              items: [
+                { text: '3. Build agent đầu tiên từ số 0', link: '/vi-vn/agentic-ai/3-build-first-agent' },
+                { text: '4. Tool Design (Agent–Computer Interface)', link: '/vi-vn/agentic-ai/4-tool-design' },
+                { text: '5. Context Engineering', link: '/vi-vn/agentic-ai/5-context-engineering' },
+                { text: '6. Memory & Agentic RAG', link: '/vi-vn/agentic-ai/6-memory-agentic-rag' }
+              ]
+            },
+            {
+              text: 'C · Nâng cao',
+              collapsed: false,
+              items: [
+                { text: '7. Multi-Agent Systems', link: '/vi-vn/agentic-ai/7-multi-agent' },
+                { text: '8. MCP, Skills & Code Execution', link: '/vi-vn/agentic-ai/8-mcp-skills' },
+                { text: '9. Frameworks & Tooling', link: '/vi-vn/agentic-ai/9-frameworks-tooling' }
+              ]
+            },
+            {
+              text: 'D · Ứng dụng & Production',
+              collapsed: false,
+              items: [
+                { text: '10. Evaluation & Observability', link: '/vi-vn/agentic-ai/10-evaluation-observability' },
+                { text: '11. Safety, Guardrails & Reliability', link: '/vi-vn/agentic-ai/11-safety-guardrails' },
+                { text: '12. Ứng dụng VN & Roadmap ship', link: '/vi-vn/agentic-ai/12-apply-vn-roadmap' }
               ]
             }
           ],

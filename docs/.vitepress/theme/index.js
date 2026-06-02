@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import '@tabler/icons-webfont/dist/tabler-icons.min.css'
 import Viewer from 'viewerjs'
 import 'viewerjs/dist/viewer.css'
 import TypeIt from 'typeit'
@@ -8,6 +9,10 @@ import { onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import { useRoute, useData } from 'vitepress'
 import './style.css'
 import Layout from './Layout.vue'
+import EvIcon from './components/EvIcon.vue'
+import CoreValues from './components/home/CoreValues.vue'
+import BrandValueBar from './components/home/BrandValueBar.vue'
+import HomeAppleFooter from './components/home/HomeAppleFooter.vue'
 import HomeFeatures from './components/HomeFeatures.vue'
 import WelcomeScreen from './components/WelcomeScreen.vue'
 import NavGrid from './components/NavGrid.vue'
@@ -869,6 +874,10 @@ export default {
       'CopyOrDownloadAsMarkdownButtons',
       CopyOrDownloadAsMarkdownButtons
     )
+    app.component('EvIcon', EvIcon)
+    app.component('CoreValues', CoreValues)
+    app.component('BrandValueBar', BrandValueBar)
+    app.component('HomeAppleFooter', HomeAppleFooter)
     app.component('HomeFeatures', HomeFeatures)
     app.component('WelcomeScreen', WelcomeScreen)
     app.component('NavGrid', NavGrid)

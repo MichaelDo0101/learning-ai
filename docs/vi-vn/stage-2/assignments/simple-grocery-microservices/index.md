@@ -45,7 +45,7 @@ Backend tách theo business thành các service:
 | **Order Service** | Tạo đơn, quản lý trạng thái |
 
 ::: tip PRD Entry
-PRD project trên GitHub: [Xem PRD](https://github.com/datawhalechina/easy-vibe/blob/main/docs/vi-vn/stage-2/assignments/simple-grocery-microservices/PRD.md)
+PRD project trên GitHub: [Xem PRD](https://github.com/aiecosvietnam/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/simple-grocery-microservices/PRD.md)
 :::
 
 <div style="margin: 32px 0;">

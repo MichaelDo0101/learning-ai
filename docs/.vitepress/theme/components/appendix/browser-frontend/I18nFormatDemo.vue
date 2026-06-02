@@ -79,7 +79,7 @@ const dictionary = {
     cancel_btn: '返回上一页'
   },
   'en-US': {
-    app_name: 'Easy Vibe',
+    app_name: 'Learning AI',
     home: 'Home',
     profile: 'Profile',
     payment_title: 'Invoice Details',

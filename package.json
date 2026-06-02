@@ -1,7 +1,7 @@
 {
-  "name": "easy-vibe",
+  "name": "learning-ai",
   "version": "1.0.0",
-  "description": "Easy-Vibe 中文实战课 - 零基础学会用 AI 编程",
+  "description": "Learning AI - Lộ trình học lập trình AI từ cơ bản đến nâng cao",
   "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.2",
+    "@tabler/icons-webfont": "^3.44.0",
     "claude": "^0.1.1",
     "element-plus": "^2.13.1",
     "mermaid": "^11.13.0",

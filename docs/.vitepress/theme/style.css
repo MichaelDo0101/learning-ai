@@ -1,13 +1,29 @@
+/* Tabler icon (replaces emoji via markdown plugin / <EvIcon>) */
+.ev-ti {
+  display: inline-block;
+  vertical-align: -0.12em;
+  font-size: 1.05em;
+  line-height: 1;
+  color: inherit;
+  font-style: normal;
+}
+.ev-ti + .ev-ti {
+  margin-left: 0.15em;
+}
+
 :root {
   /* Easy-Vibe Theme Fix v2025-01-12 */
   /* 通过变量控制分组底部留白（默认 24px） */
   --vp-sidebar-nav-section-gap: 8px;
   --ev-doc-font-size: 14px;
   --ev-doc-line-height: 1.65;
-  --vp-c-brand-1: #0071e3;
-  --vp-c-brand-2: #0077ed;
-  --vp-c-brand-3: #0066cc;
-  --vp-c-brand-soft: rgba(0, 113, 227, 0.14);
+  /* Learning AI brand palette */
+  --vp-c-brand-1: #00b372;
+  --vp-c-brand-2: #00c087;
+  --vp-c-brand-3: #009966;
+  --vp-c-brand-soft: rgba(0, 179, 114, 0.14);
+  --ev-navy: #0d1b2a;
+  --ev-mint: #e6f7f1;
 }
 
 .vp-doc {
@@ -286,7 +302,7 @@
 /* System Font Stack */
 :root {
   --vp-font-family-base:
-    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto,
+    'Sora', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto,
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
 }
@@ -301,6 +317,159 @@
 
 .VPHome .reading-progress {
   display: none !important;
+}
+
+/* ===================================================================
+   Learning AI — Homepage section design system
+   (green #00b372 · navy #0d1b2a · mint #e6f7f1 · Sora)
+   =================================================================== */
+
+/* Section rhythm */
+.VPHome .module-showcase,
+.VPHome .learning-paths,
+.VPHome .testimonials,
+.VPHome .learning-videos,
+.VPHome .community-stats {
+  padding: 72px 24px;
+}
+
+/* Alternating soft-mint backgrounds for visual rhythm */
+.VPHome .learning-paths,
+.VPHome .learning-videos {
+  background: #e6f7f1;
+}
+.dark .VPHome .learning-paths,
+.dark .VPHome .learning-videos {
+  background: rgba(0, 179, 114, 0.06);
+}
+
+/* Unified section header: eyebrow-style, navy, centered */
+.VPHome .module-showcase > .header,
+.VPHome .learning-paths > .header,
+.VPHome .testimonials > .header,
+.VPHome .learning-videos > .header,
+.VPHome .community-stats > .header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 44px;
+}
+.VPHome .module-showcase > .header h2,
+.VPHome .learning-paths > .header h2,
+.VPHome .testimonials > .header h2,
+.VPHome .learning-videos > .header h2,
+.VPHome .community-stats > .header h2 {
+  font-size: clamp(26px, 3.6vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #0d1b2a;
+  margin: 0 0 14px;
+  -webkit-text-fill-color: currentColor;
+  background: none;
+}
+.dark .VPHome .module-showcase > .header h2,
+.dark .VPHome .learning-paths > .header h2,
+.dark .VPHome .testimonials > .header h2,
+.dark .VPHome .learning-videos > .header h2,
+.dark .VPHome .community-stats > .header h2 {
+  color: #fff;
+}
+.VPHome .module-showcase > .header .subtitle,
+.VPHome .learning-paths > .header .subtitle,
+.VPHome .testimonials > .header .subtitle,
+.VPHome .learning-videos > .header .subtitle,
+.VPHome .community-stats > .header .subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #41566b;
+  margin: 0;
+}
+.dark .VPHome .testimonials > .header .subtitle,
+.dark .VPHome .module-showcase > .header .subtitle,
+.dark .VPHome .learning-paths > .header .subtitle,
+.dark .VPHome .learning-videos > .header .subtitle,
+.dark .VPHome .community-stats > .header .subtitle {
+  color: #a8b3c2;
+}
+
+/* Brand card system */
+.VPHome .hero-stats .stat-card,
+.VPHome .module-showcase .card,
+.VPHome .testimonials .testimonial-card,
+.VPHome .learning-videos .video-card,
+.VPHome .learning-paths .step-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(13, 27, 42, 0.04);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+.VPHome .hero-stats .stat-card:hover,
+.VPHome .module-showcase .card:hover,
+.VPHome .testimonials .testimonial-card:hover,
+.VPHome .learning-videos .video-card:hover,
+.VPHome .learning-paths .step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 38px rgba(0, 179, 114, 0.16);
+  border-color: #66e0b3;
+}
+.dark .VPHome .hero-stats .stat-card,
+.dark .VPHome .module-showcase .card,
+.dark .VPHome .testimonials .testimonial-card,
+.dark .VPHome .learning-videos .video-card,
+.dark .VPHome .learning-paths .step-card {
+  background: #1b263b;
+  border-color: #41566b;
+}
+
+/* Icon chips → mint + green */
+.VPHome .module-showcase .card-icon,
+.VPHome .hero-stats .stat-icon {
+  background: linear-gradient(135deg, #e6f7f1, #d2f3e6) !important;
+  color: #00b372 !important;
+  border-radius: 14px;
+}
+
+/* Stat numbers → green; labels → navy */
+.VPHome .hero-stats .stat-number,
+.VPHome .hero-stats .counter,
+.VPHome .community-stats .stat-value {
+  color: #00b372;
+}
+.VPHome .hero-stats .stat-label,
+.VPHome .community-stats .stat-label {
+  color: #41566b;
+}
+.dark .VPHome .hero-stats .stat-label,
+.dark .VPHome .community-stats .stat-label {
+  color: #a8b3c2;
+}
+
+/* Pill tabs (video filter + persona) → brand */
+.VPHome .learning-videos .filter-tab.active,
+.VPHome .learning-paths .path-tabs .tab.active {
+  background: #00b372 !important;
+  border-color: #00b372 !important;
+  color: #fff !important;
+}
+.VPHome .learning-videos .filter-tab,
+.VPHome .learning-paths .path-tabs .tab {
+  border-radius: 999px;
+}
+
+/* Card titles → navy */
+.VPHome .module-showcase .card-title,
+.VPHome .learning-videos .video-title,
+.VPHome .learning-paths .step-title {
+  color: #0d1b2a;
+}
+.dark .VPHome .module-showcase .card-title,
+.dark .VPHome .learning-videos .video-title,
+.dark .VPHome .learning-paths .step-title {
+  color: #fff;
 }
 
 body:has(.VPHome) .reading-progress {
@@ -319,20 +488,19 @@ body:has(.VPHome) .reading-progress {
   top: -8px;
   background-image: linear-gradient(
     100deg,
-    #06b6d4 0%,
-    #0ea5e9 18%,
-    #3b82f6 36%,
-    #9d4edd 56%,
-    #ff3c81 74%,
-    #f97316 88%,
-    #06b6d4 100%
+    #00c087 0%,
+    #00b372 20%,
+    #009966 40%,
+    #0d1b2a 60%,
+    #009966 80%,
+    #00c087 100%
   );
   background-size: 220% 220%;
   background-position: 0% 50%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 22px rgba(59, 130, 246, 0.26));
+  filter: drop-shadow(0 0 22px rgba(0, 179, 114, 0.26));
   animation: ev-hero-name-flow 8s ease-in-out infinite alternate;
 }
 
@@ -358,7 +526,7 @@ body:has(.VPHome) .reading-progress {
 .VPHomeHero .action .VPButton.brand {
   border-radius: 999px;
   background-image: none;
-  background-color: #0071e3;
+  background-color: #00b372;
   border: none;
   box-shadow: none;
   transition:
@@ -368,15 +536,15 @@ body:has(.VPHome) .reading-progress {
 
 .VPHomeHero .action .VPButton.brand:hover {
   transform: scale(1.02);
-  background-color: #0077ed;
+  background-color: #009966;
   opacity: 1;
 }
 
 .VPHomeHero .action .VPButton.alt {
   border-radius: 999px;
-  border: 1px solid #0071e3;
+  border: 1px solid #00b372;
   background-color: #fff;
-  color: #0071e3;
+  color: #00b372;
   font-weight: 500;
   box-shadow: none;
   transition:
@@ -387,8 +555,8 @@ body:has(.VPHome) .reading-progress {
 
 .VPHomeHero .action .VPButton.alt:hover {
   transform: scale(1.02);
-  background-color: rgba(0, 113, 227, 0.08);
-  color: #0066cc;
+  background-color: rgba(0, 179, 114, 0.08);
+  color: #009966;
 }
 
 /* HomeFeatures Sections Scroll Offset */

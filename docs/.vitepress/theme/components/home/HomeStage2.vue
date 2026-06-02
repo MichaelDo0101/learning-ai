@@ -152,7 +152,7 @@ const localizedStage2Cards = computed(() => {
 
 .comm-note {
   font-size: 17px;
-  color: #0066cc;
+  color: #00b372;
   letter-spacing: -0.01em;
 }
 

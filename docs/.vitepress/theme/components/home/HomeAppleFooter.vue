@@ -1,12 +1,19 @@
 <script setup>
-import { computed, inject } from 'vue'
-import { withBase } from 'vitepress'
+import { computed } from 'vue'
+import { useData, withBase } from 'vitepress'
+import { i18n } from './HomeI18n'
 
 const props = defineProps({
   isCjkLocale: Boolean
 })
 
-const t = inject('t')
+const { lang } = useData()
+const t = computed(() => {
+  const code = lang.value ? lang.value.toLowerCase() : 'vi-vn'
+  const result = i18n[code] || i18n['vi-vn'] || i18n['en']
+  result._locale = code
+  return result
+})
 
 const appleFooterInfo = computed(() => {
   const locale = t.value._locale || 'vi-vn'
@@ -17,7 +24,7 @@ const appleFooterInfo = computed(() => {
         '2. Project ví dụ và ảnh chụp màn hình chỉ dùng cho mục đích minh họa, có thể khác với phiên bản giao diện sau.',
         '3. Một số link chương có thể thay đổi theo lộ trình khoá học, khuyến nghị vào từ trang chủ để lấy đường dẫn mới nhất.'
       ],
-      breadcrumbPrefix: 'Học AI',
+      breadcrumbPrefix: 'Learning AI',
       breadcrumbCurrent: 'Điều hướng học tập',
       columns: [
         {
@@ -37,14 +44,14 @@ const appleFooterInfo = computed(() => {
           links: ['Cộng đồng học tập', 'Khu thảo luận', 'Phản hồi khoá học']
         },
         {
-          title: 'Về Học AI',
+          title: 'Về Learning AI',
           links: ['Giới thiệu dự án', 'Changelog', 'Liên hệ']
         }
       ],
       more: 'Cách học khác: truy cập',
       moreLink: 'GitHub Repository',
       moreTail: ' để nhận cập nhật và thông tin trao đổi.',
-      copyright: 'Copyright © 2026 Học AI. Bảo lưu mọi quyền.',
+      copyright: 'Copyright © 2026 Learning AI. Bảo lưu mọi quyền.',
       policies: ['Chính sách bảo mật', 'Điều khoản sử dụng', 'Sơ đồ website']
     },
     en: {
@@ -54,7 +61,7 @@ const appleFooterInfo = computed(() => {
         '3. Some chapter links may change as the course evolves.',
         '4. The page is optimized for modern desktop browsers and responsive layouts.'
       ],
-      breadcrumbPrefix: 'Học AI',
+      breadcrumbPrefix: 'Learning AI',
       breadcrumbCurrent: 'Learning Navigation',
       columns: [
         {
@@ -74,14 +81,14 @@ const appleFooterInfo = computed(() => {
           links: ['Community', 'Discussions', 'Feedback']
         },
         {
-          title: 'About Học AI',
+          title: 'About Learning AI',
           links: ['Overview', 'Changelog', 'Contact']
         }
       ],
       more: 'More ways to learn: visit',
       moreLink: 'GitHub Repository',
       moreTail: ' for updates and community discussions.',
-      copyright: 'Copyright © 2026 Học AI. All rights reserved.',
+      copyright: 'Copyright © 2026 Learning AI. All rights reserved.',
       policies: ['Privacy Policy', 'Terms of Use', 'Sitemap']
     }
   }
@@ -92,8 +99,6 @@ const footerBtnLink = computed(() => {
   const locale = t.value._locale || 'vi-vn'
   return withBase(`/${locale}/stage-1/learning-map/`)
 })
-
-const footerRepositoryLink = 'https://github.com/datawhalechina/easy-vibe'
 
 const footerPolicyLinkMap = {
   'Chính sách bảo mật': '#',
@@ -122,8 +127,8 @@ const footerColumnLinkMap = {
 }
 
 const footerExternalLinks = {
-  'GitHub Repository': 'https://github.com/datawhalechina/easy-vibe',
-  'Changelog': 'https://github.com/datawhalechina/easy-vibe/releases',
+  'GitHub Repository': 'https://github.com/aiecosvietnam/learning-ai',
+  'Changelog': 'https://github.com/aiecosvietnam/learning-ai/releases'
 }
 
 const getFooterLink = (label) => {
@@ -163,7 +168,7 @@ const resolveFooterHref = (link) => {
   >
     <div class="apple-site-footer-inner">
       <div class="apple-footer-breadcrumb">
-        <span>⌘</span>
+        <span class="apple-footer-home ti ti-home" aria-hidden="true"></span>
         <span>›</span>
         <span>{{ appleFooterInfo.breadcrumbPrefix }}</span>
         <span>›</span>
@@ -194,12 +199,6 @@ const resolveFooterHref = (link) => {
             {{ link }}
           </a>
         </div>
-      </div>
-
-      <div class="apple-footer-more">
-        {{ appleFooterInfo.more }}
-        <a :href="footerRepositoryLink">{{ appleFooterInfo.moreLink }}</a>
-        {{ appleFooterInfo.moreTail }}
       </div>
 
       <div class="apple-footer-bottom">
@@ -258,7 +257,7 @@ const resolveFooterHref = (link) => {
 }
 
 .apple-site-footer {
-  max-width: 1060px;
+  max-width: none;
   margin: 0 auto 56px;
   padding: 0 40px;
 }
@@ -276,6 +275,12 @@ const resolveFooterHref = (link) => {
   color: #6e6e73;
   font-size: 12px;
   padding-top: 12px;
+}
+
+.apple-footer-home {
+  color: #00b372;
+  font-size: 14px;
+  line-height: 1;
 }
 
 .apple-site-footer.is-cjk-locale .apple-footer-breadcrumb {
@@ -349,7 +354,7 @@ const resolveFooterHref = (link) => {
 }
 
 .apple-footer-column a:hover {
-  color: #0066cc;
+  color: #00b372;
 }
 
 .apple-footer-more {
@@ -369,7 +374,7 @@ const resolveFooterHref = (link) => {
 }
 
 .apple-footer-more a {
-  color: #0066cc;
+  color: #00b372;
 }
 
 .apple-footer-bottom {
@@ -407,7 +412,7 @@ const resolveFooterHref = (link) => {
 }
 
 .apple-footer-policy a:hover {
-  color: #0066cc;
+  color: #00b372;
 }
 
 .apple-site-footer.is-cjk-locale .apple-footer-policy a {
@@ -421,7 +426,7 @@ const resolveFooterHref = (link) => {
 
 @media (min-width: 1024px) {
   .apple-site-footer {
-    max-width: 996px;
+    max-width: none;
     padding: 0 24px;
   }
 

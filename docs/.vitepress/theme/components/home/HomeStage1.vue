@@ -33,7 +33,7 @@ const t = inject('t')
           class="feature-icon"
           :style="{ background: card.color }"
         >
-          {{ card.icon }}
+          <EvIcon :emoji="card.icon" />
         </div>
         <div class="feature-content">
           <h4>{{ t.stage1.cards[i].title }}</h4>

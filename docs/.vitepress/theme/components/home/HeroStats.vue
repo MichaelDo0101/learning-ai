@@ -6,7 +6,7 @@
         :key="idx"
         class="stat-card"
       >
-        <div class="stat-icon">{{ s.icon }}</div>
+        <div class="stat-icon"><EvIcon :emoji="s.icon" /></div>
         <div class="stat-number">
           <span class="counter">{{ displayValues[idx] }}</span><span class="suffix">{{ s.suffix }}</span>
         </div>

@@ -222,7 +222,7 @@ cd my-saas
 npm install @clerk/nextjs stripe @vercel/postgres
 ```
 
-Reference chi tiết: [Vibe Generate Ch4 — Solo SaaS lab](../vibe-generate/4-solo-saas-million.md) — code Next.js + Clerk + Stripe đầy đủ.
+Reference chi tiết: [Generative AI Ch8 — SaaS wrap](../generative-ai/8-ung-dung-vn.md) — wrap API gen + Next.js + Stripe.
 
 ### Day 2 — Core feature + DB (4 giờ)
 

@@ -12,7 +12,7 @@
         :class="['filter-tab', { active: activeCat === cat.id }]"
         @click="activeCat = cat.id"
       >
-        {{ cat.icon }} {{ cat.label }}
+        <EvIcon :emoji="cat.icon" /> {{ cat.label }}
       </button>
     </div>
 
@@ -140,7 +140,7 @@ const videos = computed(() => [
       : 'Deep dive 2 tiếng về cách dùng LLM thực tế từ một trong những người giỏi nhất.'
   },
   {
-    id: 'gYqF6-h9Cvg',
+    id: 'gv0WHhKelSE',
     title: isEN.value
       ? 'Claude Code: Best Practices for Agentic Coding'
       : 'Claude Code: Best Practices cho Agentic Coding',
@@ -153,121 +153,121 @@ const videos = computed(() => [
       : 'Hướng dẫn chính thức của Anthropic về Claude Code. Sub-agent, MCP, cost control.'
   },
   {
-    id: 'ooz2_pY5VzM',
+    id: 'U6LbW2IFUQw',
     title: isEN.value
-      ? 'Building Production AI Agents with MCP'
-      : 'Build AI Agents production với MCP',
+      ? 'This is Hands Down the BEST Way to Build AI Agents'
+      : 'Cách tốt nhất để build AI Agents (production)',
     channel: 'Cole Medin',
-    duration: '45:00',
-    module: 'Vibe Agent Ch 6',
+    duration: '51:00',
+    module: 'Vibe Agent Ch 3-6',
     cat: ['agent'],
     why: isEN.value
-      ? 'Practical MCP server build with n8n + Claude. Production-ready.'
-      : 'Build MCP server thực tế với n8n + Claude. Production-ready.'
+      ? 'Production agent build: framework choice + context engineering.'
+      : 'Build agent production: chọn framework + context engineering.'
   },
   {
-    id: 'TfqArnEFKaA',
+    id: 'WkHdkwDQJ5o',
     title: isEN.value
-      ? 'Cursor vs Claude Code vs Windsurf — honest review'
-      : 'Cursor vs Claude Code vs Windsurf — review trung thực',
+      ? 'Claude\'s new Cursor killer just dropped'
+      : 'Claude ra "Cursor killer" — review trung thực',
     channel: 'Theo - t3.gg',
-    duration: '25:00',
+    duration: '30:00',
     module: 'Vibe Agent Ch 1-2',
     cat: ['coding', 'agent'],
     why: isEN.value
-      ? 'Honest dev review comparing the top 3 AI coding agents in 2026.'
-      : 'Review dev trung thực so sánh 3 AI coding agent hàng đầu 2026.'
+      ? 'Theo compares Claude Code vs Cursor head-to-head — honest dev take.'
+      : 'Theo so sánh Claude Code vs Cursor — góc nhìn dev thẳng thắn.'
   },
   {
-    id: 'aircAruvnKk',
+    id: 'iv-5mZ_9CPY',
     title: isEN.value
-      ? 'How AI Image Generation Actually Works (Diffusion)'
-      : 'AI Image Generation hoạt động thế nào (Diffusion)',
+      ? 'But how do AI images and videos actually work?'
+      : 'Ảnh & video AI thật ra hoạt động thế nào?',
     channel: '3Blue1Brown',
-    duration: '20:00',
+    duration: '30:00',
     module: 'Vibe Generate',
     cat: ['generate'],
     why: isEN.value
-      ? 'Best visual explainer for how image gen models work under the hood.'
-      : 'Explainer visual tốt nhất về cách image gen models hoạt động bên trong.'
+      ? 'The definitive 2025 visual explainer for diffusion. (1.9M views)'
+      : 'Explainer hình ảnh hay nhất 2025 về diffusion. (1.9M view)'
   },
   {
-    id: 'pTHEqAi-jZA',
+    id: 'iyEncfhAFRY',
     title: isEN.value
-      ? 'How I Make Viral AI Videos with Sora 2'
-      : 'Cách tôi làm video AI viral với Sora 2',
+      ? 'How we made the viral NBA Finals AI Ad in 2 Days'
+      : 'Cách làm quảng cáo AI NBA Finals viral trong 2 ngày',
     channel: 'PJ Ace',
-    duration: '15:00',
-    module: 'Vibe Generate Ch 5',
+    duration: '1:02',
+    module: 'Vibe Generate Ch 3',
     cat: ['generate'],
     why: isEN.value
-      ? 'Behind the scenes from the creator of the $2K Kalshi ad → 20M views.'
-      : 'Behind the scenes từ creator làm Kalshi ad $2K → 20M view.'
+      ? 'Behind the scenes of the viral ~$2K Kalshi AI ad (Veo 3).'
+      : 'Behind the scenes quảng cáo AI Kalshi ~$2K viral (Veo 3).'
   },
   {
-    id: 'HiEoUMqJUjE',
+    id: 'K8Ros5RhJW4',
     title: isEN.value
-      ? 'Pieter Levels — Building $3M/year as solo founder'
-      : 'Pieter Levels — Build $3M/năm solo founder',
-    channel: 'Lex Fridman Podcast',
-    duration: '3:00:00',
-    module: 'Vibe Generate Ch 4',
-    cat: ['generate', 'coding'],
+      ? 'The Only 14 Ways to Make Money with AI in 2026'
+      : '14 cách kiếm tiền với AI trong 2026',
+    channel: 'Dan Martell',
+    duration: '30:00',
+    module: 'Vibe Generate Ch 8',
+    cat: ['generate'],
     why: isEN.value
-      ? '3-hour interview with the solo indie hacker behind PhotoAI ($1.65M ARR).'
-      : 'Interview 3 tiếng với indie hacker solo phía sau PhotoAI ($1.65M ARR).'
+      ? '14 concrete, current ways to monetize AI skills. (710K views)'
+      : '14 cách kiếm tiền với AI cụ thể, cập nhật. (710K view)'
   },
   {
-    id: 'F8NKVhkZZWI',
+    id: '9FuNtfsnRNo',
     title: isEN.value
-      ? 'F8 — Vibe Coding hướng dẫn từ A đến Z (Vietnamese)'
-      : 'F8 — Vibe Coding hướng dẫn từ A đến Z',
-    channel: 'F8 Official (Sơn Đặng)',
-    duration: '60:00',
-    module: 'Stage 1',
-    cat: ['vn', 'coding'],
+      ? 'I Built the Ultimate Team of AI Agents in n8n (Free Template)'
+      : 'Build team AI Agents trong n8n (template free)',
+    channel: 'Nate Herk | AI Automation',
+    duration: '40:00',
+    module: 'Vibe Agent Ch 7',
+    cat: ['agent'],
     why: isEN.value
-      ? 'Top Vietnamese dev community Vibe Coding tutorial. Approachable, in Vietnamese.'
-      : 'Cộng đồng dev VN hàng đầu hướng dẫn Vibe Coding. Dễ hiểu, tiếng Việt.'
+      ? 'Orchestrator + sub-agents in n8n, no code. (1.1M views)'
+      : 'Orchestrator + sub-agent trong n8n, no-code. (1.1M view)'
   },
   {
-    id: 'mWtt0pTNHEM',
+    id: 'lwSNhpkNYao',
     title: isEN.value
-      ? 'Building Vietnamese Smax.ai Sales Bot (case Yody)'
-      : 'Build bot bán hàng Smax.ai tiếng Việt (case Yody)',
-    channel: 'Smax.ai Vietnam',
-    duration: '20:00',
+      ? 'Build a Vietnamese AI Sales Chatbot with Personality'
+      : 'Tạo AI Chatbot bán hàng có "tính cách" (tiếng Việt)',
+    channel: 'EVOKA - Chatbot AI',
+    duration: '15:00',
     module: 'Vibe Agent Ch 5',
     cat: ['vn', 'agent'],
     why: isEN.value
-      ? 'Vietnamese case study: how Yody got +15-20% close rate with Smax.ai.'
-      : 'Case VN: Yody đạt +15-20% close rate với Smax.ai như thế nào.'
+      ? 'Vietnamese tutorial: give your AI sales bot a persona so it is not robotic.'
+      : 'Video tiếng Việt: tạo chatbot bán hàng AI có tính cách, không "máy móc".'
   },
   {
-    id: 'CYjlepDmEUw',
+    id: 'GuaKeDS6UKU',
     title: isEN.value
-      ? 'n8n + AI Workflow — From Zero to Production'
-      : 'n8n + AI Workflow — Từ Zero đến Production',
-    channel: 'n8n Official',
-    duration: '35:00',
+      ? 'n8n Quick Start: Build Your First AI Agent [2026]'
+      : 'n8n Quick Start: Build AI Agent đầu tiên [2026]',
+    channel: 'n8n',
+    duration: '25:00',
     module: 'Vibe Agent Ch 5',
     cat: ['agent'],
     why: isEN.value
-      ? 'Official n8n + AI tutorial. Production-grade workflow patterns.'
-      : 'Tutorial chính thức n8n + AI. Pattern workflow production-grade.'
+      ? 'Official n8n tutorial: build your first AI agent from scratch.'
+      : 'Tutorial chính thức n8n: build AI agent đầu tiên từ đầu.'
   },
   {
-    id: 'NXNlMc0OmJI',
+    id: 'p_e2IAsB84A',
     title: isEN.value
-      ? 'Suno AI Music Production — Full Workflow 2026'
-      : 'Production nhạc AI với Suno — Workflow đầy đủ 2026',
+      ? 'AI Cinematography is Here… And Surprisingly Easy'
+      : 'Quay phim điện ảnh bằng AI — dễ bất ngờ',
     channel: 'Curious Refuge',
-    duration: '25:00',
-    module: 'Vibe Generate Ch 2',
+    duration: '20:00',
+    module: 'Vibe Generate Ch 3',
     cat: ['generate'],
     why: isEN.value
-      ? 'Full Suno v5.5 production pipeline → Spotify distribution.'
-      : 'Full pipeline production Suno v5.5 → distribute Spotify.'
+      ? 'Modern AI cinematography workflow from a top AI-film channel.'
+      : 'Workflow quay phim AI điện ảnh hiện đại từ kênh AI-film hàng đầu.'
   }
 ])
 

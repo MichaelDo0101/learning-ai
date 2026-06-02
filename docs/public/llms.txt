@@ -49,5 +49,5 @@ Stage 3 (Senior Developer): Cross-platform development
 
 == Contact ==
 
-- GitHub: https://github.com/datawhalechina/easy-vibe
+- GitHub: https://github.com/aiecosvietnam/learning-ai
 - Organization: Datawhale China

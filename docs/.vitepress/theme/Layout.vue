@@ -661,7 +661,7 @@ watch(sidebarCollapsed, (collapsed) => {
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  background: linear-gradient(90deg, #06b6d4 0%, #0ea5e9 50%, #3b82f6 100%);
+  background: linear-gradient(100deg, #00c087 0%, #00b372 50%, #009966 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

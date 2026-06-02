@@ -31,7 +31,7 @@ Project thực chiến này yêu cầu bạn dựa trên 1 PRD thật, dùng Spr
 | **Admin backend** | Admin maintain data phim, xem hiệu quả gợi ý |
 
 ::: tip Entry PRD
-PRD trên GitHub: [Xem PRD](https://github.com/datawhalechina/easy-vibe/blob/main/docs/vi-vn/stage-2/assignments/movie-recommendation-springboot/PRD.md)
+PRD trên GitHub: [Xem PRD](https://github.com/aiecosvietnam/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/movie-recommendation-springboot/PRD.md)
 :::
 
 <div style="margin: 32px 0;">
