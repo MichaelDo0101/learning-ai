@@ -68,11 +68,11 @@ const getSeoHead = (locale, title, description, path = '') => {
 
   const head = [
     // Favicon — SVG primary (modern browsers) + ICO fallback (legacy)
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg`.replace('//', '/') }],
-    ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico`.replace('//', '/') }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${base}favicon-16x16.png`.replace('//', '/') }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32x32.png`.replace('//', '/') }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: `${base}apple-touch-icon.png`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg?v=2`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico?v=2`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${base}favicon-16x16.png?v=2`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32x32.png?v=2`.replace('//', '/') }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: `${base}apple-touch-icon.png?v=2`.replace('//', '/') }],
     ['link', { rel: 'manifest', href: `${base}site.webmanifest`.replace('//', '/') }],
     [
       'link',
