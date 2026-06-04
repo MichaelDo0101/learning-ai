@@ -96,12 +96,16 @@ Hoặc dùng theo **API (pay-as-you-go)** qua **Anthropic Console** — tính th
 
 | Model | Input (USD / triệu token) | Output (USD / triệu token) |
 |---|---|---|
-| **Opus 4.7** | ~5 | ~25 |
+| **Opus 4.8** | ~5 | ~25 |
 | **Sonnet 4.6** | ~3 | ~15 |
 | **Haiku 4.5** | ~1 | ~5 |
 
 ::: tip 💸 Model mặc định & cách chọn gói cho ví tiền VN
-- **Mặc định model:** Pro / Team Standard / Enterprise / API dùng **Sonnet 4.6**. **Opus** chỉ mặc định trên **Max** và **Team Premium**.
+*(Theo tài liệu chính thức Anthropic tới giữa 2026 — sản phẩm đổi nhanh, gõ `/model` trong session để xem model thực tế đang chạy.)*
+- **Model mới nhất:** **Claude Opus 4.8** (ID `claude-opus-4-8`) ra mắt **28/05/2026** trên claude.ai, API và Claude Code; giá giữ nguyên **$5 in / $25 out** như đời trước.
+- **Mặc định model:** Opus 4.8 là **default mới của Claude Code** cho **Max, Team Premium, Enterprise pay-as-you-go và API** (mặc định ở mức effort *high*). Các gói nhẹ hơn (Pro / Team Standard) mặc định **Sonnet 4.6** để tiết kiệm hạn mức.
+- **Effort control:** Opus 4.8 có thêm lệnh `/effort` để chỉnh độ "đào sâu" suy luận (ví dụ `/effort xhigh` cho bài toán khó). Effort cao hơn = chất lượng tốt hơn nhưng **tốn token hơn** — cân nhắc theo độ phức tạp task.
+- **Đổi model giữa chừng:** gõ `/model` trong session để chuyển qua lại Opus / Sonnet / Haiku (ví dụ hạ xuống Sonnet/Haiku cho việc vặt để tiết kiệm).
 - **API credits dùng thử** thường khoảng **5 USD**.
 - **Quy đổi:** nếu dùng nhiều (vài chục–trăm triệu token/tháng) thì **Max rẻ hơn API rất nhiều** — một dev báo cáo tiết kiệm **~93%**.
 - **Lộ trình hợp lý cho học viên VN:** bắt đầu **Pro 20 USD/tháng** để học → dùng `/init` + `CLAUDE.md` cho project thật → nâng dần lên Skills/Hooks/MCP/subagents → chỉ chuyển **Max** khi dùng nặng.
@@ -266,8 +270,13 @@ claude --worktree feature-auth
 /resume    # chọn lại phiên cũ
 /schedule  # lập lịch chạy
 /loop      # lặp một prompt trong session
-/powerup   # bài học tương tác về chính Claude Code
+/model     # đổi model giữa session (Opus / Sonnet / Haiku)
+/effort    # chỉnh độ "đào sâu" suy luận (vd /effort xhigh) — Opus 4.8
 ```
+
+::: tip 💡 Gõ `/help` để xem lệnh thật của phiên bản đang chạy
+Danh sách slash command thay đổi theo phiên bản. Lệnh chuẩn nhất luôn là gõ **`/help`** ngay trong session để Claude liệt kê đúng các lệnh bản hiện tại — đừng học thuộc một danh sách tĩnh.
+:::
 
 ::: tip 🖼️ Mẹo dùng ảnh để debug
 Kéo-thả **screenshot lỗi** vào cửa sổ rồi hỏi thẳng:
@@ -290,6 +299,60 @@ Here is a screenshot of the error. What is causing it?
 
 → Còn **MCP** kết nối dữ liệu/công cụ ngoài (Drive, Jira, Slack, GitHub), **Plugins** đóng gói sẵn cả bốn lớp trên để cài 1-click cho team.
 
+### 03f · Ví dụ chạy được: Skill, Hook, MCP (vừa đọc vừa gõ)
+
+Mục 03e mô tả khái niệm; dưới đây là mẫu **tối thiểu** để bạn tạo thử ngay. *(Cú pháp file có thể thay đổi theo phiên bản — đối chiếu docs ở mục 09.)*
+
+**① Một `SKILL.md` tối thiểu** — đặt tại `.claude/skills/changelog/SKILL.md`:
+
+```markdown
+---
+name: changelog
+description: Sinh mục changelog từ các commit chưa release.
+---
+
+Khi được gọi, hãy:
+1. Chạy `git log` lấy commit kể từ tag gần nhất.
+2. Nhóm theo Added / Fixed / Changed.
+3. Viết ra mục changelog ngắn gọn theo chuẩn Keep a Changelog.
+```
+
+Gọi bằng `/changelog` trong session, hoặc để Claude tự kích hoạt khi hợp ngữ cảnh. Body chỉ nạp **khi gọi** nên không tốn token mỗi turn.
+
+**② Một Hook auto-format** — trong `.claude/settings.json`, chạy formatter **sau mỗi lần Claude sửa file** (đây là *code tất định*, không hallucinate):
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "npx prettier --write $CLAUDE_FILE_PATHS" }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**③ Thêm một MCP server** — ví dụ nối filesystem; cấu hình cấp project nằm trong `.mcp.json` (commit vào git để cả team dùng chung):
+
+```bash
+# Thêm nhanh bằng CLI
+claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem ./
+
+# Xem trạng thái các server đã cấu hình
+claude mcp list
+```
+
+Sau khi thêm, tham chiếu resource trong prompt bằng cú pháp `@server:resource`.
+
+::: tip ⌨️ Hai phím tắt đáng nhớ
+- Gõ **`#`** ngay đầu dòng trong session để **ghi nhanh một ghi chú vào `CLAUDE.md`** (memory shortcut) — tiện khi phát hiện một quy tắc muốn Claude nhớ lâu dài.
+- Cần JSON cho pipeline/CI: dùng **`claude -p "..." --output-format json`** để lấy output máy-đọc-được thay vì văn bản thường.
+:::
+
 ---
 
 ## 04 · Mẹo hay & lỗi thường gặp
@@ -309,7 +372,7 @@ Here is a screenshot of the error. What is causing it?
 what are the limitations of Claude Code?
 how do I use MCP?
 ```
-Hoặc chạy `/powerup` để học tương tác.
+Hoặc gõ `/help` để xem danh sách lệnh của phiên bản đang chạy.
 :::
 
 ::: warning 📌 Ví dụ thật — Hoá đơn token có thể "nhảy" bất ngờ
@@ -530,12 +593,117 @@ Use a subagent to review this code for security issues
 
 ---
 
+## 07 · Bảo mật & dữ liệu của bạn đi đâu
+
+Bạn đang giao **cả codebase thật** cho một dịch vụ chạy trên cloud — nên phải biết dữ liệu đi đâu **trước khi** dán code khách hàng vào. Phần dưới theo chính sách công bố của Anthropic (consumer terms 28/08/2025, privacy center) tới giữa 2026; chính sách có thể đổi, hãy kiểm tra lại link ở mục 08.
+
+::: warning 🔒 Điểm khác biệt sống còn: gói consumer vs commercial
+| | **Consumer** (Free / Pro / Max — đăng nhập claude.ai) | **Commercial** (API key / Team / Enterprise / Bedrock / Vertex) |
+|---|---|---|
+| **Anthropic có train trên code/prompt của bạn?** | **CÓ — bật mặc định** (từ cập nhật 28/08/2025). Phải **tự opt-out**. | **KHÔNG** train trên code/prompt của bạn. |
+| **Giữ dữ liệu bao lâu?** | **5 năm** nếu để bật training; **30 ngày** nếu opt-out. | Log API giữ **~7 ngày** (từ 14/09/2025), không dùng để train. |
+| **Tắt training ở đâu?** | `claude.ai/settings/data-privacy-controls` | Không áp dụng (mặc định không train). |
+
+**Hệ quả thực tế cho dev VN:** nếu bạn làm **code nhạy cảm / của khách hàng / có NDA**, nên chạy Claude Code qua **API key (commercial terms)** thay vì gói Pro/Max consumer — vì commercial **mặc định không train** trên dữ liệu của bạn. Đây là khác biệt mà rất ít người để ý.
+:::
+
+::: warning 🚫 Đừng bao giờ dán những thứ này vào một phiên consumer
+- **Secrets:** API key, token, mật khẩu, nội dung file `.env`, private key.
+- **PII khách hàng:** tên/SĐT/email/CMND/dữ liệu cá nhân người dùng thật.
+- **Code có ràng buộc pháp lý:** dự án NDA, mã nguồn độc quyền của khách.
+
+Mẹo kỹ thuật: thêm `.env`, thư mục secrets vào `.gitignore` và cấu hình **permissions** trong `.claude/settings.json` để chặn Claude đọc/chạy nhầm. Có thể trỏ endpoint/commercial key qua biến môi trường `ANTHROPIC_API_KEY` và `ANTHROPIC_BASE_URL`.
+:::
+
+::: tip 🛡️ Permissions — đừng auto-approve mọi thứ
+Claude Code hỏi xác nhận trước khi sửa file/chạy lệnh là **tính năng an toàn, không phải phiền toái**. Đừng bật auto-approve toàn cục trên codebase lạ. Cấu hình quyền chi tiết (lệnh được phép, file được đọc, auto-approve có chọn lọc) đặt trong `.claude/settings.json`. Với thay đổi rủi ro cao, dùng **Plan mode** (mục 03, Bước 4) để xem kế hoạch *trước khi* nó đụng đĩa.
+:::
+
+---
+
+## 08 · So với công cụ khác — khi nào KHÔNG nên dùng
+
+### So với các CLI agent khác
+
+Claude Code không phải lựa chọn duy nhất. Bảng dưới so sánh khách quan với các đối thủ cùng hạng mà dev VN hay cân nhắc *(đặc điểm tới giữa 2026, có thể đổi)*:
+
+| Công cụ | Hãng | Phần mềm | Mô hình giá | Khoá model? |
+|---|---|---|---|---|
+| **Claude Code** | Anthropic | **Đóng** (proprietary) | Cần Pro/Max **hoặc** API token | Chỉ model Claude |
+| **OpenAI Codex CLI** | OpenAI | **Mã nguồn mở** | Gói ChatGPT **hoặc** API token | Model OpenAI |
+| **Gemini CLI** | Google | **Mã nguồn mở** | **Free tier rộng** + API token | Model Gemini |
+| **Aider** | Cộng đồng | **Mã nguồn mở** | **Miễn phí phần mềm** — bạn tự trả token cho model mình chọn | **Đa model** (Claude/GPT/Gemini/local…) |
+| **Cursor** | Anysphere | **Đóng** (IDE) | Có free tier giới hạn + gói trả phí | Đa model |
+
+**Đọc bảng cho đúng:** chương này nhấn "Claude Code không có gói Free", nhưng **không phải cả thị trường đều phải trả phí phần mềm** — **Aider và Gemini CLI miễn phí phần mềm** (Aider chỉ trả token model bạn dùng; Gemini CLI có free tier rộng). Cái bạn trả ở Claude Code là **gói/credit của Anthropic**, đổi lại là sản phẩm chính chủ, tích hợp sâu và model Claude.
+
+::: tip 🤔 Khi nào nên cân nhắc đối thủ
+- **Muốn miễn phí / kiểm soát token tối đa, đa model:** → **Aider** (open-source, bring-your-own-key).
+- **Muốn free tier rộng để học, hệ sinh thái Google:** → **Gemini CLI**.
+- **Đã trả ChatGPT Plus, thích hệ OpenAI:** → **Codex CLI**.
+- **Muốn AI ngay trong IDE dạng autocomplete + chat:** → **Cursor**.
+- **Muốn agent tự hành mạnh nhất trên codebase lớn, tích hợp chính chủ + Skills/Hooks/MCP:** → **Claude Code** (đúng thế mạnh chương này).
+:::
+
+### Khi nào KHÔNG nên dùng Claude Code
+
+::: warning 🛑 Ranh giới thật — đừng dùng "búa tạ đập ruồi"
+- **Task 1–2 dòng / sửa nhỏ một chỗ:** mở editor gõ tay còn nhanh hơn cả thời gian Claude đọc context.
+- **Codebase quá lớn mà không có cách verify** (không test, không reference để đối chiếu): Claude dễ "phá code đang chạy" hoặc viết logic trùng lặp — xem mục 06e.
+- **Không kiểm soát được chi phí token:** đã có case hoá đơn ~1.600 USD (mục 04). Nếu chưa quen quản lý context, bắt đầu bằng gói **Max** (giá cố định) thay vì API.
+- **Cần tư duy thiết kế sâu / quyết định kiến trúc:** viết code cũng là một cách tư duy — giao hết cho LLM có thể bỏ lỡ lỗi thiết kế. Dùng Claude để *thực thi*, bạn vẫn *cầm lái* thiết kế.
+- **Domain mà model hay hallucinate API:** với thư viện/API ít phổ biến, Claude có thể bịa hàm không tồn tại (mục 06e) — phải verify kỹ.
+:::
+
+::: details ❓ FAQ & lỗi hay gặp (vận hành)
+*(Tham chiếu error reference chính thức ở mục 09; gõ `/help` trong session để xem lệnh đúng phiên bản.)*
+
+**Hỏi: Gõ `claude` xong báo "command not found".**
+→ Lệnh chưa vào **PATH**. Mở terminal mới (installer thường thêm PATH cho shell mới), hoặc kiểm tra lại bước cài ở mục 02. Bản native installer tự lo PATH; nếu vẫn lỗi, đăng nhập lại shell.
+
+**Hỏi: Đang làm thì báo hết hạn đăng nhập / lỗi auth.**
+→ Token phiên đã hết hạn. Gõ **`/login`** trong session để đăng nhập lại (hoặc thoát ra chạy lại `claude`).
+
+**Hỏi: Gói Pro chạy được ~1 giờ là hết hạn mức (rate limit).**
+→ Đúng — dùng nặng thì Pro cạn nhanh (xem case mục 03, Bước 6). Theo dõi mức dùng và cân nhắc lên **Max**. Khi bị giới hạn, chờ cửa sổ reset hoặc chuyển sang **API key**.
+
+**Hỏi: Claude sửa hỏng file, làm sao quay lại?**
+→ Nhấn **`Esc`** để dừng Claude giữa chừng. Vì các thay đổi nằm trên đĩa/git, dùng **`git checkout -- <file>`** (hoặc `git restore`) để khôi phục file chưa commit. Muốn tiếp tục phiên trước thì `claude --continue`.
+
+**Hỏi: Kết nối MCP server bị lỗi.**
+→ Kiểm tra lệnh khởi chạy server trong cấu hình (`claude mcp list` để xem trạng thái). Sai đường dẫn binary, thiếu biến môi trường, hoặc server crash là nguyên nhân hay gặp — xem mục 03f về cách thêm MCP.
+
+**Hỏi: Hoá đơn token tăng bất ngờ.**
+→ `CLAUDE.md` nạp **mỗi turn** + output MCP/đọc file bị append vĩnh viễn trong phiên. Giữ `CLAUDE.md` gọn (50–100 dòng), `/clear` khi đổi việc — xem hộp token ở mục 04.
+
+**Hỏi: Bản cài không tự cập nhật.**
+→ Bản qua **Homebrew/WinGet không tự update** — chạy `brew upgrade` / `winget upgrade` thủ công. Native installer thì tự update.
+:::
+
+---
+
+## 09 · Tóm tắt & Nguồn chính thức
+
 ::: tip 📌 5 điều mang theo
 1. Claude Code = **agent lập trình chính chủ của Anthropic** — đọc repo, sửa file, chạy lệnh, làm git; lặp đến khi xong.
-2. **Không có gói Free** cho Claude Code: tối thiểu **Pro 20 USD/tháng** hoặc **API**. Dùng nặng thì **Max** rẻ hơn API nhiều.
+2. **Không có gói Free** cho Claude Code: tối thiểu **Pro 20 USD/tháng** hoặc **API**. Dùng nặng thì **Max** rẻ hơn API nhiều. (Đối thủ như **Aider/Gemini CLI** miễn phí phần mềm — xem mục 08.)
 3. **VN được hỗ trợ chính thức.** Lỗi 451 (HKG) là vấn đề *routing* qua editor bên thứ ba, không phải lệnh cấm.
 4. Quy trình chuẩn: `/init` → hỏi hiểu code → **Plan mode** cho thay đổi lớn → giao việc → `commit`/`pr`.
 5. Mở rộng đúng lớp: **CLAUDE.md** (quy tắc thường trực) · **Skills** (workflow thỉnh thoảng) · **Subagents** (research, giữ context sạch) · **Hooks** (ENFORCE tất định) · **MCP/Plugins** (kết nối & đóng gói).
+6. **Bảo mật:** gói consumer **mặc định train** trên code của bạn; code nhạy cảm/khách hàng nên chạy qua **API key (commercial)** — xem mục 07.
 :::
 
-> *Tài liệu trong chương dựa chủ yếu trên docs chính thức `code.claude.com` (cập nhật tới 2026). Sản phẩm cập nhật nhanh — tính năng/giá có thể đã thay đổi; khi nghi ngờ, hỏi thẳng Claude `what are the limitations of Claude Code?` hoặc xem docs chính thức.*
+Sản phẩm đổi rất nhanh — khi giáo trình lỗi thời, dùng các link chính thức sau để tự cập nhật:
+
+| Chủ đề | Link chính thức |
+|---|---|
+| Tổng quan & docs | <https://code.claude.com/docs/en/overview> |
+| Bảng giá (pricing) | <https://platform.claude.com/docs/en/about-claude/pricing> |
+| Bảo mật (security) | <https://code.claude.com/docs/en/security> |
+| Quyền riêng tư / dữ liệu | <https://privacy.claude.com/en/articles/10023555> |
+| Cập nhật consumer terms | <https://www.anthropic.com/news/updates-to-our-consumer-terms> |
+| Tham chiếu lỗi (errors) | <https://code.claude.com/docs/en/errors> |
+| Quốc gia được hỗ trợ | <https://www.anthropic.com/supported-countries> |
+| Release notes | <https://support.claude.com/en/articles/12138966-release-notes> |
+
+> *Tài liệu trong chương dựa chủ yếu trên docs chính thức `code.claude.com` (tham chiếu model tới **Opus 4.8 — 05/2026**). Sản phẩm cập nhật nhanh — tính năng/giá/tên model có thể đã thay đổi; khi nghi ngờ, gõ `/model` để xem model thực tế, hỏi thẳng Claude `what are the limitations of Claude Code?`, hoặc xem các nguồn chính thức ở bảng trên.*

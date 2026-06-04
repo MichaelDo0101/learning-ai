@@ -34,6 +34,57 @@ Biết một công cụ AI “đỉnh” mà không biết *khi nào dùng cái 
 3. **Dân văn phòng / không code** → [Claude Cowork](./3-claude-cowork).
 4. **Muốn agent riêng, tự host** → [OpenClaw](./6-openclaw), [Hermes Agent](./7-hermes-agent).
 
+---
+
+## 🔗 Kết hợp công cụ — một quy trình thật
+
+Sức mạnh thật không nằm ở một công cụ, mà ở chỗ **nối chúng lại**. Ví dụ đưa một ý tưởng web app từ con số 0 đến lúc ship:
+
+| Bước | Làm gì | Công cụ |
+|---|---|---|
+| 1. Ý tưởng & spec | Brainstorm, viết PRD, phác luồng màn hình | [ChatGPT](./1-chatgpt) |
+| 2. Dựng code | Giao spec, để agent tạo khung + sửa nhiều file | [Claude Code](./2-claude-code) hoặc [Codex](./4-codex) |
+| 3. Lưu & cộng tác | Commit, branch, Pull Request, review | [GitHub](./5-github) |
+| 4. Tự động hoá nền | Agent chạy theo lịch, quét issue, gửi báo cáo | [Cowork](./3-claude-cowork) / [Hermes](./7-hermes-agent) / [OpenClaw](./6-openclaw) |
+
+> 💡 Mẹo: dùng **một trợ lý hội thoại để NGHĨ** (ChatGPT/Claude) và **một coding agent để LÀM** (Claude Code/Codex) — đừng bắt một công cụ gánh tất cả.
+
+## 💳 Free hay trả phí?
+
+| Công cụ | Có bản free? | Khi nào cần trả tiền |
+|---|---|---|
+| ChatGPT | ✅ (giới hạn) | Cần model mạnh, dùng nhiều, Projects/Agent |
+| Claude Code | ❌ (cần gói trả phí/API) | Ngay từ đầu (Pro/Max hoặc API) |
+| Claude Cowork | ❌ (theo gói Claude) | Theo gói Claude trả phí |
+| OpenAI Codex | ✅ (kèm gói ChatGPT) | Dùng nhiều / chạy cloud nặng |
+| GitHub | ✅ (rộng rãi) | Tính năng team / Copilot Pro (sinh viên: free) |
+| OpenClaw | ✅ (MIT — free phần mềm) | Chỉ trả token LLM (hoặc $0 nếu chạy local) |
+| Hermes Agent | ✅ (MIT — free phần mềm) | Chỉ trả token (hoặc $0 với Ollama/free tier) |
+
+> Chi tiết giá + cách thanh toán ở VN nằm trong **mục 02** của từng chương.
+
+## ❓ FAQ nhanh
+
+::: details Người mới hoàn toàn nên bắt đầu công cụ nào?
+**ChatGPT** (trợ lý đa năng, không cần cài) + **GitHub** (kỹ năng nền tảng). Hai cái này dùng được cho gần như mọi việc và phần lớn miễn phí.
+:::
+
+::: details Không biết code, muốn AI làm giúp việc giấy tờ/nghiên cứu?
+[ChatGPT](./1-chatgpt) cho việc lặt vặt; [Claude Cowork](./3-claude-cowork) khi muốn *giao hẳn một mục tiêu nhiều bước* và nhận sản phẩm.
+:::
+
+::: details Muốn AI viết code cho dự án thật — chọn Claude Code hay Codex?
+Chọn theo **gói bạn đã có**: đang trả Claude Pro/Max → [Claude Code](./2-claude-code); đang trả ChatGPT → [Codex](./4-codex). Cả hai đều mạnh — khác biệt nhỏ hơn so với việc bạn dùng kỷ luật tới đâu.
+:::
+
+::: details Lo dữ liệu/riêng tư, không muốn gửi lên cloud?
+Dùng **agent tự host** ([OpenClaw](./6-openclaw) / [Hermes Agent](./7-hermes-agent)) + model chạy local (Ollama) → dữ liệu không rời máy bạn.
+:::
+
+::: details Thanh toán ở Việt Nam thế nào?
+Đa số nhận **thẻ Visa/Mastercard quốc tế**; một số có thẻ ảo/đối tác trả bằng VND. Chi tiết từng công cụ ở **mục 02** mỗi chương.
+:::
+
 ::: warning ⏱️ Lưu ý thời sự
 Công cụ AI đổi giá & tính năng **rất nhanh**. Nội dung cập nhật tới khoảng **giữa 2026** — luôn kiểm tra trang chính thức trước khi mua gói.
 :::
