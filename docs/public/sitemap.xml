@@ -103,59 +103,163 @@
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/1-chatgpt</loc>
-    <lastmod>2026-06-04T17:11:54.938Z</lastmod>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/1-chatgpt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/1-chatgpt"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/10-perplexity</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/10-perplexity"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/10-perplexity"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/11-grok</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/11-grok"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/11-grok"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/12-n8n</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/12-n8n"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/12-n8n"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/13-notebooklm</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/13-notebooklm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/13-notebooklm"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/14-windsurf</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/14-windsurf"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/14-windsurf"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/15-notion-ai</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/15-notion-ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/15-notion-ai"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/16-gamma</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/16-gamma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/16-gamma"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/17-v0</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/17-v0"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/17-v0"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/18-replit</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/18-replit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/18-replit"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/19-elevenlabs</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/19-elevenlabs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/19-elevenlabs"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/2-claude-code</loc>
-    <lastmod>2026-06-04T17:12:22.855Z</lastmod>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/2-claude-code"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/2-claude-code"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/3-claude-cowork</loc>
-    <lastmod>2026-06-04T17:12:55.137Z</lastmod>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/3-claude-cowork"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/3-claude-cowork"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/4-codex</loc>
-    <lastmod>2026-06-04T17:12:05.048Z</lastmod>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/4-codex"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/4-codex"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/5-github</loc>
-    <lastmod>2026-06-04T17:14:20.318Z</lastmod>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/5-github"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/5-github"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/6-openclaw</loc>
-    <lastmod>2026-06-04T17:12:09.604Z</lastmod>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/6-openclaw"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/6-openclaw"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/7-hermes-agent</loc>
-    <lastmod>2026-06-04T17:12:42.153Z</lastmod>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/7-hermes-agent"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/7-hermes-agent"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/8-cursor</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/8-cursor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/8-cursor"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/9-gemini</loc>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/9-gemini"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/9-gemini"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/</loc>
-    <lastmod>2026-06-04T17:18:10.759Z</lastmod>
+    <lastmod>2026-06-05T03:22:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/ai-tools/"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/algorithm-thinking</loc>
@@ -889,6 +993,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/appendix/"/>
   </url>
   <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/contact</loc>
+    <lastmod>2026-06-04T21:05:13.391Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/contact"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/faq</loc>
+    <lastmod>2026-06-04T21:05:40.616Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/faq"/>
+  </url>
+  <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/generative-ai/1-generative-ai-la-gi</loc>
     <lastmod>2026-06-03T02:43:25+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -973,6 +1093,14 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/guide/introduction"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/guide/introduction"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/privacy</loc>
+    <lastmod>2026-06-04T21:06:01.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/privacy"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-0/</loc>
@@ -1571,6 +1699,14 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/stage-3/personal-brand/personal-website-blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/stage-3/personal-brand/personal-website-blog/"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/terms</loc>
+    <lastmod>2026-06-04T21:06:12.959Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/terms"/>
   </url>
   <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/vibe-stories/story-1</loc>
