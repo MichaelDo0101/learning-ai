@@ -44,7 +44,7 @@ const basePath = computed(() => {
 
 const i18n = {
   vi: {
-    title: '📚 8 Module học tập',
+    title: '📚 9 Module học tập',
     subtitle: 'Chọn module phù hợp với mục tiêu của bạn — từ con số 0 đến ship product có user thật.',
     newLabel: 'MỚI'
   },
@@ -117,6 +117,15 @@ const modulesByLocale = {
       chapters: '12 chương',
       audience: '💻 Dev / Founder / Operator',
       link: '/agentic-ai/',
+      isNew: true
+    },
+    {
+      icon: '🧰',
+      title: 'Công cụ AI',
+      desc: 'Bộ đồ nghề thực chiến: ChatGPT, Claude Code, Cowork, Codex, GitHub, OpenClaw, Hermes Agent — cài đặt, workflow, giá VN.',
+      chapters: '7 công cụ',
+      audience: '🛠️ Mọi người dùng AI',
+      link: '/ai-tools/',
       isNew: true
     },
     {

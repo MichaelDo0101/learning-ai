@@ -102,6 +102,62 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://aiecosvietnam.github.io/learning-ai/en/agentic-ai/"/>
   </url>
   <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/1-chatgpt</loc>
+    <lastmod>2026-06-04T17:11:54.938Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/1-chatgpt"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/2-claude-code</loc>
+    <lastmod>2026-06-04T17:12:22.855Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/2-claude-code"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/3-claude-cowork</loc>
+    <lastmod>2026-06-04T17:12:55.137Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/3-claude-cowork"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/4-codex</loc>
+    <lastmod>2026-06-04T17:12:05.048Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/4-codex"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/5-github</loc>
+    <lastmod>2026-06-04T17:14:20.318Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/5-github"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/6-openclaw</loc>
+    <lastmod>2026-06-04T17:12:09.604Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/6-openclaw"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/7-hermes-agent</loc>
+    <lastmod>2026-06-04T17:12:42.153Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/7-hermes-agent"/>
+  </url>
+  <url>
+    <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/</loc>
+    <lastmod>2026-06-04T17:18:10.759Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://aiecosvietnam.github.io/learning-ai/vi-vn/ai-tools/"/>
+  </url>
+  <url>
     <loc>https://aiecosvietnam.github.io/learning-ai/vi-vn/appendix/1-computer-fundamentals/algorithm-thinking</loc>
     <lastmod>2026-05-27T21:10:57+07:00</lastmod>
     <changefreq>weekly</changefreq>

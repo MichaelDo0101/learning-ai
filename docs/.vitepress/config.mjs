@@ -1502,9 +1502,46 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: 'Agentic AI',
             link: '/vi-vn/agentic-ai/',
             activeMatch: '/vi-vn/agentic-ai/'
+          },
+          {
+            text: 'Công cụ AI',
+            link: '/vi-vn/ai-tools/',
+            activeMatch: '/vi-vn/ai-tools/'
           }
         ],
         sidebar: {
+          '/vi-vn/ai-tools/': [
+            {
+              text: 'Công cụ AI',
+              collapsed: false,
+              items: [{ text: 'Tổng quan', link: '/vi-vn/ai-tools/' }]
+            },
+            {
+              text: 'A · Trợ lý & coding agent',
+              collapsed: false,
+              items: [
+                { text: '1. ChatGPT — trợ lý AI đa năng', link: '/vi-vn/ai-tools/1-chatgpt' },
+                { text: '2. Claude Code — agent lập trình terminal', link: '/vi-vn/ai-tools/2-claude-code' },
+                { text: '3. Claude Cowork — agent văn phòng', link: '/vi-vn/ai-tools/3-claude-cowork' },
+                { text: '4. OpenAI Codex — coding agent', link: '/vi-vn/ai-tools/4-codex' }
+              ]
+            },
+            {
+              text: 'B · Nền tảng & kỹ năng dev',
+              collapsed: false,
+              items: [
+                { text: '5. GitHub — lưu code & cộng tác', link: '/vi-vn/ai-tools/5-github' }
+              ]
+            },
+            {
+              text: 'C · Agent tự host (nâng cao)',
+              collapsed: false,
+              items: [
+                { text: '6. OpenClaw — agent local qua chat', link: '/vi-vn/ai-tools/6-openclaw' },
+                { text: '7. Hermes Agent — agent tự host', link: '/vi-vn/ai-tools/7-hermes-agent' }
+              ]
+            }
+          ],
           '/vi-vn/vibe-stories/': [
             {
               text: 'Vibe Stories',

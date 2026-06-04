@@ -361,6 +361,10 @@ onUnmounted(() => {
               class="nav-link-item nav-link-module"
               :href="withBase(localeBase + '/agentic-ai/')"
             >Agentic AI</a>
+            <a
+              class="nav-link-item nav-link-module"
+              :href="withBase(localeBase + '/ai-tools/')"
+            >Công cụ AI</a>
           </div>
           <div class="nav-action">
             <div class="nav-icons">

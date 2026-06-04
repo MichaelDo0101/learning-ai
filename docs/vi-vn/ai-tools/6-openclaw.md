@@ -1,0 +1,386 @@
+---
+title: 'OpenClaw — AI agent chạy local, ra lệnh qua Zalo/Telegram'
+description: 'OpenClaw là AI agent mã nguồn mở (MIT) chạy trên máy bạn, dùng app chat (Telegram, WhatsApp, Zalo...) làm giao diện và THỰC THI hành động thật: đọc/ghi file, chạy lệnh shell, gửi mail, gọi API. Hướng dẫn cài đặt, cấu hình, workflow và rủi ro bảo mật cho người Việt 2026.'
+---
+
+# OpenClaw — “ChatGPT cho lời khuyên. OpenClaw làm xong việc.”
+
+<p style="font-size: 48px; line-height: 1; margin: 0 0 12px;">🦞</p>
+
+::: tip 🔥 Thực chiến — 30 giây
+Bạn đang đi cà phê thì sếp nhắn Zalo: *“Pull code mới về, chạy test, build rồi báo lại.”* — Mở laptop ở nhà thì xa. **ChatGPT:** chỉ bạn 6 bước phải tự gõ. **OpenClaw:** bạn nhắn đúng câu đó vào Telegram/Zalo, con agent chạy ngay trên máy ở nhà — tự `git pull`, chạy test, build, rồi nhắn lại *“Test pass 42/42, build OK, đã deploy staging”* kèm log. Bạn chưa rời ghế cà phê.
+**💸 Lợi ích thực tế:** một “nhân viên kỹ thuật” trực 24/7 ngay trong điện thoại bạn — làm DevOps/CSKH/việc vặt lúc bạn ngủ hoặc đi vắng, mà bản thân phần mềm thì **miễn phí**.
+:::
+
+> **“ChatGPT gives you advice. OpenClaw gets it done.”**
+> Đây là khác biệt cốt lõi: chatbot thường chỉ *tư vấn*; OpenClaw *thực thi hành động thật* trên máy của bạn.
+
+::: tip 🎯 Sau chương này bạn sẽ **làm được**
+- **Cài & onboard** OpenClaw trên máy bạn (npm hoặc script 1 dòng), hiểu yêu cầu Node.
+- **Nối một kênh chat** (Telegram nhanh nhất, rồi Zalo) để ra lệnh cho agent từ điện thoại.
+- **Chọn “não” (LLM)** phù hợp túi tiền: Claude/GPT trả phí, hoặc model local qua Ollama cho khỏi tốn API.
+- **Chạy một workflow thật**: nhắn task tiếng Việt → agent tự phân rã → thực thi → trả kết quả.
+- **Nhận diện & né rủi ro bảo mật** (quyền shell, skill độc, khóa nick Zalo) — phần quan trọng nhất.
+- **Tự làm 2–3 đồ án nhỏ** để biến lý thuyết thành tay nghề.
+:::
+
+::: warning ⏳ Lưu ý về độ mới
+OpenClaw là công cụ **rất mới** (viral đầu 2026) và **đổi tên nhiều lần** (xem mục 01). Chương này phản ánh hiểu biết tới **giữa 2026**; lệnh, tên kênh và con số tích hợp có thể đã thay đổi. Khi làm thật, luôn đối chiếu tài liệu chính thức tại `https://docs.openclaw.ai`.
+:::
+
+---
+
+## 01 · Công cụ này là gì & dùng khi nào
+
+**OpenClaw** là một **AI agent (trợ lý AI tự hành) mã nguồn mở**, chạy **local trên máy/thiết bị của chính bạn**, và dùng các **ứng dụng chat** (Telegram, WhatsApp, Discord, Slack, Zalo...) làm **giao diện điều khiển chính**.
+
+Điểm khác biệt với chatbot thường — nó **KHÔNG chỉ tư vấn mà THỰC THI hành động thật**:
+
+- Đọc/ghi file trên máy bạn.
+- Chạy lệnh shell.
+- Duyệt web.
+- Gửi email & tin nhắn.
+- Gọi API.
+- Chạy cron (tác vụ định kỳ).
+
+::: details 🧬 Gốc gác & lịch sử tên (đọc để khỏi rối khi search)
+- **Tác giả:** Peter Steinberger — kỹ sư người Áo, founder PSPDFKit.
+- **Biểu tượng:** con tôm hùm 🦞 (“the lobster way”).
+- **Lịch sử tên (đổi liên tục):**
+  - 11/2025: ra mắt tên **“Clawdbot/Warelay”**.
+  - 1/2026: đổi thành **“Moltbot”** (do vấn đề trademark với Anthropic; biệt danh thân mật “Molty”).
+  - cuối 1/2026: đổi thành **“OpenClaw”**; sau đó dự án chuyển về một **open-source foundation**.
+- **Khi search bạn có thể gặp các tên cũ** (Clawdbot / Warelay / Moltbot / Molty) — tất cả trỏ về *cùng một sản phẩm*.
+- **Link chính thức:** `https://openclaw.ai` · Docs: `https://docs.openclaw.ai` · GitHub: `https://github.com/openclaw/openclaw` · License: **MIT**.
+:::
+
+::: warning ⚠️ Trùng tên — đừng nhầm
+“OpenClaw” **cũng** là tên một **game engine mã nguồn mở cũ** (bản remake C++ của game platformer “Captain Claw” của Monolith, repo `pjasicek/OpenClaw`) — **KHÔNG liên quan AI**. Trong bối cảnh “công cụ AI/agent/coding” năm 2026, OpenClaw được nói tới gần như chắc chắn là **AI agent của Peter Steinberger** (🦞) — đây là cái chương này nói. Ngoài ra, **“Hello Claw”** (Datawhale) **không phải** một tool riêng mà là **giáo trình** dạy dùng OpenClaw.
+:::
+
+### Dùng khi nào (và khi nào đừng)
+
+| Hợp dùng OpenClaw khi... | Cân nhắc lại / đừng vội khi... |
+|---|---|
+| Bạn muốn ra lệnh cho máy tính **từ điện thoại** qua chat | Bạn chỉ cần **hỏi đáp/tư vấn** thuần (ChatGPT/Claude web là đủ) |
+| Cần **tự động hóa nền** (cron, webhook, DevOps lúc bạn ngủ) | Việc **chạm tiền/dữ liệu nhạy cảm** mà chưa có chốt chặn |
+| Muốn **chatbot Zalo OA** bán hàng/CSKH cho shop Việt | Bạn **không kiểm soát được** quyền shell/file của agent |
+| Muốn giữ **dữ liệu local**, tự chọn LLM (kể cả model offline) | Bạn cần một SaaS “cắm là chạy”, không muốn tự vận hành máy/VPS |
+
+::: tip 🔑 Một câu để nhớ
+OpenClaw = **“bộ não LLM bạn tự chọn” + “đôi tay thực thi trên máy bạn” + “cái miệng là app chat bạn đang dùng hằng ngày”.** Nó biến điện thoại thành điều khiển từ xa cho một trợ lý biết *làm*, không chỉ *nói*.
+:::
+
+### Tính năng chính (bám sát tài liệu)
+
+- **Agent thực thi hành động thật** (không chỉ chat): đọc/ghi file, chạy lệnh shell, duyệt web, gửi email & tin nhắn, điều khiển API.
+- **Đa kênh chat làm UI:** WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, Matrix, Feishu, LINE, WeChat, QQ, và đặc biệt **Zalo + Zalo Personal** (rất hợp VN), WebChat.
+- **Model-agnostic:** chạy với **Claude, GPT, hoặc model open-weight qua Ollama** / endpoint tương thích bất kỳ — bạn tự chọn “não”.
+- **Local-first & riêng tư:** chạy trên máy bạn, dữ liệu dưới quyền kiểm soát của bạn (không bắt buộc gửi lên cloud bên thứ ba ngoài LLM provider).
+- **Hệ sinh thái “skills” (plugin mở rộng) rất lớn** — các nguồn báo cáo từ **50–100+ tích hợp tới hàng nghìn skill** (con số thay đổi theo từng bài/thời điểm).
+- **Tự động hóa nền:** cron jobs, webhook trigger, tích hợp GitHub để chạy DevOps/debug/quản lý codebase kể cả khi bạn ngủ.
+- **Voice & Canvas:** nghe/nói trên macOS/iOS/Android, render “live Canvas” trực quan do agent điều khiển.
+- **Dashboard điều khiển** chạy local tại `http://127.0.0.1:18789/`.
+- **Multi-agent / multi-workspace:** định tuyến tin nhắn vào các agent cô lập, hỗ trợ nhiều workspace, có **allowlist** giới hạn người được dùng.
+
+---
+
+## 02 · Cài đặt & truy cập — bối cảnh VN
+
+### Có dùng được ở Việt Nam không?
+
+**Được.** Cài như bình thường, không thấy bị chặn. “Não” Claude/GPT xử lý tiếng Việt tốt nên bạn **chat và nhận trả lời bằng tiếng Việt thoải mái**. Cộng đồng và bài hướng dẫn tiếng Việt đã khá nhiều (AZDIGI, Tấn Phát Digital, Golden Bee, raccoon.vn, Điện Máy Xanh, VnExpress), cộng thêm giáo trình tiếng Trung hệ thống của Datawhale (`hello-claw`).
+
+### Giá / Free tier — tiền thật nằm ở đâu?
+
+::: tip 💸 Bản thân OpenClaw: MIỄN PHÍ 100%
+OpenClaw là mã nguồn mở (MIT), **không có phí dịch vụ**. Chi phí thật nằm ở **2 chỗ**:
+1. **API/LLM của “não” bạn chọn.** Ví dụ Claude Pro khoảng **20 USD/tháng (~450k VNĐ)**; dùng nặng có thể lên Claude Max khoảng **100–200 USD/tháng**. HOẶC dùng **model local qua Ollama** để **khỏi tốn API**.
+2. **VPS (nếu muốn chạy 24/7).** Nguồn VN (AZDIGI) báo giá từ **~99.000 VNĐ/tháng**. Máy cá nhân thì chỉ chạy khi bạn bật máy.
+:::
+
+| Khoản | Miễn phí được không? | Ghi chú |
+|---|---|---|
+| Phần mềm OpenClaw | ✅ Miễn phí (MIT) | Không phí dịch vụ |
+| “Não” LLM | ⚠️ Tùy chọn | Claude/GPT trả phí, **hoặc Ollama local = 0đ API** |
+| Chạy 24/7 | ⚠️ Tùy chọn | Cần VPS (~99k VNĐ/tháng ở VN) hoặc để máy bật |
+
+### Yêu cầu hệ thống
+
+- **Node 24 (khuyến nghị)** hoặc **Node 22 LTS (22.19+)**.
+- Chạy trên **macOS, Linux, Windows**.
+
+::: warning ⚠️ Node cũ dễ cài lỗi
+Cần Node phiên bản mới (24 hoặc 22.19+). Node cũ là một trong những nguyên nhân cài lỗi phổ biến nhất. Kiểm tra trước bằng `node -v`.
+:::
+
+### Cài đặt — chọn 1 trong 2 cách
+
+**Cách A — npm (khuyến nghị trong docs):**
+
+```bash
+npm install -g openclaw@latest
+openclaw onboard --install-daemon
+```
+
+**Cách B — script cài nhanh:**
+
+```bash
+# macOS / Linux
+curl -fsSL https://openclaw.ai/install.sh | bash
+```
+
+```powershell
+# Windows PowerShell
+iwr -useb https://openclaw.ai/install.ps1 | iex
+```
+
+```bash
+# rồi chạy onboard
+openclaw onboard
+```
+
+::: tip ✅ Verify
+Sau khi cài, gõ `openclaw` (hoặc `openclaw --help`). Nếu lệnh chạy được và in ra hướng dẫn, bạn đã cài thành công. Bước `onboard` sẽ chạy một wizard cấu hình + (tùy chọn) cài daemon chạy nền.
+:::
+
+---
+
+## 03 · Workflow thực chiến — làm từng bước
+
+Đây là đường đi từ “máy trống” đến “ra lệnh cho agent qua điện thoại”. Làm theo thứ tự.
+
+### Bước 1 — Cài đặt
+
+```bash
+npm install -g openclaw@latest
+```
+
+→ **Verify:** lệnh `openclaw` chạy được.
+
+### Bước 2 — Onboard (cấu hình + cài daemon nền)
+
+```bash
+openclaw onboard --install-daemon
+```
+
+→ Wizard sẽ hướng dẫn cấu hình ban đầu và cài daemon chạy nền (để agent “sống” kể cả khi bạn không mở terminal).
+
+### Bước 3 — Cấu hình “não” (LLM)
+
+Đặt model trong file `~/.openclaw/openclaw.json` theo dạng `provider/model-id`, và khai báo API key của provider (Claude / GPT / Ollama):
+
+```json
+{ "agent": { "model": "<provider>/<model-id>" } }
+```
+
+::: tip 💡 Tiết kiệm bằng Ollama
+Muốn không tốn phí API: trỏ model về một **model local qua Ollama**. Chỉ nâng lên Claude/GPT khi cần chất lượng cao cho việc khó. Đây là mẹo tiết kiệm chi phí số 1 cho người mới tập.
+:::
+
+### Bước 4 — Nối một kênh chat (Telegram nhanh nhất)
+
+Tài liệu nói **Telegram là kênh nối nhanh nhất**, hợp để test trước khi đụng tới Zalo/WhatsApp.
+
+1. Mở Telegram, chat với **@BotFather** để tạo bot và lấy **token**.
+2. Chạy cấu hình kênh:
+
+```bash
+openclaw config
+# → vào mục Channels → Telegram → dán token bot
+```
+
+::: details 🇻🇳 Với Zalo thì sao?
+Zalo dùng **Bot Token dạng `numeric_id:secret`**. OpenClaw hỗ trợ **Zalo** (Bot/OA chính thức) và **Zalo Personal** (tài khoản cá nhân). Xem mục 04 về rủi ro khóa nick với Zalo Personal trước khi dùng cho việc lâu dài. Tài liệu kênh Zalo: `https://docs.openclaw.ai/channels/zalo`.
+:::
+
+### Bước 5 — Pairing / duyệt thiết bị
+
+Duyệt kênh/thiết bị được phép kết nối:
+
+```bash
+openclaw pairing approve <channel> <code>
+```
+
+Với WhatsApp, bạn đăng nhập bằng **quét mã QR**:
+
+```bash
+openclaw channels login   # quét QR (ví dụ WhatsApp)
+```
+
+### Bước 6 — Mở dashboard điều khiển
+
+```bash
+openclaw dashboard   # mở UI tại http://127.0.0.1:18789/
+```
+
+→ Truy cập `http://127.0.0.1:18789/` để xem/điều khiển agent qua giao diện web local.
+
+### Bước 7 — Chat & ra lệnh từ điện thoại
+
+Nhắn task **bằng tiếng Việt** vào kênh đã nối. Agent tự phân rã việc → thực thi bằng skills → trả kết quả. Ví dụ prompt chat tự nhiên:
+
+```text
+Dọn hộp thư của tôi, tóm tắt các email quan trọng, và lên lịch các cuộc họp
+```
+
+Bạn cũng có thể gọi agent/gửi tin nhắn ngay từ dòng lệnh:
+
+```bash
+openclaw agent --message "Ship checklist" --thinking high
+```
+
+```bash
+openclaw message send --target +1234567890 --message "Hello"
+```
+
+### Bước 8 — (Tùy chọn) Tự động hóa nền
+
+Đặt **cron jobs / webhook** để agent tự chạy việc định kỳ, và bật **allowlist** để giới hạn ai được ra lệnh cho agent (xem mục 04).
+
+::: tip 🔑 Mô hình tư duy của một “vòng” OpenClaw
+Bạn **nhắn task** (chat) → agent **hiểu ý + phân rã** (LLM/“não”) → **chọn skill & chạy** (đọc file/shell/web/API) → **trả kết quả** về kênh chat. Lặp lại cho tới khi xong. Bạn điều khiển *từ xa*; máy bạn *làm thật*.
+:::
+
+---
+
+## 04 · Mẹo hay & lỗi thường gặp
+
+### Mẹo hay
+
+::: tip 💡 6 mẹo đáng giá
+- **Bắt đầu với Telegram** — docs nói đây là kênh nối nhanh nhất, hợp để test trước khi đụng Zalo/WhatsApp.
+- **Tiết kiệm:** dùng model local qua **Ollama** để khỏi tốn phí API; chỉ nâng lên Claude/GPT khi cần chất lượng cao.
+- **Tiếng Việt lỗi font/loạn ký tự:** set locale VPS `LANG=vi_VN.UTF-8` và kiểm tra encoding terminal.
+- **Chạy 24/7:** đặt trên VPS (VN có gói từ ~99k/tháng); máy cá nhân chỉ chạy khi bật.
+- **Dùng allowlist** để giới hạn người được nhắn cho agent — tránh người lạ điều khiển bot.
+- **Người mới hoàn toàn:** tham khảo giáo trình hệ thống Datawhale **“hello-claw”** (có bản tiếng Anh) hoặc bản **“AutoClaw”** cài 1-click kiểu tải về → double-click.
+:::
+
+Set locale UTF-8 trên VPS để hết loạn tiếng Việt:
+
+```bash
+export LANG=vi_VN.UTF-8
+export LC_ALL=vi_VN.UTF-8
+```
+
+### Lỗi & rủi ro thường gặp
+
+::: warning 🚨 RỦI RO BẢO MẬT là lớn nhất — đọc kỹ
+Agent có quyền **đọc/ghi file & chạy lệnh shell**. Chạy thiếu phòng bị có thể **lộ file/dữ liệu nhạy cảm**. Đã có báo cáo agent **XÓA sạch hộp thư email** khi tự “dọn dẹp”. Hãy coi việc cấp quyền cho agent nghiêm túc như cấp quyền admin cho một người lạ.
+:::
+
+| Cạm bẫy | Vì sao nguy hiểm | Cách phòng |
+|---|---|---|
+| **Quyền shell/file quá rộng** | Agent có thể xóa/lộ dữ liệu (đã có ca xóa sạch email) | Giới hạn phạm vi, có người duyệt việc rủi ro, sao lưu trước |
+| **Skill bên thứ ba độc hại** | Có thể chứa malware nhắm **credentials hoặc ví crypto** | Chỉ cài skill từ **nguồn tin cậy** |
+| **Mở/expose port ra Internet bừa bãi** | Dashboard lộ ra ngoài → người lạ điều khiển (nhất là mạng nhà) | Để dashboard ở **`127.0.0.1` (localhost)**, đừng mở port bừa |
+| **Zalo Personal (thử nghiệm)** | Dùng `zca-js` không chính thức → tài khoản Zalo cá nhân **có thể bị KHÓA** nếu Zalo phát hiện tự động hóa | Ưu tiên **Zalo Bot/OA chính thức** cho việc lâu dài |
+| **Chi phí ẩn của token LLM** | OpenClaw free nhưng token có thể **đắt** nếu agent chạy lâu/nhiều bước | **Theo dõi usage API**, đặt giới hạn |
+| **Agent loop đốt token** | Tác vụ phức tạp → agent tự lặp nhiều vòng → đốt token nhanh hơn dự kiến | Giao việc rõ ràng, theo dõi vòng lặp, dùng model rẻ cho việc đơn giản |
+| **Node cũ** | Cài lỗi | Dùng Node 24 hoặc 22.19+ |
+
+::: warning ⚠️ Zalo Personal: cân nhắc pháp lý/an toàn nick
+Zalo Personal là tích hợp **THỬ NGHIỆM** (qua thư viện `zca-js` không chính thức). Tự động hóa **tài khoản Zalo cá nhân** có nguy cơ **bị khóa nick** nếu Zalo phát hiện. Nếu làm chatbot bán hàng/CSKH nghiêm túc cho shop, hãy dùng **Zalo OA/Bot chính thức**, đừng đặt cược tài khoản cá nhân.
+:::
+
+---
+
+## 05 · Bài tập / đồ án nhỏ
+
+Làm tuần tự từ dễ đến khó. Mỗi bài có **tiêu chí “xong”** rõ ràng để bạn tự kiểm.
+
+### 🧪 Bài 1 — “Hello, lobster” qua Telegram (cơ bản)
+
+**Mục tiêu:** cài OpenClaw, nối Telegram, ra lệnh đầu tiên thành công.
+
+1. Cài và onboard:
+
+```bash
+npm install -g openclaw@latest
+openclaw onboard --install-daemon
+```
+
+2. Tạo bot Telegram qua **@BotFather**, lấy token, dán vào:
+
+```bash
+openclaw config   # Channels → Telegram → dán token
+```
+
+3. Mở dashboard và nhắn thử từ điện thoại:
+
+```bash
+openclaw dashboard   # http://127.0.0.1:18789/
+```
+
+```text
+Liệt kê các file trong thư mục Downloads của tôi và tóm tắt xem có gì
+```
+
+→ **Xong khi:** agent trả lời đúng danh sách file qua Telegram. (Mẹo: nếu chưa muốn tốn API, cấu hình “não” bằng **Ollama** local trước.)
+
+### 🧪 Bài 2 — Trợ lý DevOps cá nhân (trung bình)
+
+**Mục tiêu:** điều khiển một repo Git từ điện thoại.
+
+- Chuẩn bị một repo local bất kỳ trên máy.
+- Từ điện thoại, nhắn:
+
+```text
+Vào repo my-project, chạy git pull, chạy test, rồi báo lại kết quả pass/fail kèm số test
+```
+
+→ **Xong khi:** agent tự `git pull`, chạy test và nhắn lại kết quả. **Bắt buộc:** trước khi cho agent chạy shell, đọc lại cảnh báo bảo mật ở mục 04 và **sao lưu** repo. Đừng cấp quyền rộng hơn mức cần.
+
+::: warning ⚠️ An toàn khi luyện bài 2
+Đây là lúc agent **chạy lệnh shell thật**. Hãy bật **allowlist** (chỉ bạn được ra lệnh), giữ dashboard ở `127.0.0.1`, và **không** trỏ agent vào thư mục chứa secret/khóa ví. Nếu sai một lệnh thì hậu quả là thật.
+:::
+
+### 🧪 Bài 3 — Chatbot Zalo cho một shop nhỏ (nâng cao, rất “VN”)
+
+**Mục tiêu:** thử use case Việt Nam điển hình — trả lời khách qua Zalo.
+
+- Nối kênh **Zalo** bằng **Bot Token dạng `numeric_id:secret`** (ưu tiên **Zalo OA chính thức**, không dùng Zalo Personal cho việc thật):
+
+```bash
+openclaw config   # Channels → Zalo → dán Bot Token (numeric_id:secret)
+```
+
+- Đặt một task cron tóm tắt tin nhắn/đơn hàng cuối ngày (tùy chọn), và bật **allowlist**.
+
+→ **Xong khi:** một tin nhắn thử vào OA được agent trả lời tự động. **Tự đánh giá rủi ro:** liệt kê 3 thứ có thể hỏng (khóa nick nếu lỡ dùng Zalo Personal, token LLM đốt nhanh, agent hiểu sai ý khách) và cách bạn giảm thiểu.
+
+::: details 🇻🇳 Vì sao OpenClaw đặc biệt hợp Việt Nam 2026
+- **Zalo + Zalo Personal native** — hiếm tool quốc tế nào làm được; mở ra chatbot **bán hàng/CSKH qua Zalo OA** cho shop Việt và tự động hóa Zalo cá nhân.
+- **Hệ sinh thái hướng dẫn tiếng Việt đã phong phú** (AZDIGI, Tấn Phát Digital, Golden Bee, raccoon.vn, TND, lilys.ai, Điện Máy Xanh) và được báo chí VN đưa tin (VnExpress: “OpenClaw tích hợp với Zalo”).
+- **Chi phí nội địa hóa rõ ràng:** VPS VN từ **~99k VNĐ/tháng** để chạy 24/7; có hướng dẫn cài trên DigitalOcean miễn phí trong 5 phút.
+- **Tiếng Việt OK** vì “não” Claude/GPT xử lý tốt — chỉ cần chú ý **locale UTF-8**.
+- **Lưu ý pháp lý/an toàn:** cẩn trọng khi tự động hóa Zalo cá nhân (nguy cơ khóa nick) và khi cho agent quyền thực thi trên hệ thống thật.
+:::
+
+---
+
+## 06 · Tóm tắt & nguồn
+
+::: tip 📌 5 điều mang theo
+1. OpenClaw = **AI agent mã nguồn mở (MIT), chạy local**, ra lệnh qua **app chat**, và **thực thi hành động thật** (file/shell/web/mail/API).
+2. **Phần mềm miễn phí**; tiền thật nằm ở **token LLM** (hoặc dùng Ollama cho rẻ) và **VPS** nếu chạy 24/7.
+3. **Telegram** nối nhanh nhất để test; **Zalo** là điểm mạnh rất “VN” (ưu tiên **OA chính thức**).
+4. **Rủi ro bảo mật là lớn nhất** — quyền shell/file mạnh, skill bên thứ ba có thể độc, đừng mở port bừa, cẩn thận khóa nick Zalo Personal.
+5. Công cụ **mới và đổi tên nhiều** (Clawdbot/Warelay → Moltbot → OpenClaw) — luôn đối chiếu `docs.openclaw.ai`.
+:::
+
+::: details 📚 Nguồn tham khảo (chính thức + VN + giáo trình)
+- Trang chính: `https://openclaw.ai/`
+- Tài liệu: `https://docs.openclaw.ai/` · Kênh Zalo: `https://docs.openclaw.ai/channels/zalo`
+- GitHub: `https://github.com/openclaw/openclaw`
+- Wikipedia: `https://en.wikipedia.org/wiki/OpenClaw`
+- KDnuggets (giải thích, viral 2026): `https://www.kdnuggets.com/openclaw-explained-the-free-ai-agent-tool-going-viral-already-in-2026`
+- DigitalOcean: `https://www.digitalocean.com/resources/articles/what-is-openclaw`
+- dev.to (hướng dẫn cho dev): `https://dev.to/laracopilot/what-is-openclaw-ai-in-2026-a-practical-guide-for-developers-25hj`
+- Giáo trình Datawhale “hello-claw”: `https://datawhalechina.github.io/hello-claw/en/` · `https://github.com/datawhalechina/hello-claw`
+- AZDIGI (VN): `https://azdigi.com/blog/tri-tue-nhan-tao/huong-dan-openclaw`
+- TND (VN, Zalo): `https://www.tnd.vn/openclaw-zalo-tu-dong-hoa-zalo-ca-nhan-oa-12849/`
+- Golden Bee (VN, Zalo OA): `https://goldenbeeltd.vn/ai/openclaw/openclaw-tich-hop-zalo-oa/`
+- VnExpress (VN): `https://vnexpress.net/openclaw-tich-hop-voi-zalo-5059073.html`
+:::
