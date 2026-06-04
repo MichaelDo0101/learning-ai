@@ -1,6 +1,6 @@
 ---
 title: 'Notion AI — Lớp AI sống bên trong workspace, từ trợ lý viết đến đội agent chạy nền'
-description: 'Hướng dẫn thực chiến Notion AI cho người Việt: Notion Agent & Custom Agents chạy 24/7, AI Meeting Notes (/meet), Enterprise Search, AI Autofill, chọn model GPT-5.2/Claude Opus 4.5/Gemini 3, gói & giá (Business $20, credits $10/1.000), tiếng Việt UI, thanh toán ở VN, workflow + prompt thật, case Ramp, bảo mật và bài tập.'
+description: 'Hướng dẫn thực chiến Notion AI cho người Việt: Notion Agent & Custom Agents chạy 24/7, AI Meeting Notes (/meet), Enterprise Search, AI Autofill, chọn model GPT-5.2/Claude Opus 4.5/Gemini 3, gói & giá (Business $20/tháng — $15 trả năm, credits $10/1.000), tiếng Việt UI, thanh toán ở VN, workflow + prompt thật, case Ramp, bảo mật và bài tập.'
 ---
 
 # Notion AI — Lớp AI sống bên trong workspace, từ trợ lý viết đến đội agent chạy nền
@@ -9,7 +9,7 @@ description: 'Hướng dẫn thực chiến Notion AI cho người Việt: Notio
 
 ::: tip 🔥 Thực chiến — 30 giây
 Bạn là trưởng nhóm sản phẩm, cả team đang dùng Notion làm wiki + quản lý dự án. Sáng nay có cuộc họp sprint 45 phút: bạn gõ `/meet` ngay trong trang Notion, bấm **Start transcribing** → AI phiên âm + tóm tắt + bóc **action items** ngay khi họp xong, không cần bot nào vào phòng. Chiều, một bạn dev hỏi “chính sách hoàn tiền là gì?” — bạn mở **Enterprise Search** gõ một câu, nó quét xuyên Slack + Google Drive + GitHub trả về câu trả lời kèm nguồn trong vài giây. Việc tổng hợp 30 phút rút còn 3 phút.
-**💸 Lợi ích thực tế:** thay vì nhảy giữa 5 app rồi copy-paste, AI sống ngay trong nơi bạn đã lưu dữ liệu — viết, tóm tắt, tìm kiếm, tự điền database và chạy agent nền 24/7. Một gói **$20/người/tháng** gói gọn tất cả.
+**💸 Lợi ích thực tế:** thay vì nhảy giữa 5 app rồi copy-paste, AI sống ngay trong nơi bạn đã lưu dữ liệu — viết, tóm tắt, tìm kiếm, tự điền database và chạy agent nền 24/7. Một gói Business **$20/người/tháng** (rẻ còn **$15** nếu trả năm) gói gọn tất cả.
 :::
 
 > **“Notion AI không phải một chatbot bạn mở ra rồi đóng lại — nó sống bên trong trang, database và dự án của bạn.**
@@ -21,7 +21,7 @@ Bạn là trưởng nhóm sản phẩm, cả team đang dùng Notion làm wiki +
 - **Dùng Enterprise Search** để hỏi-đáp xuyên Slack/Google Drive/GitHub/Gmail đã kết nối.
 - **Tạo AI Autofill** trong database để AI tự phân loại / chấm điểm / trích entity cho mọi dòng.
 - **Chọn model nền** (GPT-5.2 / Claude Opus 4.5 / Gemini 3) hoặc bật Auto-select cho từng tác vụ.
-- **Hiểu đúng giá & credits** (Business $20, credits $10/1.000 cho Custom Agents) và biết **khi nào KHÔNG nên** trả tiền Notion AI.
+- **Hiểu đúng giá & credits** (Business $20/tháng — $15 trả năm, credits $10/1.000 cho Custom Agents) và biết **khi nào KHÔNG nên** trả tiền Notion AI.
 :::
 
 ::: warning ⏱️ Lưu ý "hạn dùng" của thông tin
@@ -52,7 +52,7 @@ Theo định vị trên trang chủ AI (tới giữa 2026), Notion AI đã tiế
 | **Enterprise Search** | Tìm xuyên app đã kết nối: “Search across Slack, Google Drive, GitHub & more — in seconds” (còn gọi “Ask Notion”) | Hỏi một câu, nhận kết quả + nguồn |
 | **AI Autofill** | Định nghĩa 1 property (category, summary, sentiment, entity…) và AI tự điền **mọi dòng, kể cả dòng thêm sau** | Trong database |
 | **Writing / AI blocks** | Cải thiện văn phong, fix chính tả/ngữ pháp, đổi tone, viết tiếp, dịch, tóm tắt, tìm action items | Ngay trong trang |
-| **Research Mode** | Sinh báo cáo & tóm tắt chi tiết trên một chủ đề | Trong thanh AI **[nguồn mỏng]** |
+| **Research Mode** | Sinh báo cáo & tóm tắt chi tiết trên một chủ đề, có khả năng *reasoning* (tính năng Business AI, liệt kê trên notion.com/pricing) | Trong thanh AI |
 
 ::: tip 🆕 Chọn model AI ngay trong tài liệu (từ Notion 3.2)
 Từ Notion 3.2 (**20/01/2026**), bạn có thể chọn model nền ngay trong tài liệu: **GPT-5.2 (OpenAI)**, **Claude Opus 4.5 (Anthropic)**, **Gemini 3 (Google)** — hoặc bật **Auto-select** để Notion tự định tuyến theo loại tác vụ. Đổi model giữa chừng vẫn **giữ ngữ cảnh**. (Tên/version model theo nguồn tới giữa 2026, có thể đã đổi.)
@@ -71,20 +71,21 @@ Trước đây Notion AI bán như **add-on $10/tháng** gắn thêm vào gói. 
 | Tiêu chí | Notion AI | ChatGPT | Claude | Gemini (trong Docs) | Coda AI |
 |---|---|---|---|---|---|
 | **Bản chất** | AI **trong workspace**; mạnh khi Notion là trung tâm dữ liệu | Chatbot đa năng, đa phương thức, web search, code | Mạnh viết & lý luận; nhiều người khen chất lượng văn bản | Tích hợp sâu Google Workspace (Gmail/Docs/Sheets/Meet) | AI dệt vào **formula & automation**, mạnh ở table/row-level |
-| **Điểm yếu chính** | Không browse web tự do, không phân tích ảnh, không chạy task ngoài Notion (theo review); agent cần prompt rất chuẩn, phải review | Không gắn liền workspace nội bộ của bạn | Tương tự — không phải “hệ điều hành công việc” | Khoá trong hệ Google | Cộng đồng/template ít hơn Notion |
-| **Tự động hoá** | Trigger ở **mức database/page** (page added / property changed) | n/a (ngoài workspace) | n/a | n/a | Trigger **mức cell/row** — chi tiết hơn cho CRM/inventory |
-| **Giá pro** | $20/người/tháng (Business) | ~$20/tháng | ~$20/tháng | ~$20/tháng | Chỉ tính phí “Doc Maker”; editor/viewer free |
+| **Điểm yếu chính** | Không browse web tự do, không phân tích ảnh, không chạy task ngoài Notion (theo review) — *trong khi ChatGPT/Gemini/Claude đều đã có web browsing*; agent cần prompt rất chuẩn, phải review | Không gắn liền workspace nội bộ của bạn | Tương tự — không phải “hệ điều hành công việc” | Khoá trong hệ Google | Cộng đồng/template ít hơn Notion; pricing đổi nhiều lần |
+| **Tự động hoá** | Trigger ở **mức database/page** (page added / property changed) | n/a (ngoài workspace; có Projects/Canvas) | n/a (có Projects) | n/a (có Canvas/Gems) | Trigger **mức cell/row** — chi tiết hơn cho CRM/inventory |
+| **Giá pro** | **$15 trả năm / $20 trả tháng** (Business) | ~$20/tháng (Plus) | ~$20/tháng (Pro) | ~$20/tháng (AI Pro) | Chỉ tính phí “Doc Maker”; editor/viewer free |
 | **Khi nào thắng** | Là central workspace, chạy team, cần Q&A toàn workspace + meeting notes | Cần một trợ lý vạn năng ngoài Notion | Ưu tiên chất lượng viết/lý luận | Đã sống trong Google Workspace | Data-work nặng, tổ chức lớn nhiều viewer, ngân sách chặt |
 
 ::: tip 💡 Tóm tắt nhanh
-Nếu Notion **đã là** trung tâm dữ liệu của bạn/team → Notion AI là lựa chọn tự nhiên và mạnh nhất (Q&A toàn workspace + meeting notes + autofill). Nếu bạn cần trợ lý vạn năng ngoài Notion → **ChatGPT**; ưu tiên viết/lý luận → **Claude**; đã sống trong Google → **Gemini**; data-work nặng, nhiều viewer, ngân sách chặt → cân nhắc **Coda**. Theo một ước tính từ blog bên thứ ba, tổ chức 100 người (20 creator + 80 viewer) tốn Notion Business ~$1.650/tháng so với Coda Team ~$600/tháng **[nguồn mỏng — ghi “theo ước tính”]**.
+Nếu Notion **đã là** trung tâm dữ liệu của bạn/team → Notion AI là lựa chọn tự nhiên và mạnh nhất (Q&A toàn workspace + meeting notes + autofill). Nếu bạn cần trợ lý vạn năng ngoài Notion → **ChatGPT**; ưu tiên viết/lý luận → **Claude**; đã sống trong Google → **Gemini**; data-work nặng, nhiều viewer, ngân sách chặt → cân nhắc **Coda**. Một điểm Notion lợi mà ít người để ý: **chiết khấu trả năm sâu** (Business $20 → $15/seat), trong khi ChatGPT Plus / Claude Pro / Gemini AI Pro gần như **không giảm giá năm**. Theo một ước tính từ blog bên thứ ba, tổ chức 100 người (20 creator + 80 viewer) tốn Notion Business ~$1.650/tháng so với Coda Team ~$600/tháng **[nguồn mỏng — ghi “theo ước tính”]**.
 :::
 
 ::: warning ⛔ Khi nào KHÔNG nên dùng Notion AI (đọc trước khi rút ví)
 - **Bạn không sống trong Notion.** Nếu Notion không phải workspace trung tâm, hoặc bạn đã trả ChatGPT/Claude/Gemini → bài toán tiền bạc thường không lợi. Phép thử từ cộng đồng Reddit: *“Bạn có dành hơn 2 giờ/tuần viết hoặc đọc trong Notion không?”* — nếu không, cứ dùng ChatGPT rồi copy-paste sang.
 - **Cần chạy task ngoài Notion** (browse web tự do, phân tích ảnh, chạy code đa năng) → dùng chatbot đa năng.
-- **Họp client/nhóm cần phân biệt người nói, ghi âm trên mobile** → công cụ meeting chuyên dụng (tldv/Otter/Fireflies) tốt hơn (xem Mục 04).
+- **Họp client/nhóm tiếng Việt cần phân biệt người nói, hoặc ghi âm trên mobile** → công cụ meeting chuyên dụng (tldv/Otter/Fireflies) tốt hơn. (Notion *có* gắn nhãn người nói nhưng chỉ với tiếng Anh và họp 1-1/online — xem Mục 04.)
 - **Tự động hoá cần phản ứng theo từng cell** → Coda phù hợp hơn (Notion chỉ trigger ở mức database/page).
+- **Xử lý dữ liệu nhạy cảm (PII/PHI, hồ sơ khách hàng) mà KHÔNG ở gói Enterprise** → chỉ Enterprise mới có **zero data retention** với LLM; gói non-Enterprise vẫn để LLM provider giữ dữ liệu **≤ 30 ngày** (chi tiết ở Mục 04). Dữ liệu thật sự nhạy cảm thì hoặc lên Enterprise, hoặc đừng đưa vào AI.
 :::
 
 ---
@@ -95,10 +96,14 @@ Nếu Notion **đã là** trung tâm dữ liệu của bạn/team → Notion AI 
 
 - **Không thấy chặn địa lý** với VN — không có thông tin restriction. Người Việt đăng ký và dùng bình thường, không cần VPN.
 - Notion (app + web) **có giao diện tiếng Việt** chính thức, ra mắt **22/07/2025** (cùng đợt với tiếng Indonesia/Thái). Đổi ngôn ngữ trong **Settings**.
-- **Notion AI Translate hỗ trợ tiếng Việt** (nằm trong nhóm ~14 ngôn ngữ dịch). Các tính năng viết (improve writing, fix grammar, change tone, simpler language) dùng được với tiếng Việt.
+- **Notion AI Translate hỗ trợ tiếng Việt** (nằm trong nhóm ~14 ngôn ngữ dịch; riêng AI Meeting Notes phủ nhiều hơn, ~16 — số ngôn ngữ mỗi tính năng khác nhau và có thể đã đổi). Các tính năng viết (improve writing, fix grammar, change tone, simpler language) dùng được với tiếng Việt.
 
 ::: warning 🖥️ Lưu ý quan trọng: AI Meeting Notes chỉ chạy trên desktop app
 Tính năng ghi âm của **AI Meeting Notes** (`/meet`) **chỉ chạy trên desktop app** (macOS/Windows), theo review từ cộng đồng (Reddit/tldv). Trên web/mobile bạn không khởi động được phiên ghi âm. Nếu hay họp trên điện thoại → đây là hạn chế cần biết trước.
+:::
+
+::: warning 🧪 Vẫn còn beta — đừng phụ thuộc 100%
+Tới giữa 2026, theo trang chính chủ, cả **AI Meeting Notes** (help center ghi rõ *“AI Meeting Notes (beta)”*) lẫn **Enterprise Search** (pricing ghi *“Enterprise Search beta”*) vẫn đang là **beta**. Nghĩa là tính năng có thể đổi, đôi lúc thiếu ổn định — dùng được cho việc thật nhưng nên có phương án dự phòng cho khâu quan trọng.
 :::
 
 ### Đăng ký 30 giây
@@ -110,26 +115,27 @@ Tính năng ghi âm của **AI Meeting Notes** (`/meet`) **chỉ chạy trên de
 4. Gõ "/" trong một trang để gọi AI; gõ "/meet" (trên desktop) để bật Meeting Notes.
 ```
 
-### Các gói & giá (cập nhật giữa 2026, tính theo năm — *billed annually*)
+### Các gói & giá (cập nhật giữa 2026 — *giá tháng* và *giá khi trả năm*)
 
-| Gói | Giá/người/tháng (trả năm) | Giá tháng | AI gồm gì |
+| Gói | Giá/người/tháng (trả năm) | Giá/người/tháng (trả tháng) | AI gồm gì |
 |---|---|---|---|
-| **Free** | $0 | $0 | Chỉ **“Limited Trial”** AI cơ bản (chat, generate, autofill, translate) |
-| **Plus** | $10 | ~$12 | Vẫn chỉ **“Limited Trial”** AI |
-| **Business** *(Recommended)* | **$20** | ~$24 | **Đầy đủ**: Notion Agent, Ask Notion / AI search, AI Meeting Notes, Enterprise Search |
+| **Free** | $0 | $0 | Chỉ **dùng thử giới hạn** các tính năng AI cơ bản (chat, generate, autofill, translate) |
+| **Plus** | $10 | $12 | Vẫn chỉ **dùng thử giới hạn** các tính năng AI |
+| **Business** *(Recommended)* | **$15** | **$20** | **Đầy đủ**: Notion Agent, Ask Notion / AI search, AI Meeting Notes, Enterprise Search |
 | **Enterprise** | Liên hệ sales | — | Tất cả Business + **Zero data retention** với LLM, SCIM, audit log, unlimited history, CSM riêng |
 
-Trang pricing ghi *“Save up to 20% with yearly”*.
+> ⚠️ **Lưu ý cách đọc giá (sửa lỗi hay gặp):** con số người ta hay trích là **$20/người/tháng** chính là giá **trả theo tháng** của Business; nếu cam kết trả **theo năm** thì chỉ còn **$15/người/tháng** (~$180/người/năm). Plus tương tự: **$10 (trả năm) / $12 (trả tháng)**. Trang pricing ghi *“Save up to 20% with yearly”*. Nguồn: [notion.com/pricing](https://www.notion.com/pricing).
 
 ::: tip 🧮 Credits cho Custom Agents — phần dễ bỏ sót
 Custom Agents (ra mắt 24/02/2026, xem Mục 03) **miễn phí dùng thử** đến chu kỳ tiếp theo (vào/sau **04/05/2026**), sau đó tính:
 - **$10 / 1.000 Notion credits / tháng**, **không cộng dồn** (reset hằng tháng), **dùng chung toàn workspace**.
+- **1.000 credits chạy được bao nhiêu?** Ước tính **~30–60 lần chạy** (≈ $0,17–0,33/lần) tuỳ độ phức tạp agent — *con số ước tính tới giữa 2026, không phải cam kết chính thức*. Notion 3.4 part 2 (14/04/2026) đã hạ chi phí Custom Agent **~35–50%** nên mức tiêu thực tế có thể thấp hơn.
 - Đây là phí **cộng thêm** *trên* gói Business/Enterprise, không bao gồm sẵn.
 - Trang pricing có nhắc thêm *“Workers (Beta)… starts using credits on August 11”* — tư liệu còn ít **[nguồn mỏng]**.
 :::
 
 ::: tip 💡 Lưu ý về "free tier" thực tế
-Đừng nhầm: gói **Free và Plus chỉ được “trial” AI giới hạn**. Muốn dùng AI **nghiêm túc** (Notion Agent đầy đủ, AI Meeting Notes, Enterprise Search) bạn **phải lên Business $20**. Nếu mục tiêu của bạn chỉ là “thử cho biết” thì Free là đủ; nhưng đừng kỳ vọng dùng AI hằng ngày trên Free/Plus.
+Đừng nhầm: gói **Free và Plus chỉ được dùng thử giới hạn các tính năng AI**. Muốn dùng AI **nghiêm túc** (Notion Agent đầy đủ, AI Meeting Notes, Enterprise Search) bạn **phải lên Business** ($20/người/tháng, hoặc $15 nếu trả năm). Nếu mục tiêu của bạn chỉ là “thử cho biết” thì Free là đủ; nhưng đừng kỳ vọng dùng AI hằng ngày trên Free/Plus.
 :::
 
 ### Thanh toán ở Việt Nam (theo help center chính thức)
@@ -140,7 +146,7 @@ Custom Agents (ra mắt 24/02/2026, xem Mục 03) **miễn phí dùng thử** đ
 - Help center **không nêu** thanh toán bằng VND → khả năng cao **tính bằng USD** (cần xác nhận — đây là suy luận, help center không nói rõ).
 
 ::: warning ⚠️ Cẩn thận trước khi nâng cả team lên Business
-Vì AI thật sự chỉ có ở **Business $20/người/tháng**, chi phí nhân theo số người rất nhanh: một team 10 người = $200/tháng *chưa kể credits Custom Agents*. Hãy thử trước với **1–2 seat Business** để xác nhận AI giải đúng bài toán của bạn (meeting notes, Enterprise Search, autofill) rồi mới mở rộng cả team.
+Vì AI thật sự chỉ có ở **Business** ($20/người/tháng trả tháng, $15 trả năm), chi phí nhân theo số người rất nhanh: một team 10 người = **$200/tháng** (giá tháng) hoặc **~$150/tháng** (trả năm) — *chưa kể credits Custom Agents*. Hãy thử trước với **1–2 seat Business** để xác nhận AI giải đúng bài toán của bạn (meeting notes, Enterprise Search, autofill) rồi mới mở rộng cả team.
 :::
 
 ---
@@ -264,7 +270,7 @@ Như mọi AI tạo sinh, Notion AI có thể **rất tự tin đưa thông tin 
 :::
 
 ::: warning ⚠️ Các hạn chế đặc thù của Notion AI cần nhớ
-- **AI Meeting Notes:** **không gắn nhãn người nói** (gộp thành một khối text), **không tự vào phòng họp**, và **chỉ chạy trên desktop**. Họp client/nhóm cần phân biệt ai nói gì → dùng công cụ chuyên dụng (tldv/Otter/Fireflies).
+- **AI Meeting Notes:** **speaker labels chỉ hỗ trợ tiếng Anh** và chỉ đáng tin với **họp 1-1 / online** (bắt được cả mic của bạn lẫn system audio; nếu link calendar event thì gắn được tên người kia). Với **họp nhóm tiếng Việt hoặc nhiều người chung một mic** thì gần như không phân biệt được ai nói. Ngoài ra nó **không tự vào phòng họp** và **chỉ chạy trên desktop**. Họp client/nhóm cần phân biệt ai nói gì → dùng công cụ chuyên dụng (tldv/Otter/Fireflies). Nguồn: [notion.com/help/ai-meeting-notes](https://www.notion.com/help/ai-meeting-notes).
 - **Văn phong dễ lặp/nhạt** nếu bạn không chỉ định style cụ thể.
 - **Thiếu trí nhớ hội thoại sâu** so với chatbot chuyên dụng; lúng túng với prompt mơ hồ.
 - **Notion/Custom Agent “cần prompt rất chính xác”**, kết quả thường phải có người review; tới đầu 2026, độ tin cậy bị một số đánh giá cho là *“chưa đủ ổn định”* để phụ thuộc hoàn toàn (Reddit/eesel — **[nguồn mỏng / đánh giá]**).
@@ -299,7 +305,13 @@ Trang tham chiếu: notion.com/help/notion-ai-security-practices · /help/ai-saf
 AI Meeting Notes **chỉ chạy trên desktop app** (macOS/Windows). Trên web hoặc mobile sẽ không khởi động được phiên transcribe. Cài app desktop rồi thử lại.
 
 **Tôi đang ở Free/Plus mà sao thiếu Notion Agent / Enterprise Search?**
-Free và Plus chỉ có **“Limited Trial”** AI. Bộ AI đầy đủ (Notion Agent, AI Meeting Notes, Enterprise Search) chỉ có ở **Business $20/người/tháng** trở lên.
+Free và Plus chỉ **dùng thử giới hạn** các tính năng AI. Bộ AI đầy đủ (Notion Agent, AI Meeting Notes, Enterprise Search) chỉ có ở **Business** ($20/người/tháng trả tháng, $15 trả năm) trở lên.
+
+**Trả theo năm rẻ hơn bao nhiêu?**
+Business: **$15/người/tháng** khi trả năm so với **$20** khi trả tháng (~25% rẻ hơn). Plus: **$10** so với **$12**. Trang pricing ghi *“Save up to 20% with yearly”*. Nếu chắc chắn dùng lâu dài, trả năm tiết kiệm rõ rệt khi nhân theo số seat.
+
+**1.000 credits chạy được bao nhiêu lần Custom Agent?**
+Theo ước tính từ nguồn bên thứ ba tới giữa 2026, **~30–60 lần chạy / 1.000 credits** (tức ~$0,17–0,33/lần) — *con số ước tính, mỗi agent tiêu khác nhau tuỳ độ phức tạp*. Lưu ý: bản Notion 3.4 part 2 (14/04/2026) đã làm Custom Agent **rẻ hơn ~35–50%**, nên mức tiêu thực tế có thể thấp hơn. Nguồn: [notion.com/help/custom-agent-pricing](https://www.notion.com/help/custom-agent-pricing).
 
 **Custom Agent của tôi bỗng báo hết credits?**
 Custom Agents tính **$10 / 1.000 credits/tháng**, **không cộng dồn** và **reset hằng tháng**, dùng chung toàn workspace. Nếu nhiều agent chạy nền cùng lúc, credits cạn nhanh — theo dõi mức dùng và nâng thêm nếu cần.
@@ -392,13 +404,13 @@ Phần này gom các ví dụ **có thật** từ case study chính chủ Notion
 - **Bối cảnh:** Ramp (công ty fintech) là khách hàng được Notion làm case study chính thức tại notion.com/customers/ramp.
 - **Làm gì:** Ramp chạy **hơn 300 Notion Agents/ngày**, mỗi agent đặt tên cụ thể cho một việc: *Product Q&A Oracle* (gắn Slack, trả lời câu hỏi sản phẩm), *Sales Feedback Categorizer* (map feedback vào roadmap), *Referral Bonus Roy*, *Enablement Eddie*, *Customer Advocacy Miner*, *The Underwriter*…
 - **Kết quả / số liệu (theo Notion):** **giảm ~70% chi phí công cụ năng suất**; team *“di chuyển nhanh 3×”*. Ramp cho biết một agent có thể được **tạo trong 3 phút** giữa các cuộc họp.
-- **Bài học:** sức mạnh thật của Custom Agents là **nhân bản việc lặp lại** — thay vì một “trợ lý vạn năng”, Ramp dựng hàng trăm agent chuyên một việc, đặt tên rõ ràng, chạy nền. *(Các con số định giá ~$32B / doanh thu ~$1B là bối cảnh công ty, không nên gán trực tiếp cho Notion AI.)*
+- **Bài học:** sức mạnh thật của Custom Agents là **nhân bản việc lặp lại** — thay vì một “trợ lý vạn năng”, Ramp dựng hàng trăm agent chuyên một việc, đặt tên rõ ràng, chạy nền. *(Các con số định giá / doanh thu của Ramp là bối cảnh công ty, không nên gán trực tiếp cho hiệu quả của Notion AI.)*
 - **Nguồn (official Notion — vendor claim):** https://www.notion.com/customers/ramp
 
 ### 🎧 CS2 — Notion + Decagon: giảm tới ~34% thời gian xử lý ticket CSKH
 
 - **Bối cảnh:** Notion triển khai giải pháp AI customer experience của **Decagon** cho đội chăm sóc khách hàng.
-- **Kết quả / số liệu (theo Decagon):** **giảm tới ~34% thời gian xử lý ticket**; định tuyến thông minh tăng *first-touch resolution*, giảm tải cho agent người.
+- **Kết quả / số liệu (theo Decagon):** giảm **tới ~34%** (*“up to 34%”*) thời gian xử lý ticket; **tỷ lệ phải chuyển cho người (ask-for-human) chỉ ~3,4%**; xử lý khoảng **1 triệu yêu cầu/năm**. Định tuyến thông minh tăng *first-touch resolution*, giảm tải cho agent người.
 - **Bài học:** ngay cả một công ty “gốc Notion” cũng ghép thêm công cụ chuyên dụng cho CSKH — minh hoạ rằng Notion AI mạnh ở **knowledge/workspace**, còn bài toán ticket quy mô lớn vẫn cần lớp chuyên biệt.
 - **Nguồn (đối tác Decagon — đọc có chừng mực):** https://decagon.ai/case-studies/notion
 
@@ -419,7 +431,7 @@ Phần này gom các ví dụ **có thật** từ case study chính chủ Notion
 ### 👤 CS5 — Solo/creator: meeting notes tiện cho cá nhân, nhưng đuối với họp nhóm
 
 - **Bối cảnh:** review từ tldv, bài Medium *“60 days test”*, và Saner.ai (**[nguồn mỏng — blog/review]**).
-- **Làm gì / nhận xét:** AI Meeting Notes hữu ích cho **người dùng cá nhân** làm việc trong Notion (một mình ghi chú họp). Nhưng **không tốt cho họp nhóm/client** vì: không gắn nhãn người nói (gộp thành một khối text), không tự vào phòng họp, và chỉ chạy desktop.
+- **Làm gì / nhận xét:** AI Meeting Notes hữu ích cho **người dùng cá nhân** làm việc trong Notion (một mình ghi chú họp). Nhưng **đuối với họp nhóm/client tiếng Việt** vì: speaker labels chỉ chạy với tiếng Anh và họp 1-1/online (nhiều người chung một mic thì khó tách ai nói), không tự vào phòng họp, và chỉ chạy desktop.
 - **Bài học:** chọn công cụ theo **bối cảnh họp**. Một mình + đã sống trong Notion → tiện; họp nhiều người cần biết ai nói gì → công cụ meeting chuyên dụng thắng.
 - **Nguồn (review bên thứ ba):** tldv, Medium “60 days test”, Saner.ai.
 
@@ -434,7 +446,7 @@ Một vài blog dẫn rằng *“Notion's own data”* cho thấy AI tăng năng
 ::: tip 📌 6 điều mang theo
 1. **Notion AI = lớp AI sống bên trong workspace** — mạnh nhất khi Notion là **trung tâm dữ liệu** của bạn/team.
 2. **Hai chế độ agent:** Notion Agent (ra lệnh từng việc) vs **Custom Agents** (chạy nền 24/7 theo lịch/sự kiện, ra mắt 24/02/2026).
-3. **AI thật chỉ có ở Business $20/người/tháng**; Free/Plus chỉ “Limited Trial”. Custom Agents tốn thêm **credits $10/1.000**.
+3. **AI thật chỉ có ở Business** ($20/người/tháng trả tháng, **$15 nếu trả năm**); Free/Plus chỉ dùng thử giới hạn. Custom Agents tốn thêm **credits $10/1.000**.
 4. **`/meet` (chỉ desktop)** cho meeting notes; **Enterprise Search** quét Slack/Drive/GitHub/Gmail; **AI Autofill** điền database hàng loạt.
 5. **Chọn model** GPT-5.2 / Claude Opus 4.5 / Gemini 3 hoặc Auto-select; đổi giữa chừng vẫn giữ ngữ cảnh.
 6. **Người Việt dùng được** (UI tiếng Việt từ 22/07/2025, Translate có tiếng Việt); thanh toán thẻ/Apple Pay/Stripe, **không PayPal**. Không train trên dữ liệu khách; non-Enterprise giữ ≤30 ngày, Enterprise zero-retention.
@@ -454,9 +466,9 @@ Một vài blog dẫn rằng *“Notion's own data”* cho thấy AI tăng năng
 - **Case study Ramp:** https://www.notion.com/customers/ramp
 
 ::: details 🔎 Ghi chú độ tin cậy (research tới giữa 2026)
-- **Chắc (official):** giá gói; khai tử add-on 5/2025; credits $10/1.000; ngày ra mắt Custom Agents (24/02/2026) & Notion 3.2 (20/01/2026); connectors (Slack/Drive/GitHub/Asana/Gmail); chính sách bảo mật/retention; tiếng Việt UI (22/07/2025); thanh toán (thẻ/Apple Pay/SEPA, không PayPal, qua Stripe); case Ramp (>300 agents, ~70% giảm chi phí).
-- **Hedge "theo nguồn tới giữa 2026 / ~":** số ngôn ngữ (~14–16 tuỳ tính năng); tên/version model (GPT-5.2 / Claude Opus 4.5 / Gemini 3); tốc độ “sub-3s autofill”; “Workers Beta tính credits 11/8”.
-- **[Nguồn mỏng — kiểm lại trước khi trích]:** con số năng suất ~34% (Decagon) và ~35% (blog dẫn “Notion data”, **không thấy trang gốc**); so sánh chi phí Coda 100 người; đánh giá độ tin cậy agent (Reddit/blog); Research Mode (ít tư liệu chi tiết).
+- **Chắc (official):** giá gói (Business $20 trả tháng / **$15 trả năm**; Plus $12 / $10); khai tử add-on 5/2025; credits $10/1.000; ngày ra mắt Custom Agents (24/02/2026) & Notion 3.2 (20/01/2026); Research Mode (liệt kê trên trang pricing); connectors (Slack/Drive/GitHub/Asana/Gmail); chính sách bảo mật/retention; tiếng Việt UI (22/07/2025); thanh toán (thẻ/Apple Pay/SEPA, không PayPal, qua Stripe); case Ramp (>300 agents, ~70% giảm chi phí); AI Meeting Notes & Enterprise Search vẫn ở **beta** (tới giữa 2026).
+- **Hedge "theo nguồn tới giữa 2026 / ~":** số ngôn ngữ (~16, tuỳ tính năng); tên/version model (GPT-5.2 / Claude Opus 4.5 / Gemini 3 — *các model nền này Notion có thể đã cập nhật lên bản mới hơn*); tốc độ “sub-3s autofill”; ước tính ~30–60 run / 1.000 credits; “Workers Beta tính credits 11/8”.
+- **[Nguồn mỏng — kiểm lại trước khi trích]:** con số năng suất ~34% (Decagon, là *“up to”*) và ~35% (blog dẫn “Notion data”, **không thấy trang gốc**); so sánh chi phí Coda 100 người; đánh giá độ tin cậy agent (Reddit/blog).
 
 *Số liệu (giá, model, tính năng, mốc ngày) có thể đã thay đổi — luôn kiểm tra lại tại notion.com/product/ai và notion.com/pricing.*
 :::
