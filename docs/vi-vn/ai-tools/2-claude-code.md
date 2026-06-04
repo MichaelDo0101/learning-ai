@@ -185,6 +185,14 @@ trace the login process from front-end to database
 claude --permission-mode plan
 ```
 
+::: tip 📌 Ví dụ thật — Boris Cherny (creator Claude Code) luôn bắt đầu ở Plan mode
+**Bối cảnh:** Boris Cherny, người tạo ra Claude Code, chia sẻ workflow cá nhân hằng ngày trên Threads (@boris_cherny).
+**Làm gì:** Hầu hết session của anh bắt đầu ở **Plan mode (nhấn Shift+Tab hai lần)**, anh chỉnh plan tới khi ưng ý rồi mới chuyển sang chế độ auto-accept để Claude tự chạy. Anh còn chạy **5 Claude song song** trong terminal (đánh số tab 1–5, bật system notification) và **5–10 Claude** trên `claude.ai/code`, dùng **git worktrees** để cô lập file tránh xung đột.
+**Kết quả:** anh tự nhận đã *automate khoảng 80% việc tạo PR*; chất lượng tăng nhờ luôn có feedback loop để verify.
+**Bài học:** *Plan-first → chốt kế hoạch tốt → auto-accept* thường giúp việc "1-shot" (xong ngay lần đầu). Kết hợp parallelism + worktrees + slash command tái dùng là combo năng suất chuẩn.
+*Nguồn: Boris Cherny trên Threads (@boris_cherny) — https://www.threads.com/@boris_cherny/post/DTBVppIEkdE ; tổng hợp tại The Pragmatic Engineer.*
+:::
+
 **Bước 5 — Giao việc bằng ngôn ngữ tự nhiên.** Để Claude chạy test và tự sửa đến khi pass:
 
 ```bash
@@ -198,6 +206,14 @@ claude "write tests for the auth module, run them, and fix any failures"
 /compact
 use a subagent to investigate how our auth system handles token refresh
 ```
+
+::: tip 📌 Ví dụ thật — Solo dev dùng `/clear` giữa các subtask + subagent review tách context
+**Bối cảnh:** Một dev solo (10+ năm kinh nghiệm) duy trì monorepo **350k+ dòng** (PHP, TypeScript/React, React Native, Terraform, Python).
+**Làm gì:** Mỗi subtask anh bắt đầu bằng `/clear` rồi cho Claude đọc lại một file *"implementation overview"* (thay vì kéo theo cả lịch sử chat) để tránh phình context. Anh dựng **3 code-review subagent riêng** (backend / frontend / mobile) chạy ở context tách biệt, và định nghĩa các workflow như `/workflows:fast`, `/approved` (kích hoạt subagent review + chuẩn bị commit). Anh còn tự viết một MCP server nối YouTrack để Claude tự đọc issue.
+**Kết quả (phân tích git history Oct–Dec 2025):** NET dòng code nguồn ~3.473/tuần (trước ~2.125), NET dòng test ~2.043/tuần (trước ~434); ước tính **30–40% tăng năng suất** (~tiết kiệm 1 tuần/tháng); **80%+ thay đổi code do Claude Code viết** (có review). Anh cần gói **Max 100 USD/tháng** vì Pro cạn limit trong ~1 giờ.
+**Bài học:** Giữ mỗi subtask gọn trong **một context window**; ưu tiên `CLAUDE.md` "đo ni" theo codebase hơn là bộ subagent generic — *“prompt generic không hiểu pattern riêng của codebase bạn”*.
+*Nguồn: DEV Community (Dzianis Karviha), 24/12/2025 — https://dev.to/dzianiskarviha/integrating-claude-code-into-production-workflows-lbn*
+:::
 
 **Bước 7 — Hoàn tất: commit hoặc mở PR.**
 
@@ -296,6 +312,14 @@ how do I use MCP?
 Hoặc chạy `/powerup` để học tương tác.
 :::
 
+::: warning 📌 Ví dụ thật — Hoá đơn token có thể "nhảy" bất ngờ
+**Bối cảnh:** Nhiều người dùng báo chi phí token vọt lên ngoài dự kiến dù tưởng đang dùng cẩn thận.
+**Chi tiết:** Một người (Jenny Ouyang) ghi nhận hoá đơn **~1.600 USD**; theo bài viết, con số tương tự được cộng đồng phản ánh không phải cá biệt. Tháng 3/2026 còn có **bug prompt caching** khiến token phình **10–20 lần** mà không cảnh báo — người dùng phải reverse-engineer binary mới phát hiện (GitHub issue #40524, *số hiệu theo nguồn dẫn*).
+**Vì sao:** `CLAUDE.md` được nạp **mỗi turn** — file 5.000 token nghĩa là bạn "trả" 5.000 token *trước khi gõ chữ nào*, mỗi lượt, mỗi session. Mọi output từ MCP/`read_file` (JSON lớn, log nhiều dòng) bị **append vĩnh viễn** trong session, nên tin nhắn thứ 40 "trả tiền" cho tất cả những gì trước đó.
+**Bài học:** Giữ `CLAUDE.md` lean (50–100 dòng); dùng `/clear` khi đổi việc; với khối lượng lớn cân nhắc gói **Max** thay vì API.
+*Nguồn: buildtolaunch.substack.com — https://buildtolaunch.substack.com/p/claude-code-token-optimization*
+:::
+
 ### Lỗi thường gặp & cách tránh
 
 ::: warning 🚨 9 cái bẫy hay vấp
@@ -387,6 +411,121 @@ git diff main --name-only | claude -p "review these changed files for security i
 - Bạn dùng `/clear` đúng thời điểm khi đổi việc.
 - Lệnh `claude -p` chạy **không tương tác** và in kết quả ra stdout.
 - (Tự ngẫm) Khi nào nên giao việc vặt cho subagent gán model **Haiku** để tiết kiệm.
+:::
+
+---
+
+## 06 · Case study & use-case thật (từ cộng đồng)
+
+Phần này tổng hợp các trường hợp dùng Claude Code **có thật** trong giai đoạn 2025–2026, để bạn thấy công cụ này làm được gì *ở quy mô thật* — và cả những chỗ nó vấp. Ba case "xương sống" (Rakuten, Bun, đội Claude Code) có nguồn chính danh + số liệu + tên người thật; các case còn lại mang tính tham khảo, nhiều số liệu là **tự báo cáo** nên đã được gắn nhãn rõ.
+
+::: warning ⚠️ Đọc số liệu cho đúng
+- Các con số doanh thu/năng suất do cá nhân tự công bố (indie hacker, blog dev) **chưa được kiểm chứng độc lập** — coi là *"theo chia sẻ"*.
+- Số hiệu GitHub issue (#40524, #11712) lấy *theo nguồn dẫn*, nên đối chiếu lại nếu trích vào tài liệu chính thức.
+- Một nhân vật HN sau đó chuyển sang công cụ khác (GPT-5.2 Codex) — nên đọc như trải nghiệm tiến trình, không phải lời ca ngợi một chiều cho Claude.
+:::
+
+### 06a · Bốn case study đáng tin nhất (có nguồn chính danh)
+
+**① Rakuten — implement một method sâu trong vLLM (12,5 triệu dòng), Claude tự chạy 7 giờ**
+
+- **Bối cảnh:** Kenta Naruse (ML Engineer, Rakuten) giao Claude Code implement phương pháp *"activation vector extraction"* trong **vLLM** — thư viện mã nguồn mở ~**12,5 triệu dòng**, đa ngôn ngữ.
+- **Làm gì:** Để Claude Code chạy ở chế độ tự hành. Theo Naruse, anh *“không viết dòng code nào trong 7 giờ đó, chỉ thỉnh thoảng đưa guidance”*.
+- **Kết quả:** hoàn thành trong **7 giờ một mạch**, đạt **99,9% độ chính xác số học** so với reference method. Ở quy mô tổ chức, Rakuten báo cáo **giảm 79% time-to-market** (một tính năng từ 24 ngày công xuống 5 ngày), **giảm 97% lỗi nghiêm trọng**, ra bản lớn 2 tuần/lần thay vì theo quý. Yusuke Kaji (GM AI for Business) mô tả cách làm: *chạy song song 5 task — giao 4 cho Claude Code, tự làm 1 cái còn lại*.
+- **Bài học:** Claude Code có thể đảm nhận task kỹ thuật sâu trên codebase khổng lồ **nếu giao việc rõ + có cách verify** (đối chiếu với reference).
+- *Nguồn: Anthropic customer story (chính thức) — https://claude.com/customers/rakuten*
+
+**② Bun — port runtime từ Zig sang Rust bằng Dynamic Workflows (~750k dòng, 11 ngày)**
+
+- **Bối cảnh:** Bun (JS runtime) dùng tính năng **Dynamic Workflows** để port toàn bộ runtime từ **Zig → Rust**.
+- **Làm gì:** Claude tự viết script JS điều phối, *fan-out* tới **16 subagent song song** (tối đa 1.000 subagent/workflow), validate trước khi trả kết quả.
+- **Kết quả:** sinh **~750.000 dòng code**, **99,8% test suite hiện có pass**, trong **11 ngày**.
+- **Bài học:** Với migration/refactor diện rộng *"song song hoá được"*, workflow fan-out rút việc cả ngày xuống còn vài giờ — nhưng cần *effort* cao để orchestrator chịu viết script.
+- *Nguồn: Anthropic blog + InfoQ — https://claude.com/blog/introducing-dynamic-workflows-in-claude-code · https://www.infoq.com/news/2026/06/dynamic-workflows-claude-code/*
+
+**③ Đội Claude Code (Anthropic) tự build chính nó — khoảng 90% do AI viết**
+
+- **Bối cảnh:** Chính team Claude Code *dogfood* công cụ để xây công cụ.
+- **Làm gì:** Boris Cherny chọn tech stack *"không cần dạy"* để Claude Code tự build được chính nó; mỗi thay đổi code là một npm release.
+- **Kết quả:** **~90% Claude Code được viết bởi chính Claude Code**. Adoption nội bộ: ~20% engineering dùng ngày đầu, 50% sau 5 ngày. Khi team nhân đôi quân số vẫn **+67% PR/engineer**; khoảng **5 PR/engineer/ngày** (~5× mặt bằng); **60–100 internal release/ngày**. Boris dựng **20+ prototype to-do list trong 2 ngày**.
+- **Bài học:** *Dogfooding* + release siêu nhỏ, siêu thường xuyên là động lực chất lượng; *“cho Claude một cách verify công việc sẽ tăng chất lượng 2–3 lần”*.
+- *Nguồn: The Pragmatic Engineer (Gergely Orosz) phỏng vấn Boris Cherny — https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built*
+
+**④ Solo dev — codebase 350k+ dòng, 80%+ code do Claude Code viết**
+
+- **Bối cảnh & kết quả:** đã tóm tắt ở hộp *"📌 Ví dụ thật"* trong mục 03 (Bước 6). Điểm cốt lõi: monorepo 350k+ dòng đa ngôn ngữ, dùng các workflow tự định nghĩa (`/workflows:fast`, `/workflows:full:*`, `/approved`), 3 subagent review tách context, MCP nối YouTrack; ước tính 30–40% tăng năng suất, 80%+ thay đổi do Claude viết (có review).
+- *Nguồn: DEV Community (Dzianis Karviha) — https://dev.to/dzianiskarviha/integrating-claude-code-into-production-workflows-lbn*
+
+### 06b · Hai case từ Hacker News (định tính, không số liệu cứng)
+
+**⑤ "Toàn bộ code AI-gen, multi-worktree"** — Một dev trên Hacker News mô tả quy trình *"không gõ tay dòng nào"*: feed cho agent **user stories, test case, design, ảnh whiteboard** trước khi sinh code; spawn nhiều agent đồng thời theo từng ticket qua nhiều worktree; review → test → để lại note. Anh nhấn mạnh agent cần *"nhìn thấy"* log và kết quả test mới tự chủ được. (Lưu ý: người này sau đó chuyển sang GPT-5.2 Codex.) **Bài học:** cấp *"khả năng quan sát"* (logs/tests) cho agent là điều kiện để chạy tự hành nhiều việc. *Nguồn: HN thread #46410285 — https://news.ycombinator.com/item?id=46410285*
+
+**⑥ "Cầu nối auth cho monolith cũ"** — Một dev thêm một *"shim"* xác thực + REST endpoint mới vào monolith già cỗi — loại việc *"lệch khỏi đường mòn"*. Làm việc qua lại nhiều vòng với Claude Code cho tới khi chạy; coi giá trị nhận được tương xứng *"~20 USD/tháng"*. **Bài học:** kể cả task lệch chuẩn trên hệ thống legacy vẫn khả thi nếu chịu lặp. *Nguồn: cùng thread HN #46410285.*
+
+::: tip 💡 Hai case "tự báo cáo" — đọc dè dặt
+- **Indie hacker dựng SaaS trong ~2 ngày:** đưa ý tưởng kinh doanh → Claude dựng concept + bản nháp đầu → tự chỉnh; về sau xây *portfolio SaaS ~28k USD/tháng* (**số liệu do người dùng tự công bố**). Bài học: AI rút MVP từ tuần xuống ngày, nhưng *product judgment, scope, distribution* vẫn là việc của con người. *Nguồn: Indie Hackers.*
+:::
+
+### 06c · Use-case cụ thể đã thấy trong nguồn
+
+- **Implement thuật toán/method sâu** trong thư viện lớn, có reference để đối chiếu accuracy (case Rakuten).
+- **Migration/port diện rộng** (đổi ngôn ngữ runtime, refactor cả module) bằng *fan-out* subagent (case Bun).
+- **Audit cả codebase tìm một class lỗi:** việc cả ngày rút xuống dưới 1 giờ nhờ chạy song song (Dynamic Workflows).
+- **Sinh + sửa code theo issue tracker:** nối MCP tới YouTrack/JIRA để Claude tự đọc issue, comment, attachment.
+- **Review tự động bằng subagent chuyên biệt:** `code-reviewer`, `test-runner`, `frontend-qa`, `docs-maintainer`, `security-checker`, `migration-planner`.
+- **Tự động hoá vòng PR:** lệnh kiểu `/commit-push-pr`; tag `@claude` lên PR đồng nghiệp để cập nhật guideline chung.
+- **Build prototype hàng loạt** để thử ý tưởng (20+ bản trong 2 ngày — đội Claude Code).
+- **Khoa học dữ liệu:** data scientist chạy nhiều instance Claude Code để sinh query + visualization (Anthropic phát hiện ngoài dự kiến).
+
+### 06d · Mẹo & thủ thuật từ cộng đồng
+
+::: tip 🧰 Những pattern được nhắc đi nhắc lại
+- **Plan-first:** bắt đầu ở Plan mode (Shift+Tab × 2), chốt plan tốt rồi mới auto-accept → thường "1-shot" (Boris Cherny).
+- **TDD là pattern mạnh nhất:** viết test trước, để mỗi chu kỳ *red → green* làm "tín hiệu" cho agent tự lặp mà không cần người can thiệp.
+- **`CLAUDE.md` lean & phân tầng:** giữ 50–100 dòng, chỉ để thứ áp dụng rộng (nó nạp vào system prompt mỗi session). Đặt `CLAUDE.md` lồng nhau theo module để thêm ngữ cảnh tự động.
+- **`CLAUDE.md` dùng chung, commit vào Git:** cả team đóng góp nhiều lần/tuần; gặp lỗi gì thì thêm một dòng để *“Claude không tái phạm”* (Boris Cherny).
+- **Subagent để tiết kiệm context:** agent chạy ở context window riêng, chỉ trả về *summary* → giữ context chính sạch. Phải **nói rõ "dùng subagent"**, ví dụ:
+```text
+Use a subagent to review this code for security issues
+```
+- **Parallelism + git worktrees:** chạy 5–10 Claude, cô lập file bằng worktree, đánh số tab + bật system notification.
+- **`/clear` giữa các subtask** rồi đọc lại một file *"implementation overview"* thay vì kéo theo cả lịch sử chat.
+- **Tạo Skill cho thao tác hay sai:** khi Claude lặp lại cùng kiểu lỗi, đóng gói thành một skill chuyên dụng.
+- **Effort cao cho orchestration:** với Dynamic Workflows nên để mức cao nhất; hạ xuống *medium* thì orchestrator bỏ viết script, mất *fan-out*.
+- **Dùng filesystem làm bộ nhớ:** ghi plan ra file `.md` cho agent tham chiếu, khỏi nhét cả nội dung vào context (tiết kiệm token).
+:::
+
+### 06e · Phàn nàn & bẫy thật (để bạn không bất ngờ)
+
+::: warning 🚨 Những chỗ Claude Code hay vấp ở quy mô thật
+- **Hoá đơn token bất ngờ** và **bug prompt caching (3/2026)** làm token phình 10–20× không cảnh báo — xem hộp *"📌 Ví dụ thật"* về token ở mục 04.
+- **"Xé rồi làm lại" trên codebase lớn:** vài dev HN cho biết phần Claude viết phần lớn cuối cùng *"phải xé ra làm lại"*; khi code đủ lớn, Claude có lúc phá vỡ code đang chạy, không tiến lên, và *"hay viết logic trùng lặp"* thay vì tái dùng code có sẵn. *(HN #46410285)*
+- **Hallucinate API:** một dev HN kể Claude sinh JSONRPC sai và bịa hàm Python không tồn tại khi làm với Kanboard API, *dù đã có docs*. *(HN #46410285)*
+- **Explore & Plan subagent KHÔNG tự nạp `CLAUDE.md` + git status:** nếu cần một rule tới đúng subagent đó (ví dụ *"bỏ qua thư mục vendor/"*) thì phải nhắc lại rule đó trong prompt khi delegate.
+- **Subagent resume có thể "sửa" tham số sai:** ví dụ tự đổi `BANANA-123` thành `APPLE-123` khi phải suy ra ý ban đầu của người dùng; có bug *"Subagent Resume Missing All User Prompts"*. *(GitHub issue #11712, số hiệu theo nguồn dẫn — https://github.com/anthropics/claude-code/issues/11712)*
+- **Lo "mất kỹ năng/tư duy":** một số người cho rằng *viết code là một cách tư duy* — để LLM làm hết thì mất cơ hội phát hiện lỗi thiết kế. (Đây là quan điểm, không phải bug.)
+- **Bảo mật/niềm tin mù quáng:** có bài cảnh báo rủi ro tin tưởng tự động hoá quá mức — đừng auto-approve mọi thứ một cách mặc định.
+:::
+
+### 06f · Thread đáng đọc thêm
+
+| Tiêu đề | Nguồn |
+|---|---|
+| "Claude Code creator says Claude wrote all his code for the last month" | https://news.ycombinator.com/item?id=46410285 |
+| "Getting good results from Claude Code" | https://news.ycombinator.com/item?id=44836879 |
+| "Claude Code is all you need" | https://news.ycombinator.com/item?id=44864185 |
+| "How Claude Code is built" (Pragmatic Engineer) | https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built |
+| "Introducing dynamic workflows in Claude Code" (Anthropic) | https://claude.com/blog/introducing-dynamic-workflows-in-claude-code |
+| Chuỗi post Plan mode của Boris Cherny (Threads) | https://www.threads.com/@boris_cherny/post/DTBVppIEkdE |
+| "Integrating Claude Code into production workflows" (DEV) | https://dev.to/dzianiskarviha/integrating-claude-code-into-production-workflows-lbn |
+
+::: details 🔎 Ghi chú nguồn (minh bạch về độ tin cậy)
+- **Xương sống đáng tin nhất:** Rakuten/vLLM (Anthropic chính thức), Bun Zig→Rust (Anthropic + InfoQ), dogfooding qua phỏng vấn Boris Cherny (Pragmatic Engineer). Case solo-dev 350k dòng (DEV) rất chi tiết về lệnh/cấu hình thực tế.
+- **Threads của Boris Cherny** là nguồn primary từ chính creator (handle + URL có thật).
+- **Reddit:** không truy cập được khi soạn tài liệu, nên **không trích username/post Reddit cụ thể nào**; phần "cộng đồng báo token cao" chỉ nói chung theo bài Substack đã dẫn.
+- **Hacker News:** truy cập tốt; nội dung lấy từ thread #46410285. Các thread khác chỉ liệt kê URL.
+- **GitHub issues (#40524, #11712):** đến từ search, **chưa mở trực tiếp từng issue** — coi số hiệu là "theo nguồn dẫn".
+- **Nhóm cần thận trọng:** doanh thu indie hacker (~28k USD/tháng) là tự công bố; các metric "10×/0.8 productivity" trong blog dev mang tính định tính/marketing.
 :::
 
 ---

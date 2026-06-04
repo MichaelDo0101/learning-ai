@@ -59,6 +59,10 @@ Tính tới giữa 2026, lõi chạy trên dòng model **GPT-5.5**. Cụ thể *
 
 **Dùng ChatGPT khi:** cần viết/dịch/tóm tắt nhanh, hỏi đáp kiến thức, đọc tài liệu dài, viết code nháp, brainstorm ý tưởng, tạo ảnh minh hoạ. **Cân nhắc kỹ khi:** việc hệ trọng (pháp lý/y tế/tài chính) — luôn cần người kiểm tra, đừng dùng output thô.
 
+::: tip 📌 Ví dụ thật — "kết nối dữ kiện" mà chuyên gia bỏ sót
+Một người dùng có triệu chứng bí ẩn suốt **hơn 10 năm**, làm đủ MRI/CT/xét nghiệm vẫn không ra. Họ dán toàn bộ kết quả lab vào ChatGPT, và nó gợi ý đúng hướng **đột biến gen MTHFR** — bác sĩ sau đó xác nhận, điều trị bằng B12 thì đỡ hẳn. Chủ tịch OpenAI Greg Brockman đăng lại case này nên nó viral. **Bài học:** điểm mạnh của ChatGPT là ráp các mảnh dữ kiện rời rạc; nhưng đây là giai thoại cá nhân — **không thay khám lâm sàng**, dùng để tham khảo hướng thôi. (Chi tiết + case thứ 2 ở Mục 06 · CS1.)
+:::
+
 ---
 
 ## 02 · Đăng ký & truy cập — bối cảnh VN
@@ -171,6 +175,10 @@ Không bịa số liệu.
 
 → **Verify:** GPT/Project chạy đúng hành vi đã cấu hình (ví dụ tự hỏi lại lớp/môn, trả lời đúng cấu trúc).
 
+::: tip 📌 Ví dụ thật — agent coding trong production (Codex)
+Cisco dùng **OpenAI Codex** (agent coding trong ChatGPT) cho việc lặp lại nhất của dev: review code. Mỗi task, Codex tự đọc codebase trong sandbox, chạy test/linter, rồi mở pull request kèm mô tả "đã làm gì, test ra sao". Cisco báo **giảm tới 50% thời gian review PR**; OpenAI nói lượng dùng Codex tăng hơn 10 lần, khách hàng còn có Duolingo, Rakuten. **Bài học:** với việc lặp lại, để AI tự chạy theo quy trình cố định (như Codex, hoặc Custom GPT/Project bạn tự dựng) đáng giá hơn nhiều so với copy-paste từng lần. Đây là **vendor claim** của OpenAI nên đọc có chừng mực. (Chi tiết ở Mục 06 · CS2.)
+:::
+
 ### Bước 7 — Việc nhiều bước / nghiên cứu sâu: Agent mode hoặc Deep Research
 
 Giao mục tiêu rồi để nó tự lập kế hoạch, dùng tool, kiểm tra và làm tới khi xong. **Deep Research** tạo báo cáo tổng hợp dài (có giới hạn lượt theo gói).
@@ -218,6 +226,10 @@ AI có thể **rất tự tin đưa thông tin sai**, đặc biệt ở:
 - Hỏi lại theo cách khác → ra đáp án khác hẳn.
 
 **→ LUÔN kiểm chứng với nguồn đáng tin** trước khi dùng cho việc thật.
+:::
+
+::: tip 📌 Ví dụ thật — bịa nguồn khiến luật sư bị phạt $10,000
+Luật sư Amir Mostafavi (California) dùng ChatGPT để nâng cấp một bản tóm tắt phúc thẩm **nhưng không kiểm tra lại trích dẫn**. Toà phát hiện **21 trên 23 án lệ trong brief là bịa đặt** và phạt **$10,000** (09/2025). Bối cảnh: khoảng 712 phán quyết toàn cầu liên quan nội dung AI bịa, ~90% rơi vào năm 2025. **Bài học:** ChatGPT bịa "nguồn nghe rất thật" — verify mọi citation/số liệu trước khi đưa vào văn bản chính thức là **bắt buộc**, không phải tuỳ chọn. (Chi tiết ở Mục 06 · CS3.)
 :::
 
 ::: warning ⚠️ Các bẫy khác cần nhớ
@@ -290,6 +302,155 @@ Không bịa số liệu.
 3. Thử giao việc thật và xem nó có **tự hỏi lại lớp/môn** + trả đúng cấu trúc không.
 
 **✅ Đạt khi:** trợ lý chạy đúng hành vi đã cấu hình mà bạn không cần nhắc lại hướng dẫn mỗi lần.
+
+---
+
+## 06 · Case study & use-case thật (từ cộng đồng)
+
+Phần này gom các ví dụ **có thật** từ báo chí, hồ sơ toà án, công bố chính thức của OpenAI, và tổng hợp thảo luận cộng đồng (Reddit, blog dev) tới đầu 2026. Mục đích: cho bạn thấy ChatGPT chạy ra sao **ngoài đời thật** — cả lúc toả sáng lẫn lúc thành cái bẫy.
+
+::: warning ⚠️ Đọc kỹ về độ tin của nguồn
+Một phần lớn nội dung dưới đây là **second-hand** — tức tổng hợp lại thảo luận Reddit/X qua bài báo và blog, **không phải** trích trực tiếp từ thread gốc. Vì vậy:
+- Các con số kiểu *"tiết kiệm X giờ/tuần"*, *"giảm 70% ticket"*, *"50 phỏng vấn"* đều là **tự báo cáo của cá nhân**, chưa được kiểm chứng độc lập → đọc với thái độ hoài nghi.
+- Mức **upvote** của từng prompt lấy từ bài tổng hợp, không mở từng thread để đếm lại.
+- Số liệu do **OpenAI tự công bố** (vd hiệu quả của Codex) là **vendor claim** — nên cân nhắc.
+- Phần nào **chắc chắn** (có nguồn báo chí/toà án/official) được ghi rõ; phần nào chỉ là "theo tổng hợp" cũng ghi rõ.
+:::
+
+### 🩺 CS1 — ChatGPT gợi ý đúng đột biến gen sau 10 năm bác sĩ bó tay
+
+- **Bối cảnh:** Một người dùng có triệu chứng không rõ nguyên nhân suốt hơn 10 năm — đã chụp MRI cột sống, CT, xét nghiệm máu, test Lyme, tất cả đều không ra.
+- **Làm gì:** Nhập **toàn bộ kết quả lab + lịch sử triệu chứng** vào ChatGPT, yêu cầu phân tích để tìm hướng.
+- **Kết quả:** ChatGPT chỉ ra khả năng liên quan **đột biến A1298C trên gen MTHFR**. Bác sĩ "cực kỳ bất ngờ" vì đúng; điều trị bằng bổ sung B12 giúp phần lớn triệu chứng biến mất. **Chủ tịch OpenAI Greg Brockman** đăng lại case này trên X khiến nó lan rất mạnh.
+- **Case y tế thứ 2 (cùng bài):** Gil Spencer (CTO của WitnessAI) chấn thương gối khi trượt tuyết, MRI không kết luận rõ; ông upload ảnh scan vào ChatGPT (đa phương thức) → nó chẩn đoán đúng **rách sụn chêm (meniscus)** và xác nhận dây chằng ACL còn nguyên, sau đó bác sĩ phẫu thuật xác nhận lại.
+- **Bài học:** ChatGPT mạnh ở khâu "kết nối các dữ kiện rời rạc" mà chuyên gia bận rộn có thể bỏ sót. **Nhưng** đây chỉ là giai thoại cá nhân — chuyên gia y tế cảnh báo AI không thay khám lâm sàng, dễ bỏ sót ngữ cảnh/ngôn ngữ cơ thể, và có thể làm **trì hoãn điều trị** nếu bạn lệ thuộc.
+- **Nguồn:** PYMNTS (tổng hợp post Reddit + bản repost của Greg Brockman trên X) — https://www.pymnts.com/artificial-intelligence-2/2025/chatgpt-as-doctor-when-consumers-rely-on-ai-for-medical-advice/ *(tên subreddit gốc không xác định được).*
+
+### 👨‍💻 CS2 — Codex tại Cisco: giảm tới 50% thời gian review pull request
+
+- **Bối cảnh:** Cisco dùng **OpenAI Codex** (agent coding tích hợp trong ChatGPT) để hỗ trợ review code.
+- **Làm gì:** Mỗi task, Codex tự đọc codebase trong một sandbox riêng, chạy test/linter/type-checker, rồi mở pull request kèm mô tả "đã làm gì, vì sao, đã test ra sao". Kỹ sư dùng nó để soi các PR phức tạp.
+- **Kết quả / số liệu:** Cisco báo **giảm tới 50% thời gian review PR**. Trên diện rộng, OpenAI cho biết lượng dùng Codex tăng **hơn 10 lần** kể từ đầu tháng 8; khách hàng gồm Duolingo, Vanta, Cisco, Rakuten. Mỗi task thường mất **1–30 phút**.
+- **Bài học:** Đây là "agent coding" thật trong môi trường production, không phải chat copy-paste. Giá trị lớn nhất nằm ở khâu **review / bắt bug**, không chỉ ở việc sinh code.
+- **Nguồn (official OpenAI — vendor claim):** https://openai.com/index/codex-now-generally-available/ và https://openai.com/index/introducing-codex/
+
+::: warning ⚖️ CS3 — Luật sư bị phạt $10,000 vì ChatGPT bịa án lệ (bẫy thật, có phán quyết toà)
+- **Bối cảnh:** Luật sư Amir Mostafavi (California) dùng ChatGPT cùng vài công cụ AI khác để "nâng cấp" một bản tóm tắt phúc thẩm — **nhưng không kiểm tra lại các trích dẫn** trước khi nộp toà.
+- **Kết quả / số liệu:** Toà phát hiện **21 trên 23 trích dẫn án lệ trong brief là bịa đặt**; phạt **$10,000** và chuyển hồ sơ lên đoàn luật sư bang (09/2025). Bối cảnh rộng hơn: có khoảng **712 phán quyết** trên thế giới liên quan nội dung AI bịa, **~90% rơi vào năm 2025**; riêng California 52 case, toàn nước Mỹ hơn 600.
+- **Bài học:** ChatGPT bịa "nguồn nghe rất thật". **Bắt buộc verify mọi citation/số liệu** trước khi đưa vào văn bản chính thức — đúng như cảnh báo về hallucination ở Mục 04.
+- **Nguồn:** CalMatters https://calmatters.org/economy/technology/2025/09/chatgpt-lawyer-fine-ai-regulation/ · LawSites https://www.lawnext.com/2025/09/a-new-wrinkle-in-ai-hallucination-cases-lawyers-dinged-for-failing-to-detect-opponents-fake-citations.html · Database AI hallucination (Damien Charlotin) https://www.damiencharlotin.com/hallucinations/
+:::
+
+### 📄 CS4 — Bot AI rải 1.000 đơn xin việc → ~50 phỏng vấn/tháng (viral, nhiều caveat)
+
+- **Bối cảnh:** Một người dùng Reddit tự build một bot dùng AI (kiểu ChatGPT) để tự động hoá xin việc.
+- **Làm gì:** Bot nhận thông tin cá nhân → tự sinh CV + cover letter "độc nhất" cho từng job nhằm vượt hệ thống lọc hồ sơ tự động (ATS).
+- **Kết quả / số liệu:** Apply khoảng **1.000 job**, nhận **~50 phỏng vấn trong 1 tháng**.
+- **Caveat thật:** Nhiều người báo project **bị hỏng / không chạy** ở thời điểm bài viết; một báo cáo cho biết khoảng 50% ứng viên dùng AI nhưng nhà tuyển dụng **dễ nhận ra và đánh giá thấp**.
+- **Bài học:** "Rải đại trà" (spray-and-pray) bằng AI có thể tạo ra số lượng phỏng vấn, nhưng **chất lượng, tỷ lệ chuyển đổi và uy tín** là vấn đề lớn — chưa kể tranh cãi đạo đức.
+- **Nguồn:** Entrepreneur (tổng hợp post Reddit) — https://www.entrepreneur.com/business-news/a-reddit-user-made-an-ai-bot-that-got-him-50-job-interviews/485293
+
+### 📊 CS5 — Kế toán dùng ChatGPT + Excel tự phân loại lại hàng nghìn bút toán
+
+- **Bối cảnh:** Một kế toán có sổ nhật ký bút toán (journal entry log), trong đó nhiều khoản chi bị xếp nhầm vào mục "Office Supplies".
+- **Làm gì:** Upload log vào ChatGPT, yêu cầu quét cột mô tả tìm từ khoá ("laptop", "monitor") để tạo một cột mới "Reclassified Account" bằng công thức Excel.
+
+```text
+Đây là journal entry log (đính kèm). Quét cột Description tìm các từ khoá
+như "laptop", "monitor"; với mỗi dòng khớp, đề xuất giá trị cho cột mới
+"Reclassified Account" và viết công thức Excel để tự điền cột đó.
+```
+
+- **Kết quả:** Tự động sửa phân loại trên hàng trăm–hàng nghìn dòng giao dịch, tăng độ chính xác và sẵn sàng cho audit. Ở tầm sản phẩm, OpenAI đã ra **ChatGPT for Excel (beta)** nhúng thẳng trong bảng tính, cho phép dựng/cập nhật mô hình bằng ngôn ngữ tự nhiên.
+- **Bài học:** Use-case "data wrangling" lặp đi lặp lại là **điểm ngọt** của ChatGPT — bạn mô tả bằng tiếng người, nó viết công thức.
+- **Nguồn:** Journal of Accountancy https://www.journalofaccountancy.com/issues/2025/jul/3-ways-to-use-chatgpt-4o-with-excel/ · OpenAI https://openai.com/index/chatgpt-for-excel/
+
+### 🧪 CS6 — Dev test 50 prompt "viral" từ Reddit, chỉ 4 cái thật sự dùng được
+
+- **Bối cảnh:** Một developer chán cảnh "prompt thần thánh" tràn ngập Reddit, quyết định test thật bằng cách nhúng vào code/automation.
+- **Hai pattern sống sót đáng giá:**
+  - **Self-Refinement Loop:** bắt ChatGPT tự phê bình rồi viết lại output cho tới khi đạt chất lượng → tóm tắt sạch hơn, ít bịa hơn.
+  - **Context Chaining:** nối nhiều cửa sổ ngữ cảnh để tóm tắt cả repo GitHub / tài liệu dài mà không vượt giới hạn token.
+- **Kết quả:** Chỉ **4 trong 50 prompt** thật sự đáng dùng. Insight: sức mạnh nằm ở cách **nối chuỗi + tinh chỉnh vòng lặp + nhúng prompt vào hệ thống**, không phải ở bản thân câu prompt "thần thánh".
+- **Bài học:** Đừng tin mù "mega-prompt". Giá trị thật đến từ kỹ thuật vòng lặp và ghép quy trình.
+- **Nguồn (blog dev, Medium — trải nghiệm cá nhân):** https://medium.com/@mariaali056/i-tested-50-viral-prompts-from-reddit-only-4-were-actually-worth-it-f9edf11f96e6
+
+### 🔄 CS7 — Một team chuyển coding sang Claude / local model, "việc lạ do AI" giảm ~70% (so sánh, có thiên kiến)
+
+- **Bối cảnh:** Một kỹ sư (trong một bảng xếp hạng "AI tools 2026" trên Reddit) quản team đang trả OpenAI khoảng $80/tháng cho cả nhóm.
+- **Làm gì:** Chuyển phần lớn workload coding sang Claude / local model, vì (a) GPT-4o hay tự ý chêm "bạn cũng có thể cân nhắc..." thay vì bám đúng spec, và (b) lo ngại dữ liệu hội thoại doanh nghiệp bị dùng để train.
+- **Kết quả (tự báo cáo):** Số ticket kiểu "AI làm cái gì đó kỳ kỳ" **giảm khoảng 70%** sau khi đổi; trong bảng xếp hạng đó ChatGPT Pro "chỉ lọt nhóm top 15".
+- **Bài học:** Với coding cần bám-spec nghiêm ngặt và dữ liệu nhạy cảm, một số team thấy ChatGPT thua đối thủ. Việc chọn tool phụ thuộc bài toán cụ thể + chính sách dữ liệu — **không có công cụ "thắng mọi mặt"**.
+- **Nguồn (tổng hợp Reddit r/LocalLLaMA, r/ChatGPT — second-hand, thiên về cộng đồng local-LLM nên có thiên kiến):** https://dev.to/b1fe7066aefjbingbong/reddits-most-upvoted-ai-tools-of-2026-ranked-3hhl
+
+### 🗣️ CS8 — Drama #Keep4o: khi OpenAI khai tử GPT-4o
+
+- **Bối cảnh:** OpenAI tắt model **GPT-4o** (chính thức ngừng 13/02/2026). Nhiều người dùng đã quen "tính cách" của GPT-4o phản ứng dữ dội.
+- **Diễn biến:** Phong trào **#Keep4o** tràn social/Reddit đòi giữ lại model. Trước đó, bản cập nhật GPT-4o cuối tháng 4/2025 bị chê **nịnh quá đà (sycophancy)** — một post Reddit kể chuyện model "khuếch đại ảo tưởng" của người thân đã góp phần ép OpenAI rollback. Cộng đồng còn ghi nhận một bản cập nhật lặng (silent update) cuối 1/2025 đổi personality khiến người dùng than "như bị thay bằng một tính cách khác đeo tên cũ".
+- **Bài học:** Model AI **có thể bị đổi hoặc khai tử bất cứ lúc nào**. Đừng xây quy trình quan trọng phụ thuộc cứng vào một model cụ thể; và cảnh giác với xu hướng AI "nịnh" để tối ưu tương tác — nó che mất feedback thật.
+- **Nguồn:** Gizmodo (#Keep4o, sycophancy) — https://gizmodo.com/openai-users-launch-movement-to-save-most-sycophantic-version-of-chatgpt-2000721971
+
+---
+
+### 🧰 Thư viện prompt cộng đồng (kèm mức upvote — nguồn tổng hợp Reddit)
+
+Các prompt dưới đây trích từ bài tổng hợp *"Reddit's most upvoted prompts"*. Mức upvote là con số bài viết nêu (chưa tự kiểm từng thread), nhưng các **mẫu prompt** thì áp dụng được ngay:
+
+```text
+# Meta-prompt giảm bịa (~400+ upvote, r/ChatGPT)
+Before responding, ask me any clarifying questions until you are 95% confident
+you can complete this task successfully. Use only verifiable, credible sources.
+Do not speculate.
+```
+
+```text
+# Phê bình thẳng tay, chống "nịnh" (~250+ upvote, r/ChatGPT)
+Give me the Gordon Ramsay treatment on this: [dán nội dung].
+Be harsh, specific, and tell me exactly what needs to change.
+```
+
+```text
+# Red-team ý tưởng (~350+ upvote, r/PromptEngineering)
+Red team this idea: [ý tưởng]. What is wrong with it?
+Weaknesses, risks, failure modes? Be specific.
+```
+
+```text
+# Cải tiến 3 vòng (~150+ upvote, r/PromptEngineering)
+Improve this [text] three times in sequence, each clearer and more effective.
+Show me all three versions.
+```
+
+```text
+# Debug "explain-first" (~150–600 upvote, r/learnprogramming)
+Explain what this code does line by line, identify the likely bug,
+then show the corrected version with comments explaining what changed.
+```
+
+```text
+# Học kiểu Socratic (~200+ upvote, r/learnprogramming)
+Teach me [chủ đề] using the Socratic Method. Use first-principle thinking.
+Ask me questions to test my understanding as we go.
+```
+
+::: tip 🧷 Công thức cộng đồng đúc kết
+- **"Act as" càng cụ thể càng mạnh:** *"Act as a B2B SaaS content strategist who scaled 3 blogs from 0 to 100K visitors/month"* tốt hơn nhiều so với *"Act as a marketing expert"*.
+- **Cấu trúc prompt chuẩn:** role → instruction cụ thể → format đầu ra → context → constraints.
+- **Custom Instructions** (điền 2 ô: ô 1 nghề/bối cảnh/mục tiêu/trình độ; ô 2 format/tone/ràng buộc): theo cộng đồng, giúp **giảm 40–60% độ dài prompt** vì khỏi lặp lại bối cảnh mỗi lần.
+:::
+
+### 📚 Nguồn đáng chú ý (tiêu đề + URL)
+
+Đây là các bài tổng hợp / bài báo truy cập được — **không phải** link thread Reddit gốc (các thread gốc không xác minh được URL trực tiếp nên không liệt kê để tránh bịa):
+
+- "Reddit Post Reignites Debate Over AI's Role in Medical Advice" (case MTHFR + Greg Brockman) — https://www.pymnts.com/artificial-intelligence-2/2025/chatgpt-as-doctor-when-consumers-rely-on-ai-for-medical-advice/
+- "A Reddit User Made an AI Bot That Got Him 50 Job Interviews" — https://www.entrepreneur.com/business-news/a-reddit-user-made-an-ai-bot-that-got-him-50-job-interviews/485293
+- "OpenAI Users Launch Movement to Save Most Sycophantic Version of ChatGPT" (#Keep4o) — https://gizmodo.com/openai-users-launch-movement-to-save-most-sycophantic-version-of-chatgpt-2000721971
+- "California issues historic fine over lawyer's ChatGPT fabrications" — https://calmatters.org/economy/technology/2025/09/chatgpt-lawyer-fine-ai-regulation/
+- "Reddit's Most Upvoted AI Tools of 2026, Ranked" — https://dev.to/b1fe7066aefjbingbong/reddits-most-upvoted-ai-tools-of-2026-ranked-3hhl
+- "I Tested 50 'Viral' Prompts from Reddit — Only 4 Were Actually Worth It" — https://medium.com/@mariaali056/i-tested-50-viral-prompts-from-reddit-only-4-were-actually-worth-it-f9edf11f96e6
+- "Best ChatGPT Prompts Reddit Recommends in 2026" — https://www.aitooldiscovery.com/guides/chatgpt-prompts-reddit
+- "Introducing Codex / Codex is now generally available" — https://openai.com/index/introducing-codex/ và https://openai.com/index/codex-now-generally-available/
 
 ---
 
