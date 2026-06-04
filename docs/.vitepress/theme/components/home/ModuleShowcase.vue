@@ -49,7 +49,7 @@ const i18n = {
     newLabel: 'MỚI'
   },
   en: {
-    title: '📚 8 Learning Modules',
+    title: '📚 9 Learning Modules',
     subtitle: 'Pick the module matching your goal — from zero to shipping product with real users.',
     newLabel: 'NEW'
   }
@@ -194,6 +194,15 @@ const modulesByLocale = {
       chapters: '12 chapters',
       audience: '💻 Dev / Founder / Operator',
       link: '/agentic-ai/',
+      isNew: true
+    },
+    {
+      icon: '🧰',
+      title: 'AI Tools',
+      desc: 'A 19-tool toolkit: ChatGPT, Gemini, Cursor, Claude Code, Codex, v0, GitHub, n8n, Notion AI, Perplexity, ElevenLabs… — setup, workflows, pricing, case studies.',
+      chapters: '19 tools',
+      audience: '🛠️ All AI users',
+      link: '/ai-tools/',
       isNew: true
     },
     {

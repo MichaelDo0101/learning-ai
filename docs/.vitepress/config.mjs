@@ -1370,6 +1370,11 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: 'Agentic AI',
             link: '/en/agentic-ai/',
             activeMatch: '/en/agentic-ai/'
+          },
+          {
+            text: 'AI Tools',
+            link: '/en/ai-tools/',
+            activeMatch: '/en/ai-tools/'
           }
         ],
         sidebar: {
@@ -1430,6 +1435,64 @@ Sitemap: ${siteUrl}/sitemap.xml
                 { text: '7. Toolkit Agent 2026', link: '/en/agentic-ai/toolkit-2026' },
                 { text: '8. Safety & Evals — incidents 2025-2026', link: '/en/agentic-ai/safety-evals' },
                 { text: '9. 30-Day Roadmap', link: '/en/agentic-ai/roadmap-30-days' }
+              ]
+            }
+          ],
+          '/en/ai-tools/': [
+            { text: 'AI Tools', collapsed: false, items: [{ text: 'Overview', link: '/en/ai-tools/' }] },
+            {
+              text: 'A · Chat & search',
+              collapsed: false,
+              items: [
+                { text: '1. ChatGPT — a versatile AI assistant', link: '/en/ai-tools/1-chatgpt' },
+                { text: '9. Gemini — Google multimodal assistant', link: '/en/ai-tools/9-gemini' },
+                { text: '10. Perplexity — answer engine with citations', link: '/en/ai-tools/10-perplexity' },
+                { text: '11. Grok — real-time AI from X', link: '/en/ai-tools/11-grok' },
+                { text: '13. NotebookLM — research from your docs', link: '/en/ai-tools/13-notebooklm' }
+              ]
+            },
+            {
+              text: 'B · Coding, IDE & builder',
+              collapsed: false,
+              items: [
+                { text: '2. Claude Code — terminal coding agent', link: '/en/ai-tools/2-claude-code' },
+                { text: '4. OpenAI Codex — coding agent', link: '/en/ai-tools/4-codex' },
+                { text: '8. Cursor — AI code editor', link: '/en/ai-tools/8-cursor' },
+                { text: '14. Windsurf — AI-native IDE', link: '/en/ai-tools/14-windsurf' },
+                { text: '17. v0 — text-to-UI (Vercel)', link: '/en/ai-tools/17-v0' },
+                { text: '18. Replit — cloud IDE + AI Agent', link: '/en/ai-tools/18-replit' }
+              ]
+            },
+            {
+              text: 'C · Productivity & media',
+              collapsed: false,
+              items: [
+                { text: '15. Notion AI — AI in your workspace', link: '/en/ai-tools/15-notion-ai' },
+                { text: '16. Gamma — AI slides & sites', link: '/en/ai-tools/16-gamma' },
+                { text: '19. ElevenLabs — AI voice, clone & dub', link: '/en/ai-tools/19-elevenlabs' }
+              ]
+            },
+            {
+              text: 'D · Office agents & automation',
+              collapsed: false,
+              items: [
+                { text: '3. Claude Cowork — office agent', link: '/en/ai-tools/3-claude-cowork' },
+                { text: '12. n8n — connect apps & build AI agents', link: '/en/ai-tools/12-n8n' }
+              ]
+            },
+            {
+              text: 'E · Dev platform',
+              collapsed: false,
+              items: [
+                { text: '5. GitHub — store code & collaborate', link: '/en/ai-tools/5-github' }
+              ]
+            },
+            {
+              text: 'F · Self-hosted agents',
+              collapsed: false,
+              items: [
+                { text: '6. OpenClaw — local agent via chat', link: '/en/ai-tools/6-openclaw' },
+                { text: '7. Hermes Agent — self-hosted agent', link: '/en/ai-tools/7-hermes-agent' }
               ]
             }
           ],
