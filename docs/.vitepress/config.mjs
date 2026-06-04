@@ -1528,16 +1528,28 @@ Sitemap: ${siteUrl}/sitemap.xml
               ]
             },
             {
-              text: 'B · Coding agent & IDE',
+              text: 'B · Coding, IDE & builder',
               collapsed: false,
               items: [
                 { text: '2. Claude Code — agent lập trình terminal', link: '/vi-vn/ai-tools/2-claude-code' },
                 { text: '4. OpenAI Codex — coding agent', link: '/vi-vn/ai-tools/4-codex' },
-                { text: '8. Cursor — AI code editor (Tab & Agent)', link: '/vi-vn/ai-tools/8-cursor' }
+                { text: '8. Cursor — AI code editor (Tab & Agent)', link: '/vi-vn/ai-tools/8-cursor' },
+                { text: '14. Windsurf — AI-native IDE (agent Cascade)', link: '/vi-vn/ai-tools/14-windsurf' },
+                { text: '17. v0 — text-to-UI (Vercel)', link: '/vi-vn/ai-tools/17-v0' },
+                { text: '18. Replit — IDE đám mây + AI Agent', link: '/vi-vn/ai-tools/18-replit' }
               ]
             },
             {
-              text: 'C · Trợ lý giao việc & tự động hoá',
+              text: 'C · Năng suất & media',
+              collapsed: false,
+              items: [
+                { text: '15. Notion AI — AI trong workspace', link: '/vi-vn/ai-tools/15-notion-ai' },
+                { text: '16. Gamma — tạo slide/web bằng AI', link: '/vi-vn/ai-tools/16-gamma' },
+                { text: '19. ElevenLabs — AI giọng nói, clone & dub', link: '/vi-vn/ai-tools/19-elevenlabs' }
+              ]
+            },
+            {
+              text: 'D · Trợ lý giao việc & tự động hoá',
               collapsed: false,
               items: [
                 { text: '3. Claude Cowork — agent văn phòng', link: '/vi-vn/ai-tools/3-claude-cowork' },
@@ -1545,14 +1557,14 @@ Sitemap: ${siteUrl}/sitemap.xml
               ]
             },
             {
-              text: 'D · Nền tảng dev',
+              text: 'E · Nền tảng dev',
               collapsed: false,
               items: [
                 { text: '5. GitHub — lưu code & cộng tác', link: '/vi-vn/ai-tools/5-github' }
               ]
             },
             {
-              text: 'E · Agent tự host (nâng cao)',
+              text: 'F · Agent tự host (nâng cao)',
               collapsed: false,
               items: [
                 { text: '6. OpenClaw — agent local qua chat', link: '/vi-vn/ai-tools/6-openclaw' },

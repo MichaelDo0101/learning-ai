@@ -122,8 +122,8 @@ const modulesByLocale = {
     {
       icon: '🧰',
       title: 'Công cụ AI',
-      desc: 'Bộ đồ nghề 13 công cụ: ChatGPT, Gemini, Grok, Perplexity, Cursor, Claude Code, Codex, GitHub, n8n, NotebookLM… — cài đặt, workflow, giá VN, case study.',
-      chapters: '13 công cụ',
+      desc: 'Bộ đồ nghề 19 công cụ: ChatGPT, Gemini, Cursor, Windsurf, Claude Code, Codex, v0, Replit, GitHub, n8n, Notion AI, Gamma, Perplexity, ElevenLabs… — cài đặt, workflow, giá VN, case study.',
+      chapters: '19 công cụ',
       audience: '🛠️ Mọi người dùng AI',
       link: '/ai-tools/',
       isNew: true
