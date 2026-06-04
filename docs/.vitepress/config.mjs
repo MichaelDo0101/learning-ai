@@ -1213,17 +1213,19 @@ export default defineConfig({
       '/vi-vn/appendix/': 0.7
     },
     transformItems(items) {
-      return items.filter((item) => {
-        const url = item.url
-        if (
-          url.includes('/extra/') ||
-          url.includes('/examples/') ||
-          url.includes('/project/')
-        ) {
-          return false
-        }
-        return true
-      })
+      const baseClean = base.replace(/^\/+|\/+$/g, '')
+      return items
+        .filter((item) => {
+          const url = item.url
+          return !(
+            url.includes('/extra/') ||
+            url.includes('/examples/') ||
+            url.includes('/project/')
+          )
+        })
+        .map((item) =>
+          baseClean ? { ...item, url: `${baseClean}/${item.url}` } : item
+        )
     }
   },
 

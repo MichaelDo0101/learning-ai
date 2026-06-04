@@ -101,12 +101,12 @@ const footerBtnLink = computed(() => {
 })
 
 const footerPolicyLinkMap = {
-  'Chính sách bảo mật': '#',
-  'Điều khoản sử dụng': '#',
-  'Sơ đồ website': '#',
-  'Privacy Policy': '#',
-  'Terms of Use': '#',
-  'Sitemap': '#'
+  'Chính sách bảo mật': '/privacy',
+  'Điều khoản sử dụng': '/terms',
+  'Sơ đồ website': '/sitemap.xml',
+  'Privacy Policy': '/privacy',
+  'Terms of Use': '/terms',
+  'Sitemap': '/sitemap.xml'
 }
 
 const footerColumnLinkMap = {
@@ -124,11 +124,33 @@ const footerColumnLinkMap = {
   'Learning Map': '/stage-1/learning-map/',
   'Course Outline': '/stage-1/',
   'Overview': '/guide/introduction',
+  'Câu hỏi thường gặp': '/faq',
+  'Gợi ý học tập': '/stage-1/learning-map/',
+  'Phản hồi khoá học': '/contact',
+  'Liên hệ': '/contact',
+  'FAQ': '/faq',
+  'Learning Tips': '/stage-1/learning-map/',
+  'Feedback': '/contact',
+  'Contact': '/contact',
 }
 
 const footerExternalLinks = {
   'GitHub Repository': 'https://github.com/aiecosvietnam/learning-ai',
-  'Changelog': 'https://github.com/aiecosvietnam/learning-ai/releases'
+  'Changelog': 'https://github.com/aiecosvietnam/learning-ai/releases',
+  'Giấy phép mã nguồn': 'https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE',
+  'Báo lỗi (Issue)': 'https://github.com/aiecosvietnam/learning-ai/issues',
+  'Hướng dẫn đóng góp': 'https://github.com/aiecosvietnam/learning-ai/blob/main/CONTRIBUTING.md',
+  'Đính chính chương': 'https://github.com/aiecosvietnam/learning-ai/issues',
+  'Cập nhật phiên bản': 'https://github.com/aiecosvietnam/learning-ai/releases',
+  'Cộng đồng học tập': 'https://aiecos.ai',
+  'Khu thảo luận': 'https://github.com/aiecosvietnam/learning-ai/discussions',
+  'License': 'https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE',
+  'Report Issue': 'https://github.com/aiecosvietnam/learning-ai/issues',
+  'Contribution Guide': 'https://github.com/aiecosvietnam/learning-ai/blob/main/CONTRIBUTING.md',
+  'Errata': 'https://github.com/aiecosvietnam/learning-ai/issues',
+  'Release Notes': 'https://github.com/aiecosvietnam/learning-ai/releases',
+  'Community': 'https://aiecos.ai',
+  'Discussions': 'https://github.com/aiecosvietnam/learning-ai/discussions'
 }
 
 const getFooterLink = (label) => {
@@ -141,7 +163,11 @@ const getFooterLink = (label) => {
 }
 
 const getPolicyLink = (label) => {
-  return footerPolicyLinkMap[label] || '#'
+  const link = footerPolicyLinkMap[label]
+  if (!link || link === '#') return '#'
+  if (link.startsWith('http') || link.startsWith('/sitemap')) return link
+  const locale = t.value._locale || 'vi-vn'
+  return `/${locale}${link}`
 }
 
 const resolveFooterHref = (link) => {
