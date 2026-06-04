@@ -1185,6 +1185,7 @@ export default defineConfig({
     }
   },
   base: base,
+  cleanUrls: true,
   ignoreDeadLinks: true,
 
   // Vite 配置

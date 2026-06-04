@@ -2,6 +2,7 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "framework": "vitepress",
+  "cleanUrls": true,
   "outputDirectory": "docs/.vitepress/dist",
   "headers": [
     {
