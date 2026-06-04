@@ -122,8 +122,8 @@ const modulesByLocale = {
     {
       icon: '🧰',
       title: 'Công cụ AI',
-      desc: 'Bộ đồ nghề thực chiến: ChatGPT, Claude Code, Cowork, Codex, GitHub, OpenClaw, Hermes Agent — cài đặt, workflow, giá VN.',
-      chapters: '7 công cụ',
+      desc: 'Bộ đồ nghề 13 công cụ: ChatGPT, Gemini, Grok, Perplexity, Cursor, Claude Code, Codex, GitHub, n8n, NotebookLM… — cài đặt, workflow, giá VN, case study.',
+      chapters: '13 công cụ',
       audience: '🛠️ Mọi người dùng AI',
       link: '/ai-tools/',
       isNew: true
