@@ -27,7 +27,7 @@ const getSiteUrl = () => {
   if (process.env.SITE_URL) {
     return process.env.SITE_URL
   }
-  return 'https://aiecosvietnam.github.io/learning-ai'
+  return 'https://MichaelDo0101.github.io/learning-ai'
 }
 
 const siteUrl = getSiteUrl()
@@ -160,12 +160,12 @@ const getSeoHead = (locale, title, description, path = '') => {
     publisher: {
       '@type': 'Organization',
       name: 'Learning AI',
-      url: 'https://aiecosvietnam.github.io/learning-ai',
+      url: 'https://MichaelDo0101.github.io/learning-ai',
       logo: {
         '@type': 'ImageObject',
         url: ogImageUrl
       },
-      sameAs: ['https://github.com/aiecosvietnam/learning-ai']
+      sameAs: ['https://github.com/MichaelDo0101/learning-ai']
     },
     mainEntity: {
       '@type': 'Course',
@@ -174,7 +174,7 @@ const getSeoHead = (locale, title, description, path = '') => {
       provider: {
         '@type': 'Organization',
         name: 'Learning AI',
-        sameAs: 'https://github.com/aiecosvietnam/learning-ai'
+        sameAs: 'https://github.com/MichaelDo0101/learning-ai'
       },
       educationalLevel: 'Beginner to Advanced',
       learningResourceType: 'Course'
@@ -279,7 +279,7 @@ const commonThemeConfig = {
   //   { icon: 'github', link: 'https://github.com/aiecosvietnam/learning-ai' }
   // ],
   editLink: {
-    pattern: 'https://github.com/aiecosvietnam/learning-ai/edit/main/docs/:path',
+    pattern: 'https://github.com/MichaelDo0101/learning-ai/edit/main/docs/:path',
     text: 'Edit this page on GitHub'
   },
   outline: {
@@ -287,7 +287,7 @@ const commonThemeConfig = {
   },
   footer: {
     message:
-      'Tài liệu thuộc dự án <a href="https://github.com/aiecosvietnam/learning-ai" target="_blank" rel="noreferrer">Learning AI</a> · Phái sinh từ <a href="https://github.com/datawhalechina/easy-vibe" target="_blank" rel="noreferrer">datawhalechina/easy-vibe</a> (mã nguồn mở)',
+      'Tài liệu thuộc dự án <a href="https://github.com/MichaelDo0101/learning-ai" target="_blank" rel="noreferrer">Learning AI</a> · Phái sinh từ <a href="https://github.com/datawhalechina/easy-vibe" target="_blank" rel="noreferrer">datawhalechina/easy-vibe</a> (mã nguồn mở)',
     copyright:
       'Tài liệu được phát hành theo giấy phép <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> · © 2026 Learning AI'
   }
