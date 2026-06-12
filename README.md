@@ -1,7 +1,7 @@
 <!-- trigger vercel build -->
 <div align="center">
 
-<h1>Learning AI</h1>
+<h1>Task AI Wiki</h1>
 
 <p align="center" style="font-size: 1.2em; color: #666; margin: 20px 0;">
   Jump right in and vibe together — if you can talk, you can build apps.<br>
@@ -38,7 +38,7 @@
 </p>
 
 <p align="center" style="font-size: 0.95em; color: #666; margin: 12px 0;">
-  <em>📦 Phái sinh từ / Derived from <a href="https://github.com/datawhalechina/easy-vibe">datawhalechina/easy-vibe</a> — dự án giáo dục mã nguồn mở của Datawhale.<br>Bản địa hoá tiếng Việt &amp; mở rộng bởi Learning AI (AI Ecos Vietnam).</em>
+  <em>📦 Phái sinh từ / Derived from <a href="https://github.com/datawhalechina/easy-vibe">datawhalechina/easy-vibe</a> — dự án giáo dục mã nguồn mở của Datawhale.<br>Bản địa hoá tiếng Việt &amp; mở rộng bởi Task AI Wiki (AI Ecos Vietnam).</em>
 </p>
 
 <p align="center">

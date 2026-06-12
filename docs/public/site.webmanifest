@@ -1,6 +1,6 @@
 {
-  "name": "Learning AI",
-  "short_name": "Learning AI",
+  "name": "Task AI Wiki",
+  "short_name": "Task AI Wiki",
   "description": "Học AI từ số 0 đến ship sản phẩm thật: Generative AI, Agentic AI, full-stack vibe coding.",
   "icons": [
     {
@@ -16,7 +16,7 @@
       "purpose": "any"
     }
   ],
-  "theme_color": "#00b372",
+  "theme_color": "#1153c9",
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/learning-ai/",

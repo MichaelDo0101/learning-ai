@@ -2,9 +2,9 @@
 layout: home
 navbar: false
 hero:
-  name: 'Learning AI'
+  name: 'Task AI Wiki'
   text: 'Learn AI — Lead Tomorrow'
-  tagline: 'Learning AI đồng hành cùng thế hệ học viên Việt Nam làm chủ AI để giải quyết vấn đề thực tiễn và tạo ra giá trị cho tương lai.'
+  tagline: 'Task AI Wiki đồng hành cùng thế hệ học viên Việt Nam làm chủ AI để giải quyết vấn đề thực tiễn và tạo ra giá trị cho tương lai.'
   typingTagline:
     - Lập trình, khác biệt.
     - Phức tạp, trở nên đơn giản.

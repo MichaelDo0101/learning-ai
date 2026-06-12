@@ -1,6 +1,6 @@
 ---
 title: Contact
-description: Get in touch with the Learning AI team — aiecos.ai, learning@aiecos.ai, +84 909 080 066.
+description: Get in touch with the Task AI Wiki team — aiecos.ai, learning@aiecos.ai, +84 909 080 066.
 editLink: false
 lastUpdated: false
 outline: false
@@ -8,7 +8,7 @@ outline: false
 
 # Contact
 
-**Learning AI** is an open educational project built and run by **AIECOS**. Questions, feedback, partnership, or need help? Reach us through the channels below.
+**Task AI Wiki** is an open educational project built and run by **AIECOS**. Questions, feedback, partnership, or need help? Reach us through the channels below.
 
 ## Official channels
 
@@ -31,4 +31,4 @@ When emailing, paste the **link of the page/lesson** you're viewing and a short 
 
 ---
 
-> Learning AI is derived from [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) (open-source). Content is released under the [CC BY-NC-SA 4.0](https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE) license.
+> Task AI Wiki is derived from [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) (open-source). Content is released under the [CC BY-NC-SA 4.0](https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE) license.

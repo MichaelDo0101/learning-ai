@@ -17,7 +17,7 @@
   --vp-sidebar-nav-section-gap: 8px;
   --ev-doc-font-size: 14px;
   --ev-doc-line-height: 1.65;
-  /* Learning AI brand palette */
+  /* Task AI Wiki brand palette */
   --vp-c-brand-1: #00b372;
   --vp-c-brand-2: #00c087;
   --vp-c-brand-3: #009966;
@@ -320,7 +320,7 @@
 }
 
 /* ===================================================================
-   Learning AI — Homepage section design system
+   Task AI Wiki — Homepage section design system
    (green #00b372 · navy #0d1b2a · mint #e6f7f1 · Sora)
    =================================================================== */
 

@@ -541,7 +541,7 @@ watch(sidebarCollapsed, (collapsed) => {
         aria-label="Mở trang chào mừng"
         @click="openWelcomeFromWordmark"
       >
-        <span class="vp-home-wordmark-text">Learning AI Full A-Z</span>
+        <span class="vp-home-wordmark-text">Task AI Wiki Full A-Z</span>
       </button>
     </template>
     <template #home-hero-info-after>

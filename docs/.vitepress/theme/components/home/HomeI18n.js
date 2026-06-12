@@ -1,7 +1,7 @@
 export const i18n = {
   en: {
     nav: {
-      title: 'Learning AI Tutorial',
+      title: 'Task AI Wiki Tutorial',
       home: 'Home',
       stories: 'Vibe Stories',
       pm: 'Product Manager',
@@ -208,13 +208,13 @@ export const i18n = {
     },
     footer: {
       title: 'Ready to start?',
-      desc: 'Learning AI — make coding as natural as breathing.',
+      desc: 'Task AI Wiki — make coding as natural as breathing.',
       btn: 'Start Now'
     }
   },
   'vi-vn': {
     nav: {
-      title: 'Hướng dẫn Learning AI',
+      title: 'Hướng dẫn Task AI Wiki',
       home: 'Trang chủ',
       stories: 'Câu chuyện người dùng',
       pm: 'Quản lý sản phẩm',
@@ -365,7 +365,7 @@ export const i18n = {
     },
     footer: {
       title: 'Sẵn sàng chưa?',
-      desc: 'Learning AI — biến lập trình trở nên tự nhiên như hơi thở.',
+      desc: 'Task AI Wiki — biến lập trình trở nên tự nhiên như hơi thở.',
       btn: 'Bắt đầu ngay'
     }
   }

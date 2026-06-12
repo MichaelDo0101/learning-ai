@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: Learning AI privacy policy — a static educational site that collects minimal data.
+description: Task AI Wiki privacy policy — a static educational site that collects minimal data.
 editLink: false
 lastUpdated: false
 outline: false
@@ -10,7 +10,7 @@ outline: false
 
 *Last updated: June 2026*
 
-**Learning AI** (operated by AIECOS) is a **free, open, static educational website**. We collect minimal data and respect your privacy.
+**Task AI Wiki** (operated by AIECOS) is a **free, open, static educational website**. We collect minimal data and respect your privacy.
 
 ## What we collect
 

@@ -43,8 +43,8 @@ const topPromo = computed(() => {
   const isVietnamese = code === 'vi-vn'
   return {
     text: isVietnamese
-      ? 'Dùng Learning AI xây ứng dụng AI đầu tay — có thể đẩy prototype lên trong ngày.'
-      : 'Build your first AI app with Learning AI and ship a working prototype fast.',
+      ? 'Dùng Task AI Wiki xây ứng dụng AI đầu tay — có thể đẩy prototype lên trong ngày.'
+      : 'Build your first AI app with Task AI Wiki and ship a working prototype fast.',
     cta: isVietnamese ? 'Bắt đầu học ›' : 'Start learning ›',
     link: `/${code}/stage-1/learning-map/`
   }
@@ -308,7 +308,7 @@ onUnmounted(() => {
             class="nav-title"
             :aria-label="t.nav.title"
           >
-            <span class="nav-title-text">Learning AI</span>
+            <span class="nav-title-text">Task AI Wiki</span>
           </div>
           <div class="nav-links">
             <button

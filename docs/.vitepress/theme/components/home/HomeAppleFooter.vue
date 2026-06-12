@@ -24,7 +24,7 @@ const appleFooterInfo = computed(() => {
         '2. Project ví dụ và ảnh chụp màn hình chỉ dùng cho mục đích minh họa, có thể khác với phiên bản giao diện sau.',
         '3. Một số link chương có thể thay đổi theo lộ trình khoá học, khuyến nghị vào từ trang chủ để lấy đường dẫn mới nhất.'
       ],
-      breadcrumbPrefix: 'Learning AI',
+      breadcrumbPrefix: 'Task AI Wiki',
       breadcrumbCurrent: 'Điều hướng học tập',
       columns: [
         {
@@ -44,14 +44,14 @@ const appleFooterInfo = computed(() => {
           links: ['Cộng đồng học tập', 'Khu thảo luận', 'Phản hồi khoá học']
         },
         {
-          title: 'Về Learning AI',
+          title: 'Về Task AI Wiki',
           links: ['Giới thiệu dự án', 'Changelog', 'Liên hệ']
         }
       ],
       more: 'Cách học khác: truy cập',
       moreLink: 'GitHub Repository',
       moreTail: ' để nhận cập nhật và thông tin trao đổi.',
-      copyright: 'Copyright © 2026 Learning AI · CC BY-NC-SA 4.0 · Phái sinh từ datawhalechina/easy-vibe (mã nguồn mở)',
+      copyright: 'Copyright © 2026 Task AI Wiki · CC BY-NC-SA 4.0 · Phái sinh từ datawhalechina/easy-vibe (mã nguồn mở)',
       policies: ['Chính sách bảo mật', 'Điều khoản sử dụng', 'Sơ đồ website']
     },
     en: {
@@ -61,7 +61,7 @@ const appleFooterInfo = computed(() => {
         '3. Some chapter links may change as the course evolves.',
         '4. The page is optimized for modern desktop browsers and responsive layouts.'
       ],
-      breadcrumbPrefix: 'Learning AI',
+      breadcrumbPrefix: 'Task AI Wiki',
       breadcrumbCurrent: 'Learning Navigation',
       columns: [
         {
@@ -81,14 +81,14 @@ const appleFooterInfo = computed(() => {
           links: ['Community', 'Discussions', 'Feedback']
         },
         {
-          title: 'About Learning AI',
+          title: 'About Task AI Wiki',
           links: ['Overview', 'Changelog', 'Contact']
         }
       ],
       more: 'More ways to learn: visit',
       moreLink: 'GitHub Repository',
       moreTail: ' for updates and community discussions.',
-      copyright: 'Copyright © 2026 Learning AI · CC BY-NC-SA 4.0 · Derived from datawhalechina/easy-vibe (open-source)',
+      copyright: 'Copyright © 2026 Task AI Wiki · CC BY-NC-SA 4.0 · Derived from datawhalechina/easy-vibe (open-source)',
       policies: ['Privacy Policy', 'Terms of Use', 'Sitemap']
     }
   }
