@@ -1,6 +1,7 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import { useData, useRoute, withBase } from 'vitepress'
+import { inject } from '@vercel/analytics'
 import TextType from './components/TextType.vue'
 import PageSlidesButton from './components/PageSlidesButton.vue'
 import { onMounted, onBeforeUnmount, ref, watch, computed } from 'vue'
@@ -188,6 +189,9 @@ const isWelcomePage = computed(() =>
 )
 
 onMounted(() => {
+  // Initialize Vercel Analytics
+  inject()
+  
   const saved = clampFontSize(localStorage.getItem(FONT_SIZE_STORAGE_KEY))
   const savedLineHeight = clampLineHeight(
     localStorage.getItem(LINE_HEIGHT_STORAGE_KEY)
@@ -587,7 +591,7 @@ watch(sidebarCollapsed, (collapsed) => {
   </ClientOnly>
   <ClientOnly>
     <ReadingProgress v-if="!isHomePage && !isWelcomePage" />
-  </ClientOnly>  
+  </ClientOnly>
 </template>
 
 <style>
