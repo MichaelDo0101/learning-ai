@@ -68,18 +68,18 @@ const getSeoHead = (locale, title, description, path = '') => {
 
   const head = [
     // Favicon — SVG primary (modern browsers) + ICO fallback (legacy)
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg?v=2`.replace('//', '/') }],
-    ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico?v=2`.replace('//', '/') }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${base}favicon-16x16.png?v=2`.replace('//', '/') }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32x32.png?v=2`.replace('//', '/') }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: `${base}apple-touch-icon.png?v=2`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg?v=3`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico?v=3`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${base}favicon-16x16.png?v=3`.replace('//', '/') }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32x32.png?v=3`.replace('//', '/') }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: `${base}apple-touch-icon.png?v=3`.replace('//', '/') }],
     ['link', { rel: 'manifest', href: `${base}site.webmanifest`.replace('//', '/') }],
     [
       'link',
       { rel: 'stylesheet', href: `${base}style.css`.replace('//', '/') }
     ],
-    ['meta', { name: 'theme-color', content: '#00b372' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#00b372' }],
+    ['meta', { name: 'theme-color', content: '#1153c9' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#1153c9' }],
     [
       'meta',
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
@@ -111,10 +111,10 @@ const getSeoHead = (locale, title, description, path = '') => {
       {
         name: 'keywords',
         content:
-          'Learning AI,học AI,Vibe Coding,AI Coding,lập trình AI,ChatGPT,Claude Code,Cursor,AI IDE,Generative AI,Agentic AI,full-stack,học lập trình cho người mới,prompt engineering,MCP,RAG,Supabase,React,LLM,trí tuệ nhân tạo,khóa học AI tiếng Việt'
+          'Task AI Wiki,học AI,Vibe Coding,AI Coding,lập trình AI,ChatGPT,Claude Code,Cursor,AI IDE,Generative AI,Agentic AI,full-stack,học lập trình cho người mới,prompt engineering,MCP,RAG,Supabase,React,LLM,trí tuệ nhân tạo,khóa học AI tiếng Việt'
       }
     ],
-    ['meta', { name: 'author', content: 'Learning AI' }],
+    ['meta', { name: 'author', content: 'Task AI Wiki' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { name: 'googlebot', content: 'index,follow' }],
     ['meta', { name: 'baiduspider', content: 'index,follow' }],
@@ -159,7 +159,7 @@ const getSeoHead = (locale, title, description, path = '') => {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Learning AI',
+      name: 'Task AI Wiki',
       url: 'https://MichaelDo0101.github.io/learning-ai',
       logo: {
         '@type': 'ImageObject',
@@ -173,7 +173,7 @@ const getSeoHead = (locale, title, description, path = '') => {
       description: description,
       provider: {
         '@type': 'Organization',
-        name: 'Learning AI',
+        name: 'Task AI Wiki',
         sameAs: 'https://github.com/MichaelDo0101/learning-ai'
       },
       educationalLevel: 'Beginner to Advanced',
@@ -271,7 +271,8 @@ const commonHead = [
 ]
 
 const commonThemeConfig = {
-  siteTitle: 'Learning AI',
+  logo: '/logo.png',
+  siteTitle: 'Task AI Wiki',
   search: {
     provider: 'local'
   },
@@ -287,9 +288,9 @@ const commonThemeConfig = {
   },
   footer: {
     message:
-      'Tài liệu thuộc dự án <a href="https://github.com/MichaelDo0101/learning-ai" target="_blank" rel="noreferrer">Learning AI</a> · Phái sinh từ <a href="https://github.com/datawhalechina/easy-vibe" target="_blank" rel="noreferrer">datawhalechina/easy-vibe</a> (mã nguồn mở)',
+      'Tài liệu thuộc dự án <a href="https://github.com/MichaelDo0101/learning-ai" target="_blank" rel="noreferrer">Task AI Wiki</a> · Phái sinh từ <a href="https://github.com/datawhalechina/easy-vibe" target="_blank" rel="noreferrer">datawhalechina/easy-vibe</a> (mã nguồn mở)',
     copyright:
-      'Tài liệu được phát hành theo giấy phép <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> · © 2026 Learning AI'
+      'Tài liệu được phát hành theo giấy phép <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> · © 2026 Task AI Wiki'
   }
 }
 
@@ -1315,12 +1316,12 @@ Sitemap: ${siteUrl}/sitemap.xml
       label: 'English',
       lang: 'en-US',
       link: '/en/',
-      title: 'Learning AI',
+      title: 'Task AI Wiki',
       description:
         'Learn Vibe Coding from Zero to Advanced - Master AI programming with Claude Code, Cursor, and other AI IDE tools',
       head: getSeoHead(
         'en',
-        'Learning AI',
+        'Task AI Wiki',
         'Learn Vibe Coding from Zero to Advanced - Master AI programming with Claude Code, Cursor, and other AI IDE tools'
       ),
       themeConfig: {
@@ -1510,12 +1511,12 @@ Sitemap: ${siteUrl}/sitemap.xml
       label: 'Tiếng Việt',
       lang: 'vi-VN',
       link: '/vi-vn/',
-      title: 'Learning AI',
+      title: 'Task AI Wiki',
       description:
         'Học Vibe Coding từ cơ bản đến nâng cao - Làm chủ lập trình AI từ cơ bản đến chuyên sâu',
       head: getSeoHead(
         'vi-vn',
-        'Learning AI',
+        'Task AI Wiki',
         'Học Vibe Coding từ cơ bản đến nâng cao - Làm chủ lập trình AI từ cơ bản đến chuyên sâu'
       ),
       themeConfig: {

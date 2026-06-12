@@ -131,7 +131,7 @@ onUnmounted(() => {
             dominant-baseline="middle"
             class="welcome-text"
           >
-            Learning AI
+            Task AI Wiki
           </text>
         </svg>
       </div>

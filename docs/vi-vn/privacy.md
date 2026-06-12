@@ -1,6 +1,6 @@
 ---
 title: Chính sách bảo mật
-description: Chính sách bảo mật của Learning AI — website giáo dục tĩnh, thu thập dữ liệu tối thiểu.
+description: Chính sách bảo mật của Task AI Wiki — website giáo dục tĩnh, thu thập dữ liệu tối thiểu.
 editLink: false
 lastUpdated: false
 outline: false
@@ -10,7 +10,7 @@ outline: false
 
 *Cập nhật lần cuối: 06/2026*
 
-**Learning AI** (do AIECOS vận hành) là một **website giáo dục tĩnh, mở và miễn phí**. Chúng tôi thu thập dữ liệu ở mức tối thiểu và tôn trọng quyền riêng tư của bạn.
+**Task AI Wiki** (do AIECOS vận hành) là một **website giáo dục tĩnh, mở và miễn phí**. Chúng tôi thu thập dữ liệu ở mức tối thiểu và tôn trọng quyền riêng tư của bạn.
 
 ## Chúng tôi thu thập gì
 

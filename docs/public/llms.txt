@@ -1,4 +1,4 @@
-# Easy-Vibe - AI Vibe Coding Curriculum
+# Task AI Wiki - AI Vibe Coding Curriculum
 # https://aiecosvietnam.github.io/learning-ai
 #
 # This file helps AI models and agents understand our project structure
@@ -6,7 +6,7 @@
 
 == Project Overview ==
 
-Easy-Vibe is an educational curriculum for learning AI Vibe Coding from zero to advanced levels.
+Task AI Wiki is an educational curriculum for learning AI Vibe Coding from zero to advanced levels.
 It's built with VitePress and provides interactive tutorials in multiple languages.
 
 == Learning Path ==

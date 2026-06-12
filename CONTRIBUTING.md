@@ -1,8 +1,8 @@
-# Đóng góp cho Learning AI / Contributing to Learning AI
+# Đóng góp cho Task AI Wiki / Contributing to Task AI Wiki
 
 Cảm ơn bạn quan tâm đóng góp! / Thanks for your interest in contributing!
 
-**Learning AI** là dự án giáo dục mở do [AIECOS](https://aiecos.ai) vận hành, phái sinh từ [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) (mã nguồn mở), phát hành theo giấy phép [CC BY-NC-SA 4.0](./LICENSE).
+**Task AI Wiki** là dự án giáo dục mở do [AIECOS](https://aiecos.ai) vận hành, phái sinh từ [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) (mã nguồn mở), phát hành theo giấy phép [CC BY-NC-SA 4.0](./LICENSE).
 
 ---
 

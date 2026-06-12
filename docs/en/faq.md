@@ -1,17 +1,17 @@
 ---
 title: FAQ
-description: Quick answers to common questions about Learning AI — the course, cost, path, tools, and contributing.
+description: Quick answers to common questions about Task AI Wiki — the course, cost, path, tools, and contributing.
 editLink: false
 lastUpdated: false
 ---
 
 # Frequently Asked Questions
 
-The most common questions about **Learning AI**. Can't find an answer? See [Contact](./contact) or open an [Issue](https://github.com/aiecosvietnam/learning-ai/issues).
+The most common questions about **Task AI Wiki**. Can't find an answer? See [Contact](./contact) or open an [Issue](https://github.com/aiecosvietnam/learning-ai/issues).
 
 ## About the course
 
-::: details What is Learning AI?
+::: details What is Task AI Wiki?
 An open course teaching **AI Vibe Coding** — using AI to build real software, from zero to shipped. It includes several modules: Stage 0–3, Generative AI, Agentic AI, and an **AI Tools** toolkit (19 tools). Content is free.
 :::
 
@@ -39,8 +39,8 @@ Beginners should start with **ChatGPT** + **GitHub**. Details on each tool (pric
 
 ## Project & contributing
 
-::: details How is Learning AI different from the original easy-vibe?
-Learning AI is **derived** from [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) (open-source), fully localized, re-edited for a Vietnamese context, and extended with new modules (Generative AI, Agentic AI, AI Tools).
+::: details How is Task AI Wiki different from the original easy-vibe?
+Task AI Wiki is **derived** from [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) (open-source), fully localized, re-edited for a Vietnamese context, and extended with new modules (Generative AI, Agentic AI, AI Tools).
 :::
 
 ::: details I want to report a bug / suggest / contribute content?
@@ -48,7 +48,7 @@ Open an [Issue](https://github.com/aiecosvietnam/learning-ai/issues) for bugs, u
 :::
 
 ::: details Can I reuse content for my class/blog?
-Yes, under **CC BY-NC-SA 4.0**: non-commercial, with **attribution** to Learning AI, and share-alike. See the [license](https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE).
+Yes, under **CC BY-NC-SA 4.0**: non-commercial, with **attribution** to Task AI Wiki, and share-alike. See the [license](https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE).
 :::
 
 ---

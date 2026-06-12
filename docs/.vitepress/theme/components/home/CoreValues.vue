@@ -12,9 +12,9 @@ const values = [
   <section class="ev-values">
     <div class="ev-values-head">
       <p class="ev-eyebrow">GIÁ TRỊ CỐT LÕI</p>
-      <h2 class="ev-values-title">Điều làm nên <span>Learning AI</span></h2>
+      <h2 class="ev-values-title">Điều làm nên <span>Task AI Wiki</span></h2>
       <p class="ev-values-sub">
-        Learning AI đồng hành cùng thế hệ học viên Việt Nam làm chủ AI để giải
+        Task AI Wiki đồng hành cùng thế hệ học viên Việt Nam làm chủ AI để giải
         quyết vấn đề thực tiễn và tạo ra giá trị cho tương lai.
       </p>
     </div>

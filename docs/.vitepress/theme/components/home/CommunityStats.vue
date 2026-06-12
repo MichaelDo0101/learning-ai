@@ -53,7 +53,7 @@ const isEN = computed(() => (lang.value || 'vi-VN').toLowerCase().startsWith('en
 
 const i18n = {
   vi: {
-    title: '🌍 Cộng đồng Learning AI',
+    title: '🌍 Cộng đồng Task AI Wiki',
     subtitle: 'Open-source, multi-language, miễn phí. Build cùng cộng đồng dev VN + global.',
     ctaStar: 'Star trên GitHub',
     ctaIssues: 'Tham gia thảo luận',
@@ -63,7 +63,7 @@ const i18n = {
     stars: 'GitHub stars'
   },
   en: {
-    title: '🌍 Learning AI Community',
+    title: '🌍 Task AI Wiki Community',
     subtitle: 'Open-source, multi-language, free. Built with VN + global dev community.',
     ctaStar: 'Star on GitHub',
     ctaIssues: 'Join discussions',
