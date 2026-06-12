@@ -39,6 +39,10 @@ Biết một công cụ AI “đỉnh” mà không biết *khi nào dùng cái 
 | **[OpenClaw](./6-openclaw)** | Agent mã nguồn mở chạy local, ra lệnh qua chat | Tự host, riêng tư, nối Telegram/Zalo |
 | **[Hermes Agent](./7-hermes-agent)** | Agent tự host có trí nhớ, đa kênh | Trợ lý 24/7 riêng, nhớ ngữ cảnh dài |
 
+::: tip 🌐 Mới: Hệ sinh thái — Google AI System
+Nếu bạn muốn nhìn **toàn cảnh Google AI như một hệ thống** thay vì từng công cụ rời rạc — từ Gemini, NotebookLM, Workspace AI đến AI Studio, Apps Script, Firebase/Cloud, Vertex AI, Antigravity và AI Edge — hãy bắt đầu với mục **[Hệ sinh thái · Google AI System](./google-ai-system/)**: bản đồ 10 hạng mục, cách chọn công cụ theo bài toán, và quy trình triển khai 6 bước cho cá nhân → đội nhóm → doanh nghiệp.
+:::
+
 ## 🧭 Lộ trình gợi ý
 
 1. **Người mới** → [ChatGPT](./1-chatgpt) (trợ lý đa năng) + [GitHub](./5-github) (kỹ năng nền tảng).

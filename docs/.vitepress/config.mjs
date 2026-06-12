@@ -1636,6 +1636,53 @@ Sitemap: ${siteUrl}/sitemap.xml
                 { text: '6. OpenClaw — agent local qua chat', link: '/vi-vn/ai-tools/6-openclaw' },
                 { text: '7. Hermes Agent — agent tự host', link: '/vi-vn/ai-tools/7-hermes-agent' }
               ]
+            },
+            {
+              text: '🌐 Hệ sinh thái · Google AI System',
+              collapsed: false,
+              items: [
+                { text: 'Bản đồ toàn cảnh', link: '/vi-vn/ai-tools/google-ai-system/' },
+                {
+                  text: '1. Trợ lý trung tâm — Gemini',
+                  link: '/vi-vn/ai-tools/google-ai-system/1-gemini'
+                },
+                {
+                  text: '2. Tri thức tài liệu — NotebookLM',
+                  link: '/vi-vn/ai-tools/google-ai-system/2-notebooklm'
+                },
+                {
+                  text: '3. Năng suất văn phòng — Workspace AI',
+                  link: '/vi-vn/ai-tools/google-ai-system/3-workspace-ai'
+                },
+                {
+                  text: '4. Sáng tạo nội dung — Creative AI',
+                  link: '/vi-vn/ai-tools/google-ai-system/4-creative-ai'
+                },
+                {
+                  text: '5. Thử nghiệm prompt/API — AI Studio',
+                  link: '/vi-vn/ai-tools/google-ai-system/5-ai-studio'
+                },
+                {
+                  text: '6. Tự động hóa — Apps Script',
+                  link: '/vi-vn/ai-tools/google-ai-system/6-apps-script'
+                },
+                {
+                  text: '7. Xây ứng dụng — Firebase & Cloud',
+                  link: '/vi-vn/ai-tools/google-ai-system/7-firebase-cloud'
+                },
+                {
+                  text: '8. AI doanh nghiệp — Vertex AI',
+                  link: '/vi-vn/ai-tools/google-ai-system/8-vertex-ai'
+                },
+                {
+                  text: '9. Agent và code — Antigravity',
+                  link: '/vi-vn/ai-tools/google-ai-system/9-antigravity-agent'
+                },
+                {
+                  text: '10. AI trên thiết bị — AI Edge',
+                  link: '/vi-vn/ai-tools/google-ai-system/10-ai-edge'
+                }
+              ]
             }
           ],
           '/vi-vn/vibe-stories/': [
