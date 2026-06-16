@@ -1341,6 +1341,11 @@ Sitemap: ${siteUrl}/sitemap.xml
         nav: [
           { text: 'Home', link: '/en/' },
           {
+            text: 'AI News',
+            link: '/en/ai-news/',
+            activeMatch: '/en/ai-news/'
+          },
+          {
             text: 'Getting Started',
             link: '/en/stage-1/learning-map/',
             activeMatch: '/en/stage-1/'
@@ -1382,6 +1387,13 @@ Sitemap: ${siteUrl}/sitemap.xml
           }
         ],
         sidebar: {
+          '/en/ai-news/': [
+            {
+              text: 'AI News',
+              collapsed: false,
+              items: [{ text: 'Overview', link: '/en/ai-news/' }]
+            }
+          ],
           '/en/vibe-stories/': [
             {
               text: 'Vibe Stories',
@@ -1536,6 +1548,11 @@ Sitemap: ${siteUrl}/sitemap.xml
         nav: [
           { text: 'Trang chủ', link: '/vi-vn/' },
           {
+            text: 'Bản tin AI',
+            link: '/vi-vn/ai-news/',
+            activeMatch: '/vi-vn/ai-news/'
+          },
+          {
             text: 'Người mới & PM',
             link: '/vi-vn/stage-1/learning-map/',
             activeMatch: '/vi-vn/stage-1/'
@@ -1577,6 +1594,13 @@ Sitemap: ${siteUrl}/sitemap.xml
           }
         ],
         sidebar: {
+          '/vi-vn/ai-news/': [
+            {
+              text: 'Bản tin AI',
+              collapsed: false,
+              items: [{ text: 'Tổng quan', link: '/vi-vn/ai-news/' }]
+            }
+          ],
           '/vi-vn/ai-tools/': [
             {
               text: 'Công cụ AI',
