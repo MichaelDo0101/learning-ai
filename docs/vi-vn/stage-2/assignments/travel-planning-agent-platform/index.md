@@ -37,7 +37,7 @@ Product bạn cần build là 1 nền tảng Agent quy hoạch du lịch thông 
 | **Quản trị backend** | Admin xem destination hot, task fail, feedback user |
 
 ::: tip PRD Entry
-PRD project trên GitHub: [Xem PRD](https://github.com/aiecosvietnam/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/travel-planning-agent-platform/PRD.md)
+PRD project trên GitHub: [Xem PRD](https://github.com/MichaelDo0101/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/travel-planning-agent-platform/PRD.md)
 :::
 
 <div style="margin: 32px 0;">

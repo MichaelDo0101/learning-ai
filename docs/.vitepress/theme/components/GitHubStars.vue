@@ -27,7 +27,7 @@ onMounted(async () => {
     }
 
     const res = await fetch(
-      'https://api.github.com/repos/aiecosvietnam/learning-ai'
+      'https://api.github.com/repos/MichaelDo0101/learning-ai'
     )
     if (res.ok) {
       const data = await res.json()
@@ -52,7 +52,7 @@ onMounted(async () => {
   <div class="github-stars-wrapper">
     <a
       class="github-stars-link"
-      href="https://github.com/aiecosvietnam/learning-ai"
+      href="https://github.com/MichaelDo0101/learning-ai"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="GitHub"

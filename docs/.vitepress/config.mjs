@@ -36,13 +36,13 @@ const siteUrl = getSiteUrl()
 const localeMap = {
   'vi-vn': {
     ogLocale: 'vi_VN',
-    twitterSite: '@aiecosvietnam',
+    twitterSite: '@MichaelDo0101',
     lang: 'vi-VN',
     hreflang: 'vi'
   },
   en: {
     ogLocale: 'en_US',
-    twitterSite: '@aiecosvietnam',
+    twitterSite: '@MichaelDo0101',
     lang: 'en-US',
     hreflang: 'en'
   }
@@ -277,7 +277,7 @@ const commonThemeConfig = {
     provider: 'local'
   },
   // socialLinks: [
-  //   { icon: 'github', link: 'https://github.com/aiecosvietnam/learning-ai' }
+  //   { icon: 'github', link: 'https://github.com/MichaelDo0101/learning-ai' }
   // ],
   editLink: {
     pattern: 'https://github.com/MichaelDo0101/learning-ai/edit/main/docs/:path',
