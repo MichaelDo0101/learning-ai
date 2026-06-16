@@ -135,22 +135,22 @@ const footerColumnLinkMap = {
 }
 
 const footerExternalLinks = {
-  'GitHub Repository': 'https://github.com/aiecosvietnam/learning-ai',
-  'Changelog': 'https://github.com/aiecosvietnam/learning-ai/releases',
-  'Giấy phép mã nguồn': 'https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE',
-  'Báo lỗi (Issue)': 'https://github.com/aiecosvietnam/learning-ai/issues',
-  'Hướng dẫn đóng góp': 'https://github.com/aiecosvietnam/learning-ai/blob/main/CONTRIBUTING.md',
-  'Đính chính chương': 'https://github.com/aiecosvietnam/learning-ai/issues',
-  'Cập nhật phiên bản': 'https://github.com/aiecosvietnam/learning-ai/releases',
-  'Cộng đồng học tập': 'https://aiecos.ai',
-  'Khu thảo luận': 'https://github.com/aiecosvietnam/learning-ai/discussions',
-  'License': 'https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE',
-  'Report Issue': 'https://github.com/aiecosvietnam/learning-ai/issues',
-  'Contribution Guide': 'https://github.com/aiecosvietnam/learning-ai/blob/main/CONTRIBUTING.md',
-  'Errata': 'https://github.com/aiecosvietnam/learning-ai/issues',
-  'Release Notes': 'https://github.com/aiecosvietnam/learning-ai/releases',
-  'Community': 'https://aiecos.ai',
-  'Discussions': 'https://github.com/aiecosvietnam/learning-ai/discussions'
+  'GitHub Repository': 'https://github.com/MichaelDo0101/learning-ai',
+  'Changelog': 'https://github.com/MichaelDo0101/learning-ai/releases',
+  'Giấy phép mã nguồn': 'https://github.com/MichaelDo0101/learning-ai/blob/main/LICENSE',
+  'Báo lỗi (Issue)': 'https://github.com/MichaelDo0101/learning-ai/issues',
+  'Hướng dẫn đóng góp': 'https://github.com/MichaelDo0101/learning-ai/blob/main/CONTRIBUTING.md',
+  'Đính chính chương': 'https://github.com/MichaelDo0101/learning-ai/issues',
+  'Cập nhật phiên bản': 'https://github.com/MichaelDo0101/learning-ai/releases',
+  'Cộng đồng học tập': 'https://taskai.vn',
+  'Khu thảo luận': 'https://github.com/MichaelDo0101/learning-ai/discussions',
+  'License': 'https://github.com/MichaelDo0101/learning-ai/blob/main/LICENSE',
+  'Report Issue': 'https://github.com/MichaelDo0101/learning-ai/issues',
+  'Contribution Guide': 'https://github.com/MichaelDo0101/learning-ai/blob/main/CONTRIBUTING.md',
+  'Errata': 'https://github.com/MichaelDo0101/learning-ai/issues',
+  'Release Notes': 'https://github.com/MichaelDo0101/learning-ai/releases',
+  'Community': 'https://taskai.vn',
+  'Discussions': 'https://github.com/MichaelDo0101/learning-ai/discussions'
 }
 
 const getFooterLink = (label) => {

@@ -10,7 +10,7 @@
   <span style="font-size: 0.9em; color: #888;">直接上手，一起 vibe！会说话就会做应用。</span>
 </p>
 
-<a href="https://trendshift.io/repositories/22079" target="_blank"><img src="https://trendshift.io/api/badge/repositories/22079" alt="aiecosvietnam/learning-ai | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/22079" target="_blank"><img src="https://trendshift.io/api/badge/repositories/22079" alt="MichaelDo0101/learning-ai | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 <p align="center" style="font-size: 1.05em; color: #666; margin: 16px 0;">
   你好 · Hello · 哈囉 · こんにちは · 안녕하세요 · Hola · Bonjour · Hallo · مرحبا · Xin chào<br>
@@ -19,24 +19,24 @@
 </p>
 
 <p align="center">
-  🚀 <a href="https://aiecosvietnam.github.io/learning-ai/welcome.html">Empezar ahora</a> · ✨ <a href="https://aiecosvietnam.github.io/learning-ai/en/appendix/">Tutorial interactivo</a> · 🦞 <a href="https://github.com/datawhalechina/hello-claw">Aprender OpenClaw</a> · 📖 <a href="#table-of-contents">Tabla de contenidos</a><br>
-  <span style="font-size: 0.85em; color: #888;">🚀 <a href="https://aiecosvietnam.github.io/learning-ai/welcome.html">开始体验</a> · ✨ <a href="https://aiecosvietnam.github.io/learning-ai/zh-cn/appendix/">交互式教程</a> · 🦞 <a href="https://github.com/datawhalechina/hello-claw">学习 OpenClaw</a> · 📖 <a href="#table-of-contents">查看目录</a></span>
+  🚀 <a href="https://taskai.vn/welcome.html">Empezar ahora</a> · ✨ <a href="https://taskai.vn/en/appendix/">Tutorial interactivo</a> · 🦞 <a href="https://github.com/datawhalechina/hello-claw">Aprender OpenClaw</a> · 📖 <a href="#table-of-contents">Tabla de contenidos</a><br>
+  <span style="font-size: 0.85em; color: #888;">🚀 <a href="https://taskai.vn/welcome.html">开始体验</a> · ✨ <a href="https://taskai.vn/zh-cn/appendix/">交互式教程</a> · 🦞 <a href="https://github.com/datawhalechina/hello-claw">学习 OpenClaw</a> · 📖 <a href="#table-of-contents">查看目录</a></span>
 </p>
 
 <p align="center">
-  <a href="https://aiecosvietnam.github.io/learning-ai/welcome.html">Leer en línea</a> ·
+  <a href="https://taskai.vn/welcome.html">Leer en línea</a> ·
   <a href="#-content-navigation">Mapa de aprendizaje</a><br>
   <span style="font-size: 0.85em; color: #888;">
-    <a href="https://aiecosvietnam.github.io/learning-ai/welcome.html">开始阅读</a> ·
+    <a href="https://taskai.vn/welcome.html">开始阅读</a> ·
     <a href="#-content-navigation">学习地图</a>
   </span>
 </p>
 
 <p align="center">
-    <a href="https://github.com/aiecosvietnam/learning-ai/stargazers" target="_blank">
-        <img src="https://img.shields.io/github/stars/aiecosvietnam/learning-ai?color=660874&style=for-the-badge&logo=star&logoColor=white&labelColor=1a1a2e" alt="Stars"></a>
-    <a href="https://github.com/aiecosvietnam/learning-ai/network/members" target="_blank">
-        <img src="https://img.shields.io/github/forks/aiecosvietnam/learning-ai?color=660874&style=for-the-badge&logo=git-fork&logoColor=white&labelColor=1a1a2e" alt="Forks"></a>
+    <a href="https://github.com/MichaelDo0101/learning-ai/stargazers" target="_blank">
+        <img src="https://img.shields.io/github/stars/MichaelDo0101/learning-ai?color=660874&style=for-the-badge&logo=star&logoColor=white&labelColor=1a1a2e" alt="Stars"></a>
+    <a href="https://github.com/MichaelDo0101/learning-ai/network/members" target="_blank">
+        <img src="https://img.shields.io/github/forks/MichaelDo0101/learning-ai?color=660874&style=for-the-badge&logo=git-fork&logoColor=white&labelColor=1a1a2e" alt="Forks"></a>
     <a href="../../LICENSE" target="_blank">
         <img src="https://img.shields.io/badge/License-CC_BY_NC_SA_4.0-4ecdc4?style=for-the-badge&logo=creative-commons&logoColor=white&labelColor=1a1a2e" alt="License"></a>
 </p>
@@ -106,12 +106,12 @@
   </tr>
 </table>
 <div align="center">
-  <h3>⭐ <a href="https://github.com/aiecosvietnam/learning-ai" style="color: #d0cd16ff;">Marca con una estrella el repositorio aquí</a> para ayudar a acelerar las actualizaciones ❤️</h3>
+  <h3>⭐ <a href="https://github.com/MichaelDo0101/learning-ai" style="color: #d0cd16ff;">Marca con una estrella el repositorio aquí</a> para ayudar a acelerar las actualizaciones ❤️</h3>
 </div>
 
 <div align="center" style="margin: 30px 0;">
-  <a href="https://github.com/aiecosvietnam/learning-ai/issues/new?template=story_submission.md">
-    <img src="https://raw.githubusercontent.com/aiecosvietnam/learning-ai/main/assets/stories_image.png" alt="Comparte tu historia Vibe" width="80%" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  <a href="https://github.com/MichaelDo0101/learning-ai/issues/new?template=story_submission.md">
+    <img src="https://raw.githubusercontent.com/MichaelDo0101/learning-ai/main/assets/stories_image.png" alt="Comparte tu historia Vibe" width="80%" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
   </a>
   <p style="margin-top: 15px; font-size: 1.1em; color: #666;">
     📝 <strong>¿Tienes tu propia historia de vibe coding?</strong>
@@ -152,16 +152,16 @@ Easy-Vibe te enseña a convertir eso en un producto real.
 ## 🔥 News
 
 - **[2026-05-20]** 🌍 **Cobertura multilingue completa de la Etapa 1**: La Etapa 1 ya esta disponible en todos los idiomas soportados (zh-cn, en, zh-tw, ja-jp, ko-kr, es-es, fr-fr, de-de, ar-sa, vi-vn). Se verifico la navegacion/compilacion para evitar 404.
-- **[2026-03-29]** ✨ **Lanzamos la sección de historias de usuarios y la actualizamos con casos reales**: Añadimos un carrusel interactivo y páginas dedicadas en la portada, y sustituimos el contenido provisional por cuatro historias reales de una maestra rural, una estudiante universitaria, un profesor de informática de secundaria y un camionero que construyeron productos reales con IA. [👉 View the stories](https://aiecosvietnam.github.io/learning-ai/zh-cn/vibe-stories/story-1.html)
-- **[2026-03-26]** 🚀 **Actualización masiva de contenido práctico de la Etapa 2**: Se completó el proyecto final SaaS "[Tu primera aplicación full-stack SaaS: Generador de copywriting](https://aiecosvietnam.github.io/learning-ai/en/stage-2/assignments/fullstack-app/)" y se amplió sustancialmente la sección "[Cómo integrar Stripe y sistemas de pago](https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/stripe-payment/)".
-- **[2026-03-25]** 📚 **Nuevo apéndice: Investigación de usuarios y validación de requisitos**: Se agregaron cuatro nuevos artículos que cubren la búsqueda de ideas, el modelo Double Diamond, Jobs to Be Done y The Mom Test para ayudar a los principiantes a descubrir y validar ideas de productos. [👉 Leer el apéndice](https://aiecosvietnam.github.io/learning-ai/en/appendix/)
-- **[2026-03-25]** 📚 **Documentación en inglés completamente actualizada**: La Etapa 2 (Desarrollo full-stack) y la Etapa 3 (Desarrollo avanzado) ya están disponibles completamente en inglés. [👉 Empezar a aprender](https://aiecosvietnam.github.io/learning-ai/en/stage-2/)
+- **[2026-03-29]** ✨ **Lanzamos la sección de historias de usuarios y la actualizamos con casos reales**: Añadimos un carrusel interactivo y páginas dedicadas en la portada, y sustituimos el contenido provisional por cuatro historias reales de una maestra rural, una estudiante universitaria, un profesor de informática de secundaria y un camionero que construyeron productos reales con IA. [👉 View the stories](https://taskai.vn/zh-cn/vibe-stories/story-1.html)
+- **[2026-03-26]** 🚀 **Actualización masiva de contenido práctico de la Etapa 2**: Se completó el proyecto final SaaS "[Tu primera aplicación full-stack SaaS: Generador de copywriting](https://taskai.vn/en/stage-2/assignments/fullstack-app/)" y se amplió sustancialmente la sección "[Cómo integrar Stripe y sistemas de pago](https://taskai.vn/en/stage-2/backend/stripe-payment/)".
+- **[2026-03-25]** 📚 **Nuevo apéndice: Investigación de usuarios y validación de requisitos**: Se agregaron cuatro nuevos artículos que cubren la búsqueda de ideas, el modelo Double Diamond, Jobs to Be Done y The Mom Test para ayudar a los principiantes a descubrir y validar ideas de productos. [👉 Leer el apéndice](https://taskai.vn/en/appendix/)
+- **[2026-03-25]** 📚 **Documentación en inglés completamente actualizada**: La Etapa 2 (Desarrollo full-stack) y la Etapa 3 (Desarrollo avanzado) ya están disponibles completamente en inglés. [👉 Empezar a aprender](https://taskai.vn/en/stage-2/)
 <details>
 <summary>Noticias Pasadas</summary>
 
 - **[2026-03-02]** 🦞 **Soporte amigable para OpenClaw y AI Agent**: Se agregó `llms.txt` para que OpenClaw, Claude, Cursor, Trae y otros agentes de IA puedan comprender rápidamente la estructura del repositorio y encontrar el contenido tutorial adecuado.
-- **[2026-03-01]** La sección de [Desarrollo Avanzado](https://aiecosvietnam.github.io/learning-ai/en/stage-3/) ha sido actualizada con guías detalladas para Claude Code, incluyendo MCP, Skills, Agent Teams y más, junto con ocho tutoriales de proyectos multiplataforma.
-- **[2026-02-25]** Actualizada la [Base de Conocimientos del Apéndice](https://aiecosvietnam.github.io/learning-ai/en/appendix/), ahora cubre 9 áreas de conocimiento y más de 80 temas interactivos.
+- **[2026-03-01]** La sección de [Desarrollo Avanzado](https://taskai.vn/en/stage-3/) ha sido actualizada con guías detalladas para Claude Code, incluyendo MCP, Skills, Agent Teams y más, junto con ocho tutoriales de proyectos multiplataforma.
+- **[2026-02-25]** Actualizada la [Base de Conocimientos del Apéndice](https://taskai.vn/en/appendix/), ahora cubre 9 áreas de conocimiento y más de 80 temas interactivos.
 - **[2026-01-27]** Agregados tutoriales de desarrollo de aplicaciones para Android e iOS.
 - **[2026-01-19]** Lanzadas demos interactivas para Prompt Engineering, historia de la IA, diseño de autenticación, principios de Git y más.
 - **[2026-01-16]** Reorganizada la estructura del proyecto y establecido formalmente el capítulo de entrada para principiantes.
@@ -187,42 +187,42 @@ Easy-Vibe te enseña a convertir eso en un producto real.
 **Qué aprenderás**: Qué se siente realmente al programar con IA a través de un ejemplo práctico, simple y concreto
 **Qué obtendrás**: Una primera impresión clara del vibe coding y cómo trabajar con IA mediante conversación
 
-[Empieza aquí](https://aiecosvietnam.github.io/learning-ai/en/stage-1/ai-capabilities-through-games/)
+[Empieza aquí](https://taskai.vn/en/stage-1/ai-capabilities-through-games/)
 
 ### 💡 Quiero convertir una idea en un prototipo de producto
 **Ideal para**: Principiantes / product managers / emprendedores
 **Qué aprenderás**: Hoja de ruta de aprendizaje, herramientas AI IDE, validación de ideas, prototipado, integración de capacidades de IA e iteración de demos completas
 **Qué obtendrás**: Un prototipo de producto con IA que puedes mostrar realmente a usuarios o compañeros de equipo
 
-[Empezar a aprender](https://aiecosvietnam.github.io/learning-ai/en/stage-1/learning-map/)
+[Empezar a aprender](https://taskai.vn/en/stage-1/learning-map/)
 
 ### 🚀 Quiero construir productos full-stack de principio a fin
 **Ideal para**: Desarrolladores junior / indie hackers / aprendiz avanzados
 **Qué aprenderás**: Flujos de trabajo frontend, diseño a código, bases de datos, APIs backend, despliegue, facturación y proyectos principales
 **Qué obtendrás**: La capacidad de lanzar de forma independiente aplicaciones web modernas con IA
 
-[Empezar a aprender](https://aiecosvietnam.github.io/learning-ai/en/stage-2/)
+[Empezar a aprender](https://taskai.vn/en/stage-2/)
 
 ### AI-Native: Quiero flujos de trabajo avanzados con Claude Code y agentes
 **Ideal para**: Desarrolladores interesados en ingeniería AI-Native
 **Qué aprenderás**: Claude Code, MCP, Skills, Agent Teams, tareas de larga duración, Spec Coding y entrega de aplicaciones multiplataforma
 **Qué obtendrás**: Un flujo de trabajo más robusto para desarrollo asistido por IA complejo y automatización
 
-[Ir a desarrollo avanzado](https://aiecosvietnam.github.io/learning-ai/en/stage-3/)
+[Ir a desarrollo avanzado](https://taskai.vn/en/stage-3/)
 
 ### 📚 Quiero material de referencia y fundamentos
 **Ideal para**: Todos
 **Qué aprenderás**: Fundamentos de computación, conceptos básicos frontend/backend, infraestructura, principios de IA y prácticas de ingeniería
 **Qué obtendrás**: Una base de conocimiento de referencia a largo plazo que cubre 9 áreas de conocimiento principales
 
-[Explorar la base de conocimiento](https://aiecosvietnam.github.io/learning-ai/en/appendix/)
+[Explorar la base de conocimiento](https://taskai.vn/en/appendix/)
 
 ## Sugerencias de estudio
 
-- Si eres principiante, product manager o emprendedor, empieza con la [Etapa 1](https://aiecosvietnam.github.io/learning-ai/en/stage-1/learning-map/)
-- Si quieres pasar de prototipos a entrega full-stack, empieza con la [Etapa 2](https://aiecosvietnam.github.io/learning-ai/en/stage-2/)
-- Si quieres flujos de trabajo avanzados con Claude Code o proyectos multiplataforma, ve a la [Etapa 3](https://aiecosvietnam.github.io/learning-ai/en/stage-3/)
-- Si te bloquean conceptos o te falta conocimiento previo, usa la [Base de Conocimiento del Apéndice](https://aiecosvietnam.github.io/learning-ai/en/appendix/)
+- Si eres principiante, product manager o emprendedor, empieza con la [Etapa 1](https://taskai.vn/en/stage-1/learning-map/)
+- Si quieres pasar de prototipos a entrega full-stack, empieza con la [Etapa 2](https://taskai.vn/en/stage-2/)
+- Si quieres flujos de trabajo avanzados con Claude Code o proyectos multiplataforma, ve a la [Etapa 3](https://taskai.vn/en/stage-3/)
+- Si te bloquean conceptos o te falta conocimiento previo, usa la [Base de Conocimiento del Apéndice](https://taskai.vn/en/appendix/)
 
 ### 📖 Navegación de contenidos
 
@@ -234,38 +234,38 @@ Easy-Vibe te enseña a convertir eso en un producto real.
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Mapa de aprendizaje](https://aiecosvietnam.github.io/learning-ai/en/stage-1/learning-map/) | Una visión general guiada de todo el recorrido de aprendizaje |
-| [La era de la IA: Si puedes hablar, puedes programar](https://aiecosvietnam.github.io/learning-ai/en/stage-1/ai-capabilities-through-games/) | Ten tu primer contacto con la programación con IA a través de ejemplos como Snake |
-| [Domina las herramientas de programación con IA](https://aiecosvietnam.github.io/learning-ai/en/stage-1/introduction-to-ai-ide/) | Aprende cómo funcionan las herramientas AI IDE y construye proyectos locales simples con ellas |
-| [Encuentra grandes ideas](https://aiecosvietnam.github.io/learning-ai/en/stage-1/finding-great-idea/) | Aprende a descubrir y validar ideas de productos que valgan la pena construir |
-| [Construye prototipos de producto](https://aiecosvietnam.github.io/learning-ai/en/stage-1/building-prototype/) | Avanza desde los requisitos hasta prototipos de producto de una o múltiples páginas |
-| [Integra capacidades de IA](https://aiecosvietnam.github.io/learning-ai/en/stage-1/integrating-ai-capabilities/) | Integra funciones de IA de texto, imagen y video |
-| [Práctica de proyecto completo](https://aiecosvietnam.github.io/learning-ai/en/stage-1/complete-project-practice/) | Simula escenarios reales, recopila comentarios de usuarios e itera en un proyecto completo |
+| [Mapa de aprendizaje](https://taskai.vn/en/stage-1/learning-map/) | Una visión general guiada de todo el recorrido de aprendizaje |
+| [La era de la IA: Si puedes hablar, puedes programar](https://taskai.vn/en/stage-1/ai-capabilities-through-games/) | Ten tu primer contacto con la programación con IA a través de ejemplos como Snake |
+| [Domina las herramientas de programación con IA](https://taskai.vn/en/stage-1/introduction-to-ai-ide/) | Aprende cómo funcionan las herramientas AI IDE y construye proyectos locales simples con ellas |
+| [Encuentra grandes ideas](https://taskai.vn/en/stage-1/finding-great-idea/) | Aprende a descubrir y validar ideas de productos que valgan la pena construir |
+| [Construye prototipos de producto](https://taskai.vn/en/stage-1/building-prototype/) | Avanza desde los requisitos hasta prototipos de producto de una o múltiples páginas |
+| [Integra capacidades de IA](https://taskai.vn/en/stage-1/integrating-ai-capabilities/) | Integra funciones de IA de texto, imagen y video |
+| [Práctica de proyecto completo](https://taskai.vn/en/stage-1/complete-project-practice/) | Simula escenarios reales, recopila comentarios de usuarios e itera en un proyecto completo |
 
 #### Apéndice: Pensamiento de producto y negocio
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Pensamiento de producto y diseño de soluciones](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-a-product-thinking/) | Marcos fundamentales para ir de cero a uno con un producto |
-| [Escenarios de aplicación de IA en la industria (B2B)](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-industry-scenarios/) | Comprende cómo se aplica la IA en diferentes industrias |
-| [Inspiración de escenarios de IA para consumidores (B2C)](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-c-consumer-scenarios/) | Explora oportunidades de productos en IA de consumo |
+| [Pensamiento de producto y diseño de soluciones](https://taskai.vn/en/stage-1/appendix-a-product-thinking/) | Marcos fundamentales para ir de cero a uno con un producto |
+| [Escenarios de aplicación de IA en la industria (B2B)](https://taskai.vn/en/stage-1/appendix-industry-scenarios/) | Comprende cómo se aplica la IA en diferentes industrias |
+| [Inspiración de escenarios de IA para consumidores (B2C)](https://taskai.vn/en/stage-1/appendix-c-consumer-scenarios/) | Explora oportunidades de productos en IA de consumo |
 
 #### Apéndice: Investigación de usuarios y validación de requisitos
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Dónde encontrar ideas: 3 fuentes de referencia que funcionan mejor para principiantes](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-idea-sources/) | Construye un flujo confiable para encontrar oportunidades de productos concretas |
-| [Double Diamond: primero haz lo correcto, luego hazlo bien](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-double-diamond/) | Usa un proceso estructurado para pasar de la inspiración dispersa a una dirección viable |
-| [Usa Jobs to Be Done para descubrir lo que los usuarios realmente quieren](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-jobs-to-be-done/) | Analiza los objetivos de los usuarios a través de tareas reales en lugar de solicitudes de funciones superficiales |
-| [The Mom Test: un método de entrevista a usuarios para validar la demanda](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-mom-test/) | Aprende a hacer mejores preguntas y evitar comentarios falsos positivos |
+| [Dónde encontrar ideas: 3 fuentes de referencia que funcionan mejor para principiantes](https://taskai.vn/en/stage-1/appendix-idea-sources/) | Construye un flujo confiable para encontrar oportunidades de productos concretas |
+| [Double Diamond: primero haz lo correcto, luego hazlo bien](https://taskai.vn/en/stage-1/appendix-double-diamond/) | Usa un proceso estructurado para pasar de la inspiración dispersa a una dirección viable |
+| [Usa Jobs to Be Done para descubrir lo que los usuarios realmente quieren](https://taskai.vn/en/stage-1/appendix-jobs-to-be-done/) | Analiza los objetivos de los usuarios a través de tareas reales en lugar de solicitudes de funciones superficiales |
+| [The Mom Test: un método de entrevista a usuarios para validar la demanda](https://taskai.vn/en/stage-1/appendix-mom-test/) | Aprende a hacer mejores preguntas y evitar comentarios falsos positivos |
 
 #### Apéndice: Soluciones técnicas
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Qué hacer si encuentras errores](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-b-common-errors/) | Problemas comunes de vibe coding y cómo solucionarlos |
-| [Comparación de siete herramientas de programación con IA](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial) | Compara las principales plataformas de programación con IA mediante pruebas prácticas |
-| [Diseña sitios web con agentes](https://aiecosvietnam.github.io/learning-ai/en/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents) | Aprende la colaboración multi-agente en la práctica |
+| [Qué hacer si encuentras errores](https://taskai.vn/en/stage-1/appendix-b-common-errors/) | Problemas comunes de vibe coding y cómo solucionarlos |
+| [Comparación de siete herramientas de programación con IA](https://taskai.vn/en/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial) | Compara las principales plataformas de programación con IA mediante pruebas prácticas |
+| [Diseña sitios web con agentes](https://taskai.vn/en/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents) | Aprende la colaboración multi-agente en la práctica |
 
 ### II. Desarrolladores junior e intermedios
 
@@ -273,38 +273,38 @@ Easy-Vibe te enseña a convertir eso en un producto real.
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Frontend 0: Construye tu propio agente de producción de recursos con Lovart](https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/lovart-assets/) | Usa Nanobanana y Lovart para generar recursos visuales por lotes y construir un agente de dibujo con reconocimiento de intenciones |
-| [Frontend 1: Conceptos básicos de Figma y MasterGo](https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/figma-mastergo/) | Aprende el flujo de trabajo desde borradores de diseño hasta un pensamiento UI listo para implementar |
-| [Frontend 2: Construye tu primera aplicación moderna - Diseño UI](https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/ui-design/) | Aprende los fundamentos de diseño UI detrás de las interfaces de aplicaciones modernas |
-| [Frontend 3: Guías de UI y diseño multi-producto](https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/multi-product-ui/) | Mejora la consistencia y estética de múltiples productos con reglas UI compartidas |
-| [Frontend 4: Haz interfaces hermosas con LLMs y Skills](https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/llm-skills-beautiful/) | Usa prompts y plugins para que la IA genere interfaces más pulidas y distintivas |
-| [Frontend 4: Construyamos retratos de Hogwarts](https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/hogwarts-portraits/) | Construye un proyecto frontend interactivo de imágenes con IA desde cero |
-| [Frontend 6: De prototipo de diseño a código de proyecto](https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/design-to-code/) | Convierte prototipos de diseño en código frontend que realmente funciona en el navegador |
-| [Frontend 7: Actualiza tu UI con bibliotecas de componentes modernas](https://aiecosvietnam.github.io/learning-ai/en/stage-2/frontend/modern-component-library/) | Usa bibliotecas de componentes para construir interfaces profesionales más rápido |
+| [Frontend 0: Construye tu propio agente de producción de recursos con Lovart](https://taskai.vn/en/stage-2/frontend/lovart-assets/) | Usa Nanobanana y Lovart para generar recursos visuales por lotes y construir un agente de dibujo con reconocimiento de intenciones |
+| [Frontend 1: Conceptos básicos de Figma y MasterGo](https://taskai.vn/en/stage-2/frontend/figma-mastergo/) | Aprende el flujo de trabajo desde borradores de diseño hasta un pensamiento UI listo para implementar |
+| [Frontend 2: Construye tu primera aplicación moderna - Diseño UI](https://taskai.vn/en/stage-2/frontend/ui-design/) | Aprende los fundamentos de diseño UI detrás de las interfaces de aplicaciones modernas |
+| [Frontend 3: Guías de UI y diseño multi-producto](https://taskai.vn/en/stage-2/frontend/multi-product-ui/) | Mejora la consistencia y estética de múltiples productos con reglas UI compartidas |
+| [Frontend 4: Haz interfaces hermosas con LLMs y Skills](https://taskai.vn/en/stage-2/frontend/llm-skills-beautiful/) | Usa prompts y plugins para que la IA genere interfaces más pulidas y distintivas |
+| [Frontend 4: Construyamos retratos de Hogwarts](https://taskai.vn/en/stage-2/frontend/hogwarts-portraits/) | Construye un proyecto frontend interactivo de imágenes con IA desde cero |
+| [Frontend 6: De prototipo de diseño a código de proyecto](https://taskai.vn/en/stage-2/frontend/design-to-code/) | Convierte prototipos de diseño en código frontend que realmente funciona en el navegador |
+| [Frontend 7: Actualiza tu UI con bibliotecas de componentes modernas](https://taskai.vn/en/stage-2/frontend/modern-component-library/) | Usa bibliotecas de componentes para construir interfaces profesionales más rápido |
 
 #### Backend
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Backend 1: Aprende Git y GitHub](https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/git-workflow/) | Domina las operaciones de control de versiones y los flujos de colaboración con Git |
-| [Backend 2: De base de datos a Supabase](https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/database-supabase/) | Aprende los fundamentos de bases de datos relacionales y usa Supabase como plataforma BaaS moderna |
-| [Backend 3: Diseño y desarrollo de APIs backend](https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/ai-interface-code/) | Usa IA para asistir en el diseño de APIs, generación de código backend y documentación de APIs |
-| [Backend 4: Lanza tu prototipo de producto](https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/zeabur-deployment/) | Despliega rápidamente aplicaciones full-stack en la nube con Zeabur |
-| [Backend 5: De IDEs a herramientas de programación con IA por CLI](https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/modern-cli/) | Explora flujos de trabajo de programación con IA desde la terminal para desarrollo moderno |
-| [Backend 6: Integra Stripe y otros sistemas de facturación](https://aiecosvietnam.github.io/learning-ai/en/stage-2/backend/stripe-payment/) | Agrega monetización con capacidades de pago y facturación |
+| [Backend 1: Aprende Git y GitHub](https://taskai.vn/en/stage-2/backend/git-workflow/) | Domina las operaciones de control de versiones y los flujos de colaboración con Git |
+| [Backend 2: De base de datos a Supabase](https://taskai.vn/en/stage-2/backend/database-supabase/) | Aprende los fundamentos de bases de datos relacionales y usa Supabase como plataforma BaaS moderna |
+| [Backend 3: Diseño y desarrollo de APIs backend](https://taskai.vn/en/stage-2/backend/ai-interface-code/) | Usa IA para asistir en el diseño de APIs, generación de código backend y documentación de APIs |
+| [Backend 4: Lanza tu prototipo de producto](https://taskai.vn/en/stage-2/backend/zeabur-deployment/) | Despliega rápidamente aplicaciones full-stack en la nube con Zeabur |
+| [Backend 5: De IDEs a herramientas de programación con IA por CLI](https://taskai.vn/en/stage-2/backend/modern-cli/) | Explora flujos de trabajo de programación con IA desde la terminal para desarrollo moderno |
+| [Backend 6: Integra Stripe y otros sistemas de facturación](https://taskai.vn/en/stage-2/backend/stripe-payment/) | Agrega monetización con capacidades de pago y facturación |
 
 #### Proyectos principales
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Proyecto principal 1: Tu primera aplicación SaaS full-stack - Sitio web de copywriting con IA](https://aiecosvietnam.github.io/learning-ai/en/stage-2/assignments/fullstack-app/) | Construye un espacio de trabajo de marketing con IA con inicio de sesión, generación, facturación y gestión de administración |
-| [Proyecto principal 2: Sistema de exámenes y gestión en línea](https://aiecosvietnam.github.io/learning-ai/en/stage-2/assignments/modern-frontend-trae/) | Construye un sistema de exámenes en línea con generación de preguntas, flujos de examen y herramientas de administración |
+| [Proyecto principal 1: Tu primera aplicación SaaS full-stack - Sitio web de copywriting con IA](https://taskai.vn/en/stage-2/assignments/fullstack-app/) | Construye un espacio de trabajo de marketing con IA con inicio de sesión, generación, facturación y gestión de administración |
+| [Proyecto principal 2: Sistema de exámenes y gestión en línea](https://taskai.vn/en/stage-2/assignments/modern-frontend-trae/) | Construye un sistema de exámenes en línea con generación de preguntas, flujos de examen y herramientas de administración |
 
 #### Apéndice de capacidades de IA
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [IA 1: Conceptos básicos de Dify e integración de base de conocimiento](https://aiecosvietnam.github.io/learning-ai/en/stage-2/ai-capabilities/dify-knowledge-base/) | Aprende a construir aplicaciones de IA con Dify e integrar bases de conocimiento privadas |
+| [IA 1: Conceptos básicos de Dify e integración de base de conocimiento](https://taskai.vn/en/stage-2/ai-capabilities/dify-knowledge-base/) | Aprende a construir aplicaciones de IA con Dify e integrar bases de conocimiento privadas |
 
 ### III. Desarrolladores avanzados
 
@@ -312,45 +312,45 @@ Easy-Vibe te enseña a convertir eso en un producto real.
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Comenzando con Claude Code](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/basics/) | Instalación, configuración, fundamentos y comandos útiles |
-| [Guía de Claude Code MCP](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/mcp/) | Conecta Claude Code a GitHub, bases de datos, APIs y otros servicios a través de MCP |
-| [Guía de Claude Code Skills](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/skills/) | Empaqueta experiencia en habilidades reutilizables que puedes usar una y otra vez |
-| [Cómo mantener a Claude Code trabajando en tareas de larga duración](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/long-running-tasks/) | Diseña tareas de larga duración para que las herramientas de codificación sigan trabajando hasta terminar |
-| [Guía de Claude Agent Teams](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/agent-teams/) | Coordina múltiples instancias de IA como un equipo de desarrollo real |
-| [Superpoderes de Claude Code para desarrollo de grado empresarial](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/superpowers/) | Ayuda a la IA a producir código de grado empresarial con TDD y mejores prácticas |
-| [Mejores prácticas de flujo de trabajo de Claude Code](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/workflow/) | Mejores prácticas para refactorización, revisión de código y desarrollo diario |
-| [Desarrollo remoto con Claude Code en móvil](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/mobile-development/) | Usa Claude Code más allá del escritorio y construye un flujo de trabajo remoto productivo en dispositivos móviles |
-| [Guía completa del SDK de Claude Agent](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/claude-agent-sdk/) | Construye flujos de trabajo de agentes personalizados e integra Claude en tus propias herramientas con el SDK |
-| [De vibe coding a spec coding](https://aiecosvietnam.github.io/learning-ai/en/stage-3/core-skills/spec-coding/) | Pasa de prompts ad-hoc a un flujo de desarrollo con IA más estructurado y basado en especificaciones |
+| [Comenzando con Claude Code](https://taskai.vn/en/stage-3/core-skills/basics/) | Instalación, configuración, fundamentos y comandos útiles |
+| [Guía de Claude Code MCP](https://taskai.vn/en/stage-3/core-skills/mcp/) | Conecta Claude Code a GitHub, bases de datos, APIs y otros servicios a través de MCP |
+| [Guía de Claude Code Skills](https://taskai.vn/en/stage-3/core-skills/skills/) | Empaqueta experiencia en habilidades reutilizables que puedes usar una y otra vez |
+| [Cómo mantener a Claude Code trabajando en tareas de larga duración](https://taskai.vn/en/stage-3/core-skills/long-running-tasks/) | Diseña tareas de larga duración para que las herramientas de codificación sigan trabajando hasta terminar |
+| [Guía de Claude Agent Teams](https://taskai.vn/en/stage-3/core-skills/agent-teams/) | Coordina múltiples instancias de IA como un equipo de desarrollo real |
+| [Superpoderes de Claude Code para desarrollo de grado empresarial](https://taskai.vn/en/stage-3/core-skills/superpowers/) | Ayuda a la IA a producir código de grado empresarial con TDD y mejores prácticas |
+| [Mejores prácticas de flujo de trabajo de Claude Code](https://taskai.vn/en/stage-3/core-skills/workflow/) | Mejores prácticas para refactorización, revisión de código y desarrollo diario |
+| [Desarrollo remoto con Claude Code en móvil](https://taskai.vn/en/stage-3/core-skills/mobile-development/) | Usa Claude Code más allá del escritorio y construye un flujo de trabajo remoto productivo en dispositivos móviles |
+| [Guía completa del SDK de Claude Agent](https://taskai.vn/en/stage-3/core-skills/claude-agent-sdk/) | Construye flujos de trabajo de agentes personalizados e integra Claude en tus propias herramientas con el SDK |
+| [De vibe coding a spec coding](https://taskai.vn/en/stage-3/core-skills/spec-coding/) | Pasa de prompts ad-hoc a un flujo de desarrollo con IA más estructurado y basado en especificaciones |
 
 #### Desarrollo multiplataforma
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Cómo elegir la plataforma adecuada para tu aplicación](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/choose-platform/) | Compara formatos de aplicaciones y elige la plataforma adecuada según usuarios, escenarios y objetivos de entrega |
-| [Construye un Mini Programa de WeChat](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/wechat-miniprogram/) | Comprende el ecosistema y lanza un mini programa frontend desde plantilla hasta producción |
-| [Construye un Mini Programa de WeChat con backend](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/wechat-miniprogram-backend/) | Agrega lógica backend y bases de datos para completar el ciclo de negocio completo |
-| [Construye una aplicación Android](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/android-app/) | Aprende desarrollo de aplicaciones Android con un flujo de trabajo nativo moderno |
-| [Construye una aplicación iOS](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/ios-app/) | Aprende desarrollo de aplicaciones iOS y las convenciones del ecosistema Apple |
-| [Construye una aplicación PWA local](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/pwa-local-app/) | Convierte un sitio web en una aplicación real con soporte offline, push e instalación |
-| [Construye una extensión de asistente de IA para navegador](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/browser-ai-extension/) | Crea una extensión de Chrome que resume cualquier página con APIs en la nube o IA integrada |
-| [Construye una aplicación de escritorio con Electron](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/electron-voice-to-text/) | Construye una aplicación de escritorio de voz a texto con Electron para tres plataformas |
-| [Construye y acuña un NFT rápidamente](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/nft-minting/) | Escribe un contrato inteligente desde cero, despliégalo y acuña tu propio NFT |
-| [Construye una extensión para VS Code](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/vscode-extension/) | Construye un asistente de proyecto de IA con plantillas, chat de código y preguntas/respuestas multi-archivo |
-| [Construye una aplicación de escritorio Qt de grado industrial](https://aiecosvietnam.github.io/learning-ai/en/stage-3/cross-platform/qt-industrial-hmi/) | Crea un sistema HMI Qt en tiempo real con tendencias, alertas y monitoreo |
+| [Cómo elegir la plataforma adecuada para tu aplicación](https://taskai.vn/en/stage-3/cross-platform/choose-platform/) | Compara formatos de aplicaciones y elige la plataforma adecuada según usuarios, escenarios y objetivos de entrega |
+| [Construye un Mini Programa de WeChat](https://taskai.vn/en/stage-3/cross-platform/wechat-miniprogram/) | Comprende el ecosistema y lanza un mini programa frontend desde plantilla hasta producción |
+| [Construye un Mini Programa de WeChat con backend](https://taskai.vn/en/stage-3/cross-platform/wechat-miniprogram-backend/) | Agrega lógica backend y bases de datos para completar el ciclo de negocio completo |
+| [Construye una aplicación Android](https://taskai.vn/en/stage-3/cross-platform/android-app/) | Aprende desarrollo de aplicaciones Android con un flujo de trabajo nativo moderno |
+| [Construye una aplicación iOS](https://taskai.vn/en/stage-3/cross-platform/ios-app/) | Aprende desarrollo de aplicaciones iOS y las convenciones del ecosistema Apple |
+| [Construye una aplicación PWA local](https://taskai.vn/en/stage-3/cross-platform/pwa-local-app/) | Convierte un sitio web en una aplicación real con soporte offline, push e instalación |
+| [Construye una extensión de asistente de IA para navegador](https://taskai.vn/en/stage-3/cross-platform/browser-ai-extension/) | Crea una extensión de Chrome que resume cualquier página con APIs en la nube o IA integrada |
+| [Construye una aplicación de escritorio con Electron](https://taskai.vn/en/stage-3/cross-platform/electron-voice-to-text/) | Construye una aplicación de escritorio de voz a texto con Electron para tres plataformas |
+| [Construye y acuña un NFT rápidamente](https://taskai.vn/en/stage-3/cross-platform/nft-minting/) | Escribe un contrato inteligente desde cero, despliégalo y acuña tu propio NFT |
+| [Construye una extensión para VS Code](https://taskai.vn/en/stage-3/cross-platform/vscode-extension/) | Construye un asistente de proyecto de IA con plantillas, chat de código y preguntas/respuestas multi-archivo |
+| [Construye una aplicación de escritorio Qt de grado industrial](https://taskai.vn/en/stage-3/cross-platform/qt-industrial-hmi/) | Crea un sistema HMI Qt en tiempo real con tendencias, alertas y monitoreo |
 
 #### Apéndice de capacidades de IA
 
 | Sección | Contenido clave |
 | :------ | :---------- |
-| [Qué es RAG y cómo funciona](https://aiecosvietnam.github.io/learning-ai/en/stage-3/ai-advanced/rag-introduction/) | Construye una comprensión sistemática de los principios de RAG y arquitecturas comunes |
-| [Flujos de trabajo RAG intermedios y avanzados con LangGraph](https://aiecosvietnam.github.io/learning-ai/en/stage-3/ai-advanced/langgraph-advanced-rag/) | Diseña flujos de trabajo de múltiples pasos y sistemas RAG más avanzados |
+| [Qué es RAG y cómo funciona](https://taskai.vn/en/stage-3/ai-advanced/rag-introduction/) | Construye una comprensión sistemática de los principios de RAG y arquitecturas comunes |
+| [Flujos de trabajo RAG intermedios y avanzados con LangGraph](https://taskai.vn/en/stage-3/ai-advanced/langgraph-advanced-rag/) | Diseña flujos de trabajo de múltiples pasos y sistemas RAG más avanzados |
 
 ### 📚 Base de conocimiento del apéndice
 
 > Cubriendo **9 áreas de conocimiento principales** y ** más de 80 temas interactivos**, este apéndice usa animación y componentes visuales para ayudarte a comprender intuitivamente conceptos fundamentales desde los fundamentos de computación hasta la frontera de la IA.
 >
-> 👉 [Ver el apéndice completo](https://aiecosvietnam.github.io/learning-ai/en/appendix/)
+> 👉 [Ver el apéndice completo](https://taskai.vn/en/appendix/)
 
 ### 🎓 Otros cursos
 
@@ -412,17 +412,17 @@ Por favor, ayúdame a ejecutar este proyecto localmente.
 - Gracias a cada colaborador y a todos los que apoyaron el proyecto con comentarios y estrellas ❤️
 
 <div align="center"> 
- <a href="https://www.star-history.com/#aiecosvietnam/learning-ai&type=timeline&legend=top-left"> 
+ <a href="https://www.star-history.com/#MichaelDo0101/learning-ai&type=timeline&legend=top-left"> 
    <picture> 
-     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=aiecosvietnam/learning-ai&type=timeline&theme=dark&legend=top-left" /> 
-     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=aiecosvietnam/learning-ai&type=timeline&legend=top-left" /> 
+     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MichaelDo0101/learning-ai&type=timeline&theme=dark&legend=top-left" /> 
+     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MichaelDo0101/learning-ai&type=timeline&legend=top-left" /> 
    </picture> 
  </a>
 </div>
 
 <div align=center style="margin-top: 30px;">
-  <a href="https://github.com/aiecosvietnam/learning-ai/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=aiecosvietnam/learning-ai" />
+  <a href="https://github.com/MichaelDo0101/learning-ai/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=MichaelDo0101/learning-ai" />
   </a>
 </div>
 
@@ -445,4 +445,4 @@ Esta obra está licenciada bajo la
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=aiecosvietnam/learning-ai&type=date&legend=top-left)](https://www.star-history.com/#aiecosvietnam/learning-ai&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=MichaelDo0101/learning-ai&type=date&legend=top-left)](https://www.star-history.com/#MichaelDo0101/learning-ai&type=date&legend=top-left)

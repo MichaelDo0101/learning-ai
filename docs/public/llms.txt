@@ -1,5 +1,5 @@
 # Task AI Wiki - AI Vibe Coding Curriculum
-# https://aiecosvietnam.github.io/learning-ai
+# https://taskai.vn
 #
 # This file helps AI models and agents understand our project structure
 # Created for: OpenClaw, Claude, Cursor, Trae, and other AI coding assistants
@@ -49,5 +49,5 @@ Stage 3 (Senior Developer): Cross-platform development
 
 == Contact ==
 
-- GitHub: https://github.com/aiecosvietnam/learning-ai
+- GitHub: https://github.com/MichaelDo0101/learning-ai
 - Organization: Datawhale China

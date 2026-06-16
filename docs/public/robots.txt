@@ -1,11 +1,11 @@
 # robots.txt for Easy-Vibe
-# https://aiecosvietnam.github.io/learning-ai
+# https://taskai.vn
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://aiecosvietnam.github.io/learning-ai/sitemap.xml
+Sitemap: https://taskai.vn/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
