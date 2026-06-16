@@ -1,6 +1,6 @@
 ---
 title: Liên hệ
-description: Liên hệ đội ngũ Task AI Wiki — website aiecos.ai, email learning@aiecos.ai, điện thoại 0909 080 066.
+description: Liên hệ đội ngũ Task AI Wiki — website taskai.vn, email contact@taskai.vn, điện thoại 0904 092 111.
 editLink: false
 lastUpdated: false
 outline: false
@@ -8,7 +8,7 @@ outline: false
 
 # Liên hệ
 
-**Task AI Wiki** là dự án giáo dục mở do **AIECOS** phát triển và vận hành. Bạn có câu hỏi, góp ý, muốn hợp tác hay cần hỗ trợ? Liên hệ với chúng tôi qua các kênh dưới đây.
+**Task AI Wiki** là dự án giáo dục mở do **Task AI VN** phát triển và vận hành. Bạn có câu hỏi, góp ý, muốn hợp tác hay cần hỗ trợ? Liên hệ với chúng tôi qua các kênh dưới đây.
 
 ## Kênh chính thức
 
