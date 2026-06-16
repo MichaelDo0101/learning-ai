@@ -541,7 +541,7 @@ watch(sidebarCollapsed, (collapsed) => {
         aria-label="Mở trang chào mừng"
         @click="openWelcomeFromWordmark"
       >
-        <span class="vp-home-wordmark-text">Task AI Wiki Full A-Z</span>
+        <span class="vp-home-wordmark-text">TASK.AI</span>
       </button>
     </template>
     <template #home-hero-info-after>
@@ -651,7 +651,9 @@ watch(sidebarCollapsed, (collapsed) => {
 }
 .vp-home-wordmark {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 18px;
   margin-top: -12px;
   margin-bottom: 18px;
   width: 100%;
@@ -660,12 +662,25 @@ watch(sidebarCollapsed, (collapsed) => {
   background: transparent;
   cursor: pointer;
 }
+.vp-home-wordmark::before {
+  content: '';
+  width: clamp(44px, 7vw, 72px);
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
+  background:
+    linear-gradient(#ffffff, #ffffff) center / 38% 38% no-repeat,
+    #2563eb;
+  box-shadow:
+    0 0 0 8px rgba(96, 165, 250, 0.18),
+    0 0 0 18px rgba(37, 99, 235, 0.08);
+}
 .vp-home-wordmark-text {
   font-size: clamp(36px, 7vw, 72px);
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   line-height: 1.1;
-  background: linear-gradient(100deg, #00c087 0%, #00b372 50%, #009966 100%);
+  background: linear-gradient(100deg, #1e40af 0%, #2563eb 58%, #60a5fa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

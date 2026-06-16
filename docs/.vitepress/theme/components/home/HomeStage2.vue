@@ -136,8 +136,8 @@ const localizedStage2Cards = computed(() => {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #1d1d1f;
-  letter-spacing: -0.02em;
+  color: #111827;
+  letter-spacing: 0;
   font-family:
     -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC',
     sans-serif;
@@ -152,8 +152,8 @@ const localizedStage2Cards = computed(() => {
 
 .comm-note {
   font-size: 17px;
-  color: #00b372;
-  letter-spacing: -0.01em;
+  color: #2563eb;
+  letter-spacing: 0;
 }
 
 .dark .comm-title {
