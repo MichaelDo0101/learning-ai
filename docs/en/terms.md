@@ -18,7 +18,7 @@ The content is provided **free of charge for learning purposes**. It is referenc
 
 ## 2. License & attribution
 
-Content is released under **[CC BY-NC-SA 4.0](https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE)**. You are free to share and adapt it, provided you:
+Content is released under **[CC BY-NC-SA 4.0](https://github.com/MichaelDo0101/learning-ai/blob/main/LICENSE)**. You are free to share and adapt it, provided you:
 
 - **Attribute** — credit Task AI Wiki.
 - **NonCommercial** — do not use it for commercial purposes.
@@ -32,8 +32,8 @@ The course references many third-party AI tools (ChatGPT, Cursor, Gemini…). **
 
 ## 4. Disclaimer
 
-The content is provided "as is", with no guarantee of perfect accuracy or being always up to date. You are responsible for how you apply it. Task AI Wiki and AIECOS are not liable for damages arising from its use.
+The content is provided "as is", with no guarantee of perfect accuracy or being always up to date. You are responsible for how you apply it. Task AI Wiki and Task AI are not liable for damages arising from its use.
 
 ## 5. Contact
 
-Questions about these terms? Email **[learning@aiecos.ai](mailto:learning@aiecos.ai)** or see [Contact](./contact).
+Questions about these terms? Email **[contact@taskai.vn](mailto:contact@taskai.vn)** or see [Contact](./contact).

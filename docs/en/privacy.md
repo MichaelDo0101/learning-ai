@@ -10,7 +10,7 @@ outline: false
 
 *Last updated: June 2026*
 
-**Task AI Wiki** (operated by AIECOS) is a **free, open, static educational website**. We collect minimal data and respect your privacy.
+**Task AI Wiki** (operated by Task AI) is a **free, open, static educational website**. We collect minimal data and respect your privacy.
 
 ## What we collect
 
@@ -31,7 +31,7 @@ The content links to external services (GitHub, YouTube, ChatGPT, AI tools…). 
 
 ## Privacy contact
 
-Questions or requests about your data? Email **[learning@aiecos.ai](mailto:learning@aiecos.ai)** or see the [Contact](./contact) page.
+Questions or requests about your data? Email **[contact@taskai.vn](mailto:contact@taskai.vn)** or see the [Contact](./contact) page.
 
 ---
 

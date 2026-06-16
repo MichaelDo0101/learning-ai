@@ -159,7 +159,7 @@ const recentPosts = (await getCollection('blog'))
     </p>
     <p class="mt-4">
       Hiện đang làm tại 
-      <a href="https://aiecos.com" class="text-indigo-600 underline">AIECOS</a>, 
+      <a href="https://taskai.vn" class="text-indigo-600 underline">Task AI</a>, 
       trước đây từng làm tại VinAI Research và FPT Software.
     </p>
   </section>
@@ -450,7 +450,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <a href="/cv.pdf" class="text-indigo-600">📄 Download PDF</a>
     
     <h2>Experience</h2>
-    <h3>AIECOS — Senior AI Engineer (2024 - now)</h3>
+    <h3>Task AI — Senior AI Engineer (2024 - now)</h3>
     <ul>
       <li>Lead AI team xây dựng platform Sale Agent</li>
       <li>Tích hợp LLM (Claude, GPT) với business workflow</li>

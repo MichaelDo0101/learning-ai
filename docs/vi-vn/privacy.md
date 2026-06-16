@@ -10,7 +10,7 @@ outline: false
 
 *Cập nhật lần cuối: 06/2026*
 
-**Task AI Wiki** (do AIECOS vận hành) là một **website giáo dục tĩnh, mở và miễn phí**. Chúng tôi thu thập dữ liệu ở mức tối thiểu và tôn trọng quyền riêng tư của bạn.
+**Task AI Wiki** (do Task AI vận hành) là một **website giáo dục tĩnh, mở và miễn phí**. Chúng tôi thu thập dữ liệu ở mức tối thiểu và tôn trọng quyền riêng tư của bạn.
 
 ## Chúng tôi thu thập gì
 
@@ -31,7 +31,7 @@ Nội dung có liên kết tới dịch vụ bên ngoài (GitHub, YouTube, ChatG
 
 ## Liên hệ về quyền riêng tư
 
-Có thắc mắc hoặc yêu cầu liên quan đến dữ liệu? Email **[learning@aiecos.ai](mailto:learning@aiecos.ai)** hoặc xem trang [Liên hệ](./contact).
+Có thắc mắc hoặc yêu cầu liên quan đến dữ liệu? Email **[contact@taskai.vn](mailto:contact@taskai.vn)** hoặc xem trang [Liên hệ](./contact).
 
 ---
 

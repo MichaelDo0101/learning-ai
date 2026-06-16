@@ -2,7 +2,7 @@
 
 Cảm ơn bạn quan tâm đóng góp! / Thanks for your interest in contributing!
 
-**Task AI Wiki** là dự án giáo dục mở do [AIECOS](https://aiecos.ai) vận hành, phái sinh từ [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) (mã nguồn mở), phát hành theo giấy phép [CC BY-NC-SA 4.0](./LICENSE).
+**Task AI Wiki** là dự án giáo dục mở do [Task AI](https://taskai.vn) vận hành, phái sinh từ [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) (mã nguồn mở), phát hành theo giấy phép [CC BY-NC-SA 4.0](./LICENSE).
 
 ---
 
@@ -10,8 +10,8 @@ Cảm ơn bạn quan tâm đóng góp! / Thanks for your interest in contributin
 
 ### Cách đóng góp
 
-- **Báo lỗi / góp ý nội dung:** mở [Issue](https://github.com/aiecosvietnam/learning-ai/issues). Ghi rõ trang/bài và mô tả vấn đề.
-- **Thảo luận, đặt câu hỏi:** dùng [Discussions](https://github.com/aiecosvietnam/learning-ai/discussions).
+- **Báo lỗi / góp ý nội dung:** mở [Issue](https://github.com/MichaelDo0101/learning-ai/issues). Ghi rõ trang/bài và mô tả vấn đề.
+- **Thảo luận, đặt câu hỏi:** dùng [Discussions](https://github.com/MichaelDo0101/learning-ai/discussions).
 - **Sửa nội dung / thêm bài:** fork repo → tạo branch → gửi Pull Request.
 
 ### Quy trình Pull Request
@@ -35,8 +35,8 @@ Cảm ơn bạn quan tâm đóng góp! / Thanks for your interest in contributin
 
 ### How to contribute
 
-- **Report bugs / content feedback:** open an [Issue](https://github.com/aiecosvietnam/learning-ai/issues) with the page/lesson and a clear description.
-- **Discuss, ask questions:** use [Discussions](https://github.com/aiecosvietnam/learning-ai/discussions).
+- **Report bugs / content feedback:** open an [Issue](https://github.com/MichaelDo0101/learning-ai/issues) with the page/lesson and a clear description.
+- **Discuss, ask questions:** use [Discussions](https://github.com/MichaelDo0101/learning-ai/discussions).
 - **Edit content / add lessons:** fork → branch → Pull Request.
 
 ### Pull Request workflow
@@ -58,4 +58,4 @@ Cảm ơn bạn quan tâm đóng góp! / Thanks for your interest in contributin
 
 > Mọi đóng góp đều tuân theo giấy phép CC BY-NC-SA 4.0. / All contributions are under the CC BY-NC-SA 4.0 license.
 >
-> Liên hệ / Contact: **learning@aiecos.ai** · [aiecos.ai](https://aiecos.ai)
+> Liên hệ / Contact: **contact@taskai.vn** · [taskai.vn](https://taskai.vn)

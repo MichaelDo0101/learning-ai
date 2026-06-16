@@ -25,7 +25,7 @@
 
     <div class="cta-row">
       <a
-        href="https://github.com/aiecosvietnam/learning-ai"
+        href="https://github.com/MichaelDo0101/learning-ai"
         target="_blank"
         rel="noopener"
         class="cta-primary"
@@ -33,7 +33,7 @@
         ⭐ {{ t.ctaStar }}
       </a>
       <a
-        href="https://github.com/aiecosvietnam/learning-ai/issues"
+        href="https://github.com/MichaelDo0101/learning-ai/issues"
         target="_blank"
         rel="noopener"
         class="cta-secondary"
@@ -81,7 +81,7 @@ const items = computed(() => [
     icon: '⭐',
     value: '2.7K+',
     label: t.value.stars,
-    link: 'https://github.com/aiecosvietnam/learning-ai',
+    link: 'https://github.com/MichaelDo0101/learning-ai',
     external: true
   },
   {
@@ -95,7 +95,7 @@ const items = computed(() => [
     icon: '👥',
     value: '50+',
     label: t.value.contrib,
-    link: 'https://github.com/aiecosvietnam/learning-ai/graphs/contributors',
+    link: 'https://github.com/MichaelDo0101/learning-ai/graphs/contributors',
     external: true
   },
   {

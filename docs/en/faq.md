@@ -7,7 +7,7 @@ lastUpdated: false
 
 # Frequently Asked Questions
 
-The most common questions about **Task AI Wiki**. Can't find an answer? See [Contact](./contact) or open an [Issue](https://github.com/aiecosvietnam/learning-ai/issues).
+The most common questions about **Task AI Wiki**. Can't find an answer? See [Contact](./contact) or open an [Issue](https://github.com/MichaelDo0101/learning-ai/issues).
 
 ## About the course
 
@@ -44,13 +44,13 @@ Task AI Wiki is **derived** from [datawhalechina/easy-vibe](https://github.com/d
 :::
 
 ::: details I want to report a bug / suggest / contribute content?
-Open an [Issue](https://github.com/aiecosvietnam/learning-ai/issues) for bugs, use [Discussions](https://github.com/aiecosvietnam/learning-ai/discussions) to talk, or read the [Contribution Guide](https://github.com/aiecosvietnam/learning-ai/blob/main/CONTRIBUTING.md) to send a Pull Request.
+Open an [Issue](https://github.com/MichaelDo0101/learning-ai/issues) for bugs, use [Discussions](https://github.com/MichaelDo0101/learning-ai/discussions) to talk, or read the [Contribution Guide](https://github.com/MichaelDo0101/learning-ai/blob/main/CONTRIBUTING.md) to send a Pull Request.
 :::
 
 ::: details Can I reuse content for my class/blog?
-Yes, under **CC BY-NC-SA 4.0**: non-commercial, with **attribution** to Task AI Wiki, and share-alike. See the [license](https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE).
+Yes, under **CC BY-NC-SA 4.0**: non-commercial, with **attribution** to Task AI Wiki, and share-alike. See the [license](https://github.com/MichaelDo0101/learning-ai/blob/main/LICENSE).
 :::
 
 ---
 
-> Still have questions? [Contact us](./contact) — learning@aiecos.ai.
+> Still have questions? [Contact us](./contact) — contact@taskai.vn.

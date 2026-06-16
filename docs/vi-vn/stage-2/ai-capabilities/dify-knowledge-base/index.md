@@ -715,7 +715,7 @@ Nhớ đã nói trước về cách call model qua API không? Ta cần chuẩn 
 
 Lần này, ta sẽ dùng tool edit code local [Trae](https://www.trae.cn/) hoàn thành quá trình này.
 
-Nếu bạn chưa quen IDE là gì, có thể đọc trước doc [Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/aiecosvietnam/learning-ai/blob/main/docs/extra/extra4/extra4-what-is-ai-ide-and-trae.md).
+Nếu bạn chưa quen IDE là gì, có thể đọc trước doc [Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/MichaelDo0101/learning-ai/blob/main/docs/extra/extra4/extra4-what-is-ai-ide-and-trae.md).
 
 Nếu env dev local chưa config hoàn toàn, cũng không cần lo. Chỉ cần bạn tin trợ lý code của mình (dù là [z.ai](http://z.ai) hay Trae), gặp chỗ nào không hiểu hoặc error, có thể trực tiếp ném vấn đề cho nó, nó sẽ dựa mô tả của bạn đưa giải pháp chi tiết.
 

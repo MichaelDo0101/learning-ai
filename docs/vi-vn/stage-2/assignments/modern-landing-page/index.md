@@ -39,7 +39,7 @@ Product bạn cần build là 1 nền tảng SaaS sinh ảnh AI hiện đại, g
 Backend cần hỗ trợ các năng lực core: auth user, task sinh ảnh, OSS object storage, credit & plan payment, social tương tác ảnh, monitoring data vận hành.
 
 ::: tip PRD Entry
-PRD project trên GitHub: [Xem PRD](https://github.com/aiecosvietnam/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/modern-landing-page/PRD.md)
+PRD project trên GitHub: [Xem PRD](https://github.com/MichaelDo0101/learning-ai/blob/main/docs/vi-vn/stage-2/assignments/modern-landing-page/PRD.md)
 :::
 
 <div style="margin: 32px 0;">

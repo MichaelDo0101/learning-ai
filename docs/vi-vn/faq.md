@@ -7,7 +7,7 @@ lastUpdated: false
 
 # Câu hỏi thường gặp
 
-Những thắc mắc phổ biến nhất về **Task AI Wiki**. Không thấy câu trả lời? Xem [Liên hệ](./contact) hoặc mở [Issue](https://github.com/aiecosvietnam/learning-ai/issues).
+Những thắc mắc phổ biến nhất về **Task AI Wiki**. Không thấy câu trả lời? Xem [Liên hệ](./contact) hoặc mở [Issue](https://github.com/MichaelDo0101/learning-ai/issues).
 
 ## Về khoá học
 
@@ -44,13 +44,13 @@ Task AI Wiki **phái sinh** từ [datawhalechina/easy-vibe](https://github.com/d
 :::
 
 ::: details Tôi muốn góp ý / báo lỗi / đóng góp nội dung?
-Mở [Issue](https://github.com/aiecosvietnam/learning-ai/issues) để báo lỗi, [Discussions](https://github.com/aiecosvietnam/learning-ai/discussions) để thảo luận, hoặc đọc [Hướng dẫn đóng góp](https://github.com/aiecosvietnam/learning-ai/blob/main/CONTRIBUTING.md) để gửi Pull Request.
+Mở [Issue](https://github.com/MichaelDo0101/learning-ai/issues) để báo lỗi, [Discussions](https://github.com/MichaelDo0101/learning-ai/discussions) để thảo luận, hoặc đọc [Hướng dẫn đóng góp](https://github.com/MichaelDo0101/learning-ai/blob/main/CONTRIBUTING.md) để gửi Pull Request.
 :::
 
 ::: details Dùng lại nội dung cho lớp học/blog được không?
-Được, theo giấy phép **CC BY-NC-SA 4.0**: phi thương mại, **ghi nguồn** Task AI Wiki và chia sẻ tương tự. Xem [giấy phép](https://github.com/aiecosvietnam/learning-ai/blob/main/LICENSE).
+Được, theo giấy phép **CC BY-NC-SA 4.0**: phi thương mại, **ghi nguồn** Task AI Wiki và chia sẻ tương tự. Xem [giấy phép](https://github.com/MichaelDo0101/learning-ai/blob/main/LICENSE).
 :::
 
 ---
 
-> Còn câu hỏi khác? [Liên hệ với chúng tôi](./contact) — email learning@aiecos.ai.
+> Còn câu hỏi khác? [Liên hệ với chúng tôi](./contact) — email contact@taskai.vn.

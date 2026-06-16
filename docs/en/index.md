@@ -20,7 +20,7 @@ hero:
       link: /en/stage-1/learning-map/
     - theme: alt
       text: GitHub
-      link: https://github.com/aiecosvietnam/learning-ai
+      link: https://github.com/MichaelDo0101/learning-ai
 ---
 
 <HeroStats />

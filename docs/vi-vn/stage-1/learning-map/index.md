@@ -12,7 +12,7 @@ const relatedArticles = relatedArticlesMap['vi-vn/stage-1/learning-map'] ?? []
 # Từ ý tưởng đến sản phẩm AI
 
 ::: info Lời cảm ơn đặc biệt
-Đặc biệt cảm ơn các bạn sinh viên đến từ **Viện Nghiên cứu Sinh viên Quốc tế Đại học Thanh Hoa, Thâm Quyến** đã thử nghiệm, phản hồi và ủng hộ khóa học này! Những ý kiến và đóng góp của các bạn đã giúp khóa học trở nên tốt hơn. [👉 Xem danh sách người đóng góp đầy đủ](https://github.com/aiecosvietnam/learning-ai#-contributing--contributors)
+Đặc biệt cảm ơn các bạn sinh viên đến từ **Viện Nghiên cứu Sinh viên Quốc tế Đại học Thanh Hoa, Thâm Quyến** đã thử nghiệm, phản hồi và ủng hộ khóa học này! Những ý kiến và đóng góp của các bạn đã giúp khóa học trở nên tốt hơn. [👉 Xem danh sách người đóng góp đầy đủ](https://github.com/MichaelDo0101/learning-ai#-contributing--contributors)
 :::
 
 Trước đây, làm phần mềm có rào cản rất cao: bạn phải biết lập trình, biết thuật toán, và phải có kinh nghiệm dự án nhiều năm.
