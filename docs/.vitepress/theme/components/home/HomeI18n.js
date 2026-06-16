@@ -3,6 +3,7 @@ export const i18n = {
     nav: {
       title: 'Task AI Wiki Tutorial',
       home: 'Home',
+      news: 'AI News',
       stories: 'Vibe Stories',
       pm: 'Product Manager',
       junior: 'Junior Dev',
@@ -216,6 +217,7 @@ export const i18n = {
     nav: {
       title: 'Hướng dẫn Task AI Wiki',
       home: 'Trang chủ',
+      news: 'Bản tin AI',
       stories: 'Câu chuyện người dùng',
       pm: 'Quản lý sản phẩm',
       junior: 'Dev Sơ/Trung cấp',

@@ -318,6 +318,10 @@ onUnmounted(() => {
             >
               {{ t.nav.home }}
             </button>
+            <a
+              class="nav-link-item nav-link-module"
+              :href="withBase(localeBase + '/ai-news/')"
+            >{{ t.nav.news }}</a>
             <button
               :class="{ active: activeTab === 'vibe-stories' }"
               class="nav-link-item"
