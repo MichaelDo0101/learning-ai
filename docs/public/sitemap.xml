@@ -102,18 +102,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://MichaelDo0101.github.io/learning-ai/en/agentic-ai\index"/>
   </url>
   <url>
-    <loc>https://MichaelDo0101.github.io/learning-ai/vi-vn/ai-news\2026-06-16</loc>
-    <lastmod>2026-06-16T14:24:17.258Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://MichaelDo0101.github.io/learning-ai/vi-vn/ai-news\2026-06-16"/>
-  </url>
-  <url>
     <loc>https://MichaelDo0101.github.io/learning-ai/vi-vn/ai-news\index</loc>
-    <lastmod>2026-06-16T14:24:17.257Z</lastmod>
+    <lastmod>2026-06-16T11:51:04.634Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://MichaelDo0101.github.io/learning-ai/vi-vn/ai-news\index"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://MichaelDo0101.github.io/learning-ai/en/ai-news\index"/>
   </url>
   <url>
     <loc>https://MichaelDo0101.github.io/learning-ai/vi-vn/ai-tools\1-chatgpt</loc>

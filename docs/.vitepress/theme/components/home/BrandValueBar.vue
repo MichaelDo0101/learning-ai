@@ -21,7 +21,7 @@ const traits = [
 
 <style scoped>
 .ev-valuebar {
-  background: linear-gradient(100deg, #00b372 0%, #009966 100%);
+  background: linear-gradient(100deg, #2563eb 0%, #1e40af 100%);
 }
 .ev-valuebar-inner {
   max-width: 1152px;

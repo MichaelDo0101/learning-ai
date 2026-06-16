@@ -1,18 +1,35 @@
 ---
-title: 'AI News - Ban tin AI hang ngay'
-description: 'Tong hop tin AI moi nhat cho lap trinh vien va nguoi lam san pham, uu tien nguon chinh thong va cac cap nhat co tac dong ky thuat ro rang.'
+title: 'Ban tin AI'
+description: 'Cap nhat xu huong, cong cu va case study AI dang chu y cho nguoi hoc va doi ngu SME Viet Nam.'
 ---
 
-# AI News
+# Ban tin AI
 
-Ban tin nay tong hop nhanh cac cap nhat AI moi nhat, uu tien nguon goc va thong tin co y nghia truc tiep voi developer, team san pham, va nguoi van hanh he thong AI.
+Chuyen muc nay gom cac cap nhat AI dang chu y theo huong thuc dung: co gi moi, anh huong ra sao, va nguoi hoc hoac doi ngu SME nen lam gi tiep theo.
 
 ## So moi nhat
 
 - [Diem tin ngay 16/06/2026](./2026-06-16.md)
 
-## Nguyen tac bien tap
+## Trong tam bien tap
 
-- Uu tien lab blogs, newsroom chinh thuc, paper goc, va cac ban tin ky thuat co trich nguon.
-- Loai bo bai hype thieu benchmark, thieu chi tiet trien khai, hoac chi lap lai thong cao bao chi.
-- Neu trong cua so 24 gio khong co model release tier-1 dang ke, ban tin se ghi ro thay vi chen tin cu.
+- **Cong cu AI moi:** model, IDE, agent, automation va workflow dang thu.
+- **Case study thuc te:** cach ca nhan va doanh nghiep dung AI de tiet kiem thoi gian, chi phi hoac mo san pham moi.
+- **Tin hieu thi truong:** thay doi ve gia, chinh sach, nen tang va he sinh thai.
+- **Huong dan hanh dong:** moi ban tin nen ket thuc bang viec nen thu, nen tranh, hoac nen theo doi.
+
+## Dinh dang sap toi
+
+Các bản tin sẽ được tổ chức theo chu kỳ, ví dụ:
+
+- Ban tin tuan
+- Ban tin cong cu AI
+- Ban tin Agentic AI
+- Ban tin Generative AI
+- Ban tin case study Viet Nam
+
+## Doc tiep
+
+- [Cong cu AI](/vi-vn/ai-tools/)
+- [Generative AI](/vi-vn/generative-ai/)
+- [Agentic AI](/vi-vn/agentic-ai/)

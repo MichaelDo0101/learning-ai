@@ -181,10 +181,10 @@ const topPromoStyle = computed(() => {
   const scrollOffset = -100 * (1 - scrollProgress)
   const startTextColor = { r: 255, g: 255, b: 255 }
   const endTextColor = { r: 29, g: 29, b: 31 }
-  const startBgColor = { r: 0, g: 113, b: 227 }
+  const startBgColor = { r: 37, g: 99, b: 235 }
   const endBgColor = { r: 245, g: 245, b: 247 }
   const startLinkColor = { r: 255, g: 255, b: 255 }
-  const endLinkColor = { r: 0, g: 102, b: 204 }
+  const endLinkColor = { r: 37, g: 99, b: 235 }
   const textColor = `rgb(${Math.round(startTextColor.r + (endTextColor.r - startTextColor.r) * colorProgress)}, ${Math.round(startTextColor.g + (endTextColor.g - startTextColor.g) * colorProgress)}, ${Math.round(startTextColor.b + (endTextColor.b - startTextColor.b) * colorProgress)})`
   const bgColor = `rgb(${Math.round(startBgColor.r + (endBgColor.r - startBgColor.r) * colorProgress)}, ${Math.round(startBgColor.g + (endBgColor.g - startBgColor.g) * colorProgress)}, ${Math.round(startBgColor.b + (endBgColor.b - startBgColor.b) * colorProgress)})`
   const linkColor = `rgb(${Math.round(startLinkColor.r + (endLinkColor.r - startLinkColor.r) * colorProgress)}, ${Math.round(startLinkColor.g + (endLinkColor.g - startLinkColor.g) * colorProgress)}, ${Math.round(startLinkColor.b + (endLinkColor.b - startLinkColor.b) * colorProgress)})`
@@ -318,6 +318,10 @@ onUnmounted(() => {
             >
               {{ t.nav.home }}
             </button>
+            <a
+              class="nav-link-item nav-link-module"
+              :href="withBase(localeBase + '/ai-news/')"
+            >{{ t.nav.news }}</a>
             <button
               :class="{ active: activeTab === 'vibe-stories' }"
               class="nav-link-item"
@@ -526,8 +530,8 @@ a {
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: -0.01em;
-  color: #1d1d1f;
+  letter-spacing: 0;
+  color: #111827;
   line-height: 30px;
 }
 
@@ -563,12 +567,12 @@ a {
 }
 
 .nav-link-module {
-  color: #00b372 !important;
+  color: #2563eb !important;
   font-weight: 600;
   opacity: 1;
 }
 .nav-link-module:hover {
-  color: #009966 !important;
+  color: #1e40af !important;
 }
 
 .nav-action {
@@ -613,7 +617,7 @@ a {
   justify-content: center;
   gap: 6px;
   font-size: 13px;
-  color: #1d1d1f;
+  color: #111827;
   padding: 0 16px;
   overflow: hidden;
   transform-origin: top center;
@@ -629,7 +633,7 @@ a {
 }
 
 .nav-promo a {
-  color: var(--top-promo-link-color, #009966);
+  color: var(--top-promo-link-color, #2563eb);
   text-decoration: none;
   transition: color 0.25s ease-out;
 }
@@ -712,10 +716,10 @@ a {
 }
 
 .buy-btn {
-  background: #00b372;
+  background: #2563eb;
   color: #fff !important;
   padding: 7px 16px;
-  border-radius: 980px;
+  border-radius: 8px;
   font-size: 13px;
   font-weight: 500;
   line-height: 1;
@@ -723,7 +727,7 @@ a {
 }
 
 .buy-btn:hover {
-  background: #00c087;
+  background: #1e40af;
   transform: scale(1.02);
 }
 
@@ -776,8 +780,8 @@ a {
   margin-bottom: 14px;
   border: none;
   padding: 0;
-  color: #1d1d1f;
-  letter-spacing: -0.024em;
+  color: #111827;
+  letter-spacing: 0;
   font-family:
     -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC',
     sans-serif;
@@ -787,9 +791,9 @@ a {
   font-size: 64px;
   line-height: 1.08;
   font-weight: 700;
-  letter-spacing: -0.034em;
+  letter-spacing: 0;
   margin-bottom: 12px;
-  color: #1d1d1f;
+  color: #111827;
   font-family:
     -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC',
     sans-serif;
@@ -799,7 +803,7 @@ a {
   font-size: 21px;
   line-height: 1.4;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   color: #6e6e73;
   max-width: 760px;
   font-family:

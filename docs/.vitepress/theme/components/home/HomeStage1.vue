@@ -97,9 +97,9 @@ const t = inject('t')
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #1d1d1f;
+  color: #111827;
   line-height: 1.3;
-  letter-spacing: -0.024em;
+  letter-spacing: 0;
   font-family:
     -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC',
     sans-serif;

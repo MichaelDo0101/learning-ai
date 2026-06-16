@@ -111,8 +111,8 @@ const t = inject('t')
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #1d1d1f;
-  letter-spacing: -0.025em;
+  color: #111827;
+  letter-spacing: 0;
   font-family:
     -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC',
     sans-serif;

@@ -267,7 +267,7 @@ const commonHead = [
   ['link', { rel: 'stylesheet', href: `${base}style.css`.replace('//', '/') }],
   ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
   ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-  ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap' }]
+  ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' }]
 ]
 
 const commonThemeConfig = {
@@ -1341,6 +1341,11 @@ Sitemap: ${siteUrl}/sitemap.xml
         nav: [
           { text: 'Home', link: '/en/' },
           {
+            text: 'AI News',
+            link: '/en/ai-news/',
+            activeMatch: '/en/ai-news/'
+          },
+          {
             text: 'Getting Started',
             link: '/en/stage-1/learning-map/',
             activeMatch: '/en/stage-1/'
@@ -1382,6 +1387,13 @@ Sitemap: ${siteUrl}/sitemap.xml
           }
         ],
         sidebar: {
+          '/en/ai-news/': [
+            {
+              text: 'AI News',
+              collapsed: false,
+              items: [{ text: 'Overview', link: '/en/ai-news/' }]
+            }
+          ],
           '/en/vibe-stories/': [
             {
               text: 'Vibe Stories',
@@ -1536,6 +1548,11 @@ Sitemap: ${siteUrl}/sitemap.xml
         nav: [
           { text: 'Trang chủ', link: '/vi-vn/' },
           {
+            text: 'Bản tin AI',
+            link: '/vi-vn/ai-news/',
+            activeMatch: '/vi-vn/ai-news/'
+          },
+          {
             text: 'Người mới & PM',
             link: '/vi-vn/stage-1/learning-map/',
             activeMatch: '/vi-vn/stage-1/'
@@ -1582,6 +1599,13 @@ Sitemap: ${siteUrl}/sitemap.xml
           }
         ],
         sidebar: {
+          '/vi-vn/ai-news/': [
+            {
+              text: 'Bản tin AI',
+              collapsed: false,
+              items: [{ text: 'Tổng quan', link: '/vi-vn/ai-news/' }]
+            }
+          ],
           '/vi-vn/ai-tools/': [
             {
               text: 'Công cụ AI',

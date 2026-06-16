@@ -43,19 +43,19 @@ const values = [
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: #00b372;
+  color: #2563eb;
   margin: 0 0 12px;
 }
 .ev-values-title {
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 800;
-  color: #0d1b2a;
+  color: #111827;
   margin: 0 0 16px;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 .ev-values-title span {
-  color: #00b372;
+  color: #2563eb;
 }
 .ev-values-sub {
   font-size: 16px;
@@ -81,8 +81,8 @@ const values = [
 }
 .ev-value-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 179, 114, 0.16);
-  border-color: #66e0b3;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.16);
+  border-color: #60a5fa;
 }
 .ev-value-icon {
   width: 60px;
@@ -92,14 +92,14 @@ const values = [
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #e6f7f1, #d2f3e6);
-  color: #00b372;
+  background: linear-gradient(135deg, #eff6ff, #bfdbfe);
+  color: #2563eb;
   font-size: 28px;
 }
 .ev-value-card h3 {
   font-size: 18px;
   font-weight: 700;
-  color: #0d1b2a;
+  color: #111827;
   margin: 0 0 10px;
 }
 .ev-value-card p {
