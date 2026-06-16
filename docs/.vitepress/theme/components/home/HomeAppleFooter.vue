@@ -261,8 +261,8 @@ const resolveFooterHref = (link) => {
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.08;
-  letter-spacing: -0.03em;
-  color: #1d1d1f;
+  letter-spacing: 0;
+  color: #111827;
   font-family:
     -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC',
     sans-serif;
@@ -304,7 +304,7 @@ const resolveFooterHref = (link) => {
 }
 
 .apple-footer-home {
-  color: #00b372;
+  color: #2563eb;
   font-size: 14px;
   line-height: 1;
 }
@@ -347,7 +347,7 @@ const resolveFooterHref = (link) => {
 
 .apple-footer-column h4 {
   margin: 0 0 10px;
-  color: #1d1d1f;
+  color: #111827;
   font-size: 12px;
   font-weight: 600;
 }
@@ -380,7 +380,7 @@ const resolveFooterHref = (link) => {
 }
 
 .apple-footer-column a:hover {
-  color: #00b372;
+  color: #2563eb;
 }
 
 .apple-footer-more {
@@ -400,7 +400,7 @@ const resolveFooterHref = (link) => {
 }
 
 .apple-footer-more a {
-  color: #00b372;
+  color: #2563eb;
 }
 
 .apple-footer-bottom {
@@ -438,7 +438,7 @@ const resolveFooterHref = (link) => {
 }
 
 .apple-footer-policy a:hover {
-  color: #00b372;
+  color: #2563eb;
 }
 
 .apple-site-footer.is-cjk-locale .apple-footer-policy a {

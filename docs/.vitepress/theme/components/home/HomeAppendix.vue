@@ -222,7 +222,7 @@ onUnmounted(() => {
   margin: 0;
   font-size: 14px;
   line-height: 1.35;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   white-space: normal;
 }
 
