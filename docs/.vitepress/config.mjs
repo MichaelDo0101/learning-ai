@@ -1588,6 +1588,11 @@ Sitemap: ${siteUrl}/sitemap.xml
             activeMatch: '/vi-vn/agentic-ai/'
           },
           {
+            text: 'AI News',
+            link: '/vi-vn/ai-news/',
+            activeMatch: '/vi-vn/ai-news/'
+          },
+          {
             text: 'Công cụ AI',
             link: '/vi-vn/ai-tools/',
             activeMatch: '/vi-vn/ai-tools/'
@@ -1821,6 +1826,16 @@ Sitemap: ${siteUrl}/sitemap.xml
                 { text: '10. Evaluation & Observability', link: '/vi-vn/agentic-ai/10-evaluation-observability' },
                 { text: '11. Safety, Guardrails & Reliability', link: '/vi-vn/agentic-ai/11-safety-guardrails' },
                 { text: '12. Ứng dụng VN & Roadmap ship', link: '/vi-vn/agentic-ai/12-apply-vn-roadmap' }
+              ]
+            }
+          ],
+          '/vi-vn/ai-news/': [
+            {
+              text: 'AI News',
+              collapsed: false,
+              items: [
+                { text: 'Tổng quan', link: '/vi-vn/ai-news/' },
+                { text: 'Điểm tin 16/06/2026', link: '/vi-vn/ai-news/2026-06-16' }
               ]
             }
           ],
