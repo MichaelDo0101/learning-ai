@@ -183,7 +183,7 @@ Lời nhắn của anh cũng rất thẳng:
 - Apply VN: đặt deadline 30 ngày → bất kể UI, public link
 
 **6. 💰 Pricing > features**
-- Photo AI giá **$39/tháng, 87% profit margin** ($13K cost / $132K revenue)
+- Photo AI giá **$39/tháng, khoảng 90% profit margin** ($13K cost / $132K revenue)
 - Apply VN: anh Hoàng tính price global ($19-49/tháng) cao hơn nhiều VN giá → 1 user global = 50 user VN
 
 **7. 🎯 Niche wrapper, NOT horizontal AI**
@@ -202,7 +202,7 @@ Lời nhắn của anh cũng rất thẳng:
 | Background | Dutch solo dev, không VC |
 | Stack | Cursor + Stripe + nano-banana style flow |
 | MRR T11/2025 | **$132K** |
-| **Profit margin** | **87%** ($13K cost / $132K revenue) |
+| **Profit margin** | **~90%** ($13K cost / $132K revenue) |
 | Time | **18 tháng từ 0** |
 | Quote | *"Most of my startups will fail — and that's okay, as long as something sticks."* |
 
@@ -318,7 +318,7 @@ Anh Hoàng chứng minh: 1 người + AI + 4-5 ngày → chạy được full ch
 - Apply: "Done is better than perfect" (Pieter mantra)
 
 **Lesson 6. 💰 Pricing > features**
-- $39/tháng Photo AI = 87% profit margin
+- $39/tháng Photo AI = khoảng 90% profit margin
 - Apply: 1 user global = 50 user VN. Price global ($19-49/mo), không VN ($1-5/mo)
 
 **Lesson 7. 🎯 Niche wrapper, NOT horizontal**
@@ -379,10 +379,10 @@ Anh Hoàng chứng minh: 1 người + AI + 4-5 ngày → chạy được full ch
 ::: details 2. Pieter Levels Photo AI profit margin?
 **A.** 20%
 **B.** 50%
-**C.** 87% ✅
+**C.** Khoảng 90% ✅
 **D.** 100%
 
-**Đáp án: C** — Photo AI: $132K MRR, $13K cost = **87% profit margin**. Pricing $39/tháng. Solo, 0 employees, ~$1.65M ARR.
+**Đáp án: C** — Photo AI: $132K MRR, $13K cost = khoảng **90% profit margin**. Pricing $39/tháng. Solo, 0 employees, ~$1.65M ARR.
 :::
 
 ::: details 3. Stripe vs Paddle vs Lemon Squeezy — pick nào cho VN solo founder?

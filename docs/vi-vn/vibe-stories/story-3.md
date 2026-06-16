@@ -203,7 +203,7 @@ Nếu bạn cũng là giáo viên Tin học, cũng đối mặt khó khăn tươ
 - Apply VN: dùng Khanmigo Teacher tools soạn nhanh, dành thời gian kèm 1-1
 
 **6. 📈 Bloom's 2-sigma problem**
-- 1-on-1 tutoring + mastery learning = **98% HS đạt mức "A"**
+- 1-on-1 tutoring + mastery learning giúp học sinh trung bình đạt kết quả cao hơn khoảng **98%** học sinh trong lớp truyền thống
 - Apply VN: gọi AI là "gia sư cá nhân" trong PR với phụ huynh — có science backing từ 1984, không phải hype
 :::
 
@@ -313,7 +313,7 @@ Nếu bạn cũng là giáo viên Tin học, cũng đối mặt khó khăn tươ
 - Apply: notification "Lan đã học 7 ngày liên tục" → phụ huynh Zalo
 
 **Lesson 5. 🎯 Bloom's 2-sigma**
-- 1-on-1 tutor + mastery learning → 98% HS đạt mức "A"
+- 1-on-1 tutor + mastery learning → học sinh trung bình có thể vượt khoảng 98% học sinh lớp truyền thống
 - Apply: AI là "gia sư cá nhân" — science từ 1984, không phải hype
 
 **Lesson 6. 🛠️ Teacher-augmented, not replaced**
@@ -388,11 +388,11 @@ Nếu bạn cũng là giáo viên Tin học, cũng đối mặt khó khăn tươ
 
 ::: details 4. Bloom's 2-sigma problem nói gì?
 **A.** Lớp đông học kém
-**B.** 1-on-1 tutor giúp 98% HS đạt "A" ✅
+**B.** 1-on-1 tutor + mastery learning giúp học sinh trung bình vượt khoảng 98% học sinh lớp truyền thống ✅
 **C.** Cần 2 sigma chuẩn deviation
 **D.** Là math problem
 
-**Đáp án: B** — Bloom 1984: **1-on-1 tutoring + mastery learning = 98% HS đạt "A"** (top 2% kiểu truyền thống). Science backing cho AI tutor narrative.
+**Đáp án: B** — Bloom 1984: học sinh trung bình trong điều kiện 1-on-1 tutoring + mastery learning đạt kết quả khoảng **2 độ lệch chuẩn** cao hơn lớp học truyền thống, tức vượt khoảng 98% nhóm học theo cách thường. Đây là nền tảng khoa học cho narrative AI tutor cá nhân hoá.
 :::
 
 ::: details 5. AI tutor pattern KHÔNG nên là?
