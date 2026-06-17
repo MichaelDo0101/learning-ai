@@ -9,6 +9,7 @@ Chuyen muc nay gom cac cap nhat AI dang chu y theo huong thuc dung: co gi moi, a
 
 ## So moi nhat
 
+- [Diem tin ngay 17/06/2026](./2026-06-17.md)
 - [Diem tin ngay 16/06/2026](./2026-06-16.md)
 
 ## Trong tam bien tap
@@ -20,7 +21,7 @@ Chuyen muc nay gom cac cap nhat AI dang chu y theo huong thuc dung: co gi moi, a
 
 ## Dinh dang sap toi
 
-Các bản tin sẽ được tổ chức theo chu kỳ, ví dụ:
+Cac ban tin se duoc to chuc theo chu ky, vi du:
 
 - Ban tin tuan
 - Ban tin cong cu AI
