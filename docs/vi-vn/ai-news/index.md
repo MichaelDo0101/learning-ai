@@ -7,6 +7,10 @@ description: Cập nhật xu hướng, công cụ và case study AI đáng chú 
 
 Chuyên mục này gom các cập nhật AI đáng chú ý theo hướng thực dụng: có gì mới, ảnh hưởng ra sao, và người học hoặc đội ngũ SME nên làm gì tiếp theo.
 
+## Bản tin gần đây
+
+- [Điểm tin AI nóng - 17/06/2026](./2026-06-17.md)
+
 ## Trọng tâm biên tập
 
 - **Công cụ AI mới:** model, IDE, agent, automation và workflow đáng thử.
