@@ -1598,7 +1598,10 @@ Sitemap: ${siteUrl}/sitemap.xml
             {
               text: 'Bản tin AI',
               collapsed: false,
-              items: [{ text: 'Tổng quan', link: '/vi-vn/ai-news/' }]
+              items: [
+                { text: 'Tổng quan', link: '/vi-vn/ai-news/' },
+                { text: 'Điểm tin 16/06/2026', link: '/vi-vn/ai-news/2026-06-16' }
+              ]
             }
           ],
           '/vi-vn/ai-tools/': [
