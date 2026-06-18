@@ -9,6 +9,7 @@ Chuyen muc nay gom cac cap nhat AI dang chu y theo huong thuc dung: co gi moi, a
 
 ## So moi nhat
 
+- [Diem tin ngay 18/06/2026](./2026-06-18.md)
 - [Diem tin ngay 17/06/2026](./2026-06-17.md)
 - [Diem tin ngay 16/06/2026](./2026-06-16.md)
 
