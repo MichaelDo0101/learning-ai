@@ -7,6 +7,10 @@ description: Practical AI updates, tools, and case studies for learners and SME 
 
 This section collects practical AI updates: what changed, why it matters, and what learners or SME teams should try next.
 
+## Latest Issue
+
+- [Diem tin AI ngay 20-06-2026](/en/ai-news/2026-06-20)
+
 ## Editorial Focus
 
 - **New AI tools:** models, IDEs, agents, automation platforms, and workflows worth testing.
