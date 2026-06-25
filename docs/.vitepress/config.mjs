@@ -1600,10 +1600,14 @@ Sitemap: ${siteUrl}/sitemap.xml
               collapsed: false,
               items: [
                 { text: 'Tổng quan', link: '/vi-vn/ai-news/' },
+                { text: 'Điểm tin 25/06/2026', link: '/vi-vn/ai-news/2026-06-25' },
+                { text: 'Điểm tin 24/06/2026', link: '/vi-vn/ai-news/2026-06-24' },
+                { text: 'Điểm tin 23/06/2026', link: '/vi-vn/ai-news/2026-06-23' },
+                { text: 'Điểm tin 22/06/2026', link: '/vi-vn/ai-news/2026-06-22' },
+                { text: 'Điểm tin 21/06/2026', link: '/vi-vn/ai-news/2026-06-21' },
                 { text: 'Điểm tin 19/06/2026', link: '/vi-vn/ai-news/2026-06-19' },
                 { text: 'Điểm tin 18/06/2026', link: '/vi-vn/ai-news/2026-06-18' },
-                { text: 'Điểm tin 17/06/2026', link: '/vi-vn/ai-news/2026-06-17' },
-                { text: 'Điểm tin 16/06/2026', link: '/vi-vn/ai-news/2026-06-16' }
+                { text: 'Điểm tin 17/06/2026', link: '/vi-vn/ai-news/2026-06-17' }
               ]
             }
           ],
@@ -1839,3 +1843,4 @@ Sitemap: ${siteUrl}/sitemap.xml
     }
   }
 })
+
