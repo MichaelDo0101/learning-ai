@@ -42,7 +42,7 @@ function scanMarkdownFiles(dir, basePath = '') {
 
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name)
-    const relativePath = path.join(basePath, entry.name)
+    const relativePath = basePath ? `${basePath}/${entry.name}` : entry.name
 
     if (entry.isDirectory()) {
       // 跳过特殊目录
@@ -65,8 +65,8 @@ function scanMarkdownFiles(dir, basePath = '') {
 
 // 将 markdown 路径转换为 URL 路径
 function mdPathToUrl(mdPath, locale) {
-  // 移除 .md 扩展名
-  let urlPath = mdPath.replace(/\.md$/, '')
+  // Normalize Windows separators before building clean URLs.
+  let urlPath = mdPath.replace(/\.md$/, '').replace(/\\/g, '/')
 
   // 如果是 index.md，只保留目录
   let isIndex = false
@@ -227,7 +227,7 @@ function main() {
     }
   }
   allUrls.unshift({
-    loc: `${siteUrl}/zh-cn/`,
+    loc: `${siteUrl}/vi-vn/`,
     priority: 1.0,
     alternates: homeAlternates,
     sourceFiles: homeSourceFiles,
