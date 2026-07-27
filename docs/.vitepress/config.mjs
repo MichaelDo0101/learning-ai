@@ -1600,6 +1600,9 @@ Sitemap: ${siteUrl}/sitemap.xml
               collapsed: false,
               items: [
                 { text: 'Tổng quan', link: '/vi-vn/ai-news/' },
+                { text: 'Điểm tin 27/07/2026', link: '/vi-vn/ai-news/2026-07-27' },
+                { text: 'Điểm tin 24/07/2026', link: '/vi-vn/ai-news/2026-07-24' },
+                { text: 'Điểm tin 23/07/2026', link: '/vi-vn/ai-news/2026-07-23' },
                 { text: 'Điểm tin 22/07/2026', link: '/vi-vn/ai-news/2026-07-22' },
                 { text: 'Điểm tin 21/07/2026', link: '/vi-vn/ai-news/2026-07-21' },
                 { text: 'Điểm tin 19/07/2026', link: '/vi-vn/ai-news/2026-07-19' },
