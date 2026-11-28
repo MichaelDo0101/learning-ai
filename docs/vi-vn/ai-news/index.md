@@ -9,6 +9,7 @@ Chuyên mục này gồm các cập nhật AI đáng chú ý theo hướng thự
 
 ## Số mới nhất
 
+- [Điểm tin ngày 28/11/2026](./2026-11-28.md)
 - [Điểm tin ngày 27/11/2026](./2026-11-27.md)
 - [Điểm tin ngày 26/11/2026](./2026-11-26.md)
 - [Điểm tin ngày 25/11/2026](./2026-11-25.md)
